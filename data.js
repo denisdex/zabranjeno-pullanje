@@ -2,6 +2,7 @@
 // promijeni vrijednost, pa ponovno objavi stranicu (link ostaje isti).
 window.HORDE = {
   ekipa: "Zaprešić Horde",
+  guild: "Zabranjeno pullanje",
   azurirano: "2026-10-29",
 
   // Vremena u UTC. Studeni je CET (UTC+1).
