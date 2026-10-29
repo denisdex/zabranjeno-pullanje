@@ -89,8 +89,8 @@ button { font: inherit; color: inherit; }
 .btn.glavni { border-color: var(--ember); background: linear-gradient(180deg, rgba(255, 122, 46, .22), rgba(193, 18, 31, .3)); }
 
 .udarni { position: absolute; left: 50%; top: 50%; width: 40vmin; height: 40vmin; margin: -20vmin 0 0 -20vmin; border-radius: 50%; z-index: 7;
-  border: 2px solid rgba(255, 210, 140, .9); box-shadow: 0 0 40px rgba(255, 120, 40, .8), inset 0 0 40px rgba(255, 120, 40, .6); opacity: 0; }
-.blic { position: absolute; inset: 0; z-index: 9; background: #fff; opacity: 0; mix-blend-mode: screen; }
+  border: 2px solid rgba(255, 210, 140, .9); box-shadow: 0 0 40px rgba(255, 120, 40, .8), inset 0 0 40px rgba(255, 120, 40, .6); opacity: 0; pointer-events: none; }
+.blic { position: absolute; inset: 0; z-index: 9; background: #fff; opacity: 0; mix-blend-mode: screen; pointer-events: none; }
 
 /* ulaz: jedan klik, zbog zvuka (preglednik ga ne pušta bez geste) */
 .ulaz { position: fixed; inset: 0; z-index: 20; display: grid; place-items: center; text-align: center; padding: 24px;
@@ -988,7 +988,7 @@ button { font: inherit; color: inherit; }
     var q = /[?&]t=([\d.]+)/.exec(location.search);
     // ?odmah: dolazak s ulaza glavnog weba, bez vlastitog ulaza
     if (/[?&]odmah/.test(location.search) && !q) { ulaz.remove(); if (reduce) zavrsniKadar(); else pusti(true); }
-    if (q) { ulaz.remove(); pusti(false); T.seek(+q[1]); if (/[?&]stop/.test(location.search)) T.pause(); window.__zp = { GL: GL, T: function () { return T; }, gl: gl, render: render }; }
+    if (q) { ulaz.remove(); pusti(false); T.seek(+q[1]); if (T.time() >= 21.8) { $("gumbi").classList.add("on"); $("preskoci").classList.remove("on"); } if (/[?&]stop/.test(location.search)) T.pause(); window.__zp = { GL: GL, T: function () { return T; }, gl: gl, render: render }; }
   }
   // tabla stanice crta se fontom stranice, pa se čeka da stigne (najviše 2 s)
   var krenulo = false;
