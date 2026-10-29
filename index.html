@@ -309,10 +309,16 @@ section[id] { scroll-margin-top: 84px; }
 .count-top { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px; }
 .count-label { margin: 0; font: 800 clamp(1.5rem, 3.6vw, 2.6rem)/1 var(--f-display); text-transform: uppercase; letter-spacing: .02em; color: var(--ember); }
 .flip-row {
-  /* četiri para ravnomjerno od lijevog do desnog ruba; par je 1,37 × --dh širok */
-  --dh: clamp(36px, 14.5vw, 120px);
-  position: relative; isolation: isolate;
-  display: flex; justify-content: space-between; align-items: flex-end; gap: 8px;
+  /* četiri para zbijena u sredini, s dvotočkom između; blok je širok koliko treba (par je 1,37 × --dh) */
+  --dh: clamp(36px, 12.6vw, 120px);
+  position: relative; isolation: isolate; justify-self: center; width: fit-content; max-width: 100%;
+  display: flex; justify-content: center; align-items: flex-end; gap: 0 clamp(5px, 1.6vw, 30px);
+}
+/* dvotočka između grupa, poravnata sa znamenkama (ne s labelama ispod) */
+.flip-row .sep {
+  align-self: flex-start; height: var(--dh); display: grid; place-items: center; padding-bottom: calc(var(--dh) * .06);
+  font: 900 calc(var(--dh) * .5)/1 "Cinzel", Georgia, serif;
+  color: transparent; background: linear-gradient(180deg, #fff3c4, #f2cf5b 40%, #b8862e 70%, #7a5520); -webkit-background-clip: text; background-clip: text;
 }
 .flip-row.live { justify-content: center; flex-wrap: wrap; gap: 18px clamp(14px, 3vw, 44px); }
 .flip-row::before {
@@ -4556,8 +4562,10 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
   }
   function buildUnits(units) {
     flip.innerHTML = ""; digits = [];
-    units.forEach(function (u) {
+    units.forEach(function (u, i) {
       if (u.word) { var w = document.createElement("span"); w.className = "word"; w.textContent = u.word; flip.appendChild(w); return; }
+      // dvotočka između dvije brojčane grupe (dani : sati : minute : sekunde)
+      if (i && !units[i - 1].word) { var c = document.createElement("span"); c.className = "sep"; c.setAttribute("aria-hidden", "true"); c.textContent = ":"; flip.appendChild(c); }
       var box = document.createElement("div"); box.className = "unit";
       var row = document.createElement("div"); row.className = "digits";
       var arr = [];
