@@ -11,7 +11,8 @@ window.HORDE = {
   datumi: {
     rezervacijaOd: "2026-10-27T00:00:00+01:00",
     rezervacijaDo: "2026-11-03T23:59:00+01:00",
-    launch: "2026-11-05T00:00:00+01:00"
+    launch: "2026-11-05T00:00:00+01:00",
+    prviRaid: "2026-12-09T00:00:00+01:00"
   },
 
   discord: "https://discord.gg/jMuagAt9h",
@@ -19,19 +20,92 @@ window.HORDE = {
 
   // level: 0 do 60
   // foto: portret iz assets/likovi/ ili null (tada stoji zamjenski grb klase dok netko ne pošalje screenshot)
+  // profil: build, oprema i ciljevi za stranicu lika (#lik/ime-lika); plan: true = još nije stvaran build iz igre
+  //   talenti: bodovi u tri stabla redom kako ih igra slaže; oprema: { slot, ime, kvaliteta: poor|common|uncommon|rare|epic|legendary }
   // oci: položaji očiju na fotki u postocima [[x, y], [x, y]] za sjaj (samo Undead), inače izostavi
   // profesije: plan "do 40" i "nakon 40"; null = po želji; { ime, plan: true } = još nije dogovoreno do kraja
   igraci: [
     { igrac: "Pero",    lik: "Melee Kitic",      klasa: "Warrior", rasa: "Orc",    uloga: "Melee DPS",  level: 0, foto: null,
-      profesije: { do40: ["Mining", "Skinning"], nakon40: ["Mining", "Engineering"] } },
+      profesije: { do40: ["Mining", "Skinning"], nakon40: ["Mining", "Engineering"] },
+      profil: {
+        specka: "Arms 2H", talenti: [31, 20, 0], plan: true,
+        opisBuilda: "Arms do Mortal Strikea, ostatak u Fury za crit i Rage. Dvoručno oružje, najlakši leveling za Warriora.",
+        oprema: [],
+        ciljevi: [
+          { ime: "Arcanite Reaper (Blacksmithing)", gotovo: false },
+          { ime: "Lionheart Helm (Blacksmithing)", gotovo: false },
+          { ime: "Savage Gladiator Chain (BRD)", gotovo: false },
+          { ime: "Devilsaur Gauntlets i Leggings (Leatherworking)", gotovo: false },
+          { ime: "Cape of the Black Baron (Stratholme)", gotovo: false },
+          { ime: "Hand of Justice (BRD)", gotovo: false },
+          { ime: "Blackhand's Breadth (UBRS)", gotovo: false }
+        ],
+        biljeske: "Kao DPS ne pulla. Kad Dex nije tu, Warrior je rezervni tank."
+      } },
     { igrac: "Niksa",   lik: "Shaman Saulic",    klasa: "Shaman",  rasa: "Orc",    uloga: "Healer",     level: 0, foto: "assets/likovi/shaman-saulic.jpg",
-      profesije: { do40: ["Herbalism", "Skinning"], nakon40: ["Skinning", "Leatherworking"] } },
+      profesije: { do40: ["Herbalism", "Skinning"], nakon40: ["Skinning", "Leatherworking"] },
+      profil: {
+        specka: "Enhancement", talenti: [0, 31, 20], plan: true,
+        opisBuilda: "Enhancement do Stormstrikea za leveling, Restoration za jače healove u dungeonima. Na 40 dual spec: čisti Resto za grupu.",
+        oprema: [],
+        ciljevi: [
+          { ime: "Arcanite Reaper (Blacksmithing)", gotovo: false },
+          { ime: "Savage Gladiator Chain (BRD)", gotovo: false },
+          { ime: "Devilsaur Gauntlets (Leatherworking)", gotovo: false },
+          { ime: "Cape of the Black Baron (Stratholme)", gotovo: false },
+          { ime: "Hand of Justice (BRD)", gotovo: false },
+          { ime: "Blackhand's Breadth (UBRS)", gotovo: false }
+        ],
+        biljeske: "Healer grupe. Kad kaže mana, svi stanu."
+      } },
     { igrac: "Karkens", lik: "Janica Frostelic", klasa: "Mage",    rasa: "Troll",  uloga: "Ranged DPS", level: 0, foto: null,
-      profesije: { do40: ["Herbalism", null], nakon40: ["Herbalism", null] } },
+      profesije: { do40: ["Herbalism", null], nakon40: ["Herbalism", null] },
+      profil: {
+        specka: "Frost", talenti: [17, 0, 34], plan: true,
+        opisBuilda: "Frost za sigurno levelanje: usporava, Frost Nova i Blizzard za AoE grind. Arcane za manu i manje resista.",
+        oprema: [],
+        ciljevi: [
+          { ime: "Robe of the Archmage (Tailoring)", gotovo: false },
+          { ime: "Mish'undare, Circlet of the Mind Flayer (Scholomance)", gotovo: false },
+          { ime: "Briarwood Reed", gotovo: false },
+          { ime: "Bonecreeper Stylus (Scholomance)", gotovo: false },
+          { ime: "Eye of the Beast (LBRS)", gotovo: false },
+          { ime: "Magister's set (Dungeon Set 1)", gotovo: false }
+        ],
+        biljeske: "Voda i hrana za ekipu, Polymorph na drugi target."
+      } },
     { igrac: "Žuga",    lik: "Nikola Roguevic",  klasa: "Rogue",   rasa: "Undead", uloga: "Melee DPS",  level: 0, foto: "assets/likovi/nikola-roguevic.jpg", oci: [[43.6, 13.9], [48.2, 13.6]],
-      profesije: { do40: ["Mining", "Skinning"], nakon40: ["Mining", "Skinning"] } },
+      profesije: { do40: ["Mining", "Skinning"], nakon40: ["Mining", "Skinning"] },
+      profil: {
+        specka: "Combat Swords", talenti: [15, 31, 5], plan: true,
+        opisBuilda: "Combat s mačevima do Adrenaline Rusha, Assassination za crit i Ruthlessness. Stabilan DPS bez puno skrivanja.",
+        oprema: [],
+        ciljevi: [
+          { ime: "Mask of the Unforgiven (Stratholme)", gotovo: false },
+          { ime: "Cadaverous Armor (Scholomance)", gotovo: false },
+          { ime: "Devilsaur Gauntlets i Leggings (Leatherworking)", gotovo: false },
+          { ime: "Cape of the Black Baron (Stratholme)", gotovo: false },
+          { ime: "Hand of Justice (BRD)", gotovo: false },
+          { ime: "Blackhand's Breadth (UBRS)", gotovo: false }
+        ],
+        biljeske: "Sap na drugi target prije pulla, kad Dex kaže."
+      } },
     { igrac: "Dex",     lik: "Arsen Deadic",     klasa: "Paladin", rasa: "Undead", uloga: "Tank",       level: 0, foto: "assets/likovi/arsen-deadic.jpg", oci: [[59.9, 21.5], [65.1, 21.7]],
-      profesije: { do40: ["Herbalism", null], nakon40: ["Herbalism", { ime: "Alchemy", plan: true }] } }
+      profesije: { do40: ["Herbalism", null], nakon40: ["Herbalism", { ime: "Alchemy", plan: true }] },
+      profil: {
+        specka: "Retribution (leveling)", talenti: [11, 5, 35], plan: true,
+        opisBuilda: "Ret za brzo levelanje solo i u grupi. Za tankanje dungeona kasnije Protection/Holy hibrid; na 40 dual spec, jedan spec za tank.",
+        oprema: [],
+        ciljevi: [
+          { ime: "Arcanite Reaper (Blacksmithing)", gotovo: false },
+          { ime: "Lionheart Helm (Blacksmithing)", gotovo: false },
+          { ime: "Savage Gladiator Chain (BRD)", gotovo: false },
+          { ime: "Cape of the Black Baron (Stratholme)", gotovo: false },
+          { ime: "Hand of Justice (BRD)", gotovo: false },
+          { ime: "Blackhand's Breadth (UBRS)", gotovo: false }
+        ],
+        biljeske: "Tank grupe: jedini smije pullati. Righteous Fury uključen u dungeonu."
+      } }
   ],
 
   // Rasponi iz Forevera (warcraft.wiki.gg, 29. 10. 2026.), samo ono što je Hordi blizu.
@@ -95,6 +169,21 @@ window.HORDE = {
     ] }
   ],
 
+
+  // Roadmap do 60: tempo ekipe; ciljani datumi faza računaju se iz ovoga (udio = dio ukupnog vremena do kraja faze)
+  roadmap: {
+    satiDnevno: 3,
+    planiraniTjedni: 7,
+    faze: [
+      { od: 1,  do: 10, udio: .04, zone: "Durotar, Tirisfal Glades", dungeoni: [] },
+      { od: 10, do: 20, udio: .13, zone: "The Barrens, Silverpine Forest", dungeoni: ["Ragefire Chasm 13–19", "Ruins of Lordaeron 15–22", "Wailing Caverns 19–25"] },
+      { od: 20, do: 30, udio: .28, zone: "Ashenvale, Stonetalon Mountains, Hillsbrad Foothills", dungeoni: ["Shadowfang Keep 23–29", "Blackfathom Deeps 25–31"] },
+      { od: 30, do: 40, udio: .46, zone: "Thousand Needles, Desolace, Arathi Highlands, Stranglethorn Vale", dungeoni: ["Razorfen Kraul 30–36", "Gnomeregan 31–37", "Scarlet Monastery 31–45"], kraj: "Na 40: mount i dual spec" },
+      { od: 40, do: 50, udio: .69, zone: "Tanaris, Feralas, The Hinterlands", dungeoni: ["Uldaman 44–50", "Zul'Farrak 45–51", "Maraudon 48–54"] },
+      { od: 50, do: 60, udio: 1,   zone: "Searing Gorge, Felwood, Un'Goro Crater, Western i Eastern Plaguelands, Winterspring", dungeoni: ["Sunken Temple 52–58", "Blackrock Depths 52–60", "Lower Blackrock Spire 55–60", "Scholomance i Stratholme 58–60"] },
+      { od: 60, do: 60, udio: null, zone: "Pre-raid BiS i raidovi", dungeoni: ["Onyxia attunement", "Barrow Deeps i Hyjal Summit od 9. 12."], tekst: "Skupljanje pre-raid BiS-a iz dungeona i craftanja. Molten Core u Foreveru zasad nije najavljen." }
+    ]
+  },
 
   // Prva noć: plan po fazama i pravila guilda
   prvaNoc: {

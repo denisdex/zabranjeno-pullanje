@@ -6,6 +6,19 @@
 <title>Zabranjeno pullanje</title>
 <meta name="description" content="Guild Zabranjeno pullanje (Zaprešić Horde) za World of Warcraft: Forever. Odbrojavanje, roster, prva noć, savjeti za Forever i dungeoni.">
 <meta name="theme-color" content="#0c0908">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/favicon-180.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Zabranjeno pullanje">
+<meta property="og:description" content="Guild Zabranjeno pullanje: pet frendova iz Zaprešića kreće u World of Warcraft: Forever za Hordu, a ovdje odbrojava do launcha 4. 11.">
+<meta property="og:url" content="https://zabranjeno-pullanje.netlify.app/">
+<meta property="og:image" content="https://zabranjeno-pullanje.netlify.app/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Zabranjeno pullanje">
+<meta name="twitter:image" content="https://zabranjeno-pullanje.netlify.app/assets/og.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Big+Shoulders+Display:wght@600;800;900&family=Martian+Mono:wght@400;500&display=swap">
@@ -85,9 +98,11 @@ footer .wrap { position: relative; z-index: 1; }
   padding-block: 18px; color: var(--dust);
 }
 .top .sig { display: flex; align-items: center; gap: 10px; color: var(--bone); }
-.crest-btn { all: unset; cursor: pointer; display: grid; place-items: center; width: 30px; height: 30px; margin: -6px; border-radius: 2px; -webkit-tap-highlight-color: transparent; }
-.crest-btn svg { width: 20px; height: 20px; transition: transform .25s var(--ease); }
-.crest-btn:hover svg, .crest-btn:active svg { transform: scale(1.15) rotate(-6deg); }
+.crest-btn { all: unset; cursor: pointer; display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%; -webkit-tap-highlight-color: transparent; }
+.crest-btn img { width: 46px; height: 46px; display: block; transition: transform .25s var(--ease); }
+.crest-btn:hover img, .crest-btn:active img { transform: scale(1.08) rotate(-8deg); }
+.top .sig { gap: 14px; }
+@media (max-width: 640px) { .crest-btn, .crest-btn img { width: 36px; height: 36px; } .top .sig { gap: 10px; } }
 .crest-btn:focus-visible { outline: 2px solid var(--ember); outline-offset: 2px; }
 .top .dc { color: var(--bone); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border: 1px solid var(--line); transition: border-color .2s, color .2s; }
 .top .dc:hover { border-color: var(--ember); color: var(--ember); }
@@ -181,19 +196,37 @@ footer .wrap { position: relative; z-index: 1; }
 .sec-head .meta { color: var(--dust); }
 .sec-head .meta b { color: var(--bone); font-weight: 500; }
 
-/* ---------- countdown ---------- */
-.count { padding-block: 64px 72px; border-block: 1px solid var(--line); background: rgba(21, 16, 14, .72); }
-.count .wrap { display: grid; gap: 28px; }
-.count-label { margin: 0; color: var(--ember); }
-.flip-row {
-  --dh: clamp(46px, 13.4vw, 136px);
-  display: flex; flex-wrap: wrap; align-items: flex-end; gap: 18px clamp(10px, 3vw, 40px);
+/* ---------- countdown: glavni dio za ekipu ---------- */
+.count {
+  position: relative; z-index: 1; overflow: hidden; padding-block: clamp(64px, 9vw, 128px);
+  border-block: 1px solid var(--line);
+  background: radial-gradient(90% 120% at 50% 110%, rgba(193, 18, 31, .2), rgba(193, 18, 31, 0) 62%), rgba(16, 12, 10, .88);
 }
+.count-wm {
+  position: absolute; left: 50%; top: 52%; transform: translate(-50%, -50%); pointer-events: none; white-space: nowrap;
+  font: 900 clamp(9rem, 40vw, 40rem)/.8 var(--f-display); letter-spacing: -.02em;
+  color: transparent; -webkit-text-stroke: 1px rgba(236, 226, 212, .1);
+}
+.count-in { position: relative; display: grid; gap: clamp(22px, 3vw, 36px); }
+.count-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 10px 24px; }
+.count-label { margin: 0; font: 800 clamp(1.5rem, 3.6vw, 2.6rem)/1 var(--f-display); text-transform: uppercase; letter-spacing: .02em; color: var(--ember); }
+.flip-row {
+  --dh: clamp(52px, 14.2vw, 228px);
+  position: relative; isolation: isolate;
+  display: flex; flex-wrap: wrap; align-items: flex-end; gap: 18px clamp(10px, 3vw, 44px);
+}
+.flip-row::before {
+  /* topli sjaj iza znamenki, lagano tinja */
+  content: ""; position: absolute; inset: -18% -4% -10%; z-index: -1; pointer-events: none;
+  background: radial-gradient(50% 62% at 45% 55%, rgba(255, 110, 30, .2), rgba(255, 110, 30, 0) 72%);
+  animation: tinja 3.4s ease-in-out infinite;
+}
+@keyframes tinja { 0%, 100% { opacity: .75; } 30% { opacity: 1; } 55% { opacity: .82; } 78% { opacity: .96; } }
 .unit { display: grid; gap: 10px; }
 .unit .digits { display: flex; gap: calc(var(--dh) * .05); }
 .unit .lab { color: var(--dust); }
 .flip-row .word {
-  font: 800 calc(var(--dh) * .62)/1 var(--f-display); text-transform: uppercase; align-self: center; padding-bottom: 22px;
+  font: 800 calc(var(--dh) * .5)/1 var(--f-display); text-transform: uppercase; align-self: center; padding-bottom: 12px;
 }
 
 .dg {
@@ -201,12 +234,12 @@ footer .wrap { position: relative; z-index: 1; }
   font: 800 var(--dh)/1 var(--f-display); font-variant-numeric: tabular-nums;
   perspective: calc(var(--dh) * 4);
 }
-.dg .h { position: absolute; left: 0; right: 0; height: 50%; overflow: hidden; background: var(--iron-2); }
-.dg .up, .dg .fu { top: 0; border-radius: 4px 4px 0 0; transform-origin: 50% 100%; background: #261c18; }
+.dg .h { position: absolute; left: 0; right: 0; height: 50%; overflow: hidden; background: #1c1411; }
+.dg .up, .dg .fu { top: 0; border-radius: 4px 4px 0 0; transform-origin: 50% 100%; background: #261b16; }
 .dg .lo, .dg .fl { bottom: 0; border-radius: 0 0 4px 4px; transform-origin: 50% 0; }
 .dg .h i {
   position: absolute; left: 0; right: 0; height: 200%; display: flex; align-items: center; justify-content: center;
-  font-style: normal; color: var(--bone);
+  font-style: normal; color: #f6ead9; text-shadow: 0 0 calc(var(--dh) * .16) rgba(255, 130, 50, .5), 0 0 2px rgba(255, 200, 150, .4);
 }
 .dg .up i, .dg .fu i { top: 0; }
 .dg .lo i, .dg .fl i { bottom: 0; }
@@ -219,10 +252,141 @@ footer .wrap { position: relative; z-index: 1; }
 .dg.go .fl { animation: fl .3s .26s cubic-bezier(.1, .6, .3, 1) forwards; }
 @keyframes fu { to { transform: rotateX(-90deg); } }
 @keyframes fl { from { transform: rotateX(90deg); } to { transform: rotateX(0deg); } }
+.noci { margin: 0; font: 800 clamp(1.6rem, 4vw, 3rem)/1 var(--f-display); text-transform: uppercase; }
+.noci b { color: var(--ember); font-weight: 900; }
+.prog { position: relative; padding-block: 34px 30px; }
+.prog-bar { position: relative; height: 4px; background: rgba(236, 226, 212, .1); }
+.prog-bar i { position: absolute; inset: 0 auto 0 0; background: linear-gradient(90deg, var(--blood), var(--ember)); box-shadow: 0 0 14px rgba(255, 110, 30, .5); }
+.prog-bar b {
+  position: absolute; top: 50%; width: 12px; height: 12px; transform: translate(-50%, -50%) rotate(45deg);
+  background: var(--ember); box-shadow: 0 0 0 5px rgba(255, 122, 46, .18), 0 0 18px rgba(255, 122, 46, .8);
+}
+.prog-marks { list-style: none; margin: 0; padding: 0; position: absolute; inset: 0; pointer-events: none; }
+.prog-marks li { position: absolute; top: 34px; transform: translateX(-50%); display: grid; justify-items: center; }
+.prog-marks li::before { content: ""; width: 1px; height: 12px; margin-top: -4px; background: rgba(236, 226, 212, .4); }
+.prog-marks li span { white-space: nowrap; color: var(--dust); margin-top: 8px; }
+.prog-marks li span b { color: var(--bone); font-weight: 500; }
+.prog-marks li.gore { top: auto; bottom: 34px; }
+.prog-marks li.gore::before { order: 2; margin: 0 0 -4px; }
+.prog-marks li.gore span { margin: 0 0 8px; }
+.prog-marks li.prvi { transform: none; justify-items: start; }
+.prog-marks li.zadnji { transform: translateX(-100%); justify-items: end; }
 .count-next, .count-clock { margin: 0; display: flex; flex-wrap: wrap; gap: 6px 18px; color: var(--dust); }
 .count-clock b { color: var(--sys); font-weight: 500; font-variant-numeric: tabular-nums; }
 .count-clock i { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #3fbf5f; box-shadow: 0 0 8px #3fbf5f; align-self: center; }
 .count-next b { color: var(--bone); font-weight: 500; }
+/* zadnja 24 sata prije launcha */
+.count.alarm { animation: alarm 1.8s ease-in-out infinite; }
+.count.alarm .count-label, .count.alarm .noci b { color: #ff3b30; }
+@keyframes alarm {
+  0%, 100% { box-shadow: inset 0 0 0 1px rgba(193, 18, 31, .35), inset 0 0 60px rgba(193, 18, 31, .12); }
+  50% { box-shadow: inset 0 0 0 2px rgba(255, 59, 48, .85), inset 0 0 120px rgba(193, 18, 31, .3); }
+}
+
+/* ---------- roadmap do 60 ---------- */
+.road-sum { display: flex; flex-wrap: wrap; gap: 10px 28px; margin: -8px 0 36px; color: var(--dust); }
+.road-sum b { color: var(--bone); font-weight: 500; }
+.road { list-style: none; margin: 0; padding: 0; position: relative; }
+.road::before { content: ""; position: absolute; left: 7px; top: 8px; bottom: 8px; width: 1px; background: var(--line); }
+.road > li { position: relative; display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; padding: 0 0 34px 34px; }
+.road > li::before {
+  content: ""; position: absolute; left: 2px; top: 8px; width: 11px; height: 11px; transform: rotate(45deg);
+  background: var(--night); border: 1px solid var(--dust);
+}
+.road .lv { font: 900 clamp(2.2rem, 5vw, 3.2rem)/.85 var(--f-display); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.road .lv small { font-size: .38em; color: var(--dust); margin-left: 6px; letter-spacing: .04em; }
+.road .zn { margin: 0; font: 800 clamp(1.25rem, 2.6vw, 1.6rem)/1.05 var(--f-display); text-transform: uppercase; }
+.road .dg-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.road .dg-list span { font: 500 .625rem/1 var(--f-mono); letter-spacing: .06em; padding: 6px 8px 5px; color: var(--bone); background: rgba(236, 226, 212, .05); outline: 1px solid var(--line); outline-offset: -1px; }
+.road .tx { margin: 0; color: var(--dust); max-width: 40rem; }
+.road .krj { margin: 2px 0 0; color: var(--ember); }
+.road .kad { color: var(--dust); }
+.road .kad b { color: var(--bone); font-weight: 500; }
+.road li.sad::before { background: var(--ember); border-color: var(--ember); box-shadow: 0 0 0 5px rgba(255, 122, 46, .16), 0 0 18px rgba(255, 122, 46, .6); }
+.road li.sad .lv { color: var(--ember); }
+.road li.gotovo::before { background: var(--dust); }
+.road li.gotovo .lv, .road li.gotovo .zn { color: var(--dust); }
+.road .tu { justify-self: start; font: 500 .625rem/1 var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--night); background: var(--ember); padding: 5px 8px 4px; }
+@media (min-width: 900px) {
+  .road::before { left: 11.5rem; }
+  .road > li { grid-template-columns: 10rem minmax(0, 1fr) 11rem; gap: 6px 3rem; padding: 0 0 40px; align-items: start; }
+  .road > li::before { left: calc(11.5rem - 5px); }
+  .road .lv { grid-row: span 4; text-align: right; }
+  .road .kad { grid-column: 3; grid-row: 1 / span 4; text-align: right; }
+  .road .zn, .road .dg-list, .road .tx, .road .krj, .road .tu { grid-column: 2; }
+}
+
+/* ---------- profil lika (overlay s vlastitim #lik/...) ---------- */
+.plate { cursor: pointer; }
+.p-more { justify-self: start; color: var(--c); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; padding: 8px 0 0; }
+.p-more::after { content: "→"; font-family: var(--f-body); transition: transform .25s var(--ease); }
+.plate:hover .p-more::after, .p-more:focus-visible::after { transform: translateX(4px); }
+.prof { position: fixed; inset: 0; z-index: 40; display: grid; place-items: center; padding: 3vh 3vw; }
+.prof[hidden] { display: none; }
+.prof-bg { position: absolute; inset: 0; background: rgba(8, 6, 5, .84); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+.prof-panel {
+  --cut: 18px;
+  position: relative; width: min(1240px, 100%); max-height: 94vh; overflow: auto; overscroll-behavior: contain;
+  background: var(--iron); outline: 1px solid var(--line); outline-offset: -1px;
+  clip-path: polygon(var(--cut) 0, 100% 0, 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, 0 100%, 0 var(--cut));
+  animation: profIn .45s var(--ease);
+}
+.prof-panel:focus { outline: 1px solid var(--line); }
+@keyframes profIn { from { opacity: 0; transform: translateY(24px) scale(.985); } to { opacity: 1; transform: none; } }
+.prof-x {
+  position: absolute; z-index: 5; top: 12px; right: 12px; width: 44px; height: 44px; display: grid; place-items: center;
+  background: rgba(12, 9, 8, .7); color: var(--bone); border: 1px solid var(--line); cursor: pointer;
+}
+.prof-x:hover { border-color: var(--ember); color: var(--ember); }
+.prof-x svg { width: 18px; height: 18px; }
+.prof-grid { display: grid; grid-template-columns: minmax(0, 1fr); }
+.prof-art { position: relative; }
+.prof-art .portrait { aspect-ratio: 4 / 5; max-height: 64vh; width: 100%; }
+.prof-art .p-name { font-size: clamp(2.8rem, 12vw, 4.6rem); }
+.prof-art .p-top { padding-right: 68px; }
+.prof-info { padding: clamp(22px, 4vw, 52px); display: grid; gap: 34px; align-content: start; min-width: 0; }
+.prof-info h3.lab { margin: 0 0 12px; color: var(--ember); }
+.prof-meta { margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.prof-meta dt { color: var(--dust); margin-bottom: 4px; }
+.prof-meta dd { margin: 0; font: 800 1.5rem/1 var(--f-display); text-transform: uppercase; }
+.prof-lvl { display: grid; gap: 10px; }
+.prof-lvl .n { font: 900 3.4rem/.8 var(--f-display); font-variant-numeric: tabular-nums; }
+.prof-lvl .n small { font-size: .4em; color: var(--dust); }
+.prof-info .p-prof ul { max-width: 26rem; }
+.build-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; margin-bottom: 14px; }
+.build-head b { font: 900 clamp(2rem, 4vw, 2.8rem)/.9 var(--f-display); text-transform: uppercase; color: var(--c); }
+.build-head span { font: 800 1.4rem/1 var(--f-display); color: var(--dust); font-variant-numeric: tabular-nums; }
+.build-head em { font: 500 .5625rem/1 var(--f-mono); letter-spacing: .1em; text-transform: uppercase; font-style: normal; color: var(--c); outline: 1px dashed color-mix(in srgb, var(--c) 55%, transparent); outline-offset: -1px; padding: 4px 6px 3px; }
+.trees { display: grid; gap: 10px; margin-bottom: 14px; }
+.tree { display: grid; grid-template-columns: 8.5rem minmax(0, 1fr) 2rem; gap: 12px; align-items: center; }
+.tree span { color: var(--dust); }
+.tree i { position: relative; height: 8px; background: var(--iron-2); }
+.tree i b { position: absolute; inset: 0 auto 0 0; background: var(--c); }
+.tree strong { font: 800 1.2rem/1 var(--f-display); text-align: right; font-variant-numeric: tabular-nums; }
+.build-tx { margin: 0; color: var(--dust); max-width: 42rem; }
+.gear { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr); column-gap: 28px; }
+@media (min-width: 640px) { .gear { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.gear li { display: grid; grid-template-columns: 6.5rem minmax(0, 1fr); gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+.gear li span { color: var(--dust); }
+.gear li b { font-weight: 500; font-size: .9375rem; color: var(--q, rgba(161, 146, 130, .5)); overflow-wrap: anywhere; }
+.gear-note { margin: 0 0 10px; color: var(--dust); }
+.goals { list-style: none; margin: 0; padding: 0; display: grid; }
+.goals li { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); align-items: center; }
+.goals li i { width: 18px; height: 18px; border: 1.5px solid var(--dust); position: relative; }
+.goals li.ok i { background: var(--ember); border-color: var(--ember); }
+.goals li.ok i::after { content: ""; position: absolute; left: 5px; top: 1px; width: 5px; height: 10px; border: solid var(--night); border-width: 0 2px 2px 0; transform: rotate(45deg); }
+.goals li.ok span { color: var(--dust); text-decoration: line-through; }
+.prof-note { margin: 0; color: var(--bone); max-width: 42rem; padding: 16px 18px; background: rgba(236, 226, 212, .04); border-left: 2px solid var(--c); }
+@media (min-width: 900px) {
+  .prof-grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
+  .prof-art { position: sticky; top: 0; align-self: start; height: min(94vh, 820px); }
+  .prof-art .portrait { aspect-ratio: auto; height: 100%; max-height: none; }
+  .prof-meta { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+  .prof { padding: 0; }
+  .prof-panel { width: 100%; height: 100%; max-height: none; clip-path: none; }
+}
 
 /* ---------- party / roster ---------- */
 .party { display: grid; gap: 14px; margin-bottom: 40px; }
@@ -426,6 +590,8 @@ footer .wrap { position: relative; z-index: 1; }
   background: radial-gradient(circle at 50% 50%, rgba(193, 18, 31, .55), rgba(60, 0, 4, .85) 70%);
   opacity: 0; animation: fth 1.9s var(--ease) forwards;
 }
+.fth-in { display: grid; justify-items: center; gap: clamp(12px, 2vw, 24px); }
+.fth-in img { width: clamp(90px, 16vw, 200px); height: auto; filter: drop-shadow(0 0 30px rgba(255, 60, 40, .6)); animation: fthT 1.9s var(--ease) forwards; }
 .fth b {
   font: 900 clamp(3.4rem, 15vw, 12rem)/.85 var(--f-display); text-transform: uppercase; text-align: center; color: var(--bone);
   text-shadow: 0 0 40px rgba(255, 60, 40, .8), 0 6px 0 #3b0005; padding-inline: 16px;
@@ -536,7 +702,7 @@ body.shake main, body.shake .top { animation: shake .55s cubic-bezier(.36, .07, 
 /* ---------- footer ---------- */
 footer .wrap {
   display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px;
-  padding-block: 48px 150px; border-top: 1px solid var(--line); color: var(--dust);
+  padding-block: 32px 84px; border-top: 1px solid var(--line); color: var(--dust);
 }
 footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; color: var(--blood); }
 
@@ -545,7 +711,7 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
   .plate, .gauge i { transition: none; }
   .dg.go .fu, .dg.go .fl { animation: none; }
   .portrait img { transition: none; }
-  .fig, .eye, .fog, .ph svg, .hero-main h1, .ognjiste { animation: none; }
+  .fig, .eye, .fog, .ph svg, .hero-main h1, .ognjiste, .flip-row::before, .count.alarm, .prof-panel, .fth-in img { animation: none; }
   .pl, .fog { transform: none; }
   .fth b { animation: none; }
 }
@@ -558,10 +724,10 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
 <header class="top">
   <div class="wrap mono">
     <span class="sig">
-      <button class="crest-btn" id="crest" type="button" aria-label="Grb ekipe"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 9l4 7 4-7M12 6v4" fill="none" stroke="#c1121f" stroke-width="1.8"/></svg></button>
+      <button class="crest-btn" id="crest" type="button" aria-label="Logo guilda"><img src="assets/logo-zp.svg" alt="" width="46" height="46"></button>
       &lt;Zabranjeno pullanje&gt;
     </span>
-    <a class="dc" id="dcTop" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4V5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M9 10.5h.01M15 10.5h.01" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>Discord</a>
+    <span class="mono">WoW Forever · Horde</span>
   </div>
 </header>
 
@@ -580,19 +746,23 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
         <canvas id="gl" aria-hidden="true"></canvas>
       </div>
       <div class="hero-act">
-        <a class="btn prime" id="dcHero" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4V5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M9 10.5h.01M15 10.5h.01" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>Uđi na Discord</a>
-        <button class="btn" id="roll" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 21 7v10l-9 5-9-5V7l9-5Z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 2v20M3 7l9 5 9-5" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".6"/></svg>/roll</button>
+        <button class="btn prime" id="roll" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 21 7v10l-9 5-9-5V7l9-5Z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 2v20M3 7l9 5 9-5" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".6"/></svg>/roll</button>
         <p class="roll-out" id="rollOut" aria-live="polite"><em>Need ili greed? Baci kocku.</em></p>
       </div>
     </div>
   </section>
 
   <section class="count" id="odbrojavanje" aria-live="off">
-    <div class="wrap">
-      <p class="count-label mono" id="cdLabel">Rezervacija imena traje još</p>
+    <div class="count-wm" id="countWm" aria-hidden="true">04.11.</div>
+    <div class="wrap count-in">
+      <div class="count-top">
+        <p class="count-label" id="cdLabel">Portal se otvara za</p>
+        <p class="count-clock mono"><i aria-hidden="true"></i><span>Server (Europe/Paris)</span><b id="srvClock">--:--:--</b></p>
+      </div>
       <div class="flip-row" id="flip"></div>
+      <p class="noci" id="noci"></p>
+      <div class="prog" aria-hidden="true"><div class="prog-bar"><i id="progFill"></i><b id="progNow"></b></div><ul class="prog-marks" id="progMarks"></ul></div>
       <p class="count-next mono" id="cdNext"></p>
-      <p class="count-clock mono"><i aria-hidden="true"></i><span>Vrijeme na serveru (Europe/Paris)</span><b id="srvClock">--:--:--</b></p>
     </div>
   </section>
 
@@ -643,11 +813,23 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
   <section class="sec band" id="savjeti">
     <div class="wrap">
       <div class="sec-head">
-        <p class="kicker mono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="currentColor" opacity=".25"/><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Put do 60</p>
+        <p class="kicker mono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="currentColor" opacity=".25"/><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Što stari orkovi znaju</p>
         <h2>Tips &amp; tricks</h2>
         <span class="meta mono">Poredano po levelu · cap trajno <b>60</b></span>
       </div>
       <div class="tips" id="tips"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="roadmap">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker mono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="currentColor" opacity=".25"/><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Put do 60</p>
+        <h2>Roadmap do 60</h2>
+        <span class="meta mono">Procjena za ekipu s dungeonima</span>
+      </div>
+      <p class="road-sum mono" id="roadSum"></p>
+      <ol class="road" id="road"></ol>
     </div>
   </section>
 
@@ -665,6 +847,14 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
 
 </main>
 
+<div class="prof" id="prof" hidden>
+  <div class="prof-bg" data-close></div>
+  <article class="prof-panel" role="dialog" aria-modal="true" aria-labelledby="profIme" tabindex="-1">
+    <button class="prof-x" type="button" data-close aria-label="Zatvori profil"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="2"/></svg></button>
+    <div id="profBody"></div>
+  </article>
+</div>
+
 <footer>
   <div class="ognjiste" aria-hidden="true"></div>
   <canvas id="embers" aria-hidden="true"></canvas>
@@ -679,7 +869,7 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
   <button class="pbtn" id="pPlay" type="button" aria-label="Pokreni glazbu"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="ic-play" d="M7 4v16l13-8z" fill="currentColor"/><path class="ic-pause" d="M6 4h4v16H6zm8 0h4v16h-4z" fill="currentColor"/></svg></button>
   <span class="ptitle mono"><b>Orgrimmar</b><em id="pState">pokreće se…</em></span>
   <button class="pbtn" id="pMute" type="button" aria-label="Utišaj"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z" fill="currentColor"/><path class="ic-wave" d="M16 8.5a4.5 4.5 0 0 1 0 7M18.5 6a8 8 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path class="ic-x" d="m16 9 5 6m0-6-5 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
-  <input class="pvol" id="pVol" type="range" min="0" max="100" value="50" aria-label="Glasnoća">
+  <input class="pvol" id="pVol" type="range" min="0" max="100" value="30" aria-label="Glasnoća">
 </div>
 <div id="ytHost" aria-hidden="true"></div>
 
@@ -728,12 +918,12 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
   var ukLvl = igraci.reduce(function (s, p) { return s + (+p.level || 0); }, 0);
   $("rosterMeta").innerHTML = "<b>5/5</b> u grupi · prosjek lvl <b>" + Math.round(ukLvl / igraci.length) + "</b>";
 
-  $("plates").innerHTML = igraci.map(function (p, idx) {
-    var r = ULOGA[p.uloga];
-    var lvl = Math.max(0, Math.min(60, +p.level || 0));
-    var rijeci = p.lik.split(" ");
+  function slug(s) {
+    return String(s).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/đ/g, "d").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  }
+  // lik ima dvije profesije: prikazuje se plan do 40, promjena na 40 samo kao tihi redak
+  function profHtml(p) {
     var pr = p.profesije || {};
-    // lik ima dvije profesije: prikazuje se plan do 40, promjena na 40 samo kao tihi redak
     function dvije(arr) { arr = (arr || []).slice(0, 2); while (arr.length < 2) arr.push(null); return arr; }
     function ime(x) { return !x ? "po želji" : typeof x === "object" ? x.ime : x; }
     function profList(arr) {
@@ -750,25 +940,37 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
     var promjena = unutra.length ? '<p class="p40 mono">na 40: ' + unutra.map(function (x, k) {
       return esc(van[k] || "") + " → " + esc(ime(x)) + (x && x.plan ? " (plan)" : "");
     }).join(", ") + "</p>" : "";
-    var portret = p.foto
+    return profList(p40) + promjena;
+  }
+  function portretHtml(p, idx) {
+    var r = ULOGA[p.uloga];
+    var h = p.foto
       ? '<div class="pl"><div class="fig" style="--t:' + (8.6 + idx * .55).toFixed(2) + "s;--d:-" + (idx * 1.9).toFixed(1) + 's">' +
           '<img src="' + esc(p.foto) + '" alt="' + esc(p.lik) + ', ' + esc(p.rasa) + " " + esc(p.klasa) + '" loading="lazy"><i class="tint"></i>' +
           (p.oci || []).map(function (o) { return '<i class="eye" style="left:' + o[0] + "%;top:" + o[1] + '%"></i>'; }).join("") +
         "</div></div>"
       : '<div class="ph">' + (GRB[p.klasa] || GRB.Warrior) + '<span class="mono">čeka screenshot</span></div>';
-    portret += '<div class="fog"></div>';
-    return '<article class="plate" style="--c:' + BOJE[p.klasa] + '" data-reveal>' +
-      '<div class="plate-in">' +
-        '<div class="portrait">' + portret +
-          '<div class="p-top mono"><span class="role">' + IKONE[r] + esc(p.uloga) + "</span><span>" + esc(p.klasa) + "</span></div>" +
-          '<div class="p-name-wrap"><h3 class="p-name">' + rijeci.map(function (w) { return "<span>" + esc(w) + "</span>"; }).join("") + "</h3></div>" +
-        "</div>" +
+    return '<div class="portrait">' + h + '<div class="fog"></div>' +
+      '<div class="p-top mono"><span class="role">' + IKONE[r] + esc(p.uloga) + "</span><span>" + esc(p.klasa) + "</span></div>" +
+      '<div class="p-name-wrap"><h3 class="p-name">' + p.lik.split(" ").map(function (w) { return "<span>" + esc(w) + "</span>"; }).join("") + "</h3></div>" +
+    "</div>";
+  }
+  function lvlOf(p) { return Math.max(0, Math.min(60, +p.level || 0)); }
+  function gaugeHtml(p) {
+    var lvl = lvlOf(p);
+    return '<div class="gauge" role="meter" aria-valuemin="0" aria-valuemax="60" aria-valuenow="' + lvl + '" aria-label="Level ' + esc(p.lik) + '"><i style="width:' + (lvl / 60 * 100).toFixed(2) + '%"></i></div>';
+  }
+
+  $("plates").innerHTML = igraci.map(function (p, idx) {
+    var r = ULOGA[p.uloga], lvl = lvlOf(p);
+    return '<article class="plate" style="--c:' + BOJE[p.klasa] + '" data-lik="' + slug(p.lik) + '" data-reveal>' +
+      '<div class="plate-in">' + portretHtml(p, idx) +
         '<div class="p-body">' +
         '<p class="p-who"><span class="mono">Igrač</span><b>' + esc(p.igrac) + "</b></p>" +
         '<dl class="p-meta"><div><dt class="mono">Rasa</dt><dd>' + esc(p.rasa) + '</dd></div><div><dt class="mono">Klasa</dt><dd>' + esc(p.klasa) + '</dd></div><div><dt class="mono">Uloga</dt><dd>' + esc(r) + "</dd></div></dl>" +
-        '<div class="p-lvl"><div class="lvl-head"><span class="mono">Level</span><span class="n">' + lvl + '<small>/60</small></span></div>' +
-          '<div class="gauge" role="meter" aria-valuemin="0" aria-valuemax="60" aria-valuenow="' + lvl + '" aria-label="Level ' + esc(p.lik) + '"><i style="width:' + (lvl / 60 * 100).toFixed(2) + '%"></i></div></div>' +
-        '<div class="p-prof"><span class="lab mono">Profesije</span>' + profList(p40) + promjena + "</div>" +
+        '<div class="p-lvl"><div class="lvl-head"><span class="mono">Level</span><span class="n">' + lvl + '<small>/60</small></span></div>' + gaugeHtml(p) + "</div>" +
+        '<div class="p-prof"><span class="lab mono">Profesije</span>' + profHtml(p) + "</div>" +
+        '<a class="p-more mono" href="#lik/' + slug(p.lik) + '">Profil</a>' +
       "</div></div></article>";
   }).join("");
 
@@ -792,6 +994,91 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
     el.addEventListener("pointercancel", leave);
     el.addEventListener("pointerup", function (e) { if (e.pointerType !== "mouse") setTimeout(leave, 350); });
   });
+
+  /* ---------- profil lika: overlay s vlastitim linkom #lik/ime-lika ---------- */
+  (function () {
+    var STABLA = {
+      Warrior: ["Arms", "Fury", "Protection"], Shaman: ["Elemental", "Enhancement", "Restoration"],
+      Mage: ["Arcane", "Fire", "Frost"], Rogue: ["Assassination", "Combat", "Subtlety"], Paladin: ["Holy", "Protection", "Retribution"]
+    };
+    var SLOTOVI = ["Head", "Neck", "Shoulder", "Back", "Chest", "Wrist", "Hands", "Waist", "Legs", "Feet", "Finger 1", "Finger 2", "Trinket 1", "Trinket 2", "Main Hand", "Off Hand", "Ranged"];
+    var KVALITETA = { poor: "#9d9d9d", common: "#ffffff", uncommon: "#1eff00", rare: "#0070dd", epic: "#a335ee", legendary: "#ff8000" };
+    var box = $("prof"), body = $("profBody"), panel = box.querySelector(".prof-panel"), otvorenKlikom = false, zadnjiFokus = null;
+    var poSlugu = {};
+    igraci.forEach(function (p, i) { poSlugu[slug(p.lik)] = { p: p, i: i }; });
+
+    function render(p, idx) {
+      var pf = p.profil || {}, r = ULOGA[p.uloga], lvl = lvlOf(p);
+      var t = pf.talenti || [0, 0, 0], st = STABLA[p.klasa] || ["", "", ""];
+      var oprema = {};
+      (pf.oprema || []).forEach(function (o) { oprema[o.slot] = o; });
+      var ciljevi = pf.ciljevi || [], gotovo = ciljevi.filter(function (c) { return c.gotovo; }).length;
+      panel.style.setProperty("--c", BOJE[p.klasa]);
+      body.innerHTML =
+        '<div class="prof-grid"><div class="prof-art">' + portretHtml(p, idx) + "</div>" +
+        '<div class="prof-info">' +
+          '<dl class="prof-meta"><div><dt class="mono">Igrač</dt><dd>' + esc(p.igrac) + '</dd></div><div><dt class="mono">Rasa</dt><dd>' + esc(p.rasa) +
+          '</dd></div><div><dt class="mono">Klasa</dt><dd style="color:' + BOJE[p.klasa] + '">' + esc(p.klasa) + '</dd></div><div><dt class="mono">Uloga</dt><dd>' + esc(r) + "</dd></div></dl>" +
+          '<div class="prof-lvl"><h3 class="lab mono">Level</h3><span class="n">' + lvl + "<small>/60</small></span>" + gaugeHtml(p) + "</div>" +
+          '<div class="p-prof"><h3 class="lab mono">Profesije</h3>' + profHtml(p) + "</div>" +
+          "<div><h3 class=\"lab mono\">Trenutni build</h3>" +
+            '<div class="build-head"><b>' + esc(pf.specka || "još nema") + "</b><span>" + t.join("/") + "</span>" + (pf.plan ? "<em>plan</em>" : "") + "</div>" +
+            '<div class="trees">' + st.map(function (n, k) {
+              return '<div class="tree"><span class="mono">' + esc(n) + '</span><i><b style="width:' + ((t[k] || 0) / 51 * 100).toFixed(1) + '%"></b></i><strong>' + (t[k] || 0) + "</strong></div>";
+            }).join("") + "</div>" +
+            (pf.opisBuilda ? '<p class="build-tx">' + esc(pf.opisBuilda) + "</p>" : "") +
+          "</div>" +
+          "<div><h3 class=\"lab mono\">Oprema</h3>" +
+            ((pf.oprema || []).length ? "" : '<p class="gear-note mono">Još nema opreme. Upisuje se kad krene igra.</p>') +
+            '<ul class="gear">' + SLOTOVI.map(function (s) {
+              var o = oprema[s];
+              return '<li><span class="mono">' + s + "</span><b" + (o ? ' style="--q:' + (KVALITETA[o.kvaliteta] || KVALITETA.common) + '"' : "") + ">" + (o ? esc(o.ime) : "—") + "</b></li>";
+            }).join("") + "</ul></div>" +
+          (ciljevi.length ? '<div><h3 class="lab mono">Ciljevi · pre-raid BiS · ' + gotovo + "/" + ciljevi.length + '</h3><ul class="goals">' + ciljevi.map(function (c) {
+            return '<li class="' + (c.gotovo ? "ok" : "") + '"><i aria-hidden="true"></i><span>' + esc(c.ime) + "</span></li>";
+          }).join("") + "</ul></div>" : "") +
+          (pf.biljeske ? '<div><h3 class="lab mono">Bilješke</h3><p class="prof-note">' + esc(pf.biljeske) + "</p></div>" : "") +
+        "</div></div>";
+      var ime = body.querySelector(".p-name");
+      if (ime) ime.id = "profIme";
+    }
+    function otvori(s) {
+      var x = poSlugu[s];
+      if (!x) return zatvori(true);
+      if (box.hidden) zadnjiFokus = document.activeElement;
+      render(x.p, x.i);
+      box.hidden = false;
+      document.documentElement.style.overflow = "hidden";
+      panel.scrollTop = 0;
+      panel.focus({ preventScroll: true });
+    }
+    function zatvori(tiho) {
+      if (box.hidden) return;
+      box.hidden = true;
+      document.documentElement.style.overflow = "";
+      if (!tiho && location.hash.indexOf("#lik/") === 0) {
+        if (otvorenKlikom) history.back();
+        else history.replaceState(null, "", location.pathname + location.search);
+      }
+      otvorenKlikom = false;
+      if (zadnjiFokus && zadnjiFokus.focus) zadnjiFokus.focus({ preventScroll: true });
+    }
+    function izHasha() {
+      var m = location.hash.match(/^#lik\/([a-z0-9-]+)$/);
+      if (m) otvori(m[1]); else zatvori(true);
+    }
+    $("plates").addEventListener("click", function (e) {
+      var pl = e.target.closest(".plate");
+      if (!pl) return;
+      e.preventDefault();
+      otvorenKlikom = true;
+      location.hash = "lik/" + pl.getAttribute("data-lik");
+    });
+    box.addEventListener("click", function (e) { if (e.target.closest("[data-close]")) zatvori(); });
+    window.addEventListener("keydown", function (e) { if (e.key === "Escape" && !box.hidden) zatvori(); });
+    window.addEventListener("hashchange", izHasha);
+    izHasha();
+  })();
 
   /* ---------- parallax portreta (miš i nagib mobitela) ---------- */
   if (!reduce) {
@@ -851,14 +1138,43 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
     }).join("");
   })();
 
+  /* ---------- roadmap do 60 ---------- */
+  (function () {
+    var R = D.roadmap;
+    if (!R) return;
+    var L = Date.parse(D.datumi.launch), dana = R.planiraniTjedni * 7, dan = 864e5;
+    var avg = igraci.reduce(function (s, p) { return s + lvlOf(p); }, 0) / igraci.length;
+    function dat(t) { var d = new Date(t); return d.getDate() + ". " + (d.getMonth() + 1) + "."; }
+    var kraj60 = L + dana * dan;
+    $("roadSum").innerHTML = "<span>Tempo <b>" + R.satiDnevno + " h dnevno</b></span><span>Plan <b>" + R.planiraniTjedni + " tjedana</b></span>" +
+      "<span>≈ <b>" + Math.round(R.satiDnevno * dana) + " h</b> /played</span><span>Level 60 oko <b>" + dat(kraj60) + "</b></span>";
+    var prije = 0;
+    $("road").innerHTML = R.faze.map(function (f) {
+      var unutra = avg < 1 ? f.od === 1 : f.od === 60 ? avg >= 60 : avg >= f.od && avg < f.do;
+      var st = unutra ? "sad" : avg >= 1 && f.od !== 60 && avg >= f.do ? "gotovo" : "";
+      var kad;
+      if (f.udio === null) kad = '<span class="kad mono">od <b>' + dat(Date.parse(D.datumi.prviRaid)) + "</b></span>";
+      else {
+        var t = L + Math.round(f.udio * dana) * dan, dOd = Math.round(prije * dana) + 1, dDo = Math.round(f.udio * dana);
+        prije = f.udio;
+        kad = '<span class="kad mono">cilj <b>' + dat(t) + "</b><br>dan " + dOd + "–" + dDo + "</span>";
+      }
+      var lv = f.od === f.do ? String(f.od) : f.od + "–" + f.do;
+      var tu = st === "sad" ? '<span class="tu">' + (avg < 1 ? "Kreće 4. 11. u ponoć" : "Mi smo ovdje · lvl " + Math.round(avg)) + "</span>" : "";
+      return '<li class="' + st + '" data-reveal><span class="lv">' + lv + "<small>lvl</small></span>" + kad +
+        '<p class="zn">' + esc(f.zone) + "</p>" + tu +
+        (f.dungeoni && f.dungeoni.length ? '<div class="dg-list">' + f.dungeoni.map(function (d) { return "<span>" + esc(d) + "</span>"; }).join("") + "</div>" : "") +
+        (f.tekst ? '<p class="tx">' + esc(f.tekst) + "</p>" : "") +
+        (f.kraj ? '<p class="krj mono">' + esc(f.kraj) + "</p>" : "") + "</li>";
+    }).join("");
+  })();
+
   /* ---------- tips & tricks ---------- */
   $("tips").innerHTML = (D.savjeti || []).map(function (t) {
     return '<div class="tip" data-reveal><div class="num">' + esc(t.broj) + (t.jedinica ? "<small>" + esc(t.jedinica) + "</small>" : "") +
       '</div><h3 class="mono">' + esc(t.naslov) + "</h3><p>" + esc(t.tekst) + "</p></div>";
   }).join("");
 
-  /* ---------- Discord ---------- */
-  ["dcTop", "dcHero"].forEach(function (id) { $(id).href = D.discord; });
 
   /* ---------- /roll ---------- */
   (function () {
@@ -958,7 +1274,7 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
       zvuk();
       var o = document.createElement("div");
       o.className = "fth"; o.setAttribute("role", "status");
-      o.innerHTML = "<b>For the<br>Horde!</b>";
+      o.innerHTML = '<div class="fth-in"><img src="assets/logo-zp.svg" alt=""><b>For the<br>Horde!</b></div>';
       document.body.appendChild(o);
       if (!reduce) { document.body.classList.remove("shake"); void document.body.offsetWidth; document.body.classList.add("shake"); }
       setTimeout(function () { o.remove(); document.body.classList.remove("shake"); aktivno = false; }, 1950);
@@ -984,9 +1300,10 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
   var au = new Date(D.azurirano + "T12:00:00");
   $("updated").textContent = "Ažurirano " + au.getDate() + ". " + mj[au.getMonth()] + " " + au.getFullYear() + ".";
 
-  /* ---------- countdown s preklopnim znamenkama ---------- */
+  /* ---------- countdown: do launcha, pa "Dan X na Azerothu" ---------- */
   var RES_END = Date.parse(D.datumi.rezervacijaDo);
   var LAUNCH = Date.parse(D.datumi.launch);
+  var RES_OD = Date.parse(D.datumi.rezervacijaOd), RAID = Date.parse(D.datumi.prviRaid);
   var flip = $("flip"), faza = null, digits = [];
 
   function digitEl() {
@@ -994,8 +1311,7 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
     el.className = "dg";
     el.innerHTML = '<span class="h up"><i>0</i></span><span class="h lo"><i>0</i></span><span class="h fu"><i>0</i></span><span class="h fl"><i>0</i></span>';
     var q = el.querySelectorAll("i");
-    var d = { el: el, up: q[0], lo: q[1], fu: q[2], fl: q[3], v: null, timer: 0 };
-    return d;
+    return { el: el, up: q[0], lo: q[1], fu: q[2], fl: q[3], v: null, timer: 0 };
   }
   function setDigit(d, v) {
     v = String(v);
@@ -1031,37 +1347,62 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
     var g = digits[gi], s = pad(num, g.length);
     for (var i = 0; i < g.length; i++) setDigit(g[i], s[i]);
   }
+  function datum(t) { var d = new Date(t); return d.getDate() + ". " + (d.getMonth() + 1) + "."; }
+  // traka napretka: od početka rezervacije do prvog raida
+  (function () {
+    var marks = [[RES_OD, "Rezervacija", "prvi"], [LAUNCH, "Launch", "gore"], [RAID, "Prvi raid", "zadnji"]];
+    $("progMarks").innerHTML = marks.map(function (m) {
+      var x = (m[0] - RES_OD) / (RAID - RES_OD) * 100;
+      var t = m[0] === LAUNCH ? "4. 11." : datum(m[0]);
+      return '<li class="' + m[2] + '" style="left:' + x.toFixed(2) + '%"><span class="mono"><b>' + t + "</b> " + m[1] + "</span></li>";
+    }).join("");
+  })();
+  function prog(now) {
+    var x = Math.max(0, Math.min(1, (now - RES_OD) / (RAID - RES_OD))) * 100;
+    $("progFill").style.width = x.toFixed(2) + "%";
+    $("progNow").style.left = x.toFixed(2) + "%";
+  }
+  function trajanje(ms) {
+    var h = Math.max(0, Math.floor(ms / 36e5));
+    return Math.floor(h / 24) + " d " + (h % 24) + " h";
+  }
+  var section = $("odbrojavanje");
   function tick() {
-    var now = Date.now(), cilj, f;
-    if (now < RES_END) { f = "res"; cilj = RES_END; }
-    else if (now < LAUNCH) { f = "launch"; cilj = LAUNCH; }
-    else f = "live";
-
+    var now = Date.now(), f = now < LAUNCH ? "prije" : "live";
     if (f !== faza) {
       faza = f;
       if (f === "live") {
-        $("cdLabel").textContent = "Od launcha";
+        $("cdLabel").textContent = "Portal je otvoren";
         buildUnits([{ word: "Dan" }, { n: 2 }, { word: "na Azerothu" }]);
-        $("cdNext").innerHTML = "<span>Launch je bio <b>4. 11. 2026. u ponoć</b></span>";
+        $("countWm").textContent = "AZEROTH";
       } else {
-        $("cdLabel").textContent = f === "res" ? "Rezervacija imena traje još" : "Do launcha je ostalo";
+        $("cdLabel").textContent = "Portal se otvara za";
         buildUnits([{ n: 2, lab: "dana" }, { n: 2, lab: "sati" }, { n: 2, lab: "minuta" }, { n: 2, lab: "sekundi" }]);
-        $("cdNext").innerHTML = f === "res"
-          ? "<span>Rok: <b>uto 3. 11. u 23:59</b></span><span>Launch: <b>sri 4. 11. u ponoć</b></span>"
-          : "<span>Launch: <b>sri 4. 11. u ponoć</b> (15:00 PST)</span><span>Imena su zaključana</span>";
       }
     }
+    var alarm = f === "prije" && LAUNCH - now <= 864e5;
+    section.classList.toggle("alarm", alarm);
+    window.__alarm = alarm;
     if (f === "live") {
       var dan = Math.floor((now - LAUNCH) / 864e5) + 1;
       if (String(dan).length > digits[0].length) buildUnits([{ word: "Dan" }, { n: String(dan).length }, { word: "na Azerothu" }]);
       showGroup(0, dan);
+      var doRaida = Math.ceil((RAID - now) / 864e5);
+      $("noci").innerHTML = doRaida > 0 ? "Prvi raid za <b>" + doRaida + "</b> " + (doRaida === 1 ? "dan" : "dana") : "Raidovi su <b>otvoreni</b>";
+      $("cdNext").innerHTML = "<span>Launch je bio <b>4. 11. 2026. u ponoć</b></span>";
     } else {
-      var s = Math.max(0, Math.floor((cilj - now) / 1000));
+      var s = Math.max(0, Math.floor((LAUNCH - now) / 1000));
       showGroup(0, Math.floor(s / 86400));
       showGroup(1, Math.floor(s % 86400 / 3600));
       showGroup(2, Math.floor(s % 3600 / 60));
       showGroup(3, s % 60);
+      var noci = Math.ceil((LAUNCH - now) / 864e5);
+      $("noci").innerHTML = alarm ? "Ovo je <b>ta noć</b>. Nitko ne spava." : noci === 1 ? "Još <b>jedna</b> noć" : "Još <b>" + noci + "</b> noći";
+      $("cdNext").innerHTML = now < RES_END
+        ? "<span>Rezervacija imena još <b>" + trajanje(RES_END - now) + "</b></span><span>Launch: <b>sri 4. 11. u ponoć</b> (15:00 PST)</span>"
+        : "<span>Imena su zaključana</span><span>Launch: <b>sri 4. 11. u ponoć</b> (15:00 PST)</span>";
     }
+    prog(now);
   }
   tick();
   setInterval(tick, 1000);
@@ -1119,10 +1460,11 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
       cx.globalCompositeOperation = "lighter";
       for (var i = 0; i < parts.length; i++) {
         var p = parts[i];
-        p.ph += .02 * dt; p.y -= p.vy * dt; p.x += (p.vx + Math.sin(p.ph) * .2) * dt;
+        var jac = window.__alarm ? 1.8 : 1;
+        p.ph += .02 * dt; p.y -= p.vy * dt * jac; p.x += (p.vx + Math.sin(p.ph) * .2) * dt;
         if (p.y < -12) nova(p, false);
         // svjetlije pri dnu, gase se prema vrhu
-        cx.globalAlpha = Math.max(0, Math.min(1, p.y / H * 1.5) * p.a * (.65 + Math.sin(p.ph * 3) * .35));
+        cx.globalAlpha = Math.max(0, Math.min(1, Math.min(1, p.y / H * 1.5) * p.a * (.65 + Math.sin(p.ph * 3) * .35) * jac));
         var d = p.r * 8;
         cx.drawImage(c, p.x - d / 2, p.y - d / 2, d, d);
       }
@@ -1395,7 +1737,7 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
 <script>
 /* ---------- glazba u pozadini: Orgrimmar tema, kreće sama (tiho dok korisnik ne dotakne stranicu), loop ---------- */
 (function () {
-  var ID = "DZmGIpL-DIo", VOL0 = 50;
+  var ID = "DZmGIpL-DIo", VOL0 = 30;
   var box = document.getElementById("player"), bPlay = document.getElementById("pPlay"), bMute = document.getElementById("pMute"),
       vol = document.getElementById("pVol"), st = document.getElementById("pState");
   var yt = null, spreman = false, hoceSvirati = true, muted = false, v = VOL0;
