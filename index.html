@@ -1246,7 +1246,7 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
         <h2>Upute</h2>
         <span class="meta mono">Vrijedi za sve, od prvog dana</span>
       </div>
-      <ol class="upute" id="upute"></ol>
+      <ol class="upute" id="uputeLista"></ol>
     </div>
   </section>
 
@@ -2123,7 +2123,7 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
   vidiSve($("log"), 3, "Vidi sve patch notese");
 
   /* ---------- upute ---------- */
-  $("upute").innerHTML = (D.upute || []).map(function (u) {
+  $("uputeLista").innerHTML = (D.upute || []).map(function (u) {
     return "<li><b>" + esc(u.naslov) + "</b><span>" + esc(u.tekst) + "</span></li>";
   }).join("");
 
