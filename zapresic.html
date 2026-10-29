@@ -109,7 +109,7 @@ button { font: inherit; color: inherit; }
 
 .zvuk-hint { position: fixed; left: max(18px, env(safe-area-inset-left)); bottom: max(22px, env(safe-area-inset-bottom)); z-index: 12; margin: 0;
   font: 500 10px/1 var(--f-mono); letter-spacing: .2em; text-transform: uppercase; color: var(--bone); opacity: 0; pointer-events: none; transition: opacity .4s; }
-.zvuk-hint.on { opacity: .8; animation: dise 2s ease-in-out infinite; }
+.zvuk-hint.on { opacity: .9; pointer-events: auto; cursor: pointer; animation: dise 2s ease-in-out infinite; }
 .zrno { position: absolute; inset: -50%; z-index: 10; pointer-events: none; opacity: .07;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   animation: zrno .5s steps(4) infinite; }
@@ -153,7 +153,7 @@ button { font: inherit; color: inherit; }
   <div class="zrno"></div>
 </div>
 <button type="button" class="btn preskoci" id="preskoci">Preskoči ›</button>
-<p class="zvuk-hint" id="zvukHint">🔊 Dodirni za zvuk</p>
+<button type="button" class="btn zvuk-hint" id="zvukHint">🔊 Zvuk</button>
 
 <div class="ulaz" id="ulaz">
   <div>
@@ -947,9 +947,15 @@ button { font: inherit; color: inherit; }
     T = sloziTimeline();
     if (saZvukom) { try { A = zvukStart(); if (A) upaliZvuk(A); } catch (e) { A = null; } }
     $("preskoci").classList.add("on");
+    preskoceno = false; clearTimeout(krajTimer);
+    // ugrađeno na glavnom webu: nakon prirodnog kraja i 2 s završnog kadra javi roditelju da zatvori overlay
+    T.eventCallback("onComplete", function () { if (embed && !preskoceno) krajTimer = setTimeout(javiKraj, 2000); });
     T.play(0);
   }
+  var embed = /[?&]embed/.test(location.search), preskoceno = false, krajTimer = 0;
+  function javiKraj() { try { window.parent.postMessage({ zp: "kraj" }, "*"); } catch (e) {} }
   function naKraj() {
+    preskoceno = true;
     if (T) T.progress(1);
     if (A) { A.stani(); A = null; }
     hint.classList.remove("on");
@@ -987,7 +993,13 @@ button { font: inherit; color: inherit; }
     // debug: ?t=12 skoči na sekundu (bez zvuka)
     var q = /[?&]t=([\d.]+)/.exec(location.search);
     // ?odmah: dolazak s ulaza glavnog weba, bez vlastitog ulaza
-    if (/[?&]odmah/.test(location.search) && !q) { ulaz.remove(); if (reduce) zavrsniKadar(); else pusti(true); }
+    // ?embed: iframe u sekciji Kino; "Na web" postaje "Zatvori"
+    if (embed) {
+      var zat = document.createElement("button"); zat.type = "button"; zat.className = "btn glavni"; zat.textContent = "Zatvori ×";
+      zat.addEventListener("click", function () { clearTimeout(krajTimer); javiKraj(); });
+      var nw = document.querySelector("a.btn.glavni"); nw.parentNode.replaceChild(zat, nw);
+    }
+    if ((embed || /[?&]odmah/.test(location.search)) && !q) { ulaz.remove(); if (reduce) zavrsniKadar(); else pusti(true); }
     if (q) { ulaz.remove(); pusti(false); T.seek(+q[1]); if (T.time() >= 21.8) { $("gumbi").classList.add("on"); $("preskoci").classList.remove("on"); } if (/[?&]stop/.test(location.search)) T.pause(); window.__zp = { GL: GL, T: function () { return T; }, gl: gl, render: render }; }
   }
   // tabla stanice crta se fontom stranice, pa se čeka da stigne (najviše 2 s)
