@@ -163,7 +163,7 @@ window.HORDE = {
   // slika: putanja do slike dungeona (npr. "assets/dungeoni/wailing-caverns.jpg"), prikazuje se na kartici i u vodiču
   // vodic: kratki vodič za našu grupu (Vanilla 1.12 znanje; Forever je mogao mijenjati), otvara se na #dungeon/ime
   dungeoni: [
-    { ime: "Ragefire Chasm",            gdje: "Orgrimmar",          od: 13, do: 19, odradeno: false,
+    { ime: "Ragefire Chasm",            gdje: "Orgrimmar", slika: "assets/dungeoni/ragefire-chasm.jpg",          od: 13, do: 19, odradeno: false,
       vodic: {
         ulaz: "Orgrimmar, Cleft of Shadow: spusti se u Cleft i prati tunel do lave. Najbliže moguće, Undead dolaze zeppelinom.",
         questovi: ["Searching for the Lost Satchel (Orgrimmar)", "Testing an Enemy's Strength (Orgrimmar)", "Slaying the Beast (Taragaman)", "Hidden Enemies (Thrallov lanac, nastavlja se ovdje)"],
@@ -177,9 +177,9 @@ window.HORDE = {
         loot: ["Točan loot po bossu: Wowhead vodič ispod."],
         greske: ["Ne trčati naprijed u lavu: troggovi se lančano pullaju.", "Zabranjeno pullanje vrijedi od prvog koraka."]
       } },
-    { ime: "Ruins of Lordaeron",        gdje: "Undercity",          od: 15, do: 22, novo: true, odradeno: false,
+    { ime: "Ruins of Lordaeron",        gdje: "Undercity", slika: "assets/dungeoni/ruins-of-lordaeron.jpg",          od: 15, do: 22, novo: true, odradeno: false,
       vodic: { nepoznato: true, ulaz: "Ispod Undercityja (Tirisfal Glades). Dobar prvi dungeon za Undead stranu ekipe.", napomena: "Forever je ovaj dungeon tek dodao. Bossovi, taktike i loot još nisu javno poznati; vodič dopunjavamo kad se zna." } },
-    { ime: "Wailing Caverns",           gdje: "Barrens",            od: 19, do: 25, odradeno: false,
+    { ime: "Wailing Caverns",           gdje: "Barrens", slika: "assets/dungeoni/wailing-caverns.jpg",            od: 19, do: 25, odradeno: false,
       vodic: {
         ulaz: "The Barrens, jugozapadno od Crossroadsa: špilja u brdu u obliku lica kod Lushwater Oasis. Ulaz u dungeon je duboko u špilji, iza raptora i druida.",
         questovi: ["Leaders of the Fang (Crossroads): odlične nagrade", "Serpentbloom (Apothecary, Crossroads)", "Trouble at the Docks", "Deviate Hides i Deviate Eradication (oaza ispred špilje)"],
@@ -197,7 +197,7 @@ window.HORDE = {
         loot: ["Mage: Crescent Staff (quest Leaders of the Fang)", "Rogue: Wingblade (quest Leaders of the Fang)", "Točan loot po bossu: Wowhead vodič ispod."],
         greske: ["Ne preskakati escort Naralexa, inače nema Mutanusa.", "Ne ići bez puta: špilja se lako izgubi, prati Dexa."]
       } },
-    { ime: "Shadowfang Keep",           gdje: "Silverpine Forest",  od: 23, do: 29, odradeno: false,
+    { ime: "Shadowfang Keep",           gdje: "Silverpine Forest", slika: "assets/dungeoni/shadowfang-keep.jpg",  od: 23, do: 29, odradeno: false,
       vodic: {
         ulaz: "Silverpine Forest, dvorac na brdu iznad Pyrewood Villagea, južno od Sepulchera.",
         questovi: ["Deathstalkers in Shadowfang (Sepulcher)", "The Book of Ur (Undercity)", "Arugal Must Die (Sepulcher)"],
@@ -215,7 +215,7 @@ window.HORDE = {
         loot: ["Rogue i Warrior: Shadowfang (rijedak drop s trasha)", "Mage: Robes of Arugal", "Točan loot po bossu: Wowhead vodič ispod."],
         greske: ["Ne pullati dva worgen paka odjednom.", "Ne otvarati vrata Fenrusove sobe prije nego je grupa puna mane."]
       } },
-    { ime: "Blackfathom Deeps",         gdje: "Ashenvale",          od: 25, do: 31, odradeno: false,
+    { ime: "Blackfathom Deeps",         gdje: "Ashenvale", slika: "assets/dungeoni/blackfathom-deeps.jpg",          od: 25, do: 31, odradeno: false,
       vodic: {
         ulaz: "Ashenvale, Zoram Strand na obali. Ulaz je u ruševini, dio puta pod vodom: Undead dišu pod vodom bez problema.",
         questovi: ["Allegiance to the Old Gods (Shrine of Aku'mai, Ashenvale)", "Baron Aquanis (Strange Water Globe s trasha)", "Amongst the Ruins (Zoram'gar)"],
@@ -235,7 +235,7 @@ window.HORDE = {
       } },
     { ime: "City of Dalaran",           gdje: "Alterac Mountains",  od: 28, do: 33, novo: true, odradeno: false,
       vodic: { nepoznato: true, ulaz: "Alterac Mountains. Pazi: Horde je u gradu Dalaranu napadnuta na prvi pogled, ali dungeonu se može prići.", napomena: "Forever je ovaj dungeon tek dodao. Bossovi, taktike i loot još nisu javno poznati; vodič dopunjavamo kad se zna." } },
-    { ime: "Razorfen Kraul",            gdje: "Barrens",            od: 30, do: 36, odradeno: false,
+    { ime: "Razorfen Kraul",            gdje: "Barrens", slika: "assets/dungeoni/razorfen-kraul.jpg",            od: 30, do: 36, odradeno: false,
       vodic: {
         ulaz: "Južni Barrens, na granici s Thousand Needles: velika trnovita gomila zapadno od ceste.",
         questovi: ["Willix the Importer (escort na ulazu)", "Going, Going, Guano! (Crossroads)", "A Vengeful Fate (Thunder Bluff)", "Mortality Wanes"],
@@ -251,7 +251,7 @@ window.HORDE = {
         loot: ["Točan loot po bossu: Wowhead vodič ispod."],
         greske: ["Vepar, pa još jedan vepar: tu je ime guilda nastalo.", "Patrolirajući quilboarovi se lančaju, čekati da prođu."]
       } },
-    { ime: "Scarlet Monastery",         gdje: "Tirisfal, 4 krila",  od: 31, do: 45, odradeno: false,
+    { ime: "Scarlet Monastery",         gdje: "Tirisfal, 4 krila", slika: "assets/dungeoni/scarlet-monastery.jpg",  od: 31, do: 45, odradeno: false,
       vodic: {
         ulaz: "Tirisfal Glades, sjeveroistočno, samostan iza Brilla. Četiri krila s odvojenim ulazima: Graveyard, Library, Armory, Cathedral.",
         questovi: ["In the Name of the Light (Undercity): Mograine, Whitemane, Doan, Herod", "Into the Scarlet Monastery (Undercity)", "Compendium of the Fallen (Library)", "Test of Lore"],
@@ -269,7 +269,7 @@ window.HORDE = {
       } },
     { ime: "The Drowned City",          gdje: "Stranglethorn Vale", od: 35, do: 40, novo: true, odradeno: false,
       vodic: { nepoznato: true, ulaz: "Stranglethorn Vale.", napomena: "Forever je ovaj dungeon tek dodao. Bossovi, taktike i loot još nisu javno poznati; vodič dopunjavamo kad se zna." } },
-    { ime: "Razorfen Downs",            gdje: "Barrens",            od: 38, do: 44, odradeno: false,
+    { ime: "Razorfen Downs",            gdje: "Barrens", slika: "assets/dungeoni/razorfen-downs.jpg",            od: 38, do: 44, odradeno: false,
       vodic: {
         ulaz: "Barrens, na samoj granici s Thousand Needles, istočno od Razorfen Kraula.",
         questovi: ["Bring the End (Thunder Bluff)", "Extinguishing the Idol (Belnistrasz u dungeonu)", "An Unholy Alliance"],
@@ -285,7 +285,7 @@ window.HORDE = {
       } },
     { ime: "Krol'dok Stronghold",       gdje: "Riverglades",        od: 40, do: 45, novo: true, odradeno: false,
       vodic: { nepoznato: true, ulaz: "Riverglades (nova Forever zona, brod iz Powderfuse Porta).", napomena: "Forever je ovaj dungeon tek dodao. Bossovi, taktike i loot još nisu javno poznati; vodič dopunjavamo kad se zna." } },
-    { ime: "Uldaman",                   gdje: "Badlands",           od: 44, do: 50, odradeno: false,
+    { ime: "Uldaman",                   gdje: "Badlands", slika: "assets/dungeoni/uldaman.jpg",           od: 44, do: 50, odradeno: false,
       vodic: {
         ulaz: "Badlands, sjeverozapad. Horde obično ulazi stražnjim ulazom kroz Hall of the Keepers.",
         questovi: ["Power Stones", "Agmond's Fate", "The Platinum Discs (Disc of Norgannon)", "Uldaman Reagent Run"],
@@ -302,7 +302,7 @@ window.HORDE = {
         loot: ["Točan loot po bossu: Wowhead vodič ispod."],
         greske: ["Ne dirati kipove u Archaedasovoj sobi prije nego je grupa spremna.", "Dwarfovi i troggovi u istom hodniku se lančaju."]
       } },
-    { ime: "Zul'Farrak",                gdje: "Tanaris",            od: 45, do: 51, odradeno: false,
+    { ime: "Zul'Farrak",                gdje: "Tanaris", slika: "assets/dungeoni/zul-farrak.jpg",            od: 45, do: 51, odradeno: false,
       vodic: {
         ulaz: "Tanaris, sjeverozapadno od Gadgetzana, veliki trolski grad u pustinji.",
         questovi: ["Divino-matic Rod", "Troll Temper", "Gahz'rilla (Mallet of Zul'Farrak, posebni quest)", "Tiara of the Deep", "Scarab Shells"],
@@ -322,7 +322,7 @@ window.HORDE = {
       } },
     { ime: "Alcaz Prison",              gdje: "Dustwallow Marsh",   od: 48, do: 53, novo: true, odradeno: false,
       vodic: { nepoznato: true, ulaz: "Dustwallow Marsh, otok Alcaz.", napomena: "Forever je ovaj dungeon tek dodao. Bossovi, taktike i loot još nisu javno poznati; vodič dopunjavamo kad se zna." } },
-    { ime: "Maraudon",                  gdje: "Desolace",           od: 48, do: 54, odradeno: false,
+    { ime: "Maraudon",                  gdje: "Desolace", slika: "assets/dungeoni/maraudon.jpg",           od: 48, do: 54, odradeno: false,
       vodic: {
         ulaz: "Desolace, jugozapad: veliki kanjon, ulaz kroz Purple (Vyletongue) ili Orange (Noxxion) krilo.",
         questovi: ["Legends of Maraudon (Scepter of Celebras)", "Corruption of Earth and Seed", "Shadowshard Fragments", "Vyletongue Corruption"],
@@ -340,7 +340,7 @@ window.HORDE = {
         loot: ["Točan loot po bossu: Wowhead vodič ispod."],
         greske: ["Ne pullati elementale u velikim dvoranama bez dogovora.", "Satiri u Purple krilu stealthaju, Dex ide prvi."]
       } },
-    { ime: "Sunken Temple",             gdje: "Swamp of Sorrows",   od: 52, do: 58, odradeno: false,
+    { ime: "Sunken Temple",             gdje: "Swamp of Sorrows", slika: "assets/dungeoni/sunken-temple.jpg",   od: 52, do: 58, odradeno: false,
       vodic: {
         ulaz: "Swamp of Sorrows, potopljeni hram u jezeru; plivati do ulaza.",
         questovi: ["Class quest za 50+ (svaka klasa ima svoj)", "Into the Temple of Atal'Hakkar", "The God Hakkar (Avatar event)", "Jammal'an the Prophet"],
@@ -357,7 +357,7 @@ window.HORDE = {
         loot: ["Svi: nagrade class questova", "Točan loot po bossu: Wowhead vodič ispod."],
         greske: ["Ne ubijati prijatelja pod Hexom.", "Zagonetka s kipovima mora biti točnim redom."]
       } },
-    { ime: "Blackrock Depths",          gdje: "Blackrock Mountain", od: 52, do: 60, odradeno: false,
+    { ime: "Blackrock Depths",          gdje: "Blackrock Mountain", slika: "assets/dungeoni/blackrock-depths.jpg", od: 52, do: 60, odradeno: false,
       vodic: {
         ulaz: "Blackrock Mountain (između Searing Gorgea i Burning Steppesa). Ulaz dolje u planini, preko lanaca.",
         questovi: ["Attunement to the Core (ako Molten Core dođe)", "The Rise of the Machines", "Dark Iron Legacy", "Kharan's Tale / The Princess's Surprise", "Ring of Law quest"],
@@ -375,7 +375,7 @@ window.HORDE = {
         loot: ["Svi melee: Hand of Justice", "Warrior, Paladin, Shaman: Savage Gladiator Chain (Ring of Law)", "Točan loot po bossu: Wowhead vodič ispod."],
         greske: ["U Grim Guzzleru ne napadati barmena: cijela krčma napada.", "Ne skakati s lanaca na ulazu."]
       } },
-    { ime: "Lower Blackrock Spire",     gdje: "Blackrock Mountain", od: 55, do: 60, odradeno: false,
+    { ime: "Lower Blackrock Spire",     gdje: "Blackrock Mountain", slika: "assets/dungeoni/lower-blackrock-spire.jpg", od: 55, do: 60, odradeno: false,
       vodic: {
         ulaz: "Blackrock Mountain, gornji dio: ulaz u Spire iznad BRD-a.",
         questovi: ["Seal of Ascension (ključ za UBRS)", "Bijou's Belongings", "Warlord's Command", "The Matron Protectorate"],
@@ -395,7 +395,7 @@ window.HORDE = {
       } },
     { ime: "Blackmaw Hold",             gdje: "Azshara",            od: 55, do: 60, novo: true, odradeno: false,
       vodic: { nepoznato: true, ulaz: "Azshara.", napomena: "Forever je ovaj dungeon tek dodao. Bossovi, taktike i loot još nisu javno poznati; vodič dopunjavamo kad se zna." } },
-    { ime: "Dire Maul",                 gdje: "Feralas, 3 krila",   od: 55, do: 60, odradeno: false,
+    { ime: "Dire Maul",                 gdje: "Feralas, 3 krila", slika: "assets/dungeoni/dire-maul.jpg",   od: 55, do: 60, odradeno: false,
       vodic: {
         ulaz: "Feralas, veliki grad u ruševinama. Tri krila: East (Warpwood Quarter), West (Capital Gardens), North (Gordok Commons).",
         questovi: ["Pusillin and the Elder Azj'Tordin (East)", "The Madness Within (West)", "Libram questovi", "Tribute run (North)"],
@@ -410,7 +410,7 @@ window.HORDE = {
         loot: ["Svi: Tribute škrinja (North)", "Točan loot po bossu: Wowhead vodič ispod."],
         greske: ["U Northu ne ubijati Gordok stražare ako radimo tribute.", "Pyloni u Westu: svi skupa, ne raspršiti se."]
       } },
-    { ime: "Scholomance",               gdje: "Western Plaguelands", od: 58, do: 60, odradeno: false,
+    { ime: "Scholomance",               gdje: "Western Plaguelands", slika: "assets/dungeoni/scholomance.jpg", od: 58, do: 60, odradeno: false,
       vodic: {
         ulaz: "Western Plaguelands, Caer Darrow (otok usred jezera). Treba Skeleton Key (quest).",
         questovi: ["Skeleton Key (The Key to Scholomance)", "Kirtonos the Herald", "Doctor Theolen Krastinov, the Butcher", "Barov Family Fortune"],
@@ -425,7 +425,7 @@ window.HORDE = {
         loot: ["Mage: Magister's dijelovi (Dungeon Set 1)", "Rogue: Cadaverous Armor", "Točan loot po bossu: Wowhead vodič ispod."],
         greske: ["U Viewing Roomu ne pullati cijelu sobu.", "Gandlingov teleport: ne paničariti, sobu očistiti sam."]
       } },
-    { ime: "Stratholme",                gdje: "Eastern Plaguelands", od: 58, do: 60, odradeno: false,
+    { ime: "Stratholme",                gdje: "Eastern Plaguelands", slika: "assets/dungeoni/stratholme.jpg", od: 58, do: 60, odradeno: false,
       vodic: {
         ulaz: "Eastern Plaguelands, sjeverozapad. Dva ulaza: Live (Scarlet strana, glavna vrata) i Undead (Service Entrance, Baron Rivendare).",
         questovi: ["The Archivist", "Houses of the Holy", "Dead Man's Plea (Baron run)", "Ramstein Run"],
