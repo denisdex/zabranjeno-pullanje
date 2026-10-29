@@ -697,6 +697,20 @@ a.sl:hover b { text-decoration: underline; }
 .dng-ban { margin: calc(clamp(24px, 4.4vw, 60px) * -1) calc(clamp(24px, 4.4vw, 60px) * -1) 0; }
 .dng-ban img { display: block; width: 100%; aspect-ratio: 16 / 7; object-fit: cover; -webkit-mask-image: linear-gradient(180deg, #000 55%, transparent); mask-image: linear-gradient(180deg, #000 55%, transparent); }
 
+/* placeholder kad slike nema: tamna ploča s runama i grbom */
+.dk-ph, .dng-ban-ph {
+  position: relative; display: grid; place-items: center; align-content: center; gap: 8px; overflow: hidden;
+  background:
+    radial-gradient(60% 90% at 50% 100%, rgba(193, 18, 31, .28), transparent 70%),
+    repeating-linear-gradient(135deg, rgba(236, 226, 212, .035) 0 1px, transparent 1px 12px),
+    linear-gradient(180deg, #1c1411, #0e0a08);
+  filter: none;
+}
+.dk-ph img { width: 54px; height: 54px; opacity: .55; filter: grayscale(.3); }
+.dk-ph em, .dng-ban-ph em { font-style: normal; font-size: .5625rem; color: var(--dust); }
+.dng-ban-ph { aspect-ratio: 16 / 6; -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent); mask-image: linear-gradient(180deg, #000 60%, transparent); }
+.dng-ban-ph img { width: 84px; height: 84px; aspect-ratio: auto; opacity: .55; -webkit-mask-image: none; mask-image: none; }
+
 /* level timeline dungeona */
 .dtl { position: relative; height: calc(var(--h, 200px) + 26px); margin: 4px 0 26px; }
 .dtl::before { content: ""; position: absolute; left: 0; right: 0; top: 44px; bottom: 26px; background: repeating-linear-gradient(90deg, rgba(236, 226, 212, .06) 0 1px, transparent 1px calc(100% / 5.9)); pointer-events: none; }
@@ -1883,7 +1897,8 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
       var wh = "https://www.wowhead.com/classic/search?q=" + encodeURIComponent(d.ime);
       panel.style.setProperty("--c", "#ff7a2e");
       body.innerHTML = '<div class="dng">' +
-        (d.slika ? '<div class="dng-ban"><img src="' + esc(d.slika) + '" alt="' + esc(d.ime) + '" loading="lazy"></div>' : "") +
+        (d.slika ? '<div class="dng-ban"><img src="' + esc(d.slika) + '" alt="' + esc(d.ime) + '" loading="lazy"></div>'
+          : '<div class="dng-ban dng-ban-ph" aria-hidden="true"><img src="assets/logo-zp.svg" alt=""><em class="mono">Slika ' + esc(d.ime) + ' još ne postoji</em></div>') +
         '<header class="dng-head"><p class="mono">Dungeon · lvl ' + d.od + "–" + d.do + " · " + esc(d.gdje || "") + (d.novo ? " · <b>novo u Foreveru</b>" : "") + "</p>" +
         '<h2 id="profIme">' + esc(d.ime) + "</h2>" +
         '<p class="dng-note mono">' + (v.nepoznato ? "Još nepoznato" : "Vanilla 1.12 znanje; Forever je mogao mijenjati bossove i loot") + "</p></header>" +
@@ -2276,7 +2291,8 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
       else if (!sljedeci && d.od > AVG) { st = "nx"; txt = AVG < 1 ? "prvi za nas" : "sljedeći"; sljedeci = true; }
       var l = (d.od - 1) / 59 * 100, w = (d.do - d.od) / 59 * 100;
       return '<button type="button" class="dk ' + st + '" data-dungeon="' + slug(d.ime) + '">' +
-        (d.slika ? '<span class="dk-img" style="background-image:url(\'' + esc(d.slika) + '\')" aria-hidden="true"></span>' : "") +
+        (d.slika ? '<span class="dk-img" style="background-image:url(\'' + esc(d.slika) + '\')" aria-hidden="true"></span>'
+          : '<span class="dk-img dk-ph" aria-hidden="true"><img src="assets/logo-zp.svg" alt=""><em class="mono">slika uskoro</em></span>') +
         '<span class="nm">' + esc(d.ime) + (d.novo ? "<em>novo</em>" : "") + "</span>" +
         '<span class="gd mono">' + esc(d.gdje || "") + "</span>" +
         '<span class="rg"><b>' + d.od + "–" + d.do + '</b><span class="st mono">' + txt + "</span></span>" +
