@@ -235,7 +235,7 @@ window.HORDE = {
         loot: ["Točan loot po bossu: Wowhead vodič ispod."],
         greske: ["Ne plivati sam po jezeru, sve je puno moba.", "Plameni na kraju pale valove: tek kad je grupa spremna."]
       } },
-    { ime: "City of Dalaran",           gdje: "Alterac Mountains",  od: 28, do: 33, novo: true, odradeno: false,
+    { ime: "City of Dalaran",           gdje: "Alterac Mountains", slika: "assets/dungeoni/city-of-dalaran.jpg",  od: 28, do: 33, novo: true, odradeno: false,
       vodic: { nepoznato: true, ulaz: "Alterac Mountains. Pazi: Horde je u gradu Dalaranu napadnuta na prvi pogled, ali dungeonu se može prići.", napomena: "Forever je ovaj dungeon tek dodao. Bossovi, taktike i loot još nisu javno poznati; vodič dopunjavamo kad se zna." } },
     { ime: "Razorfen Kraul",            gdje: "Barrens", slika: "assets/dungeoni/razorfen-kraul.jpg",            od: 30, do: 36, odradeno: false,
       vodic: {
@@ -269,7 +269,7 @@ window.HORDE = {
         loot: ["Warrior, Paladin, Shaman: Ravager (Herod)", "Warrior, Paladin: Mograine's Might", "Mage: Illusionary Rod (Doan)", "Točan loot po bossu: Wowhead vodič ispod."],
         greske: ["U Cathedralu ne pullati cijelu dvoranu: monasi trče po pomoć.", "Herodov val nakon smrti: stati u hodnik prije nego se otvori."]
       } },
-    { ime: "The Drowned City",          gdje: "Stranglethorn Vale", od: 35, do: 40, novo: true, odradeno: false,
+    { ime: "The Drowned City",          gdje: "Stranglethorn Vale", slika: "assets/dungeoni/the-drowned-city.jpg", od: 35, do: 40, novo: true, odradeno: false,
       vodic: { nepoznato: true, ulaz: "Stranglethorn Vale.", napomena: "Forever je ovaj dungeon tek dodao. Bossovi, taktike i loot još nisu javno poznati; vodič dopunjavamo kad se zna." } },
     { ime: "Razorfen Downs",            gdje: "Barrens", slika: "assets/dungeoni/razorfen-downs.jpg",            od: 38, do: 44, odradeno: false,
       vodic: {
@@ -285,7 +285,7 @@ window.HORDE = {
         loot: ["Točan loot po bossu: Wowhead vodič ispod."],
         greske: ["Belnistrasz mora preživjeti escort, inače nema questa.", "Ne udarati gong prije nego su svi na manu."]
       } },
-    { ime: "Krol'dok Stronghold",       gdje: "Riverglades",        od: 40, do: 45, novo: true, odradeno: false,
+    { ime: "Krol'dok Stronghold",       gdje: "Riverglades", slika: "assets/dungeoni/krol-dok-stronghold.jpg",        od: 40, do: 45, novo: true, odradeno: false,
       vodic: { nepoznato: true, ulaz: "Riverglades (nova Forever zona, brod iz Powderfuse Porta).", napomena: "Forever je ovaj dungeon tek dodao. Bossovi, taktike i loot još nisu javno poznati; vodič dopunjavamo kad se zna." } },
     { ime: "Uldaman",                   gdje: "Badlands", slika: "assets/dungeoni/uldaman.jpg",           od: 44, do: 50, odradeno: false,
       vodic: {
@@ -322,7 +322,7 @@ window.HORDE = {
         loot: ["Warrior, Paladin: Sul'thraze the Lasher (Jang'thraze + Sang'thraze)", "Točan loot po bossu: Wowhead vodič ispod."],
         greske: ["Ne ići niz stepenice na piramidi.", "Gong samo s Malletom, inače nema Gahz'rille."]
       } },
-    { ime: "Alcaz Prison",              gdje: "Dustwallow Marsh",   od: 48, do: 53, novo: true, odradeno: false,
+    { ime: "Alcaz Prison",              gdje: "Dustwallow Marsh", slika: "assets/dungeoni/alcaz-prison.jpg",   od: 48, do: 53, novo: true, odradeno: false,
       vodic: { nepoznato: true, ulaz: "Dustwallow Marsh, otok Alcaz.", napomena: "Forever je ovaj dungeon tek dodao. Bossovi, taktike i loot još nisu javno poznati; vodič dopunjavamo kad se zna." } },
     { ime: "Maraudon",                  gdje: "Desolace", slika: "assets/dungeoni/maraudon.jpg",           od: 48, do: 54, odradeno: false,
       vodic: {
@@ -395,7 +395,7 @@ window.HORDE = {
         loot: ["Točan loot po bossu: Wowhead vodič ispod."],
         greske: ["Orci u hodnicima se lančaju preko mostova.", "Ne aktivirati Urokov event bez pune mane."]
       } },
-    { ime: "Blackmaw Hold",             gdje: "Azshara",            od: 55, do: 60, novo: true, odradeno: false,
+    { ime: "Blackmaw Hold",             gdje: "Azshara", slika: "assets/dungeoni/blackmaw-hold.jpg",            od: 55, do: 60, novo: true, odradeno: false,
       vodic: { nepoznato: true, ulaz: "Azshara.", napomena: "Forever je ovaj dungeon tek dodao. Bossovi, taktike i loot još nisu javno poznati; vodič dopunjavamo kad se zna." } },
     { ime: "Dire Maul",                 gdje: "Feralas, 3 krila", slika: "assets/dungeoni/dire-maul.jpg",   od: 55, do: 60, odradeno: false,
       vodic: {
@@ -443,7 +443,7 @@ window.HORDE = {
         loot: ["Rogue: Mask of the Unforgiven", "Svi melee: Cape of the Black Baron (Baron Rivendare)", "Točan loot po bossu: Wowhead vodič ispod."],
         greske: ["Baron run: ne pullati sporedne sobe, timer teče.", "Ne trčati kroz Live stranu s pola hp-a, sve se lanča."]
       } },
-    { ime: "Shaper's Terrace",          gdje: "Un'Goro Crater",     od: 58, do: 60, novo: true, odradeno: false,
+    { ime: "Shaper's Terrace",          gdje: "Un'Goro Crater", slika: "assets/dungeoni/shaper-s-terrace.jpg",     od: 58, do: 60, novo: true, odradeno: false,
       vodic: { nepoznato: true, ulaz: "Un'Goro Crater.", napomena: "Forever je ovaj dungeon tek dodao. Bossovi, taktike i loot još nisu javno poznati; vodič dopunjavamo kad se zna." } }
   ],
 
