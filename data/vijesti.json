@@ -9,7 +9,7 @@
    "url": "https://www.wowhead.com/news/rss/classic"
   }
  ],
- "azurirano": "2026-10-29T18:33:29Z",
+ "azurirano": "2026-10-29T18:38:19Z",
  "stavke": [
   {
    "datum": "2026-10-29T16:17:57Z",
@@ -19,7 +19,8 @@
    "sazetak": "All About Tech ft. @Shobek | Episode 6 - The WoW: Forever Podcast",
    "oznake": [
     "Podcast"
-   ]
+   ],
+   "vrsta": "vijest"
   },
   {
    "datum": "2026-10-28T17:00:10Z",
@@ -29,7 +30,8 @@
    "sazetak": "World of Warcraft: Forever invites players into a reimagined original Azeroth where exploration, community, and the journey itself take center stage. Begin at level one, shape a character of your own, and learn the essentials for finding…",
    "oznake": [
     "Vodič"
-   ]
+   ],
+   "vrsta": "vijest"
   },
   {
    "datum": "2026-10-27T19:00:06Z",
@@ -39,7 +41,8 @@
    "sazetak": "Whether you’re new to Azeroth, returning after a break, or have made World of Warcraft part of your life for years, the WoW Portal Room is a welcoming Discord server where you can meet fellow adventurers and find your next community. View…",
    "oznake": [
     "Launch"
-   ]
+   ],
+   "vrsta": "vijest"
   },
   {
    "datum": "2026-10-27T15:37:37Z",
@@ -50,7 +53,8 @@
    "oznake": [
     "Patch notes",
     "Beta"
-   ]
+   ],
+   "vrsta": "patch"
   },
   {
    "datum": "2026-10-26T17:01:29Z",
@@ -58,7 +62,8 @@
    "link": "https://us.forums.blizzard.com/en/wow/t/watch-the-wow-forever-short-story-%E2%80%9Cunbowed%E2%80%9D/2392363/1",
    "izvor": "Blizzard",
    "sazetak": "Can a Forsaken still serve the Light? Join the fallen crusader, Cormack, for a special fireside telling of our newest short story, “Unbowed”. View Full Article",
-   "oznake": []
+   "oznake": [],
+   "vrsta": "vijest"
   },
   {
    "datum": "2026-10-23T17:25:01Z",
@@ -66,7 +71,8 @@
    "link": "https://www.wowhead.com/news=383561/this-weeks-wow-recap-wow-forever-hallows-end-fall-savings",
    "izvor": "Wowhead",
    "sazetak": "Blizzard has released a recap of the major events across World of Warcraft in the last week, which includes many new details in WoW: Forever, Hallow's End starting and a Fall Saving sale! Continue reading »",
-   "oznake": []
+   "oznake": [],
+   "vrsta": "vijest"
   },
   {
    "datum": "2026-10-23T17:06:49Z",
@@ -74,7 +80,8 @@
    "link": "https://us.forums.blizzard.com/en/wow/t/dive-into-wow-forever-the-gods-of-zul%E2%80%99aman-hallow%E2%80%99s-end-and-more-in-wow-weekly/2390481/1",
    "izvor": "Blizzard",
    "sazetak": "From the latest news in World of Warcraft: Forever to the launch of the Gods of Zul'Aman content update in Burning Crusade Classic Anniversary, this week's news is packed with fresh insights, eerie in-game events, new rewards, and…",
-   "oznake": []
+   "oznake": [],
+   "vrsta": "vijest"
   },
   {
    "datum": "2026-10-23T17:01:12Z",
@@ -84,7 +91,8 @@
    "sazetak": "The WoW Forever Beta is now closed, and we’re incredibly grateful to everyone who joined us over the last five weeks of playtesting, data gathering, bug reporting, and feedback. We’re now quickly moving into a period of a few short days…",
    "oznake": [
     "Beta"
-   ]
+   ],
+   "vrsta": "vijest"
   },
   {
    "datum": "2026-10-22T17:00:00Z",
@@ -94,7 +102,8 @@
    "sazetak": "The WoW Forever Beta will end 24 hours from now, at 10:00 a.m. PDT on Friday, October 23, and until that fateful moment, we’re celebrating the joy and wonder of WoW Forever with 24 hours of shenanigans and upheaval in Zephras Isle, Dun…",
    "oznake": [
     "Beta"
-   ]
+   ],
+   "vrsta": "vijest"
   },
   {
    "datum": "2026-10-22T16:21:16Z",
@@ -105,7 +114,8 @@
    "oznake": [
     "Beta",
     "Podcast"
-   ]
+   ],
+   "vrsta": "vijest"
   },
   {
    "datum": "2026-10-22T15:33:08Z",
@@ -113,7 +123,8 @@
    "link": "https://us.forums.blizzard.com/en/wow/t/the-roleplay-pvp-ruleset-is-coming-to-wow-forever/2389502/1",
    "izvor": "Blizzard",
    "sazetak": "Greetings, In a recent episode of the WoW Forever Podcast we discussed some of our concerns with adding a Roleplay-PVP ruleset in WoW Forever, but we also mentioned that we were still discussing the topic internally and watching player…",
-   "oznake": []
+   "oznake": [],
+   "vrsta": "vijest"
   },
   {
    "datum": "2026-10-22T01:46:44Z",
@@ -123,7 +134,8 @@
    "sazetak": "Good evening folks, We hit a small snag while turning the WoW Forever Beta back online. We’re working right now to get it back. In the meantime, you can speed this up by fully exiting the Battle.net Desktop App to force the update to…",
    "oznake": [
     "Beta"
-   ]
+   ],
+   "vrsta": "vijest"
   },
   {
    "datum": "2026-10-21T17:02:04Z",
@@ -131,7 +143,8 @@
    "link": "https://us.forums.blizzard.com/en/wow/t/gather-around-the-campfire-in-world-of-warcraft-forever/2388645/1",
    "izvor": "Blizzard",
    "sazetak": "The Camping system in World of Warcraft: Forever lets players create shared campsites where they can rest, craft, and gain useful benefits from profession-made features. Beginning with the Cooking profession’s Basic Campfire, the system…",
-   "oznake": []
+   "oznake": [],
+   "vrsta": "vijest"
   },
   {
    "datum": "2026-10-21T16:28:54Z",
@@ -139,7 +152,8 @@
    "link": "https://us.forums.blizzard.com/en/wow/t/testing-wow-forever-today-october-21/2388547/1",
    "izvor": "Blizzard",
    "sazetak": "The WoW Forever Beta is going offline in a few minutes. In this region, the Stress Test will begin at 2:00 p.m. PDT. To prepare for that, go to your Battle.net App and look for Stress Test under the Game Version selector on the WoW Forever…",
-   "oznake": []
+   "oznake": [],
+   "vrsta": "vijest"
   },
   {
    "datum": "2026-10-20T21:00:12Z",
@@ -149,7 +163,8 @@
    "sazetak": "Get ready to make your mark in Azeroth! World of Warcraft: Forever Early Name reservations will be available from October 27 through November 3, offering an early opportunity to reserve names for up to three characters. View Full Article",
    "oznake": [
     "Imena"
-   ]
+   ],
+   "vrsta": "vijest"
   },
   {
    "datum": "2026-10-20T20:30:35Z",
@@ -157,7 +172,8 @@
    "link": "https://us.forums.blizzard.com/en/wow/t/heads-up-wow-forever-stress-test-on-october-21/2387920/1",
    "izvor": "Blizzard",
    "sazetak": "Tomorrow, October 21, we will take the WoW Forever Beta offline and we will then open WoW Forever on its proper regional hardware. Date Timezone Stress Test Start Time End Time October 21 CEST 19:00 03:00 October 21 BST/IST 18:00 02:00…",
-   "oznake": []
+   "oznake": [],
+   "vrsta": "vijest"
   },
   {
    "datum": "2026-10-20T19:00:16Z",
@@ -167,7 +183,8 @@
    "sazetak": "Barrow Deeps, Hyjal Summit, and Onyxia’s Lair unlock in World of Warcraft: Forever on December 9. Learn where to find each level 60 raid, how many players you’ll need, and how to earn the Drakefire Amulet required to enter Onyxia’s Lair…",
    "oznake": [
     "Raid"
-   ]
+   ],
+   "vrsta": "vijest"
   },
   {
    "datum": "2026-10-20T17:00:14Z",
@@ -177,7 +194,8 @@
    "sazetak": "Explore nine new World of Warcraft: Forever dungeons across the Eastern Kingdoms and Kalimdor, with level ranges from 13 to 60. Venture beneath familiar cities, beyond sealed gates, and into long-unexplored corners of Azeroth. View Full…",
    "oznake": [
     "Dungeon"
-   ]
+   ],
+   "vrsta": "vijest"
   },
   {
    "datum": "2026-10-16T22:39:55Z",
@@ -185,7 +203,8 @@
    "link": "https://us.forums.blizzard.com/en/wow/t/wow-forever-stress-test-october-21/2383617/39",
    "izvor": "Blizzard",
    "sazetak": "Please note that we will do the Stress Test on October 21, not two days earlier as previously stated. Thank you!",
-   "oznake": []
+   "oznake": [],
+   "vrsta": "vijest"
   },
   {
    "datum": "2026-10-16T17:03:18Z",
@@ -193,7 +212,8 @@
    "link": "https://www.wowhead.com/news=383465/midnight-12-1-5-live-patch-12-1-7-and-wow-forever-wow-weekly-recap",
    "izvor": "Wowhead",
    "sazetak": "Blizzard is recapping some of the biggest WoW news this week, which includes Patch 12.1.5 going live, Patch 12.1.7 being announced, more details about WoW: Forever, and more! Continue reading »",
-   "oznake": []
+   "oznake": [],
+   "vrsta": "vijest"
   },
   {
    "datum": "2026-10-14T14:00:00Z",
@@ -203,7 +223,8 @@
    "sazetak": "Fiamma has interviewed Blizzard at PAX Australia 2026 on WoW: Forever to discuss character caps in WoW: Forever, the possibility of cross-region gameplay, and more! Continue reading »",
    "oznake": [
     "Intervju"
-   ]
+   ],
+   "vrsta": "vijest"
   },
   {
    "datum": "2026-10-07T22:50:31Z",
@@ -214,7 +235,8 @@
    "oznake": [
     "Beta",
     "Event"
-   ]
+   ],
+   "vrsta": "vijest"
   },
   {
    "datum": "2026-10-02T17:11:24Z",
@@ -224,7 +246,8 @@
    "sazetak": "Blizzard has released the weekly This Week in WoW post, and this edition goes over Midnight's next content update and Forever class deep dives. Continue reading »",
    "oznake": [
     "Klase"
-   ]
+   ],
+   "vrsta": "vijest"
   },
   {
    "datum": "2026-09-28T22:04:00Z",
@@ -234,7 +257,8 @@
    "sazetak": "Blizzard has announced that Holly Longdale and Clay Stone will be live at PAX Aus, and will be showing off one of the new dungeons in WoW: Forever! Continue reading »",
    "oznake": [
     "Dungeon"
-   ]
+   ],
+   "vrsta": "vijest"
   },
   {
    "datum": "2026-09-26T16:00:00Z",
@@ -242,7 +266,8 @@
    "link": "https://www.wowhead.com/news=383079/the-weekly-reset-with-taliesin-and-evitel-forever",
    "izvor": "Wowhead",
    "sazetak": "Taliesin and Evitel dig in to WoW: Forever, giving an excellent overview of what Forever is and how it stacks up with Retail and Classic. Continue reading »",
-   "oznake": []
+   "oznake": [],
+   "vrsta": "vijest"
   },
   {
    "datum": "2026-09-26T14:00:00Z",
@@ -254,7 +279,8 @@
     "Beta",
     "Raid",
     "Klase"
-   ]
+   ],
+   "vrsta": "vijest"
   },
   {
    "datum": "2026-09-25T18:28:04Z",
@@ -264,7 +290,8 @@
    "sazetak": "Blizzard has posted this week's WoW Weekly which includes the first episode of the WoW: Forever Podcast, Brewfest and more! Continue reading »",
    "oznake": [
     "Podcast"
-   ]
+   ],
+   "vrsta": "vijest"
   },
   {
    "datum": "2026-09-23T12:00:00Z",
@@ -272,7 +299,8 @@
    "link": "https://www.wowhead.com/news=383056/boat-and-zeppelin-paths-added-to-wowheads-wow-forever-world-map-tool",
    "izvor": "Wowhead",
    "sazetak": "Want some help getting around the world? Our WoW: Forever World Map Tool has been updated and now shows boats and Zeppelin paths in WoW: Forever! Continue reading »",
-   "oznake": []
+   "oznake": [],
+   "vrsta": "vijest"
   },
   {
    "datum": "2026-09-20T20:49:40Z",
@@ -280,7 +308,8 @@
    "link": "https://www.wowhead.com/news=382990/wowheads-new-wow-forever-world-map-tool-now-live",
    "izvor": "Wowhead",
    "sazetak": "Want to check out the world of WoW: Forever but haven't been able to get into the Beta yet? Check out Wowhead's new World Map tool! Continue reading »",
-   "oznake": []
+   "oznake": [],
+   "vrsta": "vijest"
   },
   {
    "datum": "2026-09-18T04:00:58Z",
@@ -290,7 +319,8 @@
    "sazetak": "World of Warcraft Forever's beta is here, and we're celebrating! We're giving away Warcraft Forever Collections, WoW: Forever Epic Packs, and Beta access in our latest sweepstakes. Continue reading »",
    "oznake": [
     "Event"
-   ]
+   ],
+   "vrsta": "vijest"
   },
   {
    "datum": "2026-09-17T17:41:56Z",
@@ -300,7 +330,8 @@
    "sazetak": "Forever Beta is here! Download the Wowhead Client to help build the database with everything you'll need to dig into Classic+. Continue reading »",
    "oznake": [
     "Beta"
-   ]
+   ],
+   "vrsta": "vijest"
   },
   {
    "datum": "2026-09-17T16:59:00Z",
@@ -310,7 +341,8 @@
    "sazetak": "Blizzard is answering the community's questions for both Midnight and World of Warcraft: Forever! Join us as we liveblog all the answers for the upcoming WoW content! Continue reading »",
    "oznake": [
     "Intervju"
-   ]
+   ],
+   "vrsta": "vijest"
   },
   {
    "datum": "2026-09-17T15:30:00Z",
@@ -320,7 +352,8 @@
    "sazetak": "In an interview with But Why Tho?, Blizzard discussed an upcoming stat squish for Modern WoW, how Duskwood is spookier in WoW Forever, and more! Continue reading »",
    "oznake": [
     "Intervju"
-   ]
+   ],
+   "vrsta": "vijest"
   },
   {
    "datum": "2026-09-16T17:29:40Z",
@@ -328,7 +361,8 @@
    "link": "https://www.wowhead.com/news=382921/wow-forever-will-have-addon-changes-from-midnight",
    "izvor": "Wowhead",
    "sazetak": "Blizzard has announced through the WoW UI Discord that the Midnight addon disarmament changes will be active in WoW: Forever. Continue reading »",
-   "oznake": []
+   "oznake": [],
+   "vrsta": "vijest"
   },
   {
    "datum": "2026-09-14T05:06:37Z",
@@ -336,7 +370,8 @@
    "link": "https://www.wowhead.com/news=382879/blizzcon-day-2-roundup-forever-forever-and-more-forever",
    "izvor": "Wowhead",
    "sazetak": "BlizzCon has ended, but don't worry - we've wrapped up the big recaps from today's panels. Continue reading »",
-   "oznake": []
+   "oznake": [],
+   "vrsta": "vijest"
   },
   {
    "datum": "2026-09-13T19:42:52Z",
@@ -344,7 +379,8 @@
    "link": "https://www.wowhead.com/news=382871/wow-forever-webhook-now-available",
    "izvor": "Wowhead",
    "sazetak": "We've created a new webhook for World of Warcraft: Forever, so you can keep up with all of the latest news and information regarding the newest flavor of WoW! Continue reading »",
-   "oznake": []
+   "oznake": [],
+   "vrsta": "vijest"
   },
   {
    "datum": "2026-09-13T05:51:05Z",
@@ -354,7 +390,8 @@
    "sazetak": "The first day of Blizzcon is over, and there's so much new info our heads are spinning - so here's everything you might have missed! Continue reading »",
    "oznake": [
     "Klase"
-   ]
+   ],
+   "vrsta": "vijest"
   },
   {
    "datum": "2026-09-08T15:00:00Z",
@@ -364,7 +401,8 @@
    "sazetak": "With a potential Classic+ announcement looming at BlizzCon, there are many questlines for Vanilla WoW that could finally culminate in a proper manner. Continue reading »",
    "oznake": [
     "Klase"
-   ]
+   ],
+   "vrsta": "vijest"
   },
   {
    "datum": "2026-09-05T17:00:00Z",
@@ -374,7 +412,8 @@
    "sazetak": "Season of Discovery came with a handful of new Class Spec combinations that never worked before its creation. Which ones might work in a future Classic+? Continue reading »",
    "oznake": [
     "Klase"
-   ]
+   ],
+   "vrsta": "vijest"
   },
   {
    "datum": "2026-09-04T14:00:00Z",
@@ -384,7 +423,8 @@
    "sazetak": "Season of Discovery came with so many new features and ideas added to a Vanilla Azeroth. With everyone talking about Classic+, here are some of those features that should be repeated. Continue reading »",
    "oznake": [
     "Klase"
-   ]
+   ],
+   "vrsta": "vijest"
   }
  ]
 }

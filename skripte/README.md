@@ -10,7 +10,7 @@ bez ikakvih API ključeva i tajni.
 
 - `.github/workflows/podaci.yml` se pokreće svaki sat (i ručno: Actions → Podaci → Run workflow, ili `gh workflow run podaci.yml`).
 - Pokreće `skripte/osvjezi.py`:
-  - **vijesti** → `data/vijesti.json`: službeni Blizzardovi postovi (Blue Tracker RSS na forumu) i Wowhead vijesti (Classic RSS), samo ono što spominje Forever ili Classic+. Za svaku vijest: naslov, datum, link, izvor, kratki sažetak iz feeda i oznake izvedene iz naslova.
+  - **vijesti** → `data/vijesti.json`: službeni Blizzardovi postovi (Blue Tracker RSS na forumu) i Wowhead vijesti (Classic RSS), samo ono što spominje Forever ili Classic+. Za svaku vijest: naslov, datum, link, izvor, kratki sažetak iz feeda i oznake izvedene iz naslova. Polje `vrsta` (`patch` ili `vijest`) dijeli sekciju News & Updates: patch notes, hotfixevi, balans i bug fixevi idu u desni stupac, sve ostalo lijevo.
   - **armory** → `data/likovi.json` (`skripte/armory.py`): level, talenti, oprema i profesije za likove iz `data.js`.
 - Datoteka se zapiše samo kad se sadržaj promijeni, pa workflow commita (`auto: podaci …`) samo kad ima novosti.
 - Ako izvor ne radi, datoteka ostaje ista, a workflow ne pada.

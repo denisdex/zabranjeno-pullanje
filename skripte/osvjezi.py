@@ -47,6 +47,10 @@ OZNAKE = [
     (r"profession", "Profesije"),
     (r"sweepstakes|giveaway|event", "Event"),
 ]
+# Desni stupac na webu (Patchevi i hotfixevi): patch notes, hotfixevi, balans i bug fixevi; sve ostalo su vijesti.
+# Tjedni pregledi spominju patch modernog WoW-a, pa ostaju među vijestima.
+PATCH = re.compile(r"\bpatch\b|hotfix|update notes|bug ?fix|balance|known issues|development notes|dev notes", re.I)
+PREGLED = re.compile(r"recap|weekly|this week", re.I)
 NAJVISE = 40
 
 
@@ -67,6 +71,10 @@ def cisti_tekst(s, duljina=240):
 
 def oznake(naslov):
     return [ime for uzorak, ime in OZNAKE if re.search(uzorak, naslov, re.I)][:3]
+
+
+def vrsta(naslov):
+    return "patch" if PATCH.search(naslov) and not PREGLED.search(naslov) else "vijest"
 
 
 def vijesti():
@@ -94,6 +102,7 @@ def vijesti():
                 "izvor": izvor["ime"],
                 "sazetak": cisti_tekst(it.findtext("description")),
                 "oznake": oznake(naslov),
+                "vrsta": vrsta(naslov),
             })
             n += 1
         print("  %s: %d vijesti za Forever" % (izvor["ime"], n))

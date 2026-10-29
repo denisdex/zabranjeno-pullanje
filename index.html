@@ -243,6 +243,8 @@ section[id] { scroll-margin-top: 84px; }
   background: radial-gradient(50% 62% at 45% 55%, rgba(255, 110, 30, .2), rgba(255, 110, 30, 0) 72%);
   animation: tinja 3.4s ease-in-out infinite;
 }
+/* sadržaj je na desktopu 80 % širine: osam znamenki mora stati u jedan red */
+@media (min-width: 900px) { .flip-row { --dh: clamp(36px, 12.5vw, 228px); } }
 @keyframes tinja { 0%, 100% { opacity: .75; } 30% { opacity: 1; } 55% { opacity: .82; } 78% { opacity: .96; } }
 .unit { display: grid; gap: 10px; }
 .unit .digits { display: flex; gap: calc(var(--dh) * .05); }
@@ -278,6 +280,7 @@ section[id] { scroll-margin-top: 84px; }
 .noci b { color: var(--ember); font-weight: 900; }
 /* traka napretka: kovani okvir s runama, ispuna od žara, markeri koji se pale */
 .forge { --pos: 0%; position: relative; padding-block: clamp(46px, 6vw, 64px) 74px; }
+.forge[hidden] { display: none; }
 .fg-bar {
   position: relative; height: clamp(34px, 4.4vw, 52px);
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='10'%3E%3Cg fill='none' stroke='%23e0c9a6' stroke-opacity='.3' stroke-width='1.1'%3E%3Cpath d='M3 9V1l4 3M3 4l4 3M15 9V1l5 8V1M28 1v8M28 5l4-4M28 5l4 4M41 9l3-8 3 8M42 6h4M55 1v8l4-4-4-4M67 9V1h3l2 2-2 2h-3l5 4M80 5l4-4 4 4-4 4z'/%3E%3C/g%3E%3C/svg%3E") repeat-x left center / 96px 10px, linear-gradient(180deg, #0d0907, #19110e 55%, #0d0907);
@@ -318,12 +321,6 @@ section[id] { scroll-margin-top: 84px; }
 .fg-fill .sp:nth-child(4) { animation-delay: 1s; top: 65%; }
 .fg-fill .sp:nth-child(5) { animation-delay: 1.3s; top: 40%; }
 @keyframes iskra { 0% { opacity: 1; transform: translate(0, 0); } 100% { opacity: 0; transform: translate(14px, -42px); } }
-.fg-read {
-  position: absolute; top: 0; left: var(--pos); transform: translateX(-100%); display: flex; align-items: baseline; gap: 12px; white-space: nowrap; padding-right: 6px;
-}
-.fg-read.lijevo { transform: none; padding: 0 0 0 6px; }
-.fg-read b { font: 900 clamp(2rem, 4.4vw, 3.4rem)/.8 var(--f-display); color: #ffd9a0; text-shadow: 0 0 18px rgba(255, 120, 40, .6); font-variant-numeric: tabular-nums; }
-.fg-read span { font: 500 .75rem/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--bone); }
 .fg-marks { list-style: none; margin: 0; padding: 0; position: absolute; left: 0; right: 0; bottom: 0; top: clamp(46px, 6vw, 64px); pointer-events: none; }
 .fg-marks li { position: absolute; top: -8px; transform: translateX(-50%); display: grid; justify-items: center; }
 .fg-marks li i {
@@ -346,15 +343,15 @@ section[id] { scroll-margin-top: 84px; }
 .fg-marks li.launch i { width: 14px; height: calc(clamp(34px, 4.4vw, 52px) + 28px); margin-top: -6px; background: linear-gradient(90deg, #6a4a1c, #ffe39a 50%, #6a4a1c); box-shadow: 0 0 0 1px #120c09, 0 0 18px rgba(255, 200, 100, .6); animation: zlato 1.8s ease-in-out infinite; }
 .fg-marks li.launch span b { font-size: 1.7rem; color: #ffd27a; text-shadow: 0 0 14px rgba(255, 180, 80, .5); }
 @keyframes zlato { 0%, 100% { box-shadow: 0 0 0 1px #120c09, 0 0 10px rgba(255, 200, 100, .4); } 50% { box-shadow: 0 0 0 1px #120c09, 0 0 30px rgba(255, 200, 100, .95); } }
-.fg-marks li.raid i { background: linear-gradient(90deg, #1e1a18, #4a4440 50%, #1e1a18); }
-.fg-marks li.raid span, .fg-marks li.raid span b { color: rgba(161, 146, 130, .7); }
 .count.alarm .fg-bar { animation: alarmTraka 1.2s ease-in-out infinite; }
 @keyframes alarmTraka { 0%, 100% { box-shadow: 0 0 0 1px rgba(0, 0, 0, .6), 0 0 0 rgba(255, 40, 30, 0); } 50% { box-shadow: 0 0 0 2px rgba(255, 59, 48, .9), 0 0 40px rgba(255, 40, 30, .6); } }
 @media (max-width: 640px) {
   .fg-marks li span { font-size: .5625rem; }
   .fg-marks li span b { font-size: .95rem; }
   .fg-marks li.launch span b { font-size: 1.25rem; }
-  .fg-read span { font-size: .625rem; }
+  /* kraj rezervacije je blizu desnog ruba: natpis ide ulijevo od stupića */
+  .fg-marks li.gore { transform: translateX(calc(-100% + 4px)); justify-items: end; }
+  .fg-marks li.gore span { text-align: right; }
   .forge { padding-bottom: 64px; }
 }
 .count-next, .count-clock { margin: 0; display: flex; flex-wrap: wrap; gap: 6px 18px; color: var(--dust); }
@@ -620,9 +617,9 @@ a.sl:hover b { text-decoration: underline; }
 .svj { display: block; margin-top: 6px; font-size: .5rem; color: rgba(161, 146, 130, .75); }
 .svj.auto { color: #6fae5a; }
 .svj-n { color: var(--dust); font-size: .5625rem; margin: 0; }
-.log li.vij h3 a { color: var(--bone); text-decoration: none; }
-.log li.vij h3 a:hover { color: var(--ember); text-decoration: underline; text-underline-offset: 4px; }
-.vij-tg { justify-content: flex-start; margin-bottom: 8px; }
+.log li.vij h4 a { color: var(--bone); text-decoration: none; }
+.log li.vij h4 a:hover { color: var(--ember); text-decoration: underline; text-underline-offset: 4px; }
+.log .tgs.vij-tg { justify-content: flex-start; margin-bottom: 8px; }
 .log .tg.izv { --c: var(--ember); }
 .vij-s { margin: 0; color: var(--dust); font-size: .875rem; max-width: 46rem; }
 
@@ -1114,16 +1111,39 @@ body.shake main, body.shake .top { animation: shake .55s cubic-bezier(.36, .07, 
 .starts .who { display: flex; flex-wrap: wrap; gap: 6px; }
 .starts .who span { font: 800 1.05rem/1 var(--f-display); text-transform: uppercase; color: var(--c); padding: 6px 9px 5px; background: color-mix(in srgb, var(--c) 10%, transparent); outline: 1px solid color-mix(in srgb, var(--c) 35%, transparent); outline-offset: -1px; }
 
-/* ---------- patch notes ---------- */
-.news { display: grid; gap: 36px; }
+/* ---------- news & updates: vijesti lijevo, patchevi desno ---------- */
+.news { display: grid; gap: 28px; }
 .news-head { display: grid; gap: 16px; align-content: start; }
 .news-head h2 { margin: 0; font: 800 clamp(2.6rem, 8vw, 5.5rem)/.85 var(--f-display); text-transform: uppercase; }
-.news-head p { margin: 0; color: var(--dust); max-width: 26rem; }
+.news-opis { display: grid; gap: 10px; align-content: end; }
+.news-head p { margin: 0; color: var(--dust); max-width: 30rem; }
 .news-head a { color: var(--bone); text-decoration-color: var(--ember); text-underline-offset: 4px; }
 .news-head .kicker { margin: 0; }
+.news-filt { display: flex; gap: 6px; }
+.news-filt button {
+  flex: 1 1 0; min-height: 44px; padding: 10px 12px; cursor: pointer;
+  font: 500 .6875rem/1.2 var(--f-mono); letter-spacing: .08em; text-transform: uppercase;
+  background: none; color: var(--dust); border: 1px solid var(--line);
+}
+.news-filt button[aria-pressed="true"] { color: var(--night); background: var(--ember); border-color: var(--ember); }
+.news-cols { display: grid; gap: 40px; }
+.news-ch { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin: 0 0 24px; padding-top: 12px; border-top: 2px solid var(--line); font: 800 1.6rem/1 var(--f-display); text-transform: uppercase; }
+.news-col[data-k="patch"] .news-ch { border-top-color: var(--ember); }
+.news-ch span { font-size: .625rem; letter-spacing: .1em; color: var(--dust); }
+.news-col .log h4 { font-size: clamp(1.35rem, 2.6vw, 1.75rem); }
+/* u pola širine oznake idu ispod teksta, tekst ostaje širok */
+.news-col .log ul li { grid-template-columns: minmax(0, 1fr); }
+.news-col .log .tgs { justify-content: flex-start; }
+.log > li.log-prazno { display: block; color: var(--dust); }
+@media (max-width: 999px) {
+  .news-cols[data-k="vij"] .news-col[data-k="patch"], .news-cols[data-k="patch"] .news-col[data-k="vij"] { display: none; }
+  .news-ch { display: none; }
+}
 @media (min-width: 1000px) {
-  .news { grid-template-columns: minmax(0, 24rem) minmax(0, 1fr); gap: 72px; }
-  .news-head { position: sticky; top: 32px; align-self: start; }
+  .news-head { grid-template-columns: minmax(0, 1fr) minmax(0, 30rem); column-gap: 72px; }
+  .news-head .kicker { grid-column: 1 / -1; }
+  .news-filt { display: none; }
+  .news-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px; }
 }
 .log { list-style: none; margin: 0; padding: 0; position: relative; }
 .log::before { content: ""; position: absolute; left: 4.6rem; top: 6px; bottom: 6px; width: 1px; background: var(--line); }
@@ -1135,7 +1155,7 @@ body.shake main, body.shake .top { animation: shake .55s cubic-bezier(.36, .07, 
 }
 .log .dt b { display: block; font: 900 2.6rem/.85 var(--f-display); font-variant-numeric: tabular-nums; }
 .log .dt span { color: var(--dust); }
-.log h3 { margin: 2px 0 12px; font: 800 clamp(1.6rem, 4vw, 2.1rem)/.95 var(--f-display); text-transform: uppercase; }
+.log h4 { margin: 2px 0 12px; font: 800 clamp(1.6rem, 4vw, 2.1rem)/.95 var(--f-display); text-transform: uppercase; }
 .log ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
 .log ul li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 16px; align-items: baseline; padding-bottom: 10px; border-bottom: 1px dashed var(--line); color: var(--bone); }
 .log .tgs { display: flex; flex-wrap: wrap; gap: 5px; justify-content: flex-end; }
@@ -1205,7 +1225,7 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
       &lt;Zabranjeno pullanje&gt;
     </span>
     <nav class="menu" id="menu" aria-label="Sekcije">
-      <a href="#odbrojavanje">Countdown</a><a href="#ekipa">Ekipa</a><a href="#upute">Upute</a><a href="#roadmap">Roadmap</a><a href="#dungeoni">Dungeoni</a><a href="#ekonomija">Ekonomija</a><a href="#profesije">Profesije</a><a href="#savjeti">Savjeti</a><a href="#novosti">Patch notes</a>
+      <a href="#odbrojavanje">Countdown</a><a href="#ekipa">Ekipa</a><a href="#upute">Upute</a><a href="#roadmap">Roadmap</a><a href="#dungeoni">Dungeoni</a><a href="#ekonomija">Ekonomija</a><a href="#profesije">Profesije</a><a href="#savjeti">Savjeti</a><a href="#novosti">News &amp; Updates</a>
     </nav>
   </div>
 </header>
@@ -1241,7 +1261,6 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
       <div class="flip-row" id="flip"></div>
       <p class="noci" id="noci"></p>
       <div class="forge" id="forge" role="img" aria-label="Napredak do launcha">
-        <div class="fg-read" id="fgRead"><b id="fgPct">0%</b><span id="fgTxt"></span></div>
         <div class="fg-bar"><div class="fg-fill"><i class="sp"></i><i class="sp"></i><i class="sp"></i><i class="sp"></i><i class="sp"></i></div></div>
         <ul class="fg-marks" id="fgMarks"></ul>
       </div>
@@ -1383,12 +1402,21 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
     <div class="wrap news">
       <div class="news-head">
         <p class="kicker mono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="currentColor" opacity=".25"/><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Glasnik iz Orgrimmara</p>
-        <h2>Patch notes</h2>
-        <p>Blizzardove promjene i vijesti o Foreveru: prevedeni patch notes i najnovije s Blizzarda i Wowheada. Najnovije gore.</p>
-        <p class="mono svj-n" id="novostiSvj"></p>
-        <p class="mono"><a id="izvorNovosti" href="#" target="_blank" rel="noopener">Blizzardove development notes</a></p>
+        <h2>News &amp; Updates</h2>
+        <div class="news-opis">
+          <p>Vijesti s Blizzarda i Wowheada, a odvojeno patchevi, hotfixevi i balans promjene, prevedeni gdje se tiču nas. Najnovije gore.</p>
+          <p class="mono svj-n" id="novostiSvj"></p>
+          <p class="mono"><a id="izvorNovosti" href="#" target="_blank" rel="noopener">Blizzardove development notes</a></p>
+        </div>
       </div>
-      <ol class="log" id="log"></ol>
+      <div class="news-filt" role="group" aria-label="Prikaži">
+        <button type="button" data-k="vij" aria-pressed="true">Vijesti</button>
+        <button type="button" data-k="patch" aria-pressed="false">Patchevi i hotfixevi</button>
+      </div>
+      <div class="news-cols" id="newsCols" data-k="vij">
+        <div class="news-col" data-k="vij"><h3 class="news-ch">Vijesti <span class="mono" id="nVij"></span></h3><ol class="log" id="logVij"></ol></div>
+        <div class="news-col" data-k="patch"><h3 class="news-ch">Patchevi i hotfixevi <span class="mono" id="nPatch"></span></h3><ol class="log" id="logPatch"></ol></div>
+      </div>
     </div>
   </section>
 
@@ -2118,24 +2146,39 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
     hsPostavi($("routeHs"));
   })();
 
-  /* ---------- patch notes ---------- */
+  /* ---------- news & updates: vijesti lijevo, patchevi i hotfixevi desno ---------- */
   (function () {
     var MJ = ["sij", "velj", "ožu", "tra", "svi", "lip", "srp", "kol", "ruj", "lis", "stu", "pro"];
     $("izvorNovosti").href = D.izvorNovosti || "#";
+    function poDatumu(a, b) { return a.datum < b.datum ? 1 : -1; }
+    // automatske vijesti dijeli skripta (polje vrsta); ručno prevedeni patch notes idu među patcheve
     var auto = (D.vijestiAuto || []).map(function (v) { return { datum: v.datum, auto: v }; });
-    var lista = (D.novosti || []).concat(auto).slice().sort(function (a, b) { return a.datum < b.datum ? 1 : -1; });
+    var vij = auto.filter(function (n) { return n.auto.vrsta !== "patch"; }).sort(poDatumu);
+    var patch = (D.novosti || []).concat(auto.filter(function (n) { return n.auto.vrsta === "patch"; })).sort(poDatumu);
     if (D.vijestiAzurirano) $("novostiSvj").textContent = "Vijesti s Blizzarda i Wowheada se osvježavaju svaki sat, zadnja promjena " + prije(D.vijestiAzurirano) + ".";
-    $("log").innerHTML = lista.map(function (n) {
+    $("nVij").textContent = vij.length;
+    $("nPatch").textContent = patch.length;
+    $("logVij").innerHTML = vij.map(stavka).join("") || '<li class="log-prazno mono">Vijesti se trenutno ne mogu učitati.</li>';
+    $("logPatch").innerHTML = patch.map(stavka).join("");
+    // mobitel: jedan stupac, filter bira koji
+    var cols = $("newsCols"), filt = document.querySelectorAll(".news-filt button");
+    Array.prototype.forEach.call(filt, function (b) {
+      b.addEventListener("click", function () {
+        cols.setAttribute("data-k", b.getAttribute("data-k"));
+        Array.prototype.forEach.call(filt, function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      });
+    });
+    function stavka(n) {
       var d = new Date(n.datum.length > 10 ? n.datum : n.datum + "T12:00:00");
       if (n.auto) {
         var v = n.auto;
         return '<li data-reveal class="vij"><div class="dt"><b>' + d.getDate() + '</b><span class="mono">' + MJ[d.getMonth()] + " " + d.getFullYear() + "</span></div>" +
           '<div><span class="tgs vij-tg"><span class="tg izv">' + esc(v.izvor) + "</span>" + (v.oznake || []).map(function (o) { return '<span class="tg tema">' + esc(o) + "</span>"; }).join("") + "</span>" +
-          '<h3><a href="' + esc(v.link) + '" target="_blank" rel="noopener" lang="en">' + esc(v.naslov) + "</a></h3>" +
+          '<h4><a href="' + esc(v.link) + '" target="_blank" rel="noopener" lang="en">' + esc(v.naslov) + "</a></h4>" +
           (v.sazetak ? '<p class="vij-s" lang="en">' + esc(v.sazetak) + "</p>" : "") + "</div></li>";
       }
       return '<li data-reveal><div class="dt"><b>' + d.getDate() + '</b><span class="mono">' + MJ[d.getMonth()] + " " + d.getFullYear() + "</span></div>" +
-        "<div><h3>" + esc(n.naslov || "") + "</h3><ul>" + n.stavke.map(function (st) {
+        "<div><h4>" + esc(n.naslov || "") + "</h4><ul>" + n.stavke.map(function (st) {
           // stariji zapis "Warrior: tekst" pretvara se u oznaku
           if (typeof st === "string") {
             var m = st.match(/^(Warrior|Shaman|Mage|Rogue|Paladin|Orc|Troll|Undead|Horde):\s*(.*)$/);
@@ -2146,7 +2189,7 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
           }).join("") + (st.tema ? '<span class="tg tema">' + esc(st.tema) + "</span>" : "");
           return "<li><span>" + esc(st.tekst) + "</span>" + (oznake ? '<span class="tgs">' + oznake + "</span>" : "") + "</li>";
         }).join("") + "</ul></div></li>";
-    }).join("");
+    }
   })();
 
   /* ---------- prilagodba po levelu: prosjek ekipe ---------- */
@@ -2216,7 +2259,8 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
     lista.parentNode.insertBefore(b, lista.nextSibling);
   }
 
-  vidiSve($("log"), 3, "Vidi sve patch notese");
+  vidiSve($("logVij"), 5, "Sve vijesti");
+  vidiSve($("logPatch"), 5, "Svi patchevi i hotfixevi");
 
   /* ---------- upute ---------- */
   $("uputeLista").innerHTML = (D.upute || []).map(function (u) {
@@ -2536,28 +2580,19 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
     for (var i = 0; i < g.length; i++) setDigit(g[i], s[i]);
   }
   function datum(t) { var d = new Date(t); return d.getDate() + ". " + (d.getMonth() + 1) + "."; }
-  // traka napretka: do launcha zauzima 75 % trake, zadnja četvrtina vodi do prvog raida
+  // traka napretka: od početka rezervacije do launcha, launch je desni kraj trake
   function fgPos(t) {
-    if (t <= LAUNCH) return Math.max(0, (t - RES_OD) / (LAUNCH - RES_OD)) * 75;
-    return Math.min(100, 75 + (t - LAUNCH) / (RAID - LAUNCH) * 25);
+    return Math.min(100, Math.max(0, (t - RES_OD) / (LAUNCH - RES_OD) * 100));
   }
-  var FG_MARKS = [[RES_OD, "Rezervacija", "prvi"], [RES_END, "Kraj rezervacije", "gore"], [LAUNCH, "Launch", "launch"], [RAID, "Prvi raid", "raid zadnji"]];
+  var FG_MARKS = [[RES_OD, "Rezervacija", "prvi"], [RES_END, "Kraj rezervacije", "gore"], [LAUNCH, "Launch", "launch zadnji"]];
   function prog(now) {
-    var x = fgPos(now), f = $("forge");
-    f.style.setProperty("--pos", x.toFixed(2) + "%");
-    var r = $("fgRead");
-    r.classList.toggle("lijevo", x < (window.innerWidth < 640 ? 48 : 22));
-    if (now < LAUNCH) {
-      var pct = Math.floor((now - RES_OD) / (LAUNCH - RES_OD) * 100);
-      $("fgPct").textContent = Math.max(0, pct) + "%";
-      $("fgTxt").textContent = trajanje(LAUNCH - now) + " do launcha";
-      f.setAttribute("aria-label", "Do launcha je prošlo " + pct + " % puta");
-    } else {
-      var dan = Math.floor((now - LAUNCH) / 864e5) + 1;
-      $("fgPct").textContent = "Dan " + dan;
-      $("fgTxt").textContent = now < RAID ? "na Azerothu · " + trajanje(RAID - now) + " do raida" : "na Azerothu · raidovi otvoreni";
-      f.setAttribute("aria-label", "Dan " + dan + " na Azerothu");
-    }
+    var f = $("forge");
+    // nakon launcha traka nestaje, sekcija pokazuje samo "Dan X na Azerothu"
+    f.hidden = now >= LAUNCH;
+    if (f.hidden) return;
+    var pct = Math.max(0, Math.floor(fgPos(now)));
+    f.style.setProperty("--pos", fgPos(now).toFixed(2) + "%");
+    f.setAttribute("aria-label", "Do launcha je prošlo " + pct + " % puta");
     $("fgMarks").innerHTML = FG_MARKS.map(function (m) {
       var st = m[0] === RES_OD ? (now > RES_END ? "ugasen" : "zapaljen") : now >= m[0] ? "zapaljen" : "";
       var t = m[0] === LAUNCH ? "4. 11." : m[0] === RES_END ? "3. 11." : datum(m[0]);
