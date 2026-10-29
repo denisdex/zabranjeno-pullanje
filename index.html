@@ -372,8 +372,6 @@ section[id] { scroll-margin-top: 84px; }
 .dg.go .fl { animation: fl .3s .26s cubic-bezier(.1, .6, .3, 1) forwards; }
 @keyframes fu { to { transform: rotateX(-90deg); } }
 @keyframes fl { from { transform: rotateX(90deg); } to { transform: rotateX(0deg); } }
-.noci { margin: 0; font: 800 clamp(1.6rem, 4vw, 3rem)/1 var(--f-display); text-transform: uppercase; text-align: center; }
-.noci b { color: var(--ember); font-weight: 900; }
 /* traka napretka: kovani okvir s runama, ispuna od žara, markeri koji se pale */
 .forge { --pos: 0%; position: relative; padding-block: clamp(46px, 6vw, 64px) 74px; }
 .forge[hidden] { display: none; }
@@ -450,6 +448,13 @@ section[id] { scroll-margin-top: 84px; }
   .fg-marks li.gore span { text-align: right; }
   .forge { padding-bottom: 64px; }
 }
+/* desktop: kraj rezervacije ispod trake, ulijevo od stupića; iznad trake nema oznake pa je razmak isti kao između naslova i znamenki */
+@media (min-width: 641px) {
+  .forge { padding-top: 8px; }
+  .fg-marks { top: 8px; }
+  .fg-marks li.gore { top: -8px; bottom: auto; transform: translateX(calc(-100% + 4px)); justify-items: end; }
+  .fg-marks li.gore span { order: 0; margin: 10px 0 0; text-align: right; }
+}
 .count-next, .count-clock { margin: 0; display: flex; flex-wrap: wrap; gap: 6px 18px; color: var(--dust); }
 .count-clock b { color: var(--sys); font-weight: 500; font-variant-numeric: tabular-nums; }
 .count-clock i { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #3fbf5f; box-shadow: 0 0 8px #3fbf5f; align-self: center; }
@@ -457,7 +462,7 @@ section[id] { scroll-margin-top: 84px; }
 .count-next, .count-clock { justify-content: center; text-align: center; }
 /* zadnja 24 sata prije launcha */
 .count.alarm { animation: alarm 1.8s ease-in-out infinite; }
-.count.alarm .count-label, .count.alarm .noci b { color: #ff3b30; }
+.count.alarm .count-label, .count.alarm .count-next b { color: #ff3b30; }
 @keyframes alarm {
   0%, 100% { box-shadow: inset 0 0 0 1px rgba(193, 18, 31, .35), inset 0 0 60px rgba(193, 18, 31, .12); }
   50% { box-shadow: inset 0 0 0 2px rgba(255, 59, 48, .85), inset 0 0 120px rgba(193, 18, 31, .3); }
@@ -597,9 +602,6 @@ section[id] { scroll-margin-top: 84px; }
 .p-gold { display: grid; grid-template-columns: auto 1fr; align-items: baseline; gap: 4px 10px; }
 .p-gold > .mono { color: var(--dust); }
 .p-gold b { font: 800 1.15rem/1 var(--f-display); color: var(--sys); justify-self: end; font-variant-numeric: tabular-nums; }
-.p-gold > .mono:nth-of-type(2) { grid-column: 1 / -1; font-size: .5625rem; }
-.p-gold .gg { grid-column: 1 / -1; height: 4px; background: rgba(242, 207, 91, .12); }
-.p-gold .gg i { display: block; height: 100%; background: var(--sys); }
 .prof-lvl .p-gold { margin-top: 10px; }
 
 /* jasniji gumbi */
@@ -874,7 +876,22 @@ a.sl:hover b { text-decoration: underline; }
 /* ---------- upute ---------- */
 .upute { list-style: none; margin: 0; padding: 0; display: grid; gap: 0 32px; grid-template-columns: minmax(0, 1fr); counter-reset: u; }
 @media (min-width: 760px) { .upute { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (min-width: 1200px) { .upute { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+/* Guide & Rules: lijevo prva noć (cilj i koraci), desno pravila ekipe; na mobitelu jedno ispod drugog */
+.gr { display: grid; gap: 40px; }
+.gr-vodic, .gr-pravila { min-width: 0; }
+.gr-h {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin: 0 0 18px; padding-top: 12px;
+  border-top: 2px solid var(--line); font: 800 1.6rem/1 var(--f-display); text-transform: uppercase;
+}
+.gr-vodic .gr-h { border-top-color: var(--ember); }
+.gr-h span { font: 500 .625rem/1 var(--f-mono); letter-spacing: .1em; color: var(--dust); }
+@media (min-width: 1000px) {
+  .gr { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 48px; align-items: start; }
+  .gr .upute { grid-template-columns: minmax(0, 1fr); }
+  /* traka koraka viri samo do lijevog ruba ekrana, desno je stupac s pravilima */
+  .gr .hs-track { --n: 2.2; margin-inline: calc(var(--g) * -1) 0; padding-inline: var(--g) 0; scroll-padding-inline: var(--g) 0; }
+}
+@media (min-width: 1600px) { .gr .hs-track { --n: 3; } }
 .upute li { counter-increment: u; display: grid; grid-template-columns: 2.4rem minmax(0, 1fr); gap: 2px 14px; padding: 14px 0; border-top: 1px solid var(--line); }
 .upute li::before { content: counter(u, upper-roman); grid-row: span 2; font: 800 1.4rem/1 var(--f-display); color: var(--blood); }
 .upute b { font: 800 1.25rem/1 var(--f-display); text-transform: uppercase; }
@@ -942,7 +959,6 @@ a.sl:hover b { text-decoration: underline; }
 .eko-prijedlog { margin: 0 0 18px; color: var(--bone); max-width: 52rem; padding: 12px 16px; border-left: 2px solid var(--ember); background: rgba(255, 122, 46, .05); }
 
 /* ---------- zadaci ---------- */
-.p-zad { justify-self: start; font: 500 .5625rem/1 var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--c); padding: 5px 7px 4px; outline: 1px solid color-mix(in srgb, var(--c) 45%, transparent); outline-offset: -1px; }
 .zad { list-style: none; margin: 0; padding: 0; display: grid; }
 .zad li { display: grid; grid-template-columns: 22px minmax(0, 1fr) auto; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); align-items: center; }
 .zad li i { width: 18px; height: 18px; border: 1.5px solid var(--c, var(--dust)); }
@@ -952,7 +968,7 @@ a.sl:hover b { text-decoration: underline; }
 .zad-vise { color: var(--dust); margin: 8px 0 0; }
 
 /* prva noć nakon launcha: sklopljeno */
-#prva-noc.sklopljeno .night { display: none; }
+#guide.sklopljeno .night { display: none; }
 .otvori-noc { margin-top: 4px; }
 
 /* ---------- party / roster ---------- */
@@ -1073,7 +1089,6 @@ a.sl:hover b { text-decoration: underline; }
 /* kartice u redu iste visine: tijelo popuni ostatak, "Otvori profil" uvijek na dnu */
 .plate-in { grid-template-rows: auto 1fr; align-content: stretch; }
 .plate .p-body { display: flex; flex-direction: column; }
-.plate .p-body > .p-zad { align-self: flex-start; }
 .plate .p-body > .p-more { margin-top: auto; align-self: stretch; }
 .p-top .role { display: inline-flex; align-items: center; gap: 7px; color: var(--c); }
 .p-top .role svg { width: 14px; height: 14px; }
@@ -1256,6 +1271,11 @@ body.shake main, body.shake .top { animation: shake .55s cubic-bezier(.36, .07, 
 .news-col .log ul li { grid-template-columns: minmax(0, 1fr); }
 .news-col .log .tgs { justify-content: flex-start; }
 .log > li.log-prazno { display: block; color: var(--dust); }
+/* vijesti i patchevi kao ujednačene kartice: po tri na stranici, ostalo iza "Više detalja" */
+.news-col .log::before, .news-col .log .dt::after { display: none; }
+.news-col .log > li { padding: 18px 18px 18px 0; margin-bottom: 12px; background: var(--iron); border: 1px solid var(--line); }
+.news-col[data-k="patch"] .log > li { box-shadow: inset 0 2px 0 var(--ember); }
+.news-col .log ul li.jos { display: block; padding-bottom: 0; border-bottom: 0; color: var(--dust); font-size: .625rem; }
 @media (max-width: 999px) {
   .news-cols[data-k="vij"] .news-col[data-k="patch"], .news-cols[data-k="patch"] .news-col[data-k="vij"] { display: none; }
   .news-ch { display: none; }
@@ -1264,7 +1284,18 @@ body.shake main, body.shake .top { animation: shake .55s cubic-bezier(.36, .07, 
   .news-head { grid-template-columns: minmax(0, 1fr) minmax(0, 30rem); column-gap: 72px; }
   .news-head .kicker { grid-column: 1 / -1; }
   .news-filt { display: none; }
-  .news-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px; }
+  /* oba stupca u istoj mreži: kartice u istom redu jednake visine, stupci jednako visoki */
+  .news-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 40px; }
+  .news-col, .news-col .log { display: contents; }
+  .news-col[data-k="vij"] > *, .news-col[data-k="vij"] .log > li { grid-column: 1; }
+  .news-col[data-k="patch"] > *, .news-col[data-k="patch"] .log > li { grid-column: 2; }
+  .news-col .log > li { margin-bottom: 0; }
+  /* redovi zadani izričito: naslov, tri kartice, gumb (automatsko slaganje bi drugi stupac stavilo ispod prvog) */
+  .news-col .news-ch { grid-row: 1; margin-bottom: 12px; }
+  .news-col .log > li:nth-child(1) { grid-row: 2; }
+  .news-col .log > li:nth-child(2) { grid-row: 3; }
+  .news-col .log > li:nth-child(3) { grid-row: 4; }
+  .news-col .vidi { grid-row: 5; justify-self: start; align-self: start; margin-top: 4px !important; }
 }
 .log { list-style: none; margin: 0; padding: 0; position: relative; }
 .log::before { content: ""; position: absolute; left: 4.6rem; top: 6px; bottom: 6px; width: 1px; background: var(--line); }
@@ -1363,6 +1394,41 @@ footer .f-kino { color: var(--ember); text-decoration: none; }
 }
 .tko { white-space: nowrap; }
 footer .f-kino:hover { color: var(--bone); }
+
+/* ---------- Wall of Shame: brojač sramota po igraču i popis (data.js wallOfShame) ---------- */
+.wos { display: grid; gap: 14px; }
+.wos-ekipa { display: grid; gap: 10px; grid-template-columns: minmax(0, 1fr); }
+.wos-ig {
+  position: relative; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 12px;
+  padding: 12px 14px; background: var(--iron); border: 1px solid var(--line); border-top: 2px solid var(--c);
+}
+.wos-ig .ava { width: 44px; height: 44px; margin: 0; vertical-align: 0; }
+.wos-ig b { font: 800 1.35rem/1 var(--f-display); text-transform: uppercase; color: var(--c); }
+.wos-ig dl { margin: 0; display: grid; grid-template-columns: repeat(3, auto); gap: 0 14px; }
+.wos-ig dl div { display: grid; justify-items: center; gap: 5px; }
+.wos-ig dt { font: 500 .5rem/1 var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--dust); }
+.wos-ig dd { margin: 0; font: 900 1.7rem/1 var(--f-display); font-variant-numeric: tabular-nums; color: var(--bone); }
+.wos-ig dd.nula { color: rgba(236, 226, 212, .3); }
+.wos-ig.kralj::after {
+  content: "Kralj sramote"; position: absolute; top: -9px; right: 10px; padding: 3px 7px;
+  font: 500 .5rem/1 var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--night); background: var(--c);
+}
+@media (min-width: 760px) {
+  .wos-ekipa { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .wos-ig { grid-template-columns: minmax(0, 1fr); justify-items: center; text-align: center; padding: 18px 10px 16px; }
+  .wos-ig .ava { width: 60px; height: 60px; }
+}
+.wos-lista { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.wos-lista li { display: grid; grid-template-columns: 3.4rem minmax(0, 1fr) auto; gap: 14px; align-items: center; padding: 12px 14px; background: var(--iron); border-left: 3px solid var(--c); }
+.wos-lista .dt b { display: block; font: 900 1.9rem/.85 var(--f-display); font-variant-numeric: tabular-nums; }
+.wos-lista .dt span { color: var(--dust); }
+.wos-lista p { margin: 0; }
+.wos-lista .tko { font: 800 1.1rem/1.2 var(--f-display); text-transform: uppercase; margin-bottom: 4px; }
+.wos-slika img { display: block; width: 104px; height: 58px; object-fit: cover; border: 1px solid var(--line); }
+.wos-prazno { display: flex; align-items: center; gap: 16px; padding: 18px 20px; border: 1px dashed rgba(236, 226, 212, .2); }
+.wos-prazno img { width: 54px; height: 54px; flex: none; }
+.wos-prazno b { display: block; font: 800 clamp(1.4rem, 3vw, 2rem)/1 var(--f-display); text-transform: uppercase; }
+.wos-prazno span { display: block; margin-top: 6px; color: var(--dust); }
 
 /* ---------- Kino: kartice videa (poster, naslov, trajanje, opis) i overlay preko cijelog ekrana ---------- */
 .kino { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); }
@@ -1770,6 +1836,8 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
   var dbg = /[?&]sp=([\d.]+)/.exec(location.search);
   var radi = false;
   var BOJE = { Warrior: "#C69B6D", Shaman: "#0070DD", Mage: "#3FC7EB", Rogue: "#FFF468", Paladin: "#F48CBA", Druid: "#FF7C0A" };
+  // boja igrača iz data.js ima prednost pred bojom klase (u ekipi je svaka klasa jedan igrač)
+  (D.igraci || []).forEach(function (p) { if (p.boja) BOJE[p.klasa] = p.boja; });
 
   function nacin() {
     if (dbg) return "puni";
@@ -2162,7 +2230,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
         <li><a href="#ekipa">Ekipa</a></li>
         <li><a href="#novosti">News</a></li>
         <li class="dd"><button type="button" class="dd-b" aria-expanded="false" aria-controls="ddPlan">Plan<span class="dd-s" aria-hidden="true">▾</span></button>
-          <div class="dd-p" id="ddPlan"><a href="#roadmap">Roadmap</a><a href="#dungeoni">Dungeoni</a><a href="#upute">Upute</a></div></li>
+          <div class="dd-p" id="ddPlan"><a href="#roadmap">Roadmap</a><a href="#dungeoni">Dungeoni</a><a href="#guide">Guide &amp; Rules</a></div></li>
         <li class="dd"><button type="button" class="dd-b" aria-expanded="false" aria-controls="ddEko">Ekonomija<span class="dd-s" aria-hidden="true">▾</span></button>
           <div class="dd-p" id="ddEko"><a href="#ekonomija">Ekonomija</a><a href="#profesije">Profesije</a></div></li>
         <li class="dd"><button type="button" class="dd-b" aria-expanded="false" aria-controls="ddVod">Vodič<span class="dd-s" aria-hidden="true">▾</span></button>
@@ -2212,7 +2280,6 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
         <p class="count-clock mono"><i aria-hidden="true"></i><span>Server (Europe/Paris)</span><b id="srvClock">--:--:--</b></p>
       </div>
       <div class="flip-row" id="flip"></div>
-      <p class="noci" id="noci"></p>
       <div class="forge" id="forge" role="img" aria-label="Napredak do launcha">
         <div class="fg-bar"><div class="fg-fill"><i class="sp"></i><i class="sp"></i><i class="sp"></i><i class="sp"></i><i class="sp"></i></div></div>
         <ul class="fg-marks" id="fgMarks"></ul>
@@ -2242,7 +2309,6 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
         <p class="kicker mono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="currentColor" opacity=".25"/><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Glasnik iz Orgrimmara</p>
         <h2>News &amp; Updates</h2>
         <div class="news-opis">
-          <p>Vijesti s Blizzarda i Wowheada, a odvojeno patchevi, hotfixevi i balans promjene, prevedeni gdje se tiču nas. Najnovije gore.</p>
           <p class="mono svj-n" id="novostiSvj"></p>
           <p class="mono"><a id="izvorNovosti" href="#" target="_blank" rel="noopener">Blizzardove development notes</a></p>
         </div>
@@ -2258,29 +2324,27 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     </div>
   </section>
 
-  <section class="sec" id="prva-noc">
+  <section class="sec" id="guide">
     <div class="wrap">
       <div class="sec-head">
-        <p class="kicker mono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="currentColor" opacity=".25"/><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Dok ne zatrubi rog</p>
-        <h2>Prva noć</h2>
+        <p class="kicker mono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="currentColor" opacity=".25"/><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Kodeks guilda · dok ne zatrubi rog</p>
+        <h2>Guide &amp; Rules</h2>
         <span class="meta mono">Launch: <b>sri 4. 11. u ponoć</b></span>
       </div>
-      <div class="night">
-        <div class="goal"><span class="lab mono">Cilj prve noći</span><b id="cilj"></b></div>
-        <div class="hs" id="routeHs"><ol class="hs-track route" id="route"></ol>
-          <div class="hs-ctl"><div class="str"><button class="hs-b prev" type="button" aria-label="Prethodno"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button><button class="hs-b next" type="button" aria-label="Sljedeće"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div><span class="mono" style="color:var(--dust)">6 koraka, povuci</span></div></div>
+      <div class="gr">
+        <div class="gr-vodic">
+          <h3 class="gr-h">Prva noć <span>plan po koracima</span></h3>
+          <div class="night">
+            <div class="goal"><span class="lab mono">Cilj prve noći</span><b id="cilj"></b></div>
+            <div class="hs" id="routeHs"><ol class="hs-track route" id="route"></ol>
+              <div class="hs-ctl"><div class="str"><button class="hs-b prev" type="button" aria-label="Prethodno"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button><button class="hs-b next" type="button" aria-label="Sljedeće"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div><span class="mono" style="color:var(--dust)">6 koraka, povuci</span></div></div>
+          </div>
+        </div>
+        <div class="gr-pravila">
+          <h3 class="gr-h">Pravila ekipe <span>vrijede od prvog dana</span></h3>
+          <ol class="upute" id="uputeLista"></ol>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <section class="sec" id="upute">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="kicker mono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="currentColor" opacity=".25"/><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Kodeks guilda</p>
-        <h2>Upute</h2>
-        <span class="meta mono">Vrijedi za sve, od prvog dana</span>
-      </div>
-      <ol class="upute" id="uputeLista"></ol>
     </div>
   </section>
 
@@ -2389,6 +2453,17 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     </div>
   </section>
 
+  <section class="sec" id="sramota">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker mono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C7 2 4 5.6 4 10c0 2.7 1.3 4.6 3 5.8V19h2v2h2v-2h2v2h2v-2h2v-3.2c1.7-1.2 3-3.1 3-5.8 0-4.4-3-8-8-8Z" fill="currentColor" opacity=".25"/><circle cx="9" cy="10.5" r="1.8" fill="currentColor"/><circle cx="15" cy="10.5" r="1.8" fill="currentColor"/></svg>Za vječno sjećanje</p>
+        <h2>Wall of Shame</h2>
+        <span class="meta mono" id="wosMeta"></span>
+      </div>
+      <div class="wos" id="wos"></div>
+    </div>
+  </section>
+
   <section class="sec" id="kino">
     <div class="wrap">
       <div class="sec-head">
@@ -2416,6 +2491,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
   <div class="wrap mono">
     <span class="cry">Lok'tar ogar</span>
     <span>Grb ima tajnu. Pet klikova.</span>
+    <a class="f-kino" href="#sramota">Wall of Shame</a>
     <a class="f-kino" href="#kino">▶ Kino</a>
     <span>Slike dungeona i cinematic kadrovi: Blizzard Entertainment, preko Warcraft Wikija</span>
     <span id="updated"></span>
@@ -2648,6 +2724,8 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
   var $ = function (id) { return document.getElementById(id); };
 
   var BOJE = { Warrior: "#C69B6D", Shaman: "#0070DD", Mage: "#3FC7EB", Rogue: "#FFF468", Paladin: "#F48CBA" };
+  // boja igrača iz data.js ima prednost pred bojom klase (u ekipi je svaka klasa jedan igrač); isto radi i cinematic
+  (D.igraci || []).forEach(function (p) { if (p.boja) BOJE[p.klasa] = p.boja; });
   var ULOGA = {
     "Tank": "Tank",
     "Healer": "Healer",
@@ -2789,6 +2867,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     zamjena: 40
   };
   var BOJE_KLASA = { Warrior: "#C69B6D", Shaman: "#0070DD", Mage: "#3FC7EB", Rogue: "#FFF468", Paladin: "#F48CBA", Druid: "#FF7C0A", Hunter: "#AAD372", Priest: "#FFFFFF", Warlock: "#8788EE" };
+  (D.igraci || []).forEach(function (p) { if (p.boja) BOJE_KLASA[p.klasa] = p.boja; });
   var ULOGE_LIKA = { grupa: "main u grupi", solo: "solo main", alt: "alt u gradu" };
   var PROF = null, naProf = [];
   function izvorProfesija() {
@@ -3089,17 +3168,9 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     "</div>";
   }
   function lvlOf(p) { return Math.max(0, Math.min(60, +p.level || 0)); }
-  // sljedeći gold cilj iz ekonomije (mount na 40, pa brzi mount na 60)
-  function goldCilj(p) {
-    var c = ((D.ekonomija || {}).ciljevi || []).filter(function (x) { return lvlOf(p) < x.level || x.level === 60; })[0];
-    return c || null;
-  }
   function goldHtml(p) {
-    var g = Math.max(0, +p.gold || 0), c = goldCilj(p);
-    return '<div class="p-gold"><span class="mono">Gold</span><b>' + g + " g</b>" + (c ? '<span class="mono">' + esc(c.naziv) + " · " + c.gold + " g</span>" +
-      '<span class="gg"><i style="width:' + Math.min(100, g / c.gold * 100).toFixed(1) + '%"></i></span>' : "") + "</div>";
+    return '<div class="p-gold"><span class="mono">Gold</span><b>' + Math.max(0, +p.gold || 0) + " g</b></div>";
   }
-  function zadatakTekst(n) { return n + (n % 10 === 1 && n % 100 !== 11 ? " zadatak" : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20) ? " zadatka" : " zadataka") + " sad"; }
   // zadaci za trenutni level lika; ako nema ničeg otvorenog sad, sljedeća dva
   function zadaciSad(p) {
     var L = Math.max(1, lvlOf(p)), z = p.zadaci || [];
@@ -3123,7 +3194,6 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       '<div class="plate-in">' + portretHtml(p, idx) +
         '<div class="p-body">' +
         '<p class="p-who"><span class="mono">Igrač</span><b>' + esc(p.igrac) + "</b></p>" +
-        (zadaciSad(p).length ? '<span class="p-zad">' + zadatakTekst(zadaciSad(p).length) + "</span>" : "") +
         '<dl class="p-meta"><div><dt class="mono">Rasa</dt><dd>' + esc(p.rasa) + '</dd></div><div><dt class="mono">Klasa</dt><dd>' + esc(p.klasa) + '</dd></div><div><dt class="mono">Uloga</dt><dd>' + esc(r) + "</dd></div></dl>" +
         '<div class="p-lvl"><div class="lvl-head"><span class="mono">Level</span><span class="n">' + lvl + '<small>/60</small></span></div>' + gaugeHtml(p) + svjezina(p) + "</div>" +
         '<div class="p-prof" data-prof-lik="' + slug(p.lik) + '"><span class="lab mono">Profesije</span>' + profHtml(p) + "</div>" +
@@ -4012,6 +4082,34 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     Array.prototype.forEach.call(document.querySelectorAll("main section[id], main .hero"), function (s) { io.observe(s); });
   })();
 
+  /* ---------- Wall of Shame: brojači po igraču i popis sramota (data.js wallOfShame); prazno dok se nešto stvarno ne dogodi ---------- */
+  (function () {
+    var W = D.wallOfShame || {}, B = W.brojaci || {};
+    var U = (W.unosi || []).slice().sort(function (a, b) { return a.datum < b.datum ? 1 : -1; });
+    var MJ = ["sij", "velj", "ožu", "tra", "svi", "lip", "srp", "kol", "ruj", "lis", "stu", "pro"];
+    function zbroj(b) { return (b.pullovi || 0) + (b.smrti || 0) + (b.wipeovi || 0); }
+    // kralj sramote: samo jedan igrač s najviše, i tek kad nije sve 0
+    var max = Math.max.apply(null, igraci.map(function (p) { return zbroj(B[p.igrac] || {}); }).concat(0));
+    var vodeci = max > 0 ? igraci.filter(function (p) { return zbroj(B[p.igrac] || {}) === max; }) : [];
+    function broj(n, lab) { return "<div><dt>" + lab + "</dt><dd" + (n ? "" : ' class="nula"') + ">" + n + "</dd></div>"; }
+    var ekipa = '<div class="wos-ekipa">' + igraci.map(function (p) {
+      var b = B[p.igrac] || {};
+      return '<div class="wos-ig' + (vodeci.length === 1 && vodeci[0] === p ? " kralj" : "") + '" style="--c:' + BOJE[p.klasa] + '">' + avatar(p) +
+        "<b>" + esc(p.igrac) + "</b><dl>" + broj(b.pullovi || 0, "Krivi pull") + broj(b.smrti || 0, "Smrti") + broj(b.wipeovi || 0, "Wipeovi") + "</dl></div>";
+    }).join("") + "</div>";
+    var lista = U.length
+      ? '<ol class="wos-lista">' + U.map(function (u) {
+          var p = POIGRACU[u.tko], d = new Date(u.datum + "T12:00:00");
+          return '<li style="--c:' + (p ? BOJE[p.klasa] : "var(--dust)") + '"><div class="dt"><b>' + d.getDate() + '</b><span class="mono">' + MJ[d.getMonth()] + "</span></div>" +
+            '<div><p class="tko">' + sAvatarima(u.tko) + "</p><p>" + esc(u.sto) + "</p></div>" +
+            (u.slika ? '<a class="wos-slika" href="' + esc(u.slika) + '" target="_blank" rel="noopener"><img src="' + esc(u.slika) + '" alt="Screenshot: ' + esc(u.sto) + '" loading="lazy"></a>' : "") + "</li>";
+        }).join("") + "</ol>"
+      : '<div class="wos-prazno"><img src="assets/logo-zp.svg" alt=""><div><b>Još nitko nije pullao.</b><span>Launch je 4. 11. Prvi krivi pull ide ovdje, zauvijek.</span></div></div>';
+    $("wos").innerHTML = ekipa + lista;
+    var n = U.length;
+    $("wosMeta").textContent = n ? n + (n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20) ? " sramote" : " sramota") : "Čista ploča, zasad";
+  })();
+
   /* ---------- Kino: kartice iz data.js; video u overlayu preko cijelog ekrana, nakon kraja ili ✕ natrag na isto mjesto ---------- */
   (function () {
     var lista = $("kinoLista"), ov = $("kinoOv"), fr = $("kinoFrame"), x = $("kinoX");
@@ -4154,7 +4252,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
           (v.sazetak ? '<p class="vij-s" lang="en">' + esc(v.sazetak) + "</p>" : "") + "</div></li>";
       }
       return '<li data-reveal><div class="dt"><b>' + d.getDate() + '</b><span class="mono">' + MJ[d.getMonth()] + " " + d.getFullYear() + "</span></div>" +
-        "<div><h4>" + esc(n.naslov || "") + "</h4><ul>" + n.stavke.map(function (st) {
+        "<div><h4>" + esc(n.naslov || "") + "</h4><ul>" + n.stavke.map(function (st, i) {
           // stariji zapis "Warrior: tekst" pretvara se u oznaku
           if (typeof st === "string") {
             var m = st.match(/^(Warrior|Shaman|Mage|Rogue|Paladin|Orc|Troll|Undead|Horde):\s*(.*)$/);
@@ -4163,8 +4261,9 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
           var oznake = (st.za || []).map(function (z) {
             return '<span class="tg' + (BOJE[z] ? "" : " rasa") + '"' + (BOJE[z] ? ' style="--c:' + BOJE[z] + '"' : "") + ">" + esc(z) + "</span>";
           }).join("") + (st.tema ? '<span class="tg tema">' + esc(st.tema) + "</span>" : "");
-          return "<li><span>" + esc(st.tekst) + "</span>" + (oznake ? '<span class="tgs">' + oznake + "</span>" : "") + "</li>";
-        }).join("") + "</ul></div></li>";
+          // na stranici prve tri stavke, ostale se vide u ladici "Više detalja"
+          return "<li" + (i >= 3 ? ' class="skr"' : "") + "><span>" + esc(st.tekst) + "</span>" + (oznake ? '<span class="tgs">' + oznake + "</span>" : "") + "</li>";
+        }).join("") + (n.stavke.length > 3 ? '<li class="jos mono">+ još ' + (n.stavke.length - 3) + " u detaljima</li>" : "") + "</ul></div></li>";
     }
   })();
 
@@ -4223,9 +4322,11 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
   }
 
   /* "vidi sve" za obične popise: prikazuje prvih n, ostalo na klik */
-  function vidiSve(lista, n, tekst) {
+  // naslov: naslov ladice, ako je drukčiji od teksta gumba; skraćeni sadržaj (.skr) se u ladici prikaže cijeli, a natuknice .jos maknu
+  function vidiSve(lista, n, tekst, naslov) {
     var djeca = Array.prototype.slice.call(lista.children);
-    if (djeca.length <= n) return;
+    var skraceno = lista.querySelector(".skr");
+    if (djeca.length <= n && !skraceno) return;
     djeca.forEach(function (d, i) { if (i >= n) d.classList.add("skr"); });
     var b = document.createElement("button");
     b.type = "button"; b.className = "vidi"; b.textContent = tekst + " (" + djeca.length + ")";
@@ -4236,14 +4337,15 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       var k = lista.cloneNode(true);
       k.removeAttribute("id");
       Array.prototype.forEach.call(k.querySelectorAll(".skr"), function (x) { x.classList.remove("skr"); });
+      Array.prototype.forEach.call(k.querySelectorAll(".jos"), function (x) { x.remove(); });
       Array.prototype.forEach.call(k.querySelectorAll("[data-reveal]"), function (x) { x.removeAttribute("data-reveal"); });
-      LADICA.otvori(tekst, '<div class="lad-lista">' + k.outerHTML + "</div>", "siroka");
+      LADICA.otvori(naslov || tekst, '<div class="lad-lista">' + k.outerHTML + "</div>", "siroka");
     });
     lista.parentNode.insertBefore(b, lista.nextSibling);
   }
 
-  vidiSve($("logVij"), 5, "Sve vijesti");
-  vidiSve($("logPatch"), 5, "Svi patchevi i hotfixevi");
+  vidiSve($("logVij"), 3, "Više detalja", "Vijesti");
+  vidiSve($("logPatch"), 3, "Više detalja", "Patchevi i hotfixevi");
 
   /* ---------- upute ---------- */
   $("uputeLista").innerHTML = (D.upute || []).map(function (u) {
@@ -4300,9 +4402,9 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     });
   })();
 
-  /* ---------- prva noć: nakon launcha ili od levela 10 sklopljena ---------- */
+  /* ---------- prva noć (Guide & Rules): nakon launcha ili od levela 10 sklopljena, pravila ostaju ---------- */
   (function () {
-    var sec = $("prva-noc"), gotovo = Date.now() > Date.parse(D.datumi.launch) + 864e5 || AVG >= 10;
+    var sec = $("guide"), gotovo = Date.now() > Date.parse(D.datumi.launch) + 864e5 || AVG >= 10;
     if (!gotovo) return;
     sec.classList.add("sklopljeno");
     var b = document.createElement("button");
@@ -4311,7 +4413,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       var z = sec.classList.toggle("sklopljeno");
       b.textContent = z ? "Prikaži plan prve noći" : "Sakrij plan";
     });
-    sec.querySelector(".sec-head").after(b);
+    sec.querySelector(".gr-vodic .gr-h").after(b);
   })();
 
   /* ---------- roadmap do 60 ---------- */
@@ -4601,10 +4703,6 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       return '<li class="' + m[2] + " " + st + '" style="left:' + fgPos(m[0]).toFixed(2) + '%"><i></i><span><b>' + t + "</b>" + m[1] + "</span></li>";
     }).join("");
   }
-  function trajanje(ms) {
-    var h = Math.max(0, Math.floor(ms / 36e5));
-    return Math.floor(h / 24) + " d " + (h % 24) + " h";
-  }
   var section = $("odbrojavanje");
   // favicon: zadnja 24 h do launcha izmjenjuje dvije varijante svake sekunde, samo dok je tab vidljiv
   var FAV = [document.querySelector('link[rel="icon"][type="image/svg+xml"]'), document.querySelector('link[rel="icon"][sizes="32x32"]')];
@@ -4639,19 +4737,15 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       if (String(dan).length > digits[0].length) buildUnits([{ word: "Dan" }, { n: String(dan).length }, { word: "na Azerothu" }]);
       showGroup(0, dan);
       var doRaida = Math.ceil((RAID - now) / 864e5);
-      $("noci").innerHTML = doRaida > 0 ? "Prvi raid za <b>" + doRaida + "</b> " + (doRaida === 1 ? "dan" : "dana") : "Raidovi su <b>otvoreni</b>";
-      $("cdNext").innerHTML = "<span>Launch je bio <b>4. 11. 2026. u ponoć</b></span>";
+      $("cdNext").innerHTML = (doRaida > 0 ? "<span>Prvi raid za <b>" + doRaida + "</b> " + (doRaida === 1 ? "dan" : "dana") + "</span>" : "<span>Raidovi su <b>otvoreni</b></span>") +
+        "<span>Launch je bio <b>4. 11. 2026. u ponoć</b></span>";
     } else {
       var s = Math.max(0, Math.floor((LAUNCH - now) / 1000));
       showGroup(0, Math.floor(s / 86400));
       showGroup(1, Math.floor(s % 86400 / 3600));
       showGroup(2, Math.floor(s % 3600 / 60));
       showGroup(3, s % 60);
-      var noci = Math.ceil((LAUNCH - now) / 864e5);
-      $("noci").innerHTML = alarm ? "Ovo je <b>ta noć</b>. Nitko ne spava." : noci === 1 ? "Još <b>jedna</b> noć" : "Još <b>" + noci + "</b> noći";
-      $("cdNext").innerHTML = now < RES_END
-        ? "<span>Rezervacija imena još <b>" + trajanje(RES_END - now) + "</b></span><span>Launch: <b>sri 4. 11. u ponoć</b> (15:00 PST)</span>"
-        : "<span>Imena su zaključana</span><span>Launch: <b>sri 4. 11. u ponoć</b> (15:00 PST)</span>";
+      $("cdNext").innerHTML = (alarm ? "<span>Ovo je <b>ta noć</b>. Nitko ne spava.</span>" : "") + "<span>Launch: <b>sri 4. 11. u ponoć</b> (15:00 PST)</span>";
     }
     prog(now);
   }

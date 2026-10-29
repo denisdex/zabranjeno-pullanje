@@ -38,6 +38,20 @@ window.HORDE = {
     ]
   },
 
+  // wallOfShame: sekcija iznad Kina; upisuje se samo ono što se stvarno dogodilo
+  //   brojaci: po igraču koliko je krivih pullova, smrti i wipeova skrivio
+  //   unosi: { datum: "GGGG-MM-DD", tko: "Pero" (ili "Pero, Žuga"), sto: "što se dogodilo", slika: "assets/sramota/x.jpg" (neobavezno) }
+  wallOfShame: {
+    brojaci: {
+      Niksa:   { pullovi: 0, smrti: 0, wipeovi: 0 },
+      Pero:    { pullovi: 0, smrti: 0, wipeovi: 0 },
+      Karkens: { pullovi: 0, smrti: 0, wipeovi: 0 },
+      "Žuga":  { pullovi: 0, smrti: 0, wipeovi: 0 },
+      Dex:     { pullovi: 0, smrti: 0, wipeovi: 0 }
+    },
+    unosi: []
+  },
+
   // kino: videi u sekciji Kino na dnu stranice, redom kako stoje; novi mini video = novi red
   // { id (jedinstven), naslov, opis (jedna rečenica), trajanje ("m:ss"), poster (16:9, assets/kino/), url }
   // url se otvara u overlayu preko cijelog ekrana (stranica javi kraj porukom { zp: "kraj" }); bez url-a pušta intro weba
@@ -62,41 +76,13 @@ window.HORDE = {
   //   talenti: bodovi u tri stabla redom kako ih igra slaže
   //   oprema i ciljevi: { slot, ime, kvaliteta: poor|common|uncommon|rare|epic|legendary, ikona (Wowhead ikona, npr. "inv_axe_09"), wowhead (ID itema), izvor }
   // oci: položaji očiju na fotki u postocima [[x, y], [x, y]] za sjaj (samo Undead), inače izostavi
+  // boja: boja igrača (#rrggbb) umjesto boje klase, na webu i u cinematicu; u ekipi je svaka klasa jedan igrač
   // siroka: široki kadar (16:9) za zaglavlje profila u ladici i veliku sliku u introu; ociSiroka: oči na njemu, kao oci
   // fokus: [x, y] glave na širokom kadru u postocima; intro po njemu reže sliku i vodi Ken Burns, a avatari izrezuju glavu
   //   uz siroka "<lik>-wide.jpg" ide i zamućena "<lik>-hero.jpg" (960 px) za pozadinu heroja
   // portret (foto) je 720×960 izrez iz istog kadra; oci i ociSiroka već uračunavaju 4 % povećanja slike na kartici
   // imena: gdje se govori o ljudima piše igrac (Pero, Niksa, Karkens, Žuga, Dex); lik samo kao naslov kartice/profila i u kontekstu igre
   igraci: [
-    { igrac: "Pero",    lik: "Melee Kitic",      klasa: "Warrior", rasa: "Orc",    uloga: "Melee DPS",  level: 0, foto: "assets/likovi/melee-kitic.jpg",
-      siroka: "assets/likovi/melee-kitic-wide.jpg", fokus: [50.3, 16.6],
-      gold: 0,
-      zadaci: [
-        { naziv: "Mining i Skinning naučiti čim izađeš iz Valley of Trials", od: 1, do: 10, gotovo: false },
-        { naziv: "Defensive Stance quest na 10 kod Warrior trenera", od: 10, do: 12, gotovo: false },
-        { naziv: "Kožu šalji Niksi za Leatherworking", od: 10, do: 40, gotovo: false },
-        { naziv: "Copper i Tin barove čuvaj za Engineering, višak na AH", od: 20, do: 40, gotovo: false },
-        { naziv: "Berserker Stance quest na 30", od: 30, do: 32, gotovo: false },
-        { naziv: "Mount (120 g) i Engineering umjesto Skinninga", od: 40, do: 42, gotovo: false },
-        { naziv: "Hand of Justice i Savage Gladiator Chain iz BRD-a", od: 50, do: 60, gotovo: false },
-        { naziv: "Arcanite Reaper: Thorium Niksinom druidu za transmute", od: 58, do: 60, gotovo: false }
-      ],
-      profil: {
-        specka: "Arms 2H", talenti: [31, 20, 0], plan: true,
-        opisBuilda: "Arms do Mortal Strikea, ostatak u Fury za crit i Rage. Dvoručno oružje, najlakši leveling za Warriora.",
-        oprema: [],
-        ciljevi: [
-          { ime: "Arcanite Reaper", slot: "Main Hand", kvaliteta: "rare", ikona: "inv_axe_09", wowhead: 12784, izvor: "Blacksmithing", gotovo: false },
-          { ime: "Lionheart Helm", slot: "Head", kvaliteta: "epic", ikona: "inv_helmet_36", wowhead: 12640, izvor: "Blacksmithing", gotovo: false },
-          { ime: "Savage Gladiator Chain", slot: "Chest", kvaliteta: "epic", ikona: "inv_chest_chain_15", wowhead: 11726, izvor: "Blackrock Depths", gotovo: false },
-          { ime: "Devilsaur Gauntlets", slot: "Hands", kvaliteta: "rare", ikona: "inv_gauntlets_26", wowhead: 15063, izvor: "Leatherworking", gotovo: false },
-          { ime: "Devilsaur Leggings", slot: "Legs", kvaliteta: "rare", ikona: "inv_pants_wolf", wowhead: 15062, izvor: "Leatherworking", gotovo: false },
-          { ime: "Cape of the Black Baron", slot: "Back", kvaliteta: "rare", ikona: "inv_misc_cape_20", wowhead: 13340, izvor: "Stratholme", gotovo: false },
-          { ime: "Hand of Justice", slot: "Trinket", kvaliteta: "rare", ikona: "inv_jewelry_talisman_01", wowhead: 11815, izvor: "Blackrock Depths", gotovo: false },
-          { ime: "Blackhand's Breadth", slot: "Trinket", kvaliteta: "rare", ikona: "inv_misc_armorkit_09", wowhead: 13965, izvor: "Upper Blackrock Spire", gotovo: false }
-        ],
-        biljeske: "Kao DPS ne pulla. Kad Dex nije tu, Warrior je rezervni tank."
-      } },
     { igrac: "Niksa",   lik: "Saman Saulic",    klasa: "Shaman",  rasa: "Orc",    uloga: "Healer",     level: 0, foto: "assets/likovi/saman-saulic.jpg",
       siroka: "assets/likovi/saman-saulic-wide.jpg", fokus: [50.3, 18],
       gold: 0,
@@ -123,6 +109,35 @@ window.HORDE = {
           { ime: "Blackhand's Breadth", slot: "Trinket", kvaliteta: "rare", ikona: "inv_misc_armorkit_09", wowhead: 13965, izvor: "Upper Blackrock Spire", gotovo: false }
         ],
         biljeske: "Healer grupe. Kad kaže mana, svi stanu."
+      } },
+    { igrac: "Pero",    lik: "Melee Kitic",      klasa: "Warrior", rasa: "Orc",    uloga: "Melee DPS",  level: 0, foto: "assets/likovi/melee-kitic.jpg", boja: "#D9853B",
+      siroka: "assets/likovi/melee-kitic-wide.jpg", fokus: [50.3, 16.6],
+      gold: 0,
+      zadaci: [
+        { naziv: "Mining i Skinning naučiti čim izađeš iz Valley of Trials", od: 1, do: 10, gotovo: false },
+        { naziv: "Defensive Stance quest na 10 kod Warrior trenera", od: 10, do: 12, gotovo: false },
+        { naziv: "Kožu šalji Niksi za Leatherworking", od: 10, do: 40, gotovo: false },
+        { naziv: "Copper i Tin barove čuvaj za Engineering, višak na AH", od: 20, do: 40, gotovo: false },
+        { naziv: "Berserker Stance quest na 30", od: 30, do: 32, gotovo: false },
+        { naziv: "Engineering umjesto Skinninga", od: 40, do: 42, gotovo: false },
+        { naziv: "Hand of Justice i Savage Gladiator Chain iz BRD-a", od: 50, do: 60, gotovo: false },
+        { naziv: "Arcanite Reaper: Thorium Niksinom druidu za transmute", od: 58, do: 60, gotovo: false }
+      ],
+      profil: {
+        specka: "Arms 2H", talenti: [31, 20, 0], plan: true,
+        opisBuilda: "Arms do Mortal Strikea, ostatak u Fury za crit i Rage. Dvoručno oružje, najlakši leveling za Warriora.",
+        oprema: [],
+        ciljevi: [
+          { ime: "Arcanite Reaper", slot: "Main Hand", kvaliteta: "rare", ikona: "inv_axe_09", wowhead: 12784, izvor: "Blacksmithing", gotovo: false },
+          { ime: "Lionheart Helm", slot: "Head", kvaliteta: "epic", ikona: "inv_helmet_36", wowhead: 12640, izvor: "Blacksmithing", gotovo: false },
+          { ime: "Savage Gladiator Chain", slot: "Chest", kvaliteta: "epic", ikona: "inv_chest_chain_15", wowhead: 11726, izvor: "Blackrock Depths", gotovo: false },
+          { ime: "Devilsaur Gauntlets", slot: "Hands", kvaliteta: "rare", ikona: "inv_gauntlets_26", wowhead: 15063, izvor: "Leatherworking", gotovo: false },
+          { ime: "Devilsaur Leggings", slot: "Legs", kvaliteta: "rare", ikona: "inv_pants_wolf", wowhead: 15062, izvor: "Leatherworking", gotovo: false },
+          { ime: "Cape of the Black Baron", slot: "Back", kvaliteta: "rare", ikona: "inv_misc_cape_20", wowhead: 13340, izvor: "Stratholme", gotovo: false },
+          { ime: "Hand of Justice", slot: "Trinket", kvaliteta: "rare", ikona: "inv_jewelry_talisman_01", wowhead: 11815, izvor: "Blackrock Depths", gotovo: false },
+          { ime: "Blackhand's Breadth", slot: "Trinket", kvaliteta: "rare", ikona: "inv_misc_armorkit_09", wowhead: 13965, izvor: "Upper Blackrock Spire", gotovo: false }
+        ],
+        biljeske: "Kao DPS ne pulla. Kad Dex nije tu, Warrior je rezervni tank."
       } },
     { igrac: "Karkens", lik: "Janica Frostelic", klasa: "Mage",    rasa: "Troll",  uloga: "Ranged DPS", level: 0, foto: "assets/likovi/janica-frostelic.jpg",
       siroka: "assets/likovi/janica-frostelic-wide.jpg", fokus: [50, 18.4],
@@ -158,7 +173,6 @@ window.HORDE = {
         { naziv: "Kožu šalji Niksi, rudu Peru", od: 10, do: 40, gotovo: false },
         { naziv: "Poisons quest na 20", od: 20, do: 22, gotovo: false },
         { naziv: "Lockpicking za škrinje u dungeonima", od: 30, do: 40, gotovo: false },
-        { naziv: "Mount (120 g)", od: 40, do: 42, gotovo: false },
         { naziv: "Mask of the Unforgiven, Cadaverous Armor i Devilsaur set", od: 50, do: 60, gotovo: false }
       ],
       profil: {
