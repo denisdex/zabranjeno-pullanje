@@ -77,7 +77,7 @@ a { color: inherit; }
   animation: ognjiste 5.6s ease-in-out infinite;
 }
 @keyframes ognjiste { 0%, 100% { opacity: .82; } 35% { opacity: 1; } 60% { opacity: .9; } 80% { opacity: .98; } }
-main, .top { position: relative; z-index: 1; }
+main { position: relative; z-index: 1; }
 footer { position: relative; z-index: 0; }
 footer .wrap { position: relative; z-index: 1; }
 
@@ -93,10 +93,30 @@ footer .wrap { position: relative; z-index: 1; }
 .mono { font-family: var(--f-mono); font-size: .6875rem; letter-spacing: .08em; text-transform: uppercase; }
 
 /* ---------- top line ---------- */
-.top .wrap {
-  display: flex; justify-content: space-between; align-items: center; gap: 16px;
-  padding-block: 18px; color: var(--dust);
+.top {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
+  background: rgba(12, 9, 8, .84); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
 }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 21; background: var(--night); }
+.top .wrap {
+  display: flex; justify-content: space-between; align-items: center; gap: 10px 20px; flex-wrap: wrap;
+  padding-block: 10px; color: var(--dust);
+}
+.menu { display: flex; gap: 4px; }
+.menu a {
+  font: 500 .6875rem/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--dust); text-decoration: none;
+  padding: 10px 12px; white-space: nowrap; border: 1px solid transparent; transition: color .2s, border-color .2s;
+}
+.menu a:hover { color: var(--bone); }
+.menu a.on { color: var(--ember); border-color: rgba(255, 122, 46, .35); }
+@media (max-width: 900px) {
+  .menu { flex-basis: 100%; overflow-x: auto; scrollbar-width: none; margin-inline: calc(var(--gut) * -1); padding-inline: var(--gut); scroll-snap-type: x proximity; }
+  .menu::-webkit-scrollbar { display: none; }
+  .menu a { scroll-snap-align: start; border-color: var(--line); padding: 9px 12px; }
+}
+section[id] { scroll-margin-top: 84px; }
+@media (max-width: 900px) { section[id] { scroll-margin-top: 112px; } }
 .top .sig { display: flex; align-items: center; gap: 10px; color: var(--bone); }
 .crest-btn { all: unset; cursor: pointer; display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%; -webkit-tap-highlight-color: transparent; }
 .crest-btn img { width: 46px; height: 46px; display: block; transition: transform .25s var(--ease); }
@@ -178,10 +198,10 @@ footer .wrap { position: relative; z-index: 1; }
 }
 
 /* ---------- section heads ---------- */
-.sec { padding-block: 88px; }
+.sec { padding-block: clamp(44px, 6vw, 72px); }
 .sec-head {
   position: relative; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 24px;
-  padding-bottom: 20px; margin-bottom: 36px;
+  padding-bottom: 16px; margin-bottom: 24px;
 }
 .sec-head::after {
   /* runski pojas umjesto obične crte */
@@ -388,8 +408,33 @@ footer .wrap { position: relative; z-index: 1; }
   .prof-panel { width: 100%; height: 100%; max-height: none; clip-path: none; }
 }
 
+/* ---------- vodič za dungeon (isti overlay kao profil) ---------- */
+.dng { padding: clamp(24px, 4.4vw, 60px); display: grid; gap: 34px; }
+.dng-head { display: grid; gap: 10px; padding-right: 56px; }
+.dng-head p { margin: 0; color: var(--dust); }
+.dng-head p b { color: var(--ember); font-weight: 500; }
+.dng-head h2 { margin: 0; font: 900 clamp(2.8rem, 8vw, 5.6rem)/.85 var(--f-display); text-transform: uppercase; }
+.dng-head .dng-note { color: var(--ember); }
+.dng-cols { display: grid; gap: 30px 48px; }
+.dng-cols h3.lab { margin: 0 0 10px; color: var(--ember); }
+.dng-cols p { margin: 0; color: var(--bone); max-width: 44rem; }
+.dng-l { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.dng-l li { padding-left: 16px; position: relative; color: var(--bone); }
+.dng-l li::before { content: ""; position: absolute; left: 0; top: .6em; width: 6px; height: 6px; transform: rotate(45deg); background: var(--ember); }
+.dng-x li::before { background: var(--blood); }
+.dng-boss { list-style: none; margin: 0; padding: 0; counter-reset: b; display: grid; }
+.dng-boss li { counter-increment: b; display: grid; grid-template-columns: 2.4rem minmax(0, 1fr); gap: 2px 14px; padding: 12px 0; border-top: 1px solid var(--line); }
+.dng-boss li::before { content: counter(b); grid-row: span 2; font: 900 1.6rem/1 var(--f-display); color: var(--blood); }
+.dng-boss b { font: 800 1.2rem/1.1 var(--f-display); text-transform: uppercase; }
+.dng-boss span { color: var(--dust); }
+.dng-wh { margin: 0; }
+.dng-wh a { color: var(--bone); text-decoration-color: var(--ember); text-underline-offset: 4px; }
+@media (min-width: 900px) { .dng-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); } .dng-wide { grid-column: 1 / -1; } }
+.inst li[data-dungeon] { cursor: pointer; transition: background .2s; }
+.inst li[data-dungeon]:hover, .inst li[data-dungeon]:focus-visible { background: rgba(236, 226, 212, .035); }
+
 /* ---------- party / roster ---------- */
-.party { display: grid; gap: 14px; margin-bottom: 40px; }
+.party { display: grid; gap: 12px; margin-bottom: 24px; }
 .party-sum { margin: 0; font: 800 clamp(1.6rem, 4.4vw, 2.4rem)/1 var(--f-display); text-transform: uppercase; }
 .party-sum em { font-style: normal; color: var(--dust); padding-inline: .25em; }
 .party-bar { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 4px; }
@@ -489,7 +534,7 @@ footer .wrap { position: relative; z-index: 1; }
 .ph span { color: var(--dust); }
 .p-top { position: absolute; z-index: 2; top: 0; left: 0; right: 0; padding: 16px 18px; text-shadow: 0 1px 2px rgba(0, 0, 0, .9), 0 0 12px rgba(0, 0, 0, .8); display: flex; justify-content: space-between; align-items: center; gap: 8px; color: var(--bone); }
 .p-name-wrap { position: absolute; z-index: 2; left: 18px; right: 18px; bottom: 12px; }
-.p-body { padding: 16px 20px 20px; display: grid; gap: 18px; }
+.p-body { padding: 14px 18px 18px; display: grid; gap: 14px; }
 .p-top .role { display: inline-flex; align-items: center; gap: 7px; color: var(--c); }
 .p-top .role svg { width: 14px; height: 14px; }
 .p-name {
@@ -525,7 +570,7 @@ footer .wrap { position: relative; z-index: 1; }
 .inst { list-style: none; margin: 0; padding: 0; }
 .inst-axis, .inst li { display: grid; grid-template-columns: minmax(0, 1fr) 4.5rem; gap: 6px 20px; align-items: center; }
 .inst-axis { color: var(--dust); padding-bottom: 10px; display: none; }
-.inst li { padding: 14px 0; border-bottom: 1px solid var(--line); }
+.inst li { padding: 10px 0; border-bottom: 1px solid var(--line); }
 .inst .nm { font: 800 1.35rem/1.05 var(--f-display); text-transform: uppercase; min-width: 0; }
 .inst .nm small { display: block; margin-top: 4px; font: 400 .625rem/1.2 var(--f-mono); letter-spacing: .08em; color: var(--dust); }
 .inst .nm em { font: 500 .5625rem/1 var(--f-mono); letter-spacing: .1em; font-style: normal; color: var(--night); background: var(--ember); padding: 3px 5px 2px; margin-left: 8px; vertical-align: .35em; }
@@ -614,7 +659,7 @@ body.shake main, body.shake .top { animation: shake .55s cubic-bezier(.36, .07, 
   .rules { position: sticky; top: 32px; }
 }
 .route { list-style: none; margin: 0; padding: 0; display: grid; }
-.route li { display: grid; grid-template-columns: 3.2rem minmax(0, 1fr); gap: 4px 18px; padding: 22px 0; border-top: 1px solid var(--line); }
+.route li { display: grid; grid-template-columns: 3.2rem minmax(0, 1fr); gap: 4px 18px; padding: 14px 0; border-top: 1px solid var(--line); }
 .route li:last-child { border-bottom: 1px solid var(--line); }
 .rules { display: grid; gap: 28px; align-content: start; }
 .goal { padding: 24px 24px 26px; background: var(--blood); clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px); display: grid; gap: 8px; }
@@ -650,7 +695,7 @@ body.shake main, body.shake .top { animation: shake .55s cubic-bezier(.36, .07, 
 }
 .log { list-style: none; margin: 0; padding: 0; position: relative; }
 .log::before { content: ""; position: absolute; left: 4.6rem; top: 6px; bottom: 6px; width: 1px; background: var(--line); }
-.log > li { display: grid; grid-template-columns: 4.6rem minmax(0, 1fr); gap: 0 24px; padding-bottom: 40px; }
+.log > li { display: grid; grid-template-columns: 4.6rem minmax(0, 1fr); gap: 0 24px; padding-bottom: 28px; }
 .log .dt { text-align: right; padding-right: 18px; position: relative; }
 .log .dt::after {
   content: ""; position: absolute; right: -5px; top: 10px; width: 9px; height: 9px; transform: rotate(45deg);
@@ -693,7 +738,7 @@ body.shake main, body.shake .top { animation: shake .55s cubic-bezier(.36, .07, 
 .tips { display: grid; grid-template-columns: minmax(0, 1fr); column-gap: 32px; }
 @media (min-width: 640px) { .tips { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (min-width: 1100px) { .tips { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
-.tip { border-top: 1px solid var(--line); padding: 22px 0 30px; display: grid; gap: 10px; align-content: start; min-width: 0; }
+.tip { border-top: 1px solid var(--line); padding: 16px 0 20px; display: grid; gap: 10px; align-content: start; min-width: 0; }
 .tip .num { font: 900 3.6rem/.8 var(--f-display); color: var(--bone); font-variant-numeric: tabular-nums; }
 .tip .num small { font-size: .38em; color: var(--ember); margin-left: 4px; letter-spacing: .04em; }
 .tip h3 { margin: 4px 0 0; color: var(--ember); }
@@ -727,7 +772,9 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
       <button class="crest-btn" id="crest" type="button" aria-label="Logo guilda"><img src="assets/logo-zp.svg" alt="" width="46" height="46"></button>
       &lt;Zabranjeno pullanje&gt;
     </span>
-    <span class="mono">WoW Forever · Horde</span>
+    <nav class="menu" id="menu" aria-label="Sekcije">
+      <a href="#odbrojavanje">Countdown</a><a href="#ekipa">Ekipa</a><a href="#roadmap">Roadmap</a><a href="#dungeoni">Dungeoni</a><a href="#savjeti">Savjeti</a><a href="#novosti">Patch notes</a>
+    </nav>
   </div>
 </header>
 
@@ -781,18 +828,6 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
     </div>
   </section>
 
-  <section class="sec" id="novosti">
-    <div class="wrap news">
-      <div class="news-head">
-        <p class="kicker mono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="currentColor" opacity=".25"/><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Glasnik iz Orgrimmara</p>
-        <h2>Patch notes</h2>
-        <p>Blizzardove promjene u Foreveru, prevedene. Najnovije gore, provjerava se svaki dan.</p>
-        <p class="mono"><a id="izvorNovosti" href="#" target="_blank" rel="noopener">Blizzardove development notes</a></p>
-      </div>
-      <ol class="log" id="log"></ol>
-    </div>
-  </section>
-
   <section class="sec" id="prva-noc">
     <div class="wrap">
       <div class="sec-head">
@@ -807,17 +842,6 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
           <div><h3 class="lab mono">Pravila guilda</h3><ol class="pravila" id="pravila"></ol></div>
         </aside>
       </div>
-    </div>
-  </section>
-
-  <section class="sec band" id="savjeti">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="kicker mono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="currentColor" opacity=".25"/><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Što stari orkovi znaju</p>
-        <h2>Tips &amp; tricks</h2>
-        <span class="meta mono">Poredano po levelu · cap trajno <b>60</b></span>
-      </div>
-      <div class="tips" id="tips"></div>
     </div>
   </section>
 
@@ -842,6 +866,29 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
       </div>
       <div class="inst-axis mono" aria-hidden="true"><span>Dungeon</span><span>Level</span><span class="ax"><span style="left:0">1</span><span style="left:15.25%">10</span><span style="left:32.2%">20</span><span style="left:49.15%">30</span><span style="left:66.1%">40</span><span style="left:83.05%">50</span><span style="left:100%">60</span></span><span></span></div>
       <ul class="inst" id="inst"></ul>
+    </div>
+  </section>
+
+  <section class="sec band" id="savjeti">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker mono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="currentColor" opacity=".25"/><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Što stari orkovi znaju</p>
+        <h2>Tips &amp; tricks</h2>
+        <span class="meta mono">Poredano po levelu · cap trajno <b>60</b></span>
+      </div>
+      <div class="tips" id="tips"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="novosti">
+    <div class="wrap news">
+      <div class="news-head">
+        <p class="kicker mono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="currentColor" opacity=".25"/><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Glasnik iz Orgrimmara</p>
+        <h2>Patch notes</h2>
+        <p>Blizzardove promjene u Foreveru, prevedene. Najnovije gore, provjerava se svaki dan.</p>
+        <p class="mono"><a id="izvorNovosti" href="#" target="_blank" rel="noopener">Blizzardove development notes</a></p>
+      </div>
+      <ol class="log" id="log"></ol>
     </div>
   </section>
 
@@ -1042,11 +1089,35 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
       var ime = body.querySelector(".p-name");
       if (ime) ime.id = "profIme";
     }
-    function otvori(s) {
-      var x = poSlugu[s];
+    var poDungeonu = {};
+    D.dungeoni.forEach(function (d) { poDungeonu[slug(d.ime)] = d; });
+    function lista(arr, cls) { return '<ul class="' + (cls || "dng-l") + '">' + arr.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>"; }
+    function renderDungeon(d) {
+      var v = d.vodic || { nepoznato: true, ulaz: d.gdje || "" };
+      var wh = "https://www.wowhead.com/classic/search?q=" + encodeURIComponent(d.ime);
+      panel.style.setProperty("--c", "#ff7a2e");
+      body.innerHTML = '<div class="dng">' +
+        '<header class="dng-head"><p class="mono">Dungeon · lvl ' + d.od + "–" + d.do + " · " + esc(d.gdje || "") + (d.novo ? " · <b>novo u Foreveru</b>" : "") + "</p>" +
+        '<h2 id="profIme">' + esc(d.ime) + "</h2>" +
+        '<p class="dng-note mono">' + (v.nepoznato ? "Još nepoznato" : "Vanilla 1.12 znanje; Forever je mogao mijenjati bossove i loot") + "</p></header>" +
+        '<div class="dng-cols">' +
+          '<div><h3 class="lab mono">Ulaz i kako doći</h3><p>' + esc(v.ulaz) + "</p></div>" +
+          (v.nepoznato ? '<div><h3 class="lab mono">Status</h3><p>' + esc(v.napomena || "") + "</p></div>" :
+            '<div><h3 class="lab mono">Questovi prije ulaska</h3>' + lista(v.questovi) + "</div>" +
+            '<div class="dng-wide"><h3 class="lab mono">Bossovi redom</h3><ol class="dng-boss">' + v.bossovi.map(function (b) {
+              return "<li><b>" + esc(b.ime) + "</b><span>" + esc(b.tekst) + "</span></li>";
+            }).join("") + "</ol></div>" +
+            '<div><h3 class="lab mono">Tko što radi</h3><p>' + esc(v.uloge) + "</p></div>" +
+            '<div><h3 class="lab mono">Loot koji nam treba</h3>' + lista(v.loot) + "</div>" +
+            '<div class="dng-wide"><h3 class="lab mono">Česte greške</h3>' + lista(v.greske, "dng-l dng-x") + "</div>") +
+        "</div>" +
+        '<p class="dng-wh mono"><a href="' + wh + '" target="_blank" rel="noopener">Wowhead Classic: ' + esc(d.ime) + " ↗</a></p></div>";
+    }
+    function otvori(vrsta, s) {
+      var x = vrsta === "lik" ? poSlugu[s] : poDungeonu[s];
       if (!x) return zatvori(true);
       if (box.hidden) zadnjiFokus = document.activeElement;
-      render(x.p, x.i);
+      if (vrsta === "lik") render(x.p, x.i); else renderDungeon(x);
       box.hidden = false;
       document.documentElement.style.overflow = "hidden";
       panel.scrollTop = 0;
@@ -1056,7 +1127,7 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
       if (box.hidden) return;
       box.hidden = true;
       document.documentElement.style.overflow = "";
-      if (!tiho && location.hash.indexOf("#lik/") === 0) {
+      if (!tiho && /^#(lik|dungeon)\//.test(location.hash)) {
         if (otvorenKlikom) history.back();
         else history.replaceState(null, "", location.pathname + location.search);
       }
@@ -1064,8 +1135,8 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
       if (zadnjiFokus && zadnjiFokus.focus) zadnjiFokus.focus({ preventScroll: true });
     }
     function izHasha() {
-      var m = location.hash.match(/^#lik\/([a-z0-9-]+)$/);
-      if (m) otvori(m[1]); else zatvori(true);
+      var m = location.hash.match(/^#(lik|dungeon)\/([a-z0-9-]+)$/);
+      if (m) otvori(m[1], m[2]); else zatvori(true);
     }
     $("plates").addEventListener("click", function (e) {
       var pl = e.target.closest(".plate");
@@ -1074,11 +1145,48 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
       otvorenKlikom = true;
       location.hash = "lik/" + pl.getAttribute("data-lik");
     });
+    document.addEventListener("click", function (e) {
+      var dg = e.target.closest("[data-dungeon]");
+      if (!dg) return;
+      e.preventDefault();
+      otvorenKlikom = true;
+      location.hash = "dungeon/" + dg.getAttribute("data-dungeon");
+    });
     box.addEventListener("click", function (e) { if (e.target.closest("[data-close]")) zatvori(); });
     window.addEventListener("keydown", function (e) { if (e.key === "Escape" && !box.hidden) zatvori(); });
     window.addEventListener("hashchange", izHasha);
     izHasha();
   })();
+
+  /* ---------- meni: glatki scroll i aktivna stavka ---------- */
+  (function () {
+    var veze = Array.prototype.slice.call(document.querySelectorAll("#menu a"));
+    veze.forEach(function (a) {
+      a.addEventListener("click", function (e) {
+        var cilj = document.querySelector(a.getAttribute("href"));
+        if (!cilj) return;
+        e.preventDefault();
+        cilj.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+      });
+    });
+    if (!("IntersectionObserver" in window)) return;
+    var io = new IntersectionObserver(function (ents) {
+      ents.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        veze.forEach(function (a) {
+          var on = a.getAttribute("href") === "#" + en.target.id;
+          a.classList.toggle("on", on);
+          if (on && a.scrollIntoView && window.innerWidth <= 900) a.parentNode.scrollTo({ left: a.offsetLeft - 16, behavior: reduce ? "auto" : "smooth" });
+        });
+      });
+    }, { rootMargin: "-35% 0px -60% 0px" });
+    veze.forEach(function (a) { var t = document.querySelector(a.getAttribute("href")); if (t) io.observe(t); });
+  })();
+  document.addEventListener("keydown", function (e) {
+    if (e.key !== "Enter") return;
+    var dg = e.target.closest && e.target.closest("[data-dungeon]");
+    if (dg) dg.click();
+  });
 
   /* ---------- parallax portreta (miš i nagib mobitela) ---------- */
   if (!reduce) {
@@ -1214,7 +1322,7 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
       if (d.odradeno) { st = "done"; txt = "odrađeno"; gotovo++; }
       else if (avg >= d.od && avg <= d.do) { st = "now"; txt = "za nas sada"; }
       var l = (d.od - 1) / 59 * 100, w = (d.do - d.od) / 59 * 100;
-      return '<li class="' + st + '" data-reveal><span class="nm">' + esc(d.ime) + (d.novo ? "<em>novo</em>" : "") + (d.gdje ? "<small>" + esc(d.gdje) + "</small>" : "") + '</span><span class="rg mono">' + d.od + "–" + d.do + "</span>" +
+      return '<li class="' + st + '" data-dungeon="' + slug(d.ime) + '" tabindex="0" role="link" data-reveal><span class="nm">' + esc(d.ime) + (d.novo ? "<em>novo</em>" : "") + (d.gdje ? "<small>" + esc(d.gdje) + "</small>" : "") + '</span><span class="rg mono">' + d.od + "–" + d.do + "</span>" +
         '<span class="tr" aria-hidden="true"><i style="left:' + l.toFixed(2) + "%;width:" + w.toFixed(2) + '%"></i></span>' +
         '<span class="st mono">' + txt + "</span></li>";
     }).join("");

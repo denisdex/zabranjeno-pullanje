@@ -110,30 +110,288 @@ window.HORDE = {
 
   // Rasponi iz Forevera (warcraft.wiki.gg, 29. 10. 2026.), samo ono što je Hordi blizu.
   // novo: dungeon koji je Forever dodao; odradeno: true kad ga ekipa prvi put očisti skupa
+  // vodic: kratki vodič za našu grupu (Vanilla 1.12 znanje; Forever je mogao mijenjati), otvara se na #dungeon/ime
   dungeoni: [
-    { ime: "Ragefire Chasm",            gdje: "Orgrimmar",          od: 13, do: 19, odradeno: false },
-    { ime: "Ruins of Lordaeron",        gdje: "Undercity",          od: 15, do: 22, novo: true, odradeno: false },
-    { ime: "Wailing Caverns",           gdje: "Barrens",            od: 19, do: 25, odradeno: false },
-    { ime: "Shadowfang Keep",           gdje: "Silverpine Forest",  od: 23, do: 29, odradeno: false },
-    { ime: "Blackfathom Deeps",         gdje: "Ashenvale",          od: 25, do: 31, odradeno: false },
-    { ime: "City of Dalaran",           gdje: "Alterac Mountains",  od: 28, do: 33, novo: true, odradeno: false },
-    { ime: "Razorfen Kraul",            gdje: "Barrens",            od: 30, do: 36, odradeno: false },
-    { ime: "Scarlet Monastery",         gdje: "Tirisfal, 4 krila",  od: 31, do: 45, odradeno: false },
-    { ime: "The Drowned City",          gdje: "Stranglethorn Vale", od: 35, do: 40, novo: true, odradeno: false },
-    { ime: "Razorfen Downs",            gdje: "Barrens",            od: 38, do: 44, odradeno: false },
-    { ime: "Krol'dok Stronghold",       gdje: "Riverglades",        od: 40, do: 45, novo: true, odradeno: false },
-    { ime: "Uldaman",                   gdje: "Badlands",           od: 44, do: 50, odradeno: false },
-    { ime: "Zul'Farrak",                gdje: "Tanaris",            od: 45, do: 51, odradeno: false },
-    { ime: "Alcaz Prison",              gdje: "Dustwallow Marsh",   od: 48, do: 53, novo: true, odradeno: false },
-    { ime: "Maraudon",                  gdje: "Desolace",           od: 48, do: 54, odradeno: false },
-    { ime: "Sunken Temple",             gdje: "Swamp of Sorrows",   od: 52, do: 58, odradeno: false },
-    { ime: "Blackrock Depths",          gdje: "Blackrock Mountain", od: 52, do: 60, odradeno: false },
-    { ime: "Lower Blackrock Spire",     gdje: "Blackrock Mountain", od: 55, do: 60, odradeno: false },
-    { ime: "Blackmaw Hold",             gdje: "Azshara",            od: 55, do: 60, novo: true, odradeno: false },
-    { ime: "Dire Maul",                 gdje: "Feralas, 3 krila",   od: 55, do: 60, odradeno: false },
-    { ime: "Scholomance",               gdje: "Western Plaguelands", od: 58, do: 60, odradeno: false },
-    { ime: "Stratholme",                gdje: "Eastern Plaguelands", od: 58, do: 60, odradeno: false },
-    { ime: "Shaper's Terrace",          gdje: "Un'Goro Crater",     od: 58, do: 60, novo: true, odradeno: false }
+    { ime: "Ragefire Chasm",            gdje: "Orgrimmar",          od: 13, do: 19, odradeno: false,
+      vodic: {
+        ulaz: "Orgrimmar, Cleft of Shadow: spusti se u Cleft i prati tunel do lave. Najbliže moguće, Undead dolaze zeppelinom.",
+        questovi: ["Searching for the Lost Satchel (Orgrimmar)", "Testing an Enemy's Strength (Orgrimmar)", "Slaying the Beast (Taragaman)", "Hidden Enemies (Thrallov lanac, nastavlja se ovdje)"],
+        bossovi: [
+          { ime: "Oggleflint", tekst: "Trogg vođa na početku, lagan. Dex pulla, ostali tek kad gleda u njega." },
+          { ime: "Taragaman the Hungerer", tekst: "Fire Nova i Uppercut. Dex ga okrene od grupe, Niksa drži heal, melee iza leđa." },
+          { ime: "Jergosh the Invoker", tekst: "Curse of Weakness i Immolate. Janica skida curse (Remove Lesser Curse), Pero i Žuga ga prekidaju." },
+          { ime: "Bazzalan", tekst: "Poison i Sinister Strike. Niksa skida poison (Cure Poison)." }
+        ],
+        uloge: "Janica sheepa kultiste, Žuga sapa humanoide prije pulla. Troggovi dolaze u gomilama: Dex skuplja, ostali čekaju dva-tri udarca.",
+        loot: ["Točan loot po bossu: Wowhead vodič ispod."],
+        greske: ["Ne trčati naprijed u lavu: troggovi se lančano pullaju.", "Zabranjeno pullanje vrijedi od prvog koraka."]
+      } },
+    { ime: "Ruins of Lordaeron",        gdje: "Undercity",          od: 15, do: 22, novo: true, odradeno: false,
+      vodic: { nepoznato: true, ulaz: "Ispod Undercityja (Tirisfal Glades). Dobar prvi dungeon za Undead stranu ekipe.", napomena: "Forever je ovaj dungeon tek dodao. Bossovi, taktike i loot još nisu javno poznati; vodič dopunjavamo kad se zna." } },
+    { ime: "Wailing Caverns",           gdje: "Barrens",            od: 19, do: 25, odradeno: false,
+      vodic: {
+        ulaz: "The Barrens, jugozapadno od Crossroadsa: špilja u brdu u obliku lica kod Lushwater Oasis. Ulaz u dungeon je duboko u špilji, iza raptora i druida.",
+        questovi: ["Leaders of the Fang (Crossroads): odlične nagrade", "Serpentbloom (Apothecary, Crossroads)", "Trouble at the Docks", "Deviate Hides i Deviate Eradication (oaza ispred špilje)"],
+        bossovi: [
+          { ime: "Lady Anacondra", tekst: "Druid of the Fang: Sleep i Healing Touch. Pero i Žuga je prekidaju (Pummel, Kick), Niksa Earth Shockom." },
+          { ime: "Lord Cobrahn", tekst: "Pretvara se u zmiju i baca poison. Niksa skida poison." },
+          { ime: "Kresh", tekst: "Kornjača u vodi, lagana." },
+          { ime: "Lord Pythas", tekst: "Healing Touch i Thunderclap. Prekidati heal." },
+          { ime: "Skum", tekst: "Riba u vodi, Chained Bolt. Lagan." },
+          { ime: "Lord Serpentis", tekst: "Zadnji Fang lord, Lightning Bolt i heal. Prekidati." },
+          { ime: "Verdan the Everliving", tekst: "Velik, Grasping Vines udara cijelu grupu. Niksa healom prati." },
+          { ime: "Mutanus the Devourer", tekst: "Nakon escorta Disciple of Naralex. Naralexov Terrify i Sleep: Dex drži aggro, ne razbježati se." }
+        ],
+        uloge: "Druidi Fanga lijeće i spavaju grupu: na svakom pullu tko god ima interrupt čeka njihov heal. Janica sheepa jednog druida.",
+        loot: ["Mage: Crescent Staff (quest Leaders of the Fang)", "Rogue: Wingblade (quest Leaders of the Fang)", "Točan loot po bossu: Wowhead vodič ispod."],
+        greske: ["Ne preskakati escort Naralexa, inače nema Mutanusa.", "Ne ići bez puta: špilja se lako izgubi, prati Dexa."]
+      } },
+    { ime: "Shadowfang Keep",           gdje: "Silverpine Forest",  od: 23, do: 29, odradeno: false,
+      vodic: {
+        ulaz: "Silverpine Forest, dvorac na brdu iznad Pyrewood Villagea, južno od Sepulchera.",
+        questovi: ["Deathstalkers in Shadowfang (Sepulcher)", "The Book of Ur (Undercity)", "Arugal Must Die (Sepulcher)"],
+        bossovi: [
+          { ime: "Rethilgore", tekst: "Lagan. Nakon njega oslobodite Deathstalkere u ćelijama." },
+          { ime: "Razorclaw the Butcher", tekst: "Fizički jak, Dex ga drži leđima od grupe." },
+          { ime: "Baron Silverlaine", tekst: "Veil of Shadow smanjuje healanje. Brzo ga srušiti." },
+          { ime: "Commander Springvale", tekst: "Paladin, lijeći se i štiti: Žuga i Pero prekidaju Holy Light." },
+          { ime: "Odo the Blindwatcher", tekst: "Raste kad mu ljudi oko njega umiru: prvo ubijati wolfove, pa njega." },
+          { ime: "Fenrus the Devourer", tekst: "Velik vuk, Toxic Saliva. Niksa skida poison." },
+          { ime: "Wolf Master Nandos", tekst: "Doziva vukove. AoE od Janice dok Dex drži vukove." },
+          { ime: "Archmage Arugal", tekst: "Teleportira se po sobi, Shadow Bolt i Arugal's Curse (lik postane worgen). Svi skupa, nitko ne bježi." }
+        ],
+        uloge: "Worgeni u gomilama: Janica Frost Nova pa Blizzard, Dex Consecration. Sapati se mogu samo humanoidi.",
+        loot: ["Rogue i Warrior: Shadowfang (rijedak drop s trasha)", "Mage: Robes of Arugal", "Točan loot po bossu: Wowhead vodič ispod."],
+        greske: ["Ne pullati dva worgen paka odjednom.", "Ne otvarati vrata Fenrusove sobe prije nego je grupa puna mane."]
+      } },
+    { ime: "Blackfathom Deeps",         gdje: "Ashenvale",          od: 25, do: 31, odradeno: false,
+      vodic: {
+        ulaz: "Ashenvale, Zoram Strand na obali. Ulaz je u ruševini, dio puta pod vodom: Undead dišu pod vodom bez problema.",
+        questovi: ["Allegiance to the Old Gods (Shrine of Aku'mai, Ashenvale)", "Baron Aquanis (Strange Water Globe s trasha)", "Amongst the Ruins (Zoram'gar)"],
+        bossovi: [
+          { ime: "Ghamoo-ra", tekst: "Kornjača, lagana." },
+          { ime: "Lady Sarevess", tekst: "Naga s vojnicima: Janica sheepa jednog, Dex drži nju." },
+          { ime: "Gelihast", tekst: "Murloci, Net. Lagan." },
+          { ime: "Lorgus Jett", tekst: "Shaman s totemima: prvo totemi, pa on." },
+          { ime: "Baron Aquanis", tekst: "Horde-only, pozvati ga kuglom s trasha. Frost Nova i Frostbolt." },
+          { ime: "Twilight Lord Kelris", tekst: "Sleep i Mind Blast. Prekidati." },
+          { ime: "Old Serra'kis", tekst: "U vodi. Ne odlaziti daleko od grupe." },
+          { ime: "Aku'mai", tekst: "Frenzy i Poison Cloud: Dex ga drži na mjestu, ostali bježe iz oblaka, Niksa skida poison." }
+        ],
+        uloge: "Pred Aku'maijem upaliti četiri plamena pa dolaze valovi: Dex pokupi, Janica i Niksa AoE, svi skupa.",
+        loot: ["Točan loot po bossu: Wowhead vodič ispod."],
+        greske: ["Ne plivati sam po jezeru, sve je puno moba.", "Plameni na kraju pale valove: tek kad je grupa spremna."]
+      } },
+    { ime: "City of Dalaran",           gdje: "Alterac Mountains",  od: 28, do: 33, novo: true, odradeno: false,
+      vodic: { nepoznato: true, ulaz: "Alterac Mountains. Pazi: Horde je u gradu Dalaranu napadnuta na prvi pogled, ali dungeonu se može prići.", napomena: "Forever je ovaj dungeon tek dodao. Bossovi, taktike i loot još nisu javno poznati; vodič dopunjavamo kad se zna." } },
+    { ime: "Razorfen Kraul",            gdje: "Barrens",            od: 30, do: 36, odradeno: false,
+      vodic: {
+        ulaz: "Južni Barrens, na granici s Thousand Needles: velika trnovita gomila zapadno od ceste.",
+        questovi: ["Willix the Importer (escort na ulazu)", "Going, Going, Guano! (Crossroads)", "A Vengeful Fate (Thunder Bluff)", "Mortality Wanes"],
+        bossovi: [
+          { ime: "Roogug", tekst: "Geomancer, totemi i Lightning. Prvo totemi." },
+          { ime: "Aggem Thorncurse", tekst: "Doziva Boarove, lijeći. Prekidati heal." },
+          { ime: "Death Speaker Jargba", tekst: "Mind Control na jednog iz grupe: Janica sheepa kontroliranog ako treba." },
+          { ime: "Overlord Ramtusk", tekst: "Fizički jak, Dex ga drži." },
+          { ime: "Agathelos the Raging", tekst: "Bijesni vepar, Rampage. Kad podivlja, Niksa jače heala." },
+          { ime: "Charlga Razorflank", tekst: "Purity, heal i Chain Bolt. Prvo adds, pa ona; prekidati heal." }
+        ],
+        uloge: "Quilboarovi su humanoidi: Žuga sapa, Janica sheepa, pullamo po jednu grupu. Vepar je ono što se ovdje NE pulla bez Dexa.",
+        loot: ["Točan loot po bossu: Wowhead vodič ispod."],
+        greske: ["Vepar, pa još jedan vepar: tu je ime guilda nastalo.", "Patrolirajući quilboarovi se lančaju, čekati da prođu."]
+      } },
+    { ime: "Scarlet Monastery",         gdje: "Tirisfal, 4 krila",  od: 31, do: 45, odradeno: false,
+      vodic: {
+        ulaz: "Tirisfal Glades, sjeveroistočno, samostan iza Brilla. Četiri krila s odvojenim ulazima: Graveyard, Library, Armory, Cathedral.",
+        questovi: ["In the Name of the Light (Undercity): Mograine, Whitemane, Doan, Herod", "Into the Scarlet Monastery (Undercity)", "Compendium of the Fallen (Library)", "Test of Lore"],
+        bossovi: [
+          { ime: "Graveyard: Interrogator Vishas i Bloodmage Thalnos", tekst: "Lagani, dobro za zagrijavanje." },
+          { ime: "Library: Houndmaster Loksey", tekst: "Psi u čoporu, Dex skupi sve." },
+          { ime: "Library: Arcanist Doan", tekst: "Na 50% Arcane Bubble pa Detonation: svi bježe od njega dok traje." },
+          { ime: "Armory: Herod", tekst: "Whirlwind: kad viče, melee i Janica bježe, Dex ga drži; poslije njega val trainera kroz vrata." },
+          { ime: "Cathedral: High Inquisitor Fairbanks", tekst: "Skriven iza vrata, opcionalan." },
+          { ime: "Cathedral: Scarlet Commander Mograine", tekst: "Kad padne, Whitemane ga oživi: svi na Whitemane, Žuga kick, Pero Pummel." }
+        ],
+        uloge: "Puno humanoida: sap i sheep na svakom pullu. Scarlet monasi lijeće, ubijati ih prve.",
+        loot: ["Warrior, Paladin, Shaman: Ravager (Herod)", "Warrior, Paladin: Mograine's Might", "Mage: Illusionary Rod (Doan)", "Točan loot po bossu: Wowhead vodič ispod."],
+        greske: ["U Cathedralu ne pullati cijelu dvoranu: monasi trče po pomoć.", "Herodov val nakon smrti: stati u hodnik prije nego se otvori."]
+      } },
+    { ime: "The Drowned City",          gdje: "Stranglethorn Vale", od: 35, do: 40, novo: true, odradeno: false,
+      vodic: { nepoznato: true, ulaz: "Stranglethorn Vale.", napomena: "Forever je ovaj dungeon tek dodao. Bossovi, taktike i loot još nisu javno poznati; vodič dopunjavamo kad se zna." } },
+    { ime: "Razorfen Downs",            gdje: "Barrens",            od: 38, do: 44, odradeno: false,
+      vodic: {
+        ulaz: "Barrens, na samoj granici s Thousand Needles, istočno od Razorfen Kraula.",
+        questovi: ["Bring the End (Thunder Bluff)", "Extinguishing the Idol (Belnistrasz u dungeonu)", "An Unholy Alliance"],
+        bossovi: [
+          { ime: "Tuten'kash", tekst: "Pojavi se na gong, pauci prvo. Poison: Niksa ga skida." },
+          { ime: "Mordresh Fire Eye", tekst: "Fireball i Fire Nova. Prekidati." },
+          { ime: "Glutton", tekst: "Velik, Disease Cloud. Niksa skida bolesti (Cure Disease)." },
+          { ime: "Amnennar the Coldbringer", tekst: "Frost Nova i Frostbolt, doziva Frost Spectre. Adds na Janicu i Pera, Dex drži njega." }
+        ],
+        uloge: "Escort Belnistrasza: brani ga od valova, Dex na ulazu u krug, svi AoE. Puno undead moba: Paladin ovdje briljira.",
+        loot: ["Točan loot po bossu: Wowhead vodič ispod."],
+        greske: ["Belnistrasz mora preživjeti escort, inače nema questa.", "Ne udarati gong prije nego su svi na manu."]
+      } },
+    { ime: "Krol'dok Stronghold",       gdje: "Riverglades",        od: 40, do: 45, novo: true, odradeno: false,
+      vodic: { nepoznato: true, ulaz: "Riverglades (nova Forever zona, brod iz Powderfuse Porta).", napomena: "Forever je ovaj dungeon tek dodao. Bossovi, taktike i loot još nisu javno poznati; vodič dopunjavamo kad se zna." } },
+    { ime: "Uldaman",                   gdje: "Badlands",           od: 44, do: 50, odradeno: false,
+      vodic: {
+        ulaz: "Badlands, sjeverozapad. Horde obično ulazi stražnjim ulazom kroz Hall of the Keepers.",
+        questovi: ["Power Stones", "Agmond's Fate", "The Platinum Discs (Disc of Norgannon)", "Uldaman Reagent Run"],
+        bossovi: [
+          { ime: "Revelosh", tekst: "Lagan, Chain Lightning." },
+          { ime: "Ironaya", tekst: "Knockback i Arcing Smash: grupa iza leđa." },
+          { ime: "Obsidian Sentinel", tekst: "Doziva manje sentinele, ubijati ih odmah." },
+          { ime: "Ancient Stone Keeper", tekst: "Sand Storms po sobi, izbjegavati." },
+          { ime: "Galgann Firehammer", tekst: "Fire Nova i Amplify Flames. Prekidati." },
+          { ime: "Grimlok", tekst: "Troggovi; Lightning Bolt i Shrink." },
+          { ime: "Archaedas", tekst: "Budi Earthen Guardiane i Wardene: Dex ih skuplja, Janica i Pero AoE, Niksa heala. Archaedas je spor, prvo adds." }
+        ],
+        uloge: "Dugačak dungeon: dogovoriti se idemo li cijeli ili samo do Archaedasa.",
+        loot: ["Točan loot po bossu: Wowhead vodič ispod."],
+        greske: ["Ne dirati kipove u Archaedasovoj sobi prije nego je grupa spremna.", "Dwarfovi i troggovi u istom hodniku se lančaju."]
+      } },
+    { ime: "Zul'Farrak",                gdje: "Tanaris",            od: 45, do: 51, odradeno: false,
+      vodic: {
+        ulaz: "Tanaris, sjeverozapadno od Gadgetzana, veliki trolski grad u pustinji.",
+        questovi: ["Divino-matic Rod", "Troll Temper", "Gahz'rilla (Mallet of Zul'Farrak, posebni quest)", "Tiara of the Deep", "Scarab Shells"],
+        bossovi: [
+          { ime: "Antu'sul", tekst: "Basilisci i healing ward, ubijati ward." },
+          { ime: "Theka the Martyr", tekst: "Postaje imun na fizičku štetu: tad Janica i Niksa." },
+          { ime: "Witch Doctor Zum'rah", tekst: "Zombiji iz grobova, Shadow Bolt. Prekidati, prvo zombiji." },
+          { ime: "Nekrum i Shadowpriest Sezz'ziz", tekst: "Kraj piramide: Sezz'ziz lijeći, prekidati." },
+          { ime: "Event na piramidi (Sergeant Bly)", tekst: "Valovi trolova na stepenicama: svi na vrhu, Dex Consecration, Janica Blizzard, Niksa heala. Nikome ne trčati dolje." },
+          { ime: "Hydromancer Velratha", tekst: "Lagan." },
+          { ime: "Gahz'rilla", tekst: "Na gong s Mallet of Zul'Farrak. Freeze Solid i Gahz'rilla Slam." },
+          { ime: "Chief Ukorz Sandscalp i Ruuzlu", tekst: "Dva bossa zajedno: Ruuzlu prvo ili ga Dex drži odvojeno." }
+        ],
+        uloge: "Na piramidi je najviše posla za cijelu grupu: dogovor prije nego Bly otvori vrata.",
+        loot: ["Warrior, Paladin: Sul'thraze the Lasher (Jang'thraze + Sang'thraze)", "Točan loot po bossu: Wowhead vodič ispod."],
+        greske: ["Ne ići niz stepenice na piramidi.", "Gong samo s Malletom, inače nema Gahz'rille."]
+      } },
+    { ime: "Alcaz Prison",              gdje: "Dustwallow Marsh",   od: 48, do: 53, novo: true, odradeno: false,
+      vodic: { nepoznato: true, ulaz: "Dustwallow Marsh, otok Alcaz.", napomena: "Forever je ovaj dungeon tek dodao. Bossovi, taktike i loot još nisu javno poznati; vodič dopunjavamo kad se zna." } },
+    { ime: "Maraudon",                  gdje: "Desolace",           od: 48, do: 54, odradeno: false,
+      vodic: {
+        ulaz: "Desolace, jugozapad: veliki kanjon, ulaz kroz Purple (Vyletongue) ili Orange (Noxxion) krilo.",
+        questovi: ["Legends of Maraudon (Scepter of Celebras)", "Corruption of Earth and Seed", "Shadowshard Fragments", "Vyletongue Corruption"],
+        bossovi: [
+          { ime: "Noxxion", tekst: "Poison i spliti se na male: Dex skupi, AoE." },
+          { ime: "Razorlash", tekst: "Lagan." },
+          { ime: "Lord Vyletongue", tekst: "Blink i Smoke Bomb, satiri. Prekidati." },
+          { ime: "Celebras the Cursed", tekst: "Za Scepter quest." },
+          { ime: "Landslide", tekst: "Knockback i doziva elementale." },
+          { ime: "Tinkerer Gizlock", tekst: "Bombe, raspršiti se malo." },
+          { ime: "Rotgrip", tekst: "Velik krokodil, lagan." },
+          { ime: "Princess Theradras", tekst: "Knockback, Dust Field: svi blizu nje, Dex okrenut." }
+        ],
+        uloge: "Dugačak dungeon: tri krila. Scepter of Celebras otvara prečac za sljedeći put.",
+        loot: ["Točan loot po bossu: Wowhead vodič ispod."],
+        greske: ["Ne pullati elementale u velikim dvoranama bez dogovora.", "Satiri u Purple krilu stealthaju, Dex ide prvi."]
+      } },
+    { ime: "Sunken Temple",             gdje: "Swamp of Sorrows",   od: 52, do: 58, odradeno: false,
+      vodic: {
+        ulaz: "Swamp of Sorrows, potopljeni hram u jezeru; plivati do ulaza.",
+        questovi: ["Class quest za 50+ (svaka klasa ima svoj)", "Into the Temple of Atal'Hakkar", "The God Hakkar (Avatar event)", "Jammal'an the Prophet"],
+        bossovi: [
+          { ime: "Atal'alarion", tekst: "Zagonetka s kipovima redom, pa boss. Udara jako, Dex drži." },
+          { ime: "Dreamscythe i Weaver", tekst: "Zmajevi, Acid Breath: okrenuti od grupe." },
+          { ime: "Jammal'an the Prophet", tekst: "Hex of Jammal'an pretvara člana u neprijatelja: ne ubijati svojega." },
+          { ime: "Ogom the Wretched", tekst: "Uz Jammal'ana." },
+          { ime: "Morphaz i Hazzas", tekst: "Zmajevi, isto kao gore." },
+          { ime: "Avatar of Hakkar", tekst: "Event s Eggom; Cause Insanity. Niksa purga, Dex drži." },
+          { ime: "Shade of Eranikus", tekst: "Sleep i Acid Breath: Dex okrenut, Niksa budi." }
+        ],
+        uloge: "Svaki od nas ima class quest ovdje: dogovoriti ih unaprijed.",
+        loot: ["Svi: nagrade class questova", "Točan loot po bossu: Wowhead vodič ispod."],
+        greske: ["Ne ubijati prijatelja pod Hexom.", "Zagonetka s kipovima mora biti točnim redom."]
+      } },
+    { ime: "Blackrock Depths",          gdje: "Blackrock Mountain", od: 52, do: 60, odradeno: false,
+      vodic: {
+        ulaz: "Blackrock Mountain (između Searing Gorgea i Burning Steppesa). Ulaz dolje u planini, preko lanaca.",
+        questovi: ["Attunement to the Core (ako Molten Core dođe)", "The Rise of the Machines", "Dark Iron Legacy", "Kharan's Tale / The Princess's Surprise", "Ring of Law quest"],
+        bossovi: [
+          { ime: "High Interrogator Gerstahn", tekst: "Shadow Word: Pain i Psychic Scream: Niksa Tremor Totem." },
+          { ime: "Ring of Law", tekst: "Arena s nasumičnim bossom: svi skupa, Dex prvi." },
+          { ime: "Lord Roccor i Bael'Gar", tekst: "Vatreni: Fire resist pomaže." },
+          { ime: "General Angerforge", tekst: "Na 30% doziva vojsku: tad brzo dolje s njim." },
+          { ime: "Golem Lord Argelmach", tekst: "Golemi okolo, prvo njih." },
+          { ime: "Grim Guzzler (Hurley, Plugger)", tekst: "Krčma: ne razbijati bačve ako nećete tučnjavu." },
+          { ime: "Ambassador Flamelash", tekst: "Gonzo vatre iz rune: ubijati elementale." },
+          { ime: "Emperor Dagran Thaurissan", tekst: "Zadnji boss. Princeza Moira ga lijeći: interrupt na nju ili je Janica sheepa." }
+        ],
+        uloge: "Velik dungeon, dijeli se na više večeri. Hand of Justice i dosta pre-raid BiS-a pada ovdje.",
+        loot: ["Svi melee: Hand of Justice", "Warrior, Paladin, Shaman: Savage Gladiator Chain (Ring of Law)", "Točan loot po bossu: Wowhead vodič ispod."],
+        greske: ["U Grim Guzzleru ne napadati barmena: cijela krčma napada.", "Ne skakati s lanaca na ulazu."]
+      } },
+    { ime: "Lower Blackrock Spire",     gdje: "Blackrock Mountain", od: 55, do: 60, odradeno: false,
+      vodic: {
+        ulaz: "Blackrock Mountain, gornji dio: ulaz u Spire iznad BRD-a.",
+        questovi: ["Seal of Ascension (ključ za UBRS)", "Bijou's Belongings", "Warlord's Command", "The Matron Protectorate"],
+        bossovi: [
+          { ime: "Highlord Omokk", tekst: "Ogar, knockback. Ostali ogri prvo." },
+          { ime: "Shadow Hunter Vosh'gajin", tekst: "Hex i curse: Janica skida curse." },
+          { ime: "War Master Voone", tekst: "Baca sjekire, raspršeno." },
+          { ime: "Mother Smolderweb", tekst: "Pauci, poison: Niksa." },
+          { ime: "Urok Doomhowl", tekst: "Event sa zastavom, valovi ogra." },
+          { ime: "Quartermaster Zigris", tekst: "Lagan." },
+          { ime: "Halycon i Gizrul", tekst: "Vukovi, jak udarac." },
+          { ime: "Overlord Wyrmthalak", tekst: "Na 50% doziva dva dodatna: Dex hvata, AoE." }
+        ],
+        uloge: "Ključ za UBRS se radi ovdje (Seal of Ascension). UBRS je raid za 10, zasad ne.",
+        loot: ["Točan loot po bossu: Wowhead vodič ispod."],
+        greske: ["Orci u hodnicima se lančaju preko mostova.", "Ne aktivirati Urokov event bez pune mane."]
+      } },
+    { ime: "Blackmaw Hold",             gdje: "Azshara",            od: 55, do: 60, novo: true, odradeno: false,
+      vodic: { nepoznato: true, ulaz: "Azshara.", napomena: "Forever je ovaj dungeon tek dodao. Bossovi, taktike i loot još nisu javno poznati; vodič dopunjavamo kad se zna." } },
+    { ime: "Dire Maul",                 gdje: "Feralas, 3 krila",   od: 55, do: 60, odradeno: false,
+      vodic: {
+        ulaz: "Feralas, veliki grad u ruševinama. Tri krila: East (Warpwood Quarter), West (Capital Gardens), North (Gordok Commons).",
+        questovi: ["Pusillin and the Elder Azj'Tordin (East)", "The Madness Within (West)", "Libram questovi", "Tribute run (North)"],
+        bossovi: [
+          { ime: "East: Lethtendris i Zevrim Thornhoof", tekst: "Lethtendris pojačava magijom, prekidati." },
+          { ime: "East: Alzzin the Wildshaper", tekst: "Mijenja oblik, adds." },
+          { ime: "West: Immol'thar", tekst: "Ubiti pet pylona pa Immol'thar: Dex ga drži, enrage na vrijeme." },
+          { ime: "West: Prince Tortheldrin", tekst: "Whirlwind i Counterspell." },
+          { ime: "North: King Gordok", tekst: "Tribute run: ne ubijati guardove da bi kralj ostavio škrinju." }
+        ],
+        uloge: "Tribute run (North) daje najviše lootova ako ostavimo stražare žive.",
+        loot: ["Svi: Tribute škrinja (North)", "Točan loot po bossu: Wowhead vodič ispod."],
+        greske: ["U Northu ne ubijati Gordok stražare ako radimo tribute.", "Pyloni u Westu: svi skupa, ne raspršiti se."]
+      } },
+    { ime: "Scholomance",               gdje: "Western Plaguelands", od: 58, do: 60, odradeno: false,
+      vodic: {
+        ulaz: "Western Plaguelands, Caer Darrow (otok usred jezera). Treba Skeleton Key (quest).",
+        questovi: ["Skeleton Key (The Key to Scholomance)", "Kirtonos the Herald", "Doctor Theolen Krastinov, the Butcher", "Barov Family Fortune"],
+        bossovi: [
+          { ime: "Kirtonos the Herald", tekst: "Na balkon s Blood of Innocents. Disarm i Swoop." },
+          { ime: "Jandice Barov", tekst: "Pravi se kopijama, nađi pravu." },
+          { ime: "Rattlegore", tekst: "Fizički jak, Dex drži." },
+          { ime: "Ras Frostwhisper", tekst: "Frost Armor, Fear: Niksa Tremor Totem." },
+          { ime: "Darkmaster Gandling", tekst: "Teleportira po jednog u sobe: tko ode, preživi sam do kraja." }
+        ],
+        uloge: "Puno undeada i casterera: Dex Consecration, Niksa Disease Cleansing Totem.",
+        loot: ["Mage: Mish'undare, Circlet of the Mind Flayer", "Mage: Bonecreeper Stylus", "Rogue: Cadaverous Armor", "Točan loot po bossu: Wowhead vodič ispod."],
+        greske: ["U Viewing Roomu ne pullati cijelu sobu.", "Gandlingov teleport: ne paničariti, sobu očistiti sam."]
+      } },
+    { ime: "Stratholme",                gdje: "Eastern Plaguelands", od: 58, do: 60, odradeno: false,
+      vodic: {
+        ulaz: "Eastern Plaguelands, sjeverozapad. Dva ulaza: Live (Scarlet strana, glavna vrata) i Undead (Service Entrance, Baron Rivendare).",
+        questovi: ["The Archivist", "Houses of the Holy", "Dead Man's Plea (Baron run)", "Ramstein Run"],
+        bossovi: [
+          { ime: "Live: The Unforgiven", tekst: "Duhovi okolo, Frost Nova." },
+          { ime: "Live: Timmy the Cruel", tekst: "Pojavi se kad se očisti trg." },
+          { ime: "Live: Cannon Master Willey", tekst: "Puške, raspršeno." },
+          { ime: "Live: Archivist Galford i Balnazzar", tekst: "Balnazzar mind control: Janica sheep kontroliranog." },
+          { ime: "Undead: Baroness Anastari, Nerub'enkan, Maleki, Ramstein", tekst: "Ziguratovi pa Ramstein: veliki odvratnik, Dex drži." },
+          { ime: "Undead: Baron Rivendare", tekst: "Death Pact i Raise Dead: ubijati skelete, Niksa heala. Baron run ima 45-minutni timer." }
+        ],
+        uloge: "Najjači pre-raid BiS dungeon za melee (Cape of the Black Baron, Mask of the Unforgiven).",
+        loot: ["Rogue: Mask of the Unforgiven", "Svi melee: Cape of the Black Baron (Baron Rivendare)", "Točan loot po bossu: Wowhead vodič ispod."],
+        greske: ["Baron run: ne pullati sporedne sobe, timer teče.", "Ne trčati kroz Live stranu s pola hp-a, sve se lanča."]
+      } },
+    { ime: "Shaper's Terrace",          gdje: "Un'Goro Crater",     od: 58, do: 60, novo: true, odradeno: false,
+      vodic: { nepoznato: true, ulaz: "Un'Goro Crater.", napomena: "Forever je ovaj dungeon tek dodao. Bossovi, taktike i loot još nisu javno poznati; vodič dopunjavamo kad se zna." } }
   ],
 
   // Patch notes: prijevod Blizzardovih development notes, najnovije gore.
