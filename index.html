@@ -1461,7 +1461,7 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
 .mcm-info .kr { display: none; }
 @media (max-width: 640px) { .mcm-info .dug { display: none; } .mcm-info .kr { display: inline; } }
 
-/* ---------- intro: puni cinematic jednom dnevno (roster reveal), kratki na refresh ---------- */
+/* ---------- intro: puni cinematic na svaki dolazak (montaža, roster reveal) ---------- */
 .sp-pol { position: fixed; left: 0; right: 0; z-index: 200; background: var(--night); will-change: transform; }
 /* polovice se preklapaju 2 px na sredini, bez jedinica visine ekrana (na mobitelu znaju biti kraće od ekrana) */
 .sp-pol.gore { top: 0; bottom: calc(50% - 1px); background: radial-gradient(90% 120% at 50% 100%, #1c0d09, var(--night) 72%); }
@@ -1618,25 +1618,22 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
 <script src="data.js"></script>
 <script>
 /* ---------- intro (splash) ----------
-   Prvi ulazak u danu: puni cinematic ~16,5 s (žeravica, grb, natpis, 3D logo, montaža Forever kadrova, roster reveal ekipe, JOŠ N DANA, rascjep).
-   Refresh istog dana: kratki ~2 s. Link s hashom: 0,6 s. Reduced-motion: 0,4 s fade. Gumb "▶ Intro" u izborniku pušta puni.
-   Preskače se gumbom Preskoči, Esc, Space, klikom ili scrollom; u punom prvi dodir samo pali zvuk.
-   ?sp=4.2 zaustavi puni intro u toj sekundi, ?sp=k1.2 kratki (za screenshotove). */
+   Svaki dolazak na web (i refresh): puni cinematic ~34 s (žeravica, grb, natpis, 3D logo, montaža Forever kadrova, roster reveal ekipe, JOŠ N DANA, rascjep).
+   Link s hashom: 0,6 s. Reduced-motion: 0,4 s fade. Gumb "▶ Intro" u izborniku ga pušta ponovno.
+   Preskače se gumbom Preskoči, Esc, Space, klikom ili scrollom; prvi dodir samo pali zvuk.
+   ?sp=4.2 zaustavi intro u toj sekundi (za screenshotove). */
 (function () {
   var H = document.documentElement, D = window.HORDE || {};
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var dbg = /[?&]sp=(k?)([\d.]+)/.exec(location.search);
+  var dbg = /[?&]sp=([\d.]+)/.exec(location.search);
   var radi = false;
   var BOJE = { Warrior: "#C69B6D", Shaman: "#0070DD", Mage: "#3FC7EB", Rogue: "#FFF468", Paladin: "#F48CBA", Druid: "#FF7C0A" };
 
-  function danas() { var d = new Date(); return d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate(); }
   function nacin() {
-    if (dbg) return dbg[1] ? "kratki" : "puni";
+    if (dbg) return "puni";
     if (reduce) return "fade";
     if (location.hash.length > 1) return "hash";
-    var zadnji = null;
-    try { zadnji = localStorage.getItem("zp-intro"); localStorage.setItem("zp-intro", danas()); } catch (e) {}
-    return zadnji === danas() ? "kratki" : "puni";
+    return "puni";
   }
   // gumb "▶ Intro" u izborniku
   document.addEventListener("click", function (e) {
@@ -1664,7 +1661,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       return "Dan " + (Math.floor((sad - L) / 864e5) + 1) + " na Azerothu";
     })();
     var skip = null, zv = null;
-    if (mod === "puni" || mod === "kratki") {
+    if (mod === "puni") {
       skip = el("button", "sp-skip mono");
       skip.type = "button"; skip.removeAttribute("aria-hidden");
       skip.innerHTML = "Preskoči <kbd>Esc</kbd>";
@@ -1773,7 +1770,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     }
     if (!dbg) {
       ulazi.forEach(function (ev) { window.addEventListener(ev, ulaz, { capture: true, passive: ev !== "keydown" }); });
-      setTimeout(preskoci, mod === "puni" ? 19000 : 4200);
+      setTimeout(preskoci, mod === "puni" ? 40000 : 4200);
     }
 
     if (mod === "fade") {
@@ -1810,31 +1807,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       var gv = Math.round(Math.max(96, Math.min(190, Math.min(W, V) * .22)));
       grb.style.width = grb.style.height = gv + "px";
 
-      if (mod === "kratki") {
-        var kx = W / 2, ky = V / 2;
-        grb.style.left = (kx - gv / 2) + "px"; grb.style.top = (ky - gv / 2) + "px";
-        tl = g.timeline({ onComplete: kraj });
-        tl.to(zar, { x: kx, y: ky, s: 1.25, duration: .25, ease: "power2.out" }, 0)
-          .call(function () { eksplozija(); zvuk("bubanj"); }, null, .25)
-          .fromTo(grb, { opacity: 0, scale: 3.4, rotation: -8 }, { opacity: 1, scale: 1, rotation: 0, duration: .2, ease: "power4.in" }, .45)
-          .call(function () { val(kx, ky); }, null, .65)
-          .fromTo(blj, { opacity: 0 }, { opacity: 1, duration: .06, yoyo: true, repeat: 1 }, .65)
-          .fromTo(grb, { scale: 1.12 }, { scale: 1, duration: .35, ease: "elastic.out(1, .5)" }, .65);
-        tres(.65);
-        tl.to(grb, { opacity: 0, scale: .85, duration: .2 }, 1.05)
-          .fromTo(stage, { opacity: 0 }, { opacity: 1, duration: .3 }, 1.05)
-          .set(h1, { opacity: 1 }, 1.15)
-          .fromTo(sav, { opacity: 0, scaleX: .1 }, { opacity: 1, scaleX: 1, duration: .12, ease: "power2.out" }, 1.1)
-          .to(gore, { yPercent: -102, duration: .5, ease: "power4.inOut" }, 1.22)
-          .to(dolje, { yPercent: 102, duration: .5, ease: "power4.inOut" }, 1.22)
-          .to(sav, { opacity: 0, duration: .2 }, 1.3)
-          .to(cv, { opacity: 0, duration: .3 }, 1.5)
-          .to({}, { duration: .1 }, 1.85);
-        if (dbg) { tl.pause(); tl.seek(parseFloat(dbg[2]), false); }
-        return;
-      }
-
-      // ---------- puni cinematic (~16,5 s) ----------
+      // ---------- puni cinematic (~34 s): ulasci žustri, zadržavanja dovoljno duga da se sve pročita ----------
       var cs = getComputedStyle(h1), t1 = h1.childNodes[0].textContent.trim(), sp = h1.querySelector("span"), t2 = sp ? sp.textContent.trim() : "";
       ["fontFamily", "fontWeight", "fontSize", "lineHeight", "letterSpacing", "textTransform"].forEach(function (k) { nas.style[k] = cs[k]; });
       nas.style.left = r1.left + "px"; nas.style.top = r1.top + "px"; nas.style.width = r1.width + "px";
@@ -1886,17 +1859,17 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       tinja = 0;
       // 0–1,6 s: žeravica u tišini, pa eksplozija i bubanj
       tl.call(function () { zvuk("vatra"); }, null, .1)
-        .to(zar, { x: gx, y: gy, s: 1.35, duration: 1.2, ease: "sine.inOut" }, 0)
-        .call(function () { eksplozija(); zvuk("bubanj"); tinja = mob ? .25 : .6; }, null, 1.3)
-        // 1,7–3,9 s: grb udari, natpis se utisne, 3D logo se digne iza
-        .fromTo(grb, { opacity: 0, scale: 3.4, rotation: -8 }, { opacity: 1, scale: 1, rotation: 0, duration: .22, ease: "power4.in" }, 1.7)
-        .call(function () { val(gx, gy); zvuk("bubanj"); }, null, 1.92)
-        .fromTo(blj, { opacity: 0 }, { opacity: 1, duration: .06, yoyo: true, repeat: 1 }, 1.92)
-        .fromTo(grb, { scale: 1.12 }, { scale: 1, duration: .4, ease: "elastic.out(1, .5)" }, 1.92);
-      tres(1.92);
-      tl.fromTo(nas.querySelectorAll("i"), { opacity: 0, scale: 1.9, y: -10 }, { opacity: 1, scale: 1, y: 0, duration: .13, ease: "power3.in", stagger: .05 }, 2.15)
-        .call(function () { nas.textContent = t1 + " "; var s = document.createElement("span"); s.className = "crv"; s.textContent = t2; nas.appendChild(s); }, null, 3.25)
-        .to([grb, nas], { opacity: 0, scale: "-=0.08", duration: .3, ease: "power2.in" }, 3.9);
+        .to(zar, { x: gx, y: gy, s: 1.35, duration: 1.7, ease: "sine.inOut" }, 0)
+        .call(function () { eksplozija(); zvuk("bubanj"); tinja = mob ? .25 : .6; }, null, 1.9)
+        // 2,4–6 s: grb udari, natpis se utisne, 3D logo se digne iza
+        .fromTo(grb, { opacity: 0, scale: 3.4, rotation: -8 }, { opacity: 1, scale: 1, rotation: 0, duration: .22, ease: "power4.in" }, 2.4)
+        .call(function () { val(gx, gy); zvuk("bubanj"); }, null, 2.62)
+        .fromTo(blj, { opacity: 0 }, { opacity: 1, duration: .06, yoyo: true, repeat: 1 }, 2.62)
+        .fromTo(grb, { scale: 1.12 }, { scale: 1, duration: .4, ease: "elastic.out(1, .5)" }, 2.62);
+      tres(2.62);
+      tl.fromTo(nas.querySelectorAll("i"), { opacity: 0, scale: 1.9, y: -10 }, { opacity: 1, scale: 1, y: 0, duration: .13, ease: "power3.in", stagger: .065 }, 2.95)
+        .call(function () { nas.textContent = t1 + " "; var s = document.createElement("span"); s.className = "crv"; s.textContent = t2; nas.appendChild(s); }, null, 4.4)
+        .to([grb, nas], { opacity: 0, scale: "-=0.08", duration: .35, ease: "power2.in" }, 6);
       if (vidi) {
         tl.call(function () {
           var z = window.zpLogo;
@@ -1904,18 +1877,18 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
           if (z.uvod) z.uvod();
           if (z.rim) g.fromTo(z.rim.material, { opacity: 1 }, { opacity: .5, duration: 1.8, ease: "power2.out" });
           if (z.key) g.fromTo(z.key, { intensity: 4 }, { intensity: 1.5, duration: 1.8, ease: "power2.out" });
-        }, null, 2.6)
-          .fromTo(stage, { x: sx, y: sy + 90, scale: sS * .9, opacity: 0 }, { y: sy, scale: sS, opacity: .6, duration: .8, ease: "power3.out" }, 2.6)
-          .to(stage, { opacity: 0, duration: .3 }, 4);
+        }, null, 3.6)
+          .fromTo(stage, { x: sx, y: sy + 90, scale: sS * .9, opacity: 0 }, { y: sy, scale: sS, opacity: .6, duration: 1, ease: "power3.out" }, 3.6)
+          .to(stage, { opacity: 0, duration: .35 }, 6.1);
       }
 
-      // 4,2–7,8 s: montaža kadrova kao u traileru, tvrdi rezovi s bljeskom
-      var t = 4.2;
+      // 6,4–15 s: montaža kadrova kao u traileru, tvrdi rezovi s bljeskom
+      var t = 6.4;
       if (kadrovi.length) {
         tl.set(mon, { visibility: "visible" }, t - .15)
           .fromTo(trake, { scaleY: 0 }, { scaleY: 1, duration: .3, ease: "power3.out" }, t - .15);
         kadrovi.forEach(function (d, i) {
-          var img = d.querySelector("img"), kt = d.querySelectorAll(".sp-kt p"), zadnji = i === kadrovi.length - 1, Dk = zadnji ? 1.1 : .9;
+          var img = d.querySelector("img"), kt = d.querySelectorAll(".sp-kt p"), zadnji = i === kadrovi.length - 1, Dk = zadnji ? 2.4 : 2;
           tl.set(d, { visibility: "visible" }, t)
             .call(function () { zvuk(i === 0 || zadnji ? "bubanj" : "swoosh"); }, null, t)
             .fromTo(blj, { opacity: 0 }, { opacity: .8, duration: .05, yoyo: true, repeat: 1 }, t)
@@ -1927,12 +1900,12 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
         });
         tl.to(trake, { scaleY: 0, duration: .25, ease: "power2.in" }, t)
           .set(mon, { visibility: "hidden" }, t + .25);
-        t += .3;
+        t += .35;
       }
 
-      // roster reveal: svaki s druge strane dijagonalnim rezom u boji klase, dovoljno dugo da se fora pročita
+      // roster reveal: svaki s druge strane dijagonalnim rezom u boji klase; stoji ~2,8 s da se fora pročita
       kartice.forEach(function (k, i) {
-        var zadnja = i === kartice.length - 1, Dk = zadnja ? 1.5 : 1.25, s = i % 2 ? 1 : -1;
+        var zadnja = i === kartice.length - 1, Dk = zadnja ? 3.3 : 2.8, s = i % 2 ? 1 : -1;
         var rez = k.querySelector(".sp-rez"), por = k.querySelector(".sp-por"), ime = k.querySelector(".sp-ime"), lik = k.querySelector(".sp-lik"), fora = k.querySelector(".sp-fora");
         var os = mob ? "yPercent" : "xPercent", po = mob ? "y" : "x", ul = {}, pu = {}, iz = {};
         ul[os] = s * 260; pu[po] = s * (mob ? 90 : 140); iz[po] = -s * (mob ? 70 : 120);
@@ -1948,37 +1921,37 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
             .fromTo(blj, { opacity: 0 }, { opacity: 1, duration: .07, yoyo: true, repeat: 1 }, t + .34);
           tres(t + .34, 1.4);
         }
-        tl.to(k, (function () { var o = { opacity: 0, duration: .22, ease: "power2.in" }; o[po] = iz[po]; return o; })(), t + Dk - .22);
+        tl.to(k, (function () { var o = { opacity: 0, duration: .25, ease: "power2.in" }; o[po] = iz[po]; return o; })(), t + Dk - .25);
         t += Dk;
       });
       // svih 5 u jednom kadru
       tl.set(tim, { visibility: "visible" }, t)
         .fromTo(tim.querySelectorAll(".sp-tc"), { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: .25, ease: "power3.out", stagger: .06 }, t)
         .fromTo(tim.querySelector(".uloge"), { opacity: 0, scale: 1.2 }, { opacity: 1, scale: 1, duration: .2 }, t + .25)
-        .to(tim, { opacity: 0, duration: .15 }, t + .85);
-      t += 1;
+        .to(tim, { opacity: 0, duration: .2 }, t + 1.8);
+      t += 2;
 
       // kraj: JOŠ N DANA, natpis i logo slete na svoja mjesta, rascjep
       dana.style.top = gy + "px";
-      tl.call(function () { tinja = 0; }, null, t + .6)
+      tl.call(function () { tinja = 0; }, null, t + 1.4)
         .fromTo(dana, { opacity: 0, scale: 1.35 }, { opacity: 1, scale: 1, duration: .16, ease: "power2.out" }, t)
-        .to(dana, { opacity: 0, scale: .96, duration: .2 }, t + .55);
+        .to(dana, { opacity: 0, scale: .96, duration: .25 }, t + 1.2);
       if (vidi) {
-        tl.fromTo(nas, { opacity: 0, scale: sT }, { opacity: 1, duration: .15, immediateRender: false }, t + .05)
-          .fromTo(stage, { x: sx, y: sy, scale: sS, opacity: 0 }, { opacity: .6, duration: .3, immediateRender: false }, t)
-          .to(stage, { x: 0, y: 0, scale: 1, opacity: 1, duration: .6, ease: "power3.inOut" }, t + .4)
-          .to(nas, { x: function () { return h1.getBoundingClientRect().left - r1.left; }, y: function () { return h1.getBoundingClientRect().top - r1.top; }, scale: 1, duration: .6, ease: "power3.inOut" }, t + .4)
-          .set(h1, { opacity: 1 }, t + 1)
-          .to(nas, { opacity: 0, duration: .12 }, t + 1);
+        tl.fromTo(nas, { opacity: 0, scale: sT }, { opacity: 1, duration: .2, immediateRender: false }, t + .15)
+          .fromTo(stage, { x: sx, y: sy, scale: sS, opacity: 0 }, { opacity: .6, duration: .4, immediateRender: false }, t)
+          .to(stage, { x: 0, y: 0, scale: 1, opacity: 1, duration: .7, ease: "power3.inOut" }, t + 1.1)
+          .to(nas, { x: function () { return h1.getBoundingClientRect().left - r1.left; }, y: function () { return h1.getBoundingClientRect().top - r1.top; }, scale: 1, duration: .7, ease: "power3.inOut" }, t + 1.1)
+          .set(h1, { opacity: 1 }, t + 1.85)
+          .to(nas, { opacity: 0, duration: .12 }, t + 1.85);
       }
-      tl.fromTo(sav, { opacity: 0, scaleX: .1 }, { opacity: 1, scaleX: 1, duration: .14, ease: "power2.out" }, t + .47)
-        .to(gore, { yPercent: -102, duration: .55, ease: "power4.inOut" }, t + .57)
-        .to(dolje, { yPercent: 102, duration: .55, ease: "power4.inOut" }, t + .57)
-        .to(sav, { opacity: 0, duration: .2 }, t + .65)
-        .to(cv, { opacity: 0, duration: .3 }, t + .8)
-        .to({}, { duration: .1 }, t + 1.1);
+      tl.fromTo(sav, { opacity: 0, scaleX: .1 }, { opacity: 1, scaleX: 1, duration: .14, ease: "power2.out" }, t + 1.2)
+        .to(gore, { yPercent: -102, duration: .6, ease: "power4.inOut" }, t + 1.3)
+        .to(dolje, { yPercent: 102, duration: .6, ease: "power4.inOut" }, t + 1.3)
+        .to(sav, { opacity: 0, duration: .2 }, t + 1.4)
+        .to(cv, { opacity: 0, duration: .3 }, t + 1.6)
+        .to({}, { duration: .1 }, t + 1.9);
       // debug kadar: bez iskri, da snimka pokaže samo raspored
-      if (dbg) { tl.pause(); tl.seek(parseFloat(dbg[2]), false); cv.style.visibility = "hidden"; }
+      if (dbg) { tl.pause(); tl.seek(parseFloat(dbg[1]), false); cv.style.visibility = "hidden"; }
     }
     // kreće čim stignu GSAP (async) i hero; ne čeka ostatak stranice, a nakon 3,2 s čekanja odustaje
     (function cekaj(n) {
