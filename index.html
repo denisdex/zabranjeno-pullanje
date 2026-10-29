@@ -1227,6 +1227,42 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
   .pl, .fog { transform: none; }
   .fth b { animation: none; }
 }
+/* ---------- level up na kartici: kratki zlatni stup svjetla i LEVEL N ---------- */
+.plate-in > .lvl-up { position: absolute; inset: 0; z-index: 4; pointer-events: none; display: grid; justify-items: center; align-content: start; }
+.lvl-up i {
+  position: absolute; left: 50%; bottom: 0; width: 46%; height: 100%; transform: translateX(-50%) scaleY(0); transform-origin: 50% 100%; opacity: 0;
+  background: linear-gradient(0deg, rgba(255, 214, 120, 0), rgba(255, 224, 150, .75) 35%, rgba(255, 240, 200, .9) 60%, rgba(255, 224, 150, 0));
+  filter: blur(8px); mix-blend-mode: screen; animation: stup 1.2s var(--ease) forwards;
+}
+@keyframes stup { 0% { transform: translateX(-50%) scaleY(0); opacity: 0; } 30% { opacity: 1; } 70% { transform: translateX(-50%) scaleY(1); opacity: .9; } 100% { transform: translateX(-50%) scaleY(1); opacity: 0; } }
+.lvl-up b {
+  margin-top: 18px; padding: 6px 10px 5px; font: 900 1.3rem/1 var(--f-display); letter-spacing: .04em; color: #1a0e05;
+  background: linear-gradient(180deg, #ffe39a, #e0b25a 55%, #b8862e); box-shadow: 0 0 0 1px #3a2208, 0 0 24px rgba(255, 200, 100, .6);
+  animation: badge 4s var(--ease) forwards;
+}
+@keyframes badge { 0% { opacity: 0; transform: translateY(8px); } 10%, 85% { opacity: 1; transform: none; } 100% { opacity: 0; } }
+
+/* ---------- achievement tost: dolje u sredini, zlatni rub i mali štit ---------- */
+.ach {
+  position: fixed; left: 50%; bottom: calc(24px + env(safe-area-inset-bottom, 0px)); z-index: 55; transform: translateX(-50%);
+  width: min(380px, calc(100vw - 32px)); display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 4px 14px; align-items: center;
+  padding: 12px 16px 13px 12px; background: rgba(10, 8, 7, .97); border: 1px solid rgba(214, 170, 92, .85);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .6), 0 0 30px rgba(255, 180, 80, .18), 0 16px 40px rgba(0, 0, 0, .6);
+  animation: achIn .35s var(--ease) both;
+}
+.ach.van { animation: achOut .3s ease-in both; }
+@keyframes achIn { from { opacity: 0; transform: translate(-50%, 16px); } to { opacity: 1; transform: translate(-50%, 0); } }
+@keyframes achOut { to { opacity: 0; transform: translate(-50%, 10px); } }
+.ach svg { grid-row: span 3; width: 40px; height: 40px; color: #e0b25a; }
+.ach .mono { color: #e0b25a; font-size: .5625rem; }
+.ach b { font: 800 1.35rem/1 var(--f-display); text-transform: uppercase; color: var(--bone); }
+.ach p { margin: 0; color: var(--dust); font-size: .8125rem; line-height: 1.35; }
+@media (max-width: 640px) { .ach { bottom: calc(76px + env(safe-area-inset-bottom, 0px)); } }
+@media (prefers-reduced-motion: reduce) {
+  .lvl-up i { display: none; }
+  .lvl-up b, .ach, .ach.van { animation: none; }
+}
+
 /* ---------- tooltip: tamna pozadina, tanki zlatni rub, ime u boji kvalitete ---------- */
 .tt {
   position: fixed; left: 0; top: 0; z-index: 60; pointer-events: none; width: max-content; max-width: min(280px, calc(100vw - 16px));
@@ -2013,6 +2049,60 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     el.addEventListener("pointercancel", leave);
     el.addEventListener("pointerup", function (e) { if (e.pointerType !== "mouse") setTimeout(leave, 350); });
   });
+
+  /* ---------- level up: usporedba s levelima iz zadnjeg posjeta (localStorage zp-leveli) ---------- */
+  (function () {
+    var staro = null, sad = {};
+    try { staro = JSON.parse(localStorage.getItem("zp-leveli") || "null"); } catch (e) {}
+    igraci.forEach(function (p) { sad[slug(p.lik)] = lvlOf(p); });
+    try { localStorage.setItem("zp-leveli", JSON.stringify(sad)); } catch (e) {}
+    if (!staro) return;
+    Array.prototype.forEach.call(document.querySelectorAll(".plate"), function (pl) {
+      var s = pl.getAttribute("data-lik"), n = sad[s];
+      if (!(n >= 1 && staro[s] != null && n > staro[s])) return;
+      // stup svjetla kreće tek kad je kartica na ekranu
+      var io = new IntersectionObserver(function (ents) {
+        if (!ents[0].isIntersecting) return;
+        io.disconnect();
+        // malo nakon što se kartica pojavi, da se stup ne izgubi u animaciji ulaska
+        setTimeout(function () {
+          var el = document.createElement("span");
+          el.className = "lvl-up"; el.setAttribute("aria-hidden", "true");
+          el.innerHTML = "<i></i><b>LEVEL " + n + "</b>";
+          pl.querySelector(".plate-in").appendChild(el);
+          setTimeout(function () { el.remove(); }, 4200);
+        }, 700);
+      }, { threshold: .4 });
+      io.observe(pl);
+    });
+  })();
+
+  /* ---------- achievementi: novi iskaču kao tost, jedan po jedan (localStorage zp-achievementi) ---------- */
+  (function () {
+    var svi = D.achievementi || [], vidjeni = [];
+    try { vidjeni = JSON.parse(localStorage.getItem("zp-achievementi") || "[]"); } catch (e) {}
+    var novi = svi.filter(function (a) { return vidjeni.indexOf(a.id) < 0; });
+    if (!novi.length) return;
+    var STIT = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="currentColor" opacity=".18"/><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M8.5 12.2 11 14.6l4.6-5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>';
+    function datumHr(d) { var x = d.split("-"); return +x[2] + ". " + +x[1] + ". " + x[0] + "."; }
+    function sljedeci() {
+      var a = novi.shift();
+      if (!a) return;
+      vidjeni.push(a.id);
+      try { localStorage.setItem("zp-achievementi", JSON.stringify(vidjeni)); } catch (e) {}
+      var el = document.createElement("div");
+      el.className = "ach"; el.setAttribute("role", "status");
+      el.innerHTML = STIT + '<span class="mono">Achievement · ' + datumHr(a.datum) + (a.igraci && a.igraci.length < 5 ? " · " + esc(a.igraci.join(", ")) : "") + "</span>" +
+        "<b>" + esc(a.naziv) + "</b><p>" + esc(a.opis) + "</p>";
+      document.body.appendChild(el);
+      setTimeout(function () {
+        el.classList.add("van");
+        setTimeout(function () { el.remove(); sljedeci(); }, reduce ? 0 : 300);
+      }, 4000);
+    }
+    // nakon učitavanja stranice (i loading screena), ne odmah
+    setTimeout(sljedeci, 1800);
+  })();
 
   /* ---------- ladica s desne strane: profil (#lik/ime), vodič (#dungeon/ime) i "vidi sve" ---------- */
   var LADICA = null;

@@ -20,6 +20,14 @@ window.HORDE = {
   armory: { regija: "eu", realm: "" },
   serverZona: "Europe/Paris",
 
+  // achievementi: novi (koje posjetitelj još nije vidio) iskaču kao tost dolje u sredini, jedan po jedan
+  // { id (jedinstven, ne mijenja se), naziv, opis, datum (GGGG-MM-DD), igraci: tko ga je dobio }
+  achievementi: [
+    { id: "web-online", naziv: "Web online", opis: "Zabranjeno pullanje ima svoju stranicu.", datum: "2026-10-29", igraci: ["Pero", "Niksa", "Karkens", "Žuga", "Dex"] },
+    { id: "ime-guilda", naziv: "Guild ima ime", opis: "Od sad smo Zabranjeno pullanje. Ime je ujedno i pravilo.", datum: "2026-10-29", igraci: ["Pero", "Niksa", "Karkens", "Žuga", "Dex"] },
+    { id: "imena-rezervirana", naziv: "Imena rezervirana", opis: "Saman Saulic, Nikola Roguevic i Arsen Deadic potvrđeni u igri.", datum: "2026-10-29", igraci: ["Niksa", "Žuga", "Dex"] }
+  ],
+
   // level: 0 do 60
   // foto: portret iz assets/likovi/ ili null (tada stoji zamjenski grb klase dok netko ne pošalje screenshot)
   // gold: koliko lik ima (cijeli goldi); profesije i skill su u profesije.json
