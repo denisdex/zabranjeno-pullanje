@@ -62,6 +62,44 @@ window.HORDE = {
     { ime: "Shaper's Terrace",          gdje: "Un'Goro Crater",     od: 58, do: 60, novo: true, odradeno: false }
   ],
 
+  // Patch notes: najnovije prvo. za: klase i rase na koje se odnosi (boja po klasi, rase kao oznaka)
+  izvorNovosti: "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-october-26/2360696",
+  novosti: [
+    { datum: "2026-12-09", vrsta: "Najava", naslov: "Prvi raidovi", stavke: [
+      { tekst: "Otvaraju se Barrow Deeps (10), Hyjal Summit (20) i Onyxia's Lair (40)." }
+    ] },
+    { datum: "2026-11-04", vrsta: "Najava", naslov: "Launch", stavke: [
+      { tekst: "Serveri se otvaraju u 15:00 PST, kod nas u ponoć. Level cap 60, bez letećih mountova." }
+    ] },
+    { datum: "2026-10-27", vrsta: "Hotfix", naslov: "Racijali, završna runda", stavke: [
+      { tekst: "Blood Fury vraćen na 2 min cooldowna (bilo 3 min).", za: ["Orc"] },
+      { tekst: "Berserking traje 15 s (bilo 10 s).", za: ["Troll"] },
+      { tekst: "Touch of the Grave: interni cooldown 15 s (bilo 25 s).", za: ["Undead"] }
+    ] },
+    { datum: "2026-10-26", vrsta: "Beta build", naslov: "Classic loot je natrag", stavke: [
+      { tekst: "Mob koji nije ništa dropao opet se može kliknuti, kao u Classicu." },
+      { tekst: "Savage maknut, vraćen Command (+5% štete Hunter i Warlock petova).", za: ["Orc"] }
+    ] },
+    { datum: "2026-10-16", vrsta: "Beta build", naslov: "Velika runda za klase", stavke: [
+      { tekst: "Battle Shout je sad raid-wide, a Slam ga više ne prekida pushback.", za: ["Warrior"] },
+      { tekst: "Chain Lightning troši oko 35% manje mane na sva četiri ranka.", za: ["Shaman"] },
+      { tekst: "Novi spell Frost Blast, uči se na levelu 24.", za: ["Mage"] },
+      { tekst: "Blessing of Salvation zamijenjen spellom Salvation.", za: ["Paladin"] },
+      { tekst: "Regeneration daje 20% više zdravlja (bilo 10%).", za: ["Troll"] },
+      { tekst: "Horde je u Dalaranu napadnuta na prvi pogled; dungeonu City of Dalaran se i dalje može prići." }
+    ] },
+    { datum: "2026-10-08", vrsta: "Beta build", naslov: "Više XP-a iz dungeona", stavke: [
+      { tekst: "XP od mobova u dungeonima oko 20% veći." },
+      { tekst: "Popravljen bug: niži level u grupi više ne gubi XP zbog višeg. Svatko dobiva po svom levelu." },
+      { tekst: "Rage od primljene štete ispravljen: oko 20–40% štete se vraća kao Rage.", za: ["Warrior"] },
+      { tekst: "Retribution Aura srezana oko 33%, natrag na Vanilla vrijednosti.", za: ["Paladin"] }
+    ] },
+    { datum: "2026-10-01", vrsta: "Beta build", naslov: "Rage i dungeon questovi", stavke: [
+      { tekst: "Kritični udarci daju 75% više Ragea; Berserker Rage se uči na 30 (bilo 32).", za: ["Warrior"] },
+      { tekst: "Dungeon questovi daju 50% manje dodatnog XP-a." }
+    ] }
+  ],
+
   // "Znaj prije 60": činjenice iz Forevera koje štede zlato i vrijeme
   savjeti: [
     { broj: "40", jedinica: "lvl", naslov: "Prvi mount", tekst: "Apprentice Riding 100g + mount 20g, 60% brže. Na Honored s Hordom 10% jeftinije. Orc: Orgrimmar, Troll: Sen'jin Village, Undead: Brill. Paladin mount dobiva kroz class quest." },

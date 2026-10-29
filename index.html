@@ -459,6 +459,53 @@ body.shake main, body.shake .top { animation: shake .55s cubic-bezier(.36, .07, 
 .check-head .big small { font-size: .45em; color: var(--dust); }
 .night .note { margin: 14px 0 0; color: var(--dust); }
 
+/* ---------- patch notes ---------- */
+.news { display: grid; gap: 36px; }
+.news-head { display: grid; gap: 16px; align-content: start; }
+.news-head h2 { margin: 0; font: 800 clamp(2.6rem, 8vw, 5.5rem)/.85 var(--f-display); text-transform: uppercase; }
+.news-head p { margin: 0; color: var(--dust); max-width: 26rem; }
+.news-head a { color: var(--bone); text-decoration-color: var(--ember); text-underline-offset: 4px; }
+.news-head .kicker { margin: 0; }
+@media (min-width: 1000px) {
+  .news { grid-template-columns: minmax(0, 24rem) minmax(0, 1fr); gap: 72px; }
+  .news-head { position: sticky; top: 32px; align-self: start; }
+}
+.log { list-style: none; margin: 0; padding: 0; position: relative; }
+.log::before { content: ""; position: absolute; left: 4.6rem; top: 6px; bottom: 6px; width: 1px; background: var(--line); }
+.log > li { display: grid; grid-template-columns: 4.6rem minmax(0, 1fr); gap: 0 24px; padding-bottom: 40px; }
+.log .dt { text-align: right; padding-right: 18px; position: relative; }
+.log .dt::after {
+  content: ""; position: absolute; right: -5px; top: 10px; width: 9px; height: 9px; transform: rotate(45deg);
+  background: var(--night); border: 1px solid var(--ember);
+}
+.log li.buduce .dt::after { border-color: var(--dust); }
+.log .dt b { display: block; font: 900 2.6rem/.85 var(--f-display); font-variant-numeric: tabular-nums; }
+.log .dt span { color: var(--dust); }
+.log .vr { display: inline-block; padding: 3px 7px 2px; border: 1px solid currentColor; color: var(--ember); margin-bottom: 10px; }
+.log li.buduce .vr { color: var(--dust); }
+.log h3 { margin: 0 0 12px; font: 800 clamp(1.6rem, 4vw, 2.1rem)/.95 var(--f-display); text-transform: uppercase; }
+.log ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.log ul li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 16px; align-items: baseline; padding-bottom: 10px; border-bottom: 1px dashed var(--line); color: var(--bone); }
+.log ul li:last-child { border-bottom: 0; }
+.log .za { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+.log .za span { font: 500 .5625rem/1 var(--f-mono); letter-spacing: .1em; text-transform: uppercase; padding: 4px 6px 3px; color: var(--c, var(--dust)); outline: 1px solid color-mix(in srgb, var(--c, var(--dust)) 45%, transparent); outline-offset: -1px; }
+@media (max-width: 640px) {
+  .log::before { left: 3.4rem; }
+  .log > li { grid-template-columns: 3.4rem minmax(0, 1fr); gap: 0 18px; }
+  .log .dt { padding-right: 14px; }
+  .log .dt b { font-size: 2rem; }
+  .log ul li { grid-template-columns: minmax(0, 1fr); }
+  .log .za { justify-content: flex-start; }
+}
+
+/* ---------- znaj prije 60: traka s drugom podlogom ---------- */
+.sec.band {
+  position: relative; z-index: 1; border-block: 1px solid var(--line);
+  background: repeating-linear-gradient(135deg, rgba(236, 226, 212, .022) 0 1px, transparent 1px 14px), rgba(21, 16, 14, .94);
+}
+.band .tip .num { color: transparent; -webkit-text-stroke: 1.4px var(--bone); font-size: 4.6rem; }
+.band .tip .num small { -webkit-text-stroke: 0; color: var(--ember); }
+.band .tip { border-top-color: rgba(236, 226, 212, .16); }
 /* ---------- znaj prije 60 ---------- */
 .tips { display: grid; grid-template-columns: minmax(0, 1fr); column-gap: 32px; }
 @media (min-width: 640px) { .tips { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
@@ -568,6 +615,18 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
     </div>
   </section>
 
+  <section class="sec" id="novosti">
+    <div class="wrap news">
+      <div class="news-head">
+        <p class="kicker mono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="currentColor" opacity=".25"/><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Glasnik iz Orgrimmara</p>
+        <h2>Patch notes</h2>
+        <p>Što Blizzard mijenja u Foreveru, skraćeno na ono što pogađa naše klase i rase. Najnovije gore.</p>
+        <p class="mono"><a id="izvorNovosti" href="#" target="_blank" rel="noopener">Blizzardove development notes</a></p>
+      </div>
+      <ol class="log" id="log"></ol>
+    </div>
+  </section>
+
   <section class="sec" id="prva-noc">
     <div class="wrap">
       <div class="sec-head">
@@ -586,7 +645,7 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
     </div>
   </section>
 
-  <section class="sec" id="savjeti">
+  <section class="sec band" id="savjeti">
     <div class="wrap">
       <div class="sec-head">
         <p class="kicker mono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="currentColor" opacity=".25"/><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Što stari orkovi znaju</p>
@@ -777,6 +836,23 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
     }).join("");
     // treći stupac (extra) ide ispod teksta
     Array.prototype.forEach.call($("route").querySelectorAll("li > div"), function (d) { d.style.gridColumn = "2"; });
+  })();
+
+  /* ---------- patch notes ---------- */
+  (function () {
+    var MJ = ["sij", "velj", "ožu", "tra", "svi", "lip", "srp", "kol", "ruj", "lis", "stu", "pro"];
+    var danas = Date.now();
+    $("izvorNovosti").href = D.izvorNovosti || "#";
+    $("log").innerHTML = (D.novosti || []).map(function (n) {
+      var d = new Date(n.datum + "T12:00:00");
+      var buduce = d.getTime() > danas;
+      return '<li class="' + (buduce ? "buduce" : "") + '" data-reveal><div class="dt"><b>' + d.getDate() + '</b><span class="mono">' + MJ[d.getMonth()] + " " + d.getFullYear() + "</span></div>" +
+        '<div><span class="vr mono">' + esc(n.vrsta) + "</span><h3>" + esc(n.naslov) + "</h3><ul>" + n.stavke.map(function (st) {
+          return "<li><span>" + esc(st.tekst) + '</span><span class="za">' + (st.za || []).map(function (z) {
+            return "<span" + (BOJE[z] ? ' style="--c:' + BOJE[z] + '"' : "") + ">" + esc(z) + "</span>";
+          }).join("") + "</span></li>";
+        }).join("") + "</ul></div></li>";
+    }).join("");
   })();
 
   /* ---------- znaj prije 60 ---------- */
