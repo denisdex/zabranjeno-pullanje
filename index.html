@@ -1218,13 +1218,13 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
   .pl, .fog { transform: none; }
   .fth b { animation: none; }
 }
-/* ---------- kursor: oklopna rukavica, samo uz miš; vrh kažiprsta je hotspot (7 4) ---------- */
+/* ---------- kursor: oklopna rukavica, samo uz miš; vrh kažiprsta je hotspot (5 5) ---------- */
 @media (hover: hover) and (pointer: fine) {
-  html { cursor: url("assets/kursor/kursor.svg") 7 4, auto; }
-  html:active { cursor: url("assets/kursor/kursor-klik.svg") 7 4, auto; }
-  html :is(a, button, [role="button"], label, summary, select, .card, .crest-btn, .stage, .plate, .prof-bg, .inst li[data-dungeon], .dtl-s, .dk, .pvol) { cursor: url("assets/kursor/kursor-link.svg") 7 4, pointer; }
-  html :is(a, button, [role="button"], label, summary, .card, .crest-btn, .stage, .plate, .prof-bg, .inst li[data-dungeon], .dtl-s, .dk):active { cursor: url("assets/kursor/kursor-klik.svg") 7 4, pointer; }
-  html .hs-b:disabled { cursor: url("assets/kursor/kursor.svg") 7 4, auto; }
+  html { cursor: url("assets/kursor/kursor.svg") 5 5, auto; }
+  html:active { cursor: url("assets/kursor/kursor-klik.svg") 5 5, auto; }
+  html :is(a, button, [role="button"], label, summary, select, .card, .crest-btn, .stage, .plate, .prof-bg, .inst li[data-dungeon], .dtl-s, .dk, .pvol) { cursor: url("assets/kursor/kursor-link.svg") 5 5, pointer; }
+  html :is(a, button, [role="button"], label, summary, .card, .crest-btn, .stage, .plate, .prof-bg, .inst li[data-dungeon], .dtl-s, .dk):active { cursor: url("assets/kursor/kursor-klik.svg") 5 5, pointer; }
+  html .hs-b:disabled { cursor: url("assets/kursor/kursor.svg") 5 5, auto; }
   html :is(input:not([type="checkbox"], [type="radio"], [type="range"], [type="button"], [type="submit"]), textarea, [contenteditable="true"]) { cursor: text; }
 }
 </style>
