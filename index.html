@@ -616,6 +616,16 @@ a.sl:hover b { text-decoration: underline; }
 .goals .ck { width: 18px; height: 18px; border: 1.5px solid var(--dust); position: relative; }
 .goals li.ok .ck { background: var(--ember); border-color: var(--ember); }
 
+/* ---------- svježina podataka i automatske vijesti ---------- */
+.svj { display: block; margin-top: 6px; font-size: .5rem; color: rgba(161, 146, 130, .75); }
+.svj.auto { color: #6fae5a; }
+.svj-n { color: var(--dust); font-size: .5625rem; margin: 0; }
+.log li.vij h3 a { color: var(--bone); text-decoration: none; }
+.log li.vij h3 a:hover { color: var(--ember); text-decoration: underline; text-underline-offset: 4px; }
+.vij-tg { justify-content: flex-start; margin-bottom: 8px; }
+.log .tg.izv { --c: var(--ember); }
+.vij-s { margin: 0; color: var(--dust); font-size: .875rem; max-width: 46rem; }
+
 /* ---------- "vidi sve" u ladici ---------- */
 .lad { padding: clamp(20px, 3.4vw, 40px); display: grid; gap: 24px; }
 .lad-head { padding-right: 60px; }
@@ -957,9 +967,9 @@ a.sl:hover b { text-decoration: underline; }
 .p-name span { display: block; }
 .p-who { margin: 0; color: var(--dust); display: flex; align-items: baseline; gap: 10px; }
 .p-who b { color: var(--bone); font-weight: 600; font-size: 1.0625rem; }
-.p-meta { margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; border-block: 1px solid var(--line); padding-block: 12px; }
+.p-meta { margin: 0; display: grid; grid-template-columns: repeat(3, auto); justify-content: space-between; gap: 10px; border-block: 1px solid var(--line); padding-block: 12px; }
 .p-meta dt { color: var(--dust); margin-bottom: 4px; }
-.p-meta dd { margin: 0; font-weight: 500; font-size: .875rem; line-height: 1.25; overflow-wrap: anywhere; }
+.p-meta dd { margin: 0; font-weight: 500; font-size: .8125rem; line-height: 1.25; overflow-wrap: normal; word-break: keep-all; }
 .lvl-head { display: flex; justify-content: space-between; align-items: baseline; color: var(--dust); margin-bottom: 8px; }
 .lvl-head .n { font: 800 1.75rem/1 var(--f-display); color: var(--bone); font-variant-numeric: tabular-nums; }
 .lvl-head .n small { font-size: .55em; color: var(--dust); font-weight: 600; }
@@ -1374,7 +1384,8 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
       <div class="news-head">
         <p class="kicker mono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="currentColor" opacity=".25"/><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Glasnik iz Orgrimmara</p>
         <h2>Patch notes</h2>
-        <p>Blizzardove promjene u Foreveru, prevedene. Najnovije gore, provjerava se svaki dan.</p>
+        <p>Blizzardove promjene i vijesti o Foreveru: prevedeni patch notes i najnovije s Blizzarda i Wowheada. Najnovije gore.</p>
+        <p class="mono svj-n" id="novostiSvj"></p>
         <p class="mono"><a id="izvorNovosti" href="#" target="_blank" rel="noopener">Blizzardove development notes</a></p>
       </div>
       <ol class="log" id="log"></ol>
@@ -1415,7 +1426,42 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
 <script>
 (function () {
   "use strict";
+  // automatski podaci: GitHub Actions svaki sat puni data/*.json; bez njih stranica radi iz data.js
+  function dohvatiJson(url) {
+    return fetch(url, { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
+  }
+  var rok = new Promise(function (r) { setTimeout(function () { r([null, null]); }, 2500); });
+  Promise.race([Promise.all([dohvatiJson("data/likovi.json"), dohvatiJson("data/vijesti.json")]), rok]).then(function (res) { pokreni(res[0], res[1]); });
+
+  function spojiAutomatsko(D, ARM, VIJ) {
+    D.vijestiAuto = VIJ && VIJ.stavke ? VIJ.stavke : [];
+    D.vijestiAzurirano = VIJ ? VIJ.azurirano : null;
+    if (!ARM || !ARM.likovi) return;
+    D.igraci.forEach(function (p) {
+      var a = ARM.likovi[p.lik];
+      if (!a) return;
+      if (typeof a.level === "number") p.level = a.level;
+      p.profil = p.profil || {};
+      if (a.talenti) { p.profil.talenti = a.talenti; p.profil.plan = false; }
+      if (a.specka) p.profil.specka = a.specka;
+      if (a.oprema && a.oprema.length) p.profil.oprema = a.oprema;
+      if (a.profesije) p.armoryProfesije = a.profesije;
+      p.azuriranoAuto = a.azurirano || ARM.azurirano;
+    });
+  }
+  // "prije 3 h" za automatske podatke, datum za ručne
+  function prije(iso) {
+    var t = Date.parse(iso);
+    if (!t) return "";
+    var h = (Date.now() - t) / 36e5;
+    if (h < 1) return "prije manje od sat";
+    if (h < 48) return "prije " + Math.round(h) + " h";
+    return "prije " + Math.round(h / 24) + " dana";
+  }
+
+  function pokreni(ARM, VIJ) {
   var D = window.HORDE;
+  spojiAutomatsko(D, ARM, VIJ);
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var $ = function (id) { return document.getElementById(id); };
 
@@ -1486,12 +1532,17 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
     (raw.accounts || []).forEach(function (a) { acc[a.id] = a; });
     var likovi = (raw.characters || []).map(function (c) {
       var r = c.name ? poLiku[c.name] : null;
+      var ap = (r && r.armoryProfesije) || [];
+      function skillIz(x) {
+        var a = ap.filter(function (y) { return y.name === x.name; })[0];
+        return Math.max(0, Math.min(PRAGOVI.max, +(a ? a.skill : x.skill) || 0));
+      }
       return {
         id: c.id, ime: c.name || "", account: c.account, vlasnik: (acc[c.account] || {}).owner || c.account,
         klasa: c["class"], rasa: c.race, uloga: c.role, level: r ? lvlOf(r) : Math.max(0, +c.level || 0),
         roster: r, napomena: c.napomena || "",
-        primarne: (c.professions || []).map(function (x) { return { ime: x.name, skill: Math.max(0, Math.min(PRAGOVI.max, +x.skill || 0)), faza: x.phase || "stalno" }; }),
-        sekundarne: (c.secondary || []).map(function (x) { return { ime: x.name, skill: Math.max(0, Math.min(PRAGOVI.max, +x.skill || 0)) }; })
+        primarne: (c.professions || []).map(function (x) { return { ime: x.name, skill: skillIz(x), faza: x.phase || "stalno" }; }),
+        sekundarne: (c.secondary || []).map(function (x) { return { ime: x.name, skill: skillIz(x) }; })
       };
     });
     return { likovi: likovi, povijest: (raw.history || []).slice().sort(function (a, b) { return a.date < b.date ? -1 : 1; }), tokovi: raw.flows || [] };
@@ -1776,6 +1827,11 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
     if (sad.length) return sad;
     return z.filter(function (x) { return !x.gotovo && x.od > L; }).slice(0, 2);
   }
+  function svjezina(p) {
+    if (p.azuriranoAuto) return '<span class="svj mono auto">armory · ' + prije(p.azuriranoAuto) + "</span>";
+    var d = new Date((D.azurirano || "") + "T12:00:00");
+    return '<span class="svj mono">ručno · ' + (isNaN(d) ? "" : d.getDate() + ". " + (d.getMonth() + 1) + ".") + "</span>";
+  }
   function gaugeHtml(p) {
     var lvl = lvlOf(p);
     return '<div class="gauge" role="meter" aria-valuemin="0" aria-valuemax="60" aria-valuenow="' + lvl + '" aria-label="Level ' + esc(p.lik) + '"><i style="width:' + (lvl / 60 * 100).toFixed(2) + '%"></i></div>';
@@ -1789,7 +1845,7 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
         '<p class="p-who"><span class="mono">Igrač</span><b>' + esc(p.igrac) + "</b></p>" +
         (zadaciSad(p).length ? '<span class="p-zad">' + zadatakTekst(zadaciSad(p).length) + "</span>" : "") +
         '<dl class="p-meta"><div><dt class="mono">Rasa</dt><dd>' + esc(p.rasa) + '</dd></div><div><dt class="mono">Klasa</dt><dd>' + esc(p.klasa) + '</dd></div><div><dt class="mono">Uloga</dt><dd>' + esc(r) + "</dd></div></dl>" +
-        '<div class="p-lvl"><div class="lvl-head"><span class="mono">Level</span><span class="n">' + lvl + '<small>/60</small></span></div>' + gaugeHtml(p) + "</div>" +
+        '<div class="p-lvl"><div class="lvl-head"><span class="mono">Level</span><span class="n">' + lvl + '<small>/60</small></span></div>' + gaugeHtml(p) + svjezina(p) + "</div>" +
         '<div class="p-prof" data-prof-lik="' + slug(p.lik) + '"><span class="lab mono">Profesije</span>' + profHtml(p) + "</div>" +
         goldHtml(p) +
         '<a class="p-more mono" href="#lik/' + slug(p.lik) + '">Otvori profil</a>' +
@@ -1880,7 +1936,7 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
           })() +
           '<dl class="prof-meta"><div><dt class="mono">Igrač</dt><dd>' + esc(p.igrac) + '</dd></div><div><dt class="mono">Rasa</dt><dd>' + esc(p.rasa) +
           '</dd></div><div><dt class="mono">Klasa</dt><dd style="color:' + BOJE[p.klasa] + '">' + esc(p.klasa) + '</dd></div><div><dt class="mono">Uloga</dt><dd>' + esc(r) + "</dd></div></dl>" +
-          '<div class="prof-row"><div class="prof-lvl"><h3 class="lab mono">Level</h3><span class="n">' + lvl + "<small>/60</small></span>" + gaugeHtml(p) + goldHtml(p) + "</div>" +
+          '<div class="prof-row"><div class="prof-lvl"><h3 class="lab mono">Level</h3><span class="n">' + lvl + "<small>/60</small></span>" + gaugeHtml(p) + svjezina(p) + goldHtml(p) + "</div>" +
           '<div class="p-prof"><h3 class="lab mono">Profesije</h3>' + profHtml(p, true) + "</div></div>" +
           "<div><h3 class=\"lab mono\">Trenutni build</h3>" +
             '<div class="build-head"><b>' + esc(pf.specka || "još nema") + "</b><span>" + t.join("/") + "</span>" + (pf.plan ? "<em>plan</em>" : "") + "</div>" +
@@ -2066,9 +2122,18 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
   (function () {
     var MJ = ["sij", "velj", "ožu", "tra", "svi", "lip", "srp", "kol", "ruj", "lis", "stu", "pro"];
     $("izvorNovosti").href = D.izvorNovosti || "#";
-    var lista = (D.novosti || []).slice().sort(function (a, b) { return a.datum < b.datum ? 1 : -1; });
+    var auto = (D.vijestiAuto || []).map(function (v) { return { datum: v.datum, auto: v }; });
+    var lista = (D.novosti || []).concat(auto).slice().sort(function (a, b) { return a.datum < b.datum ? 1 : -1; });
+    if (D.vijestiAzurirano) $("novostiSvj").textContent = "Vijesti s Blizzarda i Wowheada se osvježavaju svaki sat, zadnja promjena " + prije(D.vijestiAzurirano) + ".";
     $("log").innerHTML = lista.map(function (n) {
-      var d = new Date(n.datum + "T12:00:00");
+      var d = new Date(n.datum.length > 10 ? n.datum : n.datum + "T12:00:00");
+      if (n.auto) {
+        var v = n.auto;
+        return '<li data-reveal class="vij"><div class="dt"><b>' + d.getDate() + '</b><span class="mono">' + MJ[d.getMonth()] + " " + d.getFullYear() + "</span></div>" +
+          '<div><span class="tgs vij-tg"><span class="tg izv">' + esc(v.izvor) + "</span>" + (v.oznake || []).map(function (o) { return '<span class="tg tema">' + esc(o) + "</span>"; }).join("") + "</span>" +
+          '<h3><a href="' + esc(v.link) + '" target="_blank" rel="noopener" lang="en">' + esc(v.naslov) + "</a></h3>" +
+          (v.sazetak ? '<p class="vij-s" lang="en">' + esc(v.sazetak) + "</p>" : "") + "</div></li>";
+      }
       return '<li data-reveal><div class="dt"><b>' + d.getDate() + '</b><span class="mono">' + MJ[d.getMonth()] + " " + d.getFullYear() + "</span></div>" +
         "<div><h3>" + esc(n.naslov || "") + "</h3><ul>" + n.stavke.map(function (st) {
           // stariji zapis "Warrior: tekst" pretvara se u oznaku
@@ -2885,6 +2950,7 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
       })(t0);
     }
   })();
+  }
 })();
 </script>
 <script>

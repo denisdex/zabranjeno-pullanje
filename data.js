@@ -16,6 +16,8 @@ window.HORDE = {
   },
 
   discord: "https://discord.gg/jMuagAt9h",
+  // armory: odakle skripte/armory.py vuče level, talente i opremu (realm upisati nakon launcha, vidi skripte/README.md)
+  armory: { regija: "eu", realm: "" },
   serverZona: "Europe/Paris",
 
   // level: 0 do 60
