@@ -29,7 +29,7 @@ window.HORDE = {
       "Dex pulla. Ti ne.",
       "vidiš vepra? Ne diraj vepra.",
       "trener je na parnim levelima. Gold čuvaj za spellove.",
-      "Janica sheepa, Žuga sapa, nitko ne trči naprijed.",
+      "Karkens sheepa, Žuga sapa, nitko ne trči naprijed.",
       "rested XP se puni u gradu i u kampu. Odjavi se tamo."
     ]
   },
@@ -39,7 +39,7 @@ window.HORDE = {
   achievementi: [
     { id: "web-online", naziv: "Web online", opis: "Zabranjeno pullanje ima svoju stranicu.", datum: "2026-10-29", igraci: ["Pero", "Niksa", "Karkens", "Žuga", "Dex"] },
     { id: "ime-guilda", naziv: "Guild ima ime", opis: "Od sad smo Zabranjeno pullanje. Ime je ujedno i pravilo.", datum: "2026-10-29", igraci: ["Pero", "Niksa", "Karkens", "Žuga", "Dex"] },
-    { id: "imena-rezervirana", naziv: "Imena rezervirana", opis: "Saman Saulic, Nikola Roguevic i Arsen Deadic potvrđeni u igri.", datum: "2026-10-29", igraci: ["Niksa", "Žuga", "Dex"] }
+    { id: "imena-rezervirana", naziv: "Imena rezervirana", opis: "Niksa, Žuga i Dex imaju likove potvrđene u igri: Saman Saulic, Nikola Roguevic, Arsen Deadic.", datum: "2026-10-29", igraci: ["Niksa", "Žuga", "Dex"] }
   ],
 
   // level: 0 do 60
@@ -50,6 +50,7 @@ window.HORDE = {
   //   talenti: bodovi u tri stabla redom kako ih igra slaže
   //   oprema i ciljevi: { slot, ime, kvaliteta: poor|common|uncommon|rare|epic|legendary, ikona (Wowhead ikona, npr. "inv_axe_09"), wowhead (ID itema), izvor }
   // oci: položaji očiju na fotki u postocima [[x, y], [x, y]] za sjaj (samo Undead), inače izostavi
+  // imena: gdje se govori o ljudima piše igrac (Pero, Niksa, Karkens, Žuga, Dex); lik samo kao naslov kartice/profila i u kontekstu igre
   igraci: [
     { igrac: "Pero",    lik: "Melee Kitic",      klasa: "Warrior", rasa: "Orc",    uloga: "Melee DPS",  level: 0, foto: null,
       gold: 0,
@@ -194,10 +195,10 @@ window.HORDE = {
         bossovi: [
           { ime: "Oggleflint", tekst: "Trogg vođa na početku, lagan. Dex pulla, ostali tek kad gleda u njega." },
           { ime: "Taragaman the Hungerer", tekst: "Fire Nova i Uppercut. Dex ga okrene od grupe, Niksa drži heal, melee iza leđa." },
-          { ime: "Jergosh the Invoker", tekst: "Curse of Weakness i Immolate. Janica skida curse (Remove Lesser Curse), Pero i Žuga ga prekidaju." },
+          { ime: "Jergosh the Invoker", tekst: "Curse of Weakness i Immolate. Karkens skida curse (Remove Lesser Curse), Pero i Žuga ga prekidaju." },
           { ime: "Bazzalan", tekst: "Poison i Sinister Strike. Niksa skida poison (Cure Poison)." }
         ],
-        uloge: "Janica sheepa kultiste, Žuga sapa humanoide prije pulla. Troggovi dolaze u gomilama: Dex skuplja, ostali čekaju dva-tri udarca.",
+        uloge: "Karkens sheepa kultiste, Žuga sapa humanoide prije pulla. Troggovi dolaze u gomilama: Dex skuplja, ostali čekaju dva-tri udarca.",
         loot: ["Točan loot po bossu: Wowhead vodič ispod."],
         greske: ["Ne trčati naprijed u lavu: troggovi se lančano pullaju.", "Zabranjeno pullanje vrijedi od prvog koraka."]
       } },
@@ -217,7 +218,7 @@ window.HORDE = {
           { ime: "Verdan the Everliving", tekst: "Velik, Grasping Vines udara cijelu grupu. Niksa healom prati." },
           { ime: "Mutanus the Devourer", tekst: "Nakon escorta Disciple of Naralex. Naralexov Terrify i Sleep: Dex drži aggro, ne razbježati se." }
         ],
-        uloge: "Druidi Fanga lijeće i spavaju grupu: na svakom pullu tko god ima interrupt čeka njihov heal. Janica sheepa jednog druida.",
+        uloge: "Druidi Fanga lijeće i spavaju grupu: na svakom pullu tko god ima interrupt čeka njihov heal. Karkens sheepa jednog druida.",
         loot: ["Mage: Crescent Staff (quest Leaders of the Fang)", "Rogue: Wingblade (quest Leaders of the Fang)", "Točan loot po bossu: Wowhead vodič ispod."],
         greske: ["Ne preskakati escort Naralexa, inače nema Mutanusa.", "Ne ići bez puta: špilja se lako izgubi, prati Dexa."]
       } },
@@ -235,7 +236,7 @@ window.HORDE = {
           { ime: "Wolf Master Nandos", tekst: "Doziva vukove. AoE od Janice dok Dex drži vukove." },
           { ime: "Archmage Arugal", tekst: "Teleportira se po sobi, Shadow Bolt i Arugal's Curse (lik postane worgen). Svi skupa, nitko ne bježi." }
         ],
-        uloge: "Worgeni u gomilama: Janica Frost Nova pa Blizzard, Dex Consecration. Sapati se mogu samo humanoidi.",
+        uloge: "Worgeni u gomilama: Karkens Frost Nova pa Blizzard, Dex Consecration. Sapati se mogu samo humanoidi.",
         loot: ["Rogue i Warrior: Shadowfang (rijedak drop s trasha)", "Mage: Robes of Arugal", "Točan loot po bossu: Wowhead vodič ispod."],
         greske: ["Ne pullati dva worgen paka odjednom.", "Ne otvarati vrata Fenrusove sobe prije nego je grupa puna mane."]
       } },
@@ -245,7 +246,7 @@ window.HORDE = {
         questovi: ["Allegiance to the Old Gods (Shrine of Aku'mai, Ashenvale)", "Baron Aquanis (Strange Water Globe s trasha)", "Amongst the Ruins (Zoram'gar)"],
         bossovi: [
           { ime: "Ghamoo-ra", tekst: "Kornjača, lagana." },
-          { ime: "Lady Sarevess", tekst: "Naga s vojnicima: Janica sheepa jednog, Dex drži nju." },
+          { ime: "Lady Sarevess", tekst: "Naga s vojnicima: Karkens sheepa jednog, Dex drži nju." },
           { ime: "Gelihast", tekst: "Murloci, Net. Lagan." },
           { ime: "Lorgus Jett", tekst: "Shaman s totemima: prvo totemi, pa on." },
           { ime: "Baron Aquanis", tekst: "Horde-only, pozvati ga kuglom s trasha. Frost Nova i Frostbolt." },
@@ -253,7 +254,7 @@ window.HORDE = {
           { ime: "Old Serra'kis", tekst: "U vodi. Ne odlaziti daleko od grupe." },
           { ime: "Aku'mai", tekst: "Frenzy i Poison Cloud: Dex ga drži na mjestu, ostali bježe iz oblaka, Niksa skida poison." }
         ],
-        uloge: "Pred Aku'maijem upaliti četiri plamena pa dolaze valovi: Dex pokupi, Janica i Niksa AoE, svi skupa.",
+        uloge: "Pred Aku'maijem upaliti četiri plamena pa dolaze valovi: Dex pokupi, Karkens i Niksa AoE, svi skupa.",
         loot: ["Točan loot po bossu: Wowhead vodič ispod."],
         greske: ["Ne plivati sam po jezeru, sve je puno moba.", "Plameni na kraju pale valove: tek kad je grupa spremna."]
       } },
@@ -266,12 +267,12 @@ window.HORDE = {
         bossovi: [
           { ime: "Roogug", tekst: "Geomancer, totemi i Lightning. Prvo totemi." },
           { ime: "Aggem Thorncurse", tekst: "Doziva Boarove, lijeći. Prekidati heal." },
-          { ime: "Death Speaker Jargba", tekst: "Mind Control na jednog iz grupe: Janica sheepa kontroliranog ako treba." },
+          { ime: "Death Speaker Jargba", tekst: "Mind Control na jednog iz grupe: Karkens sheepa kontroliranog ako treba." },
           { ime: "Overlord Ramtusk", tekst: "Fizički jak, Dex ga drži." },
           { ime: "Agathelos the Raging", tekst: "Bijesni vepar, Rampage. Kad podivlja, Niksa jače heala." },
           { ime: "Charlga Razorflank", tekst: "Purity, heal i Chain Bolt. Prvo adds, pa ona; prekidati heal." }
         ],
-        uloge: "Quilboarovi su humanoidi: Žuga sapa, Janica sheepa, pullamo po jednu grupu. Vepar je ono što se ovdje NE pulla bez Dexa.",
+        uloge: "Quilboarovi su humanoidi: Žuga sapa, Karkens sheepa, pullamo po jednu grupu. Vepar je ono što se ovdje NE pulla bez Dexa.",
         loot: ["Točan loot po bossu: Wowhead vodič ispod."],
         greske: ["Vepar, pa još jedan vepar: tu je ime guilda nastalo.", "Patrolirajući quilboarovi se lančaju, čekati da prođu."]
       } },
@@ -283,7 +284,7 @@ window.HORDE = {
           { ime: "Graveyard: Interrogator Vishas i Bloodmage Thalnos", tekst: "Lagani, dobro za zagrijavanje." },
           { ime: "Library: Houndmaster Loksey", tekst: "Psi u čoporu, Dex skupi sve." },
           { ime: "Library: Arcanist Doan", tekst: "Na 50% Arcane Bubble pa Detonation: svi bježe od njega dok traje." },
-          { ime: "Armory: Herod", tekst: "Whirlwind: kad viče, melee i Janica bježe, Dex ga drži; poslije njega val trainera kroz vrata." },
+          { ime: "Armory: Herod", tekst: "Whirlwind: kad viče, melee i Karkens bježe, Dex ga drži; poslije njega val trainera kroz vrata." },
           { ime: "Cathedral: High Inquisitor Fairbanks", tekst: "Skriven iza vrata, opcionalan." },
           { ime: "Cathedral: Scarlet Commander Mograine", tekst: "Kad padne, Whitemane ga oživi: svi na Whitemane, Žuga kick, Pero Pummel." }
         ],
@@ -320,7 +321,7 @@ window.HORDE = {
           { ime: "Ancient Stone Keeper", tekst: "Sand Storms po sobi, izbjegavati." },
           { ime: "Galgann Firehammer", tekst: "Fire Nova i Amplify Flames. Prekidati." },
           { ime: "Grimlok", tekst: "Troggovi; Lightning Bolt i Shrink." },
-          { ime: "Archaedas", tekst: "Budi Earthen Guardiane i Wardene: Dex ih skuplja, Janica i Pero AoE, Niksa heala. Archaedas je spor, prvo adds." }
+          { ime: "Archaedas", tekst: "Budi Earthen Guardiane i Wardene: Dex ih skuplja, Karkens i Pero AoE, Niksa heala. Archaedas je spor, prvo adds." }
         ],
         uloge: "Dugačak dungeon: dogovoriti se idemo li cijeli ili samo do Archaedasa.",
         loot: ["Točan loot po bossu: Wowhead vodič ispod."],
@@ -332,10 +333,10 @@ window.HORDE = {
         questovi: ["Divino-matic Rod", "Troll Temper", "Gahz'rilla (Mallet of Zul'Farrak, posebni quest)", "Tiara of the Deep", "Scarab Shells"],
         bossovi: [
           { ime: "Antu'sul", tekst: "Basilisci i healing ward, ubijati ward." },
-          { ime: "Theka the Martyr", tekst: "Postaje imun na fizičku štetu: tad Janica i Niksa." },
+          { ime: "Theka the Martyr", tekst: "Postaje imun na fizičku štetu: tad Karkens i Niksa." },
           { ime: "Witch Doctor Zum'rah", tekst: "Zombiji iz grobova, Shadow Bolt. Prekidati, prvo zombiji." },
           { ime: "Nekrum i Shadowpriest Sezz'ziz", tekst: "Kraj piramide: Sezz'ziz lijeći, prekidati." },
-          { ime: "Event na piramidi (Sergeant Bly)", tekst: "Valovi trolova na stepenicama: svi na vrhu, Dex Consecration, Janica Blizzard, Niksa heala. Nikome ne trčati dolje." },
+          { ime: "Event na piramidi (Sergeant Bly)", tekst: "Valovi trolova na stepenicama: svi na vrhu, Dex Consecration, Karkens Blizzard, Niksa heala. Nikome ne trčati dolje." },
           { ime: "Hydromancer Velratha", tekst: "Lagan." },
           { ime: "Gahz'rilla", tekst: "Na gong s Mallet of Zul'Farrak. Freeze Solid i Gahz'rilla Slam." },
           { ime: "Chief Ukorz Sandscalp i Ruuzlu", tekst: "Dva bossa zajedno: Ruuzlu prvo ili ga Dex drži odvojeno." }
@@ -393,7 +394,7 @@ window.HORDE = {
           { ime: "Golem Lord Argelmach", tekst: "Golemi okolo, prvo njih." },
           { ime: "Grim Guzzler (Hurley, Plugger)", tekst: "Krčma: ne razbijati bačve ako nećete tučnjavu." },
           { ime: "Ambassador Flamelash", tekst: "Gonzo vatre iz rune: ubijati elementale." },
-          { ime: "Emperor Dagran Thaurissan", tekst: "Zadnji boss. Princeza Moira ga lijeći: interrupt na nju ili je Janica sheepa." }
+          { ime: "Emperor Dagran Thaurissan", tekst: "Zadnji boss. Princeza Moira ga lijeći: interrupt na nju ili je Karkens sheepa." }
         ],
         uloge: "Velik dungeon, dijeli se na više večeri. Hand of Justice i dosta pre-raid BiS-a pada ovdje.",
         loot: ["Svi melee: Hand of Justice", "Warrior, Paladin, Shaman: Savage Gladiator Chain (Ring of Law)", "Točan loot po bossu: Wowhead vodič ispod."],
@@ -405,7 +406,7 @@ window.HORDE = {
         questovi: ["Seal of Ascension (ključ za UBRS)", "Bijou's Belongings", "Warlord's Command", "The Matron Protectorate"],
         bossovi: [
           { ime: "Highlord Omokk", tekst: "Ogar, knockback. Ostali ogri prvo." },
-          { ime: "Shadow Hunter Vosh'gajin", tekst: "Hex i curse: Janica skida curse." },
+          { ime: "Shadow Hunter Vosh'gajin", tekst: "Hex i curse: Karkens skida curse." },
           { ime: "War Master Voone", tekst: "Baca sjekire, raspršeno." },
           { ime: "Mother Smolderweb", tekst: "Pauci, poison: Niksa." },
           { ime: "Urok Doomhowl", tekst: "Event sa zastavom, valovi ogra." },
@@ -457,7 +458,7 @@ window.HORDE = {
           { ime: "Live: The Unforgiven", tekst: "Duhovi okolo, Frost Nova." },
           { ime: "Live: Timmy the Cruel", tekst: "Pojavi se kad se očisti trg." },
           { ime: "Live: Cannon Master Willey", tekst: "Puške, raspršeno." },
-          { ime: "Live: Archivist Galford i Balnazzar", tekst: "Balnazzar mind control: Janica sheep kontroliranog." },
+          { ime: "Live: Archivist Galford i Balnazzar", tekst: "Balnazzar mind control: Karkens sheep kontroliranog." },
           { ime: "Undead: Baroness Anastari, Nerub'enkan, Maleki, Ramstein", tekst: "Ziguratovi pa Ramstein: veliki odvratnik, Dex drži." },
           { ime: "Undead: Baron Rivendare", tekst: "Death Pact i Raise Dead: ubijati skelete, Niksa heala. Baron run ima 45-minutni timer." }
         ],
