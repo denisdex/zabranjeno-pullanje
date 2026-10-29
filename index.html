@@ -1538,6 +1538,17 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
 .sp-udi:hover, .sp-udi:focus-visible { outline: none; background: linear-gradient(180deg, #ffd27a, #ff9a5c); }
 @keyframes udiPuls { 50% { box-shadow: 0 0 0 1px #3a1a08, 0 0 70px rgba(255, 122, 46, .75); } }
 .sp-ulaz .mono { margin: 0; color: var(--dust); font-size: .625rem; }
+/* dva izbora: web s introm ili cinematic Zaprešić → Azeroth */
+.sp-izbor { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.sp-izbor > * { display: grid; gap: 8px; justify-items: center; width: min(290px, 86vw); padding: 18px 22px; }
+.sp-izbor small { font: 400 .625rem/1.5 var(--f-mono); letter-spacing: .12em; text-transform: none; }
+.sp-udi small { color: #4a2410; }
+.sp-cin {
+  cursor: pointer; text-decoration: none; color: var(--bone); background: rgba(12, 9, 8, .6); border: 1px solid rgba(255, 122, 46, .45);
+  font: 900 1.7rem/1 var(--f-display); letter-spacing: .04em; text-transform: uppercase; transition: border-color .2s, background .2s;
+}
+.sp-cin small { color: var(--dust); }
+.sp-cin:hover, .sp-cin:focus-visible { outline: none; border-color: var(--ember); background: rgba(255, 122, 46, .1); }
 /* mobitel: portret gore, tekst ispod, rezovi ulaze odozgo i odozdo */
 @media (max-width: 639px) {
   .sp-ig, .sp-ig.desno { grid-template-columns: minmax(0, 1fr); align-content: center; gap: 16px; padding: 0 20px; }
@@ -1557,6 +1568,8 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
   .sp-fora::before, .sp-ig.desno .sp-fora::before { margin-inline: auto; }
 }
 /* dok traje splash, hero logo (isti 3D objekt) smije iznad zavjese */
+/* veliki natpisi i montaža vire preko ruba; bez ovoga se mobitel odzumira na cijeli intro */
+html.sp-on, html.sp-on body { overflow: hidden; }
 html.sp-on main, html.sp-on .hero-grid { z-index: auto; }
 html.sp-on .hero { overflow: visible; }
 html.sp-on .stage { z-index: 201; opacity: 0; }
@@ -1631,7 +1644,8 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
 /* ---------- intro (splash) ----------
    Svaki dolazak na web (i refresh): puni cinematic ~34 s (žeravica, grb, natpis, 3D logo, montaža Forever kadrova, roster reveal ekipe, JOŠ N DANA, rascjep).
    Link s hashom: 0,6 s. Reduced-motion: 0,4 s fade. Gumb "▶ Intro" u izborniku ga pušta ponovno.
-   Prije automatskog punog introa ulaz "▶ Uđi": klik otključa glazbu (preglednik traži gestu) i tek onda kreće intro, s glazbom.
+   Prije automatskog punog introa ulaz s dva izbora: "▶ Uđi na web" otključa glazbu (preglednik traži gestu) i pusti intro, s glazbom;
+   "▶ Cinematic" vodi na zapresic.html?odmah (bez njihovog ulaza). Povratak odande (./?web) ide bez ulaza, s kratkim introm.
    Preskače se gumbom Preskoči, Esc, Space, klikom ili scrollom.
    ?sp=4.2 zaustavi intro u toj sekundi (za screenshotove). */
 (function () {
@@ -1644,8 +1658,14 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
   function nacin() {
     if (dbg) return "puni";
     if (reduce) return "fade";
-    if (location.hash.length > 1) return "hash";
+    if (location.hash.length > 1 || izCinematica()) return "hash";
     return "puni";
+  }
+  // došao s cinematica ("Na web →" vodi na ./?web); ?web se makne iz adrese pa refresh opet pušta puni intro
+  function izCinematica() {
+    if (!/[?&]web\b/.test(location.search)) return false;
+    try { history.replaceState(null, "", location.pathname + location.hash); } catch (e) {}
+    return true;
   }
   // gumb "▶ Intro" u izborniku
   document.addEventListener("click", function (e) {
@@ -1748,7 +1768,10 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       zar.a = 0;
       ulazEl = el("div", "sp-ulaz");
       ulazEl.removeAttribute("aria-hidden");
-      ulazEl.innerHTML = '<img src="assets/logo-zp.svg" alt=""><button type="button" class="sp-udi">▶ Uđi</button><p class="mono">Uz glazbu iz Orgrimmara · Esc preskače intro</p>';
+      ulazEl.innerHTML = '<img src="assets/logo-zp.svg" alt=""><div class="sp-izbor">' +
+        '<button type="button" class="sp-udi">▶ Uđi na web<small>Intro s ekipom · 34 s</small></button>' +
+        '<a class="sp-cin" href="zapresic.html?odmah">▶ Cinematic<small>Zaprešić → Azeroth · 25 s</small></a></div>' +
+        '<p class="mono">Uz glazbu iz Orgrimmara · Esc ulazi bez introa</p>';
       svi.push(ulazEl);
     } else if (mod === "puni" && window.zpGlazba) window.zpGlazba.intro(true);
     function kreni() {
@@ -1785,14 +1808,22 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       setTimeout(kraj, 210);
     }
     function ulaz(e) {
-      // dok čeka ulaz: klik, Enter ili Space kreće s glazbom; Esc, Preskoči i scroll preskaču
+      // dok čeka ulaz: "Uđi na web", Enter ili Space kreće s glazbom; Esc, Preskoči i scroll preskaču;
+      // "Cinematic" je obična poveznica, klik u prazno ne radi ništa
       if (ceka) {
+        var naCin = e.target.closest && e.target.closest(".sp-cin");
         if (e.type === "keydown") {
           if (e.key === "Escape") { e.preventDefault(); preskoci(); }
-          else if (e.key === "Enter" || e.key === " " || e.key === "Spacebar") { e.preventDefault(); kreni(); }
+          else if (!naCin && (e.key === "Enter" || e.key === " " || e.key === "Spacebar")) { e.preventDefault(); kreni(); }
           return;
         }
-        if (e.type === "pointerdown") return skip && skip.contains(e.target) ? preskoci() : kreni();
+        if (e.type === "pointerdown") {
+          if (skip && skip.contains(e.target)) return preskoci();
+          if (naCin) mirujeDo = performance.now() + 600;
+          else if (e.target.closest && e.target.closest(".sp-udi")) kreni();
+          return;
+        }
+        if (performance.now() < mirujeDo) return;
         return preskoci();
       }
       // pomak prsta odmah nakon dodira na "Uđi" nije scroll
@@ -2016,7 +2047,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       &lt;Zabranjeno pullanje&gt;
     </span>
     <nav class="menu" id="menu" aria-label="Sekcije">
-      <a href="#odbrojavanje">Countdown</a><a href="#ekipa">Ekipa</a><a href="#novosti">News &amp; Updates</a><a href="#upute">Upute</a><a href="#roadmap">Roadmap</a><a href="#dungeoni">Dungeoni</a><a href="#ekonomija">Ekonomija</a><a href="#profesije">Profesije</a><a href="#savjeti">Savjeti</a><a href="#addoni">Addoni</a><a href="#macroi">Macroi</a><button type="button" class="intro-btn" id="introBtn" aria-label="Pusti intro">▶ Intro</button>
+      <a href="#odbrojavanje">Countdown</a><a href="#ekipa">Ekipa</a><a href="#novosti">News &amp; Updates</a><a href="#upute">Upute</a><a href="#roadmap">Roadmap</a><a href="#dungeoni">Dungeoni</a><a href="#ekonomija">Ekonomija</a><a href="#profesije">Profesije</a><a href="#savjeti">Savjeti</a><a href="#addoni">Addoni</a><a href="#macroi">Macroi</a><button type="button" class="intro-btn" id="introBtn" aria-label="Pusti intro">▶ Intro</button><a class="intro-btn" href="zapresic.html?odmah" aria-label="Cinematic Zaprešić → Azeroth">▶ Cinematic</a>
     </nav>
   </div>
 </header>
@@ -3703,7 +3734,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
   })();
   /* ---------- meni: glatki scroll i aktivna stavka ---------- */
   (function () {
-    var veze = Array.prototype.slice.call(document.querySelectorAll("#menu a"));
+    var veze = Array.prototype.slice.call(document.querySelectorAll('#menu a[href^="#"]'));
     veze.forEach(function (a) {
       a.addEventListener("click", function (e) {
         var cilj = document.querySelector(a.getAttribute("href"));
