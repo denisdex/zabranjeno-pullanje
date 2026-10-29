@@ -1,2 +1,5 @@
 *-raw.webp
 .DS_Store
+
+# Local Netlify folder
+.netlify
