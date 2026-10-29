@@ -20,6 +20,24 @@ window.HORDE = {
   armory: { regija: "eu", realm: "" },
   serverZona: "Europe/Paris",
 
+  // intro: fora za svakog igrača u roster revealu (puni intro, prvi ulazak u danu); lagano i na račun igre
+  intro: {
+    fore: {
+      Pero: "Čuo je „ne pullaj”. Nije slušao.",
+      Niksa: "Ako umreš, to je bilo namjerno.",
+      Karkens: "Najbrža na stazi. Opet kuha vodu za sve.",
+      "Žuga": "Stealth? Ne. Samo kasni.",
+      Dex: "Mrtav je već. Ne može gore."
+    },
+    // montaža prije rostera: službeni kadrovi (izvori u assets/cinematic/IZVORI.md), oznaka iznad, natpis kao u traileru
+    kadrovi: [
+      { slika: "assets/cinematic/skyborne.jpg", oznaka: "New Horizons", natpis: "Azeroth se budi." },
+      { slika: "assets/cinematic/sylvanas.jpg", oznaka: "Sylvanas Windrunner", natpis: "Mrtvi ne miruju." },
+      { slika: "assets/cinematic/forsaken-paladin.jpg", oznaka: "Forsaken paladin", natpis: "Ni Svjetlo ih nije zaboravilo." },
+      { slika: "assets/cinematic/horda-key-art.jpg", oznaka: "World of Warcraft: Forever", natpis: "Horda se skuplja." }
+    ]
+  },
+
   // achievementi: novi (koje posjetitelj još nije vidio) iskaču kao tost dolje u sredini, jedan po jedan
   // { id (jedinstven, ne mijenja se), naziv, opis, datum (GGGG-MM-DD), igraci: tko ga je dobio }
   achievementi: [
