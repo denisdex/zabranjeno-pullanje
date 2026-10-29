@@ -509,6 +509,81 @@ section[id] { scroll-margin-top: 84px; }
 }
 .plate:hover .p-more { background: color-mix(in srgb, var(--c) 30%, transparent); }
 
+/* ---------- profesije ---------- */
+.p-prof li .pn { display: flex; align-items: baseline; gap: 6px; }
+.p-prof li .pn small { font: 500 .5rem/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--dust); }
+.sk { position: relative; display: block; height: 6px; background: rgba(236, 226, 212, .1); }
+.sk.tanka { height: 4px; }
+.sk i { position: absolute; inset: 0 auto 0 0; background: var(--c, var(--ember)); }
+.sk b { position: absolute; top: -2px; bottom: -2px; width: 1px; background: rgba(12, 9, 8, .9); }
+.sk b:last-child { display: none; }
+.p-prof .zap { color: #ffb347; font-size: .5625rem; letter-spacing: .04em; }
+.p-prof ul.sek { margin-top: 6px; opacity: .8; }
+.pr-h { margin: 32px 0 12px; color: var(--ember); font-size: .6875rem; }
+.prazno { color: var(--dust); padding: 16px; border: 1px dashed var(--line); margin: 0; }
+.pr-sum { display: grid; gap: 10px 28px; grid-template-columns: minmax(0, 1fr); margin-bottom: 20px; }
+@media (min-width: 760px) { .pr-sum { grid-template-columns: 1.2fr .6fr 1.2fr; } }
+.pr-sum > div { display: grid; gap: 6px; padding: 12px 14px; background: rgba(21, 16, 14, .9); border: 1px solid var(--line); }
+.pr-sum .mono { color: var(--dust); }
+.pr-sum p { margin: 0; display: flex; flex-wrap: wrap; gap: 6px 16px; }
+.pr-sum p b { font: 800 1.4rem/1 var(--f-display); color: var(--bone); margin-right: 4px; }
+.pr-karte { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); }
+.pk { display: grid; gap: 8px; align-content: start; padding: 14px; background: rgba(21, 16, 14, .9); border: 1px solid var(--line); border-top: 2px solid var(--line); }
+.pk.gathering { border-top-color: #6fae5a; }
+.pk.crafting { border-top-color: var(--ember); }
+.pk.sekundarna { border-top-color: var(--dust); }
+.pk header { display: grid; grid-template-columns: 24px 1fr auto; gap: 8px; align-items: center; }
+.pk header b { font: 800 1.15rem/1 var(--f-display); text-transform: uppercase; }
+.pk header .mono { color: var(--dust); font-size: .5rem; }
+.pi { width: 22px; height: 22px; fill: none; stroke: var(--bone); stroke-width: 1.5; stroke-linejoin: round; stroke-linecap: round; opacity: .85; }
+.pk-naj { display: flex; align-items: baseline; gap: 6px; }
+.pk-naj b { font: 900 1.8rem/1 var(--f-display); font-variant-numeric: tabular-nums; }
+.pk-naj .mono { color: var(--dust); font-size: .5625rem; }
+.pk-tko { display: flex; flex-wrap: wrap; gap: 4px; }
+.pk-tko span { font: 800 .8rem/1 var(--f-display); text-transform: uppercase; color: var(--c); padding: 4px 6px 3px; outline: 1px solid color-mix(in srgb, var(--c) 40%, transparent); outline-offset: -1px; }
+.pk-leg { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; }
+.pk-leg .mono { color: var(--dust); font-size: .5rem; margin-right: 2px; }
+.pk-leg .lg { font: 500 .5625rem/1 var(--f-mono); padding: 3px 5px; color: rgba(161, 146, 130, .7); outline: 1px dashed var(--line); outline-offset: -1px; }
+.pk-leg .lg.da { color: var(--sys); outline: 1px solid rgba(242, 207, 91, .5); }
+.heat { border-collapse: separate; border-spacing: 3px; min-width: 640px; width: 100%; }
+.heat th { font-weight: 500; text-align: left; }
+.heat thead th { vertical-align: bottom; font: 500 .5625rem/1.2 var(--f-mono); color: var(--dust); text-transform: uppercase; letter-spacing: .04em; text-align: center; }
+.heat thead th .pi { display: block; margin: 0 auto 4px; width: 18px; height: 18px; }
+.heat tbody th { padding-right: 8px; white-space: nowrap; }
+.heat tbody th b { display: block; font: 800 1rem/1 var(--f-display); text-transform: uppercase; color: var(--c); }
+.heat tbody th .mono { font-size: .5rem; color: var(--dust); }
+.heat td { height: 40px; text-align: center; font-variant-numeric: tabular-nums; }
+.heat td.nema { background: rgba(236, 226, 212, .025); }
+.heat td.ima { background: rgba(255, 122, 46, var(--a)); outline: 1px solid rgba(255, 122, 46, .35); outline-offset: -1px; }
+.heat td.ima.sek { background: rgba(236, 226, 212, calc(var(--a) * .6)); outline-color: rgba(236, 226, 212, .2); }
+.heat td.ima.nakon40 { outline-style: dashed; background: rgba(255, 122, 46, .04); }
+.heat td b { display: block; font: 800 1rem/1 var(--f-display); }
+.heat td small { display: block; font: 500 .5rem/1 var(--f-mono); color: var(--dust); text-transform: uppercase; margin-top: 2px; }
+.plk { display: grid; gap: 10px; align-content: start; padding: 14px 16px 16px; background: rgba(21, 16, 14, .9); border-top: 2px solid var(--c); }
+.plk header { display: grid; gap: 4px; }
+.plk header b { font: 900 1.4rem/1 var(--f-display); text-transform: uppercase; color: var(--c); }
+.plk header .mono { color: var(--dust); font-size: .5625rem; }
+.plk header .nepozn { color: rgba(161, 146, 130, .7); }
+.plk .uloga { justify-self: start; color: var(--bone) !important; padding: 3px 6px; outline: 1px solid var(--line); outline-offset: -1px; }
+.plk .nap { margin: 0; color: var(--dust); font-size: .5625rem; }
+.plk .p-prof ul { grid-template-columns: minmax(0, 1fr); }
+.graf { width: 100%; height: auto; display: block; }
+.graf text { fill: var(--dust); font: 500 11px var(--f-mono); }
+.graf .gl { stroke: rgba(236, 226, 212, .1); }
+.leg-dog { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 4px; color: var(--bone); font-size: .875rem; }
+.leg-dog b { color: var(--sys); margin-right: 10px; font-weight: 500; }
+.pr-unos { margin-top: 28px; border: 1px solid var(--line); background: rgba(21, 16, 14, .9); }
+.pr-unos summary { cursor: pointer; padding: 14px 16px; color: var(--ember); }
+.pr-unos-in { padding: 0 16px 16px; display: grid; gap: 14px; }
+.pr-unos ol { margin: 0; padding-left: 18px; color: var(--dust); font-size: .6875rem; line-height: 1.7; text-transform: none; letter-spacing: .02em; }
+.pr-unos ol b { color: var(--bone); font-weight: 500; }
+.un { display: grid; gap: 6px 12px; grid-template-columns: minmax(0, 1fr); align-items: center; }
+@media (min-width: 760px) { .un { grid-template-columns: auto 1fr auto 1fr auto 6rem auto 10rem auto; } }
+.un label { color: var(--dust); font-size: .5625rem; }
+.un select, .un input { min-height: 40px; background: var(--iron-2); color: var(--bone); border: 1px solid var(--line); padding: 6px 8px; font: 400 .875rem var(--f-body); }
+.un-iz { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.un-iz code { flex: 1 1 260px; min-width: 0; overflow-wrap: anywhere; font: 400 .75rem/1.5 var(--f-mono); color: var(--sys); background: #0e0a08; padding: 10px 12px; border: 1px solid var(--line); }
+
 /* ---------- paper doll i ciljevi s ikonama ---------- */
 .doll { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 6px 18px; }
 .doll-c { display: grid; gap: 6px; align-content: start; }
@@ -616,6 +691,11 @@ a.sl:hover b { text-decoration: underline; }
 .rc .tx { margin: 0; color: var(--dust); font-size: .875rem; }
 .rc .krj { margin: 0; color: var(--ember); }
 .rc .tu { justify-self: start; font: 500 .5625rem/1 var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--night); background: var(--ember); padding: 5px 7px 4px; }
+
+/* slike dungeona (polje slika u data.js) */
+.dk-img { display: block; aspect-ratio: 16 / 9; margin: -16px -16px 2px; background: center / cover no-repeat; filter: saturate(.85) brightness(.82); }
+.dng-ban { margin: calc(clamp(24px, 4.4vw, 60px) * -1) calc(clamp(24px, 4.4vw, 60px) * -1) 0; }
+.dng-ban img { display: block; width: 100%; aspect-ratio: 16 / 7; object-fit: cover; -webkit-mask-image: linear-gradient(180deg, #000 55%, transparent); mask-image: linear-gradient(180deg, #000 55%, transparent); }
 
 /* level timeline dungeona */
 .dtl { position: relative; height: calc(var(--h, 200px) + 26px); margin: 4px 0 26px; }
@@ -1085,7 +1165,7 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
       &lt;Zabranjeno pullanje&gt;
     </span>
     <nav class="menu" id="menu" aria-label="Sekcije">
-      <a href="#odbrojavanje">Countdown</a><a href="#ekipa">Ekipa</a><a href="#upute">Upute</a><a href="#roadmap">Roadmap</a><a href="#dungeoni">Dungeoni</a><a href="#ekonomija">Ekonomija</a><a href="#savjeti">Savjeti</a><a href="#novosti">Patch notes</a>
+      <a href="#odbrojavanje">Countdown</a><a href="#ekipa">Ekipa</a><a href="#upute">Upute</a><a href="#roadmap">Roadmap</a><a href="#dungeoni">Dungeoni</a><a href="#ekonomija">Ekonomija</a><a href="#profesije">Profesije</a><a href="#savjeti">Savjeti</a><a href="#novosti">Patch notes</a>
     </nav>
   </div>
 </header>
@@ -1201,14 +1281,50 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
         <h2>Ekonomija</h2>
         <span class="meta mono">Tko skuplja, tko izrađuje, kome ide</span>
       </div>
-      <p class="eko-prijedlog" id="ekoPrijedlog"></p>
-      <div class="lanci" id="lanci"></div>
+      <div class="lanci" id="lanci"><p class="prazno mono">Učitavam tokove iz profesije.json…</p></div>
       <div class="gold"><div class="gold-c" id="goldCilj" style="display:contents"></div><div class="dnevno" id="dnevno"></div></div>
       <button class="vidi eko-vise" id="ekoVise" type="button" aria-expanded="false" aria-controls="ekoDet">Tko kome što i AH plan</button>
       <div class="eko-det" id="ekoDet" hidden>
         <div><h3 class="lab mono" style="color:var(--ember);margin:0 0 10px">Tko kome što</h3><div class="tbl"><table class="duguje"><thead><tr><th>Tko</th><th>Kome</th><th>Što</th><th>Kad</th></tr></thead><tbody id="duguje"></tbody></table></div></div>
         <div><h3 class="lab mono" style="color:var(--ember);margin:0 0 10px">Što prodati na AH</h3><ul class="ah" id="ahPlan"></ul></div>
       </div>
+    </div>
+  </section>
+
+  <section class="sec" id="profesije">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker mono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="currentColor" opacity=".25"/><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Skill, legacy i tko što ima</p>
+        <h2>Profesije</h2>
+        <span class="meta mono" id="profMeta"></span>
+      </div>
+      <div class="pr-sum" id="prSum"></div>
+      <div class="pr-karte" id="prKarte"><p class="prazno mono">Učitavam profesije…</p></div>
+      <h3 class="pr-h mono">Pokrivenost · lik × profesija</h3>
+      <div class="tbl pr-heat" id="prHeat"></div>
+      <h3 class="pr-h mono">Po liku</h3>
+      <div class="hs" id="prLikoviHs"><div class="hs-track" id="prLikovi"></div>
+        <div class="hs-ctl"><div class="str"><button class="hs-b prev" type="button" aria-label="Prethodno"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button><button class="hs-b next" type="button" aria-label="Sljedeće"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div><span class="mono" style="color:var(--dust)">Svi likovi, i alt i solo</span></div></div>
+      <h3 class="pr-h mono">Napredak kroz vrijeme</h3>
+      <div id="prGraf"></div>
+      <details class="pr-unos">
+        <summary class="mono">Kako upisati novi skill</summary>
+        <div class="pr-unos-in">
+          <ol class="mono">
+            <li>Otvori <b>profesije.json</b> u repou na GitHubu i klikni olovku.</li>
+            <li>Kod lika promijeni <b>skill</b> profesije, a u <b>history</b> dodaj red koji složi forma ispod.</li>
+            <li>Commit. Kad je deploy uključen, web se sam osvježi.</li>
+          </ol>
+          <form id="unForma" class="un">
+            <label for="unLik" class="mono">Lik</label><select id="unLik"></select>
+            <label for="unProf" class="mono">Profesija</label><select id="unProf"></select>
+            <label for="unSkill" class="mono">Skill</label><input id="unSkill" type="number" min="0" max="300" inputmode="numeric" value="0">
+            <label for="unDat" class="mono">Datum</label><input id="unDat" type="date">
+            <button class="vidi" type="submit">Složi red</button>
+          </form>
+          <div id="unIzlazBox" class="un-iz" hidden><code id="unIzlaz"></code><button type="button" class="hs-b" id="unKopiraj" style="width:auto;padding:0 14px">Kopiraj</button></div>
+        </div>
+      </details>
     </div>
   </section>
 
@@ -1311,34 +1427,290 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
   function slug(s) {
     return String(s).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/đ/g, "d").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
   }
-  // lik ima dvije profesije: prikazuje se plan do 40, promjena na 40 samo kao tihi redak
-  function profHtml(p) {
-    var pr = p.profesije || {};
-    function dvije(arr) { arr = (arr || []).slice(0, 2); while (arr.length < 2) arr.push(null); return arr; }
-    function ime(x) { return !x ? "po želji" : typeof x === "object" ? x.ime : x; }
-    var vj = p.vjestine || {};
-    function skill(ime) {
-      if (!(ime in vj)) return "";
-      var v = Math.max(0, Math.min(300, +vj[ime] || 0));
-      var rang = v < 75 ? ["Apprentice", 75] : v < 150 ? ["Journeyman", 150] : v < 225 ? ["Expert", 225] : ["Artisan", 300];
-      return '<span class="sk"><i style="width:' + (v / 300 * 100).toFixed(1) + '%"></i></span><em class="mono">' + v + "/" + rang[1] + " · " + rang[0] + "</em>";
-    }
-    function profList(arr) {
-      return "<ul>" + arr.map(function (x) {
-        if (!x) return '<li class="empty">po želji</li>';
-        if (typeof x === "object") return '<li class="plan" lang="en">' + esc(x.ime) + (x.plan ? "<small>plan</small>" : "") + skill(x.ime) + "</li>";
-        return '<li lang="en">' + esc(x) + skill(x) + "</li>";
-      }).join("") + "</ul>";
-    }
-    var p40 = dvije(pr.do40), n40 = pr.nakon40 ? dvije(pr.nakon40) : p40;
-    var a40 = p40.map(ime), b40 = n40.map(ime);
-    var van = a40.filter(function (x) { return b40.indexOf(x) < 0; });
-    var unutra = n40.filter(function (x) { return a40.indexOf(ime(x)) < 0; });
-    var promjena = unutra.length ? '<p class="p40 mono">na 40: ' + unutra.map(function (x, k) {
-      return esc(van[k] || "") + " → " + esc(ime(x)) + (x && x.plan ? " (plan)" : "");
-    }).join(", ") + "</p>" : "";
-    return profList(p40) + promjena;
+  /* ---------- profesije: jedan izvor (profesije.json); kasnije se izvorProfesija() zamijeni API-jem ---------- */
+  // pravila na jednom mjestu: ako Forever promijeni pragove, mijenja se samo ovo
+  var PRAGOVI = {
+    rangovi: [
+      { ime: "Apprentice", do: 75, level: 1 },
+      { ime: "Journeyman", do: 150, level: 10 },
+      { ime: "Expert", do: 225, level: 20 },
+      { ime: "Artisan", do: 300, level: 35 }
+    ],
+    max: 300,
+    legacy: [150, 225, 300],
+    legacyBodova: 1,
+    gathering: ["Mining", "Herbalism", "Skinning"],
+    sekundarne: ["First Aid", "Cooking", "Fishing"],
+    zamjena: 40
+  };
+  var BOJE_KLASA = { Warrior: "#C69B6D", Shaman: "#0070DD", Mage: "#3FC7EB", Rogue: "#FFF468", Paladin: "#F48CBA", Druid: "#FF7C0A", Hunter: "#AAD372", Priest: "#FFFFFF", Warlock: "#8788EE" };
+  var ULOGE_LIKA = { grupa: "main u grupi", solo: "solo main", alt: "alt u gradu" };
+  var PROF = null, naProf = [];
+  function izvorProfesija() {
+    return fetch("profesije.json", { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); });
   }
+  function normaliziraj(raw) {
+    var poLiku = {}, acc = {};
+    igraci.forEach(function (p) { poLiku[p.lik] = p; });
+    (raw.accounts || []).forEach(function (a) { acc[a.id] = a; });
+    var likovi = (raw.characters || []).map(function (c) {
+      var r = c.name ? poLiku[c.name] : null;
+      return {
+        id: c.id, ime: c.name || "", account: c.account, vlasnik: (acc[c.account] || {}).owner || c.account,
+        klasa: c["class"], rasa: c.race, uloga: c.role, level: r ? lvlOf(r) : Math.max(0, +c.level || 0),
+        roster: r, napomena: c.napomena || "",
+        primarne: (c.professions || []).map(function (x) { return { ime: x.name, skill: Math.max(0, Math.min(PRAGOVI.max, +x.skill || 0)), faza: x.phase || "stalno" }; }),
+        sekundarne: (c.secondary || []).map(function (x) { return { ime: x.name, skill: Math.max(0, Math.min(PRAGOVI.max, +x.skill || 0)) }; })
+      };
+    });
+    return { likovi: likovi, povijest: (raw.history || []).slice().sort(function (a, b) { return a.date < b.date ? -1 : 1; }), tokovi: raw.flows || [] };
+  }
+  function imeLika(l) { return l.ime || l.rasa + " " + l.klasa; }
+  function rangZa(skill) {
+    for (var i = 0; i < PRAGOVI.rangovi.length; i++) if (skill < PRAGOVI.rangovi[i].do) return PRAGOVI.rangovi[i];
+    return PRAGOVI.rangovi[PRAGOVI.rangovi.length - 1];
+  }
+  // zapelo: skill je na vrhu ranga, a lik nema level za sljedeći
+  function zapelo(l, skill) {
+    for (var i = 0; i < PRAGOVI.rangovi.length - 1; i++) {
+      var r = PRAGOVI.rangovi[i], dalje = PRAGOVI.rangovi[i + 1];
+      if (skill === r.do && l.level < dalje.level) return "skill " + skill + ", za dalje treba level " + dalje.level;
+    }
+    return "";
+  }
+  function aktivne(l) {
+    var nakon = l.level >= PRAGOVI.zamjena;
+    return l.primarne.filter(function (x) { return nakon ? x.faza !== "do40" : x.faza !== "nakon40"; }).slice(0, 2);
+  }
+  function plan40(l) {
+    var prije = l.primarne.filter(function (x) { return x.faza === "do40"; }), poslije = l.primarne.filter(function (x) { return x.faza === "nakon40"; });
+    return prije.map(function (x, i) { return poslije[i] ? { sada: x.ime, poslije: poslije[i].ime } : null; }).filter(Boolean);
+  }
+  function traka(skill, tanka) {
+    return '<span class="sk' + (tanka ? " tanka" : "") + '"><i style="width:' + (skill / PRAGOVI.max * 100).toFixed(1) + '%"></i>' +
+      PRAGOVI.rangovi.map(function (r) { return '<b style="left:' + (r.do / PRAGOVI.max * 100).toFixed(1) + '%"></b>'; }).join("") + "</span>";
+  }
+  function skillRed(l, x, faza) {
+    var r = rangZa(x.skill), z = zapelo(l, x.skill);
+    return '<li lang="en"><span class="pn">' + esc(x.ime) + (faza && x.faza !== "stalno" ? "<small>" + (x.faza === "do40" ? "do 40" : "od 40") + "</small>" : "") + "</span>" +
+      traka(x.skill) + '<em class="mono">' + x.skill + "/" + r.do + " · " + r.ime + "</em>" + (z ? '<span class="zap mono">' + esc(z) + "</span>" : "") + "</li>";
+  }
+  function likZa(p) {
+    if (!PROF) return null;
+    for (var i = 0; i < PROF.likovi.length; i++) if (PROF.likovi[i].roster === p) return PROF.likovi[i];
+    return null;
+  }
+  // kartica i profil lika iz rostera: dvije aktivne profesije, plan za 40 kao tihi redak
+  function profHtml(p, sekundarne) {
+    var l = likZa(p);
+    if (!PROF) return '<p class="p40 mono">Učitavam profesije…</p>';
+    if (!l) return '<p class="p40 mono">Lik još nije u profesije.json.</p>';
+    var pl = plan40(l);
+    return "<ul>" + aktivne(l).map(function (x) { return skillRed(l, x); }).join("") + "</ul>" +
+      (pl.length ? '<p class="p40 mono">na 40: ' + pl.map(function (x) { return esc(x.sada) + " → " + esc(x.poslije); }).join(", ") + "</p>" : "") +
+      (sekundarne && l.sekundarne.length ? '<ul class="sek">' + l.sekundarne.map(function (x) { return skillRed(l, x); }).join("") + "</ul>" : "");
+  }
+
+  // legacy: pragovi po profesiji po accountu, prvi put kad ih bilo koji lik na accountu dosegne
+  function legacyStanje() {
+    var najvise = {};
+    PROF.likovi.forEach(function (l) {
+      l.primarne.concat(l.sekundarne).forEach(function (x) {
+        var k = l.account + "|" + x.ime;
+        najvise[k] = Math.max(najvise[k] || 0, x.skill);
+      });
+    });
+    var kad = {};
+    PROF.povijest.forEach(function (h) {
+      var l = PROF.likovi.filter(function (x) { return x.id === h.character; })[0];
+      if (!l) return;
+      var k = l.account + "|" + h.profession;
+      najvise[k] = Math.max(najvise[k] || 0, +h.skill || 0);
+      PRAGOVI.legacy.forEach(function (g) { if (+h.skill >= g && !kad[k + "|" + g]) kad[k + "|" + g] = h.date; });
+    });
+    return { najvise: najvise, kad: kad };
+  }
+
+  var IKONE_PROF = {
+    Mining: "M5 19l7-7M10 7l7 7M9 6c2-3 7-3 9 0l-2 2c-1-2-4-2-5 0z",
+    Herbalism: "M12 20V9M12 13c-4 0-6-3-6-6 4 0 6 3 6 6zM12 11c0-4 3-6 6-6 0 4-3 6-6 6z",
+    Skinning: "M5 6c3-2 11-2 14 0l-2 6 2 6c-3 2-11 2-14 0l2-6z",
+    Leatherworking: "M6 5h12v14H6zM9 9h6M9 13h6",
+    Engineering: "M12 8a4 4 0 1 0 0.01 0zM12 3v3M12 18v3M3 12h3M18 12h3M6 6l2 2M16 16l2 2M18 6l-2 2M6 18l2-2",
+    Alchemy: "M10 4h4M11 4v5l-5 9c-1 2 0 3 2 3h8c2 0 3-1 2-3l-5-9V4",
+    Tailoring: "M6 18L18 6M15 6h3v3M7 13l4 4",
+    Enchanting: "M12 3l2 6 6 2-6 2-2 6-2-6-6-2 6-2z",
+    "First Aid": "M10 5h4v5h5v4h-5v5h-4v-5H5v-4h5z",
+    Cooking: "M5 11h14c0 4-3 7-7 7s-7-3-7-7zM9 8c0-2 2-2 2-4M13 8c0-2 2-2 2-4",
+    Fishing: "M6 4v10a4 4 0 0 0 8 0M14 14l3-3M6 4l12 2"
+  };
+  function ikonaProf(ime) { return '<svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><path d="' + (IKONE_PROF[ime] || IKONE_PROF.Enchanting) + '"/></svg>'; }
+
+  function renderProfesije() {
+    var L = PROF.likovi, leg = legacyStanje();
+    // popis profesija: gathering, crafting, sekundarne
+    var sve = [];
+    L.forEach(function (l) { l.primarne.concat(l.sekundarne).forEach(function (x) { if (sve.indexOf(x.ime) < 0) sve.push(x.ime); }); });
+    function vrsta(ime) { return PRAGOVI.sekundarne.indexOf(ime) >= 0 ? "sekundarna" : PRAGOVI.gathering.indexOf(ime) >= 0 ? "gathering" : "crafting"; }
+    var red = { gathering: 0, crafting: 1, sekundarna: 2 };
+    sve.sort(function (a, b) { return red[vrsta(a)] - red[vrsta(b)]; });
+    function tkoIma(ime) {
+      return L.filter(function (l) { return l.primarne.concat(l.sekundarne).some(function (x) { return x.ime === ime; }); });
+    }
+    function skillOf(l, ime) {
+      var x = l.primarne.concat(l.sekundarne).filter(function (y) { return y.ime === ime; })[0];
+      return x ? x : null;
+    }
+    // sažetak
+    var gath = PRAGOVI.gathering.map(function (g) { return '<span><b>' + tkoIma(g).filter(function (l) { return skillOf(l, g).faza !== "nakon40"; }).length + "</b> " + g + "</span>"; }).join("");
+    var crafteri = L.filter(function (l) { return l.primarne.some(function (x) { return vrsta(x.ime) === "crafting"; }); }).length;
+    var accounti = {};
+    L.forEach(function (l) { accounti[l.account] = l.vlasnik; });
+    var legPoAcc = Object.keys(accounti).map(function (a) {
+      var n = 0;
+      Object.keys(leg.najvise).forEach(function (k) {
+        if (k.indexOf(a + "|") !== 0) return;
+        PRAGOVI.legacy.forEach(function (g) { if (leg.najvise[k] >= g) n += PRAGOVI.legacyBodova; });
+      });
+      return "<span>" + esc(accounti[a]) + " <b>" + n + "</b></span>";
+    }).join("");
+    $("prSum").innerHTML = '<div><span class="mono">Gathereri</span><p>' + gath + '</p></div><div><span class="mono">Crafteri</span><p><span><b>' + crafteri + "</b> likova</span></p></div>" +
+      '<div><span class="mono">Legacy bodovi od profesija po accountu</span><p>' + legPoAcc + "</p></div>";
+    var ukupno = L.reduce(function (s, l) { return s + l.primarne.reduce(function (t, x) { return t + x.skill; }, 0); }, 0);
+    $("profMeta").innerHTML = "<b>" + L.length + "</b> likova · <b>" + Object.keys(accounti).length + "</b> accounta · skill ukupno <b>" + ukupno + "</b>";
+
+    // kartica po profesiji
+    $("prKarte").innerHTML = sve.map(function (ime) {
+      var ima = tkoIma(ime), naj = Math.max.apply(null, ima.map(function (l) { return skillOf(l, ime).skill; }).concat([0]));
+      var legacy = PRAGOVI.legacy.map(function (g) {
+        var tko = Object.keys(accounti).filter(function (a) { return (leg.najvise[a + "|" + ime] || 0) >= g; }).map(function (a) { return accounti[a]; });
+        return '<span class="lg' + (tko.length ? " da" : "") + '" title="Legacy ' + g + '">' + g + (tko.length ? " · " + esc(tko.join(", ")) : "") + "</span>";
+      }).join("");
+      return '<article class="pk ' + vrsta(ime) + '">' +
+        '<header>' + ikonaProf(ime) + '<b lang="en">' + esc(ime) + '</b><span class="mono">' + vrsta(ime) + "</span></header>" +
+        '<div class="pk-naj"><b>' + naj + '</b><span class="mono">/' + PRAGOVI.max + " najviše u guildu</span></div>" + traka(naj) +
+        '<div class="pk-tko">' + ima.map(function (l) { return '<span style="--c:' + (BOJE_KLASA[l.klasa] || "#ece2d4") + '">' + esc(l.ime ? l.ime.split(" ")[0] : l.klasa) + "</span>"; }).join("") + "</div>" +
+        '<div class="pk-leg"><span class="mono">Legacy</span>' + legacy + "</div></article>";
+    }).join("");
+
+    // heatmap lik × profesija
+    $("prHeat").innerHTML = '<table class="heat"><thead><tr><th></th>' + sve.map(function (ime) { return '<th lang="en" title="' + esc(ime) + '">' + ikonaProf(ime) + "<span>" + esc(ime) + "</span></th>"; }).join("") + "</tr></thead><tbody>" +
+      L.map(function (l) {
+        return '<tr><th style="--c:' + (BOJE_KLASA[l.klasa] || "#ece2d4") + '"><b>' + esc(imeLika(l)) + '</b><span class="mono">' + esc(l.vlasnik) + " · " + esc(ULOGE_LIKA[l.uloga] || l.uloga) + "</span></th>" +
+          sve.map(function (ime) {
+            var x = skillOf(l, ime);
+            if (!x) return '<td class="nema"></td>';
+            var a = .08 + x.skill / PRAGOVI.max * .8;
+            return '<td class="ima ' + (x.faza || "sek") + '" style="--a:' + a.toFixed(2) + '"><b>' + x.skill + "</b>" + (x.faza === "do40" ? "<small>do 40</small>" : x.faza === "nakon40" ? "<small>od 40</small>" : "") + "</td>";
+          }).join("") + "</tr>";
+      }).join("") + "</tbody></table>";
+
+    // po liku
+    $("prLikovi").innerHTML = L.map(function (l) {
+      var pl = plan40(l), sad = aktivne(l);
+      return '<article class="plk" style="--c:' + (BOJE_KLASA[l.klasa] || "#ece2d4") + '">' +
+        "<header><b>" + esc(imeLika(l)) + "</b>" + (l.ime ? "" : '<span class="mono nepozn">ime još nije poznato</span>') +
+        '<span class="mono">' + esc(l.rasa + " " + l.klasa) + " · lvl " + l.level + " · " + esc(l.vlasnik) + "</span>" +
+        '<span class="uloga mono">' + esc(ULOGE_LIKA[l.uloga] || l.uloga) + "</span></header>" +
+        (l.napomena ? '<p class="mono nap">' + esc(l.napomena) + "</p>" : "") +
+        '<div class="p-prof"><span class="lab mono">Primarne · ' + sad.length + "/2</span><ul>" + sad.map(function (x) { return skillRed(l, x, true); }).join("") + "</ul>" +
+        (pl.length ? '<p class="p40 mono">sada → poslije: ' + pl.map(function (x) { return esc(x.sada) + " → " + esc(x.poslije); }).join(", ") + "</p>" : "") +
+        '<span class="lab mono">Sekundarne</span><ul class="sek">' + l.sekundarne.map(function (x) { return skillRed(l, x); }).join("") + "</ul></div></article>";
+    }).join("");
+    hsPostavi($("prLikoviHs"));
+
+    // progresija kroz vrijeme: samo iz stvarne povijesti
+    var H = PROF.povijest;
+    if (!H.length) {
+      $("prGraf").innerHTML = '<p class="prazno mono">Još nema povijesti. Graf se pojavi kad nakon launcha unesemo prvi skill s datumom.</p>';
+    } else {
+      var t0 = Date.parse(H[0].date), t1 = Date.parse(H[H.length - 1].date);
+      if (t1 === t0) t1 = t0 + 864e5;
+      var W = 1000, Hh = 280, pad = { l: 44, r: 16, t: 14, b: 30 };
+      var x = function (d) { return pad.l + (Date.parse(d) - t0) / (t1 - t0) * (W - pad.l - pad.r); };
+      var y = function (v) { return pad.t + (1 - v / PRAGOVI.max) * (Hh - pad.t - pad.b); };
+      var serije = {};
+      H.forEach(function (h) { var k = h.character + "|" + h.profession; (serije[k] = serije[k] || []).push(h); });
+      var crtice = ["", "6 4", "2 4", "10 4 2 4"];
+      var profIdx = {};
+      var linije = Object.keys(serije).map(function (k) {
+        var dijelovi = k.split("|"), l = L.filter(function (z) { return z.id === dijelovi[0]; })[0] || {};
+        if (!(dijelovi[1] in profIdx)) profIdx[dijelovi[1]] = Object.keys(profIdx).length % crtice.length;
+        var pts = serije[k].map(function (h) { return x(h.date).toFixed(1) + "," + y(+h.skill).toFixed(1); }).join(" ");
+        return '<polyline points="' + pts + '" fill="none" stroke="' + (BOJE_KLASA[l.klasa] || "#ece2d4") + '" stroke-width="2" stroke-dasharray="' + crtice[profIdx[dijelovi[1]]] + '"><title>' + esc(imeLika(l) + " · " + dijelovi[1]) + "</title></polyline>";
+      }).join("");
+      var mreza = [0].concat(PRAGOVI.rangovi.map(function (r) { return r.do; })).map(function (v) {
+        return '<line x1="' + pad.l + '" x2="' + (W - pad.r) + '" y1="' + y(v) + '" y2="' + y(v) + '" class="gl"/><text x="' + (pad.l - 8) + '" y="' + (y(v) + 4) + '" text-anchor="end">' + v + "</text>";
+      }).join("");
+      var dat = function (d) { var z = new Date(d + "T12:00:00"); return z.getDate() + ". " + (z.getMonth() + 1) + "."; };
+      $("prGraf").innerHTML = '<svg class="graf" viewBox="0 0 ' + W + " " + Hh + '" role="img" aria-label="Skill profesija kroz vrijeme">' + mreza + linije +
+        '<text x="' + pad.l + '" y="' + (Hh - 8) + '">' + dat(H[0].date) + '</text><text x="' + (W - pad.r) + '" y="' + (Hh - 8) + '" text-anchor="end">' + dat(H[H.length - 1].date) + "</text></svg>" +
+        '<ul class="leg-dog">' + Object.keys(leg.kad).sort(function (a, b) { return leg.kad[a] < leg.kad[b] ? -1 : 1; }).map(function (k) {
+          var d = k.split("|");
+          return '<li><b class="mono">' + dat(leg.kad[k]) + "</b>" + esc(accounti[d[0]] || d[0]) + " · " + esc(d[1]) + " " + d[2] + " · +" + PRAGOVI.legacyBodova + " legacy</li>";
+        }).join("") + "</ul>";
+    }
+
+    // unos: forma složi red za profesije.json
+    var sel = $("unLik"), selP = $("unProf");
+    sel.innerHTML = L.map(function (l) { return '<option value="' + esc(l.id) + '">' + esc(imeLika(l) + " (" + l.vlasnik + ")") + "</option>"; }).join("");
+    function profOpcije() {
+      var l = L.filter(function (z) { return z.id === sel.value; })[0];
+      selP.innerHTML = l ? l.primarne.concat(l.sekundarne).map(function (x) { return '<option lang="en">' + esc(x.ime) + "</option>"; }).join("") : "";
+    }
+    sel.onchange = profOpcije; profOpcije();
+    var dd = new Date(); $("unDat").value = dd.getFullYear() + "-" + String(dd.getMonth() + 1).padStart(2, "0") + "-" + String(dd.getDate()).padStart(2, "0");
+    $("unForma").onsubmit = function (e) {
+      e.preventDefault();
+      var sk = Math.max(0, Math.min(PRAGOVI.max, parseInt($("unSkill").value, 10) || 0));
+      var red = '{ "date": "' + $("unDat").value + '", "character": "' + sel.value + '", "profession": "' + selP.value + '", "skill": ' + sk + " }";
+      $("unIzlaz").textContent = red;
+      $("unIzlazBox").hidden = false;
+    };
+    $("unKopiraj").onclick = function () {
+      var t = $("unIzlaz").textContent, b = this;
+      function ok() { b.textContent = "Kopirano"; setTimeout(function () { b.textContent = "Kopiraj"; }, 1600); }
+      try {
+        navigator.clipboard.writeText(t).then(ok, function () { oznaci(); });
+      } catch (err) { oznaci(); }
+      function oznaci() { var r = document.createRange(); r.selectNodeContents($("unIzlaz")); var s2 = getSelection(); s2.removeAllRanges(); s2.addRange(r); }
+    };
+  }
+
+  // manufaktura u Ekonomiji: tokovi iz profesije.json, tko skuplja i tko izrađuje se izračuna iz likova
+  function renderLanci() {
+    var STR = '<span class="str" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"/></svg></span>';
+    function chip(l) { return '<span style="--c:' + (BOJE_KLASA[l.klasa] || "#ece2d4") + '">' + esc(l.ime ? l.ime.split(" ")[0] : l.vlasnik + " " + l.klasa) + "</span>"; }
+    function sa(ime) { return PROF.likovi.filter(function (l) { return l.primarne.some(function (x) { return x.ime === ime; }); }); }
+    $("lanci").innerHTML = PROF.tokovi.map(function (f) {
+      var sk = f.from === "drop" ? '<span>Svi</span>' : sa(f.from).map(chip).join("");
+      var iz = sa(f.to);
+      var od = iz.length && iz.every(function (l) { return l.primarne.some(function (x) { return x.ime === f.to && x.faza === "nakon40"; }); }) ? "od lvl 40" : "odmah";
+      return '<div class="lanac">' +
+        '<div class="kol"><span class="mono">Skupljaju · ' + esc(f.from === "drop" ? "drop sa svih moba" : f.from) + '</span><div class="who">' + sk + "</div></div>" + STR +
+        '<div class="kol"><span class="mono">Sirovina</span><span class="sir">' + esc(f.item) + "</span></div>" + STR +
+        '<div class="kol"><span class="mono">Izrađuje · ' + od + '</span><div class="who">' + (iz.map(chip).join("") || "<span>nitko još</span>") + '</div><span class="mono" lang="en">' + esc(f.to) + "</span></div>" + STR +
+        '<div class="kol"><span class="mono">Proizvodi · ' + esc(f.kome || "") + "</span><ul>" + (f.proizvodi || []).map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul></div>" +
+      "</div>";
+    }).join("");
+  }
+
+  naProf.push(renderProfesije, renderLanci, function () {
+    // kartice i otvoreni profil dobiju profesije čim stignu
+    Array.prototype.forEach.call(document.querySelectorAll("[data-prof-lik]"), function (el) {
+      var p = igraci.filter(function (x) { return slug(x.lik) === el.getAttribute("data-prof-lik"); })[0];
+      if (p) el.innerHTML = '<span class="lab mono">Profesije</span>' + profHtml(p);
+    });
+    if (/^#lik\//.test(location.hash)) window.dispatchEvent(new HashChangeEvent("hashchange"));
+  });
+  izvorProfesija().then(function (raw) {
+    PROF = normaliziraj(raw);
+    naProf.forEach(function (f) { try { f(); } catch (e) { console.error(e); } });
+  }).catch(function () {
+    var poruka = '<p class="prazno mono">Profesije se nisu učitale (profesije.json). Otvori stranicu preko servera, ne kao datoteku.</p>';
+    ["prKarte", "prGraf", "lanci"].forEach(function (id) { if ($(id)) $(id).innerHTML = poruka; });
+  });
+
   function portretHtml(p, idx, veliki) {
     var r = ULOGA[p.uloga];
     var h = p.foto
@@ -1387,7 +1759,7 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
         (zadaciSad(p).length ? '<span class="p-zad">' + zadatakTekst(zadaciSad(p).length) + "</span>" : "") +
         '<dl class="p-meta"><div><dt class="mono">Rasa</dt><dd>' + esc(p.rasa) + '</dd></div><div><dt class="mono">Klasa</dt><dd>' + esc(p.klasa) + '</dd></div><div><dt class="mono">Uloga</dt><dd>' + esc(r) + "</dd></div></dl>" +
         '<div class="p-lvl"><div class="lvl-head"><span class="mono">Level</span><span class="n">' + lvl + '<small>/60</small></span></div>' + gaugeHtml(p) + "</div>" +
-        '<div class="p-prof"><span class="lab mono">Profesije</span>' + profHtml(p) + "</div>" +
+        '<div class="p-prof" data-prof-lik="' + slug(p.lik) + '"><span class="lab mono">Profesije</span>' + profHtml(p) + "</div>" +
         goldHtml(p) +
         '<a class="p-more mono" href="#lik/' + slug(p.lik) + '">Otvori profil</a>' +
       "</div></div></article>";
@@ -1478,7 +1850,7 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
           '<dl class="prof-meta"><div><dt class="mono">Igrač</dt><dd>' + esc(p.igrac) + '</dd></div><div><dt class="mono">Rasa</dt><dd>' + esc(p.rasa) +
           '</dd></div><div><dt class="mono">Klasa</dt><dd style="color:' + BOJE[p.klasa] + '">' + esc(p.klasa) + '</dd></div><div><dt class="mono">Uloga</dt><dd>' + esc(r) + "</dd></div></dl>" +
           '<div class="prof-row"><div class="prof-lvl"><h3 class="lab mono">Level</h3><span class="n">' + lvl + "<small>/60</small></span>" + gaugeHtml(p) + goldHtml(p) + "</div>" +
-          '<div class="p-prof"><h3 class="lab mono">Profesije</h3>' + profHtml(p) + "</div></div>" +
+          '<div class="p-prof"><h3 class="lab mono">Profesije</h3>' + profHtml(p, true) + "</div></div>" +
           "<div><h3 class=\"lab mono\">Trenutni build</h3>" +
             '<div class="build-head"><b>' + esc(pf.specka || "još nema") + "</b><span>" + t.join("/") + "</span>" + (pf.plan ? "<em>plan</em>" : "") + "</div>" +
             '<div class="trees">' + st.map(function (n, k) {
@@ -1510,6 +1882,7 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
       var wh = "https://www.wowhead.com/classic/search?q=" + encodeURIComponent(d.ime);
       panel.style.setProperty("--c", "#ff7a2e");
       body.innerHTML = '<div class="dng">' +
+        (d.slika ? '<div class="dng-ban"><img src="' + esc(d.slika) + '" alt="' + esc(d.ime) + '" loading="lazy"></div>' : "") +
         '<header class="dng-head"><p class="mono">Dungeon · lvl ' + d.od + "–" + d.do + " · " + esc(d.gdje || "") + (d.novo ? " · <b>novo u Foreveru</b>" : "") + "</p>" +
         '<h2 id="profIme">' + esc(d.ime) + "</h2>" +
         '<p class="dng-note mono">' + (v.nepoznato ? "Još nepoznato" : "Vanilla 1.12 znanje; Forever je mogao mijenjati bossove i loot") + "</p></header>" +
@@ -1764,15 +2137,6 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
       var p = POIME[ime];
       return "<span" + (p ? ' style="--c:' + BOJE[p.klasa] + '"' : "") + ">" + esc(ime) + "</span>";
     }
-    $("ekoPrijedlog").textContent = E.prijedlog || "";
-    $("lanci").innerHTML = E.lanci.map(function (l) {
-      return '<div class="lanac" data-reveal>' +
-        '<div class="kol"><span class="mono">Skupljaju · ' + esc(l.profesija) + '</span><div class="who">' + l.skupljaju.map(chip).join("") + "</div></div>" + STR +
-        '<div class="kol"><span class="mono">Sirovina</span><span class="sir">' + esc(l.sirovina) + "</span></div>" + STR +
-        '<div class="kol"><span class="mono">Izrađuje · od lvl ' + l.od + '</span><div class="who">' + chip(l.izraduje) + "</div><span class=\"mono\">" + esc(l.zanat) + (l.prijedlog ? ' <span class="pr">prijedlog</span>' : "") + "</span></div>" + STR +
-        '<div class="kol"><span class="mono">Proizvodi i kome</span><ul>' + l.proizvodi.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul></div>" +
-      "</div>";
-    }).join("");
     // procjena golda do cilja iz roadmapa i dnevne zarade
     var R = D.roadmap, dana = R ? R.planiraniTjedni * 7 : 49;
     function udioDo(level) {
@@ -1911,6 +2275,7 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
       else if (!sljedeci && d.od > AVG) { st = "nx"; txt = AVG < 1 ? "prvi za nas" : "sljedeći"; sljedeci = true; }
       var l = (d.od - 1) / 59 * 100, w = (d.do - d.od) / 59 * 100;
       return '<button type="button" class="dk ' + st + '" data-dungeon="' + slug(d.ime) + '">' +
+        (d.slika ? '<span class="dk-img" style="background-image:url(\'' + esc(d.slika) + '\')" aria-hidden="true"></span>' : "") +
         '<span class="nm">' + esc(d.ime) + (d.novo ? "<em>novo</em>" : "") + "</span>" +
         '<span class="gd mono">' + esc(d.gdje || "") + "</span>" +
         '<span class="rg"><b>' + d.od + "–" + d.do + '</b><span class="st mono">' + txt + "</span></span>" +

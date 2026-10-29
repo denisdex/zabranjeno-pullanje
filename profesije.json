@@ -1,0 +1,69 @@
+{
+  "_upute": "Jedini izvor za profesije. Novi skill: promijeni 'skill' kod lika i dodaj red u 'history' s datumom (YYYY-MM-DD). Prazno ime = još nije poznato. phase: do40 (samo do levela 40), stalno, nakon40 (uzima se na 40). role: grupa, solo, alt. Level likova iz rostera uzima se iz data.js; 'level' ovdje upiši samo za likove kojih nema u rosteru (druid, alt).",
+  "accounts": [
+    { "id": "pero", "owner": "Pero" },
+    { "id": "niksa", "owner": "Niksa" },
+    { "id": "karkens", "owner": "Karkens" },
+    { "id": "zuga", "owner": "Žuga" },
+    { "id": "dex", "owner": "Dex" }
+  ],
+  "characters": [
+    { "id": "warrior", "name": "Melee Kitic", "account": "pero", "class": "Warrior", "race": "Orc", "role": "grupa",
+      "professions": [
+        { "name": "Mining", "skill": 0, "phase": "stalno" },
+        { "name": "Skinning", "skill": 0, "phase": "do40" },
+        { "name": "Engineering", "skill": 0, "phase": "nakon40" }
+      ],
+      "secondary": [{ "name": "First Aid", "skill": 0 }, { "name": "Cooking", "skill": 0 }] },
+    { "id": "shaman", "name": "Saman Saulic", "account": "niksa", "class": "Shaman", "race": "Orc", "role": "grupa",
+      "professions": [
+        { "name": "Herbalism", "skill": 0, "phase": "do40" },
+        { "name": "Skinning", "skill": 0, "phase": "stalno" },
+        { "name": "Leatherworking", "skill": 0, "phase": "nakon40" }
+      ],
+      "secondary": [{ "name": "First Aid", "skill": 0 }, { "name": "Cooking", "skill": 0 }] },
+    { "id": "druid", "name": "", "account": "niksa", "class": "Druid", "race": "Tauren", "role": "solo", "level": 0,
+      "professions": [
+        { "name": "Herbalism", "skill": 0, "phase": "stalno" },
+        { "name": "Alchemy", "skill": 0, "phase": "stalno" }
+      ],
+      "secondary": [{ "name": "First Aid", "skill": 0 }, { "name": "Cooking", "skill": 0 }] },
+    { "id": "magealt", "name": "", "account": "niksa", "class": "Mage", "race": "Orc", "role": "alt", "level": 0, "napomena": "Ostaje na levelu 10–20 u Orgrimmaru",
+      "professions": [
+        { "name": "Enchanting", "skill": 0, "phase": "stalno" },
+        { "name": "Tailoring", "skill": 0, "phase": "stalno" }
+      ],
+      "secondary": [{ "name": "First Aid", "skill": 0 }, { "name": "Cooking", "skill": 0 }] },
+    { "id": "mage", "name": "Janica Frostelic", "account": "karkens", "class": "Mage", "race": "Troll", "role": "grupa",
+      "professions": [
+        { "name": "Mining", "skill": 0, "phase": "stalno" },
+        { "name": "Herbalism", "skill": 0, "phase": "stalno" }
+      ],
+      "secondary": [{ "name": "First Aid", "skill": 0 }, { "name": "Cooking", "skill": 0 }] },
+    { "id": "rogue", "name": "Nikola Roguevic", "account": "zuga", "class": "Rogue", "race": "Undead", "role": "grupa",
+      "professions": [
+        { "name": "Mining", "skill": 0, "phase": "stalno" },
+        { "name": "Skinning", "skill": 0, "phase": "stalno" }
+      ],
+      "secondary": [{ "name": "First Aid", "skill": 0 }, { "name": "Cooking", "skill": 0 }] },
+    { "id": "paladin", "name": "Arsen Deadic", "account": "dex", "class": "Paladin", "race": "Undead", "role": "grupa",
+      "professions": [
+        { "name": "Herbalism", "skill": 0, "phase": "stalno" },
+        { "name": "Skinning", "skill": 0, "phase": "stalno" }
+      ],
+      "secondary": [{ "name": "First Aid", "skill": 0 }, { "name": "Cooking", "skill": 0 }] }
+  ],
+  "history": [],
+  "flows": [
+    { "item": "Koža", "from": "Skinning", "to": "Leatherworking", "kome": "grupa",
+      "proizvodi": ["Armor kitovi za sve", "Leather za Roguea, mail za Shamana", "Devilsaur Gauntlets i Leggings (BiS za Warriora i Roguea)"] },
+    { "item": "Ruda", "from": "Mining", "to": "Engineering", "kome": "grupa",
+      "proizvodi": ["Bombe i dinamit za dungeone", "Goggles i Target Dummy", "Thorium za Arcanite na 60"] },
+    { "item": "Bilje", "from": "Herbalism", "to": "Alchemy", "kome": "grupa i AH",
+      "proizvodi": ["Healing i Mana potioni", "Elixiri za dungeone", "Flasks i Arcanite transmute na 60"] },
+    { "item": "Cloth", "from": "drop", "to": "Tailoring", "kome": "grupa i AH",
+      "proizvodi": ["Torbe za cijelu ekipu", "Višak torbi na AH"] },
+    { "item": "Greenovi", "from": "drop", "to": "Enchanting", "kome": "grupa i AH",
+      "proizvodi": ["Enchanti za oružje i opremu ekipe", "Dust i essence na AH"] }
+  ]
+}

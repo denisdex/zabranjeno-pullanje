@@ -20,17 +20,14 @@ window.HORDE = {
 
   // level: 0 do 60
   // foto: portret iz assets/likovi/ ili null (tada stoji zamjenski grb klase dok netko ne pošalje screenshot)
-  // vjestine: skill profesije 0–300 (Apprentice do 75, Journeyman 150, Expert 225, Artisan 300); gold: koliko lik ima (cijeli goldi)
+  // gold: koliko lik ima (cijeli goldi); profesije i skill su u profesije.json
   // zadaci: { naziv, od, do (level raspon), gotovo }; na profilu se prikazuju oni za trenutni level lika
   // profil: build, oprema i ciljevi za stranicu lika (#lik/ime-lika); plan: true = još nije stvaran build iz igre
   //   talenti: bodovi u tri stabla redom kako ih igra slaže
   //   oprema i ciljevi: { slot, ime, kvaliteta: poor|common|uncommon|rare|epic|legendary, ikona (Wowhead ikona, npr. "inv_axe_09"), wowhead (ID itema), izvor }
   // oci: položaji očiju na fotki u postocima [[x, y], [x, y]] za sjaj (samo Undead), inače izostavi
-  // profesije: plan "do 40" i "nakon 40"; null = po želji; { ime, plan: true } = još nije dogovoreno do kraja
   igraci: [
     { igrac: "Pero",    lik: "Melee Kitic",      klasa: "Warrior", rasa: "Orc",    uloga: "Melee DPS",  level: 0, foto: null,
-      profesije: { do40: ["Mining", "Skinning"], nakon40: ["Mining", "Engineering"] },
-      vjestine: { "Mining": 0, "Skinning": 0, "Engineering": 0 },
       gold: 0,
       zadaci: [
         { naziv: "Mining i Skinning naučiti čim izađeš iz Valley of Trials", od: 1, do: 10, gotovo: false },
@@ -40,7 +37,7 @@ window.HORDE = {
         { naziv: "Berserker Stance quest na 30", od: 30, do: 32, gotovo: false },
         { naziv: "Mount (120 g) i Engineering umjesto Skinninga", od: 40, do: 42, gotovo: false },
         { naziv: "Hand of Justice i Savage Gladiator Chain iz BRD-a", od: 50, do: 60, gotovo: false },
-        { naziv: "Arcanite Reaper: Thorium Dexu za transmute", od: 58, do: 60, gotovo: false }
+        { naziv: "Arcanite Reaper: Thorium Niksinom druidu za transmute", od: 58, do: 60, gotovo: false }
       ],
       profil: {
         specka: "Arms 2H", talenti: [31, 20, 0], plan: true,
@@ -58,14 +55,12 @@ window.HORDE = {
         ],
         biljeske: "Kao DPS ne pulla. Kad Dex nije tu, Warrior je rezervni tank."
       } },
-    { igrac: "Niksa",   lik: "Shaman Saulic",    klasa: "Shaman",  rasa: "Orc",    uloga: "Healer",     level: 0, foto: "assets/likovi/shaman-saulic.jpg",
-      profesije: { do40: ["Herbalism", "Skinning"], nakon40: ["Skinning", "Leatherworking"] },
-      vjestine: { "Herbalism": 0, "Skinning": 0, "Leatherworking": 0 },
+    { igrac: "Niksa",   lik: "Saman Saulic",    klasa: "Shaman",  rasa: "Orc",    uloga: "Healer",     level: 0, foto: "assets/likovi/saman-saulic.jpg",
       gold: 0,
       zadaci: [
         { naziv: "Herbalism i Skinning; Earth totem quest na 4", od: 1, do: 10, gotovo: false },
         { naziv: "Fire totem quest na 10", od: 10, do: 12, gotovo: false },
-        { naziv: "Bilje šalji Dexu za Alchemy", od: 10, do: 40, gotovo: false },
+        { naziv: "Bilje šalji svom druidu za Alchemy", od: 10, do: 40, gotovo: false },
         { naziv: "Water totem quest (Call of Water) na 20", od: 20, do: 22, gotovo: false },
         { naziv: "Air totem quest (Call of Air) na 30", od: 30, do: 32, gotovo: false },
         { naziv: "Dual spec: Resto za grupu; Herbalism mijenjaš za Leatherworking", od: 40, do: 42, gotovo: false },
@@ -87,17 +82,15 @@ window.HORDE = {
         biljeske: "Healer grupe. Kad kaže mana, svi stanu."
       } },
     { igrac: "Karkens", lik: "Janica Frostelic", klasa: "Mage",    rasa: "Troll",  uloga: "Ranged DPS", level: 0, foto: null,
-      profesije: { do40: ["Herbalism", null], nakon40: ["Herbalism", null] },
-      vjestine: { "Herbalism": 0 },
       gold: 0,
       zadaci: [
-        { naziv: "Herbalism; za drugu profesiju prijedlog je Tailoring (torbe za ekipu)", od: 1, do: 10, gotovo: false },
+        { naziv: "Mining i Herbalism čim izađeš iz start zone", od: 1, do: 10, gotovo: false },
         { naziv: "Polymorph u svakom pullu s humanoidima, vježba u Ragefireu", od: 10, do: 20, gotovo: false },
-        { naziv: "Bilje šalji Dexu", od: 10, do: 40, gotovo: false },
+        { naziv: "Bilje šalji Niksinom druidu za Alchemy, rudu Peru", od: 10, do: 40, gotovo: false },
         { naziv: "Teleport: Orgrimmar na 20", od: 20, do: 22, gotovo: false },
         { naziv: "Conjure Water i hrana za ekipu prije svakog dungeona", od: 20, do: 60, gotovo: false },
         { naziv: "Portali na 40: Orgrimmar i Undercity za ekipu", od: 40, do: 42, gotovo: false },
-        { naziv: "Robe of the Archmage (Tailoring) i Magister's set (Dungeon Set 1)", od: 50, do: 60, gotovo: false }
+        { naziv: "Robe of the Archmage od Niksinog alta (Tailoring) i Magister's set (Dungeon Set 1)", od: 50, do: 60, gotovo: false }
       ],
       profil: {
         specka: "Frost", talenti: [17, 0, 34], plan: true,
@@ -113,8 +106,6 @@ window.HORDE = {
         biljeske: "Voda i hrana za ekipu, Polymorph na drugi target."
       } },
     { igrac: "Žuga",    lik: "Nikola Roguevic",  klasa: "Rogue",   rasa: "Undead", uloga: "Melee DPS",  level: 0, foto: "assets/likovi/nikola-roguevic.jpg", oci: [[45.0, 17.3], [50.6, 17.3]],
-      profesije: { do40: ["Mining", "Skinning"], nakon40: ["Mining", "Skinning"] },
-      vjestine: { "Mining": 0, "Skinning": 0 },
       gold: 0,
       zadaci: [
         { naziv: "Mining i Skinning", od: 1, do: 10, gotovo: false },
@@ -141,17 +132,15 @@ window.HORDE = {
         biljeske: "Sap na drugi target prije pulla, kad Dex kaže."
       } },
     { igrac: "Dex",     lik: "Arsen Deadic",     klasa: "Paladin", rasa: "Undead", uloga: "Tank",       level: 0, foto: "assets/likovi/arsen-deadic.jpg", oci: [[59.2, 18.1], [63.3, 18.5]],
-      profesije: { do40: ["Herbalism", null], nakon40: ["Herbalism", { ime: "Alchemy", plan: true }] },
-      vjestine: { "Herbalism": 0, "Alchemy": 0 },
       gold: 0,
       zadaci: [
-        { naziv: "Herbalism; Righteous Fury čim ga naučiš, u svakom dungeonu", od: 1, do: 10, gotovo: false },
+        { naziv: "Herbalism i Skinning; Righteous Fury čim ga naučiš, u svakom dungeonu", od: 1, do: 10, gotovo: false },
         { naziv: "Jedini pullaš: nauči put kroz Ragefire i Wailing Caverns", od: 10, do: 20, gotovo: false },
-        { naziv: "Bilje skupljaj i čuvaj za Alchemy od 40", od: 10, do: 40, gotovo: false },
+        { naziv: "Bilje šalji Niksinom druidu, kožu Niksi", od: 10, do: 40, gotovo: false },
         { naziv: "Skupljaj tank opremu (štit, Stamina) za drugi spec", od: 30, do: 40, gotovo: false },
-        { naziv: "Dual spec: Protection tank i Retribution; Alchemy kao druga profesija", od: 40, do: 42, gotovo: false },
-        { naziv: "Healing i Mana potioni za ekipu", od: 40, do: 60, gotovo: false },
-        { naziv: "Arcanite transmute svaki dan, Flasks za raid", od: 58, do: 60, gotovo: false }
+        { naziv: "Dual spec: Protection tank i Retribution", od: 40, do: 42, gotovo: false },
+        { naziv: "Devilsaur koža u Un'Goru za Niksin Leatherworking", od: 40, do: 60, gotovo: false },
+        { naziv: "Pre-raid BiS lista s profila, Lionheart Helm kao cilj", od: 58, do: 60, gotovo: false }
       ],
       profil: {
         specka: "Retribution (leveling)", talenti: [11, 5, 35], plan: true,
@@ -171,6 +160,7 @@ window.HORDE = {
 
   // Rasponi iz Forevera (warcraft.wiki.gg, 29. 10. 2026.), samo ono što je Hordi blizu.
   // novo: dungeon koji je Forever dodao; odradeno: true kad ga ekipa prvi put očisti skupa
+  // slika: putanja do slike dungeona (npr. "assets/dungeoni/wailing-caverns.jpg"), prikazuje se na kartici i u vodiču
   // vodic: kratki vodič za našu grupu (Vanilla 1.12 znanje; Forever je mogao mijenjati), otvara se na #dungeon/ime
   dungeoni: [
     { ime: "Ragefire Chasm",            gdje: "Orgrimmar",          od: 13, do: 19, odradeno: false,
@@ -514,27 +504,17 @@ window.HORDE = {
     { naslov: "Banka guilda", tekst: "Jedan bank alt drži zajedničke materijale i gold za recepte. Za mountove štedi svatko sam, ne troši na sitnice." }
   ],
 
-  // Ekonomija: tko skuplja, tko izrađuje, kome ide; Vanilla 1.12 prijedlog
+  // Ekonomija: tko kome što, gold ciljevi, zarada i AH; tokovi materijala su u profesije.json (flows)
   ekonomija: {
-    prijedlog: "Karkensu je druga profesija slobodna: prijedlog je Tailoring, jer cloth pada svima, torbe trebaju svima, a Robe of the Archmage je njegov pre-raid BiS.",
-    lanci: [
-      { sirovina: "Koža", profesija: "Skinning", skupljaju: ["Pero", "Žuga", "Niksa"], izraduje: "Niksa", zanat: "Leatherworking", od: 40,
-        proizvodi: ["Armor kitovi za sve", "Leather za Žugu, mail za Niksu", "Devilsaur Gauntlets i Leggings (BiS za Pera i Žugu)"] },
-      { sirovina: "Ruda", profesija: "Mining", skupljaju: ["Pero", "Žuga"], izraduje: "Pero", zanat: "Engineering", od: 40,
-        proizvodi: ["Bombe i dinamit za dungeone", "Goggles i Target Dummy", "Thorium za Arcanite na 60"] },
-      { sirovina: "Bilje", profesija: "Herbalism", skupljaju: ["Karkens", "Dex", "Niksa"], izraduje: "Dex", zanat: "Alchemy", od: 40,
-        proizvodi: ["Healing i Mana potioni", "Elixiri za dungeone", "Flasks i Arcanite transmute na 60"] },
-      { sirovina: "Cloth", profesija: "drop sa svih moba", skupljaju: ["Svi"], izraduje: "Karkens", zanat: "Tailoring", od: 5, prijedlog: true,
-        proizvodi: ["Torbe za cijelu ekipu", "Robe of the Archmage", "Runecloth višak na AH"] }
-    ],
     duguje: [
-      { tko: "Pero, Žuga", kome: "Niksa", sto: "Sva koža", kad: "do 60" },
-      { tko: "Žuga", kome: "Pero", sto: "Ruda koju Pero treba za Engineering", kad: "od 40" },
-      { tko: "Karkens, Niksa", kome: "Dex", sto: "Bilje", kad: "Niksa do 40, Karkens stalno" },
-      { tko: "Svi", kome: "Karkens", sto: "Cloth", kad: "ako uzme Tailoring" },
-      { tko: "Pero, Žuga", kome: "Dex", sto: "Thorium za Arcanite", kad: "na 60" },
-      { tko: "Niksa", kome: "Pero, Žuga", sto: "Armor kitovi, Devilsaur set", kad: "od 40" },
-      { tko: "Dex", kome: "Svi", sto: "Potioni i flaskovi", kad: "od 40" },
+      { tko: "Pero, Žuga, Dex", kome: "Niksa (Shaman)", sto: "Sva koža", kad: "do 60" },
+      { tko: "Žuga, Karkens", kome: "Pero", sto: "Ruda za Engineering", kad: "od 40" },
+      { tko: "Karkens, Dex, Niksa", kome: "Niksin druid", sto: "Bilje za Alchemy", kad: "stalno" },
+      { tko: "Svi", kome: "Niksin mage alt", sto: "Cloth i greenovi za Tailoring i Enchanting", kad: "stalno" },
+      { tko: "Pero, Žuga, Karkens", kome: "Niksin druid", sto: "Thorium za Arcanite transmute", kad: "na 60" },
+      { tko: "Niksa (Shaman)", kome: "Pero, Žuga", sto: "Armor kitovi, Devilsaur set", kad: "od 40" },
+      { tko: "Niksin druid", kome: "Svi", sto: "Potioni i flaskovi", kad: "stalno" },
+      { tko: "Niksin mage alt", kome: "Svi i AH", sto: "Torbe, enchanti, dust", kad: "stalno" },
       { tko: "Pero", kome: "Svi", sto: "Bombe za teške pullove", kad: "od 40" }
     ],
     ciljevi: [
@@ -552,7 +532,7 @@ window.HORDE = {
       { faza: "do 20", tekst: "Linen Cloth, Light Leather, Copper Bar, Peacebloom i Silverleaf. Sitniš, ali to je prvi gold za trenera." },
       { faza: "20–40", tekst: "Medium i Heavy Leather, Iron Ore, Silk i Mageweave, Kingsblood i Briarthorn. Iron i Mageweave se dobro prodaju." },
       { faza: "40–60", tekst: "Thick i Rugged Leather, Mithril i Thorium, Runecloth, Sungrass i Dreamfoil. Devilsaur Leather je najskuplja koža." },
-      { faza: "60", tekst: "Arcane Crystal, Arcanite (Dexov dnevni transmute), flaskovi i Black Lotus ako ga netko nađe." }
+      { faza: "60", tekst: "Arcane Crystal, Arcanite (dnevni transmute Niksinog druida), flaskovi, dust i essence s Enchantinga, Black Lotus ako ga netko nađe." }
     ]
   },
 
