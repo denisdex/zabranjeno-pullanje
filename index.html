@@ -659,7 +659,6 @@ a.sl:hover b { text-decoration: underline; }
 .lad-head { padding-right: 60px; }
 .lad-head h2 { margin: 0; font: 900 clamp(2.4rem, 6vw, 4rem)/.85 var(--f-display); text-transform: uppercase; }
 .lad-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); }
-.lad-lista .tips { grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); }
 .lad-lista .log::before { display: none; }
 @media (min-width: 1100px) { .lad-lista .log { columns: 2; column-gap: 48px; } .lad-lista .log > li { break-inside: avoid; } }
 
@@ -1223,14 +1222,46 @@ body.shake main, body.shake .top { animation: shake .55s cubic-bezier(.36, .07, 
 .band .tip .num small { -webkit-text-stroke: 0; color: var(--ember); }
 .band .tip { border-top-color: rgba(236, 226, 212, .16); }
 /* ---------- znaj prije 60 ---------- */
-.tips { display: grid; grid-template-columns: minmax(0, 1fr); column-gap: 32px; }
-@media (min-width: 640px) { .tips { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (min-width: 1100px) { .tips { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.tips { columns: 1; column-gap: 32px; }
+@media (min-width: 640px) { .tips { columns: 2; } }
+@media (min-width: 1100px) { .tips { columns: 3; } }
+.tips > .tip { break-inside: avoid; }
 .tip { border-top: 1px solid var(--line); padding: 16px 0 20px; display: grid; gap: 10px; align-content: start; min-width: 0; }
 .tip .num { font: 900 3.6rem/.8 var(--f-display); color: var(--bone); font-variant-numeric: tabular-nums; }
 .tip .num small { font-size: .38em; color: var(--ember); margin-left: 4px; letter-spacing: .04em; }
 .tip h3 { margin: 4px 0 0; color: var(--ember); }
 .tip p { margin: 0; color: var(--dust); font-size: .9375rem; }
+
+/* ---------- pripremi se: savjeti, addoni i macroi u tri stupca po tri kartice ---------- */
+.trio { display: grid; gap: 40px; }
+.trio-kol { display: grid; grid-template-rows: auto repeat(3, 1fr) auto; gap: 12px; min-width: 0; scroll-margin-top: 84px; }
+@media (max-width: 900px) { .trio-kol { scroll-margin-top: 112px; } }
+.trio-k { display: contents; }
+.trio-k > .prazno { grid-row: 2 / span 3; margin: 0; }
+@media (min-width: 1000px) {
+  /* jedna mreža za sva tri stupca: subgrid poravna redove, 1fr redovi daju istu visinu svim karticama */
+  .trio { grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: auto repeat(3, 1fr) auto; gap: 12px 28px; }
+  .trio-kol { grid-row: 1 / span 5; grid-template-rows: subgrid; }
+}
+.trio-h { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 4px 12px; padding-bottom: 10px; border-bottom: 1px solid rgba(236, 226, 212, .16); }
+.trio-h h3 { margin: 0; font: 900 clamp(1.8rem, 3vw, 2.6rem)/.9 var(--f-display); text-transform: uppercase; }
+.trio-h .mono { margin: 0; color: var(--dust); font-size: .5625rem; }
+.trio-c { display: flex; flex-direction: column; gap: 8px; min-width: 0; padding: 14px; background: rgba(21, 16, 14, .92); border: 1px solid var(--line); border-top: 2px solid var(--c, rgba(236, 226, 212, .2)); }
+.trio-c.oz-obavezno { --c: #e0b25a; }
+.trio-c.trio-info { --c: #ff5a4f; background: linear-gradient(160deg, rgba(193, 18, 31, .14), rgba(21, 16, 14, .92) 60%); }
+.trio-oz { color: var(--c, var(--ember)); font-size: .5625rem; }
+.trio-c h4 { margin: 0; font: 800 1.2rem/1.05 var(--f-display); text-transform: uppercase; }
+.trio-t { margin: 0; color: var(--dust); font-size: .875rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.trio-c .ad-upoz { font-size: .75rem; padding: 6px 8px; }
+.trio-kod { margin: 0; padding: 8px 10px; background: #0b0807; border-left: 2px solid var(--c, var(--ember)); overflow: hidden; -webkit-mask-image: linear-gradient(90deg, #000 85%, transparent); mask-image: linear-gradient(90deg, #000 85%, transparent); }
+.trio-kod code { font: 400 .6875rem/1.55 var(--f-mono); color: #f2e3c8; white-space: pre; }
+.trio-dno { margin-top: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.trio-dno > .mono { color: var(--dust); font-size: .5625rem; }
+.trio-dno .mc-kop { min-height: 40px; padding: 9px 12px; cursor: pointer; font: 500 .6875rem/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--night); background: var(--ember); border: 1px solid var(--ember); }
+.trio-dno .mc-kop:hover { background: #ff9a5c; }
+.trio-dno .mc-kop.ok { background: #7fd36a; border-color: #7fd36a; }
+.trio-svi { justify-self: start; align-self: start; }
+.trio-svi[hidden] { display: none; }
 
 /* ---------- footer ---------- */
 footer .wrap {
@@ -1249,13 +1280,6 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
   .fth b { animation: none; }
 }
 /* ---------- macroi: 6 istaknutih na stranici, svi u velikoj ladici ---------- */
-.mc-uvod-kr { margin: 0 0 22px; max-width: 46rem; color: var(--dust); }
-.mc-uvod-kr code { font: 400 .8125rem/1 var(--f-mono); color: var(--bone); }
-.mc-ist { display: grid; gap: 14px; grid-template-columns: minmax(0, 1fr); align-items: start; }
-@media (min-width: 640px) { .mc-ist { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (min-width: 1000px) { .mc-ist { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-.mc-svi { margin-top: 18px; }
-.mc-svi[hidden] { display: none; }
 .mc { display: grid; gap: 10px; padding: 14px 14px 12px; background: rgba(21, 16, 14, .9); border: 1px solid var(--line); border-top: 2px solid var(--c, var(--line)); min-width: 0; cursor: pointer; transition: border-color .2s; }
 .mc:hover { border-color: color-mix(in srgb, var(--c) 45%, transparent); }
 .mc.otv { border-color: color-mix(in srgb, var(--c) 60%, transparent); cursor: auto; }
@@ -1340,10 +1364,13 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
 .mc-broj b { color: var(--bone); font-weight: 500; }
 .mc-sort { display: inline-flex; align-items: center; gap: 8px; color: var(--dust); font-size: .5625rem; }
 .mc-sort select { min-height: 44px; padding: 6px 10px; font: 500 .6875rem/1 var(--f-mono); color: var(--bone); background: #0b0807; border: 1px solid rgba(236, 226, 212, .2); }
-.mc-lista { display: grid; gap: 12px; grid-template-columns: minmax(0, 1fr); align-items: start; }
-@media (min-width: 640px) { .mc-lista { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (min-width: 1100px) { .mc-lista { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-@media (min-width: 1600px) { .mc-lista { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.mc-lista, .ad-lista { columns: 1; column-gap: 12px; }
+@media (min-width: 640px) { .mc-lista, .ad-lista { columns: 2; } }
+@media (min-width: 1100px) { .mc-lista, .ad-lista { columns: 3; } }
+@media (min-width: 1600px) { .mc-lista, .ad-lista { columns: 4; } }
+/* masonry: kartica ne puca preko stupca, nema praznih rupa */
+.mc-lista > *, .ad-lista > * { break-inside: avoid; margin-bottom: 12px; }
+.mc-lista > .prazno, .ad-lista > .prazno { column-span: all; }
 @media (max-width: 640px) {
   .mcm-red h2 { flex-basis: calc(100% - 60px); }
   .mcm-x { order: 1; }
@@ -1393,10 +1420,6 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
 .ad-pil[aria-pressed="true"] { color: var(--night); background: var(--ember); border-color: var(--ember); }
 .ad-pil .n { font-size: .5625rem; opacity: .7; }
 .ad-pil.nula { opacity: .4; }
-.ad-str { display: grid; gap: 14px; grid-template-columns: minmax(0, 1fr); align-items: start; }
-@media (min-width: 1100px) { .ad-str { grid-template-columns: minmax(0, 2.3fr) minmax(0, 1fr); } }
-.ad-ist { display: grid; gap: 12px; grid-template-columns: minmax(0, 1fr); align-items: start; }
-@media (min-width: 640px) { .ad-ist { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .ad { display: grid; gap: 9px; align-content: start; padding: 14px; background: rgba(21, 16, 14, .9); border: 1px solid var(--line); border-top: 2px solid rgba(236, 226, 212, .2); min-width: 0; }
 .ad.oz-obavezno { border-top-color: #e0b25a; }
 .ad header { display: grid; gap: 6px; }
@@ -1424,20 +1447,8 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
 .ad-det summary::before { content: "+ "; }
 .ad-det[open] summary::before { content: "− "; }
 .ad-det p { margin: 8px 0 0; color: var(--bone); font-size: .8125rem; line-height: 1.45; }
-/* kutija "ne radi u Foreveru" */
-.ad-ne { padding: 16px; border: 1px solid rgba(255, 90, 79, .4); background: linear-gradient(160deg, rgba(193, 18, 31, .14), rgba(21, 16, 14, .92) 55%); }
-.ad-ne[hidden] { display: none; }
-.ad-ne h3 { margin: 0 0 12px; font: 900 1.4rem/1 var(--f-display); text-transform: uppercase; color: #ff7a6f; }
-.ad-ne ul { list-style: none; margin: 0 0 12px; padding: 0; display: grid; gap: 8px; }
-.ad-ne li { display: grid; gap: 3px; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
-.ad-ne li b { font: 800 1rem/1.1 var(--f-display); text-transform: uppercase; text-decoration: line-through; text-decoration-color: rgba(255, 90, 79, .7); }
-.ad-ne li span { color: var(--dust); font-size: .8125rem; }
 .ad-ne-vise { background: none; border: 0; padding: 6px 0; min-height: 36px; color: var(--ember); cursor: pointer; font-size: .625rem; }
 /* u modalu */
-.ad-lista { display: grid; gap: 12px; grid-template-columns: minmax(0, 1fr); align-items: start; }
-@media (min-width: 640px) { .ad-lista { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (min-width: 1100px) { .ad-lista { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-@media (min-width: 1600px) { .ad-lista { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 .ad-paket > p { margin: 0; color: var(--bone); }
 .ad-pk { display: grid; gap: 6px; }
 .ad-pk > .mono { color: var(--dust); font-size: .5625rem; }
@@ -1989,7 +2000,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       &lt;Zabranjeno pullanje&gt;
     </span>
     <nav class="menu" id="menu" aria-label="Sekcije">
-      <a href="#odbrojavanje">Countdown</a><a href="#ekipa">Ekipa</a><a href="#upute">Upute</a><a href="#roadmap">Roadmap</a><a href="#dungeoni">Dungeoni</a><a href="#ekonomija">Ekonomija</a><a href="#profesije">Profesije</a><a href="#savjeti">Savjeti</a><a href="#addoni">Addoni</a><a href="#macroi">Macroi</a><a href="#novosti">News &amp; Updates</a><button type="button" class="intro-btn" id="introBtn" aria-label="Pusti intro">▶ Intro</button>
+      <a href="#odbrojavanje">Countdown</a><a href="#ekipa">Ekipa</a><a href="#novosti">News &amp; Updates</a><a href="#upute">Upute</a><a href="#roadmap">Roadmap</a><a href="#dungeoni">Dungeoni</a><a href="#ekonomija">Ekonomija</a><a href="#profesije">Profesije</a><a href="#savjeti">Savjeti</a><a href="#addoni">Addoni</a><a href="#macroi">Macroi</a><button type="button" class="intro-btn" id="introBtn" aria-label="Pusti intro">▶ Intro</button>
     </nav>
   </div>
 </header>
@@ -2044,6 +2055,28 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
         <div class="party-bar mono" id="partyBar"></div>
       </div>
       <div class="plates" id="plates"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="novosti">
+    <div class="wrap news">
+      <div class="news-head">
+        <p class="kicker mono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="currentColor" opacity=".25"/><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Glasnik iz Orgrimmara</p>
+        <h2>News &amp; Updates</h2>
+        <div class="news-opis">
+          <p>Vijesti s Blizzarda i Wowheada, a odvojeno patchevi, hotfixevi i balans promjene, prevedeni gdje se tiču nas. Najnovije gore.</p>
+          <p class="mono svj-n" id="novostiSvj"></p>
+          <p class="mono"><a id="izvorNovosti" href="#" target="_blank" rel="noopener">Blizzardove development notes</a></p>
+        </div>
+      </div>
+      <div class="news-filt" role="group" aria-label="Prikaži">
+        <button type="button" data-k="vij" aria-pressed="true">Vijesti</button>
+        <button type="button" data-k="patch" aria-pressed="false">Patchevi i hotfixevi</button>
+      </div>
+      <div class="news-cols" id="newsCols" data-k="vij">
+        <div class="news-col" data-k="vij"><h3 class="news-ch">Vijesti <span class="mono" id="nVij"></span></h3><ol class="log" id="logVij"></ol></div>
+        <div class="news-col" data-k="patch"><h3 class="news-ch">Patchevi i hotfixevi <span class="mono" id="nPatch"></span></h3><ol class="log" id="logPatch"></ol></div>
+      </div>
     </div>
   </section>
 
@@ -2151,64 +2184,29 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     </div>
   </section>
 
-  <section class="sec band" id="savjeti">
+  <section class="sec band" id="priprema">
     <div class="wrap">
       <div class="sec-head">
-        <p class="kicker mono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="currentColor" opacity=".25"/><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Što stari orkovi znaju</p>
-        <h2>Tips &amp; tricks</h2>
-        <span class="meta mono">Poredano po levelu · cap trajno <b>60</b></span>
+        <p class="kicker mono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="currentColor" opacity=".25"/><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Savjeti · Addoni · Macroi</p>
+        <h2>Pripremi se</h2>
+        <span class="meta mono">Po tri za sad, ostalo iza gumba</span>
       </div>
-      <div class="tips" id="tips"></div>
-    </div>
-  </section>
-
-  <section class="sec band" id="addoni">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="kicker mono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6v4h4v6h-4v8H9v-8H5V7h4z" fill="currentColor" opacity=".25"/><path d="M9 3h6v4h4v6h-4v8H9v-8H5V7h4z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Prije prvog logina</p>
-        <h2>Addoni</h2>
-        <span class="meta mono" id="adMeta"></span>
-      </div>
-      <p class="mc-uvod-kr" id="adUvod"></p>
-      <div class="ad-str">
-        <div class="ad-ist" id="adIst"><p class="prazno mono">Učitavam addone…</p></div>
-        <aside class="ad-ne" id="adNe" hidden></aside>
-      </div>
-      <button type="button" class="vidi mc-svi" id="adSvi" hidden>Svi addoni</button>
-    </div>
-  </section>
-
-  <section class="sec" id="macroi">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="kicker mono"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2" fill="currentColor" opacity=".25"/><rect x="3" y="6" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M7 10h1M11 10h1M15 10h2M7 14h10" stroke="currentColor" stroke-width="1.6"/></svg>Jedna tipka, manje gužve</p>
-        <h2>Macroi</h2>
-        <span class="meta mono" id="mcMeta"></span>
-      </div>
-      <p class="mc-uvod-kr">Macro je više naredbi na jednoj tipki: u igri upiši <code>/macro</code>, zalijepi tekst i povuci ikonu na action bar. Ovo je šest koje bi svatko od nas trebao imati.</p>
-      <div class="mc-ist" id="mcIst"><p class="prazno mono">Učitavam macroe…</p></div>
-      <button type="button" class="vidi mc-svi" id="mcSvi" hidden>Svi macroi</button>
-    </div>
-  </section>
-
-  <section class="sec" id="novosti">
-    <div class="wrap news">
-      <div class="news-head">
-        <p class="kicker mono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="currentColor" opacity=".25"/><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Glasnik iz Orgrimmara</p>
-        <h2>News &amp; Updates</h2>
-        <div class="news-opis">
-          <p>Vijesti s Blizzarda i Wowheada, a odvojeno patchevi, hotfixevi i balans promjene, prevedeni gdje se tiču nas. Najnovije gore.</p>
-          <p class="mono svj-n" id="novostiSvj"></p>
-          <p class="mono"><a id="izvorNovosti" href="#" target="_blank" rel="noopener">Blizzardove development notes</a></p>
+      <div class="trio">
+        <div class="trio-kol" id="savjeti">
+          <header class="trio-h"><h3>Tips &amp; tricks</h3><p class="mono" id="tipsMeta"></p></header>
+          <div class="trio-k" id="tips"></div>
+          <button type="button" class="vidi trio-svi" id="tipsSvi">Vidi sve savjete</button>
         </div>
-      </div>
-      <div class="news-filt" role="group" aria-label="Prikaži">
-        <button type="button" data-k="vij" aria-pressed="true">Vijesti</button>
-        <button type="button" data-k="patch" aria-pressed="false">Patchevi i hotfixevi</button>
-      </div>
-      <div class="news-cols" id="newsCols" data-k="vij">
-        <div class="news-col" data-k="vij"><h3 class="news-ch">Vijesti <span class="mono" id="nVij"></span></h3><ol class="log" id="logVij"></ol></div>
-        <div class="news-col" data-k="patch"><h3 class="news-ch">Patchevi i hotfixevi <span class="mono" id="nPatch"></span></h3><ol class="log" id="logPatch"></ol></div>
+        <div class="trio-kol" id="addoni">
+          <header class="trio-h"><h3>Addoni</h3><p class="mono" id="adMeta"></p></header>
+          <div class="trio-k" id="adIst"><p class="prazno mono">Učitavam addone…</p></div>
+          <button type="button" class="vidi trio-svi" id="adSvi" hidden>Svi addoni</button>
+        </div>
+        <div class="trio-kol" id="macroi">
+          <header class="trio-h"><h3>Macroi</h3><p class="mono" id="mcMeta"></p></header>
+          <div class="trio-k" id="mcIst"><p class="prazno mono">Učitavam macroe…</p></div>
+          <button type="button" class="vidi trio-svi" id="mcSvi" hidden>Svi macroi</button>
+        </div>
       </div>
     </div>
   </section>
@@ -2557,6 +2555,11 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
   var ukLvl = igraci.reduce(function (s, p) { return s + (+p.level || 0); }, 0);
   $("rosterMeta").innerHTML = "<b>" + igraci.length + "/5</b> u grupi · prosjek lvl <b>" + Math.round(ukLvl / igraci.length) + "</b>";
 
+  function nasumicno(arr, n) {
+    var a = arr.slice();
+    for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)), x = a[i]; a[i] = a[j]; a[j] = x; }
+    return a.slice(0, n);
+  }
   function slug(s) {
     return String(s).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/đ/g, "d").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
   }
@@ -3247,6 +3250,13 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
         '<button type="button" class="mc-obj" data-mc="' + esc(m.id) + '" aria-expanded="' + o + '">' + (o ? "Sakrij objašnjenje" : "Objašnjenje") + "</button></div>" +
         (o ? vise(m) : "") + "</article>";
     }
+    // kompaktna kartica za stranicu: tekst macroa skraćen na dva reda, Kopiraj kopira cijeli
+    function kompakt(m) {
+      var r = m.tekst.split("\n");
+      return '<article class="trio-c" style="--c:' + (BOJA[m.klasa] || "#ece2d4") + '"><span class="trio-oz mono">' + klUl(m) + "</span><h4>" + esc(m.naslov) + "</h4>" +
+        '<p class="trio-t">' + esc(m.svrha) + '</p><pre class="trio-kod"><code>' + esc(r.slice(0, 2).join("\n") + (r.length > 2 ? "\n…" : "")) + "</code></pre>" +
+        '<div class="trio-dno"><button type="button" class="mc-kop" data-mc="' + esc(m.id) + '">Kopiraj</button><span class="mono">' + m.znakova + "/255</span></div></article>";
+    }
     function prebaci(id) {
       otvoreni[id] = !otvoreni[id];
       Array.prototype.forEach.call(document.querySelectorAll('.mc[data-id="' + id + '"]'), function (el) {
@@ -3396,8 +3406,8 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
         d.pocetnik.macroi.forEach(function (id) { start[id] = true; });
       }
       var prov = M.macroi.filter(function (m) { return STATUS[m.status] === "ok"; }).length;
-      $("mcMeta").innerHTML = "<b>" + M.macroi.length + "</b> macroa · <b>" + prov + "</b> provjereno za Forever";
-      ist.innerHTML = M.macroi.filter(function (m) { return m.istaknuto; }).map(kartica).join("");
+      $("mcMeta").textContent = M.macroi.length + " macroa · " + prov + " provjereno";
+      ist.innerHTML = nasumicno(M.macroi.filter(function (m) { return m.istaknuto; }), 3).map(kompakt).join("");
       $("mcSvi").textContent = "Svi macroi (" + M.macroi.length + ")";
       $("mcSvi").hidden = false;
       izHasha();
@@ -3512,7 +3522,13 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       var fali = (a.treba || []).map(function (id) { return poId[id]; }).filter(function (x) { return x && x.status === "nije-pronadeno"; });
       return fali.length ? '<p class="ad-upoz">Treba ' + esc(fali.map(function (x) { return x.ime; }).join(", ")) + ", a " + (fali.length > 1 ? "oni još nemaju" : "on još nema") + " Forever verziju. Do tada ga preskoči.</p>" : "";
     }
-    function kratkaZamjena(z) { return String(z || "").split(/ \(|; |\. /)[0].replace(/\.$/, ""); }
+    function kompakt(a) {
+      var st = STATUS[a.status] || ["test", function () { return a.status; }], oz = OZNAKE[a.oznaka] || [9, a.oznaka];
+      return '<article class="trio-c oz-' + esc(a.oznaka) + '"><span class="trio-oz mono">' + esc(oz[1]) + " · " + esc(zaKoga(a)) + "</span><h4>" + esc(a.ime) + "</h4>" +
+        '<p class="trio-t">' + esc(a.opis) + "</p>" + upozorenje(a) +
+        '<div class="trio-dno ad-st"><span class="st ' + st[0] + '">' + esc(st[1](datumKr(a.zadnjaProvjera))) + "</span>" +
+        (a.link ? '<a href="' + esc(a.link) + '" target="_blank" rel="noopener">' + esc(linkIme(a.link)) + " ↗</a>" : "") + "</div></article>";
+    }
 
     // ---------- modal ----------
     var modal = null, zadnjiFokus = null, otvorenKlikom = false, nakonOtvaranja = null;
@@ -3621,16 +3637,12 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       A.kategorije.forEach(function (k, i) { kat[k.id] = k.naziv; redKat[k.id] = i; });
       A.addoni.forEach(function (a) { poId[a.id] = a; });
       var potvrdeno = A.addoni.filter(function (a) { return a.status === "forever-potvrdeno"; }).length;
-      $("adMeta").innerHTML = "<b>" + A.addoni.length + "</b> addona · <b>" + potvrdeno + "</b> s Forever verzijom · provjereno " + datumKr(A.provjereno);
-      $("adUvod").textContent = A.uvod || "";
-      ist.innerHTML = A.addoni.filter(function (a) { return a.oznaka === "obavezno"; }).sort(SORT.oznaka).map(kartica).join("");
-      if ((A.neRadi || []).length) {
-        var ne = $("adNe");
-        ne.innerHTML = '<h3>Ne radi u Foreveru</h3><ul>' + A.neRadi.map(function (n) {
-          return "<li><b>" + esc(n.ime) + "</b><span>→ " + esc(kratkaZamjena(n.zamjena)) + "</span></li>";
-        }).join("") + '</ul><button type="button" class="ad-ne-vise mono">Zašto i čime zamijeniti →</button>';
-        ne.hidden = false;
-      }
+      $("adMeta").textContent = A.addoni.length + " addona · " + potvrdeno + " s Forever verzijom";
+      var prva = String(A.uvod || "").split(/(?<=\.)\s/)[0];
+      ist.innerHTML = nasumicno(A.addoni.filter(function (a) { return a.oznaka === "obavezno"; }), 2).map(kompakt).join("") +
+        '<article class="trio-c trio-info"><span class="trio-oz mono">Zašto nešto ne radi</span><h4>Forever nije Classic</h4>' +
+        '<p class="trio-t">' + esc(prva) + " Ne radi: " + esc((A.neRadi || []).slice(0, 4).map(function (n) { return n.ime.split(" i ")[0]; }).join(", ")) + "…</p>" +
+        '<div class="trio-dno"><button type="button" class="ad-ne-vise mono">Što ne radi i čime zamijeniti →</button></div></article>';
       $("adSvi").textContent = "Svi addoni (" + A.addoni.length + ")";
       $("adSvi").hidden = false;
       izHasha();
@@ -3971,11 +3983,25 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     savjeti.forEach(function (t) { var l = t.jedinica === "lvl" ? parseFloat(t.broj) : null; (l !== null && l < Math.floor(AVG) ? prosli : rel).push(t); });
     savjeti = rel.concat(prosli);
   })();
-  $("tips").innerHTML = savjeti.map(function (t) {
-    return '<div class="tip" data-reveal><div class="num">' + esc(t.broj) + (t.jedinica ? "<small>" + esc(t.jedinica) + "</small>" : "") +
-      '</div><h3 class="mono">' + esc(t.naslov) + "</h3><p>" + esc(t.tekst) + "</p></div>";
-  }).join("");
-  vidiSve($("tips"), 4, "Vidi sve savjete");
+  // tri nasumična savjeta za trenutnu fazu (level ekipe do +15 i oni bez levela), dopuna iz ostalih
+  (function () {
+    var lvl = function (t) { return t.jedinica === "lvl" ? parseFloat(t.broj) : null; };
+    var faza = savjeti.filter(function (t) { var l = lvl(t); return l === null || (l >= Math.floor(AVG) && l <= AVG + 15); });
+    var izbor = nasumicno(faza, 3);
+    if (izbor.length < 3) izbor = izbor.concat(nasumicno(savjeti.filter(function (t) { return izbor.indexOf(t) < 0; }), 3 - izbor.length));
+    $("tips").innerHTML = izbor.map(function (t) {
+      return '<article class="trio-c"><span class="trio-oz mono">' + esc(t.jedinica === "lvl" ? "lvl " + t.broj : t.broj) + "</span><h4>" + esc(t.naslov) + '</h4><p class="trio-t">' + esc(t.tekst) + "</p></article>";
+    }).join("");
+    $("tipsMeta").textContent = savjeti.length + " savjeta";
+    $("tipsSvi").textContent = "Vidi sve savjete (" + savjeti.length + ")";
+    $("tipsSvi").addEventListener("click", function () {
+      if (!LADICA) return;
+      LADICA.otvori("Tips & tricks", '<div class="lad-lista"><div class="tips">' + savjeti.map(function (t) {
+        return '<div class="tip"><div class="num">' + esc(t.broj) + (t.jedinica ? "<small>" + esc(t.jedinica) + "</small>" : "") +
+          '</div><h3 class="mono">' + esc(t.naslov) + "</h3><p>" + esc(t.tekst) + "</p></div>";
+      }).join("") + "</div></div>", "siroka");
+    });
+  })();
 
 
   /* ---------- /roll ---------- */
@@ -4264,7 +4290,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       var h = location.hash.slice(1);
       if (!/^[a-z-]+$/.test(h)) return;
       var el = document.getElementById(h);
-      if (el && el.tagName === "SECTION") el.scrollIntoView({ block: "start", behavior: "instant" });
+      if (el && (el.tagName === "SECTION" || el.classList.contains("trio-kol"))) el.scrollIntoView({ block: "start", behavior: "instant" });
     }
     if (location.hash) {
       if ("scrollRestoration" in history) history.scrollRestoration = "manual";
