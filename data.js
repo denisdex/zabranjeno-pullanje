@@ -20,6 +20,20 @@ window.HORDE = {
   armory: { regija: "eu", realm: "" },
   serverZona: "Europe/Paris",
 
+  // loading screen: samo pri prvom posjetu na uređaju; nasumična slika i jedan savjet (ispred ide "Savjet:")
+  ucitavanje: {
+    slike: ["assets/dungeoni/city-of-dalaran.jpg", "assets/dungeoni/the-drowned-city.jpg", "assets/dungeoni/krol-dok-stronghold.jpg",
+      "assets/dungeoni/alcaz-prison.jpg", "assets/dungeoni/blackmaw-hold.jpg", "assets/dungeoni/shaper-s-terrace.jpg"],
+    savjeti: [
+      "nemoj pullati. Ozbiljno.",
+      "Dex pulla. Ti ne.",
+      "vidiš vepra? Ne diraj vepra.",
+      "trener je na parnim levelima. Gold čuvaj za spellove.",
+      "Janica sheepa, Žuga sapa, nitko ne trči naprijed.",
+      "rested XP se puni u gradu i u kampu. Odjavi se tamo."
+    ]
+  },
+
   // achievementi: novi (koje posjetitelj još nije vidio) iskaču kao tost dolje u sredini, jedan po jedan
   // { id (jedinstven, ne mijenja se), naziv, opis, datum (GGGG-MM-DD), igraci: tko ga je dobio }
   achievementi: [
