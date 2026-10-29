@@ -392,6 +392,35 @@ footer .wrap { position: relative; z-index: 1; }
 }
 
 /* ---------- For the Horde ---------- */
+/* ---------- glazba (player dolje lijevo) ---------- */
+.player {
+  position: fixed; left: 14px; bottom: 14px; z-index: 30;
+  display: flex; align-items: center; gap: 8px; padding: 8px 12px 8px 8px;
+  background: rgba(31, 23, 20, .92); border: 1px solid rgba(236, 226, 212, .12);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  clip-path: polygon(var(--cut) 0, 100% 0, 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, 0 100%, 0 var(--cut));
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .5);
+}
+.pbtn { width: 34px; height: 34px; display: grid; place-items: center; border: 0; background: var(--blood); color: var(--bone); cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.pbtn:hover { background: #d8212e; }
+.pbtn + .ptitle + .pbtn { background: transparent; color: var(--dust); }
+.pbtn + .ptitle + .pbtn:hover { color: var(--bone); background: transparent; }
+.pbtn svg { width: 18px; height: 18px; }
+.pbtn:focus-visible { outline: 2px solid var(--ember); outline-offset: 2px; }
+.player .ic-pause, .player.on .ic-play { display: none; }
+.player.on .ic-pause { display: block; }
+.player .ic-x, .player.muted .ic-wave { display: none; }
+.player.muted .ic-x { display: block; }
+.ptitle { display: grid; line-height: 1.15; font-size: .6875rem; letter-spacing: .06em; text-transform: uppercase; min-width: 86px; }
+.ptitle b { color: var(--bone); font-weight: 500; }
+.ptitle em { font-style: normal; color: var(--dust); font-size: .5625rem; }
+.pvol { -webkit-appearance: none; appearance: none; width: 90px; height: 3px; background: rgba(236, 226, 212, .22); outline: none; cursor: pointer; }
+.pvol::-webkit-slider-thumb { -webkit-appearance: none; width: 12px; height: 12px; background: var(--ember); border: 0; border-radius: 0; transform: rotate(45deg); }
+.pvol::-moz-range-thumb { width: 12px; height: 12px; background: var(--ember); border: 0; border-radius: 0; transform: rotate(45deg); }
+.pvol:focus-visible { outline: 2px solid var(--ember); outline-offset: 4px; }
+#ytHost { position: fixed; left: -9999px; bottom: 0; width: 1px; height: 1px; overflow: hidden; opacity: 0; pointer-events: none; }
+@media (max-width: 640px) { .player { left: 10px; bottom: 10px; padding-right: 10px; } .ptitle { min-width: 0; } .ptitle em { display: none; } .pvol { width: 64px; } }
+
 .fth {
   position: fixed; inset: 0; z-index: 30; display: grid; place-items: center; pointer-events: none;
   background: radial-gradient(circle at 50% 50%, rgba(193, 18, 31, .55), rgba(60, 0, 4, .85) 70%);
@@ -646,6 +675,14 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
   </div>
 </footer>
 
+<div class="player" id="player" aria-label="Glazba">
+  <button class="pbtn" id="pPlay" type="button" aria-label="Pokreni glazbu"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="ic-play" d="M7 4v16l13-8z" fill="currentColor"/><path class="ic-pause" d="M6 4h4v16H6zm8 0h4v16h-4z" fill="currentColor"/></svg></button>
+  <span class="ptitle mono"><b>Orgrimmar</b><em id="pState">pokreće se…</em></span>
+  <button class="pbtn" id="pMute" type="button" aria-label="Utišaj"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z" fill="currentColor"/><path class="ic-wave" d="M16 8.5a4.5 4.5 0 0 1 0 7M18.5 6a8 8 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path class="ic-x" d="m16 9 5 6m0-6-5 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+  <input class="pvol" id="pVol" type="range" min="0" max="100" value="50" aria-label="Glasnoća">
+</div>
+<div id="ytHost" aria-hidden="true"></div>
+
 <script src="data.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
@@ -684,7 +721,8 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
   var cnt = { Tank: 0, Healer: 0, DPS: 0 };
   party.forEach(function (p) { cnt[ULOGA[p.uloga]]++; });
   $("partySum").innerHTML = cnt.Tank + " Tank<em>/</em>" + cnt.Healer + " Healer<em>/</em>" + cnt.DPS + " DPS";
-  $("partyBar").innerHTML = party.map(function (p) {
+  /* traka ide istim redom kao kartice ispod, da svaki segment stoji iznad svog lika */
+  $("partyBar").innerHTML = igraci.map(function (p) {
     return '<div class="slot" style="--c:' + BOJE[p.klasa] + '"><i></i><span><b>' + esc(ULOGA[p.uloga]) + "</b> " + esc(p.klasa) + "</span></div>";
   }).join("");
   var ukLvl = igraci.reduce(function (s, p) { return s + (+p.level || 0); }, 0);
@@ -1352,6 +1390,75 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
       })(t0);
     }
   })();
+})();
+</script>
+<script>
+/* ---------- glazba u pozadini: Orgrimmar tema, kreće sama (tiho dok korisnik ne dotakne stranicu), loop ---------- */
+(function () {
+  var ID = "DZmGIpL-DIo", VOL0 = 50;
+  var box = document.getElementById("player"), bPlay = document.getElementById("pPlay"), bMute = document.getElementById("pMute"),
+      vol = document.getElementById("pVol"), st = document.getElementById("pState");
+  var yt = null, spreman = false, hoceSvirati = true, muted = false, v = VOL0;
+  try {
+    var s = JSON.parse(localStorage.getItem("zp-glazba") || "null");
+    if (s) { if (typeof s.v === "number") v = s.v; muted = !!s.m; hoceSvirati = s.p !== false; }
+  } catch (e) {}
+  vol.value = v;
+  function spremi() { try { localStorage.setItem("zp-glazba", JSON.stringify({ v: v, m: muted, p: hoceSvirati })); } catch (e) {} }
+  function stanje(t) { st.textContent = t; }
+  function crtaj() {
+    box.classList.toggle("on", hoceSvirati && spreman);
+    box.classList.toggle("muted", muted || v === 0);
+    bPlay.setAttribute("aria-label", hoceSvirati ? "Pauziraj glazbu" : "Pokreni glazbu");
+    bMute.setAttribute("aria-label", muted ? "Uključi zvuk" : "Utišaj");
+  }
+  function primijeni() {
+    if (!spreman) return;
+    yt.setVolume(v);
+    if (muted || v === 0) yt.mute(); else yt.unMute();
+    if (hoceSvirati) yt.playVideo(); else yt.pauseVideo();
+    crtaj();
+  }
+  /* preglednik dopušta automatski start samo bez zvuka; zvuk se uključi na prvi dodir stranice */
+  var otkljucano = false;
+  function otkljucaj() {
+    if (otkljucano) return;
+    otkljucano = true;
+    ["pointerdown", "keydown", "touchstart", "wheel"].forEach(function (ev) { window.removeEventListener(ev, otkljucaj, true); });
+    primijeni();
+    stanje(hoceSvirati ? (muted ? "utišano" : "svira") : "pauza");
+  }
+  ["pointerdown", "keydown", "touchstart", "wheel"].forEach(function (ev) { window.addEventListener(ev, otkljucaj, true); });
+
+  window.onYouTubeIframeAPIReady = function () {
+    yt = new YT.Player("ytHost", {
+      videoId: ID, width: 200, height: 200,
+      playerVars: { autoplay: 1, mute: 1, loop: 1, playlist: ID, controls: 0, disablekb: 1, playsinline: 1, rel: 0, modestbranding: 1, iv_load_policy: 3, origin: location.origin },
+      events: {
+        onReady: function () {
+          spreman = true;
+          yt.setVolume(v);
+          if (hoceSvirati) yt.playVideo();
+          if (otkljucano) primijeni(); else stanje("dotakni stranicu za zvuk");
+          crtaj();
+        },
+        onStateChange: function (e) {
+          if (e.data === YT.PlayerState.ENDED && hoceSvirati) { yt.seekTo(0); yt.playVideo(); }
+          if (e.data === YT.PlayerState.PLAYING && otkljucano) stanje(muted ? "utišano" : "svira");
+          if (e.data === YT.PlayerState.PAUSED && otkljucano) stanje("pauza");
+        },
+        onError: function () { stanje("glazba nedostupna"); box.classList.remove("on"); }
+      }
+    });
+  };
+  var tag = document.createElement("script");
+  tag.src = "https://www.youtube.com/iframe_api";
+  document.head.appendChild(tag);
+
+  bPlay.addEventListener("click", function () { hoceSvirati = !hoceSvirati; spremi(); primijeni(); stanje(hoceSvirati ? (muted ? "utišano" : "svira") : "pauza"); });
+  bMute.addEventListener("click", function () { muted = !muted; spremi(); primijeni(); stanje(hoceSvirati ? (muted ? "utišano" : "svira") : "pauza"); });
+  vol.addEventListener("input", function () { v = +vol.value; if (v > 0 && muted) muted = false; spremi(); primijeni(); });
+  crtaj();
 })();
 </script>
 </body>
