@@ -62,37 +62,39 @@ window.HORDE = {
     { ime: "Shaper's Terrace",          gdje: "Un'Goro Crater",     od: 58, do: 60, novo: true, odradeno: false }
   ],
 
-  // Patch notes: prijevod Blizzardovih development notes, najnovije gore
+  // Patch notes: prijevod Blizzardovih development notes, najnovije gore.
+  // Stavka: { tekst, za: [klase/rase ili "Svi"], tema: kratka oznaka što se mijenja (Racial, Spell, Rage, XP, Dungeoni, Loot, Zona...) }
   izvorNovosti: "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-october-26/2360696",
   novosti: [
     { datum: "2026-10-27", naslov: "Racijali, završna runda", stavke: [
-      "Orc: Blood Fury vraćen na 2 min cooldowna (bilo 3 min).",
-      "Troll: Berserking traje 15 s (bilo 10 s).",
-      "Undead: Touch of the Grave ima interni cooldown 15 s (bilo 25 s)."
+      { tekst: "Blood Fury vraćen na 2 min cooldowna (bilo 3 min).", za: ["Orc"], tema: "Racial" },
+      { tekst: "Berserking traje 15 s (bilo 10 s).", za: ["Troll"], tema: "Racial" },
+      { tekst: "Touch of the Grave ima interni cooldown 15 s (bilo 25 s).", za: ["Undead"], tema: "Racial" }
     ] },
     { datum: "2026-10-26", naslov: "Classic loot je natrag", stavke: [
-      "Mob koji nije ništa dropao opet se može kliknuti, kao u Classicu.",
-      "Orc: Savage maknut, vraćen Command (+5% štete Hunter i Warlock petova)."
+      { tekst: "Mob koji nije ništa dropao opet se može kliknuti, kao u Classicu.", za: ["Svi"], tema: "Loot" },
+      { tekst: "Savage maknut, vraćen Command (+5% štete Hunter i Warlock petova).", za: ["Orc"], tema: "Racial" }
     ] },
     { datum: "2026-10-16", naslov: "Velika runda za klase", stavke: [
-      "Warrior: Battle Shout je sad raid-wide, a Slam više ne prekida pushback.",
-      "Shaman: Chain Lightning troši oko 35% manje mane na sva četiri ranka.",
-      "Mage: novi spell Frost Blast, uči se na levelu 24.",
-      "Paladin: Blessing of Salvation zamijenjen spellom Salvation.",
-      "Troll: Regeneration daje 20% više zdravlja (bilo 10%).",
-      "Horde je u Dalaranu napadnuta na prvi pogled; dungeonu City of Dalaran se i dalje može prići."
+      { tekst: "Battle Shout je sad raid-wide, a Slam više ne prekida pushback.", za: ["Warrior"], tema: "Spell" },
+      { tekst: "Chain Lightning troši oko 35% manje mane na sva četiri ranka.", za: ["Shaman"], tema: "Spell" },
+      { tekst: "Novi spell Frost Blast, uči se na levelu 24.", za: ["Mage"], tema: "Novi spell" },
+      { tekst: "Blessing of Salvation zamijenjen spellom Salvation.", za: ["Paladin"], tema: "Spell" },
+      { tekst: "Regeneration daje 20% više zdravlja (bilo 10%).", za: ["Troll"], tema: "Racial" },
+      { tekst: "Horde je u Dalaranu napadnuta na prvi pogled; dungeonu City of Dalaran se i dalje može prići.", za: ["Horde"], tema: "Zona" }
     ] },
     { datum: "2026-10-08", naslov: "Više XP-a iz dungeona", stavke: [
-      "XP od mobova u dungeonima oko 20% veći.",
-      "Popravljen bug: niži level u grupi više ne gubi XP zbog višeg, svatko dobiva po svom levelu.",
-      "Warrior: Rage od primljene štete ispravljen, oko 20–40% štete vraća se kao Rage.",
-      "Paladin: Retribution Aura srezana oko 33%, natrag na Vanilla vrijednosti."
+      { tekst: "XP od mobova u dungeonima oko 20% veći.", za: ["Svi"], tema: "Dungeoni" },
+      { tekst: "Popravljen bug: niži level u grupi više ne gubi XP zbog višeg, svatko dobiva po svom levelu.", za: ["Svi"], tema: "XP" },
+      { tekst: "Rage od primljene štete ispravljen, oko 20–40% štete vraća se kao Rage.", za: ["Warrior"], tema: "Rage" },
+      { tekst: "Retribution Aura srezana oko 33%, natrag na Vanilla vrijednosti.", za: ["Paladin"], tema: "Nerf" }
     ] },
     { datum: "2026-10-01", naslov: "Rage i dungeon questovi", stavke: [
-      "Warrior: kritični udarci daju 75% više Ragea; Berserker Rage se uči na 30 (bilo 32).",
-      "Dungeon questovi daju 50% manje dodatnog XP-a."
+      { tekst: "Kritični udarci daju 75% više Ragea; Berserker Rage se uči na 30 (bilo 32).", za: ["Warrior"], tema: "Rage" },
+      { tekst: "Dungeon questovi daju 50% manje dodatnog XP-a.", za: ["Svi"], tema: "XP" }
     ] }
   ],
+
 
   // Prva noć: plan po fazama i pravila guilda
   prvaNoc: {

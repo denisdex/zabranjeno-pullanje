@@ -465,7 +465,19 @@ body.shake main, body.shake .top { animation: shake .55s cubic-bezier(.36, .07, 
 .log .dt span { color: var(--dust); }
 .log h3 { margin: 2px 0 12px; font: 800 clamp(1.6rem, 4vw, 2.1rem)/.95 var(--f-display); text-transform: uppercase; }
 .log ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
-.log ul li { padding-bottom: 10px; border-bottom: 1px dashed var(--line); color: var(--bone); }
+.log ul li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 16px; align-items: baseline; padding-bottom: 10px; border-bottom: 1px dashed var(--line); color: var(--bone); }
+.log .tgs { display: flex; flex-wrap: wrap; gap: 5px; justify-content: flex-end; }
+.log .tg {
+  font: 500 .5625rem/1 var(--f-mono); letter-spacing: .1em; text-transform: uppercase; white-space: nowrap;
+  padding: 4px 6px 3px; color: var(--c, var(--bone)); background: color-mix(in srgb, var(--c, var(--bone)) 9%, transparent);
+  outline: 1px solid color-mix(in srgb, var(--c, var(--bone)) 40%, transparent); outline-offset: -1px;
+}
+.log .tg.rasa { --c: #e0c9a6; }
+.log .tg.tema { --c: var(--dust); background: none; outline-style: dashed; }
+@media (max-width: 640px) {
+  .log ul li { grid-template-columns: minmax(0, 1fr); }
+  .log .tgs { justify-content: flex-start; }
+}
 .log ul li:last-child { border-bottom: 0; }
 @media (max-width: 640px) {
   .log::before { left: 3.4rem; }
@@ -788,7 +800,15 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
       var d = new Date(n.datum + "T12:00:00");
       return '<li data-reveal><div class="dt"><b>' + d.getDate() + '</b><span class="mono">' + MJ[d.getMonth()] + " " + d.getFullYear() + "</span></div>" +
         "<div><h3>" + esc(n.naslov || "") + "</h3><ul>" + n.stavke.map(function (st) {
-          return "<li>" + esc(typeof st === "string" ? st : st.tekst) + "</li>";
+          // stariji zapis "Warrior: tekst" pretvara se u oznaku
+          if (typeof st === "string") {
+            var m = st.match(/^(Warrior|Shaman|Mage|Rogue|Paladin|Orc|Troll|Undead|Horde):\s*(.*)$/);
+            st = m ? { tekst: m[2], za: [m[1]] } : { tekst: st };
+          }
+          var oznake = (st.za || []).map(function (z) {
+            return '<span class="tg' + (BOJE[z] ? "" : " rasa") + '"' + (BOJE[z] ? ' style="--c:' + BOJE[z] + '"' : "") + ">" + esc(z) + "</span>";
+          }).join("") + (st.tema ? '<span class="tg tema">' + esc(st.tema) + "</span>" : "");
+          return "<li><span>" + esc(st.tekst) + "</span>" + (oznake ? '<span class="tgs">' + oznake + "</span>" : "") + "</li>";
         }).join("") + "</ul></div></li>";
     }).join("");
   })();
