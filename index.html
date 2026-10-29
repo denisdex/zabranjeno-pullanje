@@ -520,6 +520,11 @@ section[id] { scroll-margin-top: 84px; }
   mask-composite: intersect;
 }
 .prof-art .p-name { font-size: clamp(2.8rem, 9vw, 4.4rem); }
+/* široki kadar (data.js siroka) kao zaglavlje profila: cijela scena 16:9, bez zamućenog ruba i bez ljuljanja */
+.prof-art .portrait.siroki { aspect-ratio: 16 / 9; max-height: none; }
+.prof-art .siroki .pl { inset: -2%; }
+.prof-art .siroki .fig { top: 0; width: 100%; height: 100%; aspect-ratio: auto; animation: none; -webkit-mask-image: none; mask-image: none; }
+.prof-art .siroki .eye { width: 3.2%; }
 .prof-art .p-top { padding-right: 68px; }
 .prof-info { padding: clamp(20px, 3.4vw, 36px); display: grid; gap: 26px; align-content: start; min-width: 0; }
 .prof-row { display: grid; gap: 22px; grid-template-columns: minmax(0, 1fr); }
@@ -2994,15 +2999,17 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
 
   function portretHtml(p, idx, veliki) {
     var r = ULOGA[p.uloga];
-    var h = p.foto
+    // u profilu široki kadar (data.js siroka), ako ga lik ima, stoji kao zaglavlje umjesto portreta
+    var sir = veliki && p.siroka, slika = sir ? p.siroka : p.foto, oci = sir ? p.ociSiroka : p.oci;
+    var h = slika
       ? '<div class="pl"><div class="fig" style="--t:' + (8.6 + idx * .55).toFixed(2) + "s;--d:-" + (idx * 1.9).toFixed(1) + 's">' +
-          '<img src="' + esc(p.foto) + '" alt="' + esc(p.lik) + ', ' + esc(p.rasa) + " " + esc(p.klasa) + '" loading="lazy"><i class="tint"></i>' +
-          (p.oci || []).map(function (o) { return '<i class="eye" style="left:' + o[0] + "%;top:" + o[1] + '%"></i>'; }).join("") +
+          '<img src="' + esc(slika) + '" alt="' + esc(p.lik) + ', ' + esc(p.rasa) + " " + esc(p.klasa) + '" loading="lazy"><i class="tint"></i>' +
+          (oci || []).map(function (o) { return '<i class="eye" style="left:' + o[0] + "%;top:" + o[1] + '%"></i>'; }).join("") +
         "</div></div>"
       : '<div class="ph">' + (GRB[p.klasa] || GRB.Warrior) + '<span class="mono">čeka screenshot</span></div>';
     // u profilu je cijeli lik vidljiv, a prazan rub popuni zamućena ista slika
-    if (veliki && p.foto) h = '<img class="pbg" src="' + esc(p.foto) + '" alt="" aria-hidden="true">' + h;
-    return '<div class="portrait">' + h + '<div class="fog"></div>' +
+    if (veliki && p.foto && !sir) h = '<img class="pbg" src="' + esc(p.foto) + '" alt="" aria-hidden="true">' + h;
+    return '<div class="portrait' + (sir ? " siroki" : "") + '">' + h + '<div class="fog"></div>' +
       '<div class="p-top mono"><span class="role">' + IKONE[r] + esc(p.uloga) + "</span><span>" + esc(p.klasa) + "</span></div>" +
       '<div class="p-name-wrap"><h3 class="p-name">' + p.lik.split(" ").map(function (w) { return "<span>" + esc(w) + "</span>"; }).join("") + "</h3></div>" +
     "</div>";

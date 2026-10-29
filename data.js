@@ -62,6 +62,7 @@ window.HORDE = {
   //   talenti: bodovi u tri stabla redom kako ih igra slaže
   //   oprema i ciljevi: { slot, ime, kvaliteta: poor|common|uncommon|rare|epic|legendary, ikona (Wowhead ikona, npr. "inv_axe_09"), wowhead (ID itema), izvor }
   // oci: položaji očiju na fotki u postocima [[x, y], [x, y]] za sjaj (samo Undead), inače izostavi
+  // siroka: široki kadar (16:9) za zaglavlje profila u ladici umjesto portreta; ociSiroka: oči na njemu, kao oci
   // imena: gdje se govori o ljudima piše igrac (Pero, Niksa, Karkens, Žuga, Dex); lik samo kao naslov kartice/profila i u kontekstu igre
   igraci: [
     { igrac: "Pero",    lik: "Melee Kitic",      klasa: "Warrior", rasa: "Orc",    uloga: "Melee DPS",  level: 0, foto: null,
@@ -168,7 +169,8 @@ window.HORDE = {
         ],
         biljeske: "Sap na drugi target prije pulla, kad Dex kaže."
       } },
-    { igrac: "Dex",     lik: "Arsen Deadic",     klasa: "Paladin", rasa: "Undead", uloga: "Tank",       level: 0, foto: "assets/likovi/arsen-deadic.jpg", oci: [[59.2, 18.1], [63.3, 18.5]],
+    { igrac: "Dex",     lik: "Arsen Deadic",     klasa: "Paladin", rasa: "Undead", uloga: "Tank",       level: 0, foto: "assets/likovi/arsen-deadic.jpg", oci: [[57.4, 18.5], [61.4, 19.0]],
+      siroka: "assets/likovi/arsen-deadic-wide.jpg", ociSiroka: [[54.4, 18.6], [56.1, 19.0]],
       gold: 0,
       zadaci: [
         { naziv: "Herbalism i Skinning; Righteous Fury čim ga naučiš, u svakom dungeonu", od: 1, do: 10, gotovo: false },
