@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><title>Zabranjeno pullanje</title><defs>
+  <radialGradient id="fvbg" cx="50%" cy="40%" r="62%"><stop offset="0" stop-color="#7a2c12"/><stop offset=".7" stop-color="#1a0d0a"/><stop offset="1" stop-color="#0c0605"/></radialGradient>
+  <linearGradient id="fvgold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6d98a"/><stop offset=".35" stop-color="#c8923c"/><stop offset=".6" stop-color="#8a5a1e"/><stop offset=".8" stop-color="#e2b562"/><stop offset="1" stop-color="#7a4c18"/></linearGradient>
+  <linearGradient id="fvred" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe08a"/><stop offset=".45" stop-color="#ff7a2e"/><stop offset="1" stop-color="#d0201a"/></linearGradient>
+  <linearGradient id="fvboar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d4a777"/><stop offset=".55" stop-color="#9a6a42"/><stop offset="1" stop-color="#5a3824"/></linearGradient>
+  <filter id="fvg" x="-5%" y="-5%" width="110%" height="110%">
+    <feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="7" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="1.6" numOctaves="1" seed="3" result="n2"/>
+    <feColorMatrix in="n2" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.6 1.75" result="m"/>
+    <feComposite in="d" in2="m" operator="in"/>
+  </filter>
+</defs><g>
+  <circle cx="100" cy="100" r="96" fill="url(#fvgold)"/>
+  <circle cx="100" cy="100" r="90" fill="#140907"/>
+  <circle cx="100" cy="100" r="80" fill="url(#fvbg)"/>
+  <g transform="translate(2 6)">
+    <path d="M38 113 L50 105 C58 93 70 86 84 83 L90 70 L96 79 L102 65 L109 77 L116 63 L121 76 L128 67 L133 80 C150 82 166 95 170 110 L178 103 L179 113 L171 119 C171 129 167 137 161 141 L162 157 L150 157 L147 143 L121 145 L119 157 L108 157 L107 143 L86 141 L84 157 L72 157 L71 137 C63 133 57 129 51 127 L38 125 Z" fill="url(#fvboar)" stroke="#0c0605" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M36 112 h6 v14 h-6 z" fill="#7a4c30"/>
+    <path d="M53 125 C47 119 47 111 54 108 L56 112 C52 115 53 120 58 123 Z" fill="#efe2c6"/>
+    <circle cx="66" cy="100" r="3.6" fill="#ff3b1f"/>
+    <path d="M77 26 h12 l-2 28 h-8 z" fill="#f2cf5b" stroke="#3a2208" stroke-width="1.5"/>
+    <circle cx="83" cy="63" r="5.4" fill="#f2cf5b" stroke="#3a2208" stroke-width="1.5"/>
+  </g>
+  <circle cx="100" cy="100" r="80" fill="none" stroke="url(#fvred)" stroke-width="17"/>
+  <path d="M43.4 43.4 L156.6 156.6" stroke="url(#fvred)" stroke-width="17" stroke-linecap="butt"/>
+  <circle cx="100" cy="100" r="71.5" fill="none" stroke="#000" stroke-opacity=".35" stroke-width="1"/>
+</g></svg>

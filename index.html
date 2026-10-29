@@ -64,6 +64,15 @@ body::after {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 ::selection { background: var(--blood); color: var(--bone); }
+/* scrollbar: tanak, tamna staza, brončani gumb (Chrome i Safari preko ::-webkit-scrollbar, Firefox preko scrollbar-color) */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track, ::-webkit-scrollbar-corner { background: #0b0807; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #e6c27a, #b48a44 45%, #7a5520); border: 2px solid #0b0807; border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: linear-gradient(180deg, #f6d98a, #c8923c 45%, #8a5a1e); }
+@supports not selector(::-webkit-scrollbar) {
+  html { scrollbar-color: #b48a44 #0b0807; }
+  html, .prof-panel { scrollbar-width: thin; }
+}
 a { color: inherit; }
 :focus-visible { outline: 2px solid var(--ember); outline-offset: 3px; }
 
@@ -2619,6 +2628,15 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
     return Math.floor(h / 24) + " d " + (h % 24) + " h";
   }
   var section = $("odbrojavanje");
+  // favicon: zadnja 24 h do launcha izmjenjuje dvije varijante svake sekunde, samo dok je tab vidljiv
+  var FAV = [document.querySelector('link[rel="icon"][type="image/svg+xml"]'), document.querySelector('link[rel="icon"][sizes="32x32"]')];
+  var FAV_N = ["assets/favicon.svg", "assets/favicon-32.png"], FAV_Z = ["assets/favicon-zar.svg", "assets/favicon-zar-32.png"], favZar = false;
+  function favicon(pulsira) {
+    var z = pulsira && !reduce && !document.hidden ? !favZar : false;
+    if (z === favZar) return;
+    favZar = z;
+    FAV.forEach(function (l, i) { if (l) l.setAttribute("href", (z ? FAV_Z : FAV_N)[i]); });
+  }
   function tick() {
     var now = Date.now(), f = now < LAUNCH ? "prije" : "live";
     if (f !== faza) {
@@ -2636,6 +2654,7 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
     }
     var alarm = f === "prije" && LAUNCH - now <= 864e5;
     section.classList.toggle("alarm", alarm);
+    favicon(alarm);
     window.__alarm = alarm;
     if (f === "live") {
       var dan = Math.floor((now - LAUNCH) / 864e5) + 1;
