@@ -9,8 +9,26 @@
    "url": "https://www.wowhead.com/news/rss/classic"
   }
  ],
- "azurirano": "2026-10-29T18:38:19Z",
+ "azurirano": "2026-10-29T23:19:16Z",
  "stavke": [
+  {
+   "datum": "2026-10-29T21:00:50Z",
+   "naslov": "World of Warcraft: Forever Goes Live Globally November 4!",
+   "link": "https://us.forums.blizzard.com/en/wow/t/world-of-warcraft-forever-goes-live-globally-november-4/2396008/1",
+   "izvor": "Blizzard",
+   "sazetak": "Begin your first adventure or return to a new and reimagined Azeroth in World of Warcraft: Forever, launching worldwide November 4 at 3:00 pm PST. Adventure to level 60 across the original continents, discover new stories, and meet fellow…",
+   "oznake": [],
+   "vrsta": "vijest"
+  },
+  {
+   "datum": "2026-10-29T19:02:50Z",
+   "naslov": "Return to Azeroth in World of Warcraft: Forever",
+   "link": "https://us.forums.blizzard.com/en/wow/t/return-to-azeroth-in-world-of-warcraft-forever/2395922/1",
+   "izvor": "Blizzard",
+   "sazetak": "Welcome back to Azeroth. Whether it has been a few years, or many— familiar roads, old friends, and new adventures are waiting for you in World of Warcraft: Forever. To help you get your feet on the ground and begin your adventures in…",
+   "oznake": [],
+   "vrsta": "vijest"
+  },
   {
    "datum": "2026-10-29T16:17:57Z",
    "naslov": "The WoW: Forever Podcast: Episode 6 - All About Tech ft. ‪@Shobek",
@@ -399,28 +417,6 @@
    "link": "https://www.wowhead.com/news=382753/unfinished-questlines-could-classic-give-certain-stories-a-real-ending",
    "izvor": "Wowhead",
    "sazetak": "With a potential Classic+ announcement looming at BlizzCon, there are many questlines for Vanilla WoW that could finally culminate in a proper manner. Continue reading »",
-   "oznake": [
-    "Klase"
-   ],
-   "vrsta": "vijest"
-  },
-  {
-   "datum": "2026-09-05T17:00:00Z",
-   "naslov": "Class Specs From SoD That Could Work in Classic+",
-   "link": "https://www.wowhead.com/news=382702/class-specs-from-sod-that-could-work-in-classic",
-   "izvor": "Wowhead",
-   "sazetak": "Season of Discovery came with a handful of new Class Spec combinations that never worked before its creation. Which ones might work in a future Classic+? Continue reading »",
-   "oznake": [
-    "Klase"
-   ],
-   "vrsta": "vijest"
-  },
-  {
-   "datum": "2026-09-04T14:00:00Z",
-   "naslov": "Features from SoD That Should Be in Classic +",
-   "link": "https://www.wowhead.com/news=382690/features-from-sod-that-should-be-in-classic",
-   "izvor": "Wowhead",
-   "sazetak": "Season of Discovery came with so many new features and ideas added to a Vanilla Azeroth. With everyone talking about Classic+, here are some of those features that should be repeated. Continue reading »",
    "oznake": [
     "Klase"
    ],
