@@ -1521,12 +1521,23 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
 
 /* gumb Preskoči i natuknica za zvuk */
 .sp-skip {
-  position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 205; min-height: 44px; padding: 10px 14px;
+  position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 207; min-height: 44px; padding: 10px 14px;
   background: rgba(12, 9, 8, .7); color: var(--bone); border: 1px solid rgba(236, 226, 212, .25); font-size: .625rem;
 }
 .sp-skip:hover, .sp-skip:focus-visible { color: var(--ember); border-color: var(--ember); }
 .sp-skip kbd { font: inherit; color: var(--dust); margin-left: 6px; }
-.sp-zv { position: fixed; left: 16px; bottom: calc(28px + env(safe-area-inset-bottom, 0px)); z-index: 205; margin: 0; color: var(--dust); font-size: .5625rem; pointer-events: none; }
+/* ulaz "▶ Uđi": klik otključa glazbu, tek onda kreće intro */
+.sp-ulaz { position: fixed; inset: 0; z-index: 206; display: grid; place-content: center; justify-items: center; gap: 22px; padding: 24px; text-align: center; background: radial-gradient(55% 45% at 50% 45%, rgba(193, 18, 31, .2), transparent 70%); }
+.sp-ulaz img { width: clamp(110px, 18vw, 170px); filter: drop-shadow(0 0 30px rgba(193, 18, 31, .55)); }
+.sp-udi {
+  min-height: 56px; padding: 14px 32px; cursor: pointer; border: 0;
+  font: 900 1.7rem/1 var(--f-display); letter-spacing: .04em; text-transform: uppercase; color: var(--night);
+  background: linear-gradient(180deg, #ffb347, var(--ember)); box-shadow: 0 0 0 1px #3a1a08, 0 0 40px rgba(255, 122, 46, .45);
+  animation: udiPuls 1.8s ease-in-out infinite;
+}
+.sp-udi:hover, .sp-udi:focus-visible { outline: none; background: linear-gradient(180deg, #ffd27a, #ff9a5c); }
+@keyframes udiPuls { 50% { box-shadow: 0 0 0 1px #3a1a08, 0 0 70px rgba(255, 122, 46, .75); } }
+.sp-ulaz .mono { margin: 0; color: var(--dust); font-size: .625rem; }
 /* mobitel: portret gore, tekst ispod, rezovi ulaze odozgo i odozdo */
 @media (max-width: 639px) {
   .sp-ig, .sp-ig.desno { grid-template-columns: minmax(0, 1fr); align-content: center; gap: 16px; padding: 0 20px; }
@@ -1620,7 +1631,8 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
 /* ---------- intro (splash) ----------
    Svaki dolazak na web (i refresh): puni cinematic ~34 s (žeravica, grb, natpis, 3D logo, montaža Forever kadrova, roster reveal ekipe, JOŠ N DANA, rascjep).
    Link s hashom: 0,6 s. Reduced-motion: 0,4 s fade. Gumb "▶ Intro" u izborniku ga pušta ponovno.
-   Preskače se gumbom Preskoči, Esc, Space, klikom ili scrollom; prvi dodir samo pali zvuk.
+   Prije automatskog punog introa ulaz "▶ Uđi": klik otključa glazbu (preglednik traži gestu) i tek onda kreće intro, s glazbom.
+   Preskače se gumbom Preskoči, Esc, Space, klikom ili scrollom.
    ?sp=4.2 zaustavi intro u toj sekundi (za screenshotove). */
 (function () {
   var H = document.documentElement, D = window.HORDE || {};
@@ -1640,11 +1652,12 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     if (!e.target.closest || !e.target.closest("#introBtn") || radi) return;
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: "instant" });
-    pusti(reduce ? "fade" : "puni");
+    pusti(reduce ? "fade" : "puni", true);
   });
   pusti(nacin());
 
-  function pusti(mod) {
+  // izGumba: pokrenut gumbom ▶ Intro (taj klik je već gesta, pa nema ulaza)
+  function pusti(mod, izGumba) {
     radi = true;
     var mob = window.innerWidth < 640 || window.matchMedia("(pointer: coarse)").matches;
     H.classList.add("sp-on");
@@ -1660,7 +1673,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       if (n >= 1) return "Još " + n + (n % 10 === 1 && n % 100 !== 11 ? " dan" : " dana");
       return "Dan " + (Math.floor((sad - L) / 864e5) + 1) + " na Azerothu";
     })();
-    var skip = null, zv = null;
+    var skip = null;
     if (mod === "puni") {
       skip = el("button", "sp-skip mono");
       skip.type = "button"; skip.removeAttribute("aria-hidden");
@@ -1728,9 +1741,26 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     if (mod !== "fade") requestAnimationFrame(crtaj);
 
     function zvuk(v) { if (window.zpZvuk) window.zpZvuk(v); }
-    // zvuk se može upaliti prvim dodirom (preglednik traži gestu); dok je zaključan, mala natuknica dolje lijevo
     function zakljucan() { var s = window.zpZvukStanje && window.zpZvukStanje(); return !!(s && !s.otkljucano && !s.muted && s.v > 0); }
-    if (mod === "puni") setTimeout(function () { if (!gotovo && zakljucan()) { zv = el("p", "sp-zv mono"); zv.textContent = "Dodirni za zvuk"; svi.push(zv); } }, 400);
+    // ulaz: crni ekran s grbom i gumbom; intro čeka klik da glazba i slika krenu zajedno
+    var ceka = mod === "puni" && !izGumba && !dbg, ulazEl = null, mirujeDo = 0;
+    if (ceka) {
+      zar.a = 0;
+      ulazEl = el("div", "sp-ulaz");
+      ulazEl.removeAttribute("aria-hidden");
+      ulazEl.innerHTML = '<img src="assets/logo-zp.svg" alt=""><button type="button" class="sp-udi">▶ Uđi</button><p class="mono">Uz glazbu iz Orgrimmara · Esc preskače intro</p>';
+      svi.push(ulazEl);
+    } else if (mod === "puni" && window.zpGlazba) window.zpGlazba.intro(true);
+    function kreni() {
+      if (!ceka || gotovo) return;
+      ceka = false; zar.a = 1;
+      mirujeDo = performance.now() + 600;
+      if (window.zpGlazba) { window.zpGlazba.otkljucaj(); window.zpGlazba.intro(true); }
+      ulazEl.classList.add("sp-van");
+      setTimeout(function () { ulazEl.remove(); }, 220);
+      if (tl) tl.play();
+      setTimeout(preskoci, 40000);
+    }
 
     var gotovo = false, tl = null, stage = null, h1 = null;
     var ulazi = ["pointerdown", "keydown", "wheel", "touchmove"];
@@ -1742,6 +1772,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       var h = document.querySelector(".hero-main h1");
       if (h) h.style.opacity = "";
       H.classList.remove("sp-on");
+      if (window.zpGlazba) window.zpGlazba.intro(false);
       window.removeEventListener("resize", vel);
       ulazi.forEach(function (ev) { window.removeEventListener(ev, ulaz, true); });
       window.dispatchEvent(new Event("zp-splash"));
@@ -1754,6 +1785,18 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       setTimeout(kraj, 210);
     }
     function ulaz(e) {
+      // dok čeka ulaz: klik, Enter ili Space kreće s glazbom; Esc, Preskoči i scroll preskaču
+      if (ceka) {
+        if (e.type === "keydown") {
+          if (e.key === "Escape") { e.preventDefault(); preskoci(); }
+          else if (e.key === "Enter" || e.key === " " || e.key === "Spacebar") { e.preventDefault(); kreni(); }
+          return;
+        }
+        if (e.type === "pointerdown") return skip && skip.contains(e.target) ? preskoci() : kreni();
+        return preskoci();
+      }
+      // pomak prsta odmah nakon dodira na "Uđi" nije scroll
+      if ((e.type === "touchmove" || e.type === "wheel") && performance.now() < mirujeDo) return;
       if (e.type === "keydown") {
         if (e.key === "Escape" || e.key === " " || e.key === "Spacebar") { e.preventDefault(); preskoci(); }
         else if (mod !== "puni") preskoci();
@@ -1764,13 +1807,13 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
         // puni intro: prvi dodir pali zvuk (glazbu otključa player), tek sljedeći preskače;
         // player je možda već obradio isti dodir (ako je intro pokrenut gumbom), pa se gleda i "upravo otključano"
         var st = window.zpZvukStanje && window.zpZvukStanje(), upravo = st && st.otkljucanoU && performance.now() - st.otkljucanoU < 50 && !st.muted && st.v > 0;
-        if (mod === "puni" && (zakljucan() || upravo)) { if (zv) zv.remove(); return; }
+        if (mod === "puni" && (zakljucan() || upravo)) return;
       }
       preskoci();
     }
     if (!dbg) {
       ulazi.forEach(function (ev) { window.addEventListener(ev, ulaz, { capture: true, passive: ev !== "keydown" }); });
-      setTimeout(preskoci, mod === "puni" ? 40000 : 4200);
+      if (!ceka) setTimeout(preskoci, mod === "puni" ? 40000 : 4200);
     }
 
     if (mod === "fade") {
@@ -1855,7 +1898,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
 
       g.set(nas, { x: nx, y: ny, scale: sT });
       g.set(dana, { yPercent: -50 });
-      tl = g.timeline({ onComplete: kraj });
+      tl = g.timeline({ onComplete: kraj, paused: ceka });
       tinja = 0;
       // 0–1,6 s: žeravica u tišini, pa eksplozija i bubanj
       tl.call(function () { zvuk("vatra"); }, null, .1)
@@ -4446,6 +4489,9 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
   var box = document.getElementById("player"), bPlay = document.getElementById("pPlay"), bMute = document.getElementById("pMute"),
       vol = document.getElementById("pVol"), st = document.getElementById("pState");
   var yt = null, spreman = false, hoceSvirati = true, muted = false, v = VOL0;
+  // za vrijeme introa glazba je glasnija (barem 60), nakon njega se vraća spremljena glasnoća
+  var uIntru = false;
+  function glasnoca() { return uIntru ? Math.max(v, 60) : v; }
   try {
     var s = JSON.parse(localStorage.getItem("zp-glazba") || "null");
     if (s) { if (typeof s.v === "number") v = s.v; muted = !!s.m; hoceSvirati = s.p !== false; }
@@ -4461,7 +4507,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
   }
   function primijeni() {
     if (!spreman) return;
-    yt.setVolume(v);
+    yt.setVolume(glasnoca());
     if (muted || v === 0) yt.mute(); else yt.unMute();
     if (hoceSvirati) yt.playVideo(); else yt.pauseVideo();
     crtaj();
@@ -4476,6 +4522,11 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     stanje(hoceSvirati ? (muted ? "utišano" : "svira") : "pauza");
   }
   ["pointerdown", "keydown", "touchstart", "wheel"].forEach(function (ev) { window.addEventListener(ev, otkljucaj, true); });
+  // intro: "Uđi" otključa zvuk, a dok intro traje glazba je glasnija
+  window.zpGlazba = {
+    otkljucaj: otkljucaj,
+    intro: function (da) { uIntru = !!da; if (spreman) yt.setVolume(glasnoca()); }
+  };
 
   /* tihi zvukovi stranice, generirani Web Audiom: 24 dB ispod glazbe, šute kad je glazba utišana i prije prvog dodira */
   var ac = null;
@@ -4542,7 +4593,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       events: {
         onReady: function () {
           spreman = true;
-          yt.setVolume(v);
+          yt.setVolume(glasnoca());
           if (hoceSvirati) yt.playVideo();
           if (otkljucano) primijeni(); else stanje("dotakni stranicu za zvuk");
           crtaj();
