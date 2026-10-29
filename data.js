@@ -62,7 +62,9 @@ window.HORDE = {
   //   talenti: bodovi u tri stabla redom kako ih igra slaže
   //   oprema i ciljevi: { slot, ime, kvaliteta: poor|common|uncommon|rare|epic|legendary, ikona (Wowhead ikona, npr. "inv_axe_09"), wowhead (ID itema), izvor }
   // oci: položaji očiju na fotki u postocima [[x, y], [x, y]] za sjaj (samo Undead), inače izostavi
-  // siroka: široki kadar (16:9) za zaglavlje profila u ladici umjesto portreta; ociSiroka: oči na njemu, kao oci
+  // siroka: široki kadar (16:9) za zaglavlje profila u ladici i veliku sliku u introu; ociSiroka: oči na njemu, kao oci
+  // fokus: [x, y] glave na širokom kadru u postocima; intro po njemu reže sliku i vodi Ken Burns
+  // portret (foto) je 720×960 izrez iz istog kadra; oci i ociSiroka već uračunavaju 4 % povećanja slike na kartici
   // imena: gdje se govori o ljudima piše igrac (Pero, Niksa, Karkens, Žuga, Dex); lik samo kao naslov kartice/profila i u kontekstu igre
   igraci: [
     { igrac: "Pero",    lik: "Melee Kitic",      klasa: "Warrior", rasa: "Orc",    uloga: "Melee DPS",  level: 0, foto: null,
@@ -94,6 +96,7 @@ window.HORDE = {
         biljeske: "Kao DPS ne pulla. Kad Dex nije tu, Warrior je rezervni tank."
       } },
     { igrac: "Niksa",   lik: "Saman Saulic",    klasa: "Shaman",  rasa: "Orc",    uloga: "Healer",     level: 0, foto: "assets/likovi/saman-saulic.jpg",
+      siroka: "assets/likovi/saman-saulic-wide.jpg", fokus: [50.3, 19.2],
       gold: 0,
       zadaci: [
         { naziv: "Herbalism i Skinning; Earth totem quest na 4", od: 1, do: 10, gotovo: false },
@@ -120,6 +123,7 @@ window.HORDE = {
         biljeske: "Healer grupe. Kad kaže mana, svi stanu."
       } },
     { igrac: "Karkens", lik: "Janica Frostelic", klasa: "Mage",    rasa: "Troll",  uloga: "Ranged DPS", level: 0, foto: "assets/likovi/janica-frostelic.jpg",
+      siroka: "assets/likovi/janica-frostelic-wide.jpg", fokus: [50, 18.4],
       gold: 0,
       zadaci: [
         { naziv: "Mining i Herbalism čim izađeš iz start zone", od: 1, do: 10, gotovo: false },
@@ -143,7 +147,8 @@ window.HORDE = {
         ],
         biljeske: "Voda i hrana za ekipu, Polymorph na drugi target."
       } },
-    { igrac: "Žuga",    lik: "Nikola Roguevic",  klasa: "Rogue",   rasa: "Undead", uloga: "Melee DPS",  level: 0, foto: "assets/likovi/nikola-roguevic.jpg", oci: [[45.0, 17.3], [50.6, 17.3]],
+    { igrac: "Žuga",    lik: "Nikola Roguevic",  klasa: "Rogue",   rasa: "Undead", uloga: "Melee DPS",  level: 0, foto: "assets/likovi/nikola-roguevic.jpg", oci: [[48.7, 14.2], [54.2, 14.1]],
+      siroka: "assets/likovi/nikola-roguevic-wide.jpg", fokus: [48.8, 16.6], ociSiroka: [[47.7, 14.2], [50.0, 14.1]],
       gold: 0,
       zadaci: [
         { naziv: "Mining i Skinning", od: 1, do: 10, gotovo: false },
@@ -170,7 +175,7 @@ window.HORDE = {
         biljeske: "Sap na drugi target prije pulla, kad Dex kaže."
       } },
     { igrac: "Dex",     lik: "Arsen Deadic",     klasa: "Paladin", rasa: "Undead", uloga: "Tank",       level: 0, foto: "assets/likovi/arsen-deadic.jpg", oci: [[57.4, 18.5], [61.4, 19.0]],
-      siroka: "assets/likovi/arsen-deadic-wide.jpg", ociSiroka: [[54.4, 18.6], [56.1, 19.0]],
+      siroka: "assets/likovi/arsen-deadic-wide.jpg", fokus: [54.2, 20.1], ociSiroka: [[54.4, 18.6], [56.1, 19.0]],
       gold: 0,
       zadaci: [
         { naziv: "Herbalism i Skinning; Righteous Fury čim ga naučiš, u svakom dungeonu", od: 1, do: 10, gotovo: false },

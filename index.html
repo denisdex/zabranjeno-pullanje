@@ -525,6 +525,8 @@ section[id] { scroll-margin-top: 84px; }
 .prof-art .siroki .pl { inset: -2%; }
 .prof-art .siroki .fig { top: 0; width: 100%; height: 100%; aspect-ratio: auto; animation: none; -webkit-mask-image: none; mask-image: none; }
 .prof-art .siroki .eye { width: 3.2%; }
+.prof-art .siroki .ph { padding-bottom: 16%; gap: 10px; }
+.prof-art .siroki .ph svg { width: 19%; }
 .prof-art .p-top { padding-right: 68px; }
 .prof-info { padding: clamp(20px, 3.4vw, 36px); display: grid; gap: 26px; align-content: start; min-width: 0; }
 .prof-row { display: grid; gap: 22px; grid-template-columns: minmax(0, 1fr); }
@@ -1561,25 +1563,33 @@ footer .f-kino:hover { color: var(--bone); }
 .sp-dana { position: fixed; left: 0; right: 0; top: 50%; z-index: 204; margin: 0; pointer-events: none; text-align: center; opacity: 0;
   font: 900 clamp(2.4rem, 8vw, 6.5rem)/.9 var(--f-display); text-transform: uppercase; color: #ffd27a; text-shadow: 0 0 40px rgba(255, 140, 40, .85), 0 0 4px rgba(255, 230, 180, .9); }
 .sp-van { transition: opacity .2s; opacity: 0 !important; }
-/* roster reveal: igrač po igrač, dijagonalni rez u boji klase */
+/* roster reveal: igrač po igrač; velika slika (široki kadar, data.js siroka) preko ~64 % ekrana s jedne strane,
+   dijagonalni rez u boji klase, ime i fora s druge strane; na mobitelu slika gore (60 % visine), tekst ispod */
 .sp-ros { position: fixed; inset: 0; z-index: 202; pointer-events: none; overflow: hidden; }
-.sp-ig { position: absolute; inset: 0; display: grid; grid-template-columns: minmax(0, 44fr) minmax(0, 56fr); align-items: center; gap: 4vw; padding: 0 7vw; visibility: hidden; }
-.sp-ig.desno { grid-template-columns: minmax(0, 56fr) minmax(0, 44fr); }
-.sp-ig.desno .sp-por { order: 2; }
-.sp-rez {
-  position: absolute; top: -20%; bottom: -20%; left: 20%; width: 34%; transform: skewX(-14deg); opacity: .55; mix-blend-mode: screen;
-  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--c) 55%, transparent) 25%, var(--c) 50%, color-mix(in srgb, var(--c) 55%, transparent) 75%, transparent);
+.sp-ig { --w: 64vw; --d: 9vw; position: absolute; inset: 0; visibility: hidden; }
+.sp-sl { position: absolute; top: 0; bottom: 0; left: 0; width: var(--w); overflow: hidden; background: var(--iron); clip-path: polygon(0 0, 100% 0, calc(100% - var(--d)) 100%, 0 100%); }
+.sp-ig.desno .sp-sl { left: auto; right: 0; clip-path: polygon(var(--d) 0, 100% 0, 100% 100%, 0 100%); }
+.sp-sl img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: var(--fx, 50%) var(--fy, 30%); transform-origin: var(--fx, 50%) var(--fy, 30%); }
+.sp-sl::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(120% 95% at 50% 35%, transparent 50%, rgba(8, 6, 5, .6) 100%), linear-gradient(180deg, transparent 62%, rgba(8, 6, 5, .55));
 }
-.sp-ig.desno .sp-rez { left: auto; right: 20%; transform: skewX(14deg); }
-.sp-por { position: relative; height: min(72vh, 640px); aspect-ratio: 3 / 4; max-width: 100%; justify-self: center; display: grid; place-items: center; }
-.sp-por img { width: 100%; height: 100%; object-fit: cover; -webkit-mask-image: linear-gradient(180deg, #000 68%, transparent); mask-image: linear-gradient(180deg, #000 68%, transparent); }
-.sp-por svg, .sp-tc svg { width: 72%; height: auto; color: var(--c); filter: drop-shadow(0 0 24px var(--c)); }
+/* Pero dok nema art: veliki grb klase u istoj obradi */
+.sp-gr {
+  position: absolute; inset: 0; display: grid; place-items: center;
+  background: radial-gradient(circle at 50% 45%, color-mix(in srgb, var(--c) 28%, transparent), transparent 62%), repeating-linear-gradient(135deg, rgba(236, 226, 212, .04) 0 1px, transparent 1px 12px), var(--iron);
+}
+.sp-gr svg { width: min(44%, 50vh); height: auto; color: var(--c); filter: drop-shadow(0 0 30px var(--c)); }
+.sp-tc svg { width: 72%; height: auto; color: var(--c); filter: drop-shadow(0 0 24px var(--c)); }
+.sp-rez { position: absolute; inset: 0; filter: drop-shadow(0 0 14px var(--c)); }
+.sp-rez i { position: absolute; inset: 0; background: var(--c); clip-path: polygon(calc(var(--w) - 3px) 0, calc(var(--w) + 4px) 0, calc(var(--w) - var(--d) + 4px) 100%, calc(var(--w) - var(--d) - 3px) 100%); }
+.sp-ig.desno .sp-rez i { clip-path: polygon(calc(100% - var(--w) + var(--d) - 4px) 0, calc(100% - var(--w) + var(--d) + 3px) 0, calc(100% - var(--w) + 3px) 100%, calc(100% - var(--w) - 4px) 100%); }
 .sp-mono { font: 900 clamp(6rem, 20vw, 16rem)/1 var(--f-display); color: var(--c); }
-.sp-txt { position: relative; display: grid; gap: 14px; justify-items: start; }
-.sp-ig.desno .sp-txt { justify-items: end; text-align: right; }
-.sp-ime { margin: 0; font: 900 clamp(4rem, 12vw, 12rem)/.8 var(--f-display); text-transform: uppercase; color: var(--bone); text-shadow: 0 0 50px color-mix(in srgb, var(--c) 70%, transparent); }
+.sp-txt { position: absolute; top: 50%; left: calc(var(--w) + 1vw); right: 5vw; transform: translateY(-50%); display: grid; gap: 14px; justify-items: start; }
+.sp-ig.desno .sp-txt { left: 5vw; right: calc(var(--w) + 1vw); justify-items: end; text-align: right; }
+.sp-ime { margin: 0; font: 900 clamp(3.4rem, 8.4vw, 10rem)/.8 var(--f-display); text-transform: uppercase; color: var(--bone); text-shadow: 0 0 50px color-mix(in srgb, var(--c) 70%, transparent); }
 .sp-lik { margin: 0; color: var(--c); font-size: .75rem; }
-.sp-fora { margin: 0; max-width: 17ch; font: 800 clamp(1.5rem, 3.1vw, 3rem)/1 var(--f-display); text-transform: uppercase; color: var(--bone); }
+.sp-fora { margin: 0; max-width: 15ch; font: 800 clamp(1.3rem, 2.5vw, 2.7rem)/1 var(--f-display); text-transform: uppercase; color: var(--bone); }
 .sp-fora::before { content: ""; display: block; width: 46px; height: 3px; margin-bottom: 14px; background: var(--c); box-shadow: 0 0 12px var(--c); }
 .sp-ig.desno .sp-fora::before { margin-left: auto; }
 /* svih pet u jednom kadru */
@@ -1616,16 +1626,17 @@ footer .f-kino:hover { color: var(--bone); }
 .sp-skip:hover span, .sp-skip:focus-visible span { color: var(--night); }
 .sp-zvuk { order: -1; font: 500 .6875rem/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--bone); border: 1px solid rgba(236, 226, 212, .3); }
 .sp-zvuk:hover, .sp-zvuk:focus-visible { outline: none; color: var(--ember); border-color: var(--ember); }
-/* mobitel: portret gore, tekst ispod, rezovi ulaze odozgo i odozdo */
+/* mobitel: slika preko gornjih 60 %, kosi donji rub u boji klase, tekst ispod */
 @media (max-width: 639px) {
-  .sp-ig, .sp-ig.desno { grid-template-columns: minmax(0, 1fr); align-content: center; gap: 16px; padding: 0 20px; }
-  .sp-ig.desno .sp-por { order: 0; }
-  .sp-ig .sp-txt, .sp-ig.desno .sp-txt { justify-items: center; text-align: center; }
-  .sp-por { height: 42vh; }
-  .sp-rez, .sp-ig.desno .sp-rez { left: -20%; right: -20%; width: auto; top: 14%; bottom: auto; height: 30%; transform: skewY(-10deg); }
-  .sp-ig.desno .sp-rez { transform: skewY(10deg); }
-  .sp-ime { font-size: clamp(3.4rem, 19vw, 6rem); }
-  .sp-fora { max-width: 20ch; font-size: clamp(1.2rem, 6vw, 1.8rem); }
+  .sp-sl, .sp-ig.desno .sp-sl { left: 0; right: 0; width: auto; top: 0; bottom: auto; height: 60%; clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%); }
+  .sp-ig.desno .sp-sl { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 88%); }
+  .sp-rez i { clip-path: polygon(0 calc(60% - 3px), 100% calc(52.8% - 3px), 100% calc(52.8% + 4px), 0 calc(60% + 4px)); }
+  .sp-ig.desno .sp-rez i { clip-path: polygon(0 calc(52.8% - 3px), 100% calc(60% - 3px), 100% calc(60% + 4px), 0 calc(52.8% + 4px)); }
+  .sp-gr svg { width: min(52%, 30vh); }
+  .sp-txt, .sp-ig.desno .sp-txt { top: 63%; left: 20px; right: 20px; transform: none; justify-items: center; text-align: center; }
+  .sp-fora::before, .sp-ig.desno .sp-fora::before { margin-inline: auto; }
+  .sp-ime { font-size: clamp(3.2rem, 17vw, 5.5rem); }
+  .sp-fora { max-width: 20ch; font-size: clamp(1.15rem, 5.6vw, 1.7rem); }
   .sp-lik { font-size: .5625rem; letter-spacing: .05em; }
   /* kadrovi na mobitelu: vodoravna filmska traka na sredini, natpis ispod */
   .sp-kad img { top: 24vh; bottom: auto; height: 40vh; }
@@ -1958,10 +1969,16 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
         if (p.foto) return '<img src="' + p.foto + '" alt="">';
         return (Z.grb && Z.grb[p.klasa]) || '<b class="sp-mono" data-klasa="' + p.klasa + '">' + p.klasa.charAt(0) + "</b>";
       }
+      // velika slika u revealu: široki kadar (ili portret), izrez i Ken Burns oko glave (data.js fokus); bez slike veliki grb klase
+      function velika(p) {
+        var f = p.fokus || [50, 30], src = p.siroka || p.foto;
+        if (src) return '<img src="' + src + '" alt="" style="--fx:' + f[0] + "%;--fy:" + f[1] + '%">';
+        return '<div class="sp-gr">' + portret(p) + "</div>";
+      }
       var kartice = ekipa.map(function (p, i) {
         var k = el("div", "sp-ig" + (i % 2 ? " desno" : ""), ros);
         k.style.setProperty("--c", BOJE[p.klasa] || "#ece2d4");
-        k.innerHTML = '<i class="sp-rez"></i><div class="sp-por">' + portret(p) + '</div><div class="sp-txt"><p class="sp-ime"></p><p class="sp-lik mono"></p><p class="sp-fora"></p></div>';
+        k.innerHTML = '<div class="sp-sl">' + velika(p) + '</div><div class="sp-rez"><i></i></div><div class="sp-txt"><p class="sp-ime"></p><p class="sp-lik mono"></p><p class="sp-fora"></p></div>';
         k.querySelector(".sp-ime").textContent = p.igrac;
         k.querySelector(".sp-lik").textContent = p.lik + " · " + p.klasa + " · " + p.uloga;
         k.querySelector(".sp-fora").textContent = fore[p.igrac] || "";
@@ -2031,16 +2048,17 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
         t += .35;
       }
 
-      // roster reveal: svaki s druge strane dijagonalnim rezom u boji klase; stoji ~2,8 s da se fora pročita
+      // roster reveal: slika klizne s ruba (na mobitelu odozgo), rez u boji klase, pa ime i fora; stoji ~2,8 s da se fora pročita,
+      // a slika za to vrijeme polako zumira prema glavi i klizi (Ken Burns)
+      var uski = window.matchMedia("(max-width: 639px)").matches;
       kartice.forEach(function (k, i) {
         var zadnja = i === kartice.length - 1, Dk = zadnja ? 3.3 : 2.8, s = i % 2 ? 1 : -1;
-        var rez = k.querySelector(".sp-rez"), por = k.querySelector(".sp-por"), ime = k.querySelector(".sp-ime"), lik = k.querySelector(".sp-lik"), fora = k.querySelector(".sp-fora");
-        var os = mob ? "yPercent" : "xPercent", po = mob ? "y" : "x", ul = {}, pu = {}, iz = {};
-        ul[os] = s * 260; pu[po] = s * (mob ? 90 : 140); iz[po] = -s * (mob ? 70 : 120);
+        var sl = k.querySelector(".sp-sl"), slika = sl.firstElementChild, rez = k.querySelector(".sp-rez"), ime = k.querySelector(".sp-ime"), lik = k.querySelector(".sp-lik"), fora = k.querySelector(".sp-fora");
         tl.set(k, { visibility: "visible", opacity: 1 }, t)
           .call(function () { zvuk("swoosh"); }, null, t)
-          .fromTo(rez, ul, (function () { var o = { duration: .3, ease: "power3.out" }; o[os] = 0; return o; })(), t)
-          .fromTo(por, (function () { var o = { opacity: 0 }; o[po] = pu[po]; return o; })(), (function () { var o = { opacity: 1, duration: .35, ease: "power3.out" }; o[po] = 0; return o; })(), t + .04)
+          .fromTo(sl, uski ? { yPercent: -100 } : { xPercent: s * 100 }, { xPercent: 0, yPercent: 0, duration: .45, ease: "power3.out" }, t)
+          .fromTo(slika, { scale: 1.04, xPercent: s * 1.5 }, { scale: 1.14, xPercent: -s * 1.5, duration: Dk + .3, ease: "none" }, t)
+          .fromTo(rez, { opacity: 0 }, { opacity: 1, duration: .2 }, t + .32)
           .fromTo(ime, { scale: zadnja ? 2.3 : 1.5, opacity: 0 }, { scale: 1, opacity: 1, duration: zadnja ? .24 : .2, ease: "power4.in" }, t + .1)
           .fromTo(lik, { y: 14, opacity: 0 }, { y: 0, opacity: 1, duration: .22 }, t + .3)
           .fromTo(fora, { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: .28 }, t + .42);
@@ -2049,7 +2067,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
             .fromTo(blj, { opacity: 0 }, { opacity: 1, duration: .07, yoyo: true, repeat: 1 }, t + .34);
           tres(t + .34, 1.4);
         }
-        tl.to(k, (function () { var o = { opacity: 0, duration: .25, ease: "power2.in" }; o[po] = iz[po]; return o; })(), t + Dk - .25);
+        tl.to(k, { opacity: 0, duration: .25, ease: "power2.in" }, t + Dk - .25);
         t += Dk;
       });
       // svih 5 u jednom kadru
@@ -2999,8 +3017,8 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
 
   function portretHtml(p, idx, veliki) {
     var r = ULOGA[p.uloga];
-    // u profilu široki kadar (data.js siroka), ako ga lik ima, stoji kao zaglavlje umjesto portreta
-    var sir = veliki && p.siroka, slika = sir ? p.siroka : p.foto, oci = sir ? p.ociSiroka : p.oci;
+    // u profilu široki kadar (data.js siroka) stoji kao zaglavlje umjesto portreta; tko nema ni sliku dobije grb u istom formatu
+    var sir = veliki && (p.siroka || !p.foto), slika = sir ? p.siroka : p.foto, oci = sir ? p.ociSiroka : p.oci;
     var h = slika
       ? '<div class="pl"><div class="fig" style="--t:' + (8.6 + idx * .55).toFixed(2) + "s;--d:-" + (idx * 1.9).toFixed(1) + 's">' +
           '<img src="' + esc(slika) + '" alt="' + esc(p.lik) + ', ' + esc(p.rasa) + " " + esc(p.klasa) + '" loading="lazy"><i class="tint"></i>' +
