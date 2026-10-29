@@ -114,25 +114,71 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   display: flex; justify-content: space-between; align-items: center; gap: 10px 20px; flex-wrap: wrap;
   padding-block: 10px; color: var(--dust);
 }
-.menu { display: flex; gap: 4px; }
-.menu a {
+/* izbornik: Ekipa, News, tri padajuće grupe, desno ▶ Intro (otvara ulaz); na mobitelu hamburger i ladica */
+.menu { display: flex; align-items: center; gap: 4px; }
+.nav-l { display: flex; gap: 2px; margin: 0; padding: 0; list-style: none; }
+.nav-l > li { position: relative; }
+.nav-l a, .dd-b {
+  display: inline-flex; align-items: center; gap: 7px; padding: 10px 12px; cursor: pointer; white-space: nowrap;
   font: 500 .6875rem/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--dust); text-decoration: none;
-  padding: 10px 12px; white-space: nowrap; border: 1px solid transparent; transition: color .2s, border-color .2s;
+  background: none; border: 1px solid transparent; transition: color .2s, border-color .2s, background .2s;
 }
-.menu a:hover { color: var(--bone); }
-.menu .intro-btn {
-  font: 500 .6875rem/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ember); background: none;
+.nav-l a:hover, .dd-b:hover, .dd.otv .dd-b { color: var(--bone); }
+.nav-l > li > a.on, .dd-b.on { color: var(--ember); border-color: rgba(255, 122, 46, .35); }
+.nav-l a:focus-visible, .dd-b:focus-visible { outline: 2px solid var(--ember); outline-offset: -2px; }
+.dd-s { font-size: .8em; transition: transform .2s; }
+.dd.otv .dd-s { transform: rotate(180deg); }
+.dd-p {
+  position: absolute; top: calc(100% + 6px); left: 0; z-index: 25; min-width: 190px; display: grid; padding: 6px;
+  background: rgba(16, 12, 10, .97); border: 1px solid var(--line); box-shadow: 0 18px 40px rgba(0, 0, 0, .55);
+  opacity: 0; visibility: hidden; transform: translateY(-4px); transition: opacity .15s, transform .15s, visibility 0s .15s;
+}
+.dd-p::before { content: ""; position: absolute; left: 0; right: 0; bottom: 100%; height: 8px; }
+.dd.otv .dd-p { opacity: 1; visibility: visible; transform: none; transition: opacity .15s, transform .15s; }
+.dd-p a { display: flex; padding: 12px; border: 0; }
+.dd-p a:hover { background: rgba(255, 122, 46, .08); }
+.dd-p a.on { color: var(--ember); }
+.menu .intro-btn, .nav-lad .intro-btn {
+  font: 500 .6875rem/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ember); background: none; cursor: pointer;
   padding: 10px 12px; white-space: nowrap; border: 1px solid rgba(255, 122, 46, .35); transition: color .2s, border-color .2s, background .2s;
 }
-.menu .intro-btn:hover { background: rgba(255, 122, 46, .1); }
-.menu a.on { color: var(--ember); border-color: rgba(255, 122, 46, .35); }
-@media (max-width: 900px) {
-  .menu { flex-basis: 100%; overflow-x: auto; scrollbar-width: none; margin-inline: calc(var(--gut) * -1); padding-inline: var(--gut); scroll-snap-type: x proximity; }
-  .menu::-webkit-scrollbar { display: none; }
-  .menu a { scroll-snap-align: start; border-color: var(--line); padding: 9px 12px; }
+.menu .intro-btn { margin-left: 12px; }
+.menu .intro-btn:hover, .nav-lad .intro-btn:hover { background: rgba(255, 122, 46, .1); }
+.ham { display: none; width: 44px; height: 44px; padding: 0; cursor: pointer; background: none; border: 1px solid var(--line); color: var(--bone); }
+.ham span, .ham span::before, .ham span::after { display: block; width: 18px; height: 2px; margin: auto; background: currentColor; position: relative; }
+.ham span::before, .ham span::after { content: ""; position: absolute; left: 0; }
+.ham span::before { top: -6px; }
+.ham span::after { top: 6px; }
+.ham:focus-visible { outline: 2px solid var(--ember); outline-offset: 2px; }
+/* ladica izbornika na mobitelu: grupe kao naslovi, stavke ispod, ▶ Intro na dnu */
+.nav-lad { position: fixed; inset: 0; z-index: 50; }
+.nav-lad[hidden] { display: none; }
+.nav-lad-bg { position: absolute; inset: 0; background: rgba(0, 0, 0, .6); animation: navBg .2s ease both; }
+.nav-lad-p {
+  position: absolute; top: 0; right: 0; bottom: 0; width: min(320px, 86vw); overflow-y: auto; overscroll-behavior: contain;
+  display: flex; flex-direction: column; padding: max(14px, env(safe-area-inset-top)) 24px max(24px, env(safe-area-inset-bottom));
+  background: #110d0b; border-left: 1px solid var(--line); animation: navIn .25s var(--ease) both;
 }
+.nav-lad-p:focus { outline: none; }
+.nav-x { align-self: flex-end; width: 44px; height: 44px; margin-right: -10px; cursor: pointer; background: none; border: 0; color: var(--dust); font: 300 2rem/1 var(--f-body); }
+.nav-x:hover { color: var(--bone); }
+.nav-lad a { padding: 10px 0; font: 800 1.6rem/1 var(--f-display); letter-spacing: .02em; text-transform: uppercase; color: var(--bone); text-decoration: none; }
+.nav-lad a.on { color: var(--ember); }
+.nav-lad h3 { margin: 20px 0 4px; font: 500 .625rem/1 var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--dust); }
+.nav-lad .intro-btn { margin-top: auto; padding: 14px; font-size: .75rem; }
+.nav-lad-in { display: flex; flex-direction: column; margin-bottom: 28px; }
+@keyframes navBg { from { opacity: 0; } }
+@keyframes navIn { from { transform: translateX(100%); } }
+@media (max-width: 760px) {
+  .nav-l, .menu .intro-btn { display: none; }
+  .ham { display: grid; }
+}
+@media (min-width: 761px) { .nav-lad { display: none; } }
+/* tablet: izbornik i natpis guilda ne stanu u jedan red, ostaje samo logo */
+@media (min-width: 761px) and (max-width: 1099px) { .sig-ime { display: none; } }
+@media (prefers-reduced-motion: reduce) { .nav-lad-bg, .nav-lad-p { animation: none; } }
 section[id] { scroll-margin-top: 84px; }
-@media (max-width: 900px) { section[id] { scroll-margin-top: 112px; } }
+@media (max-width: 760px) { section[id] { scroll-margin-top: 72px; } }
 .top .sig { display: flex; align-items: center; gap: 10px; color: var(--bone); }
 .crest-btn { all: unset; cursor: pointer; display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%; -webkit-tap-highlight-color: transparent; }
 .crest-btn img { width: 46px; height: 46px; display: block; transition: transform .25s var(--ease); }
@@ -1537,18 +1583,19 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
 }
 .sp-udi:hover, .sp-udi:focus-visible { outline: none; background: linear-gradient(180deg, #ffd27a, #ff9a5c); }
 @keyframes udiPuls { 50% { box-shadow: 0 0 0 1px #3a1a08, 0 0 70px rgba(255, 122, 46, .75); } }
-.sp-ulaz .mono { margin: 0; color: var(--dust); font-size: .625rem; }
 /* dva izbora: web s introm ili cinematic Zaprešić → Azeroth */
-.sp-izbor { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
-.sp-izbor > * { display: grid; gap: 8px; justify-items: center; width: min(290px, 86vw); padding: 18px 22px; }
-.sp-izbor small { font: 400 .625rem/1.5 var(--f-mono); letter-spacing: .12em; text-transform: none; }
+.sp-izbor { display: grid; gap: 10px; width: min(460px, 100%); }
+.sp-izbor .sp-udi { display: grid; gap: 8px; justify-items: center; padding: 20px 22px; font-size: 2rem; }
+.sp-dva { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.sp-izbor small { font: 400 .625rem/1.5 var(--f-mono); letter-spacing: .1em; text-transform: none; text-wrap: balance; }
 .sp-udi small { color: #4a2410; }
-.sp-cin {
-  cursor: pointer; text-decoration: none; color: var(--bone); background: rgba(12, 9, 8, .6); border: 1px solid rgba(255, 122, 46, .45);
-  font: 900 1.7rem/1 var(--f-display); letter-spacing: .04em; text-transform: uppercase; transition: border-color .2s, background .2s;
+.sp-alt {
+  display: grid; gap: 8px; justify-items: center; align-content: center; padding: 16px 12px; cursor: pointer; text-decoration: none;
+  color: var(--bone); background: rgba(12, 9, 8, .6); border: 1px solid rgba(255, 122, 46, .45);
+  font: 900 1.35rem/1 var(--f-display); letter-spacing: .04em; text-transform: uppercase; transition: border-color .2s, background .2s;
 }
-.sp-cin small { color: var(--dust); }
-.sp-cin:hover, .sp-cin:focus-visible { outline: none; border-color: var(--ember); background: rgba(255, 122, 46, .1); }
+.sp-alt small { color: var(--dust); letter-spacing: .03em; }
+.sp-alt:hover, .sp-alt:focus-visible { outline: none; border-color: var(--ember); background: rgba(255, 122, 46, .1); }
 /* mobitel: portret gore, tekst ispod, rezovi ulaze odozgo i odozdo */
 @media (max-width: 639px) {
   .sp-ig, .sp-ig.desno { grid-template-columns: minmax(0, 1fr); align-content: center; gap: 16px; padding: 0 20px; }
@@ -1643,10 +1690,11 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
 <script>
 /* ---------- intro (splash) ----------
    Svaki dolazak na web (i refresh): puni cinematic ~34 s (žeravica, grb, natpis, 3D logo, montaža Forever kadrova, roster reveal ekipe, JOŠ N DANA, rascjep).
-   Link s hashom: 0,6 s. Reduced-motion: 0,4 s fade. Gumb "▶ Intro" u izborniku ga pušta ponovno.
-   Prije automatskog punog introa ulaz s dva izbora: "▶ Uđi na web" otključa glazbu (preglednik traži gestu) i pusti intro, s glazbom;
-   "▶ Cinematic" vodi na zapresic.html?odmah (bez njihovog ulaza). Povratak odande (./?web) ide bez ulaza, s kratkim introm.
-   Preskače se gumbom Preskoči, Esc, Space, klikom ili scrollom.
+   Link s hashom: 0,6 s. Reduced-motion: 0,4 s fade.
+   Prije punog introa ulaz s tri izbora (klik je gesta pa glazba smije krenuti): "▶ Uđi na web" otključa glazbu i ide ravno na web,
+   "▶ Intro" pusti puni intro s glazbom, "▶ Cinematic" vodi na zapresic.html?odmah (ima svoj zvuk, bez Orgrimmara).
+   Esc, Enter i scroll na ulazu = Uđi na web. Gumb "▶ Intro" u izborniku ponovno otvara ulaz.
+   Povratak s cinematica (./?web) ide bez ulaza, s kratkim introm. Intro se preskače gumbom Preskoči, Esc, Space, klikom ili scrollom.
    ?sp=4.2 zaustavi intro u toj sekundi (za screenshotove). */
 (function () {
   var H = document.documentElement, D = window.HORDE || {};
@@ -1667,17 +1715,16 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     try { history.replaceState(null, "", location.pathname + location.hash); } catch (e) {}
     return true;
   }
-  // gumb "▶ Intro" u izborniku
+  // gumb "▶ Intro" u izborniku (i u ladici na mobitelu) otvara ulaz s izborom
   document.addEventListener("click", function (e) {
-    if (!e.target.closest || !e.target.closest("#introBtn") || radi) return;
+    if (!e.target.closest || !e.target.closest("#introBtn, .js-intro") || radi) return;
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: "instant" });
-    pusti(reduce ? "fade" : "puni", true);
+    pusti("puni");
   });
   pusti(nacin());
 
-  // izGumba: pokrenut gumbom ▶ Intro (taj klik je već gesta, pa nema ulaza)
-  function pusti(mod, izGumba) {
+  function pusti(mod) {
     radi = true;
     var mob = window.innerWidth < 640 || window.matchMedia("(pointer: coarse)").matches;
     H.classList.add("sp-on");
@@ -1762,21 +1809,37 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
 
     function zvuk(v) { if (window.zpZvuk) window.zpZvuk(v); }
     function zakljucan() { var s = window.zpZvukStanje && window.zpZvukStanje(); return !!(s && !s.otkljucano && !s.muted && s.v > 0); }
-    // ulaz: crni ekran s grbom i gumbom; intro čeka klik da glazba i slika krenu zajedno
-    var ceka = mod === "puni" && !izGumba && !dbg, ulazEl = null, mirujeDo = 0;
+    // ulaz: crni ekran s grbom i tri izbora; intro čeka klik da glazba i slika krenu zajedno
+    var ceka = mod === "puni" && !dbg, ulazEl = null, mirujeDo = 0;
     if (ceka) {
       zar.a = 0;
+      skip.style.visibility = "hidden";
       ulazEl = el("div", "sp-ulaz");
       ulazEl.removeAttribute("aria-hidden");
       ulazEl.innerHTML = '<img src="assets/logo-zp.svg" alt=""><div class="sp-izbor">' +
-        '<button type="button" class="sp-udi">▶ Uđi na web<small>Intro s ekipom · 34 s</small></button>' +
-        '<a class="sp-cin" href="zapresic.html?odmah">▶ Cinematic<small>Zaprešić → Azeroth · 25 s</small></a></div>' +
-        '<p class="mono">Uz glazbu iz Orgrimmara · Esc ulazi bez introa</p>';
+        '<button type="button" class="sp-udi">▶ Uđi na web<small>Uz glazbu iz Orgrimmara</small></button>' +
+        '<div class="sp-dva"><button type="button" class="sp-alt sp-int">▶ Intro<small>Ekipa i Forever · 34 s</small></button>' +
+        '<a class="sp-alt" href="zapresic.html?odmah">▶ Cinematic<small>Zaprešić → Azeroth · 25 s</small></a></div></div>';
+      ulazEl.addEventListener("click", function (e) {
+        var b = e.target.closest && e.target.closest("button");
+        if (b && b.classList.contains("sp-udi")) udi();
+        else if (b && b.classList.contains("sp-int")) kreni();
+      });
       svi.push(ulazEl);
+      setTimeout(function () { var b = ulazEl.querySelector(".sp-udi"); if (b) b.focus({ preventScroll: true }); }, 0);
     } else if (mod === "puni" && window.zpGlazba) window.zpGlazba.intro(true);
+    function udi() {
+      if (!ceka || gotovo) return;
+      if (window.zpGlazba) window.zpGlazba.otkljucaj();
+      preskoci();
+    }
     function kreni() {
       if (!ceka || gotovo) return;
       ceka = false; zar.a = 1;
+      skip.style.visibility = "";
+      // intro se složio dok grbovi klasa još nisu bili učitani: zamjensko slovo zamijeni grbom
+      var grbovi = window.zpIntro && window.zpIntro.grb;
+      if (grbovi) Array.prototype.forEach.call(ros.querySelectorAll("b.sp-mono[data-klasa]"), function (b) { if (grbovi[b.dataset.klasa]) b.outerHTML = grbovi[b.dataset.klasa]; });
       mirujeDo = performance.now() + 600;
       if (window.zpGlazba) { window.zpGlazba.otkljucaj(); window.zpGlazba.intro(true); }
       ulazEl.classList.add("sp-van");
@@ -1808,23 +1871,18 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       setTimeout(kraj, 210);
     }
     function ulaz(e) {
-      // dok čeka ulaz: "Uđi na web", Enter ili Space kreće s glazbom; Esc, Preskoči i scroll preskaču;
-      // "Cinematic" je obična poveznica, klik u prazno ne radi ništa
+      // dok čeka ulaz: gumbi rade sami (klik, Enter i Space na fokusiranom gumbu); Esc, Enter bez fokusa i scroll = Uđi na web;
+      // klik u prazno ne radi ništa, a pomak prsta odmah nakon dodira nije scroll
       if (ceka) {
-        var naCin = e.target.closest && e.target.closest(".sp-cin");
         if (e.type === "keydown") {
-          if (e.key === "Escape") { e.preventDefault(); preskoci(); }
-          else if (!naCin && (e.key === "Enter" || e.key === " " || e.key === "Spacebar")) { e.preventDefault(); kreni(); }
+          var naGumbu = ulazEl.contains(document.activeElement) && document.activeElement !== ulazEl;
+          if (e.key === "Escape") { e.preventDefault(); udi(); }
+          else if (!naGumbu && (e.key === "Enter" || e.key === " " || e.key === "Spacebar")) { e.preventDefault(); udi(); }
           return;
         }
-        if (e.type === "pointerdown") {
-          if (skip && skip.contains(e.target)) return preskoci();
-          if (naCin) mirujeDo = performance.now() + 600;
-          else if (e.target.closest && e.target.closest(".sp-udi")) kreni();
-          return;
-        }
+        if (e.type === "pointerdown") { mirujeDo = performance.now() + 600; return; }
         if (performance.now() < mirujeDo) return;
-        return preskoci();
+        return udi();
       }
       // pomak prsta odmah nakon dodira na "Uđi" nije scroll
       if ((e.type === "touchmove" || e.type === "wheel") && performance.now() < mirujeDo) return;
@@ -1909,7 +1967,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       var ekipa = (D.igraci || []).slice().sort(function (a, b) { return (a.uloga === "Tank") - (b.uloga === "Tank"); });
       function portret(p) {
         if (p.foto) return '<img src="' + p.foto + '" alt="">';
-        return (Z.grb && Z.grb[p.klasa]) || '<b class="sp-mono">' + p.klasa.charAt(0) + "</b>";
+        return (Z.grb && Z.grb[p.klasa]) || '<b class="sp-mono" data-klasa="' + p.klasa + '">' + p.klasa.charAt(0) + "</b>";
       }
       var kartice = ekipa.map(function (p, i) {
         var k = el("div", "sp-ig" + (i % 2 ? " desno" : ""), ros);
@@ -1925,7 +1983,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       tim.innerHTML = '<div class="red">' + (D.igraci || []).map(function (p) {
         return '<div class="sp-tc" style="--c:' + (BOJE[p.klasa] || "#ece2d4") + '"><div class="ok">' + portret(p) + "</div><b></b></div>";
       }).join("") + '</div><p class="uloge">' + uloge.Tank + " Tank<em>/</em>" + uloge.Healer + " Healer<em>/</em>" + uloge.DPS + " DPS</p>";
-      Array.prototype.forEach.call(tim.querySelectorAll(".sp-tc b"), function (b, i) { b.textContent = D.igraci[i].igrac; });
+      Array.prototype.forEach.call(tim.querySelectorAll(".sp-tc > b"), function (b, i) { b.textContent = D.igraci[i].igrac; });
 
       g.set(nas, { x: nx, y: ny, scale: sT });
       g.set(dana, { yPercent: -50 });
@@ -2043,14 +2101,33 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
 <header class="top">
   <div class="wrap mono">
     <span class="sig">
-      <button class="crest-btn" id="crest" type="button" aria-label="Logo guilda"><img src="assets/logo-zp.svg" alt="" width="46" height="46"></button>
-      &lt;Zabranjeno pullanje&gt;
+      <button class="crest-btn" id="crest" type="button" aria-label="Na vrh stranice"><img src="assets/logo-zp.svg" alt="" width="46" height="46"></button>
+      <span class="sig-ime">&lt;Zabranjeno pullanje&gt;</span>
     </span>
     <nav class="menu" id="menu" aria-label="Sekcije">
-      <a href="#odbrojavanje">Countdown</a><a href="#ekipa">Ekipa</a><a href="#novosti">News &amp; Updates</a><a href="#upute">Upute</a><a href="#roadmap">Roadmap</a><a href="#dungeoni">Dungeoni</a><a href="#ekonomija">Ekonomija</a><a href="#profesije">Profesije</a><a href="#savjeti">Savjeti</a><a href="#addoni">Addoni</a><a href="#macroi">Macroi</a><button type="button" class="intro-btn" id="introBtn" aria-label="Pusti intro">▶ Intro</button><a class="intro-btn" href="zapresic.html?odmah" aria-label="Cinematic Zaprešić → Azeroth">▶ Cinematic</a>
+      <ul class="nav-l" id="navL">
+        <li><a href="#ekipa">Ekipa</a></li>
+        <li><a href="#novosti">News</a></li>
+        <li class="dd"><button type="button" class="dd-b" aria-expanded="false" aria-controls="ddPlan">Plan<span class="dd-s" aria-hidden="true">▾</span></button>
+          <div class="dd-p" id="ddPlan"><a href="#roadmap">Roadmap</a><a href="#dungeoni">Dungeoni</a><a href="#upute">Upute</a></div></li>
+        <li class="dd"><button type="button" class="dd-b" aria-expanded="false" aria-controls="ddEko">Ekonomija<span class="dd-s" aria-hidden="true">▾</span></button>
+          <div class="dd-p" id="ddEko"><a href="#ekonomija">Ekonomija</a><a href="#profesije">Profesije</a></div></li>
+        <li class="dd"><button type="button" class="dd-b" aria-expanded="false" aria-controls="ddVod">Vodič<span class="dd-s" aria-hidden="true">▾</span></button>
+          <div class="dd-p" id="ddVod"><a href="#savjeti">Savjeti</a><a href="#addoni">Addoni</a><a href="#macroi">Macroi</a></div></li>
+      </ul>
+      <button type="button" class="intro-btn" id="introBtn" aria-label="Otvori ulaz: web, intro ili cinematic">▶ Intro</button>
+      <button type="button" class="ham" id="hamBtn" aria-expanded="false" aria-controls="navLad" aria-label="Otvori izbornik"><span></span></button>
     </nav>
   </div>
 </header>
+<div class="nav-lad" id="navLad" hidden>
+  <div class="nav-lad-bg" data-zatvori></div>
+  <div class="nav-lad-p" role="dialog" aria-modal="true" aria-label="Izbornik" tabindex="-1">
+    <button type="button" class="nav-x" data-zatvori aria-label="Zatvori izbornik">×</button>
+    <div class="nav-lad-in" id="navLadIn"></div>
+    <button type="button" class="intro-btn js-intro" aria-label="Otvori ulaz: web, intro ili cinematic">▶ Intro</button>
+  </div>
+</div>
 
 <main>
   <section class="hero" aria-labelledby="naslov">
@@ -3732,29 +3809,114 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     window.addEventListener("hashchange", function () { if (A) izHasha(); });
     window.addEventListener("keydown", function (e) { if (e.key === "Escape" && modal && !modal.hidden) zatvori(); });
   })();
-  /* ---------- meni: glatki scroll i aktivna stavka ---------- */
+  /* ---------- meni: padajuće grupe (hover + klik + tipkovnica), ladica na mobitelu, glatki scroll, aktivna grupa ---------- */
   (function () {
-    var veze = Array.prototype.slice.call(document.querySelectorAll('#menu a[href^="#"]'));
-    veze.forEach(function (a) {
-      a.addEventListener("click", function (e) {
-        var cilj = document.querySelector(a.getAttribute("href"));
-        if (!cilj) return;
-        e.preventDefault();
-        cilj.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
-      });
+    var navL = $("navL"), lad = $("navLad"), ham = $("hamBtn"), ladIn = $("navLadIn"), ladP = lad.querySelector(".nav-lad-p");
+    var grupe = Array.prototype.slice.call(navL.querySelectorAll(".dd"));
+    // ladica: iste stavke, grupe kao naslovi
+    Array.prototype.forEach.call(navL.children, function (li) {
+      var p = li.querySelector(".dd-p");
+      if (!p) return ladIn.appendChild(li.querySelector("a").cloneNode(true));
+      var h = document.createElement("h3");
+      h.textContent = li.querySelector(".dd-b").firstChild.textContent;
+      ladIn.appendChild(h);
+      Array.prototype.forEach.call(p.querySelectorAll("a"), function (a) { ladIn.appendChild(a.cloneNode(true)); });
     });
-    if (!("IntersectionObserver" in window)) return;
-    var io = new IntersectionObserver(function (ents) {
-      ents.forEach(function (en) {
-        if (!en.isIntersecting) return;
-        veze.forEach(function (a) {
-          var on = a.getAttribute("href") === "#" + en.target.id;
-          a.classList.toggle("on", on);
-          if (on && a.scrollIntoView && window.innerWidth <= 900) a.parentNode.scrollTo({ left: a.offsetLeft - 16, behavior: reduce ? "auto" : "smooth" });
-        });
+
+    var mis = window.matchMedia("(hover: hover) and (pointer: fine)"), otvorenoHoverom = 0;
+    function otvori(g) {
+      grupe.forEach(function (o) { if (o !== g) zatvori(o); });
+      g.classList.add("otv");
+      g.querySelector(".dd-b").setAttribute("aria-expanded", "true");
+    }
+    function zatvori(g, vratiFokus) {
+      if (!g.classList.contains("otv")) return;
+      g.classList.remove("otv");
+      var b = g.querySelector(".dd-b");
+      b.setAttribute("aria-expanded", "false");
+      if (vratiFokus) b.focus();
+    }
+    grupe.forEach(function (g) {
+      var b = g.querySelector(".dd-b"), t = null;
+      g.addEventListener("mouseenter", function () {
+        if (!mis.matches) return;
+        clearTimeout(t);
+        if (!g.classList.contains("otv")) { otvori(g); otvorenoHoverom = performance.now(); }
       });
+      g.addEventListener("mouseleave", function () { if (mis.matches) t = setTimeout(function () { zatvori(g); }, 180); });
+      // klik odmah nakon što ga je hover otvorio ga ne zatvara
+      b.addEventListener("click", function () {
+        if (!g.classList.contains("otv")) otvori(g);
+        else if (performance.now() - otvorenoHoverom > 400) zatvori(g);
+      });
+      g.addEventListener("keydown", function (e) {
+        var veze = Array.prototype.slice.call(g.querySelectorAll(".dd-p a")), i = veze.indexOf(document.activeElement);
+        if (e.key === "Escape" && g.classList.contains("otv")) { e.preventDefault(); e.stopPropagation(); zatvori(g, true); }
+        else if (e.key === "ArrowDown") { e.preventDefault(); otvori(g); (veze[i + 1] || veze[0]).focus(); }
+        else if (e.key === "ArrowUp" && i >= 0) { e.preventDefault(); if (i > 0) veze[i - 1].focus(); else b.focus(); }
+      });
+      g.addEventListener("focusout", function (e) { if (!g.contains(e.relatedTarget)) zatvori(g); });
+    });
+
+    var prije = null;
+    function otvoriLadicu() {
+      prije = document.activeElement;
+      lad.hidden = false;
+      ham.setAttribute("aria-expanded", "true");
+      document.documentElement.style.overflow = "hidden";
+      ladP.focus({ preventScroll: true });
+    }
+    function zatvoriLadicu(vratiFokus) {
+      if (lad.hidden) return;
+      lad.hidden = true;
+      ham.setAttribute("aria-expanded", "false");
+      document.documentElement.style.overflow = "";
+      if (vratiFokus && prije && prije.focus) prije.focus({ preventScroll: true });
+    }
+    ham.addEventListener("click", otvoriLadicu);
+    lad.addEventListener("click", function (e) {
+      if (e.target.closest("[data-zatvori]")) zatvoriLadicu(true);
+      else if (e.target.closest(".js-intro")) zatvoriLadicu(false);
+    });
+    lad.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") { e.stopPropagation(); zatvoriLadicu(true); return; }
+      if (e.key !== "Tab") return;
+      var f = ladP.querySelectorAll("a[href], button"), prvi = f[0], zadnji = f[f.length - 1];
+      if (e.shiftKey && (document.activeElement === prvi || document.activeElement === ladP)) { e.preventDefault(); zadnji.focus(); }
+      else if (!e.shiftKey && document.activeElement === zadnji) { e.preventDefault(); prvi.focus(); }
+    });
+    window.matchMedia("(min-width: 761px)").addEventListener("change", function (m) { if (m.matches) zatvoriLadicu(false); });
+
+    // stavka iz izbornika ili ladice: zatvori sve i glatko do sekcije; logo vodi na vrh
+    document.addEventListener("click", function (e) {
+      if (!e.target.closest) return;
+      if (!e.target.closest(".dd")) grupe.forEach(function (g) { zatvori(g); });
+      var a = e.target.closest('#menu a[href^="#"], #navLad a[href^="#"]');
+      var cilj = a && document.querySelector(a.getAttribute("href"));
+      if (!cilj) return;
+      e.preventDefault();
+      var g = a.closest(".dd");
+      if (g) { zatvori(g); g.querySelector(".dd-b").focus({ preventScroll: true }); }
+      zatvoriLadicu(false);
+      cilj.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+    });
+    $("crest").addEventListener("click", function () { window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" }); });
+
+    // aktivna stavka i grupa prema sekciji na ekranu; sekcije koje nisu u izborniku ništa ne ističu
+    if (!("IntersectionObserver" in window)) return;
+    var veze = Array.prototype.slice.call(document.querySelectorAll('#menu a[href^="#"], #navLad a[href^="#"]'));
+    function oznaci(id) {
+      var h = "#" + id;
+      veze.forEach(function (a) { a.classList.toggle("on", a.getAttribute("href") === h); });
+      grupe.forEach(function (g) {
+        var u = !!g.querySelector('a[href="' + h + '"]') || (id === "priprema" && !!g.querySelector('a[href="#savjeti"]'));
+        g.querySelector(".dd-b").classList.toggle("on", u);
+      });
+    }
+    var io = new IntersectionObserver(function (ents) {
+      ents.forEach(function (en) { if (en.isIntersecting) oznaci(en.target.id); });
     }, { rootMargin: "-35% 0px -60% 0px" });
-    veze.forEach(function (a) { var t = document.querySelector(a.getAttribute("href")); if (t) io.observe(t); });
+    Array.prototype.forEach.call(document.querySelectorAll("main section[id], main .hero"), function (s) { io.observe(s); });
   })();
   document.addEventListener("keydown", function (e) {
     if (e.key !== "Enter") return;
