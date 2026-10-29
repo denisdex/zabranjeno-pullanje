@@ -1232,18 +1232,26 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
   .pl, .fog { transform: none; }
   .fth b { animation: none; }
 }
-/* ---------- loading screen (samo prvi posjet) ---------- */
-.ucit { position: fixed; inset: 0; z-index: 100; display: grid; align-content: end; background: var(--night); }
-.ucit img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .6; filter: saturate(.85); }
-.ucit::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(12, 9, 8, .15), rgba(12, 9, 8, .3) 45%, var(--night) 94%); }
-.ucit-d { position: relative; z-index: 1; display: grid; gap: 16px; justify-items: center; text-align: center; padding: 0 max(4vw, 16px) calc(clamp(40px, 9vh, 90px) + env(safe-area-inset-bottom, 0px)); }
-.ucit p { margin: 0; max-width: 40rem; font: 800 clamp(1.5rem, 3.4vw, 2.6rem)/1.05 var(--f-display); text-transform: uppercase; color: var(--bone); text-wrap: balance; }
-.ucit p b { color: var(--ember); }
-.ucit i { display: block; width: min(440px, 72vw); height: 2px; background: rgba(236, 226, 212, .12); overflow: hidden; }
-.ucit i b { display: block; height: 100%; transform-origin: 0 50%; background: linear-gradient(90deg, var(--blood), var(--ember), #ffd27a); animation: ucitTraka 1.4s linear both; }
-@keyframes ucitTraka { from { transform: scaleX(0); } to { transform: scaleX(1); } }
-.ucit .mono { color: var(--dust); font-size: .5625rem; }
-.ucit.van { opacity: 0; transition: opacity .25s; }
+/* ---------- splash na svakom ulasku: žeravica, iskre, grb, natpis, 3D logo iz heroja, rascjep ---------- */
+.sp-pol { position: fixed; left: 0; right: 0; z-index: 200; background: var(--night); will-change: transform; }
+/* polovice se preklapaju 2 px na sredini, bez jedinica visine ekrana (na mobitelu znaju biti kraće od ekrana) */
+.sp-pol.gore { top: 0; bottom: calc(50% - 1px); background: radial-gradient(90% 120% at 50% 100%, #1c0d09, var(--night) 72%); }
+.sp-pol.dolje { top: calc(50% - 1px); bottom: 0; background: radial-gradient(90% 120% at 50% 0%, #1c0d09, var(--night) 72%); }
+.sp-cv { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 203; pointer-events: none; }
+.sp-blj { position: fixed; inset: 0; z-index: 203; pointer-events: none; opacity: 0; background: radial-gradient(60% 60% at 50% 45%, rgba(255, 236, 200, .55), rgba(255, 120, 40, .12) 45%, transparent 70%); }
+.sp-sav { position: fixed; left: 0; right: 0; top: calc(50% - 1px); height: 2px; z-index: 203; pointer-events: none; opacity: 0; background: linear-gradient(90deg, transparent, #ff7a2e 20%, #fff1c2 50%, #ff7a2e 80%, transparent); box-shadow: 0 0 18px 2px rgba(255, 140, 50, .7); }
+.sp-grb { position: fixed; left: 0; top: 0; z-index: 202; pointer-events: none; opacity: 0; filter: drop-shadow(0 0 24px rgba(193, 18, 31, .55)); }
+.sp-nas { position: fixed; left: 0; top: 0; z-index: 202; margin: 0; pointer-events: none; color: var(--bone); transform-origin: 50% 50%; text-shadow: 0 0 22px rgba(193, 18, 31, .55); }
+.sp-nas .crv { display: block; color: var(--blood); text-shadow: 0 0 26px rgba(255, 40, 30, .7); }
+.sp-nas i { display: inline-block; font-style: normal; opacity: 0; }
+.sp-dana { position: fixed; left: 0; right: 0; top: 50%; z-index: 204; margin: 0; pointer-events: none; text-align: center; opacity: 0;
+  font: 900 clamp(2.4rem, 8vw, 6.5rem)/.9 var(--f-display); text-transform: uppercase; color: #ffd27a; text-shadow: 0 0 40px rgba(255, 140, 40, .85), 0 0 4px rgba(255, 230, 180, .9); }
+.sp-van { transition: opacity .2s; opacity: 0 !important; }
+/* dok traje splash, hero logo (isti 3D objekt) smije iznad zavjese */
+html.sp-on main, html.sp-on .hero-grid { z-index: auto; }
+html.sp-on .hero { overflow: visible; }
+html.sp-on .stage { z-index: 201; opacity: 0; }
+html.sp-on .hero-main h1 { opacity: 0; }
 
 /* ---------- level up na kartici: kratki zlatni stup svjetla i LEVEL N ---------- */
 .plate-in > .lvl-up { position: absolute; inset: 0; z-index: 4; pointer-events: none; display: grid; justify-items: center; align-content: start; }
@@ -1277,8 +1285,6 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
 .ach p { margin: 0; color: var(--dust); font-size: .8125rem; line-height: 1.35; }
 @media (max-width: 640px) { .ach { bottom: calc(76px + env(safe-area-inset-bottom, 0px)); } }
 @media (prefers-reduced-motion: reduce) {
-  .ucit i b { animation: none; }
-  .ucit.van { transition: none; }
   .lvl-up i { display: none; }
   .lvl-up b, .ach, .ach.van { animation: none; }
 }
@@ -1308,33 +1314,209 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
   html :is(input:not([type="checkbox"], [type="radio"], [type="range"], [type="button"], [type="submit"]), textarea, [contenteditable="true"]) { cursor: text; }
 }
 </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 </head>
 <body>
 <script src="data.js"></script>
 <script>
-/* ---------- loading screen: samo pri prvom posjetu na uređaju, najviše 1,5 s, klik ili tipka preskače ---------- */
+/* ---------- splash na svakom ulasku (~3 s): žeravica, iskre, grb s udarnim valom, natpis, 3D logo iz heroja, JOŠ N DANA, rascjep ----------
+   Stranica se učitava iza njega. Preskače se klikom, tipkom, scrollom ili tapom. Link s hashom: kratko (0,6 s). Reduced-motion: 0,4 s fade. */
 (function () {
-  try { if (localStorage.getItem("zp-posjet")) return; localStorage.setItem("zp-posjet", "1"); } catch (e) { return; }
-  var U = (window.HORDE && window.HORDE.ucitavanje) || {}, sav = U.savjeti || [], sl = U.slike || [];
-  if (!sav.length || !sl.length) return;
+  var H = document.documentElement, D = window.HORDE || {};
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var el = document.createElement("div");
-  el.className = "ucit"; el.setAttribute("aria-hidden", "true");
-  el.innerHTML = '<img alt=""><div class="ucit-d"><p><b>Savjet:</b> <span></span></p><i><b></b></i><span class="mono">Klikni za preskok</span></div>';
-  el.querySelector("img").src = sl[Math.floor(Math.random() * sl.length)];
-  el.querySelector("p span").textContent = sav[Math.floor(Math.random() * sav.length)];
-  document.body.appendChild(el);
-  var gotovo = false;
-  function makni() {
-    if (gotovo) return;
-    gotovo = true;
-    window.removeEventListener("keydown", makni);
-    el.classList.add("van");
-    setTimeout(function () { el.remove(); }, reduce ? 0 : 260);
+  var kratko = location.hash.length > 1;
+  // ?sp=1.2 zaustavi splash u toj sekundi (za screenshotove kadrova)
+  var dbg = /[?&]sp=([\d.]+)/.exec(location.search);
+  var mob = window.innerWidth < 640 || window.matchMedia("(pointer: coarse)").matches;
+  H.classList.add("sp-on");
+  function el(tag, cls) { var e = document.createElement(tag); e.className = cls; e.setAttribute("aria-hidden", "true"); document.body.appendChild(e); return e; }
+  var gore = el("div", "sp-pol gore"), dolje = el("div", "sp-pol dolje"), cv = el("canvas", "sp-cv"), blj = el("div", "sp-blj"), sav = el("div", "sp-sav");
+  var grb = el("img", "sp-grb"), nas = el("p", "sp-nas"), dana = el("p", "sp-dana");
+  var svi = [gore, dolje, cv, blj, sav, grb, nas, dana];
+  grb.src = "assets/logo-zp.svg"; grb.alt = "";
+  dana.textContent = (function () {
+    var L = Date.parse((D.datumi || {}).launch), sad = Date.now();
+    if (!(L > 0)) return "";
+    var n = Math.ceil((L - sad) / 864e5);
+    if (n >= 1) return "Još " + n + (n % 10 === 1 && n % 100 !== 11 ? " dan" : " dana");
+    return "Dan " + (Math.floor((sad - L) / 864e5) + 1) + " na Azerothu";
+  })();
+
+  /* iskre na 2D canvasu (radi i bez WebGL-a), aditivno miješanje */
+  var cx = cv.getContext("2d"), dpr = Math.min(window.devicePixelRatio || 1, mob ? 1.5 : 2), W = 0, V = 0;
+  function vel() { W = window.innerWidth; V = window.innerHeight; cv.width = Math.round(W * dpr); cv.height = Math.round(V * dpr); cx.setTransform(dpr, 0, 0, dpr, 0, 0); }
+  vel();
+  window.addEventListener("resize", vel);
+  var SPR = (function () {
+    var c = document.createElement("canvas"); c.width = c.height = 64;
+    var g = c.getContext("2d"), r = g.createRadialGradient(32, 32, 0, 32, 32, 32);
+    r.addColorStop(0, "rgba(255,250,232,1)"); r.addColorStop(.22, "rgba(255,206,120,.95)"); r.addColorStop(.5, "rgba(255,112,32,.38)"); r.addColorStop(1, "rgba(255,60,10,0)");
+    g.fillStyle = r; g.fillRect(0, 0, 64, 64);
+    return c;
+  })();
+  var zar = { x: W / 2, y: V / 2, s: 1, a: 1 }, cest = [], valovi = [], radi = true, zadnji = 0;
+  function eksplozija() {
+    zar.a = 0;
+    for (var i = 0, n = mob ? 110 : 280; i < n; i++) {
+      var k = Math.random() * Math.PI * 2, v = 1.5 + Math.pow(Math.random(), 1.7) * (mob ? 12 : 16);
+      cest.push({ x: zar.x, y: zar.y, vx: Math.cos(k) * v, vy: Math.sin(k) * v, s: 1.2 + Math.random() * 3.2, t: 0, traj: 45 + Math.random() * 110 });
+    }
   }
-  el.addEventListener("click", makni);
-  window.addEventListener("keydown", makni);
-  setTimeout(makni, 1400);
+  function val(x, y) { valovi.push({ x: x, y: y, r: 10, a: 1 }); }
+  function crtaj(now) {
+    if (!radi) return;
+    requestAnimationFrame(crtaj);
+    var dt = zadnji ? Math.min(2.5, (now - zadnji) / 16.67) : 1;
+    zadnji = now;
+    cx.clearRect(0, 0, W, V);
+    cx.globalCompositeOperation = "lighter";
+    if (zar.a > 0) {
+      // žeravica tinja: dva brza titraja preko sporog
+      var d = 30 * zar.s * (.82 + Math.sin(now / 70) * .12 + Math.sin(now / 23) * .06);
+      cx.globalAlpha = zar.a; cx.drawImage(SPR, zar.x - d / 2, zar.y - d / 2, d, d);
+      cx.globalAlpha = zar.a * .35; cx.drawImage(SPR, zar.x - d * 1.8, zar.y - d * 1.8, d * 3.6, d * 3.6);
+    }
+    for (var i = cest.length - 1; i >= 0; i--) {
+      var c = cest[i], tr = Math.pow(.935, dt);
+      c.t += dt;
+      c.vx *= tr; c.vy = c.vy * tr - .04 * dt; // otpor zraka i uzgon: žar ide gore
+      c.x += c.vx * dt; c.y += c.vy * dt;
+      var k = 1 - c.t / c.traj;
+      if (k <= 0) { cest.splice(i, 1); continue; }
+      var dd = c.s * 4 * (.35 + k * .65);
+      cx.globalAlpha = Math.min(1, k * 1.4);
+      cx.drawImage(SPR, c.x - dd / 2, c.y - dd / 2, dd, dd);
+    }
+    for (var j = valovi.length - 1; j >= 0; j--) {
+      var w = valovi[j];
+      w.r += (Math.max(W, V) * .85 - w.r) * .075 * dt; w.a -= .032 * dt;
+      if (w.a <= 0) { valovi.splice(j, 1); continue; }
+      cx.strokeStyle = "#ffb064";
+      cx.beginPath(); cx.arc(w.x, w.y, w.r, 0, 6.2832);
+      cx.globalAlpha = w.a * .9; cx.lineWidth = 1 + 14 * w.a; cx.stroke();
+      cx.globalAlpha = w.a * .3; cx.lineWidth = 34 * w.a; cx.stroke();
+    }
+    cx.globalAlpha = 1; cx.globalCompositeOperation = "source-over";
+  }
+  if (!reduce) requestAnimationFrame(crtaj);
+
+  var gotovo = false, tl = null, stage = null;
+  function G() { return window.gsap; }
+  function kraj() {
+    if (gotovo) return;
+    gotovo = true; radi = false;
+    svi.forEach(function (e) { e.remove(); });
+    if (stage) { if (G()) G().set(stage, { clearProps: "transform,opacity" }); else stage.style.transform = stage.style.opacity = ""; }
+    var h = document.querySelector(".hero-main h1");
+    if (h) h.style.opacity = "";
+    H.classList.remove("sp-on");
+    ["pointerdown", "keydown", "wheel", "touchmove"].forEach(function (ev) { window.removeEventListener(ev, preskoci, true); });
+    window.dispatchEvent(new Event("zp-splash"));
+  }
+  // klik, tipka, scroll ili tap: odmah van
+  function preskoci() {
+    if (gotovo) return;
+    if (tl) tl.kill();
+    if (stage && G()) G().set(stage, { clearProps: "transform,opacity" });
+    svi.forEach(function (e) { e.classList.add("sp-van"); });
+    setTimeout(kraj, 210);
+  }
+  if (!dbg) {
+    ["pointerdown", "keydown", "wheel", "touchmove"].forEach(function (ev) { window.addEventListener(ev, preskoci, { capture: true, passive: true }); });
+    setTimeout(preskoci, 4200);
+  }
+
+  // bez animacije: grb na sredini i 0,4 s fade
+  if (reduce) {
+    grb.style.cssText = "left:50%;top:50%;width:150px;transform:translate(-50%,-50%);opacity:1";
+    requestAnimationFrame(function () {
+      svi.forEach(function (e) { e.style.transition = "opacity .4s linear"; e.style.opacity = "0"; });
+      setTimeout(kraj, 420);
+    });
+    return;
+  }
+  // link na sekciju ili profil: samo žeravica koja prsne i 0,6 s
+  if (kratko) {
+    setTimeout(eksplozija, 120);
+    setTimeout(function () { svi.forEach(function (e) { e.style.transition = "opacity .3s"; e.style.opacity = "0"; }); }, 280);
+    setTimeout(kraj, 600);
+    return;
+  }
+
+  function pocni() {
+    var g = G(), h1 = document.querySelector(".hero-main h1");
+    stage = document.getElementById("stage");
+    if (gotovo || tl) return;
+    if (!g || !h1 || !stage) return preskoci();
+    var r1 = h1.getBoundingClientRect(), r2 = stage.getBoundingClientRect();
+    // hero je na ekranu (refresh na sredini stranice vrati scroll): tek tad logo i natpis slijeću na svoja mjesta
+    var vidi = r1.bottom > 0 && r1.top < V && r2.bottom > 0 && r2.top < V;
+
+    // natpis: isti font, veličina i prijelom kao h1, slovo po slovo
+    var cs = getComputedStyle(h1), t1 = h1.childNodes[0].textContent.trim(), sp = h1.querySelector("span"), t2 = sp ? sp.textContent.trim() : "";
+    ["fontFamily", "fontWeight", "fontSize", "lineHeight", "letterSpacing", "textTransform"].forEach(function (k) { nas.style[k] = cs[k]; });
+    nas.style.left = r1.left + "px"; nas.style.top = r1.top + "px"; nas.style.width = r1.width + "px";
+    function slova(t) { return t.split("").map(function (c) { return "<i>" + c + "</i>"; }).join(""); }
+    nas.innerHTML = slova(t1) + '<span class="crv">' + slova(t2) + "</span>";
+
+    // kompozicija: grb iznad natpisa, sve na sredini; 3D logo iza
+    var gv = Math.round(Math.max(96, Math.min(190, Math.min(W, V) * .22)));
+    var sT = Math.min(1.15, W * .88 / r1.width), hT = r1.height * sT, raz = Math.max(14, gv * .12);
+    var vrh = V / 2 - (gv + raz + hT) / 2, gx = W / 2, gy = vrh + gv / 2;
+    grb.style.width = grb.style.height = gv + "px";
+    grb.style.left = (gx - gv / 2) + "px"; grb.style.top = (gy - gv / 2) + "px";
+    var nx = W / 2 - (r1.left + r1.width / 2), ny = vrh + gv + raz + hT / 2 - (r1.top + r1.height / 2);
+    var sS = Math.min(1.2, V * .8 / r2.height, W * .96 / r2.width);
+    var sx = W / 2 - (r2.left + r2.width / 2), sy = V / 2 - (r2.top + r2.height / 2);
+    var amp = mob ? 4 : 8;
+
+    g.set(nas, { x: nx, y: ny, scale: sT });
+    g.set(dana, { yPercent: -50 });
+    dana.style.top = gy + "px";
+    tl = g.timeline({ onComplete: kraj });
+    tl.to(zar, { x: gx, y: gy, s: 1.25, duration: .3, ease: "power2.out" }, 0)
+      .call(function () { eksplozija(); if (window.zpZvuk) window.zpZvuk("bubanj"); }, null, .3)
+      // grb udari u ekran: udarni val, bljesak, blagi potres
+      .fromTo(grb, { opacity: 0, scale: 3.4, rotation: -8 }, { opacity: 1, scale: 1, rotation: 0, duration: .22, ease: "power4.in" }, .6)
+      .call(function () { val(gx, gy); }, null, .82)
+      .fromTo(blj, { opacity: 0 }, { opacity: 1, duration: .06, yoyo: true, repeat: 1 }, .82)
+      .fromTo(grb, { scale: 1.12 }, { scale: 1, duration: .4, ease: "elastic.out(1, .5)" }, .82)
+      .to([gore, dolje, cv, grb], { keyframes: [{ x: -amp, y: amp * .5 }, { x: amp * .8, y: -amp * .6 }, { x: -amp * .5, y: amp * .4 }, { x: amp * .3, y: -amp * .2 }, { x: 0, y: 0 }], duration: .4, ease: "none" }, .82)
+      // natpis se utisne slovo po slovo
+      .fromTo(nas.querySelectorAll("i"), { opacity: 0, scale: 1.9, y: -10 }, { opacity: 1, scale: 1, y: 0, duration: .13, ease: "power3.in", stagger: .045 }, 1)
+      // isti tekst bez slova u kutijicama, da prijelom i kerning budu kao u h1
+      .call(function () { nas.textContent = t1 + " "; var s = document.createElement("span"); s.className = "crv"; s.textContent = t2; nas.appendChild(s); }, null, 2.12)
+      .to(grb, { opacity: 0, scale: .85, duration: .2 }, 2.2)
+      .fromTo(dana, { opacity: 0, scale: 1.35 }, { opacity: 1, scale: 1, duration: .16, ease: "power2.out" }, 2.2)
+      .to(dana, { opacity: 0, scale: .96, duration: .2 }, 2.55)
+      .fromTo(sav, { opacity: 0, scaleX: .1 }, { opacity: 1, scaleX: 1, duration: .14, ease: "power2.out" }, 2.32)
+      .to(gore, { yPercent: -102, duration: .55, ease: "power4.inOut" }, 2.42)
+      .to(dolje, { yPercent: 102, duration: .55, ease: "power4.inOut" }, 2.42)
+      .to(sav, { opacity: 0, duration: .2 }, 2.5)
+      .to(cv, { opacity: 0, duration: .3 }, 2.65);
+    if (vidi) {
+      // 3D WoW Forever logo (isti objekt kao u heroju) uzdigne se iza, s rim lightom, pa sleti na svoje mjesto
+      tl.call(function () {
+        var z = window.zpLogo;
+        if (!z) return;
+        if (z.uvod) z.uvod();
+        if (z.rim) g.fromTo(z.rim.material, { opacity: 1 }, { opacity: .5, duration: 1.6, ease: "power2.out" });
+        if (z.key) g.fromTo(z.key, { intensity: 4 }, { intensity: 1.5, duration: 1.6, ease: "power2.out" });
+      }, null, 1.6)
+        .fromTo(stage, { x: sx, y: sy + 90, scale: sS * .9, opacity: 0 }, { y: sy, scale: sS, opacity: .6, duration: .7, ease: "power3.out" }, 1.6)
+        .to(stage, { x: 0, y: 0, scale: 1, opacity: 1, duration: .6, ease: "power3.inOut" }, 2.3)
+        .to(nas, { x: function () { return h1.getBoundingClientRect().left - r1.left; }, y: function () { return h1.getBoundingClientRect().top - r1.top; }, scale: 1, duration: .6, ease: "power3.inOut" }, 2.3)
+        // pravi naslov se pojavi tek kad splash natpis sjedne točno na njega
+        .set(h1, { opacity: 1 }, 2.9)
+        .to(nas, { opacity: 0, duration: .12 }, 2.9);
+    } else {
+      tl.to(nas, { opacity: 0, duration: .3 }, 2.3);
+    }
+    if (dbg) { tl.pause(); tl.seek(parseFloat(dbg[1]), false); }
+  }
+  // GSAP (defer) i raspored stranice stižu do DOMContentLoaded; ako to traje, splash se ne razvlači
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", pocni); else pocni();
+  setTimeout(function () { if (!tl) preskoci(); }, 1600);
 })();
 </script>
 
@@ -1572,6 +1754,175 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
 <div id="ytHost" aria-hidden="true"></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+/* ---------- 3D logo u heroju: kreće odmah, ne čeka podatke; splash koristi isti objekt (window.zpLogo) ---------- */
+  (function () {
+    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var stage = document.getElementById("stage"), canvas = document.getElementById("gl");
+    var slab = (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 2) || (navigator.deviceMemory && navigator.deviceMemory <= 2);
+    // reduced-motion i slabi uređaji: ostaje statična slika
+    if (reduce || slab || !window.THREE) return;
+    var renderer;
+    try {
+      renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true, powerPreference: "high-performance" });
+    } catch (e) { return; }
+    if (!renderer.getContext()) return;
+
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.75));
+    renderer.outputEncoding = THREE.sRGBEncoding;
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1;
+    renderer.setClearColor(0x000000, 0);
+
+    var scene = new THREE.Scene();
+    var camera = new THREE.PerspectiveCamera(28, 2, .1, 100);
+    var logo = new THREE.Group();
+    scene.add(logo);
+
+    var img = new Image();
+    img.onload = function () { build(img); };
+    img.src = "assets/wow-forever-logo.png";
+
+    // normal mapa iz luminancije (i alfe, da rubovi dobiju kosinu)
+    function normalMap(im) {
+      var s = Math.min(1, 640 / im.naturalWidth);
+      var w = Math.round(im.naturalWidth * s), h = Math.round(im.naturalHeight * s);
+      var c = document.createElement("canvas"); c.width = w; c.height = h;
+      var x = c.getContext("2d");
+      x.drawImage(im, 0, 0, w, h);
+      var src = x.getImageData(0, 0, w, h).data;
+      var H = new Float32Array(w * h);
+      for (var i = 0; i < w * h; i++) {
+        var a = src[i * 4 + 3] / 255;
+        var l = (src[i * 4] * .2126 + src[i * 4 + 1] * .7152 + src[i * 4 + 2] * .0722) / 255;
+        H[i] = (l * .75 + .25) * a;
+      }
+      var out = x.createImageData(w, h), d = out.data, k = 2.6;
+      for (var py = 0; py < h; py++) {
+        for (var px = 0; px < w; px++) {
+          var l1 = H[py * w + Math.max(0, px - 1)], r1 = H[py * w + Math.min(w - 1, px + 1)];
+          var u1 = H[Math.max(0, py - 1) * w + px], d1 = H[Math.min(h - 1, py + 1) * w + px];
+          var nx = -(r1 - l1) * k, ny = (d1 - u1) * k, nz = 1;
+          var len = Math.sqrt(nx * nx + ny * ny + 1);
+          var o = (py * w + px) * 4;
+          d[o] = (nx / len * .5 + .5) * 255;
+          d[o + 1] = (ny / len * .5 + .5) * 255;
+          d[o + 2] = (nz / len * .5 + .5) * 255;
+          d[o + 3] = 255;
+        }
+      }
+      x.putImageData(out, 0, 0);
+      return new THREE.CanvasTexture(c);
+    }
+
+    var PH = 2, PW = 2, key, gold, blue, t0 = performance.now();
+    // splash: zp.uvod() ponovno pokrene ulazni zamah, zp.rim i zp.key za rim light
+    var zp = window.zpLogo = { uvod: function () { t0 = performance.now(); } };
+    function build(im) {
+      PW = PH * im.naturalWidth / im.naturalHeight;
+      var tex = new THREE.Texture(im);
+      tex.encoding = THREE.sRGBEncoding;
+      tex.anisotropy = renderer.capabilities.getMaxAnisotropy();
+      tex.needsUpdate = true;
+      var geo = new THREE.PlaneGeometry(PW, PH);
+
+      // zlatni obrub iza svega: rim light
+      var rim = new THREE.Mesh(geo, new THREE.MeshBasicMaterial({
+        map: tex, color: 0xffb44a, transparent: true, opacity: .5, alphaTest: .4, blending: THREE.AdditiveBlending, depthWrite: false
+      }));
+      rim.scale.setScalar(1.012);
+      zp.rim = rim;
+      rim.position.z = -.2;
+      logo.add(rim);
+
+      // dubina: 22 sloja iste teksture, sve tamniji prema natrag
+      var N = 28, D = .34;
+      for (var i = N; i >= 1; i--) {
+        var f = i / N, v = .46 - .34 * f;
+        var m = new THREE.MeshBasicMaterial({ map: tex, alphaTest: .5 });
+        m.color.setRGB(v * 1.0, v * .82, v * .62);
+        var l = new THREE.Mesh(geo, m);
+        l.position.z = -f * D;
+        logo.add(l);
+      }
+
+      var front = new THREE.Mesh(geo, new THREE.MeshStandardMaterial({
+        map: tex, normalMap: normalMap(im), normalScale: new THREE.Vector2(1.1, 1.1),
+        metalness: .5, roughness: .36,
+        emissive: 0xffffff, emissiveMap: tex, emissiveIntensity: .34,
+        transparent: true, alphaTest: .05
+      }));
+      front.position.z = .001;
+      logo.add(front);
+
+      scene.add(new THREE.AmbientLight(0x6a7590, .35));
+      key = new THREE.PointLight(0xfff0d8, 1.5, 0, 2); key.position.set(0, .5, 2.4); scene.add(key);
+      zp.key = key;
+      gold = new THREE.DirectionalLight(0xffc35a, .9); gold.position.set(-2.5, 3, 1.2); scene.add(gold);
+      blue = new THREE.DirectionalLight(0x3d7dff, 1.1); blue.position.set(.5, -3, 1.4); scene.add(blue);
+
+      fit();
+      start();
+    }
+
+    function fit() {
+      var w = stage.clientWidth, h = stage.clientHeight;
+      if (!w || !h) return;
+      renderer.setSize(w, h, false);
+      camera.aspect = w / h;
+      var tan = Math.tan(THREE.MathUtils.degToRad(camera.fov / 2));
+      var dist = Math.max(PH / (.94 * 2 * tan), PW / (.86 * 2 * tan * camera.aspect));
+      camera.position.set(0, 0, dist);
+      camera.lookAt(0, 0, 0);
+      camera.updateProjectionMatrix();
+    }
+
+    var tx = 0, ty = 0, cxr = 0, cyr = 0;
+    window.addEventListener("pointermove", function (e) {
+      tx = (e.clientX / window.innerWidth - .5) * 2;
+      ty = (e.clientY / window.innerHeight - .5) * 2;
+    }, { passive: true });
+    window.addEventListener("deviceorientation", function (e) {
+      if (e.gamma == null) return;
+      tx = Math.max(-1, Math.min(1, e.gamma / 30));
+      ty = Math.max(-1, Math.min(1, (e.beta - 45) / 30));
+    }, { passive: true });
+    window.addEventListener("resize", fit);
+
+    function render() { renderer.render(scene, camera); }
+
+    function start() {
+      var vidljivo = true;
+      t0 = performance.now();
+      if ("IntersectionObserver" in window) {
+        new IntersectionObserver(function (e) { vidljivo = e[0].isIntersecting; }).observe(stage);
+      }
+      var outQuint = function (k) { return 1 - Math.pow(1 - k, 5); };
+      var maxR = THREE.MathUtils.degToRad(18);
+      function frame(now) {
+        var t = (now - t0) / 1000;
+        var k = outQuint(Math.min(1, t / 1.8));
+        cxr += (tx - cxr) * .07; cyr += (ty - cyr) * .07;
+        var ry = cxr * maxR * .8 + Math.sin(t * .35) * maxR * .2;
+        var rx = cyr * maxR * .6 + Math.sin(t * .27) * maxR * .15;
+        logo.rotation.y = ry * k + (1 - k) * -.55;
+        logo.rotation.x = rx;
+        logo.position.y = (1 - k) * -.15;
+        key.position.x = cxr * 3.2; key.position.y = -cyr * 2.4 + .5;
+        render();
+      }
+      frame(t0);
+      // canvas preuzima od statične slike tek kad animacija stvarno teče
+      var n = 0;
+      (function loop(now) {
+        requestAnimationFrame(loop);
+        if (document.hidden || !vidljivo) return;
+        frame(now);
+        if (++n === 3) stage.classList.add("gl-on");
+      })(t0);
+    }
+  })();
+</script>
 <script>
 (function () {
   "use strict";
@@ -2148,8 +2499,9 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
         setTimeout(function () { el.remove(); sljedeci(); }, reduce ? 0 : 300);
       }, 4000);
     }
-    // nakon učitavanja stranice (i loading screena), ne odmah
-    setTimeout(sljedeci, 1800);
+    // nakon splasha, ne odmah
+    if (document.documentElement.classList.contains("sp-on")) window.addEventListener("zp-splash", function () { setTimeout(sljedeci, 700); }, { once: true });
+    else setTimeout(sljedeci, 1800);
   })();
 
   /* ---------- ladica s desne strane: profil (#lik/ime), vodič (#dungeon/ime) i "vidi sve" ---------- */
@@ -3107,167 +3459,6 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     })(last);
   })();
 
-  /* ---------- 3D logo ---------- */
-  (function () {
-    var stage = $("stage"), canvas = $("gl");
-    var slab = (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 2) || (navigator.deviceMemory && navigator.deviceMemory <= 2);
-    // reduced-motion i slabi uređaji: ostaje statična slika
-    if (reduce || slab || !window.THREE) return;
-    var renderer;
-    try {
-      renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true, powerPreference: "high-performance" });
-    } catch (e) { return; }
-    if (!renderer.getContext()) return;
-
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.75));
-    renderer.outputEncoding = THREE.sRGBEncoding;
-    renderer.toneMapping = THREE.ACESFilmicToneMapping;
-    renderer.toneMappingExposure = 1;
-    renderer.setClearColor(0x000000, 0);
-
-    var scene = new THREE.Scene();
-    var camera = new THREE.PerspectiveCamera(28, 2, .1, 100);
-    var logo = new THREE.Group();
-    scene.add(logo);
-
-    var img = new Image();
-    img.onload = function () { build(img); };
-    img.src = "assets/wow-forever-logo.png";
-
-    // normal mapa iz luminancije (i alfe, da rubovi dobiju kosinu)
-    function normalMap(im) {
-      var s = Math.min(1, 640 / im.naturalWidth);
-      var w = Math.round(im.naturalWidth * s), h = Math.round(im.naturalHeight * s);
-      var c = document.createElement("canvas"); c.width = w; c.height = h;
-      var x = c.getContext("2d");
-      x.drawImage(im, 0, 0, w, h);
-      var src = x.getImageData(0, 0, w, h).data;
-      var H = new Float32Array(w * h);
-      for (var i = 0; i < w * h; i++) {
-        var a = src[i * 4 + 3] / 255;
-        var l = (src[i * 4] * .2126 + src[i * 4 + 1] * .7152 + src[i * 4 + 2] * .0722) / 255;
-        H[i] = (l * .75 + .25) * a;
-      }
-      var out = x.createImageData(w, h), d = out.data, k = 2.6;
-      for (var py = 0; py < h; py++) {
-        for (var px = 0; px < w; px++) {
-          var l1 = H[py * w + Math.max(0, px - 1)], r1 = H[py * w + Math.min(w - 1, px + 1)];
-          var u1 = H[Math.max(0, py - 1) * w + px], d1 = H[Math.min(h - 1, py + 1) * w + px];
-          var nx = -(r1 - l1) * k, ny = (d1 - u1) * k, nz = 1;
-          var len = Math.sqrt(nx * nx + ny * ny + 1);
-          var o = (py * w + px) * 4;
-          d[o] = (nx / len * .5 + .5) * 255;
-          d[o + 1] = (ny / len * .5 + .5) * 255;
-          d[o + 2] = (nz / len * .5 + .5) * 255;
-          d[o + 3] = 255;
-        }
-      }
-      x.putImageData(out, 0, 0);
-      return new THREE.CanvasTexture(c);
-    }
-
-    var PH = 2, PW = 2, key, gold, blue;
-    function build(im) {
-      PW = PH * im.naturalWidth / im.naturalHeight;
-      var tex = new THREE.Texture(im);
-      tex.encoding = THREE.sRGBEncoding;
-      tex.anisotropy = renderer.capabilities.getMaxAnisotropy();
-      tex.needsUpdate = true;
-      var geo = new THREE.PlaneGeometry(PW, PH);
-
-      // zlatni obrub iza svega: rim light
-      var rim = new THREE.Mesh(geo, new THREE.MeshBasicMaterial({
-        map: tex, color: 0xffb44a, transparent: true, opacity: .5, alphaTest: .4, blending: THREE.AdditiveBlending, depthWrite: false
-      }));
-      rim.scale.setScalar(1.012);
-      rim.position.z = -.2;
-      logo.add(rim);
-
-      // dubina: 22 sloja iste teksture, sve tamniji prema natrag
-      var N = 28, D = .34;
-      for (var i = N; i >= 1; i--) {
-        var f = i / N, v = .46 - .34 * f;
-        var m = new THREE.MeshBasicMaterial({ map: tex, alphaTest: .5 });
-        m.color.setRGB(v * 1.0, v * .82, v * .62);
-        var l = new THREE.Mesh(geo, m);
-        l.position.z = -f * D;
-        logo.add(l);
-      }
-
-      var front = new THREE.Mesh(geo, new THREE.MeshStandardMaterial({
-        map: tex, normalMap: normalMap(im), normalScale: new THREE.Vector2(1.1, 1.1),
-        metalness: .5, roughness: .36,
-        emissive: 0xffffff, emissiveMap: tex, emissiveIntensity: .34,
-        transparent: true, alphaTest: .05
-      }));
-      front.position.z = .001;
-      logo.add(front);
-
-      scene.add(new THREE.AmbientLight(0x6a7590, .35));
-      key = new THREE.PointLight(0xfff0d8, 1.5, 0, 2); key.position.set(0, .5, 2.4); scene.add(key);
-      gold = new THREE.DirectionalLight(0xffc35a, .9); gold.position.set(-2.5, 3, 1.2); scene.add(gold);
-      blue = new THREE.DirectionalLight(0x3d7dff, 1.1); blue.position.set(.5, -3, 1.4); scene.add(blue);
-
-      fit();
-      start();
-    }
-
-    function fit() {
-      var w = stage.clientWidth, h = stage.clientHeight;
-      if (!w || !h) return;
-      renderer.setSize(w, h, false);
-      camera.aspect = w / h;
-      var tan = Math.tan(THREE.MathUtils.degToRad(camera.fov / 2));
-      var dist = Math.max(PH / (.94 * 2 * tan), PW / (.86 * 2 * tan * camera.aspect));
-      camera.position.set(0, 0, dist);
-      camera.lookAt(0, 0, 0);
-      camera.updateProjectionMatrix();
-    }
-
-    var tx = 0, ty = 0, cxr = 0, cyr = 0;
-    window.addEventListener("pointermove", function (e) {
-      tx = (e.clientX / window.innerWidth - .5) * 2;
-      ty = (e.clientY / window.innerHeight - .5) * 2;
-    }, { passive: true });
-    window.addEventListener("deviceorientation", function (e) {
-      if (e.gamma == null) return;
-      tx = Math.max(-1, Math.min(1, e.gamma / 30));
-      ty = Math.max(-1, Math.min(1, (e.beta - 45) / 30));
-    }, { passive: true });
-    window.addEventListener("resize", fit);
-
-    function render() { renderer.render(scene, camera); }
-
-    function start() {
-      var t0 = performance.now(), vidljivo = true;
-      if ("IntersectionObserver" in window) {
-        new IntersectionObserver(function (e) { vidljivo = e[0].isIntersecting; }).observe(stage);
-      }
-      var outQuint = function (k) { return 1 - Math.pow(1 - k, 5); };
-      var maxR = THREE.MathUtils.degToRad(18);
-      function frame(now) {
-        var t = (now - t0) / 1000;
-        var k = outQuint(Math.min(1, t / 1.8));
-        cxr += (tx - cxr) * .07; cyr += (ty - cyr) * .07;
-        var ry = cxr * maxR * .8 + Math.sin(t * .35) * maxR * .2;
-        var rx = cyr * maxR * .6 + Math.sin(t * .27) * maxR * .15;
-        logo.rotation.y = ry * k + (1 - k) * -.55;
-        logo.rotation.x = rx;
-        logo.position.y = (1 - k) * -.15;
-        key.position.x = cxr * 3.2; key.position.y = -cyr * 2.4 + .5;
-        render();
-      }
-      frame(t0);
-      // canvas preuzima od statične slike tek kad animacija stvarno teče
-      var n = 0;
-      (function loop(now) {
-        requestAnimationFrame(loop);
-        if (document.hidden || !vidljivo) return;
-        frame(now);
-        if (++n === 3) stage.classList.add("gl-on");
-      })(t0);
-    }
-  })();
   }
 })();
 </script>
@@ -3336,6 +3527,11 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       ton(880, 0, .05, "triangle", .15);
     } else if (vrsta === "level") {
       [523.25, 659.25, 783.99, 1046.5].forEach(function (f, i) { ton(f, i * .08, .55 - i * .06, "triangle", .45); });
+    } else if (vrsta === "bubanj") {
+      // duboki udarac: ton koji pada i kratki klik
+      ton(120, 0, .5, "sine", 1).frequency.exponentialRampToValueAtTime(40, t + .45);
+      ton(60, 0, .55, "triangle", .45);
+      ton(1800, 0, .03, "square", .06);
     } else if (vrsta === "achievement") {
       ton(783.99, 0, .7, "sine", .7);
       ton(1174.66, .12, .8, "sine", .5);
