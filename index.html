@@ -1292,22 +1292,39 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
 .mc-kk p { margin: 0; color: var(--bone); font-size: .875rem; }
 .mc-izv { list-style: none; margin: 0; padding: 0; display: grid; gap: 5px; font-size: .8125rem; }
 .mc-izv a { color: var(--dust); text-decoration-color: var(--ember); text-underline-offset: 4px; overflow-wrap: anywhere; }
-/* velika ladica */
-.mc-lad { display: grid; gap: 16px; }
-.mc-info { display: grid; gap: 8px; }
+/* modal "Svi macroi": fiksno zaglavlje, mreža ispod skrola */
+.mcm { --mp: clamp(16px, 4vw, 56px); position: fixed; inset: 0; z-index: 45; display: grid; grid-template-rows: auto minmax(0, 1fr); background: var(--night); animation: mcmIn .25s var(--ease) both; }
+.mcm[hidden] { display: none; }
+@keyframes mcmIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+.mcm-in { width: 100%; max-width: 2200px; margin: 0 auto; padding-inline: var(--mp); }
+.mcm-top { background: var(--iron); border-bottom: 1px solid rgba(255, 122, 46, .25); box-shadow: 0 12px 30px rgba(0, 0, 0, .5); padding-top: env(safe-area-inset-top, 0px); position: relative; z-index: 1; }
+.mcm-top .mcm-in { display: grid; gap: 10px; padding-block: 14px 12px; }
+.mcm-red { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; }
+.mcm-red h2 { margin: 0; flex: 1 1 auto; font: 900 clamp(1.8rem, 4vw, 3rem)/.9 var(--f-display); text-transform: uppercase; }
+.mcm-red .mc-broj { order: 2; }
+.mcm-info { order: 3; min-height: 44px; padding: 9px 12px; cursor: pointer; font-size: .625rem; color: var(--ember); background: none; border: 1px solid rgba(255, 122, 46, .4); }
+.mcm-info:hover, .mcm-info[aria-expanded="true"] { background: rgba(255, 122, 46, .12); }
+.mcm-x { order: 4; width: 44px; height: 44px; display: grid; place-items: center; cursor: pointer; background: rgba(12, 9, 8, .78); color: var(--bone); border: 1px solid var(--line); }
+.mcm-x:hover { border-color: var(--ember); color: var(--ember); }
+.mcm-x svg { width: 18px; height: 18px; }
+.mc-q { flex: 1 1 320px; min-width: 0; min-height: 44px; padding: 10px 14px; font: 400 1rem/1.2 var(--f-body); color: var(--bone); background: #0b0807; border: 1px solid rgba(236, 226, 212, .2); }
+.mc-q:focus { outline: none; border-color: var(--ember); }
+.mcm-tijelo { overflow-y: auto; overscroll-behavior: contain; padding-bottom: env(safe-area-inset-bottom, 0px); }
+.mcm-tijelo .mcm-in { display: grid; gap: 14px; padding-block: 18px 48px; }
+.mcm-infopanel { display: grid; gap: 12px; padding: 14px; border: 1px solid var(--line); background: rgba(21, 16, 14, .9); }
+.mcm-infopanel[hidden] { display: none; }
+.mc-zbroj { display: flex; flex-wrap: wrap; gap: 6px; }
+.mc-zbroj .st { font: 500 .5625rem/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; padding: 6px 8px 5px; outline: 1px solid; outline-offset: -1px; }
 .mc-det { border: 1px solid var(--line); background: rgba(12, 9, 8, .5); }
 .mc-det summary { list-style: none; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; padding: 12px 14px; font: 800 1.05rem/1 var(--f-display); text-transform: uppercase; }
 .mc-det summary::-webkit-details-marker { display: none; }
 .mc-det summary::before { content: "+"; width: 1em; color: var(--ember); }
 .mc-det[open] summary::before { content: "−"; }
 .mc-det summary .mono { color: var(--dust); font-size: .5625rem; }
-.mc-det > .tbl, .mc-det > .mc-uvod-in { padding: 0 14px 14px; }
+.mc-det > .mc-uvod-in { padding: 0 14px 14px; }
 .mc-uvod-in { display: grid; gap: 14px 28px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); }
 .mc-uvod-in .lab { margin: 0 0 6px; color: var(--ember); }
 .mc-uvod-in p { margin: 0; color: var(--bone); font-size: .875rem; line-height: 1.5; }
-.mc-kontrole { position: sticky; top: 0; z-index: 4; display: grid; gap: 8px; padding: 12px 0 10px; margin: 0 calc(clamp(20px, 3.4vw, 40px) * -1); padding-inline: clamp(20px, 3.4vw, 40px); background: var(--iron); border-bottom: 1px solid var(--line); }
-.mc-q { width: calc(100% - 56px); min-height: 44px; padding: 10px 14px; font: 400 1rem/1.2 var(--f-body); color: var(--bone); background: #0b0807; border: 1px solid rgba(236, 226, 212, .2); }
-.mc-q:focus { outline: none; border-color: var(--ember); }
 .mc-filt { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
 .mc-pil {
   min-height: 36px; padding: 8px 11px; cursor: pointer; display: inline-flex; align-items: center; gap: 7px; white-space: nowrap;
@@ -1319,14 +1336,24 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
 .mc-pil .n { font-size: .5625rem; opacity: .7; }
 .mc-pil.nula { opacity: .4; }
 .mc-sep { margin: 0 4px 0 8px; color: var(--dust); font-size: .5625rem; white-space: nowrap; }
-.mc-red { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 16px; }
 .mc-broj { margin: 0; color: var(--dust); }
 .mc-broj b { color: var(--bone); font-weight: 500; }
 .mc-sort { display: inline-flex; align-items: center; gap: 8px; color: var(--dust); font-size: .5625rem; }
-.mc-sort select { min-height: 36px; padding: 6px 10px; font: 500 .6875rem/1 var(--f-mono); color: var(--bone); background: #0b0807; border: 1px solid rgba(236, 226, 212, .2); }
+.mc-sort select { min-height: 44px; padding: 6px 10px; font: 500 .6875rem/1 var(--f-mono); color: var(--bone); background: #0b0807; border: 1px solid rgba(236, 226, 212, .2); }
 .mc-lista { display: grid; gap: 12px; grid-template-columns: minmax(0, 1fr); align-items: start; }
-@media (min-width: 760px) { .mc-lista { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-/* paladin: prvih pet macroa (samo u ladici) */
+@media (min-width: 640px) { .mc-lista { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1100px) { .mc-lista { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 1600px) { .mc-lista { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (max-width: 640px) {
+  .mcm-red h2 { flex-basis: calc(100% - 60px); }
+  .mcm-x { order: 1; }
+  .mcm-red .mc-broj { order: 2; flex: 1 1 auto; }
+  /* poredak u istom redu sa searchom; natpis ostaje za čitače ekrana */
+  .mc-q { flex-basis: 150px; }
+  .mc-sort span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .mc-sort select { max-width: 140px; }
+}
+/* paladin: prvih pet macroa (samo u modalu) */
 .mc-poc { padding: 16px; border: 1px solid color-mix(in srgb, var(--c) 55%, transparent); background: linear-gradient(135deg, color-mix(in srgb, var(--c) 12%, transparent), rgba(21, 16, 14, .9) 60%); }
 .mc-poc[hidden] { display: none; }
 .mc-poc h3 { margin: 0 0 4px; font: 900 clamp(1.5rem, 3vw, 2rem)/1 var(--f-display); text-transform: uppercase; }
@@ -1344,7 +1371,7 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
 .mc-meh .st { display: inline-block; font: 500 .5625rem/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; padding: 5px 7px 4px; outline: 1px solid; outline-offset: -1px; }
 .mc-meh a { color: var(--dust); }
 @media (max-width: 640px) {
-  .mc-filt { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-inline: calc(clamp(20px, 3.4vw, 40px) * -1); padding-inline: clamp(20px, 3.4vw, 40px); }
+  .mc-filt { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-inline: calc(var(--mp) * -1); padding-inline: var(--mp); }
   .mc-filt::-webkit-scrollbar { display: none; }
   .mc-poc li { grid-template-columns: 1.6rem minmax(0, 1fr); }
   .mc-poc li .gumbi { grid-column: 2; grid-row: auto; }
@@ -3076,7 +3103,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     izHasha();
   })();
 
-  /* ---------- macroi: na stranici 6 istaknutih, svi u velikoj ladici (traži, filteri, poredak, objašnjenje na mjestu) ---------- */
+  /* ---------- macroi: na stranici 6 istaknutih, svi u modalu preko cijelog ekrana (#macroi/svi): traži, filteri, poredak, objašnjenje na mjestu ---------- */
   var MC_POC = null; // blok "Počni s ovih pet" (iz macroi.json), i za poveznicu u profilu
   (function () {
     var ist = $("mcIst");
@@ -3175,34 +3202,83 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
           (x.izvor ? ' <a href="' + esc(x.izvor) + '" target="_blank" rel="noopener">izvor ↗</a>' : "") + "</td></tr>";
       }).join("") + "</tbody></table></div>";
     }
-    function ladica() {
-      if (!LADICA || !M) return;
+    // modal se gradi pri prvom otvaranju; zaglavlje je fiksno, mreža ispod skrola
+    var modal = null, zadnjiFokus = null, otvorenKlikom = false;
+    function gradi() {
       var U = M.uvod || {}, zbroj = {};
       M.mehanizmi.forEach(function (x) { zbroj[x.status] = (zbroj[x.status] || 0) + 1; });
-      LADICA.otvori("Svi macroi", '<div class="mc-lad">' +
-        '<div class="mc-info">' +
-          '<details class="mc-det"><summary>Što radi u Foreveru <span class="mono">' + ["radi", "promijenjeno", "zabranjeno", "nepoznato"].filter(function (k) { return zbroj[k]; }).map(function (k) { return zbroj[k] + " " + k; }).join(" · ") + "</span></summary>" + tablica() + "</details>" +
-          '<details class="mc-det"><summary>Kako se radi macro <span class="mono">/macro, ikona, mouseover</span></summary><div class="mc-uvod-in">' +
-            '<div><h4 class="lab mono">Kako napraviti</h4><p>' + esc(U.kakoNapraviti || "") + "</p></div>" +
-            '<div><h4 class="lab mono">Mouseover</h4><p>' + esc(U.mouseover || "") + "</p></div>" +
-            '<div><h4 class="lab mono">Napomena za Forever</h4><p>' + esc(U.napomenaForever || "") + "</p></div></div></details>" +
-        "</div>" +
-        '<div class="mc-kontrole">' +
-          '<input type="search" id="mcQ" class="mc-q" placeholder="Traži: naslov, spell, tekst macroa…" aria-label="Traži macroe" autocomplete="off">' +
+      modal = document.createElement("div");
+      modal.className = "mcm"; modal.id = "mcModal"; modal.hidden = true;
+      modal.setAttribute("role", "dialog"); modal.setAttribute("aria-modal", "true"); modal.setAttribute("aria-labelledby", "mcmNaslov");
+      modal.innerHTML =
+        '<div class="mcm-top"><div class="mcm-in">' +
+          '<div class="mcm-red"><h2 id="mcmNaslov">Svi macroi</h2><p class="mc-broj mono" id="mcBroj" aria-live="polite"></p>' +
+            '<button type="button" class="mcm-info mono" id="mcmInfo" aria-expanded="false" aria-controls="mcmInfoPanel">Što radi u Foreveru</button>' +
+            '<button type="button" class="mcm-x" data-mcm-zatvori aria-label="Zatvori"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="2"/></svg></button></div>' +
+          '<div class="mcm-red"><input type="search" id="mcQ" class="mc-q" placeholder="Traži macro ili spell…" aria-label="Traži macroe" autocomplete="off">' +
+            '<label class="mc-sort mono"><span>Poredaj</span> <select id="mcSort">' + PORETCI.map(function (x) { return '<option value="' + x[0] + '">' + x[1] + "</option>"; }).join("") + "</select></label></div>" +
           '<div class="mc-filt" id="mcKlase" role="group" aria-label="Klasa">' + KLASE.map(function (k) { return pil("klasa", k[0], k[1]); }).join("") +
             '<span class="mc-sep mono">Niksini altovi</span>' + ALTOVI.map(function (k) { return pil("klasa", k[0], k[1]); }).join("") + "</div>" +
           '<div class="mc-filt" id="mcUloge" role="group" aria-label="Uloga">' + ULOGE.map(function (k) { return pil("uloga", k[0], k[1]); }).join("") + "</div>" +
-          '<div class="mc-red"><p class="mc-broj mono" id="mcBroj" aria-live="polite"></p><label class="mc-sort mono">Poredaj <select id="mcSort">' +
-            PORETCI.map(function (s) { return '<option value="' + s[0] + '"' + (filt.sort === s[0] ? " selected" : "") + ">" + s[1] + "</option>"; }).join("") + "</select></label></div>" +
-        "</div>" +
-        (MC_POC ? '<div class="mc-poc" id="mcPoc" style="--c:' + (BOJA[MC_POC.klasa] || "#ece2d4") + '" hidden><h3>' + esc(MC_POC.naslov) + '</h3><p class="mono">Za Dexa i svakog paladina: složi ih na action bar prije prvog dungeona.</p><ol>' +
-          MC_POC.macroi.map(function (id) {
-            var m = poId[id];
-            return m ? "<li><b>" + esc(m.naslov) + "</b><span>" + esc(m.svrha) + '</span><div class="gumbi"><button type="button" class="mc-kop" data-mc="' + esc(id) + '">Kopiraj</button></div></li>' : "";
-          }).join("") + "</ol></div>" : "") +
-        '<div class="mc-lista" id="mcLista"></div></div>', "siroka");
+        "</div></div>" +
+        '<div class="mcm-tijelo"><div class="mcm-in">' +
+          '<div class="mcm-infopanel" id="mcmInfoPanel" hidden>' +
+            '<div class="mc-zbroj">' + ["radi", "promijenjeno", "zabranjeno", "nepoznato"].filter(function (k) { return zbroj[k]; }).map(function (k) { return '<span class="st ' + k + '">' + zbroj[k] + " " + k + "</span>"; }).join("") + "</div>" +
+            tablica() +
+            '<details class="mc-det"><summary>Kako se radi macro <span class="mono">/macro, ikona, mouseover</span></summary><div class="mc-uvod-in">' +
+              '<div><h4 class="lab mono">Kako napraviti</h4><p>' + esc(U.kakoNapraviti || "") + "</p></div>" +
+              '<div><h4 class="lab mono">Mouseover</h4><p>' + esc(U.mouseover || "") + "</p></div>" +
+              '<div><h4 class="lab mono">Napomena za Forever</h4><p>' + esc(U.napomenaForever || "") + "</p></div></div></details>" +
+          "</div>" +
+          (MC_POC ? '<div class="mc-poc" id="mcPoc" style="--c:' + (BOJA[MC_POC.klasa] || "#ece2d4") + '" hidden><h3>' + esc(MC_POC.naslov) + '</h3><p class="mono">Za Dexa i svakog paladina: složi ih na action bar prije prvog dungeona.</p><ol>' +
+            MC_POC.macroi.map(function (id) {
+              var m = poId[id];
+              return m ? "<li><b>" + esc(m.naslov) + "</b><span>" + esc(m.svrha) + '</span><div class="gumbi"><button type="button" class="mc-kop" data-mc="' + esc(id) + '">Kopiraj</button></div></li>' : "";
+            }).join("") + "</ol></div>" : "") +
+          '<div class="mc-lista" id="mcLista"></div>' +
+        "</div></div>";
+      document.body.appendChild(modal);
+      // fokus ostaje u modalu dok je otvoren
+      modal.addEventListener("keydown", function (e) {
+        if (e.key !== "Tab") return;
+        var f = modal.querySelectorAll('a[href], button:not([disabled]), input, select, [tabindex="0"]');
+        if (!f.length) return;
+        var prvi = f[0], zadnji = f[f.length - 1];
+        if (e.shiftKey && document.activeElement === prvi) { e.preventDefault(); zadnji.focus(); }
+        else if (!e.shiftKey && document.activeElement === zadnji) { e.preventDefault(); prvi.focus(); }
+      });
+    }
+    function otvori() {
+      if (!M) return;
+      if (!modal) gradi();
+      if (!modal.hidden) return osvjezi();
+      zadnjiFokus = document.activeElement;
       $("mcQ").value = filt.q;
+      $("mcSort").value = filt.sort;
       osvjezi();
+      modal.hidden = false;
+      document.documentElement.style.overflow = "hidden";
+      if (window.zpZvuk) window.zpZvuk("ladica");
+      // na desktopu odmah u search; na mobitelu bez tipkovnice preko pola ekrana
+      if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) $("mcQ").focus({ preventScroll: true });
+      else modal.querySelector(".mcm-x").focus({ preventScroll: true });
+    }
+    function zatvori(tiho) {
+      if (!modal || modal.hidden) return;
+      modal.hidden = true;
+      document.documentElement.style.overflow = "";
+      if (!tiho && location.hash === "#macroi/svi") {
+        if (otvorenKlikom) history.back();
+        else history.replaceState(null, "", location.pathname + location.search + "#macroi");
+      }
+      otvorenKlikom = false;
+      if (zadnjiFokus && zadnjiFokus.focus) zadnjiFokus.focus({ preventScroll: true });
+    }
+    function izHasha() { if (location.hash === "#macroi/svi") otvori(); else zatvori(true); }
+    function pokaziSve() {
+      if (location.hash === "#macroi/svi") return otvori();
+      otvorenKlikom = true;
+      location.hash = "macroi/svi";
     }
     function osvjezi() {
       var lista = $("mcLista");
@@ -3241,6 +3317,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       ist.innerHTML = M.macroi.filter(function (m) { return m.istaknuto; }).map(kartica).join("");
       $("mcSvi").textContent = "Svi macroi (" + M.macroi.length + ")";
       $("mcSvi").hidden = false;
+      izHasha();
     }).catch(function () {
       ist.innerHTML = '<p class="prazno mono">Macroi se trenutno ne mogu učitati.</p>';
     });
@@ -3253,16 +3330,27 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       if (b) return kopiraj(poId[b.getAttribute("data-mc")].tekst, b);
       b = e.target.closest(".mc-obj[data-mc]");
       if (b) return prebaci(b.getAttribute("data-mc"));
-      if (e.target.closest("#mcSvi")) return ladica();
-      // poveznica iz profila (Dex): ladica sa svim macroima, filtrirano na klasu
+      if (e.target.closest("#mcSvi")) return pokaziSve();
+      if (e.target.closest("[data-mcm-zatvori]")) return zatvori();
+      b = e.target.closest("#mcmInfo");
+      if (b) {
+        var pan = $("mcmInfoPanel");
+        pan.hidden = !pan.hidden;
+        b.setAttribute("aria-expanded", pan.hidden ? "false" : "true");
+        if (!pan.hidden) modal.querySelector(".mcm-tijelo").scrollTop = 0;
+        return;
+      }
+      // poveznica iz profila (Dex): svi macroi, filtrirano na klasu (ladica profila se zatvara promjenom hasha)
       b = e.target.closest("[data-mc-klasa]");
-      if (b) { filt.klasa = b.getAttribute("data-mc-klasa"); filt.uloga = "sve"; filt.q = ""; return ladica(); }
+      if (b) { filt.klasa = b.getAttribute("data-mc-klasa"); filt.uloga = "sve"; filt.q = ""; return pokaziSve(); }
       // klik bilo gdje na kartici (osim teksta macroa, linkova i gumba) otvara objašnjenje
       var k = e.target.closest(".mc[data-id]");
       if (k && !e.target.closest("a, button, pre, .mc-vise") && !String(window.getSelection())) prebaci(k.getAttribute("data-id"));
     });
     document.addEventListener("input", function (e) { if (e.target.id === "mcQ" && M) { filt.q = e.target.value; osvjezi(); } });
     document.addEventListener("change", function (e) { if (e.target.id === "mcSort" && M) { filt.sort = e.target.value; osvjezi(); } });
+    window.addEventListener("hashchange", function () { if (M) izHasha(); });
+    window.addEventListener("keydown", function (e) { if (e.key === "Escape" && modal && !modal.hidden) zatvori(); });
   })();
   /* ---------- meni: glatki scroll i aktivna stavka ---------- */
   (function () {
