@@ -1,0 +1,852 @@
+{
+  "provjereno": "2026-10-29",
+  "uvod": "Forever radi na modernom klijentu s Midnight restrikcijama: addoni ne čitaju combat log ni točne brojke u borbi. Classic addoni rade samo ako autor objavi Forever verziju, pa u CurseForge ili Wago appu odaberi igru WoW Forever (game version 1.60.x) i instaliraj samo ono što je tamo vidljivo.",
+  "kategorije": [
+    {
+      "id": "leveling",
+      "naziv": "Leveling i rute"
+    },
+    {
+      "id": "questanje",
+      "naziv": "Questanje"
+    },
+    {
+      "id": "gathering",
+      "naziv": "Gathering i profesije"
+    },
+    {
+      "id": "klase",
+      "naziv": "Klase i rotacija"
+    },
+    {
+      "id": "grupa",
+      "naziv": "Grupa i borba"
+    },
+    {
+      "id": "ekonomija",
+      "naziv": "Ekonomija i torbe"
+    },
+    {
+      "id": "ostalo",
+      "naziv": "Ostalo"
+    }
+  ],
+  "addoni": [
+    {
+      "id": "zp-route",
+      "ime": "ZP Route",
+      "kategorija": "leveling",
+      "opis": "Naš vlastiti addon: ruta 1–60, party sinkronizacija (tko je na kojem koraku i tko ima quest), čekanje prije predaje questa i snimanje rute.",
+      "oznaka": "obavezno",
+      "uloge": [
+        "svi"
+      ],
+      "klase": [],
+      "alternativaZa": null,
+      "treba": [],
+      "postavljanje": null,
+      "link": null,
+      "status": "nas-addon",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "Ne postoji na CurseForgeu; distribuira ga ekipa."
+    },
+    {
+      "id": "restedxp-guide",
+      "ime": "RestedXP Guide",
+      "kategorija": "leveling",
+      "opis": "Leveling vodič s rutama po zonama. Besplatne Forever rute pokrivaju sve startne zone, za Hordu do otprilike levela 22. Plaćeni dio je u sivoj zoni Blizzardovih pravila, pa koristimo samo besplatni.",
+      "oznaka": "preporuceno",
+      "uloge": [
+        "svi"
+      ],
+      "klase": [],
+      "alternativaZa": null,
+      "treba": [],
+      "postavljanje": "U CurseForge/Wago appu odabrati WoW Forever, instalirati i uključiti samo besplatne rute.",
+      "link": "https://www.curseforge.com/wow/addons/restedxp-guide",
+      "status": "forever-potvrdeno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "CurseForge stranica ima Forever datoteku v4.11.29 (29. 10. 2026). Granica besplatnih levela (~22 za Hordu) je preuzeta iz tvoje bilješke i jednog vodiča, na samoj stranici nije navedena. Jedan vodič navodi cijenu plaćenih ruta oko 30 USD po frakciji."
+    },
+    {
+      "id": "journey-guides",
+      "ime": "Journey (Journey Guides)",
+      "kategorija": "leveling",
+      "opis": "Leveling vodič sa strelicom i rutom koja grupira questove, predaje i grind da nema vraćanja. Opcionalna alternativa RestedXP-u.",
+      "oznaka": "opcionalno",
+      "uloge": [
+        "svi"
+      ],
+      "klase": [],
+      "alternativaZa": "restedxp-guide",
+      "treba": [],
+      "postavljanje": null,
+      "link": "https://www.curseforge.com/wow/addons/journey",
+      "status": "forever-potvrdeno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "Forever datoteka 4.00.02 (18. 10. 2026). Stranica ne spominje Joanu, cijenu ni raspon 1–30; licenca je All Rights Reserved. Joanin zaseban addon (joanasguides) ima Forever datoteku, ali samo startne zone 1–12, pa nije ono što tražimo. Provjeri u igri što je besplatno."
+    },
+    {
+      "id": "whats-training",
+      "ime": "What's Training? (Forever)",
+      "kategorija": "leveling",
+      "opis": "Pokazuje što možeš naučiti kod trenera i koliko košta, pa lakše štediš za mounta.",
+      "oznaka": "preporuceno",
+      "uloge": [
+        "svi"
+      ],
+      "klase": [],
+      "alternativaZa": null,
+      "treba": [],
+      "postavljanje": null,
+      "link": "https://www.curseforge.com/wow/addons/whats-training-forever",
+      "status": "forever-potvrdeno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "Zasebna Forever stranica, datoteka WhatsTraining-1.1.1 (3. 10. 2026), game version 1.60.1. Glavna stranica whats-training također ima 1.60.1 oznaku."
+    },
+    {
+      "id": "zone-level-forever",
+      "ime": "Zone Level: Forever",
+      "kategorija": "leveling",
+      "opis": "Na mapi pokazuje raspon levela po zonama, s bojama prema tvom levelu, i dungeone s rasponima.",
+      "oznaka": "opcionalno",
+      "uloge": [
+        "svi"
+      ],
+      "klase": [],
+      "alternativaZa": null,
+      "treba": [],
+      "postavljanje": null,
+      "link": "https://www.curseforge.com/wow/addons/zone-level-forever",
+      "status": "forever-potvrdeno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "Forever datoteka 1.9.1 (18. 10. 2026), 1.60.1. Preklapa se s Leatrix Maps (levele zona pokazuje i on)."
+    },
+    {
+      "id": "questie",
+      "ime": "Questie (Forever bundle)",
+      "kategorija": "questanje",
+      "opis": "Questgiveri, predaje i ciljevi questova na mapi i minimapi. Uključiti i QuestieDB.",
+      "oznaka": "obavezno",
+      "uloge": [
+        "svi"
+      ],
+      "klase": [],
+      "alternativaZa": null,
+      "treba": [],
+      "postavljanje": "Instalirati Forever bundle zajedno s QuestieDB-om. Ne pokretati uz druge quest helpere (npr. QuestForever).",
+      "link": "https://www.curseforge.com/wow/addons/questie",
+      "status": "forever-potvrdeno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "CurseForge Recent Files ima Forever datoteku v12.3.1+v1.0.9 (26. 10. 2026); 1.60.1 je u filteru verzija. QuestieDB nije našao kao zasebnu CurseForge stranicu (pokušaj slugom je dao 404), pa se vjerojatno isporučuje u bundleu; provjeri nakon instalacije. Novi Forever questovi na launchu djelomično nedostaju."
+    },
+    {
+      "id": "leatrix-plus",
+      "ime": "Leatrix Plus",
+      "kategorija": "questanje",
+      "opis": "Auto prihvaćanje i predaja questova, auto prodaja sivog i auto popravak.",
+      "oznaka": "obavezno",
+      "uloge": [
+        "svi"
+      ],
+      "klase": [],
+      "alternativaZa": null,
+      "treba": [],
+      "postavljanje": null,
+      "link": "https://www.curseforge.com/wow/addons/leatrix-plus",
+      "status": "forever-potvrdeno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "Datoteka 1.60.25-forever (21. 10. 2026), 1.60.1."
+    },
+    {
+      "id": "leatrix-maps",
+      "ime": "Leatrix Maps",
+      "kategorija": "questanje",
+      "opis": "Otkrivena mapa, razine zona i ulazi u dungeone.",
+      "oznaka": "preporuceno",
+      "uloge": [
+        "svi"
+      ],
+      "klase": [],
+      "alternativaZa": null,
+      "treba": [],
+      "postavljanje": null,
+      "link": "https://www.curseforge.com/wow/addons/leatrix-maps",
+      "status": "forever-potvrdeno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "Datoteka 1.60.25-forever (21. 10. 2026). Jedan vodič javlja da se tuče s addonom OpenMap, ne koristiti oba."
+    },
+    {
+      "id": "tomtom",
+      "ime": "TomTom",
+      "kategorija": "questanje",
+      "opis": "Waypointi sa strelicom; radi uz Questie i ZP Route.",
+      "oznaka": "preporuceno",
+      "uloge": [
+        "svi"
+      ],
+      "klase": [],
+      "alternativaZa": null,
+      "treba": [],
+      "postavljanje": null,
+      "link": "https://www.curseforge.com/wow/addons/tomtom",
+      "status": "forever-potvrdeno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "Forever datoteka v4.3.13 (24. 10. 2026). Nisam vidio izričitu oznaku 1.60.x u sažetku stranice. Je li integracija sa ZP Routeom gotova, ovisi o našem addonu."
+    },
+    {
+      "id": "forever-quest-items",
+      "ime": "Forever Quest Items",
+      "kategorija": "questanje",
+      "opis": "U tooltipu itema piše koji quest ga traži.",
+      "oznaka": "opcionalno",
+      "uloge": [
+        "svi"
+      ],
+      "klase": [],
+      "alternativaZa": null,
+      "treba": [
+        "questie"
+      ],
+      "postavljanje": null,
+      "link": "https://www.curseforge.com/wow/addons/forever-quest-items",
+      "status": "forever-potvrdeno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "v0.1.6 (30. 9. 2026), beta; treba QuestieDB (nije uključen u addon), a novi Forever questovi mogu nedostajati."
+    },
+    {
+      "id": "forever-voiceover",
+      "ime": "Forever Voiceover",
+      "kategorija": "questanje",
+      "opis": "Čita quest tekstove naglas s glasovima po rasi i spolu NPC-a. Ugođaj, ne nužnost.",
+      "oznaka": "opcionalno",
+      "uloge": [
+        "svi"
+      ],
+      "klase": [],
+      "alternativaZa": null,
+      "treba": [],
+      "postavljanje": "Audio radi tek kad su instalirani voice packovi; bez njih samo ispisuje podsjetnik u chatu.",
+      "link": "https://www.curseforge.com/wow/addons/forever-voiceover",
+      "status": "forever-potvrdeno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "v0.1.10-forever (12. 10. 2026), beta."
+    },
+    {
+      "id": "quest-tldr",
+      "ime": "Quest TLDR",
+      "kategorija": "questanje",
+      "opis": "Sažima quest u kratki popis: što ubiti ili skupiti, gdje i kome se vraćaš, uz waypointe.",
+      "oznaka": "opcionalno",
+      "uloge": [
+        "svi"
+      ],
+      "klase": [],
+      "alternativaZa": null,
+      "treba": [],
+      "postavljanje": null,
+      "link": "https://www.curseforge.com/wow/addons/quest-tldr",
+      "status": "forever-potvrdeno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "Forever datoteka 1.60.1 (21. 9. 2026). Samo engleski klijent; podatke vuče iz QuestieDB projekta."
+    },
+    {
+      "id": "gathermate2",
+      "ime": "GatherMate2",
+      "kategorija": "gathering",
+      "opis": "Bilježi herbe, rudu i druge nodeove i crta ih na mapi i minimapi.",
+      "oznaka": "obavezno",
+      "uloge": [
+        "gatherer"
+      ],
+      "klase": [],
+      "alternativaZa": null,
+      "treba": [],
+      "postavljanje": "Uvesti i GatherMate2 Data (Wowhead) da su nodeovi poznati od prvog dana.",
+      "link": "https://www.curseforge.com/wow/addons/gathermate2",
+      "status": "nije-pronadeno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "Na CurseForge stranici je Forever filter prisutan, ali lista Forever datoteka je prazna; jedina datoteka je Retail 1.52.3 (17. 8. 2026). GatherMate2 Classic podržava samo MoP/Classic/TBC. Wago stranica nije dostupna (404). GatherPath Forever i GatherMate2 Data ga navode kao zahtjev, što je kontradikcija koju treba provjeriti u igri; do tada kao alternativu koristiti GatherLite."
+    },
+    {
+      "id": "gathermate2-data",
+      "ime": "GatherMate2 Data (Wowhead)",
+      "kategorija": "gathering",
+      "opis": "Gotovi nodeovi iz Wowheada za GatherMate2. Treba ih uvesti u opcijama (/gathermate, Import).",
+      "oznaka": "preporuceno",
+      "uloge": [
+        "gatherer"
+      ],
+      "klase": [],
+      "alternativaZa": null,
+      "treba": [
+        "gathermate2"
+      ],
+      "postavljanje": "Nakon instalacije uvesti podatke u GatherMate2 opcijama; ponoviti uvoz nakon svakog ažuriranja. Nema riba ni plinskih oblaka.",
+      "link": "https://www.curseforge.com/wow/addons/gathermate2-data-wowhead-classic",
+      "status": "forever-navodno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "Stranica navodi Forever flavor i datoteku od 17. 10. 2026, ali nisam uspio vidjeti izričito 1.60.1 uz tu datoteku, a bez radnog GatherMate2 bi mu nedostajao domaćin."
+    },
+    {
+      "id": "gatherpath-forever",
+      "ime": "GatherPath Forever",
+      "kategorija": "gathering",
+      "opis": "Najkraća petlja kroz herbe i rudu iz GatherMate2, nacrtana na mapi i minimapi.",
+      "oznaka": "preporuceno",
+      "uloge": [
+        "gatherer"
+      ],
+      "klase": [],
+      "alternativaZa": null,
+      "treba": [
+        "gathermate2"
+      ],
+      "postavljanje": null,
+      "link": "https://www.curseforge.com/wow/addons/gatherpath-forever",
+      "status": "forever-potvrdeno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "gatherpath-v1.10.0-forever (17. 10. 2026), 1.60.1. Procjenu vremena po krugu nisam vidio na stranici. Zahtijeva GatherMate2, za kojeg Forever datoteka nije nađena (vidi gathermate2)."
+    },
+    {
+      "id": "partygatherradar",
+      "ime": "PartyGatherRadar",
+      "kategorija": "gathering",
+      "opis": "Eksperimentalno: jedan prati herbe, drugi rudu, a cijeli party vidi oboje na minimapi.",
+      "oznaka": "opcionalno",
+      "uloge": [
+        "gatherer"
+      ],
+      "klase": [],
+      "alternativaZa": null,
+      "treba": [],
+      "postavljanje": "Svi u partyju moraju imati addon; /pgr otvara postavke.",
+      "link": "https://www.curseforge.com/wow/addons/partygatherradar",
+      "status": "forever-navodno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "Stranica kaže da je eksperimentalni prototip za Forever beta 1.60.1, ali je datoteka 0.3.1 (15. 10. 2026) označena kao Retail 12.1.5. Preciznost ikona 10–30 m; trial računi ne mogu slati addon poruke."
+    },
+    {
+      "id": "gatherlite",
+      "ime": "GatherLite",
+      "kategorija": "gathering",
+      "opis": "Alternativa GatherMate2: gotova baza lokacija herbi, rude, riba i ribljih jata s rutama za farmanje.",
+      "oznaka": "opcionalno",
+      "uloge": [
+        "gatherer"
+      ],
+      "klase": [],
+      "alternativaZa": "gathermate2",
+      "treba": [],
+      "postavljanje": null,
+      "link": "https://www.curseforge.com/wow/addons/gatherlite",
+      "status": "forever-potvrdeno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "GatherLite 8.2.0 (18. 10. 2026), 1.60.1. Baza je javna na GitHubu (Wuild/GatherLite). Ne znam trebaju li ga GatherPath ili GatherMate2."
+    },
+    {
+      "id": "fishmaster",
+      "ime": "FishMaster",
+      "kategorija": "gathering",
+      "opis": "Pomoć za ribarenje, korisno za deviate ribe u Barrensu.",
+      "oznaka": "opcionalno",
+      "uloge": [
+        "gatherer"
+      ],
+      "klase": [],
+      "alternativaZa": null,
+      "treba": [],
+      "postavljanje": "Koristiti ili FishMaster ili Better Fishing, ne oba.",
+      "link": "https://www.curseforge.com/wow/addons/fishmaster",
+      "status": "forever-potvrdeno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "FishMaster 3.0.1 (20. 9. 2026), stranica kaže da podržava samo Forever 1.60.1."
+    },
+    {
+      "id": "better-fishing",
+      "ime": "Better Fishing",
+      "kategorija": "gathering",
+      "opis": "Ribarenje jednom tipkom i dvoklik za cast.",
+      "oznaka": "opcionalno",
+      "uloge": [
+        "gatherer"
+      ],
+      "klase": [],
+      "alternativaZa": "fishmaster",
+      "treba": [],
+      "postavljanje": null,
+      "link": "https://www.curseforge.com/wow/addons/better-fishing",
+      "status": "nije-pronadeno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "Stranica postoji, ali nisam našao nikakav Forever dokaz (zadnja datoteka označena Classic). Forever Fishing (forever-fishing, 0.9.47, 23. 10. 2026, 1.60.1) je provjeren Forever-nativni zamjenski addon."
+    },
+    {
+      "id": "foreverartisan",
+      "ime": "ForeverArtisan",
+      "kategorija": "gathering",
+      "opis": "Pomoć oko svih 12 profesija plus camping: popis za shopping do ciljnog skilla, profit receptima, ribarenje jednom tipkom.",
+      "oznaka": "opcionalno",
+      "uloge": [
+        "gatherer",
+        "ah"
+      ],
+      "klase": [],
+      "alternativaZa": null,
+      "treba": [],
+      "postavljanje": null,
+      "link": "https://www.curseforge.com/wow/addons/foreverartisan",
+      "status": "forever-potvrdeno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "v0.9.32-forever (22. 10. 2026), 1.60.1. Besplatan, radi i s Auctionatorom."
+    },
+    {
+      "id": "blizzard-cooldown-manager",
+      "ime": "Blizzard Cooldown Manager",
+      "kategorija": "klase",
+      "opis": "Ugrađen u igru: Options > Advanced Options > Enable Cooldown Manager, zatim /cdm. Od 8. 10. pokriva sve klase, racialse i trinkete.",
+      "oznaka": "obavezno",
+      "uloge": [
+        "svi"
+      ],
+      "klase": [],
+      "alternativaZa": null,
+      "treba": [],
+      "postavljanje": "Options > Advanced Options > Enable Cooldown Manager, zatim /cdm.",
+      "link": null,
+      "status": "ugradeno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "Ne dolazi s CurseForgea. Datum 8. 10. je iz tvoje bilješke; pretraga nije našla patch note koji ga potvrđuje, a Blizzardov forum kaže samo da su sada podržane sve klase, racialsi i trinketi."
+    },
+    {
+      "id": "blizzard-assisted-combat",
+      "ime": "Blizzard Assisted Combat",
+      "kategorija": "klase",
+      "opis": "Ugrađena sugestija sljedećeg damage spella; u retailu je pod Options > Gameplay Enhancements.",
+      "oznaka": "opcionalno",
+      "uloge": [
+        "dps"
+      ],
+      "klase": [],
+      "alternativaZa": null,
+      "treba": [],
+      "postavljanje": "Provjeriti u igri pod Options > Gameplay Enhancements.",
+      "link": null,
+      "status": "ugradeno-nepotvrdeno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "Nisam našao izvor da postoji u Foreveru niti da se otključava na levelu 10. U retailu postoji od patcha 11.1.7 (samo DPS speceve)."
+    },
+    {
+      "id": "sonah-forever",
+      "ime": "Sonah Forever",
+      "kategorija": "klase",
+      "opis": "Predlaže sljedeći spell i talent buildove za 27 specova. Samo predlaže, ti pritišćeš.",
+      "oznaka": "preporuceno",
+      "uloge": [
+        "dps",
+        "healer"
+      ],
+      "klase": [],
+      "alternativaZa": null,
+      "treba": [],
+      "postavljanje": "Mapa addona mora se zvati Sonah.",
+      "link": "https://www.curseforge.com/wow/addons/sonah-forever",
+      "status": "forever-potvrdeno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "Sonah-Forever-1.0.9 (23. 10. 2026), 1.60.1. Stranica navodi Restoration za druida i shamana; healere priest i paladin nisam vidio izričito, iako opis kaže 9 klasa i 27 specova. Zaseban je od glavnog Sonah addona koji je za TBC Anniversary."
+    },
+    {
+      "id": "forever-class-timers",
+      "ime": "Forever Class Timers",
+      "kategorija": "klase",
+      "opis": "Buffovi, debuffovi na targetu, petovi efekti i weapon coatingi s trakama odbrojavanja.",
+      "oznaka": "preporuceno",
+      "uloge": [
+        "svi"
+      ],
+      "klase": [],
+      "alternativaZa": null,
+      "treba": [],
+      "postavljanje": null,
+      "link": "https://www.curseforge.com/wow/addons/forever-class-timers",
+      "status": "forever-potvrdeno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "ForeverClassTimers-0.24.7 (19. 10. 2026), 1.60.1."
+    },
+    {
+      "id": "forever-totems",
+      "ime": "Shaman: Forever Totems",
+      "kategorija": "klase",
+      "opis": "Totem bar, setovi sinkronizirani s Call of the Elements, podsjetnik za imbue i swing timer.",
+      "oznaka": "preporuceno",
+      "uloge": [
+        "dps",
+        "healer"
+      ],
+      "klase": [
+        "shaman"
+      ],
+      "alternativaZa": null,
+      "treba": [],
+      "postavljanje": null,
+      "link": "https://www.curseforge.com/wow/addons/forever-totems",
+      "status": "forever-potvrdeno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "v1.0.3-forever (13. 10. 2026), 1.60.1. U borbi su podaci o totemima skriveni pa addon procjenjuje odbrojavanje."
+    },
+    {
+      "id": "pp-forever",
+      "ime": "Paladin: PP Forever",
+      "kategorija": "klase",
+      "opis": "Raspored blessinga po klasama; podržava i mage (Arcane Intellect) i druide (Mark of the Wild, Thorns).",
+      "oznaka": "preporuceno",
+      "uloge": [
+        "svi"
+      ],
+      "klase": [
+        "paladin"
+      ],
+      "alternativaZa": null,
+      "treba": [],
+      "postavljanje": null,
+      "link": "https://www.curseforge.com/wow/addons/pp-forever",
+      "status": "forever-potvrdeno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "PP-Forever-1.0.104 (19. 10. 2026), 1.60.1. Sinkronizacija dodjela među igračima se još testira na becti."
+    },
+    {
+      "id": "forever-druidmanabar",
+      "ime": "Druid: Forever_DruidManaBar",
+      "kategorija": "klase",
+      "opis": "Mana traka ispod resursa forme.",
+      "oznaka": "opcionalno",
+      "uloge": [
+        "dps",
+        "healer",
+        "tank"
+      ],
+      "klase": [
+        "druid"
+      ],
+      "alternativaZa": null,
+      "treba": [],
+      "postavljanje": null,
+      "link": "https://www.curseforge.com/wow/addons/forever-druidmanabar",
+      "status": "forever-potvrdeno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "DruidManaBar-1.2.2 (13. 10. 2026), 1.60.1."
+    },
+    {
+      "id": "forever-combo-points",
+      "ime": "Rogue i druid: Forever Combo Points (ForeverCombo)",
+      "kategorija": "klase",
+      "opis": "Combo bodovi na nameplatu mete, bez gledanja dolje u frame.",
+      "oznaka": "opcionalno",
+      "uloge": [
+        "dps"
+      ],
+      "klase": [
+        "rogue",
+        "druid"
+      ],
+      "alternativaZa": null,
+      "treba": [],
+      "postavljanje": null,
+      "link": "https://www.curseforge.com/wow/addons/forevercombo",
+      "status": "forever-potvrdeno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "Točan naziv Forever Combo Points nisam našao; najbliži je ForeverCombo (v1.60.1, 10. 10. 2026). Provjeri je li to taj. Postoje i ForeverComboBar i Cutthroat."
+    },
+    {
+      "id": "appelswingsforever",
+      "ime": "AppelSwingsForever",
+      "kategorija": "klase",
+      "opis": "Swing timer za melee, plus traka za ranged i indikator queue-anih udaraca.",
+      "oznaka": "opcionalno",
+      "uloge": [
+        "dps",
+        "tank"
+      ],
+      "klase": [],
+      "alternativaZa": null,
+      "treba": [],
+      "postavljanje": "Postavke: /asf.",
+      "link": "https://www.curseforge.com/wow/addons/appelswingsforever",
+      "status": "forever-potvrdeno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "AppelSwingsForever-1.7.4 (20. 10. 2026), 1.60.1. Forever klijent u becti ne sprema postavke pouzdano."
+    },
+    {
+      "id": "foreverthreat",
+      "ime": "ForeverThreat",
+      "kategorija": "grupa",
+      "opis": "Pokazuje tko ima aggro i upozorava prije pulla. U borbi su postoci skriveni, vidi se stanje, ne graf kao Omen.",
+      "oznaka": "obavezno",
+      "uloge": [
+        "tank",
+        "dps"
+      ],
+      "klase": [],
+      "alternativaZa": null,
+      "treba": [],
+      "postavljanje": null,
+      "link": "https://www.curseforge.com/wow/addons/foreverthreat",
+      "status": "forever-potvrdeno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "ForeverThreat-0.2.6 (17. 10. 2026), autor iThomthi. Postoji i drugi, različit projekt slična imena (foreverthreat-threat-meter-for-wow-forever); provjeri da je instaliran ovaj."
+    },
+    {
+      "id": "forever-meter",
+      "ime": "Forever Meter",
+      "kategorija": "grupa",
+      "opis": "Mali meter za damage, healing i threat; čita Blizzardov C_DamageMeter. Alternativa ForeverThreatu.",
+      "oznaka": "obavezno",
+      "uloge": [
+        "tank",
+        "dps"
+      ],
+      "klase": [],
+      "alternativaZa": "foreverthreat",
+      "treba": [],
+      "postavljanje": null,
+      "link": "https://www.curseforge.com/wow/addons/forever-meter",
+      "status": "forever-potvrdeno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "v1.14.0 (15. 10. 2026), 1.60.1, autor Dldvlpr. Postoji i drugi unos (forever-metter) sličnog opisa; nisam provjerio jesu li isti projekt."
+    },
+    {
+      "id": "deadly-boss-mods",
+      "ime": "Deadly Boss Mods",
+      "kategorija": "grupa",
+      "opis": "Upozorenja za bossove. Koristiti samo jedan boss mod.",
+      "oznaka": "preporuceno",
+      "uloge": [
+        "svi"
+      ],
+      "klase": [],
+      "alternativaZa": null,
+      "treba": [],
+      "postavljanje": "Samo jedan od DBM i BigWigs.",
+      "link": "https://www.curseforge.com/wow/addons/deadly-boss-mods",
+      "status": "forever-potvrdeno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "Forever datoteka 12.1.18 (26. 10. 2026)."
+    },
+    {
+      "id": "bigwigs",
+      "ime": "BigWigs",
+      "kategorija": "grupa",
+      "opis": "Alternativa DBM-u za upozorenja bossova.",
+      "oznaka": "preporuceno",
+      "uloge": [
+        "svi"
+      ],
+      "klase": [],
+      "alternativaZa": "deadly-boss-mods",
+      "treba": [],
+      "postavljanje": "Samo jedan od DBM i BigWigs.",
+      "link": "https://www.curseforge.com/wow/addons/bigwigs",
+      "status": "forever-potvrdeno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "Forever datoteka v427.8 (23. 10. 2026)."
+    },
+    {
+      "id": "blizzard-damage-meter",
+      "ime": "Ugrađeni damage meter",
+      "kategorija": "grupa",
+      "opis": "Blizzardov ugrađeni damage meter je za početak dovoljan.",
+      "oznaka": "preporuceno",
+      "uloge": [
+        "svi"
+      ],
+      "klase": [],
+      "alternativaZa": null,
+      "treba": [],
+      "postavljanje": null,
+      "link": null,
+      "status": "ugradeno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "Potvrda: Forever Meter i ForeverMeter čitaju Blizzardov C_DamageMeter, što znači da postoji; konkretne postavke nisam provjeravao u igri."
+    },
+    {
+      "id": "details",
+      "ime": "Details!",
+      "kategorija": "grupa",
+      "opis": "Napredni damage meter; opcionalan jer je ugrađeni dovoljan.",
+      "oznaka": "opcionalno",
+      "uloge": [
+        "dps",
+        "tank"
+      ],
+      "klase": [],
+      "alternativaZa": "blizzard-damage-meter",
+      "treba": [],
+      "postavljanje": null,
+      "link": "https://www.curseforge.com/wow/addons/details",
+      "status": "forever-potvrdeno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "Forever datoteka Details.20261015.15339.172 (16. 10. 2026)."
+    },
+    {
+      "id": "gtfo",
+      "ime": "GTFO",
+      "kategorija": "grupa",
+      "opis": "Zvuk upozorenja kad stojiš u nečem lošem.",
+      "oznaka": "opcionalno",
+      "uloge": [
+        "svi"
+      ],
+      "klase": [],
+      "alternativaZa": null,
+      "treba": [],
+      "postavljanje": null,
+      "link": "https://www.curseforge.com/wow/addons/gtfo",
+      "status": "forever-potvrdeno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "Forever datoteka 6.12.2 (16. 10. 2026)."
+    },
+    {
+      "id": "auctionator",
+      "ime": "Auctionator",
+      "kategorija": "ekonomija",
+      "opis": "Brže traženje, objavljivanje i cijene na aukciji. TSM za Forever ne postoji.",
+      "oznaka": "obavezno",
+      "uloge": [
+        "ah"
+      ],
+      "klase": [],
+      "alternativaZa": null,
+      "treba": [],
+      "postavljanje": null,
+      "link": "https://www.curseforge.com/wow/addons/auctionator",
+      "status": "forever-potvrdeno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "Forever datoteka 12.1.5 (13. 10. 2026)."
+    },
+    {
+      "id": "baganator",
+      "ime": "Baganator",
+      "kategorija": "ekonomija",
+      "opis": "Moderni prikaz torbi i banke. Koristiti Baganator ili Bagnon, ne oba.",
+      "oznaka": "preporuceno",
+      "uloge": [
+        "svi"
+      ],
+      "klase": [],
+      "alternativaZa": null,
+      "treba": [],
+      "postavljanje": null,
+      "link": "https://www.curseforge.com/wow/addons/baganator",
+      "status": "forever-potvrdeno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "Forever datoteka 12.1.5 (28. 10. 2026)."
+    },
+    {
+      "id": "bagnon",
+      "ime": "Bagnon",
+      "kategorija": "ekonomija",
+      "opis": "Klasični prikaz torbi; alternativa Baganatoru.",
+      "oznaka": "opcionalno",
+      "uloge": [
+        "svi"
+      ],
+      "klase": [],
+      "alternativaZa": "baganator",
+      "treba": [],
+      "postavljanje": null,
+      "link": "https://www.curseforge.com/wow/addons/bagnon",
+      "status": "forever-potvrdeno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "Forever datoteka 12.1.7 (15. 10. 2026)."
+    },
+    {
+      "id": "syndicator",
+      "ime": "Syndicator",
+      "kategorija": "ekonomija",
+      "opis": "Inventar svih likova na accountu; pokreće i pretragu u Baganatoru.",
+      "oznaka": "preporuceno",
+      "uloge": [
+        "svi"
+      ],
+      "klase": [],
+      "alternativaZa": null,
+      "treba": [],
+      "postavljanje": null,
+      "link": "https://www.curseforge.com/wow/addons/syndicator",
+      "status": "forever-potvrdeno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "Forever datoteka 12.1.5 (27. 10. 2026)."
+    },
+    {
+      "id": "scrap",
+      "ime": "Scrap",
+      "kategorija": "ekonomija",
+      "opis": "Prodaja smeća jednim klikom.",
+      "oznaka": "opcionalno",
+      "uloge": [
+        "svi"
+      ],
+      "klase": [],
+      "alternativaZa": null,
+      "treba": [],
+      "postavljanje": null,
+      "link": "https://www.curseforge.com/wow/addons/scrap",
+      "status": "forever-potvrdeno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "Forever datoteka 12.1.8 (15. 10. 2026). Preklapa se s Leatrix Plus auto prodajom sivog."
+    },
+    {
+      "id": "bugsack",
+      "ime": "BugSack + BugGrabber",
+      "kategorija": "ostalo",
+      "opis": "Hvata Lua greške; korisno dok testiramo ZP Route.",
+      "oznaka": "preporuceno",
+      "uloge": [
+        "svi"
+      ],
+      "klase": [],
+      "alternativaZa": null,
+      "treba": [],
+      "postavljanje": "Instalirati oba addona.",
+      "link": "https://www.curseforge.com/wow/addons/bugsack",
+      "status": "forever-potvrdeno",
+      "zadnjaProvjera": "2026-10-29",
+      "napomena": "BugSack v12.1.9 (26. 10. 2026) i BugGrabber v12.1.1 (21. 10. 2026) imaju Forever datoteke; BugGrabber link: curseforge.com/wow/addons/bug-grabber."
+    }
+  ],
+  "neRadi": [
+    {
+      "ime": "WeakAuras",
+      "zasto": "Glavni projekt nema Forever datoteku i neće je dobiti (autori su odustali od borbenog dijela za Midnight). Provjereno: CurseForge stranica ne spominje Forever.",
+      "zamjena": "ForeverAuras (zaseban fork, v1.1.0, 28. 10. 2026, beta, link curseforge.com/wow/addons/foreverauras) i Blizzard Cooldown Manager. Postoji i Musca Auras, treća strana, ne instalirati uz drugi WeakAuras."
+    },
+    {
+      "ime": "Hekili i slični retail rotacijski addoni",
+      "zasto": "Originalni Hekili ne radi jer retail rotacijski addoni ne čitaju borbu. Ipak: postoji zaseban fork Hekili Forever (v0.4.0, 26. 10. 2026) koji pokriva samo druida, ratnika i Disc priesta, ne podržava ga originalni projekt.",
+      "zamjena": "Sonah Forever za predlaganje sljedećeg spella; Hekili Forever samo ako igraš druida ili ratnika."
+    },
+    {
+      "ime": "TradeSkillMaster",
+      "zasto": "Forever verziju nisam našao (ni na CurseForgeu ni u pretrazi).",
+      "zamjena": "Auctionator, uz ForeverArtisan za profit receptima."
+    },
+    {
+      "ime": "Skada",
+      "zasto": "CurseForge stranica ne spominje Forever; vidljive su samo Retail (Midnight, 2.2.0), MoP i Classic verzije.",
+      "zamjena": "Ugrađeni damage meter, Forever Meter ili Details!."
+    },
+    {
+      "ime": "Recount",
+      "zasto": "Original ne radi, ali tvoja pretpostavka ('stara verzija') je zastarjela: fork Recount - Revived ima Forever datoteku v1.21.0 (26. 10. 2026) uz upozorenje da Forever dijeli Midnight pravila o podacima u borbi.",
+      "zamjena": "Recount - Revived (curseforge.com/wow/addons/recount-revived) ili ugrađeni meter."
+    },
+    {
+      "ime": "Omen",
+      "zasto": "Originalni Omen na CurseForgeu ima samo Retail datoteku iz 2020.; Omen3 Classic je za Classic Era i TBC, ne Forever.",
+      "zamjena": "ForeverThreat ili Forever Meter."
+    }
+  ],
+  "minimalniPaket": {
+    "opis": "Najmanji skup za dobar start: sve što je označeno kao obavezno za tvoju ulogu ili klasu, plus obavezni za sve.",
+    "pravilo": "obavezni addoni čije uloge/klase odgovaraju odabiru + 'svi'"
+  }
+}

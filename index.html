@@ -1383,6 +1383,70 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
 .mc-link { display: inline-flex; margin-top: 10px; cursor: pointer; font-size: .6875rem; color: var(--ember); background: none; border: 1px solid rgba(255, 122, 46, .4); padding: 9px 12px; }
 .mc-link:hover { background: rgba(255, 122, 46, .08); }
 
+/* ---------- addoni: obavezni i "ne radi" na stranici, svi u modalu (isti kostur kao macroi) ---------- */
+.ad-pil {
+  min-height: 36px; padding: 8px 11px; cursor: pointer; display: inline-flex; align-items: center; gap: 7px; white-space: nowrap;
+  font: 500 .625rem/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase;
+  background: none; color: var(--dust); border: 1px solid var(--line); transition: color .2s, border-color .2s, background .2s;
+}
+.ad-pil:hover { color: var(--bone); border-color: rgba(236, 226, 212, .3); }
+.ad-pil[aria-pressed="true"] { color: var(--night); background: var(--ember); border-color: var(--ember); }
+.ad-pil .n { font-size: .5625rem; opacity: .7; }
+.ad-pil.nula { opacity: .4; }
+.ad-str { display: grid; gap: 14px; grid-template-columns: minmax(0, 1fr); align-items: start; }
+@media (min-width: 1100px) { .ad-str { grid-template-columns: minmax(0, 2.3fr) minmax(0, 1fr); } }
+.ad-ist { display: grid; gap: 12px; grid-template-columns: minmax(0, 1fr); align-items: start; }
+@media (min-width: 640px) { .ad-ist { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.ad { display: grid; gap: 9px; align-content: start; padding: 14px; background: rgba(21, 16, 14, .9); border: 1px solid var(--line); border-top: 2px solid rgba(236, 226, 212, .2); min-width: 0; }
+.ad.oz-obavezno { border-top-color: #e0b25a; }
+.ad header { display: grid; gap: 6px; }
+.ad-oz { justify-self: start; font-size: .5rem; padding: 4px 6px 3px; color: var(--dust); outline: 1px solid var(--line); outline-offset: -1px; }
+.oz-obavezno .ad-oz { color: #fff4d6; background: linear-gradient(90deg, #8e0d14, #c1121f 45%, #b8862e); outline: 1px solid rgba(224, 178, 90, .7); }
+.oz-preporuceno .ad-oz { color: var(--ember); outline-color: rgba(255, 122, 46, .45); }
+.ad-kat { color: var(--dust); font-size: .5625rem; }
+.ad h3 { margin: 0; font: 800 1.25rem/1.02 var(--f-display); text-transform: uppercase; }
+.ad-op { margin: 0; color: var(--bone); font-size: .875rem; line-height: 1.45; }
+.ad-st { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.ad-st .st { font: 500 .5625rem/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; padding: 5px 7px 4px; outline: 1px solid; outline-offset: -1px; }
+.ad-st .st.ok { color: #7fd36a; background: rgba(127, 211, 106, .08); }
+.ad-st .st.test { color: #f2cf5b; background: rgba(242, 207, 91, .07); }
+.ad-st .st.los { color: #ff5a4f; background: rgba(255, 90, 79, .1); }
+.ad-st .st.ugr { color: #9ec5ff; background: rgba(158, 197, 255, .07); }
+.ad-st .st.nas { color: var(--ember); background: rgba(255, 122, 46, .08); }
+.ad-st a { font: 500 .625rem/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--bone); text-decoration-color: var(--ember); text-underline-offset: 4px; }
+.ad-nap { margin: 0; color: var(--dust); font-size: .78rem; line-height: 1.45; padding-left: 10px; border-left: 2px solid rgba(242, 207, 91, .4); }
+.ad-veza { margin: 0; color: var(--dust); font-size: .5625rem; }
+.ad-det summary { list-style: none; cursor: pointer; color: var(--ember); font-size: .625rem; }
+.ad-det summary::-webkit-details-marker { display: none; }
+.ad-det summary::before { content: "+ "; }
+.ad-det[open] summary::before { content: "− "; }
+.ad-det p { margin: 8px 0 0; color: var(--bone); font-size: .8125rem; line-height: 1.45; }
+/* kutija "ne radi u Foreveru" */
+.ad-ne { padding: 16px; border: 1px solid rgba(255, 90, 79, .4); background: linear-gradient(160deg, rgba(193, 18, 31, .14), rgba(21, 16, 14, .92) 55%); }
+.ad-ne[hidden] { display: none; }
+.ad-ne h3 { margin: 0 0 12px; font: 900 1.4rem/1 var(--f-display); text-transform: uppercase; color: #ff7a6f; }
+.ad-ne ul { list-style: none; margin: 0 0 12px; padding: 0; display: grid; gap: 8px; }
+.ad-ne li { display: grid; gap: 3px; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
+.ad-ne li b { font: 800 1rem/1.1 var(--f-display); text-transform: uppercase; text-decoration: line-through; text-decoration-color: rgba(255, 90, 79, .7); }
+.ad-ne li span { color: var(--dust); font-size: .8125rem; }
+.ad-ne-vise { background: none; border: 0; padding: 6px 0; min-height: 36px; color: var(--ember); cursor: pointer; font-size: .625rem; }
+/* u modalu */
+.ad-lista { display: grid; gap: 12px; grid-template-columns: minmax(0, 1fr); align-items: start; }
+@media (min-width: 640px) { .ad-lista { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1100px) { .ad-lista { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 1600px) { .ad-lista { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.ad-paket > p { margin: 0; color: var(--bone); }
+.ad-pk { display: grid; gap: 6px; }
+.ad-pk > .mono { color: var(--dust); font-size: .5625rem; }
+.ad-pk-st { margin: 0; color: var(--ember); font-size: .625rem; }
+.ad-ne-lista { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.ad-ne-lista li { display: grid; gap: 4px; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
+.ad-ne-lista b { font: 800 1.1rem/1.1 var(--f-display); text-transform: uppercase; color: #ff7a6f; }
+.ad-ne-lista p { margin: 0; color: var(--bone); font-size: .875rem; }
+.ad-zam .mono { color: #7fd36a; font-size: .5625rem; margin-right: 6px; }
+.mcm-info .kr { display: none; }
+@media (max-width: 640px) { .mcm-info .dug { display: none; } .mcm-info .kr { display: inline; } }
+
 /* ---------- intro: puni cinematic jednom dnevno (roster reveal), kratki na refresh ---------- */
 .sp-pol { position: fixed; left: 0; right: 0; z-index: 200; background: var(--night); will-change: transform; }
 /* polovice se preklapaju 2 px na sredini, bez jedinica visine ekrana (na mobitelu znaju biti kraće od ekrana) */
@@ -1922,7 +1986,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       &lt;Zabranjeno pullanje&gt;
     </span>
     <nav class="menu" id="menu" aria-label="Sekcije">
-      <a href="#odbrojavanje">Countdown</a><a href="#ekipa">Ekipa</a><a href="#upute">Upute</a><a href="#roadmap">Roadmap</a><a href="#dungeoni">Dungeoni</a><a href="#ekonomija">Ekonomija</a><a href="#profesije">Profesije</a><a href="#savjeti">Savjeti</a><a href="#macroi">Macroi</a><a href="#novosti">News &amp; Updates</a><button type="button" class="intro-btn" id="introBtn" aria-label="Pusti intro">▶ Intro</button>
+      <a href="#odbrojavanje">Countdown</a><a href="#ekipa">Ekipa</a><a href="#upute">Upute</a><a href="#roadmap">Roadmap</a><a href="#dungeoni">Dungeoni</a><a href="#ekonomija">Ekonomija</a><a href="#profesije">Profesije</a><a href="#savjeti">Savjeti</a><a href="#addoni">Addoni</a><a href="#macroi">Macroi</a><a href="#novosti">News &amp; Updates</a><button type="button" class="intro-btn" id="introBtn" aria-label="Pusti intro">▶ Intro</button>
     </nav>
   </div>
 </header>
@@ -2092,6 +2156,22 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
         <span class="meta mono">Poredano po levelu · cap trajno <b>60</b></span>
       </div>
       <div class="tips" id="tips"></div>
+    </div>
+  </section>
+
+  <section class="sec band" id="addoni">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker mono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6v4h4v6h-4v8H9v-8H5V7h4z" fill="currentColor" opacity=".25"/><path d="M9 3h6v4h4v6h-4v8H9v-8H5V7h4z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Prije prvog logina</p>
+        <h2>Addoni</h2>
+        <span class="meta mono" id="adMeta"></span>
+      </div>
+      <p class="mc-uvod-kr" id="adUvod"></p>
+      <div class="ad-str">
+        <div class="ad-ist" id="adIst"><p class="prazno mono">Učitavam addone…</p></div>
+        <aside class="ad-ne" id="adNe" hidden></aside>
+      </div>
+      <button type="button" class="vidi mc-svi" id="adSvi" hidden>Svi addoni</button>
     </div>
   </section>
 
@@ -3350,6 +3430,232 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     document.addEventListener("input", function (e) { if (e.target.id === "mcQ" && M) { filt.q = e.target.value; osvjezi(); } });
     document.addEventListener("change", function (e) { if (e.target.id === "mcSort" && M) { filt.sort = e.target.value; osvjezi(); } });
     window.addEventListener("hashchange", function () { if (M) izHasha(); });
+    window.addEventListener("keydown", function (e) { if (e.key === "Escape" && modal && !modal.hidden) zatvori(); });
+  })();
+  /* ---------- addoni: na stranici obavezni i "ne radi", svi u modalu (#addoni/svi): traži, filteri, poredak, minimalni paket ---------- */
+  (function () {
+    var ist = $("adIst");
+    if (!ist) return;
+    var ULOGE = [["sve", "Sve"], ["svi", "Za sve"], ["healer", "Healer"], ["tank", "Tank"], ["dps", "DPS"], ["gatherer", "Gatherer"], ["ah", "AH"]];
+    var IME_UL = { svi: "svi", healer: "healer", tank: "tank", dps: "DPS", gatherer: "gatherer", ah: "AH" };
+    var NASE_KLASE = [["warrior", "Warrior"], ["shaman", "Shaman"], ["mage", "Mage"], ["rogue", "Rogue"], ["paladin", "Paladin"]];
+    var PORETCI = [["oznaka", "Obavezno prvo"], ["kategorija", "Kategorija"], ["ime", "Ime"]];
+    var OZNAKE = { obavezno: [0, "Obavezno"], preporuceno: [1, "Preporučeno"], opcionalno: [2, "Opcionalno"] };
+    // status Forever verzije: oznaka na kartici i boja
+    var STATUS = {
+      "forever-potvrdeno": ["ok", function (d) { return "Forever ✓ " + d; }],
+      "forever-navodno": ["test", function () { return "Navodno radi"; }],
+      "nije-pronadeno": ["los", function () { return "Forever verzija nije pronađena"; }],
+      "ugradeno": ["ugr", function () { return "Ugrađeno u igru"; }],
+      "ugradeno-nepotvrdeno": ["test", function () { return "Ugrađeno, nepotvrđeno"; }],
+      "nas-addon": ["nas", function () { return "Naš addon"; }]
+    };
+    var A = null, poId = {}, kat = {}, redKat = {}, otvoreni = {};
+    var filt = { kat: "sve", uloga: "sve", q: "", sort: "oznaka" }, paket = null;
+
+    function datumKr(iso) { var x = String(iso || "").split("-"); return x.length === 3 ? +x[2] + "." + +x[1] + "." : ""; }
+    function norm(s) { return String(s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/đ/g, "d"); }
+    function rijec(n) { return n % 10 === 1 && n % 100 !== 11 ? "addon" : "addona"; }
+    function zaPaket(a, p) {
+      // pravilo iz addoni.json: obavezni čije uloge ili klase odgovaraju odabiru, plus oni za sve
+      if (a.oznaka !== "obavezno") return false;
+      if (a.uloge.indexOf("svi") >= 0) return true;
+      if (p.klasa && a.klase.indexOf(p.klasa) >= 0) return true;
+      return p.uloge.some(function (u) { return a.uloge.indexOf(u) >= 0; });
+    }
+    function prolazi(a, f) {
+      if (paket && !zaPaket(a, paket)) return false;
+      if (f.kat !== "sve" && a.kategorija !== f.kat) return false;
+      if (f.uloga !== "sve" && a.uloge.indexOf(f.uloga) < 0) return false;
+      if (!f.q) return true;
+      var h = a._h || (a._h = norm(a.ime + " " + a.opis + " " + (a.napomena || "") + " " + (kat[a.kategorija] || "")));
+      return norm(f.q).split(/\s+/).filter(Boolean).every(function (w) { return h.indexOf(w) >= 0; });
+    }
+    var SORT = {
+      oznaka: function (a, b) { return (OZNAKE[a.oznaka] || [9])[0] - (OZNAKE[b.oznaka] || [9])[0] || redKat[a.kategorija] - redKat[b.kategorija] || a.ime.localeCompare(b.ime, "hr"); },
+      kategorija: function (a, b) { return redKat[a.kategorija] - redKat[b.kategorija] || (OZNAKE[a.oznaka] || [9])[0] - (OZNAKE[b.oznaka] || [9])[0] || a.ime.localeCompare(b.ime, "hr"); },
+      ime: function (a, b) { return a.ime.localeCompare(b.ime, "hr"); }
+    };
+    function linkIme(u) {
+      try { var h = new URL(u).hostname.replace(/^www\./, ""); return /curseforge/.test(h) ? "CurseForge" : /wago/.test(h) ? "Wago" : h; } catch (e) { return "Link"; }
+    }
+    function zaKoga(a) {
+      var t = a.uloge.indexOf("svi") >= 0 ? ["za sve"] : a.uloge.map(function (u) { return IME_UL[u] || u; });
+      return t.concat(a.klase.map(function (k) { return k.charAt(0).toUpperCase() + k.slice(1); })).join(", ");
+    }
+    function kartica(a) {
+      var st = STATUS[a.status] || ["test", function () { return a.status; }], oz = OZNAKE[a.oznaka] || [9, a.oznaka];
+      var ime = function (id) { return poId[id] ? poId[id].ime : id; };
+      return '<article class="ad oz-' + esc(a.oznaka) + '" data-id="' + esc(a.id) + '">' +
+        '<header><span class="ad-oz mono">' + esc(oz[1]) + '</span><span class="ad-kat mono">' + esc(kat[a.kategorija] || a.kategorija) + " · " + esc(zaKoga(a)) + "</span>" +
+          "<h3>" + esc(a.ime) + "</h3></header>" +
+        '<p class="ad-op">' + esc(a.opis) + "</p>" +
+        '<div class="ad-st"><span class="st ' + st[0] + '">' + esc(st[1](datumKr(a.zadnjaProvjera))) + "</span>" +
+          (a.link ? '<a href="' + esc(a.link) + '" target="_blank" rel="noopener">' + esc(linkIme(a.link)) + " ↗</a>" : "") + "</div>" +
+        (a.status !== "forever-potvrdeno" && a.napomena ? '<p class="ad-nap">' + esc(a.napomena) + "</p>" : "") +
+        ((a.treba || []).length ? '<p class="ad-veza mono">Treba: ' + esc(a.treba.map(ime).join(", ")) + "</p>" : "") +
+        (a.alternativaZa ? '<p class="ad-veza mono">Alternativa za: ' + esc(ime(a.alternativaZa)) + "</p>" : "") +
+        (a.postavljanje ? '<details class="ad-det"><summary class="mono">Postavljanje</summary><p>' + esc(a.postavljanje) + "</p></details>" : "") +
+        "</article>";
+    }
+    function kratkaZamjena(z) { return String(z || "").split(/ \(|; |\. /)[0].replace(/\.$/, ""); }
+
+    // ---------- modal ----------
+    var modal = null, zadnjiFokus = null, otvorenKlikom = false, nakonOtvaranja = null;
+    function pil(g, k, t) { return '<button type="button" class="ad-pil" data-g="' + g + '" data-k="' + k + '">' + esc(t) + '<span class="n"></span></button>'; }
+    function gradi() {
+      modal = document.createElement("div");
+      modal.className = "mcm"; modal.id = "adModal"; modal.hidden = true;
+      modal.setAttribute("role", "dialog"); modal.setAttribute("aria-modal", "true"); modal.setAttribute("aria-labelledby", "adNaslov");
+      modal.innerHTML =
+        '<div class="mcm-top"><div class="mcm-in">' +
+          '<div class="mcm-red"><h2 id="adNaslov">Svi addoni</h2><p class="mc-broj mono" id="adBroj" aria-live="polite"></p>' +
+            '<button type="button" class="mcm-info mono" id="adPaketBtn" aria-expanded="false" aria-controls="adPaketPanel"><span class="dug">Minimalni paket za mene</span><span class="kr">Moj paket</span></button>' +
+            '<button type="button" class="mcm-info mono" id="adNeBtn" aria-expanded="false" aria-controls="adNePanel"><span class="dug">Ne radi u Foreveru</span><span class="kr">Ne radi</span></button>' +
+            '<button type="button" class="mcm-x" data-ad-zatvori aria-label="Zatvori"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="2"/></svg></button></div>' +
+          '<div class="mcm-red"><input type="search" id="adQ" class="mc-q" placeholder="Traži addon…" aria-label="Traži addone" autocomplete="off">' +
+            '<label class="mc-sort mono"><span>Poredaj</span> <select id="adSort">' + PORETCI.map(function (x) { return '<option value="' + x[0] + '">' + x[1] + "</option>"; }).join("") + "</select></label></div>" +
+          '<div class="mc-filt" role="group" aria-label="Kategorija">' + [["sve", "Sve"]].concat(A.kategorije.map(function (k) { return [k.id, k.naziv]; })).map(function (k) { return pil("kat", k[0], k[1]); }).join("") + "</div>" +
+          '<div class="mc-filt" role="group" aria-label="Za koga">' + ULOGE.map(function (k) { return pil("uloga", k[0], k[1]); }).join("") + "</div>" +
+        "</div></div>" +
+        '<div class="mcm-tijelo"><div class="mcm-in">' +
+          '<div class="mcm-infopanel ad-paket" id="adPaketPanel" hidden>' +
+            "<p>" + esc((A.minimalniPaket || {}).opis || "") + "</p>" +
+            '<div class="ad-pk"><span class="mono">Klasa</span><div class="mc-filt">' + NASE_KLASE.map(function (k) { return '<button type="button" class="ad-pil" data-g="pk" data-k="' + k[0] + '">' + k[1] + "</button>"; }).join("") + "</div></div>" +
+            '<div class="ad-pk"><span class="mono">Uloga</span><div class="mc-filt">' + [["tank", "Tank"], ["healer", "Healer"], ["dps", "DPS"]].map(function (k) { return '<button type="button" class="ad-pil" data-g="pu" data-k="' + k[0] + '">' + k[1] + "</button>"; }).join("") +
+              '<button type="button" class="ad-pil" data-g="px" data-k="gatherer">Skupljam (gatherer)</button><button type="button" class="ad-pil" data-g="px" data-k="ah">Prodajem na AH</button></div></div>' +
+            '<p class="mono ad-pk-st" id="adPaketSt"></p>' +
+          "</div>" +
+          '<div class="mcm-infopanel" id="adNePanel" hidden><ul class="ad-ne-lista">' + (A.neRadi || []).map(function (n) {
+            return "<li><b>" + esc(n.ime) + "</b><p>" + esc(n.zasto) + '</p><p class="ad-zam"><span class="mono">Umjesto toga</span> ' + esc(n.zamjena) + "</p></li>";
+          }).join("") + "</ul></div>" +
+          '<div class="ad-lista" id="adLista"></div>' +
+        "</div></div>";
+      document.body.appendChild(modal);
+      modal.addEventListener("keydown", function (e) {
+        if (e.key !== "Tab") return;
+        var f = modal.querySelectorAll('a[href], button:not([disabled]), input, select, summary');
+        if (!f.length) return;
+        var prvi = f[0], zadnji = f[f.length - 1];
+        if (e.shiftKey && document.activeElement === prvi) { e.preventDefault(); zadnji.focus(); }
+        else if (!e.shiftKey && document.activeElement === zadnji) { e.preventDefault(); prvi.focus(); }
+      });
+    }
+    function osvjezi() {
+      var lista = $("adLista");
+      if (!lista) return;
+      var r = A.addoni.filter(function (a) { return prolazi(a, filt); }).sort(SORT[filt.sort]);
+      lista.innerHTML = r.map(kartica).join("") || '<p class="prazno mono">Ništa za ovaj odabir. Makni filter ili probaj drugu riječ.</p>';
+      $("adBroj").innerHTML = "<b>" + r.length + "</b> " + rijec(r.length) + (r.length === A.addoni.length ? "" : " od " + A.addoni.length);
+      Array.prototype.forEach.call(modal.querySelectorAll('.ad-pil[data-g="kat"], .ad-pil[data-g="uloga"]'), function (b) {
+        var g = b.getAttribute("data-g"), k = b.getAttribute("data-k"), f = { kat: filt.kat, uloga: filt.uloga, q: filt.q };
+        f[g] = k;
+        var c = A.addoni.filter(function (a) { return prolazi(a, f); }).length;
+        b.setAttribute("aria-pressed", filt[g] === k ? "true" : "false");
+        b.querySelector(".n").textContent = c;
+        b.classList.toggle("nula", !c && filt[g] !== k);
+      });
+      // minimalni paket: odabir i sažetak
+      var p = paket || { klasa: null, uloge: [] };
+      Array.prototype.forEach.call(modal.querySelectorAll('.ad-pil[data-g="pk"]'), function (b) { b.setAttribute("aria-pressed", p.klasa === b.getAttribute("data-k") ? "true" : "false"); });
+      Array.prototype.forEach.call(modal.querySelectorAll('.ad-pil[data-g="pu"], .ad-pil[data-g="px"]'), function (b) { b.setAttribute("aria-pressed", p.uloge.indexOf(b.getAttribute("data-k")) >= 0 ? "true" : "false"); });
+      $("adPaketSt").textContent = paket ? "Prikazan je samo tvoj minimalni paket: " + A.addoni.filter(function (a) { return zaPaket(a, paket); }).length + " addona. Zatvori panel da vidiš sve." : "Odaberi klasu i ulogu, popis ispod pokaže samo ono što ti treba.";
+    }
+    function otvori() {
+      if (!A) return;
+      if (!modal) gradi();
+      if (!modal.hidden) return osvjezi();
+      zadnjiFokus = document.activeElement;
+      $("adQ").value = filt.q;
+      $("adSort").value = filt.sort;
+      osvjezi();
+      modal.hidden = false;
+      document.documentElement.style.overflow = "hidden";
+      if (window.zpZvuk) window.zpZvuk("ladica");
+      if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) $("adQ").focus({ preventScroll: true });
+      else modal.querySelector(".mcm-x").focus({ preventScroll: true });
+      if (nakonOtvaranja) { nakonOtvaranja(); nakonOtvaranja = null; }
+    }
+    function zatvori(tiho) {
+      if (!modal || modal.hidden) return;
+      modal.hidden = true;
+      document.documentElement.style.overflow = "";
+      if (!tiho && location.hash === "#addoni/svi") {
+        if (otvorenKlikom) history.back();
+        else history.replaceState(null, "", location.pathname + location.search + "#addoni");
+      }
+      otvorenKlikom = false;
+      if (zadnjiFokus && zadnjiFokus.focus) zadnjiFokus.focus({ preventScroll: true });
+    }
+    function izHasha() { if (location.hash === "#addoni/svi") otvori(); else zatvori(true); }
+    function pokaziSve() {
+      if (location.hash === "#addoni/svi") return otvori();
+      otvorenKlikom = true;
+      location.hash = "addoni/svi";
+    }
+    function prebaciPanel(btnId, panelId) {
+      var pan = $(panelId), b = $(btnId);
+      pan.hidden = !pan.hidden;
+      b.setAttribute("aria-expanded", pan.hidden ? "false" : "true");
+      if (!pan.hidden) modal.querySelector(".mcm-tijelo").scrollTop = 0;
+      return !pan.hidden;
+    }
+
+    fetch("addoni.json", { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).then(function (d) {
+      A = d;
+      A.kategorije.forEach(function (k, i) { kat[k.id] = k.naziv; redKat[k.id] = i; });
+      A.addoni.forEach(function (a) { poId[a.id] = a; });
+      var potvrdeno = A.addoni.filter(function (a) { return a.status === "forever-potvrdeno"; }).length;
+      $("adMeta").innerHTML = "<b>" + A.addoni.length + "</b> addona · <b>" + potvrdeno + "</b> s Forever verzijom · provjereno " + datumKr(A.provjereno);
+      $("adUvod").textContent = A.uvod || "";
+      ist.innerHTML = A.addoni.filter(function (a) { return a.oznaka === "obavezno"; }).sort(SORT.oznaka).map(kartica).join("");
+      if ((A.neRadi || []).length) {
+        var ne = $("adNe");
+        ne.innerHTML = '<h3>Ne radi u Foreveru</h3><ul>' + A.neRadi.map(function (n) {
+          return "<li><b>" + esc(n.ime) + "</b><span>→ " + esc(kratkaZamjena(n.zamjena)) + "</span></li>";
+        }).join("") + '</ul><button type="button" class="ad-ne-vise mono">Zašto i čime zamijeniti →</button>';
+        ne.hidden = false;
+      }
+      $("adSvi").textContent = "Svi addoni (" + A.addoni.length + ")";
+      $("adSvi").hidden = false;
+      izHasha();
+    }).catch(function () {
+      ist.innerHTML = '<p class="prazno mono">Addoni se trenutno ne mogu učitati.</p>';
+    });
+
+    document.addEventListener("click", function (e) {
+      if (!e.target.closest || !A) return;
+      if (e.target.closest("#adSvi")) return pokaziSve();
+      if (e.target.closest(".ad-ne-vise")) {
+        nakonOtvaranja = function () { if ($("adNePanel").hidden) prebaciPanel("adNeBtn", "adNePanel"); };
+        return pokaziSve();
+      }
+      if (e.target.closest("[data-ad-zatvori]")) return zatvori();
+      if (e.target.closest("#adNeBtn")) return prebaciPanel("adNeBtn", "adNePanel");
+      if (e.target.closest("#adPaketBtn")) {
+        // panel otvoren = paket aktivan; zatvoren = opet svi
+        if (prebaciPanel("adPaketBtn", "adPaketPanel")) paket = paket || { klasa: null, uloge: [] };
+        else paket = null;
+        return osvjezi();
+      }
+      var b = e.target.closest(".ad-pil");
+      if (!b) return;
+      var g = b.getAttribute("data-g"), k = b.getAttribute("data-k");
+      if (g === "kat" || g === "uloga") { filt[g] = k; return osvjezi(); }
+      paket = paket || { klasa: null, uloge: [] };
+      if (g === "pk") paket.klasa = paket.klasa === k ? null : k;
+      if (g === "pu") {
+        // tank, healer i DPS su jedan izbor; gatherer i AH se pale zasebno
+        var imao = paket.uloge.indexOf(k) >= 0;
+        paket.uloge = paket.uloge.filter(function (u) { return ["tank", "healer", "dps"].indexOf(u) < 0; });
+        if (!imao) paket.uloge.push(k);
+      }
+      if (g === "px") paket.uloge = paket.uloge.indexOf(k) >= 0 ? paket.uloge.filter(function (u) { return u !== k; }) : paket.uloge.concat([k]);
+      osvjezi();
+    });
+    document.addEventListener("input", function (e) { if (e.target.id === "adQ" && A) { filt.q = e.target.value; osvjezi(); } });
+    document.addEventListener("change", function (e) { if (e.target.id === "adSort" && A) { filt.sort = e.target.value; osvjezi(); } });
+    window.addEventListener("hashchange", function () { if (A) izHasha(); });
     window.addEventListener("keydown", function (e) { if (e.key === "Escape" && modal && !modal.hidden) zatvori(); });
   })();
   /* ---------- meni: glatki scroll i aktivna stavka ---------- */
