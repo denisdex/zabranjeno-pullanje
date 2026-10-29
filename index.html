@@ -1248,41 +1248,24 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
   .pl, .fog { transform: none; }
   .fth b { animation: none; }
 }
-/* ---------- macroi ---------- */
-.mc-uvod { margin: 0 0 22px; border: 1px solid var(--line); background: rgba(21, 16, 14, .6); }
-.mc-uvod summary { list-style: none; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 16px; padding: 14px 16px; }
-.mc-uvod summary::-webkit-details-marker { display: none; }
-.mc-uvod summary > span:first-child { font: 800 1.25rem/1 var(--f-display); text-transform: uppercase; }
-.mc-uvod summary > span:first-child::before { content: "+"; display: inline-block; width: 1.1em; color: var(--ember); }
-.mc-uvod[open] summary > span:first-child::before { content: "−"; }
-.mc-uvod summary .mono { color: var(--dust); }
-.mc-uvod-in { display: grid; gap: 18px 32px; padding: 4px 16px 18px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); }
-.mc-uvod-in h3 { margin: 0 0 6px; color: var(--ember); }
-.mc-uvod-in p { margin: 0; color: var(--bone); font-size: .9375rem; line-height: 1.5; }
-.mc-uvod-in .vidi { justify-self: start; align-self: start; }
-.mc-filt { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-bottom: 8px; }
-.mc-pil {
-  min-height: 40px; padding: 9px 12px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; white-space: nowrap;
-  font: 500 .6875rem/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase;
-  background: none; color: var(--dust); border: 1px solid var(--line); transition: color .2s, border-color .2s, background .2s;
-}
-.mc-pil:hover { color: var(--bone); border-color: rgba(236, 226, 212, .3); }
-.mc-pil[aria-pressed="true"] { color: var(--night); background: var(--ember); border-color: var(--ember); }
-.mc-pil .n { font-size: .5625rem; opacity: .7; }
-.mc-pil.nula { opacity: .4; }
-.mc-sep { margin: 0 4px 0 10px; color: var(--dust); font-size: .5625rem; white-space: nowrap; }
-.mc-broj { margin: 14px 0 18px; color: var(--dust); }
-.mc-broj b { color: var(--bone); font-weight: 500; }
-.mc-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); align-items: start; }
-.mc { display: grid; gap: 12px; padding: 16px 16px 14px; background: rgba(21, 16, 14, .9); border: 1px solid var(--line); border-top: 2px solid var(--c, var(--line)); min-width: 0; }
-.mc[hidden], .mc-poc[hidden] { display: none; }
-.mc header { display: grid; gap: 6px; }
+/* ---------- macroi: 6 istaknutih na stranici, svi u velikoj ladici ---------- */
+.mc-uvod-kr { margin: 0 0 22px; max-width: 46rem; color: var(--dust); }
+.mc-uvod-kr code { font: 400 .8125rem/1 var(--f-mono); color: var(--bone); }
+.mc-ist { display: grid; gap: 14px; grid-template-columns: minmax(0, 1fr); align-items: start; }
+@media (min-width: 640px) { .mc-ist { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1000px) { .mc-ist { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.mc-svi { margin-top: 18px; }
+.mc-svi[hidden] { display: none; }
+.mc { display: grid; gap: 10px; padding: 14px 14px 12px; background: rgba(21, 16, 14, .9); border: 1px solid var(--line); border-top: 2px solid var(--c, var(--line)); min-width: 0; cursor: pointer; transition: border-color .2s; }
+.mc:hover { border-color: color-mix(in srgb, var(--c) 45%, transparent); }
+.mc.otv { border-color: color-mix(in srgb, var(--c) 60%, transparent); cursor: auto; }
+.mc header { display: grid; gap: 5px; }
 .mc-kl { margin: 0; color: var(--c, var(--dust)); font-size: .5625rem; }
-.mc h3 { margin: 0; font: 800 1.35rem/1.02 var(--f-display); text-transform: uppercase; }
+.mc h3 { margin: 0; font: 800 1.25rem/1.02 var(--f-display); text-transform: uppercase; }
 .mc-start { justify-self: start; font-size: .5rem; color: var(--night); background: var(--c); padding: 4px 6px 3px; }
-.mc-sv { margin: 0; color: var(--dust); font-size: .875rem; line-height: 1.45; }
-.mc-tx { margin: 0; padding: 12px 14px; background: #0b0807; border: 1px solid rgba(236, 226, 212, .08); border-left: 2px solid var(--c, var(--ember)); overflow-x: auto; }
-.mc-tx code { font: 400 .75rem/1.6 var(--f-mono); color: #f2e3c8; white-space: pre-wrap; overflow-wrap: anywhere; }
+.mc-sv { margin: 0; color: var(--dust); font-size: .8125rem; line-height: 1.45; }
+.mc-tx { margin: 0; padding: 10px 12px; background: #0b0807; border: 1px solid rgba(236, 226, 212, .08); border-left: 2px solid var(--c, var(--ember)); overflow-x: auto; cursor: text; }
+.mc-tx code { font: 400 .71875rem/1.55 var(--f-mono); color: #f2e3c8; white-space: pre-wrap; overflow-wrap: anywhere; }
 .mc-bad { display: flex; flex-wrap: wrap; gap: 5px; }
 .mc-bad span { font: 500 .5625rem/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; padding: 5px 7px 4px; color: var(--dust); outline: 1px solid var(--line); outline-offset: -1px; }
 .mc-bad .st.ok, .st.radi { color: #7fd36a; outline-color: rgba(127, 211, 106, .45); background: rgba(127, 211, 106, .08); }
@@ -1298,47 +1281,79 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
 .mc-akc .mc-kop, .mc-poc li .mc-kop { color: var(--night); background: var(--ember); border-color: var(--ember); }
 .mc-akc .mc-kop:hover, .mc-poc li .mc-kop:hover { color: var(--night); background: #ff9a5c; }
 .mc-akc .mc-kop.ok, .mc-poc li .mc-kop.ok { background: #7fd36a; border-color: #7fd36a; }
-/* paladin: prvih pet macroa */
-.mc-poc { margin: 0 0 18px; padding: 18px; border: 1px solid color-mix(in srgb, var(--c) 55%, transparent); background: linear-gradient(135deg, color-mix(in srgb, var(--c) 12%, transparent), rgba(21, 16, 14, .9) 60%); }
-.mc-poc h3 { margin: 0 0 4px; font: 900 clamp(1.6rem, 3vw, 2.2rem)/1 var(--f-display); text-transform: uppercase; }
-.mc-poc > p { margin: 0 0 14px; color: var(--dust); }
-.mc-poc ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; counter-reset: p; }
-.mc-poc li { counter-increment: p; display: grid; grid-template-columns: 2rem minmax(0, 1fr) auto; gap: 4px 12px; align-items: center; padding: 10px 0; border-top: 1px solid var(--line); }
-.mc-poc li::before { content: counter(p); grid-row: span 2; font: 900 1.6rem/1 var(--f-display); color: var(--c); }
-.mc-poc li b { font: 800 1.1rem/1.05 var(--f-display); text-transform: uppercase; }
+/* objašnjenje na mjestu, u kartici */
+.mc-vise { display: grid; gap: 12px; padding-top: 10px; border-top: 1px dashed var(--line); cursor: auto; }
+.mc-vise .lab { margin: 0 0 6px; color: var(--ember); }
+.mc-lin { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.mc-lin li { display: grid; gap: 5px; padding: 8px 10px; background: rgba(236, 226, 212, .03); border-left: 2px solid var(--c, var(--ember)); }
+.mc-lin code { font: 400 .71875rem/1.5 var(--f-mono); color: #f2e3c8; white-space: pre-wrap; overflow-wrap: anywhere; }
+.mc-lin p { margin: 0; color: var(--bone); font-size: .875rem; }
+.mc-kk { display: grid; gap: 12px 24px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); }
+.mc-kk p { margin: 0; color: var(--bone); font-size: .875rem; }
+.mc-izv { list-style: none; margin: 0; padding: 0; display: grid; gap: 5px; font-size: .8125rem; }
+.mc-izv a { color: var(--dust); text-decoration-color: var(--ember); text-underline-offset: 4px; overflow-wrap: anywhere; }
+/* velika ladica */
+.mc-lad { display: grid; gap: 16px; }
+.mc-info { display: grid; gap: 8px; }
+.mc-det { border: 1px solid var(--line); background: rgba(12, 9, 8, .5); }
+.mc-det summary { list-style: none; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; padding: 12px 14px; font: 800 1.05rem/1 var(--f-display); text-transform: uppercase; }
+.mc-det summary::-webkit-details-marker { display: none; }
+.mc-det summary::before { content: "+"; width: 1em; color: var(--ember); }
+.mc-det[open] summary::before { content: "−"; }
+.mc-det summary .mono { color: var(--dust); font-size: .5625rem; }
+.mc-det > .tbl, .mc-det > .mc-uvod-in { padding: 0 14px 14px; }
+.mc-uvod-in { display: grid; gap: 14px 28px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); }
+.mc-uvod-in .lab { margin: 0 0 6px; color: var(--ember); }
+.mc-uvod-in p { margin: 0; color: var(--bone); font-size: .875rem; line-height: 1.5; }
+.mc-kontrole { position: sticky; top: 0; z-index: 4; display: grid; gap: 8px; padding: 12px 0 10px; margin: 0 calc(clamp(20px, 3.4vw, 40px) * -1); padding-inline: clamp(20px, 3.4vw, 40px); background: var(--iron); border-bottom: 1px solid var(--line); }
+.mc-q { width: calc(100% - 56px); min-height: 44px; padding: 10px 14px; font: 400 1rem/1.2 var(--f-body); color: var(--bone); background: #0b0807; border: 1px solid rgba(236, 226, 212, .2); }
+.mc-q:focus { outline: none; border-color: var(--ember); }
+.mc-filt { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.mc-pil {
+  min-height: 36px; padding: 8px 11px; cursor: pointer; display: inline-flex; align-items: center; gap: 7px; white-space: nowrap;
+  font: 500 .625rem/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase;
+  background: none; color: var(--dust); border: 1px solid var(--line); transition: color .2s, border-color .2s, background .2s;
+}
+.mc-pil:hover { color: var(--bone); border-color: rgba(236, 226, 212, .3); }
+.mc-pil[aria-pressed="true"] { color: var(--night); background: var(--ember); border-color: var(--ember); }
+.mc-pil .n { font-size: .5625rem; opacity: .7; }
+.mc-pil.nula { opacity: .4; }
+.mc-sep { margin: 0 4px 0 8px; color: var(--dust); font-size: .5625rem; white-space: nowrap; }
+.mc-red { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 16px; }
+.mc-broj { margin: 0; color: var(--dust); }
+.mc-broj b { color: var(--bone); font-weight: 500; }
+.mc-sort { display: inline-flex; align-items: center; gap: 8px; color: var(--dust); font-size: .5625rem; }
+.mc-sort select { min-height: 36px; padding: 6px 10px; font: 500 .6875rem/1 var(--f-mono); color: var(--bone); background: #0b0807; border: 1px solid rgba(236, 226, 212, .2); }
+.mc-lista { display: grid; gap: 12px; grid-template-columns: minmax(0, 1fr); align-items: start; }
+@media (min-width: 760px) { .mc-lista { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+/* paladin: prvih pet macroa (samo u ladici) */
+.mc-poc { padding: 16px; border: 1px solid color-mix(in srgb, var(--c) 55%, transparent); background: linear-gradient(135deg, color-mix(in srgb, var(--c) 12%, transparent), rgba(21, 16, 14, .9) 60%); }
+.mc-poc[hidden] { display: none; }
+.mc-poc h3 { margin: 0 0 4px; font: 900 clamp(1.5rem, 3vw, 2rem)/1 var(--f-display); text-transform: uppercase; }
+.mc-poc > p { margin: 0 0 12px; color: var(--dust); }
+.mc-poc ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; counter-reset: p; }
+.mc-poc li { counter-increment: p; display: grid; grid-template-columns: 2rem minmax(0, 1fr) auto; gap: 3px 12px; align-items: center; padding: 8px 0; border-top: 1px solid var(--line); }
+.mc-poc li::before { content: counter(p); grid-row: span 2; font: 900 1.5rem/1 var(--f-display); color: var(--c); }
+.mc-poc li b { font: 800 1.05rem/1.05 var(--f-display); text-transform: uppercase; }
 .mc-poc li span { grid-column: 2; color: var(--dust); font-size: .8125rem; }
-.mc-poc li .gumbi { grid-column: 3; grid-row: 1 / span 2; display: flex; gap: 6px; }
+.mc-poc li .gumbi { grid-column: 3; grid-row: 1 / span 2; }
+.mc-meh { width: 100%; border-collapse: collapse; font-size: .8125rem; }
+.mc-meh th { text-align: left; font: 500 .5625rem/1 var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--dust); padding: 8px 10px 8px 0; border-bottom: 1px solid var(--line); }
+.mc-meh td { padding: 9px 12px 9px 0; border-bottom: 1px solid var(--line); vertical-align: top; color: var(--bone); }
+.mc-meh td:first-child code { font: 500 .71875rem/1.4 var(--f-mono); color: #f2e3c8; white-space: nowrap; }
+.mc-meh .st { display: inline-block; font: 500 .5625rem/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; padding: 5px 7px 4px; outline: 1px solid; outline-offset: -1px; }
+.mc-meh a { color: var(--dust); }
 @media (max-width: 640px) {
-  .mc-filt { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-inline: calc(var(--gut) * -1); padding-inline: var(--gut); }
+  .mc-filt { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-inline: calc(clamp(20px, 3.4vw, 40px) * -1); padding-inline: clamp(20px, 3.4vw, 40px); }
   .mc-filt::-webkit-scrollbar { display: none; }
   .mc-poc li { grid-template-columns: 1.6rem minmax(0, 1fr); }
   .mc-poc li .gumbi { grid-column: 2; grid-row: auto; }
-}
-/* ladica: objašnjenje i mehanizmi */
-.mc-lad { display: grid; gap: 18px; }
-.mc-lad .lab { margin: 0 0 8px; color: var(--ember); }
-.mc-lin { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
-.mc-lin li { display: grid; gap: 6px; padding: 10px 12px; background: rgba(236, 226, 212, .03); border-left: 2px solid var(--c, var(--ember)); }
-.mc-lin code { font: 400 .75rem/1.5 var(--f-mono); color: #f2e3c8; white-space: pre-wrap; overflow-wrap: anywhere; }
-.mc-lin p { margin: 0; color: var(--bone); font-size: .9375rem; }
-.mc-kk { display: grid; gap: 14px 28px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); }
-.mc-kk p { margin: 0; color: var(--bone); }
-.mc-izv { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
-.mc-izv a { color: var(--bone); text-decoration-color: var(--ember); text-underline-offset: 4px; overflow-wrap: anywhere; }
-.mc-meh { width: 100%; border-collapse: collapse; font-size: .875rem; }
-.mc-meh th { text-align: left; font: 500 .5625rem/1 var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--dust); padding: 8px 10px 8px 0; border-bottom: 1px solid var(--line); }
-.mc-meh td { padding: 10px 12px 10px 0; border-bottom: 1px solid var(--line); vertical-align: top; color: var(--bone); }
-.mc-meh td:first-child code { font: 500 .75rem/1.4 var(--f-mono); color: #f2e3c8; white-space: nowrap; }
-.mc-meh .st, .mc-zbroj .st { display: inline-block; font: 500 .5625rem/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; padding: 5px 7px 4px; outline: 1px solid; outline-offset: -1px; }
-.mc-meh a { color: var(--dust); }
-.mc-zbroj { display: flex; flex-wrap: wrap; gap: 6px; }
-@media (max-width: 640px) {
   .mc-meh thead { display: none; }
   .mc-meh tr { display: grid; gap: 6px; padding: 10px 0; border-bottom: 1px solid var(--line); }
   .mc-meh td { padding: 0; border: 0; }
   .mc-meh td:first-child code { white-space: normal; }
 }
-.mc-link { display: inline-flex; margin-top: 10px; color: var(--ember); text-decoration: none; border: 1px solid rgba(255, 122, 46, .4); padding: 9px 12px; }
+.mc-link { display: inline-flex; margin-top: 10px; cursor: pointer; font-size: .6875rem; color: var(--ember); background: none; border: 1px solid rgba(255, 122, 46, .4); padding: 9px 12px; }
 .mc-link:hover { background: rgba(255, 122, 46, .08); }
 
 /* ---------- intro: puni cinematic jednom dnevno (roster reveal), kratki na refresh ---------- */
@@ -2060,15 +2075,9 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
         <h2>Macroi</h2>
         <span class="meta mono" id="mcMeta"></span>
       </div>
-      <details class="mc-uvod">
-        <summary><span>Kako se radi macro</span><span class="mono">/macro, ikona, action bar, mouseover</span></summary>
-        <div class="mc-uvod-in" id="mcUvod"></div>
-      </details>
-      <div class="mc-filt" id="mcKlase" role="group" aria-label="Klasa"></div>
-      <div class="mc-filt" id="mcUloge" role="group" aria-label="Uloga"></div>
-      <p class="mc-broj mono" id="mcBroj" aria-live="polite"></p>
-      <div class="mc-poc" id="mcPoc" hidden></div>
-      <div class="mc-grid" id="mcGrid"><p class="prazno mono">Učitavam macroe…</p></div>
+      <p class="mc-uvod-kr">Macro je više naredbi na jednoj tipki: u igri upiši <code>/macro</code>, zalijepi tekst i povuci ikonu na action bar. Ovo je šest koje bi svatko od nas trebao imati.</p>
+      <div class="mc-ist" id="mcIst"><p class="prazno mono">Učitavam macroe…</p></div>
+      <button type="button" class="vidi mc-svi" id="mcSvi" hidden>Svi macroi</button>
     </div>
   </section>
 
@@ -2948,7 +2957,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
               return '<div class="tree"><span class="mono">' + esc(n) + '</span><i><b style="width:' + ((t[k] || 0) / 51 * 100).toFixed(1) + '%"></b></i><strong>' + (t[k] || 0) + "</strong></div>";
             }).join("") + "</div>" +
             (pf.opisBuilda ? '<p class="build-tx">' + esc(pf.opisBuilda) + "</p>" : "") +
-            (MC_POC && MC_POC.klasa === p.klasa.toLowerCase() ? '<a class="mc-link mono" href="#macroi" data-mc-klasa="' + esc(MC_POC.klasa) + '">' + esc(MC_POC.naslov) + " →</a>" : "") +
+            (MC_POC && MC_POC.klasa === p.klasa.toLowerCase() ? '<button type="button" class="mc-link mono" data-mc-klasa="' + esc(MC_POC.klasa) + '">' + esc(MC_POC.naslov) + " →</button>" : "") +
           "</div>" +
           "<div><h3 class=\"lab mono\">Oprema</h3>" +
             ((pf.oprema || []).length ? "" : '<p class="gear-note mono">Još nema opreme. Upisuje se kad krene igra.</p>') +
@@ -3067,62 +3076,74 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     izHasha();
   })();
 
-  /* ---------- macroi: macroi.json, filteri po klasi i ulozi, kopiranje, objašnjenje i mehanizmi u ladici ---------- */
+  /* ---------- macroi: na stranici 6 istaknutih, svi u velikoj ladici (traži, filteri, poredak, objašnjenje na mjestu) ---------- */
   var MC_POC = null; // blok "Počni s ovih pet" (iz macroi.json), i za poveznicu u profilu
   (function () {
-    var grid = $("mcGrid");
-    if (!grid) return;
+    var ist = $("mcIst");
+    if (!ist) return;
     var KLASE = [["sve", "Sve"], ["opcenito", "Općenito"], ["shaman", "Shaman"], ["mage", "Mage"], ["warrior", "Warrior"], ["rogue", "Rogue"], ["paladin", "Paladin"]];
     var ALTOVI = [["druid", "Druid"], ["alt-mage", "Alt mage"]];
     var ULOGE = [["sve", "Sve uloge"], ["tank", "Tank"], ["heal", "Heal"], ["dps", "DPS"], ["opcenito", "Općenito"]];
+    var PORETCI = [["korisno", "Najkorisnije"], ["level", "Level (od nižeg)"], ["klasa", "Klasa"], ["status", "Status (provjereno prvo)"]];
+    var REDKL = ["opcenito", "shaman", "mage", "warrior", "rogue", "paladin", "druid", "alt-mage"];
     var BOJA = { opcenito: "#ece2d4", shaman: BOJE.Shaman, mage: BOJE.Mage, warrior: BOJE.Warrior, rogue: BOJE.Rogue, paladin: BOJE.Paladin, druid: "#FF7C0A", "alt-mage": BOJE.Mage };
     var IME_KL = { opcenito: "Općenito", shaman: "Shaman", mage: "Mage", warrior: "Warrior", rogue: "Rogue", paladin: "Paladin", druid: "Druid · Niksin alt", "alt-mage": "Mage · Niksin alt" };
     var IME_UL = { tank: "Tank", heal: "Heal", dps: "DPS", opcenito: "Općenito" };
     var STATUS = { "provjereno za Forever": "ok", "iz Classica, testirati": "test" };
-    var M = null, poId = {}, filt = { klasa: "sve", uloga: "sve" }, start = {};
+    var M = null, poId = {}, red = {}, start = {}, otvoreni = {}, filt = { klasa: "sve", uloga: "sve", q: "", sort: "korisno" };
 
     function rijec(n) { return n % 10 === 1 && n % 100 !== 11 ? "macro" : "macroa"; }
-    function prolazi(m, f) { return (f.klasa === "sve" || m.klasa === f.klasa) && (f.uloga === "sve" || m.uloge.indexOf(f.uloga) >= 0); }
+    function norm(s) { return String(s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/đ/g, "d"); }
+    function prolazi(m, f) {
+      if (f.klasa !== "sve" && m.klasa !== f.klasa) return false;
+      if (f.uloga !== "sve" && m.uloge.indexOf(f.uloga) < 0) return false;
+      if (!f.q) return true;
+      // traži po naslovu, svrsi i tekstu macroa (u tekstu su imena spellova)
+      var h = m._h || (m._h = norm(m.naslov + " " + m.svrha + " " + m.tekst + " " + (IME_KL[m.klasa] || "")));
+      return norm(f.q).split(/\s+/).filter(Boolean).every(function (w) { return h.indexOf(w) >= 0; });
+    }
+    var SORT = {
+      korisno: function (a, b) { return (b.istaknuto ? 1 : 0) - (a.istaknuto ? 1 : 0) || REDKL.indexOf(a.klasa) - REDKL.indexOf(b.klasa) || red[a.id] - red[b.id]; },
+      level: function (a, b) { return (a.level || 0) - (b.level || 0) || red[a.id] - red[b.id]; },
+      klasa: function (a, b) { return REDKL.indexOf(a.klasa) - REDKL.indexOf(b.klasa) || a.naslov.localeCompare(b.naslov, "hr"); },
+      status: function (a, b) { return (STATUS[a.status] === "ok" ? 0 : 1) - (STATUS[b.status] === "ok" ? 0 : 1) || red[a.id] - red[b.id]; }
+    };
+    function klUl(m) { return esc(IME_KL[m.klasa] || m.klasa) + " · " + esc(m.uloge.map(function (u) { return IME_UL[u] || u; }).join(", ")); }
     function bedzevi(m) {
       return '<div class="mc-bad">' + (m.level ? "<span>lvl " + m.level + "</span>" : "") +
         '<span class="st ' + (STATUS[m.status] || "test") + '">' + esc(m.status) + "</span><span>" + m.znakova + "/255</span>" +
         (m.rasa ? "<span>" + esc(m.rasa.charAt(0).toUpperCase() + m.rasa.slice(1)) + "</span>" : "") + "</div>";
     }
+    function izvorIme(u) {
+      try { var x = new URL(u); return (x.hostname.replace(/^www\./, "") + x.pathname.replace(/\/$/, "")).slice(0, 60); } catch (e) { return u; }
+    }
+    function vise(m) {
+      return '<div class="mc-vise"><ol class="mc-lin">' + m.linije.map(function (l) {
+          return "<li><code>" + esc(l.linija) + "</code><p>" + esc(l.objasnjenje) + "</p></li>";
+        }).join("") + "</ol>" +
+        '<div class="mc-kk"><div><h4 class="lab mono">Kada</h4><p>' + esc(m.kada) + '</p></div><div><h4 class="lab mono">Kada ne</h4><p>' + esc(m.kadaNe) + "</p></div></div>" +
+        '<ul class="mc-izv">' + (m.izvor || []).map(function (u) {
+          return '<li><a href="' + esc(u) + '" target="_blank" rel="noopener">' + esc(izvorIme(u)) + " ↗</a></li>";
+        }).join("") + "</ul></div>";
+    }
+    // kompaktna kartica; klik na nju (ili na Objašnjenje) otvara objašnjenje na mjestu
     function kartica(m) {
-      return '<article class="mc" data-id="' + esc(m.id) + '" style="--c:' + (BOJA[m.klasa] || "#ece2d4") + '">' +
-        '<header><span class="mc-kl mono">' + esc(IME_KL[m.klasa] || m.klasa) + " · " + esc(m.uloge.map(function (u) { return IME_UL[u] || u; }).join(", ")) + "</span>" +
-        (start[m.id] ? '<span class="mc-start mono">Start</span>' : "") + "<h3>" + esc(m.naslov) + "</h3></header>" +
+      var o = !!otvoreni[m.id];
+      return '<article class="mc' + (o ? " otv" : "") + '" data-id="' + esc(m.id) + '" style="--c:' + (BOJA[m.klasa] || "#ece2d4") + '">' +
+        '<header><span class="mc-kl mono">' + klUl(m) + "</span>" + (start[m.id] ? '<span class="mc-start mono">Start</span>' : "") + "<h3>" + esc(m.naslov) + "</h3></header>" +
         '<p class="mc-sv">' + esc(m.svrha) + "</p>" +
         '<pre class="mc-tx"><code>' + esc(m.tekst) + "</code></pre>" + bedzevi(m) +
-        '<div class="mc-akc"><button type="button" class="mc-kop" data-mc="' + esc(m.id) + '">Kopiraj</button><button type="button" class="mc-obj" data-mc="' + esc(m.id) + '">Objašnjenje</button></div></article>';
+        '<div class="mc-akc"><button type="button" class="mc-kop" data-mc="' + esc(m.id) + '">Kopiraj</button>' +
+        '<button type="button" class="mc-obj" data-mc="' + esc(m.id) + '" aria-expanded="' + o + '">' + (o ? "Sakrij objašnjenje" : "Objašnjenje") + "</button></div>" +
+        (o ? vise(m) : "") + "</article>";
     }
-    function pil(g, k, t) { return '<button type="button" class="mc-pil" data-g="' + g + '" data-k="' + k + '">' + esc(t) + '<span class="n"></span></button>'; }
-
-    function primijeni() {
-      var n = 0;
-      Array.prototype.forEach.call(grid.querySelectorAll(".mc"), function (el) {
-        var da = prolazi(poId[el.getAttribute("data-id")], filt);
-        el.hidden = !da;
-        if (da) n++;
+    function prebaci(id) {
+      otvoreni[id] = !otvoreni[id];
+      Array.prototype.forEach.call(document.querySelectorAll('.mc[data-id="' + id + '"]'), function (el) {
+        var fokus = el.contains(document.activeElement);
+        el.outerHTML = kartica(poId[id]);
+        if (fokus) { var b = document.querySelector('.mc[data-id="' + id + '"] .mc-obj'); if (b) b.focus({ preventScroll: true }); }
       });
-      $("mcBroj").innerHTML = "<b>" + n + "</b> " + rijec(n) + (n ? "" : " za ovaj odabir. Probaj drugu ulogu.");
-      // na svakoj pilulici: koliko bi ih bilo s tim odabirom
-      Array.prototype.forEach.call(document.querySelectorAll(".mc-pil"), function (b) {
-        var g = b.getAttribute("data-g"), k = b.getAttribute("data-k"), f = { klasa: filt.klasa, uloga: filt.uloga };
-        f[g] = k;
-        var c = M.macroi.filter(function (m) { return prolazi(m, f); }).length;
-        b.setAttribute("aria-pressed", filt[g] === k ? "true" : "false");
-        b.querySelector(".n").textContent = c;
-        b.classList.toggle("nula", !c && filt[g] !== k);
-      });
-      var poc = $("mcPoc");
-      poc.hidden = !(MC_POC && filt.klasa === MC_POC.klasa);
-    }
-    function postavi(g, k) {
-      filt[g] = k;
-      // klasa bez macroa za odabranu ulogu: uloga se vraća na Sve, da odabir nikad ne ostane prazan
-      if (g === "klasa" && !M.macroi.some(function (m) { return prolazi(m, filt); })) filt.uloga = "sve";
-      primijeni();
     }
 
     function kopiraj(tekst, btn) {
@@ -3146,89 +3167,103 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(tekst).then(ok, rezerva);
       else rezerva();
     }
-    function izvorIme(u) {
-      try { var x = new URL(u); return (x.hostname.replace(/^www\./, "") + x.pathname.replace(/\/$/, "")).slice(0, 60); } catch (e) { return u; }
+
+    function pil(g, k, t) { return '<button type="button" class="mc-pil" data-g="' + g + '" data-k="' + k + '">' + esc(t) + '<span class="n"></span></button>'; }
+    function tablica() {
+      return '<div class="tbl"><table class="mc-meh"><thead><tr><th>Što</th><th>Status</th><th>Kako</th></tr></thead><tbody>' + M.mehanizmi.map(function (x) {
+        return "<tr><td><code>" + esc(x.naziv) + '</code></td><td><span class="st ' + esc(x.status) + '">' + esc(x.status) + "</span></td><td>" + esc(x.opis) +
+          (x.izvor ? ' <a href="' + esc(x.izvor) + '" target="_blank" rel="noopener">izvor ↗</a>' : "") + "</td></tr>";
+      }).join("") + "</tbody></table></div>";
     }
-    function objasni(m) {
-      if (!LADICA) return;
-      LADICA.otvori(m.naslov, '<div class="mc-lad" style="--c:' + (BOJA[m.klasa] || "#ece2d4") + '">' +
-        '<p class="mc-kl mono">' + esc(IME_KL[m.klasa] || m.klasa) + " · " + esc(m.uloge.map(function (u) { return IME_UL[u] || u; }).join(", ")) + "</p>" +
-        '<p class="mc-sv">' + esc(m.svrha) + "</p>" +
-        '<pre class="mc-tx"><code>' + esc(m.tekst) + '</code></pre><div class="mc-akc"><button type="button" class="mc-kop" data-mc="' + esc(m.id) + '">Kopiraj</button></div>' + bedzevi(m) +
-        '<div><h3 class="lab mono">Red po red</h3><ol class="mc-lin">' + m.linije.map(function (l) {
-          return "<li><code>" + esc(l.linija) + "</code><p>" + esc(l.objasnjenje) + "</p></li>";
-        }).join("") + "</ol></div>" +
-        '<div class="mc-kk"><div><h3 class="lab mono">Kada</h3><p>' + esc(m.kada) + '</p></div><div><h3 class="lab mono">Kada ne</h3><p>' + esc(m.kadaNe) + "</p></div></div>" +
-        '<div><h3 class="lab mono">Izvori</h3><ul class="mc-izv">' + (m.izvor || []).map(function (u) {
-          return '<li><a href="' + esc(u) + '" target="_blank" rel="noopener">' + esc(izvorIme(u)) + " ↗</a></li>";
-        }).join("") + "</ul></div></div>", "vodic");
-    }
-    function mehanizmi() {
-      if (!LADICA) return;
-      var zbroj = {};
+    function ladica() {
+      if (!LADICA || !M) return;
+      var U = M.uvod || {}, zbroj = {};
       M.mehanizmi.forEach(function (x) { zbroj[x.status] = (zbroj[x.status] || 0) + 1; });
-      LADICA.otvori("Što radi u Foreveru", '<div class="mc-lad">' +
-        '<p class="mc-sv">Pregled macro mehanizama na Forever klijentu (1.60.x). Pojedini macroi imaju svoj status na kartici.</p>' +
-        '<div class="mc-zbroj">' + ["radi", "promijenjeno", "zabranjeno", "nepoznato"].filter(function (k) { return zbroj[k]; }).map(function (k) {
-          return '<span class="st ' + k + '">' + zbroj[k] + " " + k + "</span>";
-        }).join("") + "</div>" +
-        '<div class="tbl"><table class="mc-meh"><thead><tr><th>Što</th><th>Status</th><th>Kako</th></tr></thead><tbody>' + M.mehanizmi.map(function (x) {
-          return "<tr><td><code>" + esc(x.naziv) + '</code></td><td><span class="st ' + esc(x.status) + '">' + esc(x.status) + "</span></td><td>" + esc(x.opis) +
-            (x.izvor ? ' <a href="' + esc(x.izvor) + '" target="_blank" rel="noopener">izvor ↗</a>' : "") + "</td></tr>";
-        }).join("") + "</tbody></table></div></div>", "siroka");
+      LADICA.otvori("Svi macroi", '<div class="mc-lad">' +
+        '<div class="mc-info">' +
+          '<details class="mc-det"><summary>Što radi u Foreveru <span class="mono">' + ["radi", "promijenjeno", "zabranjeno", "nepoznato"].filter(function (k) { return zbroj[k]; }).map(function (k) { return zbroj[k] + " " + k; }).join(" · ") + "</span></summary>" + tablica() + "</details>" +
+          '<details class="mc-det"><summary>Kako se radi macro <span class="mono">/macro, ikona, mouseover</span></summary><div class="mc-uvod-in">' +
+            '<div><h4 class="lab mono">Kako napraviti</h4><p>' + esc(U.kakoNapraviti || "") + "</p></div>" +
+            '<div><h4 class="lab mono">Mouseover</h4><p>' + esc(U.mouseover || "") + "</p></div>" +
+            '<div><h4 class="lab mono">Napomena za Forever</h4><p>' + esc(U.napomenaForever || "") + "</p></div></div></details>" +
+        "</div>" +
+        '<div class="mc-kontrole">' +
+          '<input type="search" id="mcQ" class="mc-q" placeholder="Traži: naslov, spell, tekst macroa…" aria-label="Traži macroe" autocomplete="off">' +
+          '<div class="mc-filt" id="mcKlase" role="group" aria-label="Klasa">' + KLASE.map(function (k) { return pil("klasa", k[0], k[1]); }).join("") +
+            '<span class="mc-sep mono">Niksini altovi</span>' + ALTOVI.map(function (k) { return pil("klasa", k[0], k[1]); }).join("") + "</div>" +
+          '<div class="mc-filt" id="mcUloge" role="group" aria-label="Uloga">' + ULOGE.map(function (k) { return pil("uloga", k[0], k[1]); }).join("") + "</div>" +
+          '<div class="mc-red"><p class="mc-broj mono" id="mcBroj" aria-live="polite"></p><label class="mc-sort mono">Poredaj <select id="mcSort">' +
+            PORETCI.map(function (s) { return '<option value="' + s[0] + '"' + (filt.sort === s[0] ? " selected" : "") + ">" + s[1] + "</option>"; }).join("") + "</select></label></div>" +
+        "</div>" +
+        (MC_POC ? '<div class="mc-poc" id="mcPoc" style="--c:' + (BOJA[MC_POC.klasa] || "#ece2d4") + '" hidden><h3>' + esc(MC_POC.naslov) + '</h3><p class="mono">Za Dexa i svakog paladina: složi ih na action bar prije prvog dungeona.</p><ol>' +
+          MC_POC.macroi.map(function (id) {
+            var m = poId[id];
+            return m ? "<li><b>" + esc(m.naslov) + "</b><span>" + esc(m.svrha) + '</span><div class="gumbi"><button type="button" class="mc-kop" data-mc="' + esc(id) + '">Kopiraj</button></div></li>' : "";
+          }).join("") + "</ol></div>" : "") +
+        '<div class="mc-lista" id="mcLista"></div></div>', "siroka");
+      $("mcQ").value = filt.q;
+      osvjezi();
+    }
+    function osvjezi() {
+      var lista = $("mcLista");
+      if (!lista) return;
+      var r = M.macroi.filter(function (m) { return prolazi(m, filt); }).sort(SORT[filt.sort]);
+      lista.innerHTML = r.map(kartica).join("") || '<p class="prazno mono">Ništa za ovaj odabir. Makni filter ili probaj drugu riječ.</p>';
+      $("mcBroj").innerHTML = "<b>" + r.length + "</b> " + rijec(r.length) + (r.length === M.macroi.length ? "" : " od " + M.macroi.length);
+      // na svakoj pilulici: koliko bi ih bilo s tim odabirom
+      Array.prototype.forEach.call(document.querySelectorAll(".mc-pil"), function (b) {
+        var g = b.getAttribute("data-g"), k = b.getAttribute("data-k"), f = { klasa: filt.klasa, uloga: filt.uloga, q: filt.q };
+        f[g] = k;
+        var c = M.macroi.filter(function (m) { return prolazi(m, f); }).length;
+        b.setAttribute("aria-pressed", filt[g] === k ? "true" : "false");
+        b.querySelector(".n").textContent = c;
+        b.classList.toggle("nula", !c && filt[g] !== k);
+      });
+      var poc = $("mcPoc");
+      if (poc) poc.hidden = !(MC_POC && filt.klasa === MC_POC.klasa && !filt.q);
+    }
+    function postavi(g, k) {
+      filt[g] = k;
+      // klasa bez macroa za odabranu ulogu: uloga se vraća na Sve, da odabir ne ostane prazan
+      if (g === "klasa" && !M.macroi.some(function (m) { return prolazi(m, { klasa: filt.klasa, uloga: filt.uloga, q: "" }); })) filt.uloga = "sve";
+      osvjezi();
     }
 
     fetch("macroi.json", { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).then(function (d) {
       M = d;
-      M.macroi.forEach(function (m) { poId[m.id] = m; });
+      M.macroi.forEach(function (m, i) { poId[m.id] = m; red[m.id] = i; });
       if (d.pocetnik && d.pocetnik.macroi) {
         MC_POC = d.pocetnik;
         d.pocetnik.macroi.forEach(function (id) { start[id] = true; });
       }
       var prov = M.macroi.filter(function (m) { return STATUS[m.status] === "ok"; }).length;
       $("mcMeta").innerHTML = "<b>" + M.macroi.length + "</b> macroa · <b>" + prov + "</b> provjereno za Forever";
-      var U = d.uvod || {};
-      $("mcUvod").innerHTML =
-        '<div><h3 class="lab mono">Kako napraviti</h3><p>' + esc(U.kakoNapraviti || "") + "</p></div>" +
-        '<div><h3 class="lab mono">Mouseover</h3><p>' + esc(U.mouseover || "") + "</p></div>" +
-        '<div><h3 class="lab mono">Napomena za Forever</h3><p>' + esc(U.napomenaForever || "") + "</p></div>" +
-        '<button type="button" class="vidi" id="mcMeh">Što radi u Foreveru →</button>';
-      $("mcKlase").innerHTML = KLASE.map(function (k) { return pil("klasa", k[0], k[1]); }).join("") +
-        '<span class="mc-sep mono">Niksini altovi</span>' + ALTOVI.map(function (k) { return pil("klasa", k[0], k[1]); }).join("");
-      $("mcUloge").innerHTML = ULOGE.map(function (k) { return pil("uloga", k[0], k[1]); }).join("");
-      if (MC_POC) {
-        var poc = $("mcPoc");
-        poc.style.setProperty("--c", BOJA[MC_POC.klasa] || "#ece2d4");
-        poc.innerHTML = "<h3>" + esc(MC_POC.naslov) + '</h3><p class="mono">Za Dexa i svakog paladina: složi ih na action bar prije prvog dungeona.</p><ol>' +
-          MC_POC.macroi.map(function (id) {
-            var m = poId[id];
-            return m ? "<li><b>" + esc(m.naslov) + "</b><span>" + esc(m.svrha) + '</span><div class="gumbi"><button type="button" class="mc-kop" data-mc="' + esc(id) + '">Kopiraj</button><button type="button" class="mc-obj" data-mc="' + esc(id) + '">Objašnjenje</button></div></li>' : "";
-          }).join("") + "</ol>";
-      }
-      grid.innerHTML = M.macroi.map(kartica).join("");
-      primijeni();
+      ist.innerHTML = M.macroi.filter(function (m) { return m.istaknuto; }).map(kartica).join("");
+      $("mcSvi").textContent = "Svi macroi (" + M.macroi.length + ")";
+      $("mcSvi").hidden = false;
     }).catch(function () {
-      grid.innerHTML = '<p class="prazno mono">Macroi se trenutno ne mogu učitati.</p>';
+      ist.innerHTML = '<p class="prazno mono">Macroi se trenutno ne mogu učitati.</p>';
     });
 
     document.addEventListener("click", function (e) {
-      if (!e.target.closest) return;
+      if (!e.target.closest || !M) return;
       var b = e.target.closest(".mc-pil");
       if (b) return postavi(b.getAttribute("data-g"), b.getAttribute("data-k"));
       b = e.target.closest(".mc-kop[data-mc]");
-      if (b && M) return kopiraj(poId[b.getAttribute("data-mc")].tekst, b);
+      if (b) return kopiraj(poId[b.getAttribute("data-mc")].tekst, b);
       b = e.target.closest(".mc-obj[data-mc]");
-      if (b && M) return objasni(poId[b.getAttribute("data-mc")]);
-      if (e.target.closest("#mcMeh") && M) return mehanizmi();
-      // poveznica iz profila (Dex): filter na klasu, ladica se zatvara promjenom hasha
+      if (b) return prebaci(b.getAttribute("data-mc"));
+      if (e.target.closest("#mcSvi")) return ladica();
+      // poveznica iz profila (Dex): ladica sa svim macroima, filtrirano na klasu
       b = e.target.closest("[data-mc-klasa]");
-      if (b && M) {
-        postavi("klasa", b.getAttribute("data-mc-klasa"));
-        setTimeout(function () { $("macroi").scrollIntoView({ block: "start" }); }, 60);
-      }
+      if (b) { filt.klasa = b.getAttribute("data-mc-klasa"); filt.uloga = "sve"; filt.q = ""; return ladica(); }
+      // klik bilo gdje na kartici (osim teksta macroa, linkova i gumba) otvara objašnjenje
+      var k = e.target.closest(".mc[data-id]");
+      if (k && !e.target.closest("a, button, pre, .mc-vise") && !String(window.getSelection())) prebaci(k.getAttribute("data-id"));
     });
+    document.addEventListener("input", function (e) { if (e.target.id === "mcQ" && M) { filt.q = e.target.value; osvjezi(); } });
+    document.addEventListener("change", function (e) { if (e.target.id === "mcSort" && M) { filt.sort = e.target.value; osvjezi(); } });
   })();
-
   /* ---------- meni: glatki scroll i aktivna stavka ---------- */
   (function () {
     var veze = Array.prototype.slice.call(document.querySelectorAll("#menu a"));
