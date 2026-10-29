@@ -9,7 +9,7 @@
    "url": "https://www.wowhead.com/news/rss/classic"
   }
  ],
- "azurirano": "2026-10-29T18:04:37Z",
+ "azurirano": "2026-10-29T18:33:29Z",
  "stavke": [
   {
    "datum": "2026-10-29T16:17:57Z",
@@ -196,14 +196,6 @@
    "oznake": []
   },
   {
-   "datum": "2026-10-16T17:00:09Z",
-   "naslov": "WoW Weekly Highlights Midnight 12.1.5, Worldcore, WoW: Forever, and More",
-   "link": "https://us.forums.blizzard.com/en/wow/t/wow-weekly-highlights-midnight-1215-worldcore-wow-forever-and-more/2384784/1",
-   "izvor": "Blizzard",
-   "sazetak": "From new challenges in Midnight and a glimpse of what’s ahead in Echoes of the Worldcore to a deep dive into Paladins and the latest WoW: Forever Podcast, this week's news is packed with fresh insights, new rewards, and adventures to…",
-   "oznake": []
-  },
-  {
    "datum": "2026-10-14T14:00:00Z",
    "naslov": "Character Caps in WoW: Forever, Cross Region Servers - Fiamma Interview with Clay Stone and Holly Longdale",
    "link": "https://www.wowhead.com/news=383383/character-caps-in-wow-forever-cross-region-servers-fiamma-interview-with-clay",
@@ -380,6 +372,16 @@
    "link": "https://www.wowhead.com/news=382702/class-specs-from-sod-that-could-work-in-classic",
    "izvor": "Wowhead",
    "sazetak": "Season of Discovery came with a handful of new Class Spec combinations that never worked before its creation. Which ones might work in a future Classic+? Continue reading »",
+   "oznake": [
+    "Klase"
+   ]
+  },
+  {
+   "datum": "2026-09-04T14:00:00Z",
+   "naslov": "Features from SoD That Should Be in Classic +",
+   "link": "https://www.wowhead.com/news=382690/features-from-sod-that-should-be-in-classic",
+   "izvor": "Wowhead",
+   "sazetak": "Season of Discovery came with so many new features and ideas added to a Vanilla Azeroth. With everyone talking about Classic+, here are some of those features that should be repeated. Continue reading »",
    "oznake": [
     "Klase"
    ]
