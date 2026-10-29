@@ -21,7 +21,7 @@
 <meta name="twitter:image" content="https://zabranjeno-pullanje.netlify.app/assets/og.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Big+Shoulders+Display:wght@600;800;900&family=Martian+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Big+Shoulders+Display:wght@600;800;900&family=Martian+Mono:wght@400;500&family=Cinzel:wght@700;900&display=swap">
 <style>
 /* Layout: ratna ploča. Uska kolona teksta, široke trake za odbrojavanje i ekipu; naslovi sekcija veliki i zbijeni, meta podaci u mono slogu uz desni rub. */
 :root {
@@ -266,23 +266,34 @@ section[id] { scroll-margin-top: 84px; }
 @keyframes tinja { 0%, 100% { opacity: .75; } 30% { opacity: 1; } 55% { opacity: .82; } 78% { opacity: .96; } }
 .unit { display: grid; gap: 10px; justify-items: center; }
 .unit .digits { display: flex; gap: calc(var(--dh) * .05); }
-.unit .lab { color: var(--dust); text-align: center; }
-@media (max-width: 639px) { .unit .lab { font-size: .5625rem; } }
+/* counter u WoW duhu (samo ovdje): Cinzel kao rimski natpisi, zlatne znamenke, pločice u zlatnom okviru */
+.unit .lab { font: 700 .8125rem/1 "Cinzel", Georgia, serif; letter-spacing: .22em; text-transform: uppercase; color: #e0b25a; text-align: center; text-shadow: 0 1px 0 #1a0e05; }
+@media (max-width: 639px) { .unit .lab { font-size: .5625rem; letter-spacing: .14em; } }
 .flip-row .word {
-  font: 800 calc(var(--dh) * .5)/1 var(--f-display); text-transform: uppercase; align-self: center; padding-bottom: 12px;
+  font: 900 calc(var(--dh) * .42)/1 "Cinzel", Georgia, serif; text-transform: uppercase; align-self: center; padding-bottom: 12px;
+  color: transparent; background: linear-gradient(180deg, #fff3c4, #f2cf5b 40%, #b8862e 70%, #7a5520); -webkit-background-clip: text; background-clip: text;
 }
 
 .dg {
   position: relative; width: calc(var(--dh) * .66); height: var(--dh); flex: none;
-  font: 800 var(--dh)/1 var(--f-display); font-variant-numeric: tabular-nums;
-  perspective: calc(var(--dh) * 4);
+  font: 900 calc(var(--dh) * .74)/1 "Cinzel", Georgia, serif;
+  perspective: calc(var(--dh) * 4); border-radius: 5px;
+  box-shadow: 0 0 0 1px rgba(224, 178, 90, .75), 0 0 0 3px #0e0a08, 0 0 0 4px rgba(224, 178, 90, .3), 0 12px 28px rgba(0, 0, 0, .55);
 }
-.dg .h { position: absolute; left: 0; right: 0; height: 50%; overflow: hidden; background: #1c1411; }
-.dg .up, .dg .fu { top: 0; border-radius: 4px 4px 0 0; transform-origin: 50% 100%; background: #261b16; }
-.dg .lo, .dg .fl { bottom: 0; border-radius: 0 0 4px 4px; transform-origin: 50% 0; }
+/* zlatne zakovice na šarki */
+.dg::before {
+  content: ""; position: absolute; left: -5px; right: -5px; top: calc(50% - 4px); height: 8px; z-index: 4; pointer-events: none;
+  background: radial-gradient(circle at 4px 4px, #fff0b8 0 1.5px, #c8923c 2.5px, #5a3a14 3.5px, transparent 4px), radial-gradient(circle at calc(100% - 4px) 4px, #fff0b8 0 1.5px, #c8923c 2.5px, #5a3a14 3.5px, transparent 4px);
+}
+.dg .h { position: absolute; left: 0; right: 0; height: 50%; overflow: hidden; background: linear-gradient(180deg, #1d1612, #120d0b); }
+.dg .up, .dg .fu { top: 0; border-radius: 5px 5px 0 0; transform-origin: 50% 100%; background: linear-gradient(180deg, #2c211b, #1b1410); }
+.dg .lo, .dg .fl { bottom: 0; border-radius: 0 0 5px 5px; transform-origin: 50% 0; }
 .dg .h i {
-  position: absolute; left: 0; right: 0; height: 200%; display: flex; align-items: center; justify-content: center;
-  font-style: normal; color: #f6ead9; text-shadow: 0 0 calc(var(--dh) * .16) rgba(255, 130, 50, .5), 0 0 2px rgba(255, 200, 150, .4);
+  position: absolute; left: 0; right: 0; height: 200%; display: flex; align-items: center; justify-content: center; font-style: normal;
+  /* zlatni metal s reljefom: gradijent u slovima, tamni rub ispod */
+  color: transparent; background: linear-gradient(180deg, #fff6d2 8%, #f2cf5b 38%, #c8923c 52%, #8a5a1e 64%, #e2b562 82%, #7a4c18 96%);
+  -webkit-background-clip: text; background-clip: text;
+  filter: drop-shadow(0 calc(var(--dh) * .018) 0 #2a1406) drop-shadow(0 0 calc(var(--dh) * .08) rgba(255, 160, 60, .35));
 }
 .dg .up i, .dg .fu i { top: 0; }
 .dg .lo i, .dg .fl i { bottom: 0; }
