@@ -20,14 +20,18 @@ window.HORDE = {
 
   // level: 0 do 60
   // foto: portret iz assets/likovi/ ili null (tada stoji zamjenski grb klase dok netko ne pošalje screenshot)
+  // vjestine: skill profesije 0–300 (Apprentice do 75, Journeyman 150, Expert 225, Artisan 300); gold: koliko lik ima (cijeli goldi)
   // zadaci: { naziv, od, do (level raspon), gotovo }; na profilu se prikazuju oni za trenutni level lika
   // profil: build, oprema i ciljevi za stranicu lika (#lik/ime-lika); plan: true = još nije stvaran build iz igre
-  //   talenti: bodovi u tri stabla redom kako ih igra slaže; oprema: { slot, ime, kvaliteta: poor|common|uncommon|rare|epic|legendary }
+  //   talenti: bodovi u tri stabla redom kako ih igra slaže
+  //   oprema i ciljevi: { slot, ime, kvaliteta: poor|common|uncommon|rare|epic|legendary, ikona (Wowhead ikona, npr. "inv_axe_09"), wowhead (ID itema), izvor }
   // oci: položaji očiju na fotki u postocima [[x, y], [x, y]] za sjaj (samo Undead), inače izostavi
   // profesije: plan "do 40" i "nakon 40"; null = po želji; { ime, plan: true } = još nije dogovoreno do kraja
   igraci: [
     { igrac: "Pero",    lik: "Melee Kitic",      klasa: "Warrior", rasa: "Orc",    uloga: "Melee DPS",  level: 0, foto: null,
       profesije: { do40: ["Mining", "Skinning"], nakon40: ["Mining", "Engineering"] },
+      vjestine: { "Mining": 0, "Skinning": 0, "Engineering": 0 },
+      gold: 0,
       zadaci: [
         { naziv: "Mining i Skinning naučiti čim izađeš iz Valley of Trials", od: 1, do: 10, gotovo: false },
         { naziv: "Defensive Stance quest na 10 kod Warrior trenera", od: 10, do: 12, gotovo: false },
@@ -43,18 +47,21 @@ window.HORDE = {
         opisBuilda: "Arms do Mortal Strikea, ostatak u Fury za crit i Rage. Dvoručno oružje, najlakši leveling za Warriora.",
         oprema: [],
         ciljevi: [
-          { ime: "Arcanite Reaper (Blacksmithing)", gotovo: false },
-          { ime: "Lionheart Helm (Blacksmithing)", gotovo: false },
-          { ime: "Savage Gladiator Chain (BRD)", gotovo: false },
-          { ime: "Devilsaur Gauntlets i Leggings (Leatherworking)", gotovo: false },
-          { ime: "Cape of the Black Baron (Stratholme)", gotovo: false },
-          { ime: "Hand of Justice (BRD)", gotovo: false },
-          { ime: "Blackhand's Breadth (UBRS)", gotovo: false }
+          { ime: "Arcanite Reaper", slot: "Main Hand", kvaliteta: "rare", ikona: "inv_axe_09", wowhead: 12784, izvor: "Blacksmithing", gotovo: false },
+          { ime: "Lionheart Helm", slot: "Head", kvaliteta: "epic", ikona: "inv_helmet_36", wowhead: 12640, izvor: "Blacksmithing", gotovo: false },
+          { ime: "Savage Gladiator Chain", slot: "Chest", kvaliteta: "epic", ikona: "inv_chest_chain_15", wowhead: 11726, izvor: "Blackrock Depths", gotovo: false },
+          { ime: "Devilsaur Gauntlets", slot: "Hands", kvaliteta: "rare", ikona: "inv_gauntlets_26", wowhead: 15063, izvor: "Leatherworking", gotovo: false },
+          { ime: "Devilsaur Leggings", slot: "Legs", kvaliteta: "rare", ikona: "inv_pants_wolf", wowhead: 15062, izvor: "Leatherworking", gotovo: false },
+          { ime: "Cape of the Black Baron", slot: "Back", kvaliteta: "rare", ikona: "inv_misc_cape_20", wowhead: 13340, izvor: "Stratholme", gotovo: false },
+          { ime: "Hand of Justice", slot: "Trinket", kvaliteta: "rare", ikona: "inv_jewelry_talisman_01", wowhead: 11815, izvor: "Blackrock Depths", gotovo: false },
+          { ime: "Blackhand's Breadth", slot: "Trinket", kvaliteta: "rare", ikona: "inv_misc_armorkit_09", wowhead: 13965, izvor: "Upper Blackrock Spire", gotovo: false }
         ],
         biljeske: "Kao DPS ne pulla. Kad Dex nije tu, Warrior je rezervni tank."
       } },
     { igrac: "Niksa",   lik: "Shaman Saulic",    klasa: "Shaman",  rasa: "Orc",    uloga: "Healer",     level: 0, foto: "assets/likovi/shaman-saulic.jpg",
       profesije: { do40: ["Herbalism", "Skinning"], nakon40: ["Skinning", "Leatherworking"] },
+      vjestine: { "Herbalism": 0, "Skinning": 0, "Leatherworking": 0 },
+      gold: 0,
       zadaci: [
         { naziv: "Herbalism i Skinning; Earth totem quest na 4", od: 1, do: 10, gotovo: false },
         { naziv: "Fire totem quest na 10", od: 10, do: 12, gotovo: false },
@@ -70,17 +77,19 @@ window.HORDE = {
         opisBuilda: "Enhancement do Stormstrikea za leveling, Restoration za jače healove u dungeonima. Na 40 dual spec: čisti Resto za grupu.",
         oprema: [],
         ciljevi: [
-          { ime: "Arcanite Reaper (Blacksmithing)", gotovo: false },
-          { ime: "Savage Gladiator Chain (BRD)", gotovo: false },
-          { ime: "Devilsaur Gauntlets (Leatherworking)", gotovo: false },
-          { ime: "Cape of the Black Baron (Stratholme)", gotovo: false },
-          { ime: "Hand of Justice (BRD)", gotovo: false },
-          { ime: "Blackhand's Breadth (UBRS)", gotovo: false }
+          { ime: "Arcanite Reaper", slot: "Main Hand", kvaliteta: "rare", ikona: "inv_axe_09", wowhead: 12784, izvor: "Blacksmithing", gotovo: false },
+          { ime: "Savage Gladiator Chain", slot: "Chest", kvaliteta: "epic", ikona: "inv_chest_chain_15", wowhead: 11726, izvor: "Blackrock Depths", gotovo: false },
+          { ime: "Devilsaur Gauntlets", slot: "Hands", kvaliteta: "rare", ikona: "inv_gauntlets_26", wowhead: 15063, izvor: "Leatherworking", gotovo: false },
+          { ime: "Cape of the Black Baron", slot: "Back", kvaliteta: "rare", ikona: "inv_misc_cape_20", wowhead: 13340, izvor: "Stratholme", gotovo: false },
+          { ime: "Hand of Justice", slot: "Trinket", kvaliteta: "rare", ikona: "inv_jewelry_talisman_01", wowhead: 11815, izvor: "Blackrock Depths", gotovo: false },
+          { ime: "Blackhand's Breadth", slot: "Trinket", kvaliteta: "rare", ikona: "inv_misc_armorkit_09", wowhead: 13965, izvor: "Upper Blackrock Spire", gotovo: false }
         ],
         biljeske: "Healer grupe. Kad kaže mana, svi stanu."
       } },
     { igrac: "Karkens", lik: "Janica Frostelic", klasa: "Mage",    rasa: "Troll",  uloga: "Ranged DPS", level: 0, foto: null,
       profesije: { do40: ["Herbalism", null], nakon40: ["Herbalism", null] },
+      vjestine: { "Herbalism": 0 },
+      gold: 0,
       zadaci: [
         { naziv: "Herbalism; za drugu profesiju prijedlog je Tailoring (torbe za ekipu)", od: 1, do: 10, gotovo: false },
         { naziv: "Polymorph u svakom pullu s humanoidima, vježba u Ragefireu", od: 10, do: 20, gotovo: false },
@@ -88,24 +97,25 @@ window.HORDE = {
         { naziv: "Teleport: Orgrimmar na 20", od: 20, do: 22, gotovo: false },
         { naziv: "Conjure Water i hrana za ekipu prije svakog dungeona", od: 20, do: 60, gotovo: false },
         { naziv: "Portali na 40: Orgrimmar i Undercity za ekipu", od: 40, do: 42, gotovo: false },
-        { naziv: "Robe of the Archmage (Tailoring) i Mish'undare iz Scholomancea", od: 50, do: 60, gotovo: false }
+        { naziv: "Robe of the Archmage (Tailoring) i Magister's set (Dungeon Set 1)", od: 50, do: 60, gotovo: false }
       ],
       profil: {
         specka: "Frost", talenti: [17, 0, 34], plan: true,
         opisBuilda: "Frost za sigurno levelanje: usporava, Frost Nova i Blizzard za AoE grind. Arcane za manu i manje resista.",
         oprema: [],
         ciljevi: [
-          { ime: "Robe of the Archmage (Tailoring)", gotovo: false },
-          { ime: "Mish'undare, Circlet of the Mind Flayer (Scholomance)", gotovo: false },
-          { ime: "Briarwood Reed", gotovo: false },
-          { ime: "Bonecreeper Stylus (Scholomance)", gotovo: false },
-          { ime: "Eye of the Beast (LBRS)", gotovo: false },
-          { ime: "Magister's set (Dungeon Set 1)", gotovo: false }
+          { ime: "Robe of the Archmage", slot: "Chest", kvaliteta: "epic", ikona: "inv_chest_cloth_38", wowhead: 14152, izvor: "Tailoring", gotovo: false },
+          { ime: "Magister's Crown", slot: "Head", kvaliteta: "rare", ikona: "inv_crown_02", wowhead: 16686, izvor: "Dungeon Set 1", gotovo: false },
+          { ime: "Briarwood Reed", slot: "Trinket", kvaliteta: "rare", ikona: "inv_misc_root_02", wowhead: 12930, gotovo: false },
+          { ime: "Bonecreeper Stylus", slot: "Ranged", kvaliteta: "rare", ikona: "inv_misc_bone_taurenskull_01", wowhead: 13938, gotovo: false },
+          { ime: "Eye of the Beast", slot: "Trinket", kvaliteta: "rare", ikona: "inv_jewelry_talisman_08", wowhead: 13968, izvor: "Lower Blackrock Spire", gotovo: false }
         ],
         biljeske: "Voda i hrana za ekipu, Polymorph na drugi target."
       } },
     { igrac: "Žuga",    lik: "Nikola Roguevic",  klasa: "Rogue",   rasa: "Undead", uloga: "Melee DPS",  level: 0, foto: "assets/likovi/nikola-roguevic.jpg", oci: [[45.0, 17.3], [50.6, 17.3]],
       profesije: { do40: ["Mining", "Skinning"], nakon40: ["Mining", "Skinning"] },
+      vjestine: { "Mining": 0, "Skinning": 0 },
+      gold: 0,
       zadaci: [
         { naziv: "Mining i Skinning", od: 1, do: 10, gotovo: false },
         { naziv: "Sap na humanoide prije svakog pulla, kad Dex kaže", od: 10, do: 20, gotovo: false },
@@ -120,17 +130,20 @@ window.HORDE = {
         opisBuilda: "Combat s mačevima do Adrenaline Rusha, Assassination za crit i Ruthlessness. Stabilan DPS bez puno skrivanja.",
         oprema: [],
         ciljevi: [
-          { ime: "Mask of the Unforgiven (Stratholme)", gotovo: false },
-          { ime: "Cadaverous Armor (Scholomance)", gotovo: false },
-          { ime: "Devilsaur Gauntlets i Leggings (Leatherworking)", gotovo: false },
-          { ime: "Cape of the Black Baron (Stratholme)", gotovo: false },
-          { ime: "Hand of Justice (BRD)", gotovo: false },
-          { ime: "Blackhand's Breadth (UBRS)", gotovo: false }
+          { ime: "Mask of the Unforgiven", slot: "Head", kvaliteta: "rare", ikona: "inv_misc_bandana_01", wowhead: 13404, izvor: "Stratholme", gotovo: false },
+          { ime: "Cadaverous Armor", slot: "Chest", kvaliteta: "rare", ikona: "inv_chest_leather_03", wowhead: 14637, izvor: "Scholomance", gotovo: false },
+          { ime: "Devilsaur Gauntlets", slot: "Hands", kvaliteta: "rare", ikona: "inv_gauntlets_26", wowhead: 15063, izvor: "Leatherworking", gotovo: false },
+          { ime: "Devilsaur Leggings", slot: "Legs", kvaliteta: "rare", ikona: "inv_pants_wolf", wowhead: 15062, izvor: "Leatherworking", gotovo: false },
+          { ime: "Cape of the Black Baron", slot: "Back", kvaliteta: "rare", ikona: "inv_misc_cape_20", wowhead: 13340, izvor: "Stratholme", gotovo: false },
+          { ime: "Hand of Justice", slot: "Trinket", kvaliteta: "rare", ikona: "inv_jewelry_talisman_01", wowhead: 11815, izvor: "Blackrock Depths", gotovo: false },
+          { ime: "Blackhand's Breadth", slot: "Trinket", kvaliteta: "rare", ikona: "inv_misc_armorkit_09", wowhead: 13965, izvor: "Upper Blackrock Spire", gotovo: false }
         ],
         biljeske: "Sap na drugi target prije pulla, kad Dex kaže."
       } },
     { igrac: "Dex",     lik: "Arsen Deadic",     klasa: "Paladin", rasa: "Undead", uloga: "Tank",       level: 0, foto: "assets/likovi/arsen-deadic.jpg", oci: [[59.2, 18.1], [63.3, 18.5]],
       profesije: { do40: ["Herbalism", null], nakon40: ["Herbalism", { ime: "Alchemy", plan: true }] },
+      vjestine: { "Herbalism": 0, "Alchemy": 0 },
+      gold: 0,
       zadaci: [
         { naziv: "Herbalism; Righteous Fury čim ga naučiš, u svakom dungeonu", od: 1, do: 10, gotovo: false },
         { naziv: "Jedini pullaš: nauči put kroz Ragefire i Wailing Caverns", od: 10, do: 20, gotovo: false },
@@ -145,12 +158,12 @@ window.HORDE = {
         opisBuilda: "Ret za brzo levelanje solo i u grupi. Za tankanje dungeona kasnije Protection/Holy hibrid; na 40 dual spec, jedan spec za tank.",
         oprema: [],
         ciljevi: [
-          { ime: "Arcanite Reaper (Blacksmithing)", gotovo: false },
-          { ime: "Lionheart Helm (Blacksmithing)", gotovo: false },
-          { ime: "Savage Gladiator Chain (BRD)", gotovo: false },
-          { ime: "Cape of the Black Baron (Stratholme)", gotovo: false },
-          { ime: "Hand of Justice (BRD)", gotovo: false },
-          { ime: "Blackhand's Breadth (UBRS)", gotovo: false }
+          { ime: "Arcanite Reaper", slot: "Main Hand", kvaliteta: "rare", ikona: "inv_axe_09", wowhead: 12784, izvor: "Blacksmithing", gotovo: false },
+          { ime: "Lionheart Helm", slot: "Head", kvaliteta: "epic", ikona: "inv_helmet_36", wowhead: 12640, izvor: "Blacksmithing", gotovo: false },
+          { ime: "Savage Gladiator Chain", slot: "Chest", kvaliteta: "epic", ikona: "inv_chest_chain_15", wowhead: 11726, izvor: "Blackrock Depths", gotovo: false },
+          { ime: "Cape of the Black Baron", slot: "Back", kvaliteta: "rare", ikona: "inv_misc_cape_20", wowhead: 13340, izvor: "Stratholme", gotovo: false },
+          { ime: "Hand of Justice", slot: "Trinket", kvaliteta: "rare", ikona: "inv_jewelry_talisman_01", wowhead: 11815, izvor: "Blackrock Depths", gotovo: false },
+          { ime: "Blackhand's Breadth", slot: "Trinket", kvaliteta: "rare", ikona: "inv_misc_armorkit_09", wowhead: 13965, izvor: "Upper Blackrock Spire", gotovo: false }
         ],
         biljeske: "Tank grupe: jedini smije pullati. Righteous Fury uključen u dungeonu."
       } }
@@ -419,7 +432,7 @@ window.HORDE = {
           { ime: "Darkmaster Gandling", tekst: "Teleportira po jednog u sobe: tko ode, preživi sam do kraja." }
         ],
         uloge: "Puno undeada i casterera: Dex Consecration, Niksa Disease Cleansing Totem.",
-        loot: ["Mage: Mish'undare, Circlet of the Mind Flayer", "Mage: Bonecreeper Stylus", "Rogue: Cadaverous Armor", "Točan loot po bossu: Wowhead vodič ispod."],
+        loot: ["Mage: Magister's dijelovi (Dungeon Set 1)", "Rogue: Cadaverous Armor", "Točan loot po bossu: Wowhead vodič ispod."],
         greske: ["U Viewing Roomu ne pullati cijelu sobu.", "Gandlingov teleport: ne paničariti, sobu očistiti sam."]
       } },
     { ime: "Stratholme",                gdje: "Eastern Plaguelands", od: 58, do: 60, odradeno: false,
