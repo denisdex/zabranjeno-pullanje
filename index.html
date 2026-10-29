@@ -230,25 +230,30 @@ section[id] { scroll-margin-top: 84px; }
   color: transparent; -webkit-text-stroke: 1px rgba(236, 226, 212, .1);
 }
 .count-in { position: relative; display: grid; gap: clamp(22px, 3vw, 36px); }
-.count-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 10px 24px; }
+/* countdown ide od ruba do ruba: unutarnji rub ~4 vw umjesto 10 % sa strane */
+.count .count-in { padding-left: max(4vw, var(--gut)); padding-right: max(4vw, var(--gut-r)); }
+.count-top { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px; }
 .count-label { margin: 0; font: 800 clamp(1.5rem, 3.6vw, 2.6rem)/1 var(--f-display); text-transform: uppercase; letter-spacing: .02em; color: var(--ember); }
 .flip-row {
-  --dh: clamp(36px, 14vw, 228px);
+  /* četiri para ravnomjerno od lijevog do desnog ruba; par je 1,37 × --dh širok */
+  --dh: clamp(36px, 14.5vw, 120px);
   position: relative; isolation: isolate;
-  display: flex; flex-wrap: wrap; align-items: flex-end; gap: 18px clamp(10px, 3vw, 44px);
+  display: flex; justify-content: space-between; align-items: flex-end; gap: 8px;
 }
+.flip-row.live { justify-content: center; flex-wrap: wrap; gap: 18px clamp(14px, 3vw, 44px); }
 .flip-row::before {
   /* topli sjaj iza znamenki, lagano tinja */
   content: ""; position: absolute; inset: -18% -4% -10%; z-index: -1; pointer-events: none;
-  background: radial-gradient(50% 62% at 45% 55%, rgba(255, 110, 30, .2), rgba(255, 110, 30, 0) 72%);
+  background: radial-gradient(50% 62% at 50% 55%, rgba(255, 110, 30, .2), rgba(255, 110, 30, 0) 72%);
   animation: tinja 3.4s ease-in-out infinite;
 }
-/* sadržaj je na desktopu 80 % širine: osam znamenki mora stati u jedan red */
-@media (min-width: 900px) { .flip-row { --dh: clamp(36px, 12.5vw, 228px); } }
+/* desktop: par do ~16 vw */
+@media (min-width: 640px) { .flip-row { --dh: clamp(36px, 11.6vw, 260px); } }
 @keyframes tinja { 0%, 100% { opacity: .75; } 30% { opacity: 1; } 55% { opacity: .82; } 78% { opacity: .96; } }
-.unit { display: grid; gap: 10px; }
+.unit { display: grid; gap: 10px; justify-items: center; }
 .unit .digits { display: flex; gap: calc(var(--dh) * .05); }
-.unit .lab { color: var(--dust); }
+.unit .lab { color: var(--dust); text-align: center; }
+@media (max-width: 639px) { .unit .lab { font-size: .5625rem; } }
 .flip-row .word {
   font: 800 calc(var(--dh) * .5)/1 var(--f-display); text-transform: uppercase; align-self: center; padding-bottom: 12px;
 }
@@ -276,7 +281,7 @@ section[id] { scroll-margin-top: 84px; }
 .dg.go .fl { animation: fl .3s .26s cubic-bezier(.1, .6, .3, 1) forwards; }
 @keyframes fu { to { transform: rotateX(-90deg); } }
 @keyframes fl { from { transform: rotateX(90deg); } to { transform: rotateX(0deg); } }
-.noci { margin: 0; font: 800 clamp(1.6rem, 4vw, 3rem)/1 var(--f-display); text-transform: uppercase; }
+.noci { margin: 0; font: 800 clamp(1.6rem, 4vw, 3rem)/1 var(--f-display); text-transform: uppercase; text-align: center; }
 .noci b { color: var(--ember); font-weight: 900; }
 /* traka napretka: kovani okvir s runama, ispuna od žara, markeri koji se pale */
 .forge { --pos: 0%; position: relative; padding-block: clamp(46px, 6vw, 64px) 74px; }
@@ -358,6 +363,7 @@ section[id] { scroll-margin-top: 84px; }
 .count-clock b { color: var(--sys); font-weight: 500; font-variant-numeric: tabular-nums; }
 .count-clock i { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #3fbf5f; box-shadow: 0 0 8px #3fbf5f; align-self: center; }
 .count-next b { color: var(--bone); font-weight: 500; }
+.count-next, .count-clock { justify-content: center; text-align: center; }
 /* zadnja 24 sata prije launcha */
 .count.alarm { animation: alarm 1.8s ease-in-out infinite; }
 .count.alarm .count-label, .count.alarm .noci b { color: #ff3b30; }
@@ -1211,6 +1217,15 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
   .fig, .eye, .fog, .ph svg, .hero-main h1, .ognjiste, .flip-row::before, .count.alarm, .prof-panel, .fth-in img, .fg-fill, .fg-fill::after, .fg-fill .sp, .fg-marks li.launch i, .count.alarm .fg-bar, .prof-bg { animation: none; }
   .pl, .fog { transform: none; }
   .fth b { animation: none; }
+}
+/* ---------- kursor: oklopna rukavica, samo uz miš; vrh kažiprsta je hotspot (7 4) ---------- */
+@media (hover: hover) and (pointer: fine) {
+  html { cursor: url("assets/kursor/kursor.svg") 7 4, auto; }
+  html:active { cursor: url("assets/kursor/kursor-klik.svg") 7 4, auto; }
+  html :is(a, button, [role="button"], label, summary, select, .card, .crest-btn, .stage, .plate, .prof-bg, .inst li[data-dungeon], .dtl-s, .dk, .pvol) { cursor: url("assets/kursor/kursor-link.svg") 7 4, pointer; }
+  html :is(a, button, [role="button"], label, summary, .card, .crest-btn, .stage, .plate, .prof-bg, .inst li[data-dungeon], .dtl-s, .dk):active { cursor: url("assets/kursor/kursor-klik.svg") 7 4, pointer; }
+  html .hs-b:disabled { cursor: url("assets/kursor/kursor.svg") 7 4, auto; }
+  html :is(input:not([type="checkbox"], [type="radio"], [type="range"], [type="button"], [type="submit"]), textarea, [contenteditable="true"]) { cursor: text; }
 }
 </style>
 </head>
@@ -2612,8 +2627,10 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
         $("cdLabel").textContent = "Portal je otvoren";
         buildUnits([{ word: "Dan" }, { n: 2 }, { word: "na Azerothu" }]);
         $("countWm").textContent = "AZEROTH";
+        flip.classList.add("live");
       } else {
         $("cdLabel").textContent = "Portal se otvara za";
+        flip.classList.remove("live");
         buildUnits([{ n: 2, lab: "dana" }, { n: 2, lab: "sati" }, { n: 2, lab: "minuta" }, { n: 2, lab: "sekundi" }]);
       }
     }

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+ <defs>
+  <linearGradient id="m" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#e9c97a"/><stop offset=".38" stop-color="#b88434"/><stop offset=".78" stop-color="#76491a"/><stop offset="1" stop-color="#3a230a"/>
+  </linearGradient>
+ </defs>
+ <g transform="translate(7 4) rotate(-20) scale(.94)" stroke="#1a0e05" stroke-width="1.15" stroke-linejoin="round">
+    <!-- manžeta -->
+    <path d="M-3.6 19.8 H13.4 L15.2 26.8 H-5.4 Z" fill="url(#m)"/>
+    <path d="M-4.4 23.200000000000003 H14.3" fill="none" stroke-width=".8"/>
+    <circle cx="-1.6" cy="25.1" r=".75" fill="#2a1808" stroke="none"/><circle cx="4.8" cy="25.1" r=".75" fill="#2a1808" stroke="none"/><circle cx="11.2" cy="25.1" r=".75" fill="#2a1808" stroke="none"/>
+    <!-- šaka -->
+    <rect x="-3.2" y="8.8" width="16.4" height="11.8" rx="3" fill="url(#m)"/>
+    <!-- savijeni prsti, oklopne pločice -->
+    <rect x="2" y="7.6000000000000005" width="4" height="5.6" rx="1.8" fill="url(#m)"/>
+    <rect x="5.9" y="8.0" width="3.9" height="5.4" rx="1.8" fill="url(#m)"/>
+    <rect x="9.7" y="8.8" width="3.6" height="5" rx="1.7" fill="url(#m)"/>
+    <path d="M-2.2 16.0 H12.4" fill="none" stroke-width=".7" stroke-opacity=".7"/>
+    <!-- palac -->
+    <path d="M-2 10.8 C-5.2 10.8 -6.4 14.200000000000001 -5.4 16.200000000000003 C-4.4 18.200000000000003 -1.2 18.4 .2 16.4 Z" fill="url(#m)"/>
+    <!-- kažiprst -->
+    <rect x="-2.4" y="0" width="4.8" height="12.3" rx="2.4" fill="url(#m)"/>
+    <path d="M-2.3 3.89 H2.3 M-2.3 7.56 H2.3" fill="none" stroke-width=".7"/>
+    <!-- odsjaj na lijevom rubu -->
+    <path d="M-1.25 2.2 V10.3" fill="none" stroke="#fff4cf" stroke-width=".8" stroke-opacity=".85" stroke-linecap="round"/>
+    <path d="M-2 11.8 V17.8" fill="none" stroke="#fff4cf" stroke-width=".7" stroke-opacity=".55" stroke-linecap="round"/>
+ </g>
+</svg>
