@@ -20,6 +20,7 @@
   --dust: #a19282;
   --blood: #c1121f;
   --ember: #ff7a2e;
+  --sys: #f2cf5b;
 
   --f-display: "Big Shoulders Display", "Arial Narrow", "Helvetica Neue", sans-serif;
   --f-body: "Archivo", "Helvetica Neue", Arial, sans-serif;
@@ -68,7 +69,28 @@ main, .top, footer { position: relative; z-index: 1; }
   padding-block: 18px; color: var(--dust);
 }
 .top .sig { display: flex; align-items: center; gap: 10px; color: var(--bone); }
-.top .sig svg { width: 18px; height: 18px; flex: none; }
+.crest-btn { all: unset; cursor: pointer; display: grid; place-items: center; width: 30px; height: 30px; margin: -6px; border-radius: 2px; -webkit-tap-highlight-color: transparent; }
+.crest-btn svg { width: 20px; height: 20px; transition: transform .25s var(--ease); }
+.crest-btn:hover svg, .crest-btn:active svg { transform: scale(1.15) rotate(-6deg); }
+.crest-btn:focus-visible { outline: 2px solid var(--ember); outline-offset: 2px; }
+.top .dc { color: var(--bone); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border: 1px solid var(--line); transition: border-color .2s, color .2s; }
+.top .dc:hover { border-color: var(--ember); color: var(--ember); }
+.top .dc svg { width: 15px; height: 15px; }
+
+/* ---------- gumbi ---------- */
+.btn {
+  --cut: 10px;
+  display: inline-flex; align-items: center; gap: 10px; padding: 15px 22px 14px; min-height: 48px;
+  font: 500 .75rem/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; text-decoration: none;
+  color: var(--bone); background: var(--iron-2); border: 0; cursor: pointer;
+  clip-path: polygon(var(--cut) 0, 100% 0, 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, 0 100%, 0 var(--cut));
+  transition: background .2s, color .2s; -webkit-tap-highlight-color: transparent;
+}
+.btn svg { width: 17px; height: 17px; flex: none; }
+.btn:hover { background: #2c211c; }
+.btn.prime { background: var(--blood); }
+.btn.prime:hover { background: #d8212e; }
+.btn:focus-visible { outline: 2px solid var(--ember); outline-offset: 3px; }
 
 /* ---------- hero ---------- */
 .hero { position: relative; overflow: hidden; }
@@ -103,20 +125,30 @@ main, .top, footer { position: relative; z-index: 1; }
   letter-spacing: -.01em; text-transform: uppercase; text-wrap: balance;
 }
 .hero-copy h1 span { display: block; color: var(--blood); }
-.hero-copy .lede { margin: 0; max-width: 34rem; color: var(--dust); font-size: 1.0625rem; }
-.hero-copy .lede b { color: var(--bone); font-weight: 600; }
+.hero-act { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 12px; }
+.roll-out { flex-basis: 100%; margin: 4px 0 0; min-height: 1.6em; font: 400 .8125rem/1.6 var(--f-mono); color: var(--sys); }
+.roll-out b { font-weight: 500; font-variant-numeric: tabular-nums; display: inline-block; min-width: 2.2ch; text-align: right; }
+.roll-out em { font-style: normal; color: var(--dust); }
 @media (min-width: 900px) {
   .hero-copy { grid-template-columns: 1.3fr 1fr; align-items: end; column-gap: 48px; }
   .hero-copy .eyebrow { grid-column: 1 / -1; }
-  .hero-copy .lede { padding-bottom: .6em; }
+  .hero-act { justify-content: flex-end; padding-bottom: .9em; }
+  .roll-out { text-align: right; }
 }
 
 /* ---------- section heads ---------- */
 .sec { padding-block: 88px; }
 .sec-head {
-  display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 24px;
-  border-bottom: 1px solid var(--line); padding-bottom: 14px; margin-bottom: 36px;
+  position: relative; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 24px;
+  padding-bottom: 20px; margin-bottom: 36px;
 }
+.sec-head::after {
+  /* runski pojas umjesto obične crte */
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 10px; opacity: .3;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='10'%3E%3Cg fill='none' stroke='%23a19282' stroke-width='1.1'%3E%3Cpath d='M3 9V1l4 3M3 4l4 3M15 9V1l5 8V1M28 1v8M28 5l4-4M28 5l4 4M41 9l3-8 3 8M42 6h4M55 1v8l4-4-4-4M67 9V1h3l2 2-2 2h-3l5 4M80 5l4-4 4 4-4 4z'/%3E%3C/g%3E%3C/svg%3E") repeat-x left center;
+}
+.kicker { flex-basis: 100%; margin: 0 0 4px; display: flex; align-items: center; gap: 10px; color: var(--ember); }
+.kicker svg { width: 14px; height: 14px; flex: none; }
 .sec-head h2 {
   margin: 0; font: 800 clamp(2.6rem, 8vw, 5.5rem)/.85 var(--f-display); text-transform: uppercase; letter-spacing: -.005em;
 }
@@ -161,7 +193,9 @@ main, .top, footer { position: relative; z-index: 1; }
 .dg.go .fl { animation: fl .3s .26s cubic-bezier(.1, .6, .3, 1) forwards; }
 @keyframes fu { to { transform: rotateX(-90deg); } }
 @keyframes fl { from { transform: rotateX(90deg); } to { transform: rotateX(0deg); } }
-.count-next { margin: 0; display: flex; flex-wrap: wrap; gap: 6px 18px; color: var(--dust); }
+.count-next, .count-clock { margin: 0; display: flex; flex-wrap: wrap; gap: 6px 18px; color: var(--dust); }
+.count-clock b { color: var(--sys); font-weight: 500; font-variant-numeric: tabular-nums; }
+.count-clock i { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #3fbf5f; box-shadow: 0 0 8px #3fbf5f; align-self: center; }
 .count-next b { color: var(--bone); font-weight: 500; }
 
 /* ---------- party / roster ---------- */
@@ -197,7 +231,7 @@ main, .top, footer { position: relative; z-index: 1; }
 .plate.live { transition: transform .08s linear; }
 .plate-in {
   position: relative; height: 100%; clip-path: var(--clip); background: var(--iron);
-  padding: 22px 20px 20px; display: grid; gap: 18px; align-content: start; overflow: hidden;
+  display: grid; align-content: start; overflow: hidden;
 }
 .plate-in::before {
   content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .55;
@@ -209,16 +243,39 @@ main, .top, footer { position: relative; z-index: 1; }
 }
 .plate.live .plate-in::after { opacity: 1; }
 .plate-in > * { position: relative; }
-.p-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; color: var(--dust); }
+.portrait { position: relative; aspect-ratio: 4 / 5; max-width: 100%; overflow: hidden; background: var(--iron-2); isolation: isolate; }
+.portrait img {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 12%;
+  filter: saturate(.78) contrast(1.08) brightness(.88); transform: scale(1.04); transition: transform .7s var(--ease);
+}
+.plate.live .portrait img { transform: scale(1.09); }
+.portrait::before { content: ""; position: absolute; inset: 0; z-index: 1; background: var(--c); mix-blend-mode: color; opacity: .26; pointer-events: none; }
+.portrait::after {
+  content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background:
+    radial-gradient(130% 95% at 50% 32%, transparent 42%, rgba(12, 9, 8, .78) 100%),
+    linear-gradient(180deg, rgba(12, 9, 8, .7) 0, transparent 22%, transparent 48%, var(--iron) 98%);
+}
+.ph {
+  position: absolute; inset: 0; display: grid; justify-items: center; align-content: center; gap: 14px; padding-bottom: 28%;
+  background:
+    radial-gradient(circle at 50% 38%, color-mix(in srgb, var(--c) 20%, transparent), transparent 58%),
+    repeating-linear-gradient(135deg, rgba(236, 226, 212, .035) 0 1px, transparent 1px 11px);
+}
+.ph svg { width: 38%; color: var(--c); filter: drop-shadow(0 0 18px color-mix(in srgb, var(--c) 45%, transparent)); }
+.ph span { color: var(--dust); }
+.p-top { position: absolute; z-index: 2; top: 0; left: 0; right: 0; padding: 16px 18px; text-shadow: 0 1px 2px rgba(0, 0, 0, .9), 0 0 12px rgba(0, 0, 0, .8); display: flex; justify-content: space-between; align-items: center; gap: 8px; color: var(--bone); }
+.p-name-wrap { position: absolute; z-index: 2; left: 18px; right: 18px; bottom: 12px; }
+.p-body { padding: 16px 20px 20px; display: grid; gap: 18px; }
 .p-top .role { display: inline-flex; align-items: center; gap: 7px; color: var(--c); }
 .p-top .role svg { width: 14px; height: 14px; }
 .p-name {
   margin: 0; font: 900 clamp(2.3rem, 9vw, 2.9rem)/.84 var(--f-display); text-transform: uppercase; color: var(--c);
-  overflow-wrap: anywhere;
+  overflow-wrap: anywhere; text-shadow: 0 2px 0 rgba(0, 0, 0, .55), 0 6px 22px rgba(0, 0, 0, .8);
 }
 @media (min-width: 1100px) { .p-name { font-size: clamp(2rem, 2.9vw, 2.75rem); } }
 .p-name span { display: block; }
-.p-who { margin: -6px 0 0; color: var(--dust); font-size: .9375rem; line-height: 1.4; }
+.p-who { margin: 0; color: var(--dust); display: flex; align-items: baseline; gap: 10px; }
 .p-who b { color: var(--bone); font-weight: 600; font-size: 1.0625rem; }
 .p-meta { margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; border-block: 1px solid var(--line); padding-block: 12px; }
 .p-meta dt { color: var(--dust); margin-bottom: 4px; }
@@ -234,9 +291,66 @@ main, .top, footer { position: relative; z-index: 1; }
   background: repeating-linear-gradient(90deg, transparent 0 calc(100% / 6 - 2px), var(--iron) calc(100% / 6 - 2px) calc(100% / 6));
 }
 .p-prof .lab { color: var(--dust); display: block; margin-bottom: 8px; }
-.p-prof ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
-.p-prof li { font-size: .8125rem; padding: 7px 9px; background: var(--iron-2); min-width: 0; overflow-wrap: anywhere; }
-.p-prof li.empty { background: none; outline: 1px dashed var(--line); outline-offset: -1px; color: rgba(161, 146, 130, .6); }
+.p-prof .cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.p-prof .lab2 { display: block; color: var(--dust); font-size: .5625rem; margin-bottom: 6px; opacity: .8; }
+.p-prof ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.p-prof li { font-size: .8125rem; padding: 7px 9px; background: var(--iron-2); min-width: 0; hyphens: auto; -webkit-hyphens: auto; }
+.p-prof li.empty, .p-prof li.plan { background: none; outline: 1px dashed var(--line); outline-offset: -1px; color: rgba(161, 146, 130, .7); }
+.p-prof li.plan { color: var(--bone); outline-color: color-mix(in srgb, var(--c) 55%, transparent); }
+.p-prof li.plan small { display: block; margin-top: 4px; font: 500 .5625rem/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--c); }
+
+/* ---------- dungeoni ---------- */
+.inst { list-style: none; margin: 0; padding: 0; }
+.inst-axis, .inst li { display: grid; grid-template-columns: minmax(0, 1fr) 4.5rem; gap: 6px 20px; align-items: center; }
+.inst-axis { color: var(--dust); padding-bottom: 10px; display: none; }
+.inst li { padding: 14px 0; border-bottom: 1px solid var(--line); }
+.inst .nm { font: 800 1.35rem/1.05 var(--f-display); text-transform: uppercase; min-width: 0; }
+.inst .rg { color: var(--dust); text-align: right; font-variant-numeric: tabular-nums; }
+.inst .tr { grid-column: 1 / -1; position: relative; height: 6px; background: var(--iron-2); }
+.inst .tr::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: repeating-linear-gradient(90deg, transparent 0 calc(100% / 6 - 1px), var(--night) calc(100% / 6 - 1px) calc(100% / 6));
+}
+.inst .tr i { position: absolute; top: 0; bottom: 0; background: rgba(236, 226, 212, .42); }
+.inst .st { grid-column: 1 / -1; color: var(--dust); }
+.inst li.done .nm { color: var(--dust); }
+.inst li.done .tr i { background: var(--dust); }
+.inst li.now .tr i { background: var(--ember); box-shadow: 0 0 12px rgba(255, 122, 46, .55); }
+.inst li.now .st { color: var(--ember); }
+.inst li.done .st { color: var(--bone); }
+.inst .st:empty { display: none; }
+@media (min-width: 760px) {
+  .inst-axis, .inst li { grid-template-columns: minmax(0, 15rem) 4.5rem minmax(0, 1fr) 6.5rem; }
+  .inst-axis { display: grid; }
+  .inst-axis .ax { grid-column: 3; position: relative; height: 1em; }
+  .inst-axis .ax span { position: absolute; transform: translateX(-50%); }
+  .inst-axis .ax span:first-child { transform: none; }
+  .inst-axis .ax span:last-child { transform: translateX(-100%); }
+  .inst .tr, .inst .st { grid-column: auto; }
+  .inst .st { text-align: right; }
+  .inst .st:empty { display: block; }
+}
+
+/* ---------- For the Horde ---------- */
+.fth {
+  position: fixed; inset: 0; z-index: 30; display: grid; place-items: center; pointer-events: none;
+  background: radial-gradient(circle at 50% 50%, rgba(193, 18, 31, .55), rgba(60, 0, 4, .85) 70%);
+  opacity: 0; animation: fth 1.9s var(--ease) forwards;
+}
+.fth b {
+  font: 900 clamp(3.4rem, 15vw, 12rem)/.85 var(--f-display); text-transform: uppercase; text-align: center; color: var(--bone);
+  text-shadow: 0 0 40px rgba(255, 60, 40, .8), 0 6px 0 #3b0005; padding-inline: 16px;
+  animation: fthT 1.9s var(--ease) forwards;
+}
+@keyframes fth { 0% { opacity: 0; } 8% { opacity: 1; } 70% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes fthT { 0% { transform: scale(1.6); letter-spacing: .2em; } 18% { transform: scale(1); letter-spacing: 0; } 100% { transform: scale(.96); } }
+body.shake main, body.shake .top { animation: shake .55s cubic-bezier(.36, .07, .19, .97) both; }
+@keyframes shake {
+  10%, 90% { transform: translate3d(-2px, 1px, 0); }
+  20%, 80% { transform: translate3d(5px, -2px, 0); }
+  30%, 50%, 70% { transform: translate3d(-9px, 3px, 0); }
+  40%, 60% { transform: translate3d(9px, -3px, 0); }
+}
 
 /* ---------- timeline ---------- */
 .tl { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; position: relative; }
@@ -302,6 +416,8 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
   html { scroll-behavior: auto; }
   .plate, .gauge i, .checks .box, .checks .box path { transition: none; }
   .dg.go .fu, .dg.go .fl { animation: none; }
+  .portrait img { transition: none; }
+  .fth b { animation: none; }
 }
 </style>
 </head>
@@ -311,10 +427,10 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
 <header class="top">
   <div class="wrap mono">
     <span class="sig">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 9l4 7 4-7M12 6v4" fill="none" stroke="#c1121f" stroke-width="1.8"/></svg>
+      <button class="crest-btn" id="crest" type="button" aria-label="Grb ekipe"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 9l4 7 4-7M12 6v4" fill="none" stroke="#c1121f" stroke-width="1.8"/></svg></button>
       Zaprešić Horde
     </span>
-    <span>WoW Forever · Horde</span>
+    <a class="dc" id="dcTop" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4V5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M9 10.5h.01M15 10.5h.01" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>Discord</a>
   </div>
 </header>
 
@@ -330,7 +446,11 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
     <div class="wrap hero-copy">
       <p class="eyebrow mono">World of Warcraft: Forever · 5 likova · Horde</p>
       <h1 id="naslov">Zaprešić <span>Horde</span></h1>
-      <p class="lede">Pet frendova iz Zaprešića, jedna grupa od prvog dana. <b>Warrior, Shaman, Mage, Rogue i Paladin</b> kreću skupa iz Durotara i ne staju do 60.</p>
+      <div class="hero-act">
+        <a class="btn prime" id="dcHero" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4V5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M9 10.5h.01M15 10.5h.01" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>Uđi na Discord</a>
+        <button class="btn" id="roll" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 21 7v10l-9 5-9-5V7l9-5Z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 2v20M3 7l9 5 9-5" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".6"/></svg>/roll</button>
+        <p class="roll-out" id="rollOut" aria-live="polite"><em>Need ili greed? Baci kocku.</em></p>
+      </div>
     </div>
   </section>
 
@@ -339,12 +459,14 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
       <p class="count-label mono" id="cdLabel">Rezervacija imena traje još</p>
       <div class="flip-row" id="flip"></div>
       <p class="count-next mono" id="cdNext"></p>
+      <p class="count-clock mono"><i aria-hidden="true"></i><span>Vrijeme na serveru (Europe/Paris)</span><b id="srvClock">--:--:--</b></p>
     </div>
   </section>
 
   <section class="sec" id="ekipa">
     <div class="wrap">
       <div class="sec-head">
+        <p class="kicker mono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="currentColor" opacity=".25"/><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Ratna družina iz Zaprešića</p>
         <h2>Ekipa</h2>
         <span class="meta mono" id="rosterMeta"></span>
       </div>
@@ -359,6 +481,7 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
   <section class="sec" id="put">
     <div class="wrap">
       <div class="sec-head">
+        <p class="kicker mono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="currentColor" opacity=".25"/><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Durotar zove</p>
         <h2>Put do 60</h2>
         <span class="meta mono">Level cap trajno <b>60</b></span>
       </div>
@@ -366,9 +489,22 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
     </div>
   </section>
 
+  <section class="sec" id="dungeoni">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker mono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="currentColor" opacity=".25"/><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Pet nas, jedan instance</p>
+        <h2>Dungeoni</h2>
+        <span class="meta mono" id="instMeta"></span>
+      </div>
+      <div class="inst-axis mono" aria-hidden="true"><span>Dungeon</span><span>Level</span><span class="ax"><span style="left:0">1</span><span style="left:15.25%">10</span><span style="left:32.2%">20</span><span style="left:49.15%">30</span><span style="left:66.1%">40</span><span style="left:83.05%">50</span><span style="left:100%">60</span></span><span></span></div>
+      <ul class="inst" id="inst"></ul>
+    </div>
+  </section>
+
   <section class="sec" id="prije">
     <div class="wrap">
       <div class="sec-head">
+        <p class="kicker mono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="currentColor" opacity=".25"/><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Dok ne zatrubi rog</p>
         <h2>Prije launcha</h2>
         <span class="meta mono">Kvačice se pamte na ovom uređaju</span>
       </div>
@@ -386,6 +522,7 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
 <footer>
   <div class="wrap mono">
     <span class="cry">Lok'tar ogar</span>
+    <span>Grb ima tajnu. Pet klikova.</span>
     <span id="updated"></span>
   </div>
 </footer>
@@ -411,6 +548,14 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
     Healer: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 1h4v5h5v4h-5v5H6v-5H1V6h5V1Z" fill="currentColor"/></svg>',
     DPS: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M14.5 1.5 6 10l-1.5-.5L4 8l8.5-8.5h2v2ZM3 9.5l3.5 3.5L5 14.5 4 13.5 2 15.5.5 14l2-2-1-1L3 9.5Z" fill="currentColor"/></svg>'
   };
+  // zamjenski grbovi klasa dok nema screenshota
+  var GRB = {
+    Warrior: '<svg viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M12 8l26 30 4-4L16 6l-6-1zM52 8L26 38l-4-4L48 6l6-1z"/><path d="M20 38l6 6M44 38l-6 6M16 46l6-6 4 4-6 6zM48 46l-6-6-4 4 6 6z"/><path d="M14 52l-4 4M50 52l4 4"/></g></svg>',
+    Mage: '<svg viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M32 4l6 20 20 8-20 8-6 20-6-20-20-8 20-8z"/><circle cx="32" cy="32" r="7"/><path d="M14 14l6 6M50 14l-6 6M14 50l6-6M50 50l-6-6"/></g></svg>',
+    Rogue: '<svg viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M14 6l22 34-4 3L10 9zM50 6L28 40l4 3L54 9z"/><path d="M22 46l6-6 4 4-6 6zM42 46l-6-6-4 4 6 6zM20 54l4-4M44 54l-4-4"/></g></svg>',
+    Shaman: '<svg viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M22 58V20l10-12 10 12v38z"/><path d="M22 28h20M22 40h20M28 22h.01M36 22h.01M30 50l4-6-4-2 4-6"/></g></svg>',
+    Paladin: '<svg viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M16 8h32v14H16z"/><path d="M32 22v36M26 58h12M24 8V4h16v4"/><path d="M8 15h8M48 15h8"/></g></svg>'
+  };
   var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
 
   /* ---------- roster ---------- */
@@ -430,20 +575,35 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
     var r = ULOGA[p.uloga];
     var lvl = Math.max(0, Math.min(60, +p.level || 0));
     var ime = p.lik.split(" ");
-    var prof = (p.profesije || []).slice(0, 2);
-    while (prof.length < 2) prof.push(null);
+    var pr = p.profesije || {};
+    function profList(arr) {
+      arr = (arr || []).slice(0, 2);
+      while (arr.length < 2) arr.push(null);
+      return "<ul>" + arr.map(function (x) {
+        if (!x) return '<li class="empty">po želji</li>';
+        if (typeof x === "object") return '<li class="plan" lang="en">' + esc(x.ime) + (x.plan ? "<small>plan</small>" : "") + "</li>";
+        return '<li lang="en">' + esc(x) + "</li>";
+      }).join("") + "</ul>";
+    }
+    var portret = p.foto
+      ? '<img src="' + esc(p.foto) + '" alt="' + esc(p.lik) + ', ' + esc(p.rasa) + " " + esc(p.klasa) + '" loading="lazy">'
+      : '<div class="ph">' + (GRB[p.klasa] || GRB.Warrior) + '<span class="mono">čeka screenshot</span></div>';
     return '<article class="plate" style="--c:' + BOJE[p.klasa] + '" data-reveal>' +
       '<div class="plate-in">' +
-        '<div class="p-top mono"><span class="role">' + IKONE[r] + esc(p.uloga) + "</span><span>" + esc(p.klasa) + "</span></div>" +
-        '<h3 class="p-name">' + ime.map(function (w) { return "<span>" + esc(w) + "</span>"; }).join("") + "</h3>" +
-        '<p class="p-who"><b>' + esc(p.igrac) + "</b><br>original: " + esc(p.original) + "</p>" +
+        '<div class="portrait">' + portret +
+          '<div class="p-top mono"><span class="role">' + IKONE[r] + esc(p.uloga) + "</span><span>" + esc(p.klasa) + "</span></div>" +
+          '<div class="p-name-wrap"><h3 class="p-name">' + ime.map(function (w) { return "<span>" + esc(w) + "</span>"; }).join("") + "</h3></div>" +
+        "</div>" +
+        '<div class="p-body">' +
+        '<p class="p-who"><span class="mono">Igrač</span><b>' + esc(p.igrac) + "</b></p>" +
         '<dl class="p-meta"><div><dt class="mono">Rasa</dt><dd>' + esc(p.rasa) + '</dd></div><div><dt class="mono">Klasa</dt><dd>' + esc(p.klasa) + '</dd></div><div><dt class="mono">Uloga</dt><dd>' + esc(r) + "</dd></div></dl>" +
         '<div class="p-lvl"><div class="lvl-head"><span class="mono">Level</span><span class="n">' + lvl + '<small>/60</small></span></div>' +
           '<div class="gauge" role="meter" aria-valuemin="0" aria-valuemax="60" aria-valuenow="' + lvl + '" aria-label="Level ' + esc(p.lik) + '"><i style="width:' + (lvl / 60 * 100).toFixed(2) + '%"></i></div></div>' +
-        '<div class="p-prof"><span class="lab mono">Profesije</span><ul>' + prof.map(function (x) {
-          return x ? "<li>" + esc(x) + "</li>" : '<li class="empty">prazno</li>';
-        }).join("") + "</ul></div>" +
-      "</div></article>";
+        '<div class="p-prof"><span class="lab mono">Profesije · plan</span><div class="cols">' +
+          '<div><span class="lab2 mono">Do 40</span>' + profList(pr.do40) + "</div>" +
+          '<div><span class="lab2 mono">Nakon 40</span>' + profList(pr.nakon40) + "</div>" +
+        "</div></div>" +
+      "</div></div></article>";
   }).join("");
 
   // 3D nagib pločica na hover i dodir
@@ -466,6 +626,91 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
     el.addEventListener("pointercancel", leave);
     el.addEventListener("pointerup", function (e) { if (e.pointerType !== "mouse") setTimeout(leave, 350); });
   });
+
+  /* ---------- Discord ---------- */
+  ["dcTop", "dcHero"].forEach(function (id) { $(id).href = D.discord; });
+
+  /* ---------- /roll ---------- */
+  (function () {
+    var out = $("rollOut"), btn = $("roll"), busy = false;
+    function poruka(n) {
+      if (n === 100) return "Need, need, need!";
+      if (n === 1) return "Pass. Bolje sljedeći put.";
+      if (n >= 90) return "Loot je tvoj.";
+      if (n <= 10) return "Greed nije pomogao.";
+      return "";
+    }
+    btn.addEventListener("click", function () {
+      if (busy) return;
+      var n = 1 + Math.floor(Math.random() * 100);
+      function kraj() {
+        busy = false;
+        var m = poruka(n);
+        out.innerHTML = "Bacio si <b>" + n + "</b> (1-100)" + (m ? " <em>" + m + "</em>" : "");
+      }
+      if (reduce) return kraj();
+      busy = true;
+      var t0 = performance.now();
+      (function vrti(t) {
+        if (t - t0 > 750) return kraj();
+        out.innerHTML = "Bacaš… <b>" + (1 + Math.floor(Math.random() * 100)) + "</b>";
+        setTimeout(function () { vrti(performance.now()); }, 45 + (t - t0) / 9);
+      })(t0);
+    });
+  })();
+
+  /* ---------- dungeoni ---------- */
+  (function () {
+    var avg = igraci.reduce(function (s, p) { return s + (+p.level || 0); }, 0) / igraci.length;
+    var gotovo = 0;
+    $("inst").innerHTML = D.dungeoni.map(function (d) {
+      var st = "", txt = "";
+      if (d.odradeno) { st = "done"; txt = "odrađeno"; gotovo++; }
+      else if (avg >= d.od && avg <= d.do) { st = "now"; txt = "za nas sada"; }
+      var l = (d.od - 1) / 59 * 100, w = (d.do - d.od) / 59 * 100;
+      return '<li class="' + st + '" data-reveal><span class="nm">' + esc(d.ime) + '</span><span class="rg mono">' + d.od + "–" + d.do + "</span>" +
+        '<span class="tr" aria-hidden="true"><i style="left:' + l.toFixed(2) + "%;width:" + w.toFixed(2) + '%"></i></span>' +
+        '<span class="st mono">' + txt + "</span></li>";
+    }).join("");
+    $("instMeta").innerHTML = "<b>" + gotovo + "/" + D.dungeoni.length + "</b> odrađeno";
+  })();
+
+  /* ---------- sat servera ---------- */
+  (function () {
+    var f;
+    try { f = new Intl.DateTimeFormat("hr-HR", { timeZone: D.serverZona, hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false }); }
+    catch (e) { f = null; }
+    function sat() { if (f) $("srvClock").textContent = f.format(new Date()); }
+    sat(); setInterval(sat, 1000);
+  })();
+
+  /* ---------- For the Horde! (Konami kod ili 5 klikova na grb) ---------- */
+  (function () {
+    var aktivno = false;
+    function zaHordu() {
+      if (aktivno) return;
+      aktivno = true;
+      var o = document.createElement("div");
+      o.className = "fth"; o.setAttribute("role", "status");
+      o.innerHTML = "<b>For the<br>Horde!</b>";
+      document.body.appendChild(o);
+      if (!reduce) { document.body.classList.remove("shake"); void document.body.offsetWidth; document.body.classList.add("shake"); }
+      setTimeout(function () { o.remove(); document.body.classList.remove("shake"); aktivno = false; }, 1950);
+    }
+    var klikovi = [];
+    $("crest").addEventListener("click", function () {
+      var now = Date.now();
+      klikovi = klikovi.filter(function (t) { return now - t < 2500; });
+      klikovi.push(now);
+      if (klikovi.length >= 5) { klikovi = []; zaHordu(); }
+    });
+    var kod = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a"], i = 0;
+    window.addEventListener("keydown", function (e) {
+      var k = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+      i = k === kod[i] ? i + 1 : (k === kod[0] ? 1 : 0);
+      if (i === kod.length) { i = 0; zaHordu(); }
+    });
+  })();
 
   /* ---------- timeline ---------- */
   var now0 = Date.now();
