@@ -53,17 +53,19 @@ body::after {
 a { color: inherit; }
 :focus-visible { outline: 2px solid var(--ember); outline-offset: 3px; }
 
-#embers { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
+/* vatra je prikovana za dno stranice (footer) i diže se iza zadnjih sekcija */
+#embers { position: absolute; left: 0; bottom: 0; width: 100%; height: 110vh; height: 110svh; z-index: 0; pointer-events: none; }
 .ognjiste {
-  /* vatra živi na dnu ekrana, iza sadržaja */
-  position: fixed; left: 0; right: 0; bottom: 0; height: 46vh; z-index: 0; pointer-events: none;
+  position: absolute; left: 0; right: 0; bottom: 0; height: 62vh; z-index: 0; pointer-events: none;
   background:
     radial-gradient(120% 70% at 50% 100%, rgba(255, 96, 24, .22), rgba(255, 96, 24, 0) 70%),
     linear-gradient(to top, rgba(193, 18, 31, .28) 0, rgba(214, 52, 20, .11) 26%, rgba(255, 90, 20, .04) 58%, rgba(255, 90, 20, 0) 100%);
   animation: ognjiste 5.6s ease-in-out infinite;
 }
 @keyframes ognjiste { 0%, 100% { opacity: .82; } 35% { opacity: 1; } 60% { opacity: .9; } 80% { opacity: .98; } }
-main, .top, footer { position: relative; z-index: 1; }
+main, .top { position: relative; z-index: 1; }
+footer { position: relative; z-index: 0; }
+footer .wrap { position: relative; z-index: 1; }
 
 .wrap {
   width: 100%; max-width: var(--max); margin-inline: auto;
@@ -490,7 +492,7 @@ body.shake main, body.shake .top { animation: shake .55s cubic-bezier(.36, .07, 
 /* ---------- footer ---------- */
 footer .wrap {
   display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px;
-  padding-block: 40px 56px; border-top: 1px solid var(--line); color: var(--dust);
+  padding-block: 48px 150px; border-top: 1px solid var(--line); color: var(--dust);
 }
 footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; color: var(--blood); }
 
@@ -506,8 +508,6 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
 </style>
 </head>
 <body>
-<div class="ognjiste" aria-hidden="true"></div>
-<canvas id="embers" aria-hidden="true"></canvas>
 
 <header class="top">
   <div class="wrap mono">
@@ -620,6 +620,8 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
 </main>
 
 <footer>
+  <div class="ognjiste" aria-hidden="true"></div>
+  <canvas id="embers" aria-hidden="true"></canvas>
   <div class="wrap mono">
     <span class="cry">Lok'tar ogar</span>
     <span>Grb ima tajnu. Pet klikova.</span>
@@ -1029,7 +1031,7 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
     var W = 0, H = 0, iskre = [], plamen = [], mob = false;
     function size() {
       var dpr = Math.min(window.devicePixelRatio || 1, 2);
-      var nw = window.innerWidth, nh = window.innerHeight;
+      var nw = cv.clientWidth, nh = cv.clientHeight;
       // mobitel mijenja visinu dok se traka adrese skriva: ne crtaj ispočetka zbog sitnih promjena
       if (nw === W && Math.abs(nh - H) < 120) return;
       W = nw; H = nh; mob = W < 700;
@@ -1092,11 +1094,13 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
     size(); puni();
     window.addEventListener("resize", function () { var w = W; size(); if (W !== w) puni(); });
     if (reduce) { crtaj(0); return; }
+    var vidljivo = true;
+    if ("IntersectionObserver" in window) new IntersectionObserver(function (e) { vidljivo = e[0].isIntersecting; }).observe(cv);
     var last = performance.now();
     (function loop(t) {
       requestAnimationFrame(loop);
       var dt = Math.min(3, (t - last) / 16.67); last = t;
-      if (!document.hidden) crtaj(dt);
+      if (!document.hidden && vidljivo) crtaj(dt);
     })(last);
   })();
 
