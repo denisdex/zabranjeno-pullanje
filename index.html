@@ -969,6 +969,11 @@ a.sl:hover b { text-decoration: underline; }
 .p-top { position: absolute; z-index: 2; top: 0; left: 0; right: 0; padding: 16px 18px; text-shadow: 0 1px 2px rgba(0, 0, 0, .9), 0 0 12px rgba(0, 0, 0, .8); display: flex; justify-content: space-between; align-items: center; gap: 8px; color: var(--bone); }
 .p-name-wrap { position: absolute; z-index: 2; left: 18px; right: 18px; bottom: 12px; }
 .p-body { padding: 14px 18px 18px; display: grid; gap: 14px; }
+/* kartice u redu iste visine: tijelo popuni ostatak, "Otvori profil" uvijek na dnu */
+.plate-in { grid-template-rows: auto 1fr; align-content: stretch; }
+.plate .p-body { display: flex; flex-direction: column; }
+.plate .p-body > .p-zad { align-self: flex-start; }
+.plate .p-body > .p-more { margin-top: auto; align-self: stretch; }
 .p-top .role { display: inline-flex; align-items: center; gap: 7px; color: var(--c); }
 .p-top .role svg { width: 14px; height: 14px; }
 .p-name {
@@ -1794,14 +1799,12 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     for (var i = 0; i < PROF.likovi.length; i++) if (PROF.likovi[i].roster === p) return PROF.likovi[i];
     return null;
   }
-  // kartica i profil lika iz rostera: dvije aktivne profesije, plan za 40 kao tihi redak
+  // kartica i profil lika iz rostera: dvije aktivne profesije (plan za 40 je samo u sekciji Profesije)
   function profHtml(p, sekundarne) {
     var l = likZa(p);
     if (!PROF) return '<p class="p40 mono">Učitavam profesije…</p>';
     if (!l) return '<p class="p40 mono">Lik još nije u profesije.json.</p>';
-    var pl = plan40(l);
     return "<ul>" + aktivne(l).map(function (x) { return skillRed(l, x); }).join("") + "</ul>" +
-      (pl.length ? '<p class="p40 mono">na 40: ' + pl.map(function (x) { return esc(x.sada) + " → " + esc(x.poslije); }).join(", ") + "</p>" : "") +
       (sekundarne && l.sekundarne.length ? '<ul class="sek">' + l.sekundarne.map(function (x) { return skillRed(l, x); }).join("") + "</ul>" : "");
   }
 
