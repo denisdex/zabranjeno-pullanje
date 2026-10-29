@@ -934,7 +934,7 @@ button { font: inherit; color: inherit; }
   var igraci = (window.HORDE && window.HORDE.igraci) || [];
   var ekipa = $("ekipa");
   igraci.slice(0, 5).forEach(function (p) {
-    var d = document.createElement("div"); d.className = "kar"; d.style.setProperty("--c", BOJE[p.klasa] || "#c1121f");
+    var d = document.createElement("div"); d.className = "kar"; d.style.setProperty("--c", p.boja || BOJE[p.klasa] || "#c1121f");
     d.innerHTML = (p.foto ? '<img src="' + p.foto + '" alt="">' : '<div class="grb">' + (p.klasa || "?").charAt(0) + "</div>") +
       '<div class="tx"><div class="ime">' + p.igrac + '</div><div class="kl">' + p.rasa + " " + p.klasa + '</div><div class="lk">' + p.lik + "</div></div>";
     ekipa.appendChild(d);
@@ -942,6 +942,8 @@ button { font: inherit; color: inherit; }
   var karte = ekipa.querySelectorAll(".kar");
   var junakEls = LIKOVI.map(function (L) {
     var p = igraci.filter(function (x) { return x.igrac === L.igrac; })[0] || { igrac: L.igrac, rasa: "", klasa: "", lik: "" };
+    // boja igrača iz data.js (polje boja) ima prednost pred bojom klase
+    if (p.boja) L.boja = p.boja;
     var d = document.createElement("div"); d.className = "junak"; d.style.setProperty("--c", L.boja);
     d.innerHTML = '<div class="j-ime">' + p.igrac + '</div><div class="j-kl">' + p.rasa + " " + p.klasa + " · <b>" + p.lik + "</b></div>";
     $("junaci").appendChild(d); return d;
