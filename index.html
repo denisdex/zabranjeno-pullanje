@@ -13,12 +13,13 @@
 <meta property="og:title" content="Zabranjeno pullanje">
 <meta property="og:description" content="Guild Zabranjeno pullanje: pet frendova iz Zaprešića kreće u World of Warcraft: Forever za Hordu, a ovdje odbrojava do launcha 4. 11.">
 <meta property="og:url" content="https://zabranjeno-pullanje.netlify.app/">
-<meta property="og:image" content="https://zabranjeno-pullanje.netlify.app/assets/og.png">
+<meta property="og:image" content="https://zabranjeno-pullanje.netlify.app/assets/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Pero, Niksa, Karkens, Žuga i Dex, likovi guilda Zabranjeno pullanje">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Zabranjeno pullanje">
-<meta name="twitter:image" content="https://zabranjeno-pullanje.netlify.app/assets/og.png">
+<meta name="twitter:image" content="https://zabranjeno-pullanje.netlify.app/assets/og.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Big+Shoulders+Display:wght@600;800;900&family=Martian+Mono:wght@400;500&family=Cinzel:wght@700;900&display=swap">
@@ -212,6 +213,19 @@ section[id] { scroll-margin-top: 84px; }
   transform: translateX(-50%); pointer-events: none;
   background: radial-gradient(closest-side, rgba(193, 18, 31, .22), rgba(193, 18, 31, 0) 70%);
 }
+/* iza naslova: tamni, zamućeni široki kadrovi ekipe (male -hero.jpg verzije), polako se izmjenjuju */
+.hero-art { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.hero-art img {
+  position: absolute; inset: -4%; width: 108%; height: 108%; object-fit: cover; object-position: var(--fx, 50%) var(--fy, 30%);
+  opacity: 0; transform: scale(1.06); transition: opacity 2.4s ease;
+}
+.hero-art img.on { opacity: .42; animation: heroKb 10s linear both; }
+.hero-art::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(12, 9, 8, .78) 0, rgba(12, 9, 8, .25) 55%, rgba(12, 9, 8, .6) 100%), linear-gradient(180deg, rgba(12, 9, 8, .45) 0, transparent 30%, transparent 62%, var(--night) 100%);
+}
+@keyframes heroKb { from { transform: scale(1.06) translateX(-1.2%); } to { transform: scale(1.12) translateX(1.2%); } }
+@media (prefers-reduced-motion: reduce) { .hero-art img, .hero-art img.on { animation: none; transition: none; } }
 .stage { grid-area: logo; position: relative; height: 66vw; cursor: pointer; }
 .stage canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; touch-action: pan-y; opacity: 0; transition: opacity .9s var(--ease); }
 .stage.gl-on canvas { opacity: 1; }
@@ -1018,6 +1032,19 @@ a.sl:hover b { text-decoration: underline; }
   animation: magla 26s linear infinite alternate;
 }
 @keyframes magla { from { background-position: 0% 0; } to { background-position: 100% 0; } }
+/* hover na kartici: portret se "otvori" u široki kadar, s parallaxom prema mišu */
+.portrait .p-wide { display: none; }
+@media (hover: hover) and (pointer: fine) {
+  .portrait .p-wide {
+    display: block; position: absolute; inset: -6%; width: 112%; height: 112%; object-fit: cover; object-position: var(--fx, 50%) var(--fy, 30%);
+    opacity: 0; filter: saturate(.85) contrast(1.06) brightness(.9);
+    transform: translate(calc((50% - var(--mx, 50%)) * .08), calc((50% - var(--my, 50%)) * .05)) scale(1.18);
+    transition: opacity .45s var(--ease), transform .7s var(--ease);
+  }
+  .plate.live .portrait .p-wide[src] { opacity: 1; transform: translate(calc((50% - var(--mx, 50%)) * .08), calc((50% - var(--my, 50%)) * .05)) scale(1); }
+  .pl { transition: transform .5s var(--ease), opacity .45s; }
+  .plate.live .portrait:has(.p-wide[src]) .pl { opacity: 0; }
+}
 .ph svg { animation: grb 4.2s ease-in-out infinite; }
 @keyframes grb { 0%, 100% { opacity: .75; } 50% { opacity: 1; filter: drop-shadow(0 0 26px color-mix(in srgb, var(--c) 70%, transparent)); } }
 .portrait::after {
@@ -1323,6 +1350,12 @@ footer .wrap {
 }
 footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; color: var(--blood); }
 footer .f-kino { color: var(--ember); text-decoration: none; }
+/* mali avatar igrača (glava iz širokog kadra) uz ime u tekstu */
+.ava {
+  display: inline-block; width: 22px; height: 22px; flex: none; margin-right: 7px; vertical-align: -6px; border-radius: 50%;
+  background-size: auto 650%; background-repeat: no-repeat; box-shadow: 0 0 0 1.5px var(--c), 0 0 10px color-mix(in srgb, var(--c) 40%, transparent);
+}
+.tko { white-space: nowrap; }
 footer .f-kino:hover { color: var(--bone); }
 
 /* ---------- Kino: kartice videa (poster, naslov, trajanje, opis) i overlay preko cijelog ekrana ---------- */
@@ -2145,6 +2178,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
 
 <main>
   <section class="hero" aria-labelledby="naslov">
+    <div class="hero-art" id="heroArt" aria-hidden="true"></div>
     <div class="wrap hero-grid">
       <div class="hero-main">
         <p class="eyebrow mono">Guild · Zaprešić Horde · 5 likova · World of Warcraft: Forever</p>
@@ -2628,6 +2662,20 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     Paladin: '<svg viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M16 8h32v14H16z"/><path d="M32 22v36M26 58h12M24 8V4h16v4"/><path d="M8 15h8M48 15h8"/></g></svg>'
   };
   var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
+  // glava na širokom kadru (data.js fokus), u postocima
+  function fokus(p) { return p.fokus || [50, 30]; }
+  // mali avatar: izrez glave iz širokog kadra (intro ga ionako učita), prsten u boji klase
+  var POIGRACU = {};
+  (D.igraci || []).forEach(function (p) { POIGRACU[p.igrac] = p; });
+  function avatar(p) {
+    if (!p || !p.siroka) return "";
+    var f = fokus(p), W = 1024 * .25, H = 572 * .25, x = (f[0] / 100 * W - 11) / (W - 22) * 100, y = (f[1] / 100 * H - 11) / (H - 22) * 100;
+    return '<i class="ava" aria-hidden="true" style="--c:' + (BOJE[p.klasa] || "#ece2d4") + ";background-image:url(" + esc(p.siroka) + ");background-position:" + x.toFixed(1) + "% " + y.toFixed(1) + '%"></i>';
+  }
+  // u tekstu svako ime igrača dobije avatar
+  function sAvatarima(tekst) {
+    return esc(tekst).replace(/[A-Za-zČĆŽŠĐčćžšđ]+/g, function (w) { var p = POIGRACU[w]; return p ? '<span class="tko">' + avatar(p) + w + "</span>" : w; });
+  }
   window.zpIntro = { grb: GRB }; // intro koristi iste grbove klasa dok nema portreta
 
   /* ---------- tooltip: jedna komponenta za iteme, profesije, bosseve i dungeone ---------- */
@@ -3027,6 +3075,8 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       : '<div class="ph">' + (GRB[p.klasa] || GRB.Warrior) + '<span class="mono">čeka screenshot</span></div>';
     // u profilu je cijeli lik vidljiv, a prazan rub popuni zamućena ista slika
     if (veliki && p.foto && !sir) h = '<img class="pbg" src="' + esc(p.foto) + '" alt="" aria-hidden="true">' + h;
+    // na kartici: široki kadar za hover (učita se tek na prvi prelazak mišem)
+    if (!veliki && p.siroka) h += '<img class="p-wide" data-src="' + esc(p.siroka) + '" alt="" aria-hidden="true" style="--fx:' + fokus(p)[0] + "%;--fy:" + fokus(p)[1] + '%">';
     return '<div class="portrait' + (sir ? " siroki" : "") + '">' + h + '<div class="fog"></div>' +
       '<div class="p-top mono"><span class="role">' + IKONE[r] + esc(p.uloga) + "</span><span>" + esc(p.klasa) + "</span></div>" +
       '<div class="p-name-wrap"><h3 class="p-name">' + p.lik.split(" ").map(function (w) { return "<span>" + esc(w) + "</span>"; }).join("") + "</h3></div>" +
@@ -3089,7 +3139,11 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       inner.style.setProperty("--my", (y * 100).toFixed(1) + "%");
     }
     function leave() { el.classList.remove("live"); el.style.setProperty("--rx", "0deg"); el.style.setProperty("--ry", "0deg"); }
-    el.addEventListener("pointerenter", function (e) { el.classList.add("live"); move(e); });
+    var wide = el.querySelector(".p-wide");
+    el.addEventListener("pointerenter", function (e) {
+      el.classList.add("live"); move(e);
+      if (wide && !wide.src && e.pointerType === "mouse") wide.src = wide.dataset.src;
+    });
     el.addEventListener("pointermove", move);
     el.addEventListener("pointerdown", function (e) { el.classList.add("live"); move(e); });
     el.addEventListener("pointerleave", leave);
@@ -3997,6 +4051,31 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     // stranica u iframeu javlja kraj (prirodni kraj ili njezin gumb Zatvori)
     window.addEventListener("message", function (e) { if (e.source === fr.contentWindow && e.data && e.data.zp === "kraj") zatvori(); });
   })();
+
+  /* ---------- hero: iza naslova se polako izmjenjuju zamućeni široki kadrovi ekipe (assets/likovi/<lik>-hero.jpg) ---------- */
+  (function () {
+    var box = $("heroArt"), L = (D.igraci || []).filter(function (p) { return p.siroka; });
+    if (!box || !L.length) return;
+    var slike = L.map(function (p) {
+      var im = document.createElement("img"), f = fokus(p);
+      im.alt = ""; im.decoding = "async";
+      im.dataset.src = p.siroka.replace(/-wide\.jpg$/, "-hero.jpg");
+      im.style.setProperty("--fx", f[0] + "%"); im.style.setProperty("--fy", f[1] + "%");
+      box.appendChild(im);
+      return im;
+    });
+    var i = Math.floor(Math.random() * slike.length);
+    function ucitaj(im) { if (!im.src) im.src = im.dataset.src; }
+    function pokazi() {
+      slike.forEach(function (im, j) { im.classList.toggle("on", j === i); });
+      // sljedeća se učita dok ova stoji
+      ucitaj(slike[(i + 1) % slike.length]);
+    }
+    slike[i].addEventListener("load", pokazi, { once: true });
+    ucitaj(slike[i]);
+    if (reduce) return;
+    setInterval(function () { if (document.hidden) return; i = (i + 1) % slike.length; pokazi(); }, 8000);
+  })();
   document.addEventListener("keydown", function (e) {
     if (e.key !== "Enter") return;
     var dg = e.target.closest && e.target.closest("[data-dungeon]");
@@ -4026,7 +4105,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     igraci.forEach(function (p) { var z = START[p.rasa] || p.rasa; (grupe[z] = grupe[z] || []).push(p); });
     var startHtml = '<div class="starts">' + Object.keys(grupe).map(function (z) {
       return '<div><span class="z mono">' + esc(z) + '</span><div class="who">' + grupe[z].map(function (p) {
-        return '<span style="--c:' + BOJE[p.klasa] + '">' + esc(p.igrac) + "</span>";
+        return '<span style="--c:' + BOJE[p.klasa] + '">' + avatar(p) + esc(p.igrac) + "</span>";
       }).join("") + "</div></div>";
     }).join("") + "</div>";
     $("route").innerHTML = (N.koraci || []).map(function (k, i) {
@@ -4203,7 +4282,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       return '<div class="' + (sad ? "sad" : "") + '"><span class="mono">lvl ' + (d.od === d.do ? d.od : d.od + "–" + d.do) + "</span><b>" + d.min + "–" + d.max + " g</b><span class=\"mono\">dnevno</span></div>";
     }).join("");
     $("duguje").innerHTML = E.duguje.map(function (d) {
-      return "<tr><td>" + esc(d.tko) + "</td><td>" + esc(d.kome) + "</td><td>" + esc(d.sto) + "</td><td>" + esc(d.kad) + "</td></tr>";
+      return "<tr><td>" + sAvatarima(d.tko) + "</td><td>" + sAvatarima(d.kome) + "</td><td>" + esc(d.sto) + "</td><td>" + esc(d.kad) + "</td></tr>";
     }).join("");
     $("ahPlan").innerHTML = E.prodaja.map(function (a) { return "<li><b>" + esc(a.faza) + "</b><span>" + esc(a.tekst) + "</span></li>"; }).join("");
     var b = $("ekoVise"), det = $("ekoDet");

@@ -42,8 +42,8 @@ window.HORDE = {
   // { id (jedinstven), naslov, opis (jedna rečenica), trajanje ("m:ss"), poster (16:9, assets/kino/), url }
   // url se otvara u overlayu preko cijelog ekrana (stranica javi kraj porukom { zp: "kraj" }); bez url-a pušta intro weba
   kino: [
-    { id: "zapresic", naslov: "Zaprešić → Azeroth", opis: "Noć u Zaprešiću, pet upaljenih ekrana i put u Azeroth.", trajanje: "0:25", poster: "assets/kino/zapresic.jpg", url: "zapresic.html?odmah&embed" },
-    { id: "intro", naslov: "Intro", opis: "Žeravica, grb, kadrovi iz Forevera i ekipa jedan po jedan.", trajanje: "0:34", poster: "assets/kino/intro.jpg", url: null }
+    { id: "zapresic", naslov: "Zaprešić → Azeroth", opis: "Noć u Zaprešiću, pet upaljenih ekrana i put u Azeroth.", trajanje: "0:56", poster: "assets/kino/zapresic.jpg", url: "zapresic.html?odmah&embed" },
+    { id: "intro", naslov: "Intro", opis: "Žeravica, grb, kadrovi iz Forevera i ekipa jedan po jedan, svatko u svom kraju Azerotha.", trajanje: "0:34", poster: "assets/kino/intro.jpg", url: null }
   ],
 
   // achievementi: novi (koje posjetitelj još nije vidio) iskaču kao tost dolje u sredini, jedan po jedan
@@ -63,11 +63,13 @@ window.HORDE = {
   //   oprema i ciljevi: { slot, ime, kvaliteta: poor|common|uncommon|rare|epic|legendary, ikona (Wowhead ikona, npr. "inv_axe_09"), wowhead (ID itema), izvor }
   // oci: položaji očiju na fotki u postocima [[x, y], [x, y]] za sjaj (samo Undead), inače izostavi
   // siroka: široki kadar (16:9) za zaglavlje profila u ladici i veliku sliku u introu; ociSiroka: oči na njemu, kao oci
-  // fokus: [x, y] glave na širokom kadru u postocima; intro po njemu reže sliku i vodi Ken Burns
+  // fokus: [x, y] glave na širokom kadru u postocima; intro po njemu reže sliku i vodi Ken Burns, a avatari izrezuju glavu
+  //   uz siroka "<lik>-wide.jpg" ide i zamućena "<lik>-hero.jpg" (960 px) za pozadinu heroja
   // portret (foto) je 720×960 izrez iz istog kadra; oci i ociSiroka već uračunavaju 4 % povećanja slike na kartici
   // imena: gdje se govori o ljudima piše igrac (Pero, Niksa, Karkens, Žuga, Dex); lik samo kao naslov kartice/profila i u kontekstu igre
   igraci: [
-    { igrac: "Pero",    lik: "Melee Kitic",      klasa: "Warrior", rasa: "Orc",    uloga: "Melee DPS",  level: 0, foto: null,
+    { igrac: "Pero",    lik: "Melee Kitic",      klasa: "Warrior", rasa: "Orc",    uloga: "Melee DPS",  level: 0, foto: "assets/likovi/melee-kitic.jpg",
+      siroka: "assets/likovi/melee-kitic-wide.jpg", fokus: [50.3, 16.6],
       gold: 0,
       zadaci: [
         { naziv: "Mining i Skinning naučiti čim izađeš iz Valley of Trials", od: 1, do: 10, gotovo: false },
@@ -96,7 +98,7 @@ window.HORDE = {
         biljeske: "Kao DPS ne pulla. Kad Dex nije tu, Warrior je rezervni tank."
       } },
     { igrac: "Niksa",   lik: "Saman Saulic",    klasa: "Shaman",  rasa: "Orc",    uloga: "Healer",     level: 0, foto: "assets/likovi/saman-saulic.jpg",
-      siroka: "assets/likovi/saman-saulic-wide.jpg", fokus: [50.3, 19.2],
+      siroka: "assets/likovi/saman-saulic-wide.jpg", fokus: [50.3, 18],
       gold: 0,
       zadaci: [
         { naziv: "Herbalism i Skinning; Earth totem quest na 4", od: 1, do: 10, gotovo: false },
