@@ -107,6 +107,9 @@ button { font: inherit; color: inherit; }
 .preskoci { position: fixed; right: max(18px, env(safe-area-inset-right)); bottom: max(18px, env(safe-area-inset-bottom)); z-index: 12; opacity: 0; pointer-events: none; padding: 10px 14px; font-size: 10px; }
 .preskoci.on { opacity: .75; pointer-events: auto; transition: opacity .4s; }
 
+.zvuk-hint { position: fixed; left: max(18px, env(safe-area-inset-left)); bottom: max(22px, env(safe-area-inset-bottom)); z-index: 12; margin: 0;
+  font: 500 10px/1 var(--f-mono); letter-spacing: .2em; text-transform: uppercase; color: var(--bone); opacity: 0; pointer-events: none; transition: opacity .4s; }
+.zvuk-hint.on { opacity: .8; animation: dise 2s ease-in-out infinite; }
 .zrno { position: absolute; inset: -50%; z-index: 10; pointer-events: none; opacity: .07;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   animation: zrno .5s steps(4) infinite; }
@@ -141,7 +144,7 @@ button { font: inherit; color: inherit; }
       <p class="pod" id="pod">World of Warcraft: Forever · <b>Horda</b><br>4. 11. 2026.</p>
       <div class="gumbi" id="gumbi">
         <button type="button" class="btn" id="ponovi">↻ Ponovi</button>
-        <a class="btn glavni" href="./">Na web →</a>
+        <a class="btn glavni" href="./?web">Na web →</a>
       </div>
     </div>
   </div>
@@ -150,6 +153,7 @@ button { font: inherit; color: inherit; }
   <div class="zrno"></div>
 </div>
 <button type="button" class="btn preskoci" id="preskoci">Preskoči ›</button>
+<p class="zvuk-hint" id="zvukHint">🔊 Dodirni za zvuk</p>
 
 <div class="ulaz" id="ulaz">
   <div>
@@ -518,24 +522,42 @@ button { font: inherit; color: inherit; }
     };
     return A;
   }
-  function zakaziZvuk(A) {
-    var t0 = A.ac.currentTime + .05, B = function (s, j) { A.bubanj(t0 + s, j); };
-    A.dron(t0 + .2, t0 + 10.6, t0 + 25.5);
+  // od: sekunda timelinea od koje zvuk kreće (kad se zvuk otključa usred cinematica, ranije stvari se preskaču)
+  function zakaziZvuk(A, od) {
+    od = od || 0;
+    var sad = A.ac.currentTime, t0 = sad + .05 - od;
+    function u(s, fn) { if (t0 + s >= sad - .01) fn(t0 + s); }
+    var B = function (s, j) { u(s, function (t) { A.bubanj(t, j); }); };
+    if (od < 23) A.dron(Math.max(t0 + .2, sad + .05), t0 + 10.6, t0 + 25.5);
     // srce grada
     [1.2, 3.0].forEach(function (s) { B(s, .5); B(s + .24, .32); });
     // pet prozora
-    for (var i = 0; i < 5; i++) { B(4.6 + i * .55, .5); A.zvon(t0 + 4.6 + i * .55, 880 + i * 110, .05); }
+    for (var i = 0; i < 5; i++) (function (i) { B(4.6 + i * .55, .5); u(4.6 + i * .55, function (t) { A.zvon(t, 880 + i * 110, .05); }); })(i);
     B(7.6, .95); B(8.7, .95);
     [9.35, 9.7, 9.98, 10.2, 10.36, 10.48].forEach(function (s, i) { B(s, .55 + i * .08); });
-    A.riser(t0 + 8.3, 2.3);
-    A.udar(t0 + 10.6); A.rog(t0 + 10.75, 3.4);
+    u(8.3, function (t) { A.riser(t, 2.3); });
+    u(10.6, A.udar); u(10.75, function (t) { A.rog(t, 3.4); });
     // ekipa
     var tonovi = [196, 293.7, 392, 246.9, 329.6];
-    for (i = 0; i < 5; i++) { B(12.7 + i * .78, 1); A.zvon(t0 + 12.7 + i * .78, tonovi[i], .09); A.swish(t0 + 12.55 + i * .78); }
+    for (i = 0; i < 5; i++) (function (i) { B(12.7 + i * .78, 1); u(12.7 + i * .78, function (t) { A.zvon(t, tonovi[i], .09); }); u(12.55 + i * .78, A.swish); })(i);
     B(16.9, .7); B(17.4, .9);
-    A.riser(t0 + 17.4, 1.45);
-    A.udar(t0 + 18.9); A.rog(t0 + 19.0, 4.2, [110, 110.6, 164.8, 220.4]);
+    u(17.4, function (t) { A.riser(t, 1.45); });
+    u(18.9, A.udar); u(19.0, function (t) { A.rog(t, 4.2, [110, 110.6, 164.8, 220.4]); });
     B(20.2, .6); B(21.4, .5);
+  }
+  // zvuk kreće čim ga preglednik pusti; ako ne pusti (stranica otvorena bez klika), čeka prvi dodir i uskače usred timelinea
+  var hint = $("zvukHint");
+  function upaliZvuk(a) {
+    var gotovo = false;
+    function idi() { if (gotovo || a !== A) return; gotovo = true; hint.classList.remove("on"); skini(); zakaziZvuk(a, T ? T.time() : 0); }
+    function dodir() { a.ac.resume().then(idi); }
+    function skini() { ["pointerdown", "keydown", "touchstart"].forEach(function (ev) { window.removeEventListener(ev, dodir, true); }); }
+    a.ac.resume().then(idi);
+    setTimeout(function () {
+      if (gotovo || a !== A) return;
+      hint.classList.add("on");
+      ["pointerdown", "keydown", "touchstart"].forEach(function (ev) { window.addEventListener(ev, dodir, true); });
+    }, 300);
   }
 
   /* ================= natpisi ================= */
@@ -652,13 +674,14 @@ button { font: inherit; color: inherit; }
     pocetnoStanje();
     velicina();
     T = sloziTimeline();
-    if (saZvukom) { try { A = zvukStart(); if (A) { if (A.ac.state === "suspended") A.ac.resume(); zakaziZvuk(A); } } catch (e) { A = null; } }
+    if (saZvukom) { try { A = zvukStart(); if (A) upaliZvuk(A); } catch (e) { A = null; } }
     $("preskoci").classList.add("on");
     T.play(0);
   }
   function naKraj() {
     if (T) T.progress(1);
     if (A) { A.stani(); A = null; }
+    hint.classList.remove("on");
     $("preskoci").classList.remove("on");
     GL.p = 1; GL.bright = -.42; zarJacina = .45;
     $("gumbi").classList.add("on");
@@ -692,6 +715,8 @@ button { font: inherit; color: inherit; }
     window.addEventListener("keydown", function (e) { if (e.key === "Escape" && T && T.progress() < 1) naKraj(); });
     // debug: ?t=12 skoči na sekundu (bez zvuka)
     var q = /[?&]t=([\d.]+)/.exec(location.search);
+    // ?odmah: dolazak s ulaza glavnog weba, bez vlastitog ulaza
+    if (/[?&]odmah/.test(location.search) && !q) { ulaz.remove(); if (reduce) zavrsniKadar(); else pusti(true); }
     if (q) { ulaz.remove(); pusti(false); T.seek(+q[1]); if (/[?&]stop/.test(location.search)) T.pause(); window.__zp = { GL: GL, T: function () { return T; }, gl: gl, render: render }; }
   }
   // tabla stanice crta se fontom stranice, pa se čeka da stigne (najviše 2 s)
