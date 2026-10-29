@@ -38,6 +38,14 @@ window.HORDE = {
     ]
   },
 
+  // kino: videi u sekciji Kino na dnu stranice, redom kako stoje; novi mini video = novi red
+  // { id (jedinstven), naslov, opis (jedna rečenica), trajanje ("m:ss"), poster (16:9, assets/kino/), url }
+  // url se otvara u overlayu preko cijelog ekrana (stranica javi kraj porukom { zp: "kraj" }); bez url-a pušta intro weba
+  kino: [
+    { id: "zapresic", naslov: "Zaprešić → Azeroth", opis: "Noć u Zaprešiću, pet upaljenih ekrana i put u Azeroth.", trajanje: "0:25", poster: "assets/kino/zapresic.jpg", url: "zapresic.html?odmah&embed" },
+    { id: "intro", naslov: "Intro", opis: "Žeravica, grb, kadrovi iz Forevera i ekipa jedan po jedan.", trajanje: "0:34", poster: "assets/kino/intro.jpg", url: null }
+  ],
+
   // achievementi: novi (koje posjetitelj još nije vidio) iskaču kao tost dolje u sredini, jedan po jedan
   // { id (jedinstven, ne mijenja se), naziv, opis, datum (GGGG-MM-DD), igraci: tko ga je dobio }
   achievementi: [
