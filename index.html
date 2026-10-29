@@ -1227,6 +1227,21 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
   .pl, .fog { transform: none; }
   .fth b { animation: none; }
 }
+/* ---------- tooltip: tamna pozadina, tanki zlatni rub, ime u boji kvalitete ---------- */
+.tt {
+  position: fixed; left: 0; top: 0; z-index: 60; pointer-events: none; width: max-content; max-width: min(280px, calc(100vw - 16px));
+  padding: 10px 12px 11px; background: rgba(10, 8, 7, .97); border: 1px solid rgba(214, 170, 92, .8);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .6), 0 12px 30px rgba(0, 0, 0, .6);
+}
+.tt[hidden] { display: none; }
+.tt-h { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; }
+.tt-h b { font: 800 1.1rem/1.05 var(--f-display); text-transform: uppercase; }
+.tt-h span { color: var(--dust); font-size: .5625rem; white-space: nowrap; }
+.tt p { margin: 4px 0 0; font-size: .8125rem; line-height: 1.35; color: var(--bone); }
+.tt p + p { color: var(--dust); }
+[data-tt] { -webkit-tap-highlight-color: transparent; }
+span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(214, 170, 92, .45); text-decoration-thickness: 1px; text-underline-offset: 4px; }
+
 /* ---------- kursor: oklopna rukavica, samo uz miš; vrh kažiprsta je hotspot (5 5) ---------- */
 @media (hover: hover) and (pointer: fine) {
   html { cursor: url("assets/kursor/kursor.svg") 5 5, auto; }
@@ -1539,6 +1554,72 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
   };
   var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
 
+  /* ---------- tooltip: jedna komponenta za iteme, profesije, bosseve i dungeone ---------- */
+  // ttAttr({ ime, boja, oznaka, redovi }) vraća data-tt atribut; sadržaj stoji u registru TT
+  var TT = [];
+  var KVAL_IME = { poor: "Poor", common: "Common", uncommon: "Uncommon", rare: "Rare", epic: "Epic", legendary: "Legendary" };
+  function ttAttr(o, fokus) { TT.push(o); return ' data-tt="' + (TT.length - 1) + '"' + (fokus ? ' tabindex="0"' : ""); }
+  var ttSakrij = (function () {
+    var el = document.createElement("div");
+    el.className = "tt"; el.id = "tt"; el.setAttribute("role", "tooltip"); el.hidden = true;
+    document.body.appendChild(el);
+    var meta = null, dodir = false;
+    function pokazi(t, x, y) {
+      var o = TT[+t.getAttribute("data-tt")];
+      if (!o) return;
+      if (meta !== t) {
+        if (meta) meta.removeAttribute("aria-describedby");
+        el.innerHTML = '<div class="tt-h"><b style="color:' + (o.boja || "var(--bone)") + '">' + esc(o.ime) + "</b>" + (o.oznaka ? '<span class="mono">' + esc(o.oznaka) + "</span>" : "") + "</div>" +
+          (o.redovi || []).filter(Boolean).slice(0, 3).map(function (r) { return "<p>" + esc(r) + "</p>"; }).join("");
+        meta = t;
+        t.setAttribute("aria-describedby", "tt");
+      }
+      el.hidden = false;
+      var w = el.offsetWidth, h = el.offsetHeight, W = document.documentElement.clientWidth, H = innerHeight, lx, ly;
+      if (x == null) {
+        // fokus ili dodir: ispod elementa, iznad ako nema mjesta
+        var r = t.getBoundingClientRect();
+        lx = Math.min(Math.max(8, r.left), W - 8 - w);
+        ly = r.bottom + 8 + h > H - 8 ? r.top - 8 - h : r.bottom + 8;
+      } else {
+        // miš: desno ispod kursora, s druge strane kad ponestane mjesta
+        lx = x + 16 + w > W - 8 ? x - 12 - w : x + 16;
+        ly = y + 22 + h > H - 8 ? y - 10 - h : y + 22;
+      }
+      el.style.transform = "translate(" + Math.round(Math.max(8, lx)) + "px," + Math.round(Math.max(8, ly)) + "px)";
+    }
+    function sakrij() {
+      if (meta) meta.removeAttribute("aria-describedby");
+      meta = null; el.hidden = true;
+    }
+    document.addEventListener("pointerdown", function (e) { dodir = e.pointerType !== "mouse"; }, true);
+    document.addEventListener("pointerover", function (e) {
+      if (e.pointerType !== "mouse") return;
+      var t = e.target.closest && e.target.closest("[data-tt]");
+      if (t) pokazi(t, e.clientX, e.clientY);
+    });
+    document.addEventListener("pointermove", function (e) { if (e.pointerType === "mouse" && meta && meta.contains(e.target)) pokazi(meta, e.clientX, e.clientY); });
+    document.addEventListener("pointerout", function (e) { if (e.pointerType === "mouse" && meta && !meta.contains(e.relatedTarget)) sakrij(); });
+    document.addEventListener("focusin", function (e) {
+      var t = e.target.closest && e.target.closest("[data-tt]");
+      if (t && !dodir && t.matches(":focus-visible")) pokazi(t);
+    });
+    document.addEventListener("focusout", function (e) { if (meta && !meta.contains(e.relatedTarget) && !dodir) sakrij(); });
+    // dodir: prvi tap otvara tooltip, drugi zatvara (na linku ili gumbu drugi tap radi svoje)
+    document.addEventListener("click", function (e) {
+      if (!dodir) return;
+      var t = e.target.closest && e.target.closest("[data-tt]");
+      if (!t) { sakrij(); return; }
+      if (meta === t && !el.hidden) { sakrij(); return; }
+      e.preventDefault(); e.stopPropagation();
+      pokazi(t);
+    }, true);
+    window.addEventListener("scroll", function () { if (meta) sakrij(); }, true);
+    window.addEventListener("hashchange", sakrij);
+    window.addEventListener("keydown", function (e) { if (e.key === "Escape") sakrij(); });
+    return sakrij;
+  })();
+
   /* ---------- roster ---------- */
   var redRole = { Tank: 0, Healer: 1, DPS: 2 };
   var igraci = D.igraci.slice();
@@ -1687,6 +1768,14 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
     L.forEach(function (l) { l.primarne.concat(l.sekundarne).forEach(function (x) { if (sve.indexOf(x.ime) < 0) sve.push(x.ime); }); });
     function vrsta(ime) { return PRAGOVI.sekundarne.indexOf(ime) >= 0 ? "sekundarna" : PRAGOVI.gathering.indexOf(ime) >= 0 ? "gathering" : "crafting"; }
     var red = { gathering: 0, crafting: 1, sekundarna: 2 };
+    function ttProf(ime, fokus) {
+      var tko = tkoIma(ime).map(function (l) { return l.ime ? l.ime.split(" ")[0] : l.klasa; });
+      var tok = PROF.tokovi.filter(function (t) { return t.from === ime || t.to === ime; })[0];
+      var vr = vrsta(ime), art = PRAGOVI.rangovi[PRAGOVI.rangovi.length - 1];
+      return ttAttr({ ime: ime, boja: "var(--bone)", oznaka: vr === "sekundarna" ? "Sekundarna" : vr === "gathering" ? "Gathering" : "Crafting",
+        redovi: ["Do " + PRAGOVI.max + " · " + art.ime + " od lvl " + art.level, tko.length ? "Imaju: " + tko.join(", ") : "Još je nitko nema",
+          tok ? (tok.from === ime ? tok.item + " ide u " + tok.to : tok.item + " iz: " + tok.from) : ""] }, fokus);
+    }
     sve.sort(function (a, b) { return red[vrsta(a)] - red[vrsta(b)]; });
     function tkoIma(ime) {
       return L.filter(function (l) { return l.primarne.concat(l.sekundarne).some(function (x) { return x.ime === ime; }); });
@@ -1721,14 +1810,14 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
         return '<span class="lg' + (tko.length ? " da" : "") + '" title="Legacy ' + g + '">' + g + (tko.length ? " · " + esc(tko.join(", ")) : "") + "</span>";
       }).join("");
       return '<article class="pk ' + vrsta(ime) + '">' +
-        '<header>' + ikonaProf(ime) + '<b lang="en">' + esc(ime) + '</b><span class="mono">' + vrsta(ime) + "</span></header>" +
+        '<header>' + ikonaProf(ime) + '<b lang="en"' + ttProf(ime, true) + ">" + esc(ime) + '</b><span class="mono">' + vrsta(ime) + "</span></header>" +
         '<div class="pk-naj"><b>' + naj + '</b><span class="mono">/' + PRAGOVI.max + " najviše u guildu</span></div>" + traka(naj) +
         '<div class="pk-tko">' + ima.map(function (l) { return '<span style="--c:' + (BOJE_KLASA[l.klasa] || "#ece2d4") + '">' + esc(l.ime ? l.ime.split(" ")[0] : l.klasa) + "</span>"; }).join("") + "</div>" +
         '<div class="pk-leg"><span class="mono">Legacy</span>' + legacy + "</div></article>";
     }).join("");
 
     // heatmap lik × profesija
-    $("prHeat").innerHTML = '<table class="heat"><thead><tr><th></th>' + sve.map(function (ime) { return '<th lang="en" title="' + esc(ime) + '">' + ikonaProf(ime) + "<span>" + esc(ime) + "</span></th>"; }).join("") + "</tr></thead><tbody>" +
+    $("prHeat").innerHTML = '<table class="heat"><thead><tr><th></th>' + sve.map(function (ime) { return '<th lang="en"' + ttProf(ime) + ">" + ikonaProf(ime) + "<span>" + esc(ime) + "</span></th>"; }).join("") + "</tr></thead><tbody>" +
       L.map(function (l) {
         return '<tr><th style="--c:' + (BOJE_KLASA[l.klasa] || "#ece2d4") + '"><b>' + esc(imeLika(l)) + '</b><span class="mono">' + esc(l.vlasnik) + " · " + esc(ULOGE_LIKA[l.uloga] || l.uloga) + "</span></th>" +
           sve.map(function (ime) {
@@ -1962,7 +2051,9 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
     }
     function slotHtml(slot, o) {
       var unutra = ikona(o, slot) + '<span class="sl-t"><b' + (o ? ' style="color:' + (KVALITETA[o.kvaliteta] || KVALITETA.common) + '"' : "") + ">" + (o ? esc(o.ime) : "prazno") + '</b><span class="mono">' + esc(slot) + "</span></span>";
-      return o && o.wowhead ? '<a class="sl" href="https://www.wowhead.com/classic/item=' + o.wowhead + '" target="_blank" rel="noopener">' + unutra + "</a>" : '<div class="sl">' + unutra + "</div>";
+      if (!o) return '<div class="sl">' + unutra + "</div>";
+      var tt = ttAttr({ ime: o.ime, boja: KVALITETA[o.kvaliteta] || KVALITETA.common, oznaka: "Oprema", redovi: [slot + " · " + (KVAL_IME[o.kvaliteta] || "Common"), o.izvor ? "Izvor: " + o.izvor : ""] }, !o.wowhead);
+      return o.wowhead ? '<a class="sl" href="https://www.wowhead.com/classic/item=' + o.wowhead + '" target="_blank" rel="noopener"' + tt + ">" + unutra + "</a>" : '<div class="sl"' + tt + ">" + unutra + "</div>";
     }
     var KVALITETA = { poor: "#9d9d9d", common: "#ffffff", uncommon: "#1eff00", rare: "#0070dd", epic: "#a335ee", legendary: "#ff8000" };
     var box = $("prof"), body = $("profBody"), panel = box.querySelector(".prof-panel"), otvorenKlikom = false, zadnjiFokus = null;
@@ -2006,7 +2097,8 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
             var q = KVALITETA[c.kvaliteta] || KVALITETA.rare;
             var unutra = ikona(c, c.slot) + '<span class="sl-t"><b style="color:' + q + '">' + esc(c.ime) + '</b><span class="mono">' + esc(c.slot || "") + (c.izvor ? " · " + esc(c.izvor) : "") + "</span></span>" +
               '<i class="ck" aria-label="' + (c.gotovo ? "imam" : "nemam") + '"></i>';
-            return '<li class="' + (c.gotovo ? "ok" : "") + '">' + (c.wowhead ? '<a href="https://www.wowhead.com/classic/item=' + c.wowhead + '" target="_blank" rel="noopener">' + unutra + "</a>" : unutra) + "</li>";
+            var tt = ttAttr({ ime: c.ime, boja: q, oznaka: "Pre-raid BiS", redovi: [(c.slot || "") + " · " + (KVAL_IME[c.kvaliteta] || "Rare"), c.izvor ? "Izvor: " + c.izvor : "", c.gotovo ? p.lik + " ga već ima" : "Cilj za " + p.lik + " prije raida"] }, !c.wowhead);
+            return '<li class="' + (c.gotovo ? "ok" : "") + '"' + (c.wowhead ? "" : tt) + ">" + (c.wowhead ? '<a href="https://www.wowhead.com/classic/item=' + c.wowhead + '" target="_blank" rel="noopener"' + tt + ">" + unutra + "</a>" : unutra) + "</li>";
           }).join("") + "</ul></div>" : "") +
           (pf.biljeske ? '<div><h3 class="lab mono">Bilješke</h3><p class="prof-note">' + esc(pf.biljeske) + "</p></div>" : "") +
         "</div></div>";
@@ -2030,8 +2122,14 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
           '<div><h3 class="lab mono">Ulaz i kako doći</h3><p>' + esc(v.ulaz) + "</p></div>" +
           (v.nepoznato ? '<div><h3 class="lab mono">Status</h3><p>' + esc(v.napomena || "") + "</p></div>" :
             '<div><h3 class="lab mono">Questovi prije ulaska</h3>' + lista(v.questovi) + "</div>" +
-            '<div class="dng-wide"><h3 class="lab mono">Bossovi redom</h3><ol class="dng-boss">' + v.bossovi.map(function (b) {
-              return "<li><b>" + esc(b.ime) + "</b><span>" + esc(b.tekst) + "</span></li>";
+            '<div class="dng-wide"><h3 class="lab mono">Bossovi redom</h3><ol class="dng-boss">' + v.bossovi.map(function (b, i) {
+              // drop za nas: stavka loota koja u zagradi spominje ovog bossa, npr. "Warrior: Ravager (Herod)"
+              var drop = (v.loot || []).map(function (l) {
+                var m = l.match(/^(.*?):\s*(.*?)\s*\(([^)]+)\)$/);
+                return m && m[3].length > 3 && (b.ime.indexOf(m[3]) >= 0 || m[3].indexOf(b.ime) >= 0) ? "Drop za nas: " + m[2] + " (" + m[1] + ")" : "";
+              }).filter(Boolean)[0];
+              var tt = ttAttr({ ime: b.ime, boja: "var(--sys)", oznaka: "Boss " + (i + 1) + "/" + v.bossovi.length, redovi: [d.ime + " · lvl " + d.od + "–" + d.do, drop || "Loot po bossu: Wowhead na dnu vodiča"] }, true);
+              return "<li><b" + tt + ">" + esc(b.ime) + "</b><span>" + esc(b.tekst) + "</span></li>";
             }).join("") + "</ol></div>" +
             '<div><h3 class="lab mono">Tko što radi</h3><p>' + esc(v.uloge) + "</p></div>" +
             '<div><h3 class="lab mono">Loot koji nam treba</h3>' + lista(v.loot) + "</div>" +
@@ -2219,6 +2317,13 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
   /* ---------- prilagodba po levelu: prosjek ekipe ---------- */
   var AVG = igraci.reduce(function (s, p) { return s + lvlOf(p); }, 0) / igraci.length;
 
+  function ttDungeon(d) {
+    var v = d.vodic || { nepoznato: true };
+    var st = d.odradeno ? "Ekipa ga je očistila" : AVG < 1 ? "" : AVG >= d.od && AVG <= d.do ? "Za ekipu: sad je pravo vrijeme" : AVG < d.od ? "Ekipa još nije tu" : "Ekipa ga je prerasla";
+    return ttAttr({ ime: d.ime, boja: d.novo ? "var(--ember)" : "var(--bone)", oznaka: d.novo ? "Novo u Foreveru" : "Dungeon",
+      redovi: ["lvl " + d.od + "–" + d.do + " · " + (d.gdje || ""), v.nepoznato ? "Bossovi još nepoznati" : v.bossovi.length + " bossova · vodič na klik", st] });
+  }
+
   /* ---------- vodoravni scroll: strelice, povlačenje mišem, fokus na trenutnu fazu ---------- */
   function hsPostavi(wrap, fokus) {
     var tr = wrap.querySelector(".hs-track"), pv = wrap.querySelector(".prev"), nx = wrap.querySelector(".next"), vb = wrap.querySelector(".vidi");
@@ -2380,7 +2485,10 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
       var tu = st === "sad" ? '<span class="tu">' + (avg < 1 ? "Kreće 4. 11. u ponoć" : "Mi smo ovdje · lvl " + Math.round(avg)) + "</span>" : "";
       return '<article class="rc ' + st + '"><span class="lv">' + lv + "<small>lvl</small></span>" + kad +
         '<p class="zn">' + esc(f.zone) + "</p>" + tu +
-        (f.dungeoni && f.dungeoni.length ? '<div class="dg-list">' + f.dungeoni.map(function (d) { return "<span>" + esc(d) + "</span>"; }).join("") + "</div>" : "") +
+        (f.dungeoni && f.dungeoni.length ? '<div class="dg-list">' + f.dungeoni.map(function (d) {
+          var dg = D.dungeoni.filter(function (x) { return d.indexOf(x.ime) === 0; })[0];
+          return "<span" + (dg ? ttDungeon(dg) : "") + ">" + esc(d) + "</span>";
+        }).join("") + "</div>" : "") +
         (f.tekst ? '<p class="tx">' + esc(f.tekst) + "</p>" : "") +
         (f.kraj ? '<p class="krj mono">' + esc(f.kraj) + "</p>" : "") + "</article>";
     }).join("");
@@ -2472,7 +2580,7 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
       '<div class="dtl-mi" style="left:' + X(AVG) + '"></div>' +
       D.dungeoni.map(function (d, i) {
         var st = d.odradeno ? "done" : AVG >= d.od && AVG <= d.do ? "now" : "";
-        return '<button type="button" class="dtl-s ' + st + (d.novo ? " novo" : "") + '" data-dungeon="' + slug(d.ime) + '" title="' + esc(d.ime) + " · " + d.od + "–" + d.do + '" aria-label="' + esc(d.ime) + ", level " + d.od + " do " + d.do + '" style="left:' + X(d.od) + ";width:calc(" + X(d.do) + " - " + X(d.od) + ");top:" + (red + trake[i] * vis) + 'px"></button>';
+        return '<button type="button" class="dtl-s ' + st + (d.novo ? " novo" : "") + '" data-dungeon="' + slug(d.ime) + '"' + ttDungeon(d) + ' aria-label="' + esc(d.ime) + ", level " + d.od + " do " + d.do + '" style="left:' + X(d.od) + ";width:calc(" + X(d.do) + " - " + X(d.od) + ");top:" + (red + trake[i] * vis) + 'px"></button>';
       }).join("") +
       '<div class="dtl-os mono">' + [1, 10, 20, 30, 40, 50, 60].map(function (l) { return '<span style="left:' + X(l) + '">' + l + "</span>"; }).join("") + "</div>";
   })();
