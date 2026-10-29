@@ -1416,6 +1416,9 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
 .ad-st a { font: 500 .625rem/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--bone); text-decoration-color: var(--ember); text-underline-offset: 4px; }
 .ad-nap { margin: 0; color: var(--dust); font-size: .78rem; line-height: 1.45; padding-left: 10px; border-left: 2px solid rgba(242, 207, 91, .4); }
 .ad-veza { margin: 0; color: var(--dust); font-size: .5625rem; }
+.ad-upoz { margin: 0; padding: 8px 10px; border: 1px solid rgba(255, 90, 79, .45); background: rgba(255, 90, 79, .08); color: #ffc7c1; font-size: .8125rem; line-height: 1.45; }
+.ad-upoz b { color: #ff7a6f; font-weight: 600; }
+.ad-modal-nap { margin: 0; color: var(--dust); font-size: .8125rem; }
 .ad-det summary { list-style: none; cursor: pointer; color: var(--ember); font-size: .625rem; }
 .ad-det summary::-webkit-details-marker { display: none; }
 .ad-det summary::before { content: "+ "; }
@@ -3492,11 +3495,22 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
         '<p class="ad-op">' + esc(a.opis) + "</p>" +
         '<div class="ad-st"><span class="st ' + st[0] + '">' + esc(st[1](datumKr(a.zadnjaProvjera))) + "</span>" +
           (a.link ? '<a href="' + esc(a.link) + '" target="_blank" rel="noopener">' + esc(linkIme(a.link)) + " ↗</a>" : "") + "</div>" +
+        upozorenje(a) +
         (a.status !== "forever-potvrdeno" && a.napomena ? '<p class="ad-nap">' + esc(a.napomena) + "</p>" : "") +
         ((a.treba || []).length ? '<p class="ad-veza mono">Treba: ' + esc(a.treba.map(ime).join(", ")) + "</p>" : "") +
         (a.alternativaZa ? '<p class="ad-veza mono">Alternativa za: ' + esc(ime(a.alternativaZa)) + "</p>" : "") +
         (a.postavljanje ? '<details class="ad-det"><summary class="mono">Postavljanje</summary><p>' + esc(a.postavljanje) + "</p></details>" : "") +
         "</article>";
+    }
+    // addon bez Forever datoteke: jasno upozorenje i zamjena iz podataka (addon kojem je alternativaZa ovaj);
+    // addon koji takav addon treba: upozorenje da ga zasad preskoči
+    function upozorenje(a) {
+      if (a.status === "nije-pronadeno") {
+        var zam = A.addoni.filter(function (x) { return x.alternativaZa === a.id && x.status === "forever-potvrdeno"; });
+        return '<p class="ad-upoz"><b>Još nema Forever datoteke.</b> ' + (zam.length ? "Dok se ne pojavi, uzmi " + esc(zam.map(function (x) { return x.ime; }).join(" ili ")) + "." : "Ne instaliraj dok se ne pojavi.") + "</p>";
+      }
+      var fali = (a.treba || []).map(function (id) { return poId[id]; }).filter(function (x) { return x && x.status === "nije-pronadeno"; });
+      return fali.length ? '<p class="ad-upoz">Treba ' + esc(fali.map(function (x) { return x.ime; }).join(", ")) + ", a " + (fali.length > 1 ? "oni još nemaju" : "on još nema") + " Forever verziju. Do tada ga preskoči.</p>" : "";
     }
     function kratkaZamjena(z) { return String(z || "").split(/ \(|; |\. /)[0].replace(/\.$/, ""); }
 
@@ -3519,6 +3533,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
           '<div class="mc-filt" role="group" aria-label="Za koga">' + ULOGE.map(function (k) { return pil("uloga", k[0], k[1]); }).join("") + "</div>" +
         "</div></div>" +
         '<div class="mcm-tijelo"><div class="mcm-in">' +
+          '<p class="ad-modal-nap">"Forever ✓" znači da je Forever verzija potvrđena na CurseForgeu, ne da smo je već testirali u igri.</p>' +
           '<div class="mcm-infopanel ad-paket" id="adPaketPanel" hidden>' +
             "<p>" + esc((A.minimalniPaket || {}).opis || "") + "</p>" +
             '<div class="ad-pk"><span class="mono">Klasa</span><div class="mc-filt">' + NASE_KLASE.map(function (k) { return '<button type="button" class="ad-pil" data-g="pk" data-k="' + k[0] + '">' + k[1] + "</button>"; }).join("") + "</div></div>" +
