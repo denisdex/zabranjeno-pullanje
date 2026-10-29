@@ -62,69 +62,66 @@ window.HORDE = {
     { ime: "Shaper's Terrace",          gdje: "Un'Goro Crater",     od: 58, do: 60, novo: true, odradeno: false }
   ],
 
-  // Patch notes: najnovije prvo. za: klase i rase na koje se odnosi (boja po klasi, rase kao oznaka)
+  // Patch notes: prijevod Blizzardovih development notes, najnovije gore
   izvorNovosti: "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-october-26/2360696",
   novosti: [
-    { datum: "2026-12-09", vrsta: "Najava", naslov: "Prvi raidovi", stavke: [
-      { tekst: "Otvaraju se Barrow Deeps (10), Hyjal Summit (20) i Onyxia's Lair (40)." }
+    { datum: "2026-10-27", naslov: "Racijali, završna runda", stavke: [
+      "Orc: Blood Fury vraćen na 2 min cooldowna (bilo 3 min).",
+      "Troll: Berserking traje 15 s (bilo 10 s).",
+      "Undead: Touch of the Grave ima interni cooldown 15 s (bilo 25 s)."
     ] },
-    { datum: "2026-11-04", vrsta: "Najava", naslov: "Launch", stavke: [
-      { tekst: "Serveri se otvaraju u 15:00 PST, kod nas u ponoć. Level cap 60, bez letećih mountova." }
+    { datum: "2026-10-26", naslov: "Classic loot je natrag", stavke: [
+      "Mob koji nije ništa dropao opet se može kliknuti, kao u Classicu.",
+      "Orc: Savage maknut, vraćen Command (+5% štete Hunter i Warlock petova)."
     ] },
-    { datum: "2026-10-27", vrsta: "Hotfix", naslov: "Racijali, završna runda", stavke: [
-      { tekst: "Blood Fury vraćen na 2 min cooldowna (bilo 3 min).", za: ["Orc"] },
-      { tekst: "Berserking traje 15 s (bilo 10 s).", za: ["Troll"] },
-      { tekst: "Touch of the Grave: interni cooldown 15 s (bilo 25 s).", za: ["Undead"] }
+    { datum: "2026-10-16", naslov: "Velika runda za klase", stavke: [
+      "Warrior: Battle Shout je sad raid-wide, a Slam više ne prekida pushback.",
+      "Shaman: Chain Lightning troši oko 35% manje mane na sva četiri ranka.",
+      "Mage: novi spell Frost Blast, uči se na levelu 24.",
+      "Paladin: Blessing of Salvation zamijenjen spellom Salvation.",
+      "Troll: Regeneration daje 20% više zdravlja (bilo 10%).",
+      "Horde je u Dalaranu napadnuta na prvi pogled; dungeonu City of Dalaran se i dalje može prići."
     ] },
-    { datum: "2026-10-26", vrsta: "Beta build", naslov: "Classic loot je natrag", stavke: [
-      { tekst: "Mob koji nije ništa dropao opet se može kliknuti, kao u Classicu." },
-      { tekst: "Savage maknut, vraćen Command (+5% štete Hunter i Warlock petova).", za: ["Orc"] }
+    { datum: "2026-10-08", naslov: "Više XP-a iz dungeona", stavke: [
+      "XP od mobova u dungeonima oko 20% veći.",
+      "Popravljen bug: niži level u grupi više ne gubi XP zbog višeg, svatko dobiva po svom levelu.",
+      "Warrior: Rage od primljene štete ispravljen, oko 20–40% štete vraća se kao Rage.",
+      "Paladin: Retribution Aura srezana oko 33%, natrag na Vanilla vrijednosti."
     ] },
-    { datum: "2026-10-16", vrsta: "Beta build", naslov: "Velika runda za klase", stavke: [
-      { tekst: "Battle Shout je sad raid-wide, a Slam ga više ne prekida pushback.", za: ["Warrior"] },
-      { tekst: "Chain Lightning troši oko 35% manje mane na sva četiri ranka.", za: ["Shaman"] },
-      { tekst: "Novi spell Frost Blast, uči se na levelu 24.", za: ["Mage"] },
-      { tekst: "Blessing of Salvation zamijenjen spellom Salvation.", za: ["Paladin"] },
-      { tekst: "Regeneration daje 20% više zdravlja (bilo 10%).", za: ["Troll"] },
-      { tekst: "Horde je u Dalaranu napadnuta na prvi pogled; dungeonu City of Dalaran se i dalje može prići." }
-    ] },
-    { datum: "2026-10-08", vrsta: "Beta build", naslov: "Više XP-a iz dungeona", stavke: [
-      { tekst: "XP od mobova u dungeonima oko 20% veći." },
-      { tekst: "Popravljen bug: niži level u grupi više ne gubi XP zbog višeg. Svatko dobiva po svom levelu." },
-      { tekst: "Rage od primljene štete ispravljen: oko 20–40% štete se vraća kao Rage.", za: ["Warrior"] },
-      { tekst: "Retribution Aura srezana oko 33%, natrag na Vanilla vrijednosti.", za: ["Paladin"] }
-    ] },
-    { datum: "2026-10-01", vrsta: "Beta build", naslov: "Rage i dungeon questovi", stavke: [
-      { tekst: "Kritični udarci daju 75% više Ragea; Berserker Rage se uči na 30 (bilo 32).", za: ["Warrior"] },
-      { tekst: "Dungeon questovi daju 50% manje dodatnog XP-a." }
+    { datum: "2026-10-01", naslov: "Rage i dungeon questovi", stavke: [
+      "Warrior: kritični udarci daju 75% više Ragea; Berserker Rage se uči na 30 (bilo 32).",
+      "Dungeon questovi daju 50% manje dodatnog XP-a."
     ] }
   ],
 
-  // "Znaj prije 60": činjenice iz Forevera koje štede zlato i vrijeme
+  // Prva noć: plan po fazama i pravila guilda
+  prvaNoc: {
+    cilj: "Svi level 10 i na istom mjestu",
+    koraci: [
+      { kad: "23:30", naslov: "Voice i login", tekst: "Svi na Discordu, klijent upaljen i ulogiran do odabira lika. U ponoć računaj na red čekanja; tko uđe prvi, ne čeka ostale." },
+      { kad: "00:00", naslov: "Start zone", tekst: "Svatko kreće iz svoje zone. U istoj zoni odmah u grupu: kill questovi se dijele, a u gužvi prve noći grupa lakše dođe do mobova.", startovi: true },
+      { kad: "lvl 5–6", naslov: "Profesije i hearthstone", tekst: "Gathering profesije uzmi čim izađeš iz start zone; treneri su u Razor Hillu i Orgrimmaru, odnosno u Brillu i Undercityju. Hearthstone veži u Razor Hill ili Brill." },
+      { kad: "lvl 6–10", naslov: "Očisti zonu", tekst: "Durotar i Tirisfal do kraja. Na svaki parni level svratite treneru. Sive stvari prodaj, novac ide na spellove." },
+      { kad: "lvl 10", naslov: "Zeppelin i okupljanje", tekst: "Undead strana zeppelinom s tornja kod Undercityja do Orgrimmara. Ekipa se nađe u Orgrimmaru, svatko pogleda class quest kod trenera." },
+      { kad: "lvl 10–13", naslov: "Barrens i prvi pull", tekst: "Svi skupa u Barrens, hearthstone na Crossroads. Kad su svi 13+, Ragefire Chasm ispod Orgrimmara, Dex tanka." }
+    ],
+    pravila: [
+      { naslov: "Zabranjeno pullanje", tekst: "Pulla samo tank. Ostali čekaju da mob gleda u Dexa, tek onda udaraju." },
+      { naslov: "Mana je zakon", tekst: "Kad Niksa kaže mana, svi stanu i piju. Bez heala nema pulla." },
+      { naslov: "Need za svoju klasu", tekst: "Need samo ako je stvar za tvoju klasu, za ostalo greed. Spor se rješava s /roll." },
+      { naslov: "Javi se prije AFK-a", tekst: "Tko mora ići, kaže na voiceu prije nego se odlogira usred grupe." }
+    ]
+  },
+
+  // Tips & tricks: poredano po levelu, to je ujedno put do 60
   savjeti: [
-    { broj: "40", jedinica: "lvl", naslov: "Prvi mount", tekst: "Apprentice Riding 100g + mount 20g, 60% brže. Na Honored s Hordom 10% jeftinije. Orc: Orgrimmar, Troll: Sen'jin Village, Undead: Brill. Paladin mount dobiva kroz class quest." },
-    { broj: "60", jedinica: "lvl", naslov: "Brzi mount", tekst: "Journeyman Riding 1000g + mount 200g, 100% brže. Leteći mountovi ne postoje i neće ih biti." },
-    { broj: "10", jedinica: "g",   naslov: "Dual spec", tekst: "Od levela 40 kod class trainera. Spec mijenjaš kad hoćeš izvan borbe, respec s vremenom pada na 1g. Dex i Niksa mogu imati i DPS spec." },
-    { broj: "5",  jedinica: "lvl", naslov: "Camping", tekst: "Quest chain \"The Great Outdoors\" otključava kamp. Kamp daje buffove; profesijski kampovi od skilla 20." },
+    { broj: "1.60", jedinica: "", naslov: "Addoni prije starta", tekst: "Classic addoni ne rade. Uzmi verzije s oznakom Forever/1.60.1: Questie, Leatrix Plus, Bagnon, Auctionator, TomTom. WeakAuras zasad nema." },
+    { broj: "2", jedinica: "lvl", naslov: "Trener na parnim levelima", tekst: "Novi spellovi dolaze svaki parni level. Novac čuvaj za trenera, gear iz vendora ne kupuj." },
+    { broj: "5", jedinica: "lvl", naslov: "Camping", tekst: "Quest chain \"The Great Outdoors\" otključava kamp. Kamp daje buffove; profesijski kampovi od skilla 20." },
     { broj: "14", jedinica: "lvl", naslov: "Cozy Sleeping Bag", tekst: "Scavenger hunt u Barrensu (ili Westfallu) daje vreću za spavanje: rested XP i kad si offline u divljini." },
-    { broj: "9.12.", jedinica: "",  naslov: "Prvi raidovi", tekst: "Barrow Deeps (10), Hyjal Summit (20) i Onyxia (40) otvaraju se 9. 12. 2026. Za Barrow Deeps trebamo još petoricu." },
-    { broj: "1.60", jedinica: "",  naslov: "Addoni", tekst: "Classic addoni ne rade. Uzmi verzije s oznakom Forever/1.60.1: Questie, Leatrix Plus, Bagnon, Auctionator, TomTom. WeakAuras zasad nema." },
-    { broj: "42,34", jedinica: "", naslov: "Loot crates", tekst: "Durotar Supply and Logistics, zapadno od Crossroadsa u Barrensu: sanduke iz profesija mijenjaš za rep i Merchant's Favor." }
-  ],
-
-  // gotovo: true kad ekipa prođe taj korak (ručno, ne po datumu)
-  timeline: [
-    { kad: "27. 10. – 3. 11.", od: "2026-10-27T00:00:00+01:00", naslov: "Rezervacija imena", opis: "Svatko zauzme ime svog lika. Poslije 3. 11. u 23:59 ide tko prvi, njegov.", gotovo: false },
-    { kad: "4. 11. u ponoć", od: "2026-11-05T00:00:00+01:00", naslov: "Launch", opis: "Serveri se otvaraju u 15:00 PST, kod nas ponoć. Svi u Durotar, okupljanje u Razor Hillu.", gotovo: false },
-    { kad: "lvl 13 – 25", od: null, naslov: "Prvi dungeoni", opis: "Ragefire Chasm ispod Orgrimmara (13–19), pa Wailing Caverns u Barrensu (19–25). Prvi put svih pet skupa.", gotovo: false },
-    { kad: "lvl 60", od: null, naslov: "Level 60", opis: "Cap je trajno 60. Odatle kreću pravi dungeoni i raid.", gotovo: false }
-  ],
-
-  checklist: [
-    { id: "ime",      naslov: "Rezerviraj ime lika",   opis: "Rok 3. 11. u 23:59, najviše tri lika po računu. Ime točno kao u rosteru." },
-    { id: "ruleset",  naslov: "Svi na istom rulesetu", opis: "Normal, PvP, RP ili RP-PvP: svaki ima jedan mega-realm. Ako netko promaši, ne vidimo se u igri." },
-    { id: "igra",     naslov: "Skini Forever klijent", opis: "Battle.net, World of Warcraft: Forever. Skini dan ranije, ne u ponoć kad svi krenu." },
-    { id: "addoni",   naslov: "Addoni za 1.60.1",      opis: "Questie, Leatrix Plus, Bagnon, Auctionator. Classic verzije ne rade, traži oznaku Forever." },
-    { id: "discord",  naslov: "Discord voice",         opis: "Mikrofon proradi prije launcha, ne usred prvog pulla u Ragefireu." }
+    { broj: "40", jedinica: "lvl", naslov: "Prvi mount", tekst: "Apprentice Riding 100g + mount 20g, 60% brže. Na Honored s Hordom 10% jeftinije. Orc: Orgrimmar, Troll: Sen'jin Village, Undead: Brill. Paladin mount dobiva kroz class quest." },
+    { broj: "40", jedinica: "lvl", naslov: "Dual spec", tekst: "10g kod class trenera. Spec mijenjaš kad hoćeš izvan borbe, respec s vremenom pada na 1g. Dex i Niksa mogu imati i DPS spec." },
+    { broj: "60", jedinica: "lvl", naslov: "Cap i brzi mount", tekst: "Cap je trajno 60. Journeyman Riding 1000g + mount 200g, 100% brže. Letećih mountova nema i neće ih biti." },
+    { broj: "9.12.", jedinica: "", naslov: "Prvi raidovi", tekst: "Barrow Deeps (10), Hyjal Summit (20) i Onyxia (40). Za Barrow Deeps trebamo još petoricu." }
   ]
 };

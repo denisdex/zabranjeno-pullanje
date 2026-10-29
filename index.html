@@ -412,37 +412,25 @@ body.shake main, body.shake .top { animation: shake .55s cubic-bezier(.36, .07, 
   40%, 60% { transform: translate3d(9px, -3px, 0); }
 }
 
-/* ---------- timeline ---------- */
-.tl { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; position: relative; }
-.tl li { position: relative; padding: 0 0 36px 34px; min-width: 0; }
-.tl li::before { content: ""; position: absolute; left: 6px; top: 8px; bottom: -8px; width: 1px; background: var(--line); }
-.tl li:last-child::before { display: none; }
-.tl .node {
-  position: absolute; left: 0; top: 4px; width: 13px; height: 13px; transform: rotate(45deg);
-  border: 1px solid var(--dust); background: var(--night);
-}
-.tl li.done .node { background: var(--dust); }
-.tl li.now .node { background: var(--ember); border-color: var(--ember); box-shadow: 0 0 0 5px rgba(255, 122, 46, .16), 0 0 18px rgba(255, 122, 46, .6); }
-.tl .when { color: var(--dust); display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
-.tl .chip { padding: 3px 7px 2px; border: 1px solid currentColor; font-size: .625rem; }
-.tl li.now .chip { color: var(--ember); }
-.tl li.done .chip { color: var(--dust); }
-.tl h3 { margin: 10px 0 6px; font: 800 clamp(1.9rem, 5vw, 2.5rem)/.9 var(--f-display); text-transform: uppercase; }
-.tl p { margin: 0; color: var(--dust); max-width: 30rem; }
-@media (min-width: 900px) {
-  .tl { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; }
-  .tl li { padding: 34px 0 0; }
-  .tl li::before { left: 0; right: -28px; top: 6px; bottom: auto; width: auto; height: 1px; }
-  .tl li:last-child::before { display: block; right: 0; background: linear-gradient(90deg, var(--line), transparent); }
-  .tl .node { top: 0; }
-}
-
-/* ---------- checklist ---------- */
+/* ---------- prva noć ---------- */
 .night { display: grid; gap: 48px; }
-@media (min-width: 960px) { .night { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 64px; align-items: start; } }
+@media (min-width: 960px) {
+  .night { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 64px; align-items: start; }
+  .rules { position: sticky; top: 32px; }
+}
 .route { list-style: none; margin: 0; padding: 0; display: grid; }
 .route li { display: grid; grid-template-columns: 3.2rem minmax(0, 1fr); gap: 4px 18px; padding: 22px 0; border-top: 1px solid var(--line); }
 .route li:last-child { border-bottom: 1px solid var(--line); }
+.rules { display: grid; gap: 28px; align-content: start; }
+.goal { padding: 24px 24px 26px; background: var(--blood); clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px); display: grid; gap: 8px; }
+.goal .lab { color: rgba(255, 236, 214, .8); }
+.goal b { font: 900 clamp(2rem, 5vw, 2.8rem)/.9 var(--f-display); text-transform: uppercase; }
+.rules h3.lab { margin: 0 0 4px; color: var(--ember); }
+.pravila { list-style: none; margin: 0; padding: 0; counter-reset: pr; display: grid; }
+.pravila li { counter-increment: pr; display: grid; grid-template-columns: 2.4rem minmax(0, 1fr); gap: 2px 14px; padding: 16px 0; border-top: 1px solid var(--line); }
+.pravila li::before { content: counter(pr, upper-roman); grid-row: span 2; font: 800 1.4rem/1 var(--f-display); color: var(--blood); }
+.pravila b { font: 800 1.3rem/1 var(--f-display); text-transform: uppercase; }
+.pravila span { color: var(--dust); font-size: .9375rem; }
 .route .no { grid-row: span 3; font: 900 3.2rem/.8 var(--f-display); color: var(--blood); }
 .route .when { color: var(--ember); }
 .route h3 { margin: 2px 0 4px; font: 800 clamp(1.7rem, 4.6vw, 2.2rem)/.95 var(--f-display); text-transform: uppercase; }
@@ -453,11 +441,6 @@ body.shake main, body.shake .top { animation: shake .55s cubic-bezier(.36, .07, 
 .starts .z { color: var(--dust); }
 .starts .who { display: flex; flex-wrap: wrap; gap: 6px; }
 .starts .who span { font: 800 1.05rem/1 var(--f-display); text-transform: uppercase; color: var(--c); padding: 6px 9px 5px; background: color-mix(in srgb, var(--c) 10%, transparent); outline: 1px solid color-mix(in srgb, var(--c) 35%, transparent); outline-offset: -1px; }
-.check-head { display: flex; justify-content: space-between; align-items: end; gap: 16px; margin-bottom: 14px; }
-.check-head .lab { color: var(--ember); }
-.check-head .big { font: 900 3.6rem/.8 var(--f-display); font-variant-numeric: tabular-nums; }
-.check-head .big small { font-size: .45em; color: var(--dust); }
-.night .note { margin: 14px 0 0; color: var(--dust); }
 
 /* ---------- patch notes ---------- */
 .news { display: grid; gap: 36px; }
@@ -478,24 +461,17 @@ body.shake main, body.shake .top { animation: shake .55s cubic-bezier(.36, .07, 
   content: ""; position: absolute; right: -5px; top: 10px; width: 9px; height: 9px; transform: rotate(45deg);
   background: var(--night); border: 1px solid var(--ember);
 }
-.log li.buduce .dt::after { border-color: var(--dust); }
 .log .dt b { display: block; font: 900 2.6rem/.85 var(--f-display); font-variant-numeric: tabular-nums; }
 .log .dt span { color: var(--dust); }
-.log .vr { display: inline-block; padding: 3px 7px 2px; border: 1px solid currentColor; color: var(--ember); margin-bottom: 10px; }
-.log li.buduce .vr { color: var(--dust); }
-.log h3 { margin: 0 0 12px; font: 800 clamp(1.6rem, 4vw, 2.1rem)/.95 var(--f-display); text-transform: uppercase; }
+.log h3 { margin: 2px 0 12px; font: 800 clamp(1.6rem, 4vw, 2.1rem)/.95 var(--f-display); text-transform: uppercase; }
 .log ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
-.log ul li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 16px; align-items: baseline; padding-bottom: 10px; border-bottom: 1px dashed var(--line); color: var(--bone); }
+.log ul li { padding-bottom: 10px; border-bottom: 1px dashed var(--line); color: var(--bone); }
 .log ul li:last-child { border-bottom: 0; }
-.log .za { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
-.log .za span { font: 500 .5625rem/1 var(--f-mono); letter-spacing: .1em; text-transform: uppercase; padding: 4px 6px 3px; color: var(--c, var(--dust)); outline: 1px solid color-mix(in srgb, var(--c, var(--dust)) 45%, transparent); outline-offset: -1px; }
 @media (max-width: 640px) {
   .log::before { left: 3.4rem; }
   .log > li { grid-template-columns: 3.4rem minmax(0, 1fr); gap: 0 18px; }
   .log .dt { padding-right: 14px; }
   .log .dt b { font-size: 2rem; }
-  .log ul li { grid-template-columns: minmax(0, 1fr); }
-  .log .za { justify-content: flex-start; }
 }
 
 /* ---------- znaj prije 60: traka s drugom podlogom ---------- */
@@ -516,27 +492,6 @@ body.shake main, body.shake .top { animation: shake .55s cubic-bezier(.36, .07, 
 .tip h3 { margin: 4px 0 0; color: var(--ember); }
 .tip p { margin: 0; color: var(--dust); font-size: .9375rem; }
 
-.checks { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
-.checks li { border-bottom: 1px solid var(--line); }
-.checks input { position: absolute; opacity: 0; width: 1px; height: 1px; }
-.checks label {
-  display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 4px 16px; padding: 20px 4px; cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-}
-.checks .box {
-  grid-row: span 2; width: 26px; height: 26px; border: 1.5px solid var(--dust); position: relative; margin-top: 2px;
-  transition: background .25s, border-color .25s;
-}
-.checks .box svg { position: absolute; inset: 3px; width: calc(100% - 6px); height: calc(100% - 6px); }
-.checks .box path { fill: none; stroke: var(--night); stroke-width: 3; stroke-dasharray: 24; stroke-dashoffset: 24; transition: stroke-dashoffset .3s .05s var(--ease); }
-.checks .t { font: 800 1.6rem/1.05 var(--f-display); text-transform: uppercase; transition: color .25s; }
-.checks .d { color: var(--dust); font-size: .9375rem; }
-.checks input:checked + label .box { background: var(--ember); border-color: var(--ember); }
-.checks input:checked + label .box path { stroke-dashoffset: 0; }
-.checks input:checked + label .t { color: var(--dust); text-decoration: line-through; text-decoration-thickness: 2px; text-decoration-color: var(--ember); }
-.checks input:focus-visible + label { outline: 2px solid var(--ember); outline-offset: -2px; }
-.checks label:hover .box { border-color: var(--bone); }
-
 /* ---------- footer ---------- */
 footer .wrap {
   display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px;
@@ -546,7 +501,7 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .plate, .gauge i, .checks .box, .checks .box path { transition: none; }
+  .plate, .gauge i { transition: none; }
   .dg.go .fu, .dg.go .fl { animation: none; }
   .portrait img { transition: none; }
   .fig, .eye, .fog, .ph svg, .hero-main h1, .ognjiste { animation: none; }
@@ -620,7 +575,7 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
       <div class="news-head">
         <p class="kicker mono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="currentColor" opacity=".25"/><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Glasnik iz Orgrimmara</p>
         <h2>Patch notes</h2>
-        <p>Što Blizzard mijenja u Foreveru, skraćeno na ono što pogađa naše klase i rase. Najnovije gore.</p>
+        <p>Blizzardove promjene u Foreveru, prevedene. Najnovije gore, provjerava se svaki dan.</p>
         <p class="mono"><a id="izvorNovosti" href="#" target="_blank" rel="noopener">Blizzardove development notes</a></p>
       </div>
       <ol class="log" id="log"></ol>
@@ -636,11 +591,10 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
       </div>
       <div class="night">
         <ol class="route" id="route"></ol>
-        <div data-reveal>
-          <div class="check-head"><span class="lab mono">Prije ponoći</span><div class="big" id="checkCount">0<small>/5</small></div></div>
-          <ul class="checks" id="checks"></ul>
-          <p class="note mono" id="checkNote"></p>
-        </div>
+        <aside class="rules" data-reveal>
+          <div class="goal"><span class="lab mono">Cilj prve noći</span><b id="cilj"></b></div>
+          <div><h3 class="lab mono">Pravila guilda</h3><ol class="pravila" id="pravila"></ol></div>
+        </aside>
       </div>
     </div>
   </section>
@@ -648,22 +602,11 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
   <section class="sec band" id="savjeti">
     <div class="wrap">
       <div class="sec-head">
-        <p class="kicker mono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="currentColor" opacity=".25"/><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Što stari orkovi znaju</p>
-        <h2>Znaj prije 60</h2>
-        <span class="meta mono">Forever 1.60.1</span>
+        <p class="kicker mono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="currentColor" opacity=".25"/><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Put do 60</p>
+        <h2>Tips &amp; tricks</h2>
+        <span class="meta mono">Poredano po levelu · cap trajno <b>60</b></span>
       </div>
       <div class="tips" id="tips"></div>
-    </div>
-  </section>
-
-  <section class="sec" id="put">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="kicker mono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="currentColor" opacity=".25"/><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Durotar zove</p>
-        <h2>Put do 60</h2>
-        <span class="meta mono">Level cap trajno <b>60</b></span>
-      </div>
-      <ol class="tl" id="tl"></ol>
     </div>
   </section>
 
@@ -815,8 +758,9 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
     }, { passive: true });
   }
 
-  /* ---------- prva noć: ruta po rasama ---------- */
+  /* ---------- prva noć: plan po fazama ---------- */
   (function () {
+    var N = D.prvaNoc || {};
     var START = { Orc: "Durotar · Valley of Trials", Troll: "Durotar · Valley of Trials", Undead: "Tirisfal Glades · Deathknell" };
     var grupe = {};
     igraci.forEach(function (p) { var z = START[p.rasa] || p.rasa; (grupe[z] = grupe[z] || []).push(p); });
@@ -825,37 +769,31 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
         return '<span style="--c:' + BOJE[p.klasa] + '">' + esc(p.lik) + "</span>";
       }).join("") + "</div></div>";
     }).join("") + "</div>";
-    var undead = igraci.filter(function (p) { return p.rasa === "Undead"; }).map(function (p) { return p.lik; });
-    var koraci = [
-      { kad: "00:00", h: "Svatko na svom startu", t: "Rase kreću iz različitih zona. Prvih desetak levela svatko gura svoj start, voice je otvoren.", extra: startHtml },
-      { kad: "oko lvl 10", h: "Zeppelin u Durotar", t: (undead.length ? "<b>" + undead.map(esc).join("</b> i <b>") + "</b> iz Tirisfala uzimaju zeppelin s tornja pokraj Undercityja do Orgrimmara. " : "") + "Ostali ih čekaju u Razor Hillu, pa svi skupa niz cestu u Barrens." },
-      { kad: "lvl 13+", h: "Prvi pull skupa", t: "Baza je <b>Crossroads</b>. Prvi dungeon je <b>Ragefire Chasm</b> (13–19) ispod Orgrimmara, a za Undead stranu Forever ima novi <b>Ruins of Lordaeron</b> (15–22) ispod Undercityja." }
-    ];
-    $("route").innerHTML = koraci.map(function (k, i) {
-      return '<li data-reveal><span class="no">' + (i + 1) + '</span><span class="when mono">' + k.kad + "</span><h3>" + k.h + "</h3><p>" + k.t + "</p>" + (k.extra ? "<div>" + k.extra + "</div>" : "") + "</li>";
+    $("route").innerHTML = (N.koraci || []).map(function (k, i) {
+      return '<li data-reveal><span class="no">' + (i + 1) + '</span><span class="when mono">' + esc(k.kad) + "</span><h3>" + esc(k.naslov) + "</h3><p>" + esc(k.tekst) + "</p>" +
+        (k.startovi ? '<div style="grid-column:2">' + startHtml + "</div>" : "") + "</li>";
     }).join("");
-    // treći stupac (extra) ide ispod teksta
-    Array.prototype.forEach.call($("route").querySelectorAll("li > div"), function (d) { d.style.gridColumn = "2"; });
+    $("cilj").textContent = N.cilj || "";
+    $("pravila").innerHTML = (N.pravila || []).map(function (r) {
+      return "<li><b>" + esc(r.naslov) + "</b><span>" + esc(r.tekst) + "</span></li>";
+    }).join("");
   })();
 
   /* ---------- patch notes ---------- */
   (function () {
     var MJ = ["sij", "velj", "ožu", "tra", "svi", "lip", "srp", "kol", "ruj", "lis", "stu", "pro"];
-    var danas = Date.now();
     $("izvorNovosti").href = D.izvorNovosti || "#";
-    $("log").innerHTML = (D.novosti || []).map(function (n) {
+    var lista = (D.novosti || []).slice().sort(function (a, b) { return a.datum < b.datum ? 1 : -1; });
+    $("log").innerHTML = lista.map(function (n) {
       var d = new Date(n.datum + "T12:00:00");
-      var buduce = d.getTime() > danas;
-      return '<li class="' + (buduce ? "buduce" : "") + '" data-reveal><div class="dt"><b>' + d.getDate() + '</b><span class="mono">' + MJ[d.getMonth()] + " " + d.getFullYear() + "</span></div>" +
-        '<div><span class="vr mono">' + esc(n.vrsta) + "</span><h3>" + esc(n.naslov) + "</h3><ul>" + n.stavke.map(function (st) {
-          return "<li><span>" + esc(st.tekst) + '</span><span class="za">' + (st.za || []).map(function (z) {
-            return "<span" + (BOJE[z] ? ' style="--c:' + BOJE[z] + '"' : "") + ">" + esc(z) + "</span>";
-          }).join("") + "</span></li>";
+      return '<li data-reveal><div class="dt"><b>' + d.getDate() + '</b><span class="mono">' + MJ[d.getMonth()] + " " + d.getFullYear() + "</span></div>" +
+        "<div><h3>" + esc(n.naslov || "") + "</h3><ul>" + n.stavke.map(function (st) {
+          return "<li>" + esc(typeof st === "string" ? st : st.tekst) + "</li>";
         }).join("") + "</ul></div></li>";
     }).join("");
   })();
 
-  /* ---------- znaj prije 60 ---------- */
+  /* ---------- tips & tricks ---------- */
   $("tips").innerHTML = (D.savjeti || []).map(function (t) {
     return '<div class="tip" data-reveal><div class="num">' + esc(t.broj) + (t.jedinica ? "<small>" + esc(t.jedinica) + "</small>" : "") +
       '</div><h3 class="mono">' + esc(t.naslov) + "</h3><p>" + esc(t.tekst) + "</p></div>";
@@ -945,45 +883,6 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
       if (i === kod.length) { i = 0; zaHordu(); }
     });
   })();
-
-  /* ---------- timeline ---------- */
-  var now0 = Date.now();
-  var t = D.timeline;
-  $("tl").innerHTML = t.map(function (s, i) {
-    var od = s.od ? Date.parse(s.od) : null;
-    var next = t[i + 1] && t[i + 1].od ? Date.parse(t[i + 1].od) : null;
-    var st = "next", chip = "slijedi";
-    if (s.gotovo || (od && next && now0 >= next)) { st = "done"; chip = "gotovo"; }
-    else if (od && now0 >= od) { st = "now"; chip = i === 0 ? "u tijeku" : "sada"; }
-    return '<li class="' + st + '" data-reveal><span class="node"></span>' +
-      '<div class="when mono"><span>' + esc(s.kad) + '</span><span class="chip">' + chip + "</span></div>" +
-      "<h3>" + esc(s.naslov) + "</h3><p>" + esc(s.opis) + "</p></li>";
-  }).join("");
-
-  /* ---------- checklist ---------- */
-  var KEY = "zh-checklist-v1", stanje = {};
-  try { stanje = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) { stanje = {}; }
-  $("checks").innerHTML = D.checklist.map(function (c) {
-    var id = "chk-" + c.id;
-    return '<li data-reveal><input type="checkbox" id="' + id + '" data-id="' + esc(c.id) + '"' + (stanje[c.id] ? " checked" : "") + ">" +
-      '<label for="' + id + '"><span class="box"><svg viewBox="0 0 20 20"><path d="M3 10.5l4.5 4.5L17 5"/></svg></span>' +
-      '<span class="t">' + esc(c.naslov) + '</span><span class="d">' + esc(c.opis) + "</span></label></li>";
-  }).join("");
-  function brojac() {
-    var n = D.checklist.filter(function (c) { return stanje[c.id]; }).length;
-    $("checkCount").innerHTML = n + "<small>/" + D.checklist.length + "</small>";
-    $("checkNote").textContent = n === D.checklist.length
-      ? "Sve spremno. Pullanje i dalje zabranjeno."
-      : "Kvačice se pamte na ovom uređaju. Odradi sve prije ponoći pa na launchu samo uđeš.";
-  }
-  $("checks").addEventListener("change", function (e) {
-    var id = e.target.getAttribute("data-id");
-    if (!id) return;
-    stanje[id] = e.target.checked;
-    try { localStorage.setItem(KEY, JSON.stringify(stanje)); } catch (err) {}
-    brojac();
-  });
-  brojac();
 
   var mj = ["siječnja", "veljače", "ožujka", "travnja", "svibnja", "lipnja", "srpnja", "kolovoza", "rujna", "listopada", "studenoga", "prosinca"];
   var au = new Date(D.azurirano + "T12:00:00");
