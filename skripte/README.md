@@ -3,6 +3,9 @@
 Web se sam puni iz `data/*.json`. Puni ih GitHub Actions u repou `denisdex/zabranjeno-pullanje`,
 bez ikakvih API ključeva i tajni.
 
+> Stanje 2026-10-29: workflow datoteka je spremna lokalno, ali GitHub ju odbija dok `gh` prijava nema dozvolu
+> `workflow`. Jednom pokreni `gh auth refresh -h github.com -s workflow`, potvrdi u pregledniku, pa push.
+
 ## Kako radi
 
 - `.github/workflows/podaci.yml` se pokreće svaki sat (i ručno: Actions → Podaci → Run workflow, ili `gh workflow run podaci.yml`).
