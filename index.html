@@ -39,7 +39,8 @@
   --f-body: "Archivo", "Helvetica Neue", Arial, sans-serif;
   --f-mono: "Martian Mono", ui-monospace, "SF Mono", Menlo, monospace;
 
-  --max: 1880px;
+  --max: none;
+  --g: max(16px, env(safe-area-inset-left, 0px)); /* bočni rub sadržaja; na desktopu 10 % sa svake strane */
   --gut: max(16px, env(safe-area-inset-left, 0px));
   --gut-r: max(16px, env(safe-area-inset-right, 0px));
   --ease: cubic-bezier(.2, .7, .1, 1);
@@ -87,7 +88,8 @@ footer .wrap { position: relative; z-index: 1; }
 }
 @media (min-width: 900px) {
   /* desktop: sadržaj na ~92 % širine ekrana */
-  .wrap { padding-left: max(4vw, env(safe-area-inset-left, 0px)); padding-right: max(4vw, env(safe-area-inset-right, 0px)); }
+  :root { --g: max(10vw, env(safe-area-inset-left, 0px)); }
+  .wrap { padding-left: var(--g); padding-right: max(10vw, env(safe-area-inset-right, 0px)); }
 }
 
 .mono { font-family: var(--f-mono); font-size: .6875rem; letter-spacing: .08em; text-transform: uppercase; }
@@ -654,8 +656,10 @@ a.sl:hover b { text-decoration: underline; }
 /* trake su iste širine kao ostale sekcije; kartice fiksne širine, jednake visine, snap po kartici */
 .hs-track {
   --n: 1.2;
+  /* traka viri do rubova ekrana; prva kartica počinje na rubu sadržaja */
   position: relative; display: flex; align-items: stretch; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain;
   scrollbar-width: none; padding-bottom: 4px; cursor: grab;
+  margin-inline: calc(var(--g) * -1); padding-inline: var(--g); scroll-padding-inline: var(--g);
 }
 .hs-track::-webkit-scrollbar { display: none; }
 .hs-track.vuce { cursor: grabbing; scroll-snap-type: none; }
@@ -665,9 +669,9 @@ a.sl:hover b { text-decoration: underline; }
 @media (min-width: 1200px) { .hs-track { --n: 4; } }
 @media (min-width: 1600px) { .hs-track { --n: 5; } }
 /* fade na rubovima kad ima još sadržaja */
-.hs.fl .hs-track { -webkit-mask-image: linear-gradient(90deg, transparent, #000 48px); mask-image: linear-gradient(90deg, transparent, #000 48px); }
-.hs.fr .hs-track { -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 48px), transparent); mask-image: linear-gradient(90deg, #000 calc(100% - 48px), transparent); }
-.hs.fl.fr .hs-track { -webkit-mask-image: linear-gradient(90deg, transparent, #000 48px, #000 calc(100% - 48px), transparent); mask-image: linear-gradient(90deg, transparent, #000 48px, #000 calc(100% - 48px), transparent); }
+.hs.fl .hs-track { -webkit-mask-image: linear-gradient(90deg, transparent, #000 var(--g)); mask-image: linear-gradient(90deg, transparent, #000 var(--g)); }
+.hs.fr .hs-track { -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 64px), transparent); mask-image: linear-gradient(90deg, #000 calc(100% - 64px), transparent); }
+.hs.fl.fr .hs-track { -webkit-mask-image: linear-gradient(90deg, transparent, #000 var(--g), #000 calc(100% - 64px), transparent); mask-image: linear-gradient(90deg, transparent, #000 var(--g), #000 calc(100% - 64px), transparent); }
 .hs-ctl { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 14px; }
 .hs-ctl .str { display: flex; gap: 6px; }
 .hs-b {
@@ -1068,12 +1072,8 @@ body.shake main, body.shake .top { animation: shake .55s cubic-bezier(.36, .07, 
 .night { display: grid; gap: 48px; }
 .night { gap: 20px; }
 .hs-track.route { display: flex; }
-.route > li { padding: 18px; background: rgba(21, 16, 14, .9); border-top: 2px solid var(--line); border-bottom: 0 !important; align-content: start; }
 .route > li:first-child { border-top-color: var(--ember); }
 .night .goal { justify-self: start; }
-.route { list-style: none; margin: 0; padding: 0; display: grid; }
-.route li { display: grid; grid-template-columns: 3.2rem minmax(0, 1fr); gap: 4px 18px; padding: 14px 0; border-top: 1px solid var(--line); }
-.route li:last-child { border-bottom: 1px solid var(--line); }
 .rules { display: grid; gap: 28px; align-content: start; }
 .goal { padding: 24px 24px 26px; background: var(--blood); clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px); display: grid; gap: 8px; }
 .goal .lab { color: rgba(255, 236, 214, .8); }
@@ -1084,9 +1084,18 @@ body.shake main, body.shake .top { animation: shake .55s cubic-bezier(.36, .07, 
 .pravila li::before { content: counter(pr, upper-roman); grid-row: span 2; font: 800 1.4rem/1 var(--f-display); color: var(--blood); }
 .pravila b { font: 800 1.3rem/1 var(--f-display); text-transform: uppercase; }
 .pravila span { color: var(--dust); font-size: .9375rem; }
-.route .no { grid-row: span 3; font: 900 3.2rem/.8 var(--f-display); color: var(--blood); }
-.route .when { color: var(--ember); }
-.route h3 { margin: 2px 0 4px; font: 800 clamp(1.7rem, 4.6vw, 2.2rem)/.95 var(--f-display); text-transform: uppercase; }
+/* kartica faze: broj i vrijeme u istom redu na vrhu, pa naslov, tekst i dodatak; sve kartice iste visine */
+.route { list-style: none; margin-block: 0; padding-top: 0; }
+.route > li {
+  display: grid; grid-template-columns: auto minmax(0, 1fr); grid-template-rows: auto auto 1fr; align-content: start; gap: 10px 14px;
+  padding: 20px 20px 22px; background: rgba(21, 16, 14, .9); border-top: 2px solid var(--line);
+}
+.route > li:first-child { border-top-color: var(--ember); }
+.route .no { grid-column: 1; grid-row: 1; font: 900 2.6rem/.8 var(--f-display); color: var(--blood); font-variant-numeric: tabular-nums; letter-spacing: -.01em; }
+.route .when { grid-column: 2; grid-row: 1; justify-self: end; align-self: center; }
+.route > li > h3, .route > li > p, .route > li > div { grid-column: 1 / -1; }
+.route .when { color: var(--ember); white-space: nowrap; }
+.route h3 { margin: 4px 0 0; font: 800 clamp(1.7rem, 4.6vw, 2.2rem)/.95 var(--f-display); text-transform: uppercase; }
 .route p { margin: 0; color: var(--dust); max-width: 36rem; }
 .route p b { color: var(--bone); font-weight: 600; }
 .starts { display: grid; gap: 12px; margin-top: 8px; }
@@ -2046,8 +2055,8 @@ footer .cry { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; co
       }).join("") + "</div></div>";
     }).join("") + "</div>";
     $("route").innerHTML = (N.koraci || []).map(function (k, i) {
-      return '<li><span class="no">' + (i + 1) + '</span><span class="when mono">' + esc(k.kad) + "</span><h3>" + esc(k.naslov) + "</h3><p>" + esc(k.tekst) + "</p>" +
-        (k.startovi ? '<div style="grid-column:2">' + startHtml + "</div>" : "") + "</li>";
+      return '<li><span class="no">' + String(i + 1).padStart(2, "0") + '</span><span class="when mono">' + esc(k.kad) + "</span><h3>" + esc(k.naslov) + "</h3><p>" + esc(k.tekst) + "</p>" +
+        (k.startovi ? "<div>" + startHtml + "</div>" : "") + "</li>";
     }).join("");
     $("cilj").textContent = N.cilj || "";
     hsPostavi($("routeHs"));
