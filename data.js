@@ -110,7 +110,7 @@ window.HORDE = {
         ],
         biljeske: "Healer grupe. Kad kaže mana, svi stanu."
       } },
-    { igrac: "Karkens", lik: "Janica Frostelic", klasa: "Mage",    rasa: "Troll",  uloga: "Ranged DPS", level: 0, foto: null,
+    { igrac: "Karkens", lik: "Janica Frostelic", klasa: "Mage",    rasa: "Troll",  uloga: "Ranged DPS", level: 0, foto: "assets/likovi/janica-frostelic.jpg",
       gold: 0,
       zadaci: [
         { naziv: "Mining i Herbalism čim izađeš iz start zone", od: 1, do: 10, gotovo: false },
