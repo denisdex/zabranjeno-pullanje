@@ -1,0 +1,37 @@
+name: Podaci
+
+# Svaki sat osvježi data/*.json (vijesti, armory) i commita samo ako se nešto promijenilo.
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: podaci
+  cancel-in-progress: false
+
+jobs:
+  osvjezi:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Osvježi podatke
+        run: python skripte/osvjezi.py
+      - name: Commit ako se nešto promijenilo
+        run: |
+          if [ -n "$(git status --porcelain data)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+            git add data
+            git commit -m "auto: podaci $(date -u '+%Y-%m-%d %H:%M') UTC"
+            git push
+          else
+            echo "Nema promjena, ništa se ne commita."
+          fi
