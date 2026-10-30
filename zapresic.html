@@ -9,7 +9,7 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Big+Shoulders+Display:wght@600;800;900&family=Martian+Mono:wght@400;500&family=Cinzel:wght@700;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Barlow:wght@600;700;800;900&family=Martian+Mono:wght@400;500&family=Cinzel:wght@700;900&display=swap">
 <style>
 /* Cinematic "Zaprešić → Azeroth": WebGL kompozit (noćni grad, izgaranje u Azeroth), DOM natpisi, žeravice na vrhu, zvuk iz Web Audija. Sav tajming je u jednom GSAP timelineu (T). */
 :root {
@@ -19,7 +19,7 @@
   --blood: #c1121f;
   --ember: #ff7a2e;
   --gold: #f2cf5b;
-  --f-display: "Big Shoulders Display", "Arial Narrow", sans-serif;
+  --f-display: "Barlow", "Helvetica Neue", Arial, sans-serif;
   --f-body: "Archivo", "Helvetica Neue", Arial, sans-serif;
   --f-mono: "Martian Mono", ui-monospace, Menlo, monospace;
   --f-title: "Cinzel", Georgia, serif;
@@ -45,7 +45,7 @@ button { font: inherit; color: inherit; }
 
 /* natpisi: riječ po riječ izlazi iza maske */
 .natpis { position: absolute; left: 0; right: 0; bottom: 18vh; z-index: 7; text-align: center; padding: 0 20px;
-  font: 800 clamp(34px, 6.4vw, 84px)/.95 var(--f-display); letter-spacing: .01em; text-transform: uppercase;
+  font: 800 clamp(26px, 5vw, 66px)/.95 var(--f-display); letter-spacing: .03em; text-transform: uppercase;
   text-shadow: 0 2px 30px rgba(0, 0, 0, .8); }
 .natpis .r { display: inline-block; overflow: hidden; vertical-align: bottom; padding: .04em .06em 0; margin: 0 -.02em; }
 .natpis .r > span { display: inline-block; will-change: transform; }
@@ -64,13 +64,13 @@ button { font: inherit; color: inherit; }
   background: radial-gradient(70% 60% at 50% 34%, color-mix(in srgb, var(--c) 45%, transparent), transparent 70%), #120c0a;
   font: 900 clamp(60px, 9vw, 130px)/1 var(--f-title); color: color-mix(in srgb, var(--c) 70%, #fff); opacity: .9; padding-bottom: 30%; }
 .kar .tx { position: absolute; left: 0; right: 0; bottom: 0; z-index: 3; padding: 10px 12px 12px; }
-.kar .ime { font: 900 clamp(16px, 2.1vw, 32px)/.9 var(--f-display); text-transform: uppercase; letter-spacing: .01em; }
+.kar .ime { font: 900 clamp(13px, 1.6vw, 25px)/.95 var(--f-display); text-transform: uppercase; letter-spacing: .03em; }
 .kar .kl { margin-top: 5px; font: 500 clamp(8px, .8vw, 11px)/1.3 var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--c); }
 .kar .lk { font: 400 clamp(8px, .75vw, 10px)/1.3 var(--f-mono); color: var(--dust); letter-spacing: .06em; }
 
 /* lik iz kuće: ime igrača i klasa, 2–3 s */
 .junak { position: absolute; left: 0; right: 0; bottom: 11vh; z-index: 7; text-align: center; padding: 0 20px; opacity: 0; pointer-events: none; }
-.junak .j-ime { font: 900 clamp(44px, 8vw, 116px)/.86 var(--f-display); text-transform: uppercase; letter-spacing: .02em; color: #fff;
+.junak .j-ime { font: 900 clamp(34px, 6.2vw, 90px)/.9 var(--f-display); text-transform: uppercase; letter-spacing: .04em; color: #fff;
   text-shadow: 0 0 34px color-mix(in srgb, var(--c) 75%, transparent), 0 4px 30px rgba(0, 0, 0, .9); }
 .junak .j-kl { display: inline-block; margin-top: 12px; padding-top: 10px; border-top: 2px solid var(--c);
   font: 500 clamp(10px, 1.1vw, 13px)/1.5 var(--f-mono); letter-spacing: .24em; text-transform: uppercase; color: var(--c); text-shadow: 0 2px 12px rgba(0, 0, 0, .9); }
@@ -106,7 +106,7 @@ button { font: inherit; color: inherit; }
 .ulaz.van { opacity: 0; pointer-events: none; }
 .ulaz img { width: 96px; height: 96px; margin: 0 auto 26px; display: block; filter: drop-shadow(0 0 26px rgba(255, 90, 30, .5)); animation: dise 3.2s ease-in-out infinite; }
 @keyframes dise { 50% { transform: scale(1.04); filter: drop-shadow(0 0 40px rgba(255, 110, 40, .75)); } }
-.ulaz h1 { margin: 0; font: 900 clamp(34px, 7vw, 72px)/.92 var(--f-display); text-transform: uppercase; }
+.ulaz h1 { margin: 0; font: 900 clamp(27px, 5.4vw, 56px)/.92 var(--f-display); text-transform: uppercase; letter-spacing: .02em; }
 .ulaz h1 i { font-style: normal; color: var(--ember); }
 .ulaz p { margin: 14px 0 28px; font: 400 11px/1.6 var(--f-mono); letter-spacing: .2em; text-transform: uppercase; color: var(--dust); }
 .ulaz .btn { font-size: 13px; padding: 16px 28px; }
@@ -259,7 +259,7 @@ button { font: inherit; color: inherit; }
     // tabla stanice
     c.fillStyle = "#123a8c"; c.fillRect(692, 746, 216, 46);
     c.strokeStyle = "#e8ecf5"; c.lineWidth = 3; c.strokeRect(697, 751, 206, 36);
-    c.fillStyle = "#f2f4fa"; c.font = "800 30px 'Big Shoulders Display', 'Arial Narrow', sans-serif"; c.textAlign = "center"; c.textBaseline = "middle";
+    c.fillStyle = "#f2f4fa"; c.font = "800 24px 'Barlow', 'Helvetica Neue', sans-serif"; c.textAlign = "center"; c.textBaseline = "middle";
     c.fillText("ZAPREŠIĆ", 800, 770);
     // stupovi rasvjete
     c.fillStyle = "#05060a";
@@ -397,7 +397,7 @@ button { font: inherit; color: inherit; }
         c.fillStyle = "#0a0b10"; c.fillRect(205, 0, 26, ZH);
         c.fillStyle = "#4a1a1a"; c.beginPath(); c.arc(218, 380, 62, 0, 6.283); c.fill();
         c.fillStyle = "#3a3d48"; c.beginPath(); c.arc(218, 380, 48, 0, 6.283); c.fill();
-        c.fillStyle = "#0b0c12"; c.font = "800 54px 'Big Shoulders Display', sans-serif"; c.textAlign = "center"; c.textBaseline = "middle"; c.fillText("40", 218, 382);
+        c.fillStyle = "#0b0c12"; c.font = "800 44px 'Barlow', sans-serif"; c.textAlign = "center"; c.textBaseline = "middle"; c.fillText("40", 218, 382);
         zivica(c, 640, "#050907");
       }
     },
@@ -1105,7 +1105,7 @@ button { font: inherit; color: inherit; }
   // tabla stanice crta se fontom stranice, pa se čeka da stigne (najviše 2 s)
   var krenulo = false;
   function jednom() { if (!krenulo) { krenulo = true; start(); } }
-  if (document.fonts && document.fonts.load) document.fonts.load("800 30px 'Big Shoulders Display'").then(jednom, jednom);
+  if (document.fonts && document.fonts.load) document.fonts.load("800 24px 'Barlow'").then(jednom, jednom);
   setTimeout(jednom, 2000);
 })();
 </script>
