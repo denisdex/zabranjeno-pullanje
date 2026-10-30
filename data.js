@@ -23,7 +23,7 @@ window.HORDE = {
   // intro: fora za svakog igrača u roster revealu (puni intro, prvi ulazak u danu); lagano i na račun igre
   intro: {
     fore: {
-      Pero: "Čuo je „ne pullaj”. Nije slušao.",
+      Pero: "Charge prvo, pitanja poslije.",
       Niksa: "Ako umreš, to je bilo namjerno.",
       Karkens: "Najbrža na stazi. Opet kuha vodu za sve.",
       "Žuga": "Stealth? Ne. Samo kasni.",
@@ -64,7 +64,7 @@ window.HORDE = {
   // { id (jedinstven, ne mijenja se), naziv, opis, datum (GGGG-MM-DD), igraci: tko ga je dobio }
   achievementi: [
     { id: "web-online", naziv: "Web online", opis: "Zabranjeno pullanje ima svoju stranicu.", datum: "2026-10-29", igraci: ["Pero", "Niksa", "Karkens", "Žuga", "Dex"] },
-    { id: "ime-guilda", naziv: "Guild ima ime", opis: "Od sad smo Zabranjeno pullanje. Ime je ujedno i pravilo.", datum: "2026-10-29", igraci: ["Pero", "Niksa", "Karkens", "Žuga", "Dex"] },
+    { id: "ime-guilda", naziv: "Guild ima ime", opis: "Od sad smo Zabranjeno pullanje. Tabard još čeka gold.", datum: "2026-10-29", igraci: ["Pero", "Niksa", "Karkens", "Žuga", "Dex"] },
     { id: "imena-rezervirana", naziv: "Imena rezervirana", opis: "Niksa, Žuga i Dex imaju likove potvrđene u igri: Saman Saulic, Nikola Roguevic, Arsen Deadic.", datum: "2026-10-29", igraci: ["Niksa", "Žuga", "Dex"] }
   ],
 
@@ -235,7 +235,7 @@ window.HORDE = {
         ],
         uloge: "Karkens sheepa kultiste, Žuga sapa humanoide prije pulla. Troggovi dolaze u gomilama: Dex skuplja, ostali čekaju dva-tri udarca.",
         loot: ["Točan loot po bossu: Wowhead vodič ispod."],
-        greske: ["Ne trčati naprijed u lavu: troggovi se lančano pullaju.", "Zabranjeno pullanje vrijedi od prvog koraka."]
+        greske: ["Ne trčati naprijed u lavu: troggovi se lančano pullaju.", "Lava peče i mrtve: obiđi je, ne skraćuj kroz nju."]
       } },
     { ime: "Ruins of Lordaeron",        gdje: "Undercity", slika: "assets/dungeoni/ruins-of-lordaeron.jpg",          od: 15, do: 22, novo: true, odradeno: false,
       vodic: { nepoznato: true, ulaz: "Ispod Undercityja (Tirisfal Glades). Dobar prvi dungeon za Undead stranu ekipe.", napomena: "Forever je ovaj dungeon tek dodao. Bossovi, taktike i loot još nisu javno poznati; vodič dopunjavamo kad se zna." } },
@@ -558,7 +558,7 @@ window.HORDE = {
   upute: [
     { naslov: "Tko pulla", tekst: "Pulla samo Dex. Kad Dexa nema, pulla Pero. Svi ostali čekaju da mob gleda u tanka." },
     { naslov: "Loot", tekst: "Need samo za svoju klasu i glavni spec, za ostalo greed. Quest itemi svima, BoE epici: roll svi. Spor rješava /roll." },
-    { naslov: "Mana je zakon", tekst: "Kad Niksa kaže mana, svi stanu i piju. Bez heala nema pulla." },
+    { naslov: "Mana je zakon", tekst: "Kad Niksa kaže mana, svi stanu i piju. Healer bez mane je samo Orc sa štapom." },
     { naslov: "Logiranje", tekst: "Javi kad ulaziš i izlaziš. Usred dungeona se ne odlazi bez najave; logout u gradu ili s vrećom za rested XP." },
     { naslov: "AH disciplina", tekst: "Sirovine prvo ekipi po tablici ispod, višak na AH. Nikad ispod cijene kod vendora; koristi Auctionator." },
     { naslov: "Banka guilda", tekst: "Jedan bank alt drži zajedničke materijale i gold za recepte. Za mountove štedi svatko sam, ne troši na sitnice." }
@@ -605,11 +605,11 @@ window.HORDE = {
       { kad: "lvl 5–6", naslov: "Profesije i hearthstone", tekst: "Gathering profesije uzmi čim izađeš iz start zone; treneri su u Razor Hillu i Orgrimmaru, odnosno u Brillu i Undercityju. Hearthstone veži u Razor Hill ili Brill." },
       { kad: "lvl 6–10", naslov: "Očisti zonu", tekst: "Durotar i Tirisfal do kraja. Na svaki parni level svratite treneru. Sive stvari prodaj, novac ide na spellove." },
       { kad: "lvl 10", naslov: "Zeppelin i okupljanje", tekst: "Undead strana zeppelinom s tornja kod Undercityja do Orgrimmara. Ekipa se nađe u Orgrimmaru, svatko pogleda class quest kod trenera." },
-      { kad: "lvl 10–13", naslov: "Barrens i prvi pull", tekst: "Svi skupa u Barrens, hearthstone na Crossroads. Kad su svi 13+, Ragefire Chasm ispod Orgrimmara, Dex tanka." }
+      { kad: "lvl 10–13", naslov: "Barrens i prvi dungeon", tekst: "Svi skupa u Barrens, hearthstone na Crossroads. Kad su svi 13+, Ragefire Chasm ispod Orgrimmara, Dex tanka." }
     ],
     pravila: [
-      { naslov: "Zabranjeno pullanje", tekst: "Pulla samo tank. Ostali čekaju da mob gleda u Dexa, tek onda udaraju." },
-      { naslov: "Mana je zakon", tekst: "Kad Niksa kaže mana, svi stanu i piju. Bez heala nema pulla." },
+      { naslov: "Tank ide prvi", tekst: "Pulla samo tank. Ostali čekaju da mob gleda u Dexa, tek onda udaraju." },
+      { naslov: "Mana je zakon", tekst: "Kad Niksa kaže mana, svi stanu i piju. Healer bez mane je samo Orc sa štapom." },
       { naslov: "Need za svoju klasu", tekst: "Need samo ako je stvar za tvoju klasu, za ostalo greed. Spor se rješava s /roll." },
       { naslov: "Javi se prije AFK-a", tekst: "Tko mora ići, kaže na voiceu prije nego se odlogira usred grupe." }
     ]
