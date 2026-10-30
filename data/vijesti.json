@@ -9,8 +9,17 @@
    "url": "https://www.wowhead.com/news/rss/classic"
   }
  ],
- "azurirano": "2026-10-29T23:19:16Z",
+ "azurirano": "2026-10-30T18:38:47Z",
  "stavke": [
+  {
+   "datum": "2026-10-30T17:20:18Z",
+   "naslov": "WoW Weekly Recap - WoW: Forever, Talebound Demo, New Shop Decor Packs",
+   "link": "https://www.wowhead.com/news=383664/wow-weekly-recap-wow-forever-talebound-demo-new-shop-decor-packs",
+   "izvor": "Wowhead",
+   "sazetak": "Blizzard has posted this week's WoW weekly recap, which includes WoW: Forever launching next week, the Talebound Demo starting today, and new shop decor packs. Continue reading »",
+   "oznake": [],
+   "vrsta": "vijest"
+  },
   {
    "datum": "2026-10-29T21:00:50Z",
    "naslov": "World of Warcraft: Forever Goes Live Globally November 4!",
@@ -406,17 +415,6 @@
    "link": "https://www.wowhead.com/news=382857/blizzcon-day-1-roundup-classic-collectors-edition-fixes-and-everything-you-might",
    "izvor": "Wowhead",
    "sazetak": "The first day of Blizzcon is over, and there's so much new info our heads are spinning - so here's everything you might have missed! Continue reading »",
-   "oznake": [
-    "Klase"
-   ],
-   "vrsta": "vijest"
-  },
-  {
-   "datum": "2026-09-08T15:00:00Z",
-   "naslov": "Unfinished Questlines: Could Classic+ Give Certain Stories a Real Ending?",
-   "link": "https://www.wowhead.com/news=382753/unfinished-questlines-could-classic-give-certain-stories-a-real-ending",
-   "izvor": "Wowhead",
-   "sazetak": "With a potential Classic+ announcement looming at BlizzCon, there are many questlines for Vanilla WoW that could finally culminate in a proper manner. Continue reading »",
    "oznake": [
     "Klase"
    ],
