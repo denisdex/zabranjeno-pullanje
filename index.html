@@ -2869,6 +2869,9 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
   var BOJE_KLASA = { Warrior: "#C69B6D", Shaman: "#0070DD", Mage: "#3FC7EB", Rogue: "#FFF468", Paladin: "#F48CBA", Druid: "#FF7C0A", Hunter: "#AAD372", Priest: "#FFFFFF", Warlock: "#8788EE" };
   (D.igraci || []).forEach(function (p) { if (p.boja) BOJE_KLASA[p.klasa] = p.boja; });
   var ULOGE_LIKA = { grupa: "main u grupi", solo: "solo main", alt: "alt u gradu" };
+  // altovi (likovi izvan rostera od 5) su neutralno sivi da se ne miješaju s ekipom
+  var BOJA_ALT = "#8B9099";
+  function bojaLika(l) { return l.roster ? (BOJE_KLASA[l.klasa] || "#ece2d4") : BOJA_ALT; }
   var PROF = null, naProf = [];
   function izvorProfesija() {
     return fetch("profesije.json", { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); });
@@ -3026,14 +3029,14 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       return '<article class="pk ' + vrsta(ime) + '">' +
         '<header>' + ikonaProf(ime) + '<b lang="en"' + ttProf(ime, true) + ">" + esc(ime) + '</b><span class="mono">' + vrsta(ime) + "</span></header>" +
         '<div class="pk-naj"><b>' + naj + '</b><span class="mono">/' + PRAGOVI.max + " najviše u guildu</span></div>" + traka(naj) +
-        '<div class="pk-tko">' + ima.map(function (l) { return '<span style="--c:' + (BOJE_KLASA[l.klasa] || "#ece2d4") + '">' + esc(osoba(l)) + "</span>"; }).join("") + "</div>" +
+        '<div class="pk-tko">' + ima.map(function (l) { return '<span style="--c:' + bojaLika(l) + '">' + esc(osoba(l)) + "</span>"; }).join("") + "</div>" +
         '<div class="pk-leg"><span class="mono">Legacy</span>' + legacy + "</div></article>";
     }).join("");
 
     // heatmap lik × profesija
     $("prHeat").innerHTML = '<table class="heat"><thead><tr><th></th>' + sve.map(function (ime) { return '<th lang="en"' + ttProf(ime) + ">" + ikonaProf(ime) + "<span>" + esc(ime) + "</span></th>"; }).join("") + "</tr></thead><tbody>" +
       L.map(function (l) {
-        return '<tr><th style="--c:' + (BOJE_KLASA[l.klasa] || "#ece2d4") + '"><b>' + esc(l.vlasnik) + '</b><span class="mono">' + esc(l.klasa) + " · " + esc(ULOGE_LIKA[l.uloga] || l.uloga) + "</span></th>" +
+        return '<tr><th style="--c:' + bojaLika(l) + '"><b>' + esc(l.vlasnik) + '</b><span class="mono">' + esc(l.klasa) + " · " + esc(ULOGE_LIKA[l.uloga] || l.uloga) + "</span></th>" +
           sve.map(function (ime) {
             var x = skillOf(l, ime);
             if (!x) return '<td class="nema"></td>';
@@ -3045,7 +3048,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     // po liku
     $("prLikovi").innerHTML = L.map(function (l) {
       var pl = plan40(l), sad = aktivne(l);
-      return '<article class="plk" style="--c:' + (BOJE_KLASA[l.klasa] || "#ece2d4") + '">' +
+      return '<article class="plk" style="--c:' + bojaLika(l) + '">' +
         "<header><b>" + esc(imeLika(l)) + "</b>" + (l.ime ? "" : '<span class="mono nepozn">ime još nije poznato</span>') +
         '<span class="mono">' + esc(l.rasa + " " + l.klasa) + " · lvl " + l.level + " · " + esc(l.vlasnik) + "</span>" +
         '<span class="uloga mono">' + esc(ULOGE_LIKA[l.uloga] || l.uloga) + "</span></header>" +
@@ -3074,7 +3077,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
         var dijelovi = k.split("|"), l = L.filter(function (z) { return z.id === dijelovi[0]; })[0] || {};
         if (!(dijelovi[1] in profIdx)) profIdx[dijelovi[1]] = Object.keys(profIdx).length % crtice.length;
         var pts = serije[k].map(function (h) { return x(h.date).toFixed(1) + "," + y(+h.skill).toFixed(1); }).join(" ");
-        return '<polyline points="' + pts + '" fill="none" stroke="' + (BOJE_KLASA[l.klasa] || "#ece2d4") + '" stroke-width="2" stroke-dasharray="' + crtice[profIdx[dijelovi[1]]] + '"><title>' + esc(osoba(l) + " · " + dijelovi[1]) + "</title></polyline>";
+        return '<polyline points="' + pts + '" fill="none" stroke="' + bojaLika(l) + '" stroke-width="2" stroke-dasharray="' + crtice[profIdx[dijelovi[1]]] + '"><title>' + esc(osoba(l) + " · " + dijelovi[1]) + "</title></polyline>";
       }).join("");
       var mreza = [0].concat(PRAGOVI.rangovi.map(function (r) { return r.do; })).map(function (v) {
         return '<line x1="' + pad.l + '" x2="' + (W - pad.r) + '" y1="' + y(v) + '" y2="' + y(v) + '" class="gl"/><text x="' + (pad.l - 8) + '" y="' + (y(v) + 4) + '" text-anchor="end">' + v + "</text>";
@@ -3117,7 +3120,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
   // manufaktura u Ekonomiji: tokovi iz profesije.json, tko skuplja i tko izrađuje se izračuna iz likova
   function renderLanci() {
     var STR = '<span class="str" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"/></svg></span>';
-    function chip(l) { return '<span style="--c:' + (BOJE_KLASA[l.klasa] || "#ece2d4") + '">' + esc(osoba(l)) + "</span>"; }
+    function chip(l) { return '<span style="--c:' + bojaLika(l) + '">' + esc(osoba(l)) + "</span>"; }
     function sa(ime) { return PROF.likovi.filter(function (l) { return l.primarne.some(function (x) { return x.ime === ime; }); }); }
     $("lanci").innerHTML = PROF.tokovi.map(function (f) {
       var sk = f.from === "drop" ? '<span>Svi</span>' : sa(f.from).map(chip).join("");
@@ -3486,7 +3489,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     var ULOGE = [["sve", "Sve uloge"], ["tank", "Tank"], ["heal", "Heal"], ["dps", "DPS"], ["opcenito", "Općenito"]];
     var PORETCI = [["korisno", "Najkorisnije"], ["level", "Level (od nižeg)"], ["klasa", "Klasa"], ["status", "Status (provjereno prvo)"]];
     var REDKL = ["opcenito", "shaman", "mage", "warrior", "rogue", "paladin", "druid", "alt-mage"];
-    var BOJA = { opcenito: "#ece2d4", shaman: BOJE.Shaman, mage: BOJE.Mage, warrior: BOJE.Warrior, rogue: BOJE.Rogue, paladin: BOJE.Paladin, druid: "#FF7C0A", "alt-mage": BOJE.Mage };
+    var BOJA = { opcenito: "#ece2d4", shaman: BOJE.Shaman, mage: BOJE.Mage, warrior: BOJE.Warrior, rogue: BOJE.Rogue, paladin: BOJE.Paladin, druid: "#8B9099", "alt-mage": "#8B9099" };
     var IME_KL = { opcenito: "Općenito", shaman: "Shaman", mage: "Mage", warrior: "Warrior", rogue: "Rogue", paladin: "Paladin", druid: "Druid · Niksin alt", "alt-mage": "Mage · Niksin alt" };
     var IME_UL = { tank: "Tank", heal: "Heal", dps: "DPS", opcenito: "Općenito" };
     var STATUS = { "provjereno za Forever": "ok", "iz Classica, testirati": "test" };
