@@ -64,13 +64,13 @@ button { font: inherit; color: inherit; }
   background: radial-gradient(70% 60% at 50% 34%, color-mix(in srgb, var(--c) 45%, transparent), transparent 70%), #120c0a;
   font: 900 clamp(60px, 9vw, 130px)/1 var(--f-title); color: color-mix(in srgb, var(--c) 70%, #fff); opacity: .9; padding-bottom: 30%; }
 .kar .tx { position: absolute; left: 0; right: 0; bottom: 0; z-index: 3; padding: 10px 12px 12px; }
-.kar .ime { font: 900 clamp(22px, 3vw, 44px)/.9 var(--f-display); text-transform: uppercase; letter-spacing: .01em; }
+.kar .ime { font: 900 clamp(16px, 2.1vw, 32px)/.9 var(--f-display); text-transform: uppercase; letter-spacing: .01em; }
 .kar .kl { margin-top: 5px; font: 500 clamp(8px, .8vw, 11px)/1.3 var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--c); }
 .kar .lk { font: 400 clamp(8px, .75vw, 10px)/1.3 var(--f-mono); color: var(--dust); letter-spacing: .06em; }
 
 /* lik iz kuće: ime igrača i klasa, 2–3 s */
 .junak { position: absolute; left: 0; right: 0; bottom: 11vh; z-index: 7; text-align: center; padding: 0 20px; opacity: 0; pointer-events: none; }
-.junak .j-ime { font: 900 clamp(56px, 10vw, 140px)/.86 var(--f-display); text-transform: uppercase; letter-spacing: .02em; color: #fff;
+.junak .j-ime { font: 900 clamp(44px, 8vw, 116px)/.86 var(--f-display); text-transform: uppercase; letter-spacing: .02em; color: #fff;
   text-shadow: 0 0 34px color-mix(in srgb, var(--c) 75%, transparent), 0 4px 30px rgba(0, 0, 0, .9); }
 .junak .j-kl { display: inline-block; margin-top: 12px; padding-top: 10px; border-top: 2px solid var(--c);
   font: 500 clamp(10px, 1.1vw, 13px)/1.5 var(--f-mono); letter-spacing: .24em; text-transform: uppercase; color: var(--c); text-shadow: 0 2px 12px rgba(0, 0, 0, .9); }
@@ -936,7 +936,7 @@ button { font: inherit; color: inherit; }
   igraci.slice(0, 5).forEach(function (p) {
     var d = document.createElement("div"); d.className = "kar"; d.style.setProperty("--c", p.boja || BOJE[p.klasa] || "#c1121f");
     d.innerHTML = (p.foto ? '<img src="' + p.foto + '" alt="">' : '<div class="grb">' + (p.klasa || "?").charAt(0) + "</div>") +
-      '<div class="tx"><div class="ime">' + p.igrac + '</div><div class="kl">' + p.rasa + " " + p.klasa + '</div><div class="lk">' + p.lik + "</div></div>";
+      '<div class="tx"><div class="ime">' + (p.lik || p.igrac) + '</div><div class="kl">' + p.rasa + " " + p.klasa + '</div><div class="lk">' + (p.uloga || "") + "</div></div>";
     ekipa.appendChild(d);
   });
   var karte = ekipa.querySelectorAll(".kar");
@@ -945,7 +945,7 @@ button { font: inherit; color: inherit; }
     // boja igrača iz data.js (polje boja) ima prednost pred bojom klase
     if (p.boja) L.boja = p.boja;
     var d = document.createElement("div"); d.className = "junak"; d.style.setProperty("--c", L.boja);
-    d.innerHTML = '<div class="j-ime">' + p.igrac + '</div><div class="j-kl">' + p.rasa + " " + p.klasa + " · <b>" + p.lik + "</b></div>";
+    d.innerHTML = '<div class="j-ime">' + (p.lik || p.igrac) + '</div><div class="j-kl">' + p.rasa + " " + p.klasa + (p.uloga ? " · <b>" + p.uloga + "</b>" : "") + "</div>";
     $("junaci").appendChild(d); return d;
   });
 

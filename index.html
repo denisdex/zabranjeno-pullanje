@@ -1692,7 +1692,7 @@ footer .f-kino:hover { color: var(--bone); }
 .sp-mono { font: 900 clamp(6rem, 20vw, 16rem)/1 var(--f-display); color: var(--c); }
 .sp-txt { position: absolute; top: 50%; left: calc(var(--w) + 1vw); right: 5vw; transform: translateY(-50%); display: grid; gap: 14px; justify-items: start; }
 .sp-ig.desno .sp-txt { left: 5vw; right: calc(var(--w) + 1vw); justify-items: end; text-align: right; }
-.sp-ime { margin: 0; font: 900 clamp(3.4rem, 8.4vw, 10rem)/.8 var(--f-display); text-transform: uppercase; color: var(--bone); text-shadow: 0 0 50px color-mix(in srgb, var(--c) 70%, transparent); }
+.sp-ime { margin: 0; font: 900 clamp(2.8rem, 6.6vw, 7.6rem)/.84 var(--f-display); text-transform: uppercase; color: var(--bone); text-shadow: 0 0 50px color-mix(in srgb, var(--c) 70%, transparent); }
 .sp-lik { margin: 0; color: var(--c); font-size: .75rem; }
 .sp-fora { margin: 0; max-width: 15ch; font: 800 clamp(1.3rem, 2.5vw, 2.7rem)/1 var(--f-display); text-transform: uppercase; color: var(--bone); }
 .sp-fora::before { content: ""; display: block; width: 46px; height: 3px; margin-bottom: 14px; background: var(--c); box-shadow: 0 0 12px var(--c); }
@@ -1704,7 +1704,7 @@ footer .f-kino:hover { color: var(--bone); }
 .sp-tc .ok { width: 100%; aspect-ratio: 3 / 4; overflow: hidden; display: grid; place-items: center; background: var(--iron-2); outline: 2px solid var(--c); outline-offset: -2px; box-shadow: 0 0 26px color-mix(in srgb, var(--c) 45%, transparent); }
 .sp-tc img { width: 100%; height: 100%; object-fit: cover; }
 .sp-tc .sp-mono { font-size: clamp(2rem, 6vw, 5rem); }
-.sp-tc b { font: 800 clamp(.95rem, 2vw, 1.7rem)/1 var(--f-display); text-transform: uppercase; color: var(--bone); }
+.sp-tc b { font: 800 clamp(.7rem, 1.4vw, 1.2rem)/1.05 var(--f-display); text-align: center; text-transform: uppercase; color: var(--bone); }
 .sp-tim .uloge { margin: 0; font: 800 clamp(1.3rem, 3vw, 2.6rem)/1 var(--f-display); text-transform: uppercase; color: var(--bone); }
 .sp-tim .uloge em { font-style: normal; color: var(--ember); margin: 0 .35em; }
 /* montaža službenih kadrova: cinematic trake, Ken Burns, natpis u donjoj trećini */
@@ -1740,7 +1740,7 @@ footer .f-kino:hover { color: var(--bone); }
   .sp-gr svg { width: min(52%, 30vh); }
   .sp-txt, .sp-ig.desno .sp-txt { top: 63%; left: 20px; right: 20px; transform: none; justify-items: center; text-align: center; }
   .sp-fora::before, .sp-ig.desno .sp-fora::before { margin-inline: auto; }
-  .sp-ime { font-size: clamp(3.2rem, 17vw, 5.5rem); }
+  .sp-ime { font-size: clamp(2.4rem, 12vw, 4.2rem); }
   .sp-fora { max-width: 20ch; font-size: clamp(1.15rem, 5.6vw, 1.7rem); }
   .sp-lik { font-size: .5625rem; letter-spacing: .05em; }
   /* kadrovi na mobitelu: vodoravna filmska traka na sredini, natpis ispod */
@@ -2086,8 +2086,8 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
         var k = el("div", "sp-ig" + (i % 2 ? " desno" : ""), ros);
         k.style.setProperty("--c", BOJE[p.klasa] || "#ece2d4");
         k.innerHTML = '<div class="sp-sl">' + velika(p) + '</div><div class="sp-rez"><i></i></div><div class="sp-txt"><p class="sp-ime"></p><p class="sp-lik mono"></p><p class="sp-fora"></p></div>';
-        k.querySelector(".sp-ime").textContent = p.igrac;
-        k.querySelector(".sp-lik").textContent = p.lik + " · " + p.klasa + " · " + p.uloga;
+        k.querySelector(".sp-ime").textContent = p.lik || p.igrac;
+        k.querySelector(".sp-lik").textContent = p.rasa + " · " + p.klasa + " · " + p.uloga;
         k.querySelector(".sp-fora").textContent = fore[p.igrac] || "";
         return k;
       });
@@ -2096,7 +2096,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       tim.innerHTML = '<div class="red">' + (D.igraci || []).map(function (p) {
         return '<div class="sp-tc" style="--c:' + (BOJE[p.klasa] || "#ece2d4") + '"><div class="ok">' + portret(p) + "</div><b></b></div>";
       }).join("") + '</div><p class="uloge">' + uloge.Tank + " Tank<em>/</em>" + uloge.Healer + " Healer<em>/</em>" + uloge.DPS + " DPS</p>";
-      Array.prototype.forEach.call(tim.querySelectorAll(".sp-tc > b"), function (b, i) { b.textContent = D.igraci[i].igrac; });
+      Array.prototype.forEach.call(tim.querySelectorAll(".sp-tc > b"), function (b, i) { b.textContent = D.igraci[i].lik || D.igraci[i].igrac; });
       // grbovi klasa stižu s glavnom skriptom; ako još nisu bili tu, zamjensko slovo zamijeni čim stignu
       (function grbovi(n) {
         var G = window.zpIntro && window.zpIntro.grb, slova = ros.querySelectorAll("b.sp-mono[data-klasa]");
