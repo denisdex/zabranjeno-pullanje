@@ -139,7 +139,7 @@ window.HORDE = {
         ],
         biljeske: "Kao DPS ne pulla. Kad Dex nije tu, Warrior je rezervni tank."
       } },
-    { igrac: "Karkens", lik: "Janica Frostelic", klasa: "Mage",    rasa: "Troll",  uloga: "Ranged DPS", level: 0, foto: "assets/likovi/janica-frostelic.jpg",
+    { igrac: "Karkens", lik: "Janica Frostelic", klasa: "Mage",    rasa: "Troll",  uloga: "Ranged DPS", level: 0, foto: "assets/likovi/janica-frostelic.jpg", boja: "#55D98B",
       siroka: "assets/likovi/janica-frostelic-wide.jpg", fokus: [50, 18.4],
       gold: 0,
       zadaci: [
