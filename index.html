@@ -16,7 +16,7 @@
 <meta property="og:image" content="https://zabranjeno-pullanje.netlify.app/assets/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Pero, Niksa, Karkens, Žuga i Dex, likovi guilda Zabranjeno pullanje">
+<meta property="og:image:alt" content="Pero, Niksa, Karken, Žuga i Dex, likovi guilda Zabranjeno pullanje">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Zabranjeno pullanje">
 <meta name="twitter:image" content="https://zabranjeno-pullanje.netlify.app/assets/og.jpg">
@@ -1649,6 +1649,26 @@ footer .f-kino:hover { color: var(--bone); }
 .ad-ne-lista li { display: grid; gap: 4px; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
 .ad-ne-lista b { font: 800 1.1rem/1.1 var(--f-display); text-transform: uppercase; color: #ff7a6f; }
 .ad-ne-lista p { margin: 0; color: var(--bone); font-size: .875rem; }
+/* faze: Prvi dan odmah, Kasnije sklopljeno s okidačem; Moj lik filtrira addone i macroe */
+.faze { display: grid; gap: 16px; min-width: 0; }
+.vodilja { margin: 0; font: 800 clamp(1.05rem, 2vw, 1.35rem)/1.2 var(--f-display); text-transform: uppercase; color: var(--bone); }
+.faza-h { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; margin: 0; padding-bottom: 8px; border-bottom: 1px solid rgba(236, 226, 212, .16); }
+.faza-h h3 { margin: 0; font: 900 clamp(1.4rem, 2.6vw, 2rem)/1 var(--f-display); text-transform: uppercase; }
+.faza-h .mono { color: var(--dust); font-size: .5625rem; }
+.kasnije > summary { list-style: none; cursor: pointer; min-height: 44px; align-items: center; }
+.kasnije > summary::-webkit-details-marker { display: none; }
+.kasnije > summary::after { content: "+"; margin-left: auto; font: 900 1.8rem/1 var(--f-display); color: var(--ember); }
+.kasnije[open] > summary::after { content: "−"; }
+.kasnije > summary:hover h3 { color: var(--ember); }
+.kasnije > .mc-lista, .kasnije > .ad-lista { margin-top: 14px; }
+.okidac { margin: 0; padding: 8px 10px; border-left: 2px solid var(--ember); background: rgba(255, 122, 48, .08); color: var(--bone); font-size: .8125rem; line-height: 1.4; }
+.okidac .mono { display: block; margin-bottom: 2px; color: var(--ember); font-size: .5625rem; }
+.ml-red { gap: 6px; }
+.ml-lab { margin-right: 4px; white-space: nowrap; color: var(--dust); font-size: .5625rem; }
+.ml-pil { border-color: color-mix(in srgb, var(--c) 45%, transparent); }
+.ml-pil[aria-pressed="true"] { color: var(--night); background: var(--c); border-color: var(--c); }
+.ad-ne-kr { margin: 0; padding: 10px 12px; border: 1px solid rgba(255, 90, 79, .45); background: rgba(255, 90, 79, .08); color: #ffc7c1; font-size: .875rem; line-height: 1.45; }
+.ad-ne-kr b { color: #ff7a6f; font-weight: 600; }
 .ad-zam .mono { color: #7fd36a; font-size: .5625rem; margin-right: 6px; }
 .mcm-info .kr { display: none; }
 @media (max-width: 640px) { .mcm-info .dug { display: none; } .mcm-info .kr { display: inline; } }
@@ -3479,13 +3499,52 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     izHasha();
   })();
 
+  /* ---------- Moj lik: zajednički filter za addone i macroe; odabir se pamti samo u ovom pregledniku ---------- */
+  var MOJ = (function () {
+    var lista = (D.igraci || []).map(function (p) {
+      return { id: slug(p.lik), ime: p.lik, klasa: String(p.klasa).toLowerCase(), boja: p.boja || BOJE[p.klasa] || "#ece2d4",
+        uloga: p.uloga === "Tank" ? "tank" : p.uloga === "Healer" ? "healer" : "dps" };
+    }).concat([{ id: "niksin-druid", ime: "Niksin druid", klasa: "druid", uloga: "healer", boja: "#8B9099", alt: true }]);
+    var id = null, ah = false, slusaci = [];
+    try { id = localStorage.getItem("zp-moj-lik"); ah = localStorage.getItem("zp-moj-ah") === "1"; } catch (e) {}
+    function javi() { slusaci.forEach(function (f) { f(); }); }
+    return {
+      lik: function () { return lista.filter(function (l) { return l.id === id; })[0] || null; },
+      ah: function () { return ah; },
+      postavi: function (n) { id = id === n ? null : n; try { if (id) localStorage.setItem("zp-moj-lik", id); else localStorage.removeItem("zp-moj-lik"); } catch (e) {} javi(); },
+      prebaciAh: function () { ah = !ah; try { localStorage.setItem("zp-moj-ah", ah ? "1" : "0"); } catch (e) {} javi(); },
+      slusaj: function (f) { slusaci.push(f); },
+      pilule: function (cls, sAh) {
+        return '<div class="mc-filt ml-red" role="group" aria-label="Moj lik"><span class="ml-lab mono">Moj lik</span>' + lista.map(function (l) {
+          return '<button type="button" class="' + cls + ' ml-pil" data-g="ml" data-k="' + esc(l.id) + '" style="--c:' + l.boja + '">' + esc(l.ime) + "</button>";
+        }).join("") + (sAh ? '<button type="button" class="' + cls + ' ml-pil" data-g="ah" data-k="ah" style="--c:#e0b25a">Vodim AH</button>' : "") + "</div>";
+      },
+      oznaci: function (root) {
+        var l = this.lik();
+        Array.prototype.forEach.call(root.querySelectorAll('[data-g="ml"]'), function (b) { b.setAttribute("aria-pressed", l && l.id === b.getAttribute("data-k") ? "true" : "false"); });
+        Array.prototype.forEach.call(root.querySelectorAll('[data-g="ah"]'), function (b) { b.setAttribute("aria-pressed", ah ? "true" : "false"); });
+      }
+    };
+  })();
+  // popis u dva dijela: Prvi dan odmah, Kasnije sklopljeno (otvori se samo kad traženje nađe nešto samo tamo)
+  function faze(r, kartica, cls, otvoreno, q) {
+    if (!r.length) return '<p class="prazno mono">Ništa za ovaj odabir. Makni filter ili probaj drugu riječ.</p>';
+    var pd = r.filter(function (x) { return x.faza !== "kasnije"; }), ks = r.filter(function (x) { return x.faza === "kasnije"; });
+    var otv = otvoreno || (q && !pd.length);
+    return '<div class="faza-h"><h3>Prvi dan</h3><span class="mono">' + pd.length + " · instaliraj na launchu</span></div>" +
+      (pd.length ? '<div class="' + cls + '">' + pd.map(kartica).join("") + "</div>" : '<p class="prazno mono">Za ovaj odabir ništa prvi dan.</p>') +
+      (ks.length ? '<details class="kasnije"' + (otv ? " open" : "") + '><summary class="faza-h"><h3>Kasnije</h3><span class="mono">' + ks.length + " · kad dođeš do okidača</span></summary>" +
+        '<div class="' + cls + '">' + ks.map(kartica).join("") + "</div></details>" : "");
+  }
+  function okidac(x) { return x.okidac ? '<p class="okidac"><span class="mono">Kada</span>' + esc(x.okidac) + "</p>" : ""; }
+
   /* ---------- macroi: na stranici 6 istaknutih, svi u modalu preko cijelog ekrana (#macroi/svi): traži, filteri, poredak, objašnjenje na mjestu ---------- */
   var MC_POC = null; // blok "Počni s ovih pet" (iz macroi.json), i za poveznicu u profilu
   (function () {
     var ist = $("mcIst");
     if (!ist) return;
     var KLASE = [["sve", "Sve"], ["opcenito", "Općenito"], ["shaman", "Shaman"], ["mage", "Mage"], ["warrior", "Warrior"], ["rogue", "Rogue"], ["paladin", "Paladin"]];
-    var ALTOVI = [["druid", "Druid"], ["alt-mage", "Alt mage"]];
+    var ALTOVI = [["druid", "Druid"]];
     var ULOGE = [["sve", "Sve uloge"], ["tank", "Tank"], ["heal", "Heal"], ["dps", "DPS"], ["opcenito", "Općenito"]];
     var PORETCI = [["korisno", "Najkorisnije"], ["level", "Level (od nižeg)"], ["klasa", "Klasa"], ["status", "Status (provjereno prvo)"]];
     var REDKL = ["opcenito", "shaman", "mage", "warrior", "rogue", "paladin", "druid", "alt-mage"];
@@ -3493,11 +3552,18 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     var IME_KL = { opcenito: "Općenito", shaman: "Shaman", mage: "Mage", warrior: "Warrior", rogue: "Rogue", paladin: "Paladin", druid: "Druid · Niksin alt", "alt-mage": "Mage · Niksin alt" };
     var IME_UL = { tank: "Tank", heal: "Heal", dps: "DPS", opcenito: "Općenito" };
     var STATUS = { "provjereno za Forever": "ok", "iz Classica, testirati": "test" };
-    var M = null, poId = {}, red = {}, start = {}, otvoreni = {}, filt = { klasa: "sve", uloga: "sve", q: "", sort: "korisno" };
+    var M = null, poId = {}, red = {}, start = {}, otvoreni = {}, kasOtv = false, filt = { klasa: "sve", uloga: "sve", q: "", sort: "korisno" };
+    // Moj lik: macroi te klase, opći macroi i oni koji navode klasu u zaKlase (npr. /assist za sve koji udaraju)
+    function zaLik(m, l) {
+      if (m.zaKlase) return m.zaKlase.indexOf(l.klasa) >= 0;
+      return m.klasa === "opcenito" || m.klasa === l.klasa;
+    }
 
     function rijec(n) { return n % 10 === 1 && n % 100 !== 11 ? "macro" : "macroa"; }
     function norm(s) { return String(s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/đ/g, "d"); }
     function prolazi(m, f) {
+      var l = MOJ.lik();
+      if (l && !zaLik(m, l)) return false;
       if (f.klasa !== "sve" && m.klasa !== f.klasa) return false;
       if (f.uloga !== "sve" && m.uloge.indexOf(f.uloga) < 0) return false;
       if (!f.q) return true;
@@ -3534,7 +3600,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       var o = !!otvoreni[m.id];
       return '<article class="mc' + (o ? " otv" : "") + '" data-id="' + esc(m.id) + '" style="--c:' + (BOJA[m.klasa] || "#ece2d4") + '">' +
         '<header><span class="mc-kl mono">' + klUl(m) + "</span>" + (start[m.id] ? '<span class="mc-start mono">Start</span>' : "") + "<h3>" + esc(m.naslov) + "</h3></header>" +
-        '<p class="mc-sv">' + esc(m.svrha) + "</p>" +
+        '<p class="mc-sv">' + esc(m.svrha) + "</p>" + okidac(m) +
         '<pre class="mc-tx"><code>' + esc(m.tekst) + "</code></pre>" + bedzevi(m) +
         '<div class="mc-akc"><button type="button" class="mc-kop" data-mc="' + esc(m.id) + '">Kopiraj</button>' +
         '<button type="button" class="mc-obj" data-mc="' + esc(m.id) + '" aria-expanded="' + o + '">' + (o ? "Sakrij objašnjenje" : "Objašnjenje") + "</button></div>" +
@@ -3603,8 +3669,10 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
           '<div class="mc-filt" id="mcKlase" role="group" aria-label="Klasa">' + KLASE.map(function (k) { return pil("klasa", k[0], k[1]); }).join("") +
             '<span class="mc-sep mono">Niksini altovi</span>' + ALTOVI.map(function (k) { return pil("klasa", k[0], k[1]); }).join("") + "</div>" +
           '<div class="mc-filt" id="mcUloge" role="group" aria-label="Uloga">' + ULOGE.map(function (k) { return pil("uloga", k[0], k[1]); }).join("") + "</div>" +
+          MOJ.pilule("mc-pil") +
         "</div></div>" +
         '<div class="mcm-tijelo"><div class="mcm-in">' +
+          '<p class="vodilja">' + esc(M.vodilja || "") + "</p>" +
           '<div class="mcm-infopanel" id="mcmInfoPanel" hidden>' +
             '<div class="mc-zbroj">' + ["radi", "promijenjeno", "zabranjeno", "nepoznato"].filter(function (k) { return zbroj[k]; }).map(function (k) { return '<span class="st ' + k + '">' + zbroj[k] + " " + k + "</span>"; }).join("") + "</div>" +
             tablica() +
@@ -3618,9 +3686,10 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
               var m = poId[id];
               return m ? "<li><b>" + esc(m.naslov) + "</b><span>" + esc(m.svrha) + '</span><div class="gumbi"><button type="button" class="mc-kop" data-mc="' + esc(id) + '">Kopiraj</button></div></li>' : "";
             }).join("") + "</ol></div>" : "") +
-          '<div class="mc-lista" id="mcLista"></div>' +
+          '<div class="faze" id="mcLista"></div>' +
         "</div></div>";
       document.body.appendChild(modal);
+      modal.addEventListener("toggle", function (e) { if (e.target.classList && e.target.classList.contains("kasnije")) kasOtv = e.target.open; }, true);
       // fokus ostaje u modalu dok je otvoren
       modal.addEventListener("keydown", function (e) {
         if (e.key !== "Tab") return;
@@ -3667,10 +3736,11 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       var lista = $("mcLista");
       if (!lista) return;
       var r = M.macroi.filter(function (m) { return prolazi(m, filt); }).sort(SORT[filt.sort]);
-      lista.innerHTML = r.map(kartica).join("") || '<p class="prazno mono">Ništa za ovaj odabir. Makni filter ili probaj drugu riječ.</p>';
+      lista.innerHTML = faze(r, kartica, "mc-lista", kasOtv, filt.q);
       $("mcBroj").innerHTML = "<b>" + r.length + "</b> " + rijec(r.length) + (r.length === M.macroi.length ? "" : " od " + M.macroi.length);
       // na svakoj pilulici: koliko bi ih bilo s tim odabirom
-      Array.prototype.forEach.call(document.querySelectorAll(".mc-pil"), function (b) {
+      MOJ.oznaci(modal);
+      Array.prototype.forEach.call(modal.querySelectorAll('.mc-pil[data-g="klasa"], .mc-pil[data-g="uloga"]'), function (b) {
         var g = b.getAttribute("data-g"), k = b.getAttribute("data-k"), f = { klasa: filt.klasa, uloga: filt.uloga, q: filt.q };
         f[g] = k;
         var c = M.macroi.filter(function (m) { return prolazi(m, f); }).length;
@@ -3679,9 +3749,11 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
         b.classList.toggle("nula", !c && filt[g] !== k);
       });
       var poc = $("mcPoc");
-      if (poc) poc.hidden = !(MC_POC && filt.klasa === MC_POC.klasa && !filt.q);
+      var ml = MOJ.lik();
+      if (poc) poc.hidden = !(MC_POC && (filt.klasa === MC_POC.klasa || (ml && ml.klasa === MC_POC.klasa)) && !filt.q);
     }
     function postavi(g, k) {
+      if (g === "ml") { filt.klasa = "sve"; filt.uloga = "sve"; return MOJ.postavi(k); }
       filt[g] = k;
       // klasa bez macroa za odabranu ulogu: uloga se vraća na Sve, da odabir ne ostane prazan
       if (g === "klasa" && !M.macroi.some(function (m) { return prolazi(m, { klasa: filt.klasa, uloga: filt.uloga, q: "" }); })) filt.uloga = "sve";
@@ -3696,7 +3768,8 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
         d.pocetnik.macroi.forEach(function (id) { start[id] = true; });
       }
       var prov = M.macroi.filter(function (m) { return STATUS[m.status] === "ok"; }).length;
-      $("mcMeta").textContent = M.macroi.length + " macroa · " + prov + " provjereno";
+      $("mcMeta").textContent = M.vodilja || (M.macroi.length + " macroa · " + prov + " provjereno");
+      MOJ.slusaj(function () { if (modal) osvjezi(); });
       ist.innerHTML = nasumicno(M.macroi.filter(function (m) { return m.istaknuto; }), 3).map(kompakt).join("");
       $("mcSvi").textContent = "Svi macroi (" + M.macroi.length + ")";
       $("mcSvi").hidden = false;
@@ -3735,13 +3808,12 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     window.addEventListener("hashchange", function () { if (M) izHasha(); });
     window.addEventListener("keydown", function (e) { if (e.key === "Escape" && modal && !modal.hidden) zatvori(); });
   })();
-  /* ---------- addoni: na stranici obavezni i "ne radi", svi u modalu (#addoni/svi): traži, filteri, poredak, minimalni paket ---------- */
+  /* ---------- addoni: na stranici dva za prvi dan i "ne radi", svi u modalu (#addoni/svi): Prvi dan, Kasnije, Moj lik ---------- */
   (function () {
     var ist = $("adIst");
     if (!ist) return;
     var ULOGE = [["sve", "Sve"], ["svi", "Za sve"], ["healer", "Healer"], ["tank", "Tank"], ["dps", "DPS"], ["gatherer", "Gatherer"], ["ah", "AH"]];
     var IME_UL = { svi: "svi", healer: "healer", tank: "tank", dps: "DPS", gatherer: "gatherer", ah: "AH" };
-    var NASE_KLASE = [["warrior", "Warrior"], ["shaman", "Shaman"], ["mage", "Mage"], ["rogue", "Rogue"], ["paladin", "Paladin"]];
     var PORETCI = [["oznaka", "Obavezno prvo"], ["kategorija", "Kategorija"], ["ime", "Ime"]];
     var OZNAKE = { obavezno: [0, "Obavezno"], preporuceno: [1, "Preporučeno"], opcionalno: [2, "Opcionalno"] };
     // status Forever verzije: oznaka na kartici i boja
@@ -3753,21 +3825,20 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       "ugradeno-nepotvrdeno": ["test", function () { return "Ugrađeno, nepotvrđeno"; }],
       "nas-addon": ["nas", function () { return "Naš addon"; }]
     };
-    var A = null, poId = {}, kat = {}, redKat = {}, otvoreni = {};
-    var filt = { kat: "sve", uloga: "sve", q: "", sort: "oznaka" }, paket = null;
+    var A = null, poId = {}, kat = {}, redKat = {}, otvoreni = {}, kasOtv = false;
+    var filt = { kat: "sve", uloga: "sve", q: "", sort: "oznaka" };
 
     function datumKr(iso) { var x = String(iso || "").split("-"); return x.length === 3 ? +x[2] + "." + +x[1] + "." : ""; }
     function norm(s) { return String(s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/đ/g, "d"); }
     function rijec(n) { return n % 10 === 1 && n % 100 !== 11 ? "addon" : "addona"; }
-    function zaPaket(a, p) {
-      // pravilo iz addoni.json: obavezni čije uloge ili klase odgovaraju odabiru, plus oni za sve
-      if (a.oznaka !== "obavezno") return false;
-      if (a.uloge.indexOf("svi") >= 0) return true;
-      if (p.klasa && a.klase.indexOf(p.klasa) >= 0) return true;
-      return p.uloge.some(function (u) { return a.uloge.indexOf(u) >= 0; });
+    // Moj lik: addoni za tu klasu (ako ih addon ograničava) i ulogu; gatheri su svi mainovi do 40, AH samo uz "Vodim AH"
+    function zaLik(a, l) {
+      if (a.klase.length && a.klase.indexOf(l.klasa) < 0) return false;
+      return a.uloge.some(function (u) { return u === "svi" || u === "gatherer" || u === l.uloga || (u === "ah" && MOJ.ah()); });
     }
     function prolazi(a, f) {
-      if (paket && !zaPaket(a, paket)) return false;
+      var l = MOJ.lik();
+      if (l && !zaLik(a, l)) return false;
       if (f.kat !== "sve" && a.kategorija !== f.kat) return false;
       if (f.uloga !== "sve" && a.uloge.indexOf(f.uloga) < 0) return false;
       if (!f.q) return true;
@@ -3792,7 +3863,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       return '<article class="ad oz-' + esc(a.oznaka) + '" data-id="' + esc(a.id) + '">' +
         '<header><span class="ad-oz mono">' + esc(oz[1]) + '</span><span class="ad-kat mono">' + esc(kat[a.kategorija] || a.kategorija) + " · " + esc(zaKoga(a)) + "</span>" +
           "<h3>" + esc(a.ime) + "</h3></header>" +
-        '<p class="ad-op">' + esc(a.opis) + "</p>" +
+        '<p class="ad-op">' + esc(a.opis) + "</p>" + okidac(a) +
         '<div class="ad-st"><span class="st ' + st[0] + '">' + esc(st[1](datumKr(a.zadnjaProvjera))) + "</span>" +
           (a.link ? '<a href="' + esc(a.link) + '" target="_blank" rel="noopener">' + esc(linkIme(a.link)) + " ↗</a>" : "") + "</div>" +
         upozorenje(a) +
@@ -3807,10 +3878,10 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     function upozorenje(a) {
       if (a.status === "nije-pronadeno") {
         var zam = A.addoni.filter(function (x) { return x.alternativaZa === a.id && x.status === "forever-potvrdeno"; });
-        return '<p class="ad-upoz"><b>Još nema Forever datoteke.</b> ' + (zam.length ? "Dok se ne pojavi, uzmi " + esc(zam.map(function (x) { return x.ime; }).join(" ili ")) + "." : "Ne instaliraj dok se ne pojavi.") + "</p>";
+        return '<p class="ad-upoz"><b>Forever datoteka još nije potvrđena.</b> ' + (zam.length ? "Dok se ne pojavi, uzmi " + esc(zam.map(function (x) { return x.ime; }).join(" ili ")) + "." : "Na launchu provjeri u CurseForge appu pod WoW Forever; ako ga nema, zasad preskoči.") + "</p>";
       }
       var fali = (a.treba || []).map(function (id) { return poId[id]; }).filter(function (x) { return x && x.status === "nije-pronadeno"; });
-      return fali.length ? '<p class="ad-upoz">Treba ' + esc(fali.map(function (x) { return x.ime; }).join(", ")) + ", a " + (fali.length > 1 ? "oni još nemaju" : "on još nema") + " Forever verziju. Do tada ga preskoči.</p>" : "";
+      return fali.length ? '<p class="ad-upoz">Treba ' + esc(fali.map(function (x) { return x.ime; }).join(", ")) + ". Radi samo ako " + (fali.length > 1 ? "oni rade" : "on radi") + " u Foreveru.</p>" : "";
     }
     function kompakt(a) {
       var st = STATUS[a.status] || ["test", function () { return a.status; }], oz = OZNAKE[a.oznaka] || [9, a.oznaka];
@@ -3821,7 +3892,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     }
 
     // ---------- modal ----------
-    var modal = null, zadnjiFokus = null, otvorenKlikom = false, nakonOtvaranja = null;
+    var modal = null, zadnjiFokus = null, otvorenKlikom = false;
     function pil(g, k, t) { return '<button type="button" class="ad-pil" data-g="' + g + '" data-k="' + k + '">' + esc(t) + '<span class="n"></span></button>'; }
     function gradi() {
       modal = document.createElement("div");
@@ -3830,29 +3901,21 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       modal.innerHTML =
         '<div class="mcm-top"><div class="mcm-in">' +
           '<div class="mcm-red"><h2 id="adNaslov">Svi addoni</h2><p class="mc-broj mono" id="adBroj" aria-live="polite"></p>' +
-            '<button type="button" class="mcm-info mono" id="adPaketBtn" aria-expanded="false" aria-controls="adPaketPanel"><span class="dug">Minimalni paket za mene</span><span class="kr">Moj paket</span></button>' +
-            '<button type="button" class="mcm-info mono" id="adNeBtn" aria-expanded="false" aria-controls="adNePanel"><span class="dug">Ne radi u Foreveru</span><span class="kr">Ne radi</span></button>' +
             '<button type="button" class="mcm-x" data-ad-zatvori aria-label="Zatvori"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="2"/></svg></button></div>' +
           '<div class="mcm-red"><input type="search" id="adQ" class="mc-q" placeholder="Traži addon…" aria-label="Traži addone" autocomplete="off">' +
             '<label class="mc-sort mono"><span>Poredaj</span> <select id="adSort">' + PORETCI.map(function (x) { return '<option value="' + x[0] + '">' + x[1] + "</option>"; }).join("") + "</select></label></div>" +
           '<div class="mc-filt" role="group" aria-label="Kategorija">' + [["sve", "Sve"]].concat(A.kategorije.map(function (k) { return [k.id, k.naziv]; })).map(function (k) { return pil("kat", k[0], k[1]); }).join("") + "</div>" +
           '<div class="mc-filt" role="group" aria-label="Za koga">' + ULOGE.map(function (k) { return pil("uloga", k[0], k[1]); }).join("") + "</div>" +
+          MOJ.pilule("ad-pil", true) +
         "</div></div>" +
         '<div class="mcm-tijelo"><div class="mcm-in">' +
+          '<p class="vodilja">' + esc(A.vodilja || "") + "</p>" +
+          '<p class="ad-ne-kr"><b>Ne radi u Foreveru.</b> ' + esc(typeof A.neRadi === "string" ? A.neRadi : "") + "</p>" +
           '<p class="ad-modal-nap">"Forever ✓" znači da je Forever verzija potvrđena na CurseForgeu, ne da smo je već testirali u igri.</p>' +
-          '<div class="mcm-infopanel ad-paket" id="adPaketPanel" hidden>' +
-            "<p>" + esc((A.minimalniPaket || {}).opis || "") + "</p>" +
-            '<div class="ad-pk"><span class="mono">Klasa</span><div class="mc-filt">' + NASE_KLASE.map(function (k) { return '<button type="button" class="ad-pil" data-g="pk" data-k="' + k[0] + '">' + k[1] + "</button>"; }).join("") + "</div></div>" +
-            '<div class="ad-pk"><span class="mono">Uloga</span><div class="mc-filt">' + [["tank", "Tank"], ["healer", "Healer"], ["dps", "DPS"]].map(function (k) { return '<button type="button" class="ad-pil" data-g="pu" data-k="' + k[0] + '">' + k[1] + "</button>"; }).join("") +
-              '<button type="button" class="ad-pil" data-g="px" data-k="gatherer">Skupljam (gatherer)</button><button type="button" class="ad-pil" data-g="px" data-k="ah">Prodajem na AH</button></div></div>' +
-            '<p class="mono ad-pk-st" id="adPaketSt"></p>' +
-          "</div>" +
-          '<div class="mcm-infopanel" id="adNePanel" hidden><ul class="ad-ne-lista">' + (A.neRadi || []).map(function (n) {
-            return "<li><b>" + esc(n.ime) + "</b><p>" + esc(n.zasto) + '</p><p class="ad-zam"><span class="mono">Umjesto toga</span> ' + esc(n.zamjena) + "</p></li>";
-          }).join("") + "</ul></div>" +
-          '<div class="ad-lista" id="adLista"></div>' +
+          '<div class="faze" id="adLista"></div>' +
         "</div></div>";
       document.body.appendChild(modal);
+      modal.addEventListener("toggle", function (e) { if (e.target.classList && e.target.classList.contains("kasnije")) kasOtv = e.target.open; }, true);
       modal.addEventListener("keydown", function (e) {
         if (e.key !== "Tab") return;
         var f = modal.querySelectorAll('a[href], button:not([disabled]), input, select, summary');
@@ -3866,7 +3929,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       var lista = $("adLista");
       if (!lista) return;
       var r = A.addoni.filter(function (a) { return prolazi(a, filt); }).sort(SORT[filt.sort]);
-      lista.innerHTML = r.map(kartica).join("") || '<p class="prazno mono">Ništa za ovaj odabir. Makni filter ili probaj drugu riječ.</p>';
+      lista.innerHTML = faze(r, kartica, "ad-lista", kasOtv, filt.q);
       $("adBroj").innerHTML = "<b>" + r.length + "</b> " + rijec(r.length) + (r.length === A.addoni.length ? "" : " od " + A.addoni.length);
       Array.prototype.forEach.call(modal.querySelectorAll('.ad-pil[data-g="kat"], .ad-pil[data-g="uloga"]'), function (b) {
         var g = b.getAttribute("data-g"), k = b.getAttribute("data-k"), f = { kat: filt.kat, uloga: filt.uloga, q: filt.q };
@@ -3876,11 +3939,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
         b.querySelector(".n").textContent = c;
         b.classList.toggle("nula", !c && filt[g] !== k);
       });
-      // minimalni paket: odabir i sažetak
-      var p = paket || { klasa: null, uloge: [] };
-      Array.prototype.forEach.call(modal.querySelectorAll('.ad-pil[data-g="pk"]'), function (b) { b.setAttribute("aria-pressed", p.klasa === b.getAttribute("data-k") ? "true" : "false"); });
-      Array.prototype.forEach.call(modal.querySelectorAll('.ad-pil[data-g="pu"], .ad-pil[data-g="px"]'), function (b) { b.setAttribute("aria-pressed", p.uloge.indexOf(b.getAttribute("data-k")) >= 0 ? "true" : "false"); });
-      $("adPaketSt").textContent = paket ? "Prikazan je samo tvoj minimalni paket: " + A.addoni.filter(function (a) { return zaPaket(a, paket); }).length + " addona. Zatvori panel da vidiš sve." : "Odaberi klasu i ulogu, popis ispod pokaže samo ono što ti treba.";
+      MOJ.oznaci(modal);
     }
     function otvori() {
       if (!A) return;
@@ -3895,7 +3954,6 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       if (window.zpZvuk) window.zpZvuk("ladica");
       if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) $("adQ").focus({ preventScroll: true });
       else modal.querySelector(".mcm-x").focus({ preventScroll: true });
-      if (nakonOtvaranja) { nakonOtvaranja(); nakonOtvaranja = null; }
     }
     function zatvori(tiho) {
       if (!modal || modal.hidden) return;
@@ -3914,25 +3972,16 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       otvorenKlikom = true;
       location.hash = "addoni/svi";
     }
-    function prebaciPanel(btnId, panelId) {
-      var pan = $(panelId), b = $(btnId);
-      pan.hidden = !pan.hidden;
-      b.setAttribute("aria-expanded", pan.hidden ? "false" : "true");
-      if (!pan.hidden) modal.querySelector(".mcm-tijelo").scrollTop = 0;
-      return !pan.hidden;
-    }
-
     fetch("addoni.json", { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).then(function (d) {
       A = d;
       A.kategorije.forEach(function (k, i) { kat[k.id] = k.naziv; redKat[k.id] = i; });
       A.addoni.forEach(function (a) { poId[a.id] = a; });
       var potvrdeno = A.addoni.filter(function (a) { return a.status === "forever-potvrdeno"; }).length;
-      $("adMeta").textContent = A.addoni.length + " addona · " + potvrdeno + " s Forever verzijom";
-      var prva = String(A.uvod || "").split(/(?<=\.)\s/)[0];
-      ist.innerHTML = nasumicno(A.addoni.filter(function (a) { return a.oznaka === "obavezno"; }), 2).map(kompakt).join("") +
-        '<article class="trio-c trio-info"><span class="trio-oz mono">Zašto nešto ne radi</span><h4>Forever nije Classic</h4>' +
-        '<p class="trio-t">' + esc(prva) + " Ne radi: " + esc((A.neRadi || []).slice(0, 4).map(function (n) { return n.ime.split(" i ")[0]; }).join(", ")) + "…</p>" +
-        '<div class="trio-dno"><button type="button" class="ad-ne-vise mono">Što ne radi i čime zamijeniti →</button></div></article>';
+      $("adMeta").textContent = A.vodilja || (A.addoni.length + " addona · " + potvrdeno + " s Forever verzijom");
+      ist.innerHTML = nasumicno(A.addoni.filter(function (a) { return a.faza !== "kasnije" && a.uloge.indexOf("svi") >= 0 && a.status !== "nije-pronadeno"; }), 2).map(kompakt).join("") +
+        '<article class="trio-c trio-info"><span class="trio-oz mono">Forever nije Classic</span><h4>Ne radi u Foreveru</h4>' +
+        '<p class="trio-t">' + esc(typeof A.neRadi === "string" ? A.neRadi : "") + "</p></article>";
+      MOJ.slusaj(function () { if (modal) osvjezi(); });
       $("adSvi").textContent = "Svi addoni (" + A.addoni.length + ")";
       $("adSvi").hidden = false;
       izHasha();
@@ -3943,32 +3992,13 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     document.addEventListener("click", function (e) {
       if (!e.target.closest || !A) return;
       if (e.target.closest("#adSvi")) return pokaziSve();
-      if (e.target.closest(".ad-ne-vise")) {
-        nakonOtvaranja = function () { if ($("adNePanel").hidden) prebaciPanel("adNeBtn", "adNePanel"); };
-        return pokaziSve();
-      }
       if (e.target.closest("[data-ad-zatvori]")) return zatvori();
-      if (e.target.closest("#adNeBtn")) return prebaciPanel("adNeBtn", "adNePanel");
-      if (e.target.closest("#adPaketBtn")) {
-        // panel otvoren = paket aktivan; zatvoren = opet svi
-        if (prebaciPanel("adPaketBtn", "adPaketPanel")) paket = paket || { klasa: null, uloge: [] };
-        else paket = null;
-        return osvjezi();
-      }
       var b = e.target.closest(".ad-pil");
       if (!b) return;
       var g = b.getAttribute("data-g"), k = b.getAttribute("data-k");
+      if (g === "ml") { filt.uloga = "sve"; return MOJ.postavi(k); }
+      if (g === "ah") return MOJ.prebaciAh();
       if (g === "kat" || g === "uloga") { filt[g] = k; return osvjezi(); }
-      paket = paket || { klasa: null, uloge: [] };
-      if (g === "pk") paket.klasa = paket.klasa === k ? null : k;
-      if (g === "pu") {
-        // tank, healer i DPS su jedan izbor; gatherer i AH se pale zasebno
-        var imao = paket.uloge.indexOf(k) >= 0;
-        paket.uloge = paket.uloge.filter(function (u) { return ["tank", "healer", "dps"].indexOf(u) < 0; });
-        if (!imao) paket.uloge.push(k);
-      }
-      if (g === "px") paket.uloge = paket.uloge.indexOf(k) >= 0 ? paket.uloge.filter(function (u) { return u !== k; }) : paket.uloge.concat([k]);
-      osvjezi();
     });
     document.addEventListener("input", function (e) { if (e.target.id === "adQ" && A) { filt.q = e.target.value; osvjezi(); } });
     document.addEventListener("change", function (e) { if (e.target.id === "adSort" && A) { filt.sort = e.target.value; osvjezi(); } });

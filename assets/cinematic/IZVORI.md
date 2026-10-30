@@ -16,7 +16,7 @@ Ilustracije likova ekipe (`assets/likovi/*-art-raw.webp`), 1024 × 572, spremlje
 | Datoteka | Igrač |
 |---|---|
 | lik-nikola-roguevic.jpg | Žuga |
-| lik-janica-frostelic.jpg | Karkens |
+| lik-janica-frostelic.jpg | Karken |
 | lik-saman-saulic.jpg | Niksa |
 | lik-melee-kitic.jpg | Pero |
 | lik-arsen-deadic.jpg | Dex |

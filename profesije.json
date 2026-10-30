@@ -3,7 +3,7 @@
   "accounts": [
     { "id": "pero", "owner": "Pero" },
     { "id": "niksa", "owner": "Niksa" },
-    { "id": "karkens", "owner": "Karkens" },
+    { "id": "karken", "owner": "Karken" },
     { "id": "zuga", "owner": "Žuga" },
     { "id": "dex", "owner": "Dex" }
   ],
@@ -34,7 +34,7 @@
         { "name": "Tailoring", "skill": 0, "phase": "stalno" }
       ],
       "secondary": [{ "name": "First Aid", "skill": 0 }, { "name": "Cooking", "skill": 0 }] },
-    { "id": "mage", "name": "Janica Frostelic", "account": "karkens", "class": "Mage", "race": "Troll", "role": "grupa",
+    { "id": "mage", "name": "Janica Frostelich", "account": "karken", "class": "Mage", "race": "Troll", "role": "grupa",
       "professions": [
         { "name": "Mining", "skill": 0, "phase": "stalno" },
         { "name": "Herbalism", "skill": 0, "phase": "stalno" }

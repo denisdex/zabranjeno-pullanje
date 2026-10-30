@@ -1,5 +1,5 @@
 {
-  "azurirano": "2026-10-29",
+  "azurirano": "2026-10-30",
   "uvod": {
     "kakoNapraviti": "U igri upiši /macro (ili Esc > Macros). Tab General vrijedi za sve likove na računu, tab s imenom lika samo za njega. Klikni New, daj ime (do 16 znakova), odaberi ikonu (upitnik = ikona iz #showtooltip), zalijepi tekst (do 255 znakova) i povuci macro na action bar. U borbi se macro ne može raditi ni mijenjati. Imena spellova upiši točno kako pišu u spellbooku (Shift+klik na spell u spellbooku ubaci ime u macro).",
     "mouseover": "Mouseover macro baca spell na ono što ti je pod mišem (party frame, nameplate, lik), bez promjene targeta. Uzorak [@mouseover,help,nodead][help,nodead][@player] znači: prijatelj pod mišem, ako ne onda prijateljski target, ako ne onda ti. Za neprijatelje [@mouseover,harm,nodead][harm,nodead]. Forever ima i ugrađeni Click Cast Bindings (/cc): spell na klik party framea bez macroa; probaj oboje i zadrži što ti leži.",
@@ -153,81 +153,17 @@
   ],
   "pocetnik": {
     "klasa": "paladin",
-    "naslov": "Počni s ovih pet macroa",
+    "naslov": "Paladin: najviše ova tri",
     "macroi": [
-      "pl-seal-of-fury",
+      "opc-oznaci-skull-cross",
       "pl-judgement-taunt",
-      "pl-holy-strike",
-      "pl-consecration",
       "pl-lay-on-hands-mouseover"
     ]
   },
   "macroi": [
     {
-      "id": "opc-focus-postavi",
-      "istaknuto": true,
-      "naslov": "Postavi focus (tank ili sheep meta)",
-      "svrha": "Jedna tipka zapamti jedinicu kao focus: ono što je pod mišem, inače target; sa Shiftom briše focus.",
-      "klasa": "opcenito",
-      "uloge": [
-        "opcenito"
-      ],
-      "rasa": null,
-      "tekst": "/clearfocus [mod:shift]\n/focus [nomod:shift,@mouseover,exists][nomod:shift]",
-      "linije": [
-        {
-          "linija": "/clearfocus [mod:shift]",
-          "objasnjenje": "Ako držiš Shift, briše focus i ništa drugo ne radi."
-        },
-        {
-          "linija": "/focus [nomod:shift,@mouseover,exists][nomod:shift]",
-          "objasnjenje": "Bez Shifta: focus postaje jedinica pod mišem ako postoji, inače tvoj trenutni target."
-        }
-      ],
-      "kada": "Na početku dungeona: DPS-i stave tanka u focus (za /assist), mage stavi sheep metu u focus, healer tanka.",
-      "kadaNe": "Ne koristi u borbi za mijenjanje focusa svakih par sekundi; focus je 'zapamćena' meta, ne zamjena za target.",
-      "level": null,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://mmonster.co/wow-forever/guides/macros",
-        "https://warcraft.wiki.gg/wiki/Macro_conditionals"
-      ],
-      "znakova": 75
-    },
-    {
-      "id": "opc-assist-tank",
-      "istaknuto": true,
-      "naslov": "Udari što i tank (/assist preko focusa)",
-      "svrha": "DPS uzme target svog focusa (tanka) i odmah krene auto-attackom, pa svi tuku istog moba.",
-      "klasa": "opcenito",
-      "uloge": [
-        "dps"
-      ],
-      "rasa": null,
-      "tekst": "/assist focus\n/startattack",
-      "linije": [
-        {
-          "linija": "/assist focus",
-          "objasnjenje": "Uzmi target jedinice koja ti je u focusu. Prije toga tanka staviš u focus macroom 'Postavi focus'."
-        },
-        {
-          "linija": "/startattack",
-          "objasnjenje": "Odmah kreni auto-attack na to što si dobio. Nema GCD-a, pa ne smeta sljedećem spellu."
-        }
-      ],
-      "kada": "Svaki pull: pritisni prije prvog udarca. Posebno kad su mobovi slični (Scarlet Monastery, Stratholme).",
-      "kadaNe": "Kad tank namjerno mijenja target da pokupi dodatnog moba; tada pričekaj da ga drži pa opet /assist. Nije za healere.",
-      "level": null,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://mmonster.co/wow-forever/guides/macros",
-        "https://warcraft.wiki.gg/wiki/List_of_slash_commands"
-      ],
-      "znakova": 26
-    },
-    {
       "id": "opc-assist-ime",
-      "naslov": "Udari što i tank (po imenu)",
+      "naslov": "Udari što i tank (/assist)",
       "svrha": "Isto kao gore, ali bez focusa: upiši ime tanka. Ime promijeni na svoj lik.",
       "klasa": "opcenito",
       "uloge": [
@@ -253,452 +189,17 @@
         "https://warcraft.wiki.gg/wiki/List_of_slash_commands",
         "https://warcraft.wiki.gg/wiki/Useful_macros_(old)"
       ],
-      "znakova": 26
-    },
-    {
-      "id": "opc-oznaci-skull-cross",
-      "naslov": "Označi target: skull, sa Shiftom cross",
-      "svrha": "Tank jednom tipkom stavi lubanju (prvi kill) na target, a sa Shiftom križ (drugi kill ili sheep).",
-      "klasa": "opcenito",
-      "uloge": [
-        "tank"
-      ],
-      "rasa": null,
-      "tekst": "/tm [mod:shift] 7; 8",
-      "linije": [
-        {
-          "linija": "/tm [mod:shift] 7; 8",
-          "objasnjenje": "8 je skull (lubanja), 7 je cross (križ). Oznaka ide na tvoj trenutni target. U party-ju to smije svatko, u raidu lead ili assist."
-        }
-      ],
-      "kada": "Prije svakog pulla s više mobova: skull na prvi, cross na sheep/sap metu. Dogovorite redoslijed i držite ga se.",
-      "kadaNe": "Ne mijenjaj oznake usred borbe bez razloga; zbunjuje DPS. Na retailu je od ožujka 2026. ograničen broj oznaka u kratkom vremenu; za Forever nije potvrđeno.",
-      "level": null,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://mmonster.co/wow-forever/guides/macros",
-        "https://warcraft.wiki.gg/wiki/List_of_slash_commands"
-      ],
-      "znakova": 20
-    },
-    {
-      "id": "opc-ocisti-oznake",
-      "naslov": "Skini oznaku s targeta",
-      "svrha": "Makne target marker s trenutnog targeta (npr. kad se sheep meta promijeni).",
-      "klasa": "opcenito",
-      "uloge": [
-        "tank"
-      ],
-      "rasa": null,
-      "tekst": "/tm 0",
-      "linije": [
-        {
-          "linija": "/tm 0",
-          "objasnjenje": "0 znači 'bez oznake'. Radi samo na trenutnom targetu."
-        }
-      ],
-      "kada": "Kad je plan promijenjen i stara oznaka zbunjuje.",
-      "kadaNe": "Ne treba ti nakon što mob umre; oznaka nestane sama.",
-      "level": null,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://mmonster.co/wow-forever/guides/macros",
-        "https://warcraft.wiki.gg/wiki/List_of_slash_commands"
-      ],
-      "znakova": 5
-    },
-    {
-      "id": "opc-ready-check",
-      "naslov": "Ready check",
-      "svrha": "Pita cijelu grupu je li spremna; svatko klikne Yes/No.",
-      "klasa": "opcenito",
-      "uloge": [
-        "opcenito"
-      ],
-      "rasa": null,
-      "tekst": "/readycheck",
-      "linije": [
-        {
-          "linija": "/readycheck",
-          "objasnjenje": "Standardna naredba iz igre, ne treba addon. U party-ju je može pokrenuti leader."
-        }
-      ],
-      "kada": "Prije bossa i nakon pauze (mana, AFK).",
-      "kadaNe": "Ne spamaj; jednom prije pulla je dosta.",
-      "level": null,
-      "status": "iz Classica, testirati",
-      "izvor": [
-        "https://warcraft.wiki.gg/wiki/List_of_slash_commands"
-      ],
-      "znakova": 11
-    },
-    {
-      "id": "opc-pull-timer-dbm",
-      "naslov": "Pull timer (DBM)",
-      "svrha": "Pokreće odbrojavanje od 10 sekundi koje vide svi s DBM-om ili BigWigsom.",
-      "klasa": "opcenito",
-      "uloge": [
-        "opcenito"
-      ],
-      "rasa": null,
-      "tekst": "/dbm pull 10",
-      "linije": [
-        {
-          "linija": "/dbm pull 10",
-          "objasnjenje": "Naredba addona Deadly Boss Mods. Broj je sekunde. BigWigs isto prima DBM-ov pull timer."
-        }
-      ],
-      "kada": "Boss pullovi i teški packovi gdje svi moraju krenuti u isto vrijeme (tank Charge, mage sheep, sap).",
-      "kadaNe": "Ako nitko u grupi nema DBM/BigWigs, nitko ne vidi timer. DBM ima Forever verziju; sama naredba u Foreveru nije potvrđena.",
-      "level": null,
-      "status": "iz Classica, testirati",
-      "izvor": [
-        "https://mmonster.co/wow-forever/guides/addons/dungeons-and-raids",
-        "https://github.com/DeadlyBossMods/DeadlyBossMods/issues/950"
-      ],
-      "znakova": 12
-    },
-    {
-      "id": "opc-countdown-ugradeni",
-      "naslov": "Ugrađeno odbrojavanje (bez addona)",
-      "svrha": "Blizzardovo odbrojavanje koje vide svi u grupi, ako naredba postoji u Forever klijentu.",
-      "klasa": "opcenito",
-      "uloge": [
-        "opcenito"
-      ],
-      "rasa": null,
-      "tekst": "/countdown 10",
-      "linije": [
-        {
-          "linija": "/countdown 10",
-          "objasnjenje": "Retail naredba od Shadowlandsa; API C_PartyInfo.DoCountdown je dokumentiran i za Forever, ali sama slash naredba nije potvrđena. DBM i BigWigs je preuzimaju ako su uključeni."
-        }
-      ],
-      "kada": "Kad nemate addone, a treba zajednički start.",
-      "kadaNe": "Ako u chatu dobiješ 'unknown command', naredbe nema u Foreveru; tada koristi DBM pull.",
-      "level": null,
-      "status": "iz Classica, testirati",
-      "izvor": [
-        "https://warcraft.wiki.gg/wiki/API_C_PartyInfo.DoCountdown",
-        "https://github.com/DeadlyBossMods/DeadlyBossMods/issues/950"
-      ],
-      "znakova": 13
-    },
-    {
-      "id": "opc-hearthstone",
-      "naslov": "Hearthstone",
-      "svrha": "Jedna tipka za Hearthstone s ikonom i cooldownom na baru.",
-      "klasa": "opcenito",
-      "uloge": [
-        "opcenito"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/use Hearthstone",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Pokaže ikonu i tooltip Hearthstonea na gumbu."
-        },
-        {
-          "linija": "/use Hearthstone",
-          "objasnjenje": "Koristi predmet po imenu. 1 h cooldown kao u Classicu."
-        }
-      ],
-      "kada": "Kraj sesije ili kad treba brzo u grad.",
-      "kadaNe": "U borbi ne radi (cast od 10 s se prekida kad te udare).",
-      "level": null,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://mmonster.co/wow-forever/guides/macros",
-        "https://wow-forever.gg/guides/setup/macros/"
-      ],
-      "znakova": 29
-    },
-    {
-      "id": "opc-mount",
-      "naslov": "Mount (od 40)",
-      "svrha": "Zove mount van borbe; zamijeni IME MOUNTA točnim imenom iz Collections prozora.",
-      "klasa": "opcenito",
-      "uloge": [
-        "opcenito"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/cast [nocombat] IME MOUNTA",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona mounta na gumbu."
-        },
-        {
-          "linija": "/cast [nocombat] IME MOUNTA",
-          "objasnjenje": "U Foreveru su mountovi u Collections prozoru (account-wide), pa se zovu kao spell. Ako ti je mount predmet u torbi, umjesto /cast stavi /use."
-        }
-      ],
-      "kada": "Od levela 40, van borbe, vani.",
-      "kadaNe": "U borbi i u dungeonima ne radi. Druid i shaman ispod 40 koriste Travel Form / Ghost Wolf.",
-      "level": 40,
-      "status": "iz Classica, testirati",
-      "izvor": [
-        "https://mmonster.co/wow-forever/guides/mounts",
-        "https://warcraft.wiki.gg/wiki/Patch_1.60.1/API_changes"
-      ],
-      "znakova": 40
-    },
-    {
-      "id": "opc-trinket-burst",
-      "naslov": "Trinketi uz glavni spell (predložak)",
-      "svrha": "Oba trinketa aktivira prije glavnog spella; zamijeni GLAVNI SPELL svojim.",
-      "klasa": "opcenito",
-      "uloge": [
-        "dps",
-        "heal",
-        "tank"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip GLAVNI SPELL\n/use 13\n/use 14\n/cast GLAVNI SPELL",
-      "linije": [
-        {
-          "linija": "#showtooltip GLAVNI SPELL",
-          "objasnjenje": "Ikona glavnog spella, ne trinketa."
-        },
-        {
-          "linija": "/use 13",
-          "objasnjenje": "Gornji trinket slot. Trinketi s on-use efektom nisu na GCD-u, pa se mogu u istom pritisku."
-        },
-        {
-          "linija": "/use 14",
-          "objasnjenje": "Donji trinket slot. Ako oba trinketa dijele cooldown, aktivira se samo prvi."
-        },
-        {
-          "linija": "/cast GLAVNI SPELL",
-          "objasnjenje": "Glavni spell ide zadnji jer on troši GCD."
-        }
-      ],
-      "kada": "Na bossu kad kreće burst; za healera uz veliki heal.",
-      "kadaNe": "Trinket bez on-use efekta (čisti stat) ništa ne radi, samo baci grešku u chat. Ako ti smeta greška, obriši liniju tog slota.",
-      "level": null,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://mmonster.co/wow-forever/guides/macros",
-        "https://rankedboost.com/world-of-warcraft/forever/macros/rogue/combat/"
-      ],
-      "znakova": 60
-    },
-    {
-      "id": "rc-blood-fury-warrior",
-      "naslov": "Blood Fury + Heroic Strike (orc warrior)",
-      "svrha": "Orkov racial (+10% AP i SP na 15 s, 2 min cd) uz trinkete i Heroic Strike u jednom pritisku.",
-      "klasa": "warrior",
-      "uloge": [
-        "dps"
-      ],
-      "rasa": "orc",
-      "tekst": "#showtooltip Heroic Strike\n/startattack\n/use 13\n/use 14\n/cast Blood Fury\n/cast Heroic Strike",
-      "linije": [
-        {
-          "linija": "#showtooltip Heroic Strike",
-          "objasnjenje": "Ikona Heroic Strikea."
-        },
-        {
-          "linija": "/startattack",
-          "objasnjenje": "Kreni auto-attack ako već ne tučeš."
-        },
-        {
-          "linija": "/use 13",
-          "objasnjenje": "Gornji trinket."
-        },
-        {
-          "linija": "/use 14",
-          "objasnjenje": "Donji trinket."
-        },
-        {
-          "linija": "/cast Blood Fury",
-          "objasnjenje": "Racial. U Classicu nije na GCD-u; ako u Foreveru jest, sljedeća linija neće proći i pritisni dvaput."
-        },
-        {
-          "linija": "/cast Heroic Strike",
-          "objasnjenje": "On-next-swing, nije na GCD-u, pa prolazi uz racial."
-        }
-      ],
-      "kada": "Na početku bossa ili kad je mob skoro mrtav i želiš brzo dokrajčiti (uz Execute).",
-      "kadaNe": "Ne koristi na trash packovima bez razloga; 2 min cooldown čuvaj za boss.",
-      "level": 10,
-      "status": "iz Classica, testirati",
-      "izvor": [
-        "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-october-26/2360696",
-        "https://lfcarry.com/guides/wow-forever-racials",
-        "https://mmonster.co/wow-forever/guides/macros"
-      ],
-      "znakova": 92
-    },
-    {
-      "id": "rc-blood-fury-mage",
-      "naslov": "Blood Fury + Frostbolt (orc mage)",
-      "svrha": "Samo ako je mage orc (naš je troll): orkov racial pa Frostbolt, spell power +10% na 15 s.",
-      "klasa": "mage",
-      "uloge": [
-        "dps"
-      ],
-      "rasa": "orc",
-      "tekst": "#showtooltip Frostbolt\n/cast Blood Fury\n/cast Frostbolt",
-      "linije": [
-        {
-          "linija": "#showtooltip Frostbolt",
-          "objasnjenje": "Ikona Frostbolta."
-        },
-        {
-          "linija": "/cast Blood Fury",
-          "objasnjenje": "Racial, 2 min cd (dev notes 26. 10.). Ako je na GCD-u u Foreveru, Frostbolt ispod neće proći na isti pritisak."
-        },
-        {
-          "linija": "/cast Frostbolt",
-          "objasnjenje": "Glavni spell, bez ranka = najviši rank."
-        }
-      ],
-      "kada": "Otvaranje na bossu, kad imaš punu manu i tank drži aggro.",
-      "kadaNe": "Ne na prvom udarcu trash packa: aggro ode na tebe prije nego tank zgrabi mobove.",
-      "level": 1,
-      "status": "iz Classica, testirati",
-      "izvor": [
-        "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-october-26/2360696",
-        "https://lfcarry.com/guides/wow-forever-racials",
-        "https://mmonster.co/wow-forever/guides/macros"
-      ],
-      "znakova": 55
-    },
-    {
-      "id": "rc-berserking-mage",
-      "naslov": "Berserking + Frostbolt (troll mage)",
-      "svrha": "Trollov racial (+10% brzine castanja 15 s, po dev notes 27. 10.) pa Frostbolt.",
-      "klasa": "mage",
-      "uloge": [
-        "dps"
-      ],
-      "rasa": "troll",
-      "tekst": "#showtooltip Frostbolt\n/cast Berserking\n/cast Frostbolt",
-      "linije": [
-        {
-          "linija": "#showtooltip Frostbolt",
-          "objasnjenje": "Ikona Frostbolta."
-        },
-        {
-          "linija": "/cast Berserking",
-          "objasnjenje": "Racial. U Classicu nije na GCD-u pa Frostbolt prolazi odmah; u Foreveru provjeriti."
-        },
-        {
-          "linija": "/cast Frostbolt",
-          "objasnjenje": "Glavni spell."
-        }
-      ],
-      "kada": "Boss burst, nakon što tank ima aggro.",
-      "kadaNe": "Ne na pullu i ne dok si u Polymorph dužnosti (sheep se prekida ako si zauzet castom).",
-      "level": 1,
-      "status": "iz Classica, testirati",
-      "izvor": [
-        "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-october-26/2360696",
-        "https://lfcarry.com/guides/wow-forever-racials",
-        "https://mmonster.co/wow-forever/guides/macros"
-      ],
-      "znakova": 55
-    },
-    {
-      "id": "rc-blood-fury-shaman",
-      "naslov": "Blood Fury + Healing Wave (orc shaman)",
-      "svrha": "Racial podiže spell power 10% na 15 s; iskoristi uz veliki heal na tanka.",
-      "klasa": "shaman",
-      "uloge": [
-        "heal"
-      ],
-      "rasa": "orc",
-      "tekst": "#showtooltip Healing Wave\n/cast Blood Fury\n/cast [@mouseover,help,nodead][help,nodead][@player] Healing Wave",
-      "linije": [
-        {
-          "linija": "#showtooltip Healing Wave",
-          "objasnjenje": "Ikona Healing Wavea."
-        },
-        {
-          "linija": "/cast Blood Fury",
-          "objasnjenje": "Racial; u Foreveru daje i spell power, ne samo AP."
-        },
-        {
-          "linija": "/cast [@mouseover,help,nodead][help,nodead][@player] Healing Wave",
-          "objasnjenje": "Prvo pokuša na prijatelja ispod miša, ako ga nema onda na prijateljski target, a ako ni toga nema, na tebe. 'nodead' preskače mrtve."
-        }
-      ],
-      "kada": "Boss faza kad tank prima puno štete i treba 15 s jačih healova.",
-      "kadaNe": "Ne troši ga na trash; 2 min cooldown.",
-      "level": 1,
-      "status": "iz Classica, testirati",
-      "izvor": [
-        "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-october-26/2360696",
-        "https://lfcarry.com/guides/wow-forever-racials",
-        "https://mmonster.co/wow-forever/guides/macros"
-      ],
-      "znakova": 108
-    },
-    {
-      "id": "rc-will-of-the-forsaken",
-      "naslov": "Will of the Forsaken (undead)",
-      "svrha": "Skida Charm, Fear i Sleep; u Foreveru više ne daje imunitet nakon toga.",
-      "klasa": "opcenito",
-      "uloge": [
-        "tank",
-        "dps"
-      ],
-      "rasa": "undead",
-      "tekst": "#showtooltip\n/cast Will of the Forsaken",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona racala."
-        },
-        {
-          "linija": "/cast Will of the Forsaken",
-          "objasnjenje": "Racial. Popravljeno 8. 10. da radi i dok spavaš ili si charmani; od 16. 10. ne radi pod Scatter Shotom."
-        }
-      ],
-      "kada": "Kad te boss ili mob fearaju (tank: čim vidiš fear, da ne izgubiš aggro). Rogue: fear usred Blade Flurryja.",
-      "kadaNe": "Nemoj ga trošiti unaprijed 'za svaki slučaj'; imuniteta više nema, pa čekaj da fear sjedne.",
-      "level": 1,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-october-26/2360696",
-        "https://lfcarry.com/guides/wow-forever-racials",
-        "https://www.method.gg/wow-classic/all-new-racial-abilities-in-world-of-warcraft-forever"
-      ],
-      "znakova": 39
-    },
-    {
-      "id": "rc-cannibalize",
-      "naslov": "Cannibalize (undead)",
-      "svrha": "Jede leš humanoida/undeada i vraća 35% zdravlja i mane kroz vrijeme.",
-      "klasa": "opcenito",
-      "uloge": [
-        "tank",
-        "dps"
-      ],
-      "rasa": "undead",
-      "tekst": "#showtooltip\n/cast Cannibalize",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/cast Cannibalize",
-          "objasnjenje": "Channel; svaka šteta ga prekida. U Foreveru vraća i manu, pa je paladinu posebno koristan."
-        }
-      ],
-      "kada": "Poslije borbe, uz leš, umjesto jedenja. Paladin: regen mane između pullova.",
-      "kadaNe": "Ne u borbi i ne ako te healer već liječi; i ne kad si imun na fizičku štetu (tada ne radi).",
-      "level": 1,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-october-26/2360696",
-        "https://lfcarry.com/guides/wow-forever-racials",
-        "https://www.method.gg/wow-classic/all-new-racial-abilities-in-world-of-warcraft-forever"
-      ],
-      "znakova": 30
+      "znakova": 26,
+      "faza": "prvi-dan",
+      "okidac": null,
+      "istaknuto": true,
+      "zaKlase": [
+        "warrior",
+        "rogue",
+        "mage",
+        "shaman",
+        "druid"
+      ]
     },
     {
       "id": "sh-healing-wave-mouseover",
@@ -730,7 +231,9 @@
         "https://rankedboost.com/world-of-warcraft/forever/macros/shaman/restoration/",
         "https://wowforevertalent.com/abilities/shaman/"
       ],
-      "znakova": 78
+      "znakova": 78,
+      "faza": "prvi-dan",
+      "okidac": null
     },
     {
       "id": "sh-lesser-healing-wave-mouseover",
@@ -760,71 +263,79 @@
         "https://rankedboost.com/world-of-warcraft/forever/macros/shaman/restoration/",
         "https://wowforevertalent.com/abilities/shaman/"
       ],
-      "znakova": 85
+      "znakova": 85,
+      "faza": "prvi-dan",
+      "okidac": null,
+      "istaknuto": true
     },
     {
-      "id": "sh-chain-heal-mouseover",
-      "naslov": "Chain Heal na mouseover",
-      "svrha": "Chain Heal kreće od jedinice pod mišem i skače na ranjene u blizini.",
-      "klasa": "shaman",
+      "id": "dr-healing-touch-mouseover",
+      "naslov": "Healing Touch na mouseover",
+      "svrha": "Veliki heal na jedinicu pod mišem, inače target, inače ti.",
+      "klasa": "druid",
       "uloge": [
         "heal"
       ],
       "rasa": null,
-      "tekst": "#showtooltip\n/cast [@mouseover,help,nodead][help,nodead][@player] Chain Heal",
+      "tekst": "#showtooltip\n/cast [@mouseover,help,nodead][help,nodead][@player] Healing Touch",
       "linije": [
         {
           "linija": "#showtooltip",
           "objasnjenje": "Ikona."
         },
         {
-          "linija": "/cast [@mouseover,help,nodead][help,nodead][@player] Chain Heal",
+          "linija": "/cast [@mouseover,help,nodead][help,nodead][@player] Healing Touch",
           "objasnjenje": "Prvo pokuša na prijatelja ispod miša, ako ga nema onda na prijateljski target, a ako ni toga nema, na tebe. 'nodead' preskače mrtve."
         }
       ],
-      "kada": "Kad su tri meleeja (warrior, rogue, paladin) skupa i svi ranjeni; miš na najranjenijeg.",
-      "kadaNe": "Ne za jednog ranjenog; tada je Healing Wave jači po mani.",
-      "level": 40,
+      "kada": "Glavni heal na tanka u grupi.",
+      "kadaNe": "Ne radi u formama (Bear, Cat, Travel); prvo macro 'Izlaz iz forme'.",
+      "level": 1,
       "status": "provjereno za Forever",
       "izvor": [
-        "https://rankedboost.com/world-of-warcraft/forever/macros/shaman/restoration/",
-        "https://wowforevertalent.com/abilities/shaman/"
+        "https://mmonster.co/wow-forever/guides/macros",
+        "https://rankedboost.com/world-of-warcraft/forever/macros/druid/restoration/",
+        "https://wowforevertalent.com/abilities/druid/"
       ],
-      "znakova": 76
+      "znakova": 79,
+      "lik": "niksa-alt",
+      "faza": "prvi-dan",
+      "okidac": null,
+      "istaknuto": true
     },
     {
-      "id": "sh-ns-healing-wave",
-      "naslov": "Nature's Swiftness + instant Healing Wave",
-      "svrha": "Hitni heal: NS čini sljedeći Nature spell instant, pa odmah Healing Wave na mouseover/target/sebe.",
-      "klasa": "shaman",
+      "id": "dr-regrowth-mouseover",
+      "naslov": "Regrowth na mouseover",
+      "svrha": "Srednji heal s HoT-om na jedinicu pod mišem.",
+      "klasa": "druid",
       "uloge": [
         "heal"
       ],
       "rasa": null,
-      "tekst": "#showtooltip Healing Wave\n/cast Nature's Swiftness\n/cast [@mouseover,help,nodead][help,nodead][@player] Healing Wave",
+      "tekst": "#showtooltip\n/cast [@mouseover,help,nodead][help,nodead][@player] Regrowth",
       "linije": [
         {
-          "linija": "#showtooltip Healing Wave",
-          "objasnjenje": "Ikona Healing Wavea."
+          "linija": "#showtooltip",
+          "objasnjenje": "Ikona."
         },
         {
-          "linija": "/cast Nature's Swiftness",
-          "objasnjenje": "Nije na GCD-u, pa prolazi u istom pritisku. 3 min cooldown."
-        },
-        {
-          "linija": "/cast [@mouseover,help,nodead][help,nodead][@player] Healing Wave",
-          "objasnjenje": "Instant Healing Wave na prijatelja pod mišem, inače target, inače ti."
+          "linija": "/cast [@mouseover,help,nodead][help,nodead][@player] Regrowth",
+          "objasnjenje": "Prvo pokuša na prijatelja ispod miša, ako ga nema onda na prijateljski target, a ako ni toga nema, na tebe. 'nodead' preskače mrtve."
         }
       ],
-      "kada": "Tank pada ispod 30% i Healing Wave ne bi stigao.",
-      "kadaNe": "Ne za obične rupe; ako heal ne prođe (npr. nemaš manu), NS ostaje aktivan 10 s za sljedeći Nature spell.",
-      "level": 30,
+      "kada": "Tank prima stalnu štetu; Regrowth daje odmah i tick kroz 21 s, a otvara Swiftmend.",
+      "kadaNe": "Skuplji od Rejuvenationa za malu štetu; solo radije Rejuvenation.",
+      "level": 12,
       "status": "provjereno za Forever",
       "izvor": [
-        "https://rankedboost.com/world-of-warcraft/forever/macros/shaman/restoration/",
-        "https://wowforevertalent.com/abilities/shaman/"
+        "https://rankedboost.com/world-of-warcraft/forever/macros/druid/restoration/",
+        "https://wowforevertalent.com/abilities/druid/"
       ],
-      "znakova": 116
+      "znakova": 74,
+      "lik": "niksa-alt",
+      "faza": "prvi-dan",
+      "okidac": null,
+      "istaknuto": true
     },
     {
       "id": "sh-earth-shock-interrupt",
@@ -861,364 +372,43 @@
         "https://mmonster.co/wow-forever/guides/macros",
         "https://wow-forever.gg/guides/setup/macros/"
       ],
-      "znakova": 107
+      "znakova": 107,
+      "faza": "prvi-dan",
+      "okidac": null,
+      "istaknuto": true
     },
     {
-      "id": "sh-ancestral-spirit-mouseover",
-      "naslov": "Ancestral Spirit na mrtvog pod mišem",
-      "svrha": "Oživi mrtvog igrača ispod miša ili mrtvog targeta.",
-      "klasa": "shaman",
+      "id": "rg-kick",
+      "naslov": "Kick (Shift na focus)",
+      "svrha": "Interrupt targeta; sa Shiftom focusa.",
+      "klasa": "rogue",
       "uloge": [
-        "heal"
+        "dps"
       ],
       "rasa": null,
-      "tekst": "#showtooltip\n/cast [@mouseover,help,dead][help,dead] Ancestral Spirit",
+      "tekst": "#showtooltip Kick\n/cast [mod:shift,@focus,harm,nodead][harm,nodead] Kick",
       "linije": [
         {
-          "linija": "#showtooltip",
+          "linija": "#showtooltip Kick",
           "objasnjenje": "Ikona."
         },
         {
-          "linija": "/cast [@mouseover,help,dead][help,dead] Ancestral Spirit",
-          "objasnjenje": "'dead' bira samo mrtve; na živom ništa ne radi, pa ne možeš fulati."
+          "linija": "/cast [mod:shift,@focus,harm,nodead][harm,nodead] Kick",
+          "objasnjenje": "Kick (12), 5 s lock, 10 s cd. Melee domet, pa focus mora biti blizu."
         }
       ],
-      "kada": "Nakon borbe, miš na mrtvog u party frameu.",
-      "kadaNe": "U borbi ne radi (nije combat res).",
+      "kada": "Mob casta; rogue prekida melee castere, mage one na daljinu.",
+      "kadaNe": "Nema ga na cooldownu: nema zamjene osim Gouge (prekida, ali ne lockira).",
       "level": 12,
       "status": "provjereno za Forever",
       "izvor": [
-        "https://rankedboost.com/world-of-warcraft/forever/macros/druid/",
-        "https://wowforevertalent.com/abilities/shaman/"
+        "https://rankedboost.com/world-of-warcraft/forever/macros/rogue/",
+        "https://wowforevertalent.com/abilities/rogue/"
       ],
-      "znakova": 69
-    },
-    {
-      "id": "sh-cure-poison-disease",
-      "naslov": "Cure Poison, sa Shiftom Cure Disease",
-      "svrha": "Dispel na mouseover/target/sebe: otrov bez modifikatora, bolest sa Shiftom.",
-      "klasa": "shaman",
-      "uloge": [
-        "heal"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/cast [mod:shift,@mouseover,help,nodead][mod:shift,help,nodead][mod:shift] Cure Disease; [@mouseover,help,nodead][help,nodead][@player] Cure Poison",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona se mijenja ovisno o Shiftu."
-        },
-        {
-          "linija": "/cast [mod:shift,@mouseover,help,nodead][mod:shift,help,nodead][mod:shift] Cure Disease; [@mouseover,help,nodead][help,nodead][@player] Cure Poison",
-          "objasnjenje": "Sa Shiftom Cure Disease (level 22), inače Cure Poison (level 16). Redoslijed: miš, target, ti."
-        }
-      ],
-      "kada": "Wailing Caverns i Razorfen (otrovi), Scholomance i Stratholme (bolesti).",
-      "kadaNe": "Ne skida curse i magiju; za magiju na neprijatelju je Purge.",
-      "level": 16,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://rankedboost.com/world-of-warcraft/forever/macros/shaman/",
-        "https://wowforevertalent.com/abilities/shaman/"
-      ],
-      "znakova": 160
-    },
-    {
-      "id": "sh-purge-ili-cure",
-      "naslov": "Purge na neprijatelja ili Cure Poison na prijatelja",
-      "svrha": "Jedna tipka: na neprijatelju skida buff, na prijatelju otrov.",
-      "klasa": "shaman",
-      "uloge": [
-        "heal",
-        "dps"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/cast [harm,nodead] Purge; [help,nodead][@player] Cure Poison",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/cast [harm,nodead] Purge; [help,nodead][@player] Cure Poison",
-          "objasnjenje": "Target neprijatelj = Purge (level 12). Target prijatelj ili nema targeta = Cure Poison na njega/tebe."
-        }
-      ],
-      "kada": "Mob si baci shield ili buff; ili kolega ima otrov.",
-      "kadaNe": "Purge skida jedan efekt po castu (od ranka 2 dva); pritisni opet ako je ostalo.",
-      "level": 12,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://rankedboost.com/world-of-warcraft/forever/macros/shaman/",
-        "https://wowforevertalent.com/abilities/shaman/"
-      ],
-      "znakova": 74
-    },
-    {
-      "id": "sh-call-of-the-elements",
-      "naslov": "Call of the Elements, sa Shiftom Totemic Recall",
-      "svrha": "Baca spremljeni set od 4 totema u jednom castu; sa Shiftom skuplja totemе i vraća dio mane.",
-      "klasa": "shaman",
-      "uloge": [
-        "heal",
-        "dps",
-        "tank"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/cast [mod:shift] Totemic Recall; Call of the Elements",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/cast [mod:shift] Totemic Recall; Call of the Elements",
-          "objasnjenje": "Call of the Elements (level 20) ima cast od 3 s i baca set totema koji si složio u Totem baru. Totemic Recall (level 20) ih skupi i vrati 25% mane (popravljeno 1. 10.)."
-        }
-      ],
-      "kada": "Početak svakog pulla: totemi dolje jednim pritiskom. Nakon borbe Shift da ne ostavljaš totemе iza sebe.",
-      "kadaNe": "Cast od 3 s: ne usred borbe kad tank pada; tada prvo heal.",
-      "level": 20,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://mobalytics.gg/wow-forever/guides/shaman-class-overview",
-        "https://wowforevertalent.com/abilities/shaman/",
-        "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-october-26/2360696"
-      ],
-      "znakova": 67
-    },
-    {
-      "id": "sh-call-of-ancestors-spirits",
-      "naslov": "Drugi i treći set totema",
-      "svrha": "Call of the Ancestors (level 30) i Call of the Spirits (level 40): drugi set bez modifikatora, treći sa Shiftom.",
-      "klasa": "shaman",
-      "uloge": [
-        "heal",
-        "dps"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/cast [mod:shift] Call of the Spirits; Call of the Ancestors",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/cast [mod:shift] Call of the Spirits; Call of the Ancestors",
-          "objasnjenje": "Dva dodatna spremljena seta (npr. jedan za heal: Mana Spring, Healing Stream, Tremor; drugi za melee: Windfury, Strength of Earth, Grace of Air)."
-        }
-      ],
-      "kada": "Kad imaš različite setove za heal, DPS i bossove s fearom (Tremor).",
-      "kadaNe": "Ispod 30 nemaš ni jedan od ova dva; do tada koristi samo Call of the Elements.",
-      "level": 30,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://mobalytics.gg/wow-forever/guides/shaman-class-overview",
-        "https://wowforevertalent.com/abilities/shaman/"
-      ],
-      "znakova": 73
-    },
-    {
-      "id": "sh-totemic-projection",
-      "naslov": "Totemic Projection",
-      "svrha": "Premješta aktivne totemе do 30 m dalje bez ponovnog bacanja.",
-      "klasa": "shaman",
-      "uloge": [
-        "heal",
-        "dps"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/cast Totemic Projection",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/cast Totemic Projection",
-          "objasnjenje": "Level 22, 1 min cd. Ako se cilja na tlo, Forever će ti dati zeleni krug; isprobaj i varijantu /cast [@cursor] Totemic Projection da ih baci na položaj miša bez klika."
-        }
-      ],
-      "kada": "Grupa se pomakne za sljedeći pack, a totemi su još svježi.",
-      "kadaNe": "Ne ako totemi ionako ističu za par sekundi; tada novi Call of the Elements.",
-      "level": 22,
-      "status": "iz Classica, testirati",
-      "izvor": [
-        "https://mobalytics.gg/wow-forever/guides/shaman-class-overview",
-        "https://wowforevertalent.com/abilities/shaman/",
-        "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-october-26/2360696"
-      ],
-      "znakova": 37
-    },
-    {
-      "id": "sh-grounding-tremor",
-      "naslov": "Grounding Totem, sa Shiftom Tremor",
-      "svrha": "Prekine tvoj cast i baci Grounding (upije jedan spell) ili sa Shiftom Tremor (skida fear).",
-      "klasa": "shaman",
-      "uloge": [
-        "heal",
-        "dps"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip [mod:shift] Tremor Totem; Grounding Totem\n/stopcasting\n/cast [mod:shift] Tremor Totem; Grounding Totem",
-      "linije": [
-        {
-          "linija": "#showtooltip [mod:shift] Tremor Totem; Grounding Totem",
-          "objasnjenje": "Ikona prati modifikator."
-        },
-        {
-          "linija": "/stopcasting",
-          "objasnjenje": "Prekini heal da totem ode odmah."
-        },
-        {
-          "linija": "/cast [mod:shift] Tremor Totem; Grounding Totem",
-          "objasnjenje": "Grounding (level 30) upije jedan ciljani spell pa se uništi (od 16. 10.). Tremor (level 18) skida fear/charm/sleep s party-ja u 30 m."
-        }
-      ],
-      "kada": "Boss casta veliki spell na tebe/tanka; ili boss s fearom (Tremor prije castanja).",
-      "kadaNe": "Grounding ne upija AoE. Tremor nije instant zaštita: skida efekt svakih par sekundi.",
-      "level": 18,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://rankedboost.com/world-of-warcraft/forever/macros/shaman/",
-        "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-october-26/2360696",
-        "https://wowforevertalent.com/abilities/shaman/"
-      ],
-      "znakova": 115
-    },
-    {
-      "id": "sh-imbue-windfury-rockbiter",
-      "naslov": "Imbue: Windfury, sa Shiftom Rockbiter (off-tank)",
-      "svrha": "Stavlja imbue na glavno oružje: Windfury za DPS, Rockbiter sa Shiftom kad off-tankaš.",
-      "klasa": "shaman",
-      "uloge": [
-        "dps",
-        "tank"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/cast [mod:shift] Rockbiter Weapon; Windfury Weapon",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona prati modifikator."
-        },
-        {
-          "linija": "/cast [mod:shift] Rockbiter Weapon; Windfury Weapon",
-          "objasnjenje": "Imbue se baca na glavno oružje. Windfury od levela 30; Rockbiter od 1. U Foreveru imbue traje 60 min. Spirit Weapons talent: s Rockbiterom +30% threata, bez njega -30%."
-        }
-      ],
-      "kada": "Prije dungeona: Windfury za DPS. Kad Dex nema, Shift za Rockbiter pa štit (macro 'Off-tank: štit').",
-      "kadaNe": "Rockbiter dok netko drugi tanka: krade aggro zbog Spirit Weapons. Ne zaboravi vratiti Windfury kad tank dođe.",
-      "level": 1,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://www.zockify.com/forever/shaman/",
-        "https://wowforevertalent.com/abilities/shaman/",
-        "https://mmonster.co/wow-forever/guides/macros"
-      ],
-      "znakova": 64
-    },
-    {
-      "id": "sh-offtank-stit",
-      "naslov": "Off-tank: jednoručno oružje i štit",
-      "svrha": "Zamjena na mace + štit u jednom pritisku (zamijeni imena svojim predmetima).",
-      "klasa": "shaman",
-      "uloge": [
-        "tank"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/equipslot 16 IME ORUŽJA\n/equipslot 17 IME ŠTITA",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona oružja."
-        },
-        {
-          "linija": "/equipslot 16 IME ORUŽJA",
-          "objasnjenje": "Slot 16 je glavna ruka. Upiši točno ime jednoručnog oružja."
-        },
-        {
-          "linija": "/equipslot 17 IME ŠTITA",
-          "objasnjenje": "Slot 17 je druga ruka. Od 8. 10. Forever dopušta zamjenu više komada u jednom GCD-u."
-        }
-      ],
-      "kada": "Kad preuzimaš tank (Dex offline, drugi pack). Nakon toga Rockbiter macroom.",
-      "kadaNe": "Zamjena oružja u borbi resetira swing timer; ne radi je usred Windfury DPS-a bez potrebe.",
-      "level": 1,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-october-26/2360696",
-        "https://mmonster.co/wow-forever/guides/macros"
-      ],
-      "znakova": 61
-    },
-    {
-      "id": "sh-ghost-wolf",
-      "naslov": "Ghost Wolf (ostani u formi, Shift izlazi)",
-      "svrha": "Ulazi u Ghost Wolf bez rizika da te drugi pritisak izbaci; sa Shiftom izlazi.",
-      "klasa": "shaman",
-      "uloge": [
-        "heal",
-        "dps",
-        "tank"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/cancelform [mod:shift]\n/cast [nomod:shift] !Ghost Wolf",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/cancelform [mod:shift]",
-          "objasnjenje": "Shift: izlaz iz forme."
-        },
-        {
-          "linija": "/cast [nomod:shift] !Ghost Wolf",
-          "objasnjenje": "Uskličnik: ako si već vuk, ne izlazi. Level 20, cast 3 s samo vani (talent Improved Ghost Wolf: instant i unutra)."
-        }
-      ],
-      "kada": "Trčanje između packova i po zonama ispod 40; bijeg kad healer ne smije umrijeti.",
-      "kadaNe": "U formi ne možeš healati: izađi (Shift) prije castanja.",
-      "level": 20,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://wowforevertalent.com/abilities/shaman/",
-        "https://mmonster.co/wow-forever/guides/macros",
-        "https://kami-labs.fr/en/wow-forever/macros-wow-forever-9-classes/"
-      ],
-      "znakova": 68
-    },
-    {
-      "id": "mg-polymorph-focus",
-      "naslov": "Polymorph na focus, mouseover ili target",
-      "svrha": "Sheep ide prvo na focus, pa na jedinicu pod mišem, pa na target; target ti ostaje isti.",
-      "klasa": "mage",
-      "uloge": [
-        "dps"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/cast [@focus,harm,nodead][@mouseover,harm,nodead][harm,nodead] Polymorph",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/cast [@focus,harm,nodead][@mouseover,harm,nodead][harm,nodead] Polymorph",
-          "objasnjenje": "Prije pulla stavi sheep metu u focus (macro 'Postavi focus'). Onda spamaš dok tučeš skull."
-        }
-      ],
-      "kada": "Svaki pack s humanoidom ili beastom viška. Re-sheep kad vidiš da se budi.",
-      "kadaNe": "Ne na undeade i elementale (ne radi). Ne sheepaj metu koju tank tuče.",
-      "level": 8,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://mmonster.co/wow-forever/guides/macros",
-        "https://rankedboost.com/world-of-warcraft/forever/macros/mage/arcane/",
-        "https://wowforevertalent.com/abilities/mage/"
-      ],
-      "znakova": 86
+      "znakova": 72,
+      "faza": "prvi-dan",
+      "okidac": null,
+      "istaknuto": true
     },
     {
       "id": "mg-counterspell",
@@ -1254,7 +444,505 @@
         "https://mmonster.co/wow-forever/guides/macros",
         "https://wowforevertalent.com/abilities/mage/"
       ],
-      "znakova": 101
+      "znakova": 101,
+      "faza": "prvi-dan",
+      "okidac": null
+    },
+    {
+      "id": "opc-oznaci-skull-cross",
+      "naslov": "Označi target: skull, sa Shiftom cross",
+      "svrha": "Tank jednom tipkom stavi lubanju (prvi kill) na target, a sa Shiftom križ (drugi kill ili sheep).",
+      "klasa": "paladin",
+      "uloge": [
+        "tank"
+      ],
+      "rasa": null,
+      "tekst": "/tm [mod:shift] 7; 8",
+      "linije": [
+        {
+          "linija": "/tm [mod:shift] 7; 8",
+          "objasnjenje": "8 je skull (lubanja), 7 je cross (križ). Oznaka ide na tvoj trenutni target. U party-ju to smije svatko, u raidu lead ili assist."
+        }
+      ],
+      "kada": "Prije svakog pulla s više mobova: skull na prvi, cross na sheep/sap metu. Dogovorite redoslijed i držite ga se.",
+      "kadaNe": "Ne mijenjaj oznake usred borbe bez razloga; zbunjuje DPS. Na retailu je od ožujka 2026. ograničen broj oznaka u kratkom vremenu; za Forever nije potvrđeno.",
+      "level": null,
+      "status": "provjereno za Forever",
+      "izvor": [
+        "https://mmonster.co/wow-forever/guides/macros",
+        "https://warcraft.wiki.gg/wiki/List_of_slash_commands"
+      ],
+      "znakova": 20,
+      "faza": "prvi-dan",
+      "okidac": null,
+      "istaknuto": true
+    },
+    {
+      "id": "pl-judgement-taunt",
+      "istaknuto": true,
+      "naslov": "Judgement = taunt (mouseover)",
+      "svrha": "Judgement na moba pod mišem ili target; sa Seal of Fury to je taunt 4 s na 10 m.",
+      "klasa": "paladin",
+      "uloge": [
+        "tank"
+      ],
+      "rasa": null,
+      "tekst": "#showtooltip Judgement\n/startattack\n/cast [@mouseover,harm,nodead][harm,nodead] Judgement",
+      "linije": [
+        {
+          "linija": "#showtooltip Judgement",
+          "objasnjenje": "Ikona."
+        },
+        {
+          "linija": "/startattack",
+          "objasnjenje": "Auto-attack na metu ako ti je target."
+        },
+        {
+          "linija": "/cast [@mouseover,harm,nodead][harm,nodead] Judgement",
+          "objasnjenje": "Judgement (4), 10 s cd, 10 m. S aktivnim Seal of Fury taunt. Miš na nameplate moba koji ide na healera."
+        }
+      ],
+      "kada": "Svakih 10 s na mobu kojeg držiš (threat); hitno na mobu koji ode na Niksu.",
+      "kadaNe": "Ako promašiš, taunt je na cd; talent Swift Judgement resetira. Bez Seal of Fury nije taunt.",
+      "level": 10,
+      "status": "provjereno za Forever",
+      "izvor": [
+        "https://rankedboost.com/world-of-warcraft/forever/macros/paladin/protection/",
+        "https://wowguide.net/en/guides/wow-forever-paladin-changes",
+        "https://wowforevertalent.com/abilities/paladin/"
+      ],
+      "znakova": 89,
+      "faza": "prvi-dan",
+      "okidac": null
+    },
+    {
+      "id": "pl-lay-on-hands-mouseover",
+      "naslov": "Lay on Hands na mouseover",
+      "svrha": "Prekini cast i puni heal na jedinicu pod mišem, target ili sebe; troši svu manu.",
+      "klasa": "paladin",
+      "uloge": [
+        "tank"
+      ],
+      "rasa": null,
+      "tekst": "#showtooltip\n/stopcasting\n/cast [@mouseover,help,nodead][help,nodead][@player] Lay on Hands",
+      "linije": [
+        {
+          "linija": "#showtooltip",
+          "objasnjenje": "Ikona."
+        },
+        {
+          "linija": "/stopcasting",
+          "objasnjenje": "Prekini cast koji je u tijeku."
+        },
+        {
+          "linija": "/cast [@mouseover,help,nodead][help,nodead][@player] Lay on Hands",
+          "objasnjenje": "Prvo pokuša na prijatelja ispod miša, ako ga nema onda na prijateljski target, a ako ni toga nema, na tebe. 'nodead' preskače mrtve. Level 10, 1 h cd."
+        }
+      ],
+      "kada": "Healer umire ili ti padaš ispod 15% bez heala u dometu.",
+      "kadaNe": "Nikad 'za svaki slučaj': 1 h cooldown i ostaneš bez mane.",
+      "level": 10,
+      "status": "provjereno za Forever",
+      "izvor": [
+        "https://rankedboost.com/world-of-warcraft/forever/macros/paladin/holy/",
+        "https://mmonster.co/wow-forever/guides/macros",
+        "https://wowforevertalent.com/abilities/paladin/"
+      ],
+      "znakova": 91,
+      "faza": "prvi-dan",
+      "okidac": null,
+      "istaknuto": true
+    },
+    {
+      "id": "mg-polymorph-focus",
+      "naslov": "Polymorph na focus, mouseover ili target",
+      "svrha": "Sheep ide prvo na focus, pa na jedinicu pod mišem, pa na target; target ti ostaje isti.",
+      "klasa": "mage",
+      "uloge": [
+        "dps"
+      ],
+      "rasa": null,
+      "tekst": "#showtooltip\n/cast [@focus,harm,nodead][@mouseover,harm,nodead][harm,nodead] Polymorph",
+      "linije": [
+        {
+          "linija": "#showtooltip",
+          "objasnjenje": "Ikona."
+        },
+        {
+          "linija": "/cast [@focus,harm,nodead][@mouseover,harm,nodead][harm,nodead] Polymorph",
+          "objasnjenje": "Prije pulla stavi sheep metu u focus (macro 'Postavi focus'). Onda spamaš dok tučeš skull."
+        }
+      ],
+      "kada": "Svaki pack s humanoidom ili beastom viška. Re-sheep kad vidiš da se budi.",
+      "kadaNe": "Ne na undeade i elementale (ne radi). Ne sheepaj metu koju tank tuče.",
+      "level": 8,
+      "status": "provjereno za Forever",
+      "izvor": [
+        "https://mmonster.co/wow-forever/guides/macros",
+        "https://rankedboost.com/world-of-warcraft/forever/macros/mage/arcane/",
+        "https://wowforevertalent.com/abilities/mage/"
+      ],
+      "znakova": 86,
+      "faza": "prvi-dan",
+      "okidac": null,
+      "istaknuto": true
+    },
+    {
+      "id": "rg-sap-mouseover",
+      "naslov": "Sap na mouseover",
+      "svrha": "Sap na humanoida pod mišem, inače target; u Foreveru Sap ne skida Stealth.",
+      "klasa": "rogue",
+      "uloge": [
+        "dps"
+      ],
+      "rasa": null,
+      "tekst": "#showtooltip\n/cast [@mouseover,harm,nodead][harm,nodead] Sap",
+      "linije": [
+        {
+          "linija": "#showtooltip",
+          "objasnjenje": "Ikona."
+        },
+        {
+          "linija": "/cast [@mouseover,harm,nodead][harm,nodead] Sap",
+          "objasnjenje": "Prvo neprijatelj ispod miša, inače tvoj target. Ako ni jedno nije živ neprijatelj, ništa se ne dogodi. Samo humanoidi van borbe."
+        }
+      ],
+      "kada": "Prije pulla na moba s oznakom (dogovor: cross ili moon). Ostaješ u stealthu.",
+      "kadaNe": "Ne na metu koju mage sheepa. Šteta budi.",
+      "level": 10,
+      "status": "provjereno za Forever",
+      "izvor": [
+        "https://news.blizzard.com/en-us/article/24310968/world-of-warcraft-forever-class-deep-dives-rogue-and-warlock",
+        "https://www.zockify.com/forever/rogue/",
+        "https://rankedboost.com/world-of-warcraft/forever/macros/rogue/"
+      ],
+      "znakova": 60,
+      "faza": "prvi-dan",
+      "okidac": null,
+      "istaknuto": true
+    },
+    {
+      "id": "wr-pummel-shield-bash",
+      "naslov": "Pummel u Berserkeru, Shield Bash sa štitom",
+      "svrha": "Interrupt ovisno o stanceu i opremi; ako ništa ne odgovara, prebaci u Berserker.",
+      "klasa": "warrior",
+      "uloge": [
+        "dps",
+        "tank"
+      ],
+      "rasa": null,
+      "tekst": "#showtooltip\n/cast [stance:3] Pummel; [equipped:Shields] Shield Bash; Berserker Stance",
+      "linije": [
+        {
+          "linija": "#showtooltip",
+          "objasnjenje": "Ikona."
+        },
+        {
+          "linija": "/cast [stance:3] Pummel; [equipped:Shields] Shield Bash; Berserker Stance",
+          "objasnjenje": "Pummel (38) traži Berserker. Shield Bash (12) traži štit. Inače prebacuje u Berserker; pritisni opet."
+        }
+      ],
+      "kada": "Caster mob heala ili casta.",
+      "kadaNe": "Kao DPS s 2H bez štita ispod 38 nemaš interrupt; tada javi mageu/shamanu.",
+      "level": 30,
+      "status": "provjereno za Forever",
+      "izvor": [
+        "https://rankedboost.com/world-of-warcraft/forever/macros/warrior/",
+        "https://wowforevertalent.com/abilities/warrior/"
+      ],
+      "znakova": 86,
+      "faza": "kasnije",
+      "okidac": "Od ~30, kad warrior dobije Berserker Stance.",
+      "istaknuto": false
+    },
+    {
+      "id": "wr-overpower",
+      "naslov": "Overpower (prebaci u Battle)",
+      "svrha": "Overpower ako si u Battle Stanceu, inače prebaci u Battle.",
+      "klasa": "warrior",
+      "uloge": [
+        "dps"
+      ],
+      "rasa": null,
+      "tekst": "#showtooltip Overpower\n/cast [stance:1] Overpower; Battle Stance",
+      "linije": [
+        {
+          "linija": "#showtooltip Overpower",
+          "objasnjenje": "Ikona."
+        },
+        {
+          "linija": "/cast [stance:1] Overpower; Battle Stance",
+          "objasnjenje": "Overpower (12) samo u Battle. Tactical Mastery (uči se na 14 u Foreveru) zadrži do 10 ragea pri promjeni."
+        }
+      ],
+      "kada": "Mob dodgea (vidiš 'Dodge' iznad glave): odmah Overpower.",
+      "kadaNe": "Iz Berserkera gubiš rage iznad 10; ne skači bez razloga.",
+      "level": 30,
+      "status": "provjereno za Forever",
+      "izvor": [
+        "https://rankedboost.com/world-of-warcraft/forever/macros/warrior/arms/",
+        "https://www.zockify.com/forever/warrior/",
+        "https://mmonster.co/wow-forever/guides/macros"
+      ],
+      "znakova": 64,
+      "faza": "kasnije",
+      "okidac": "Od ~30, kad warrior dobije Berserker Stance i počne mijenjati stance.",
+      "istaknuto": false
+    },
+    {
+      "id": "rg-poison-main-hand",
+      "naslov": "Otrov na glavno oružje",
+      "svrha": "Nanese Instant Poison na oružje u glavnoj ruci bez klikanja po torbi.",
+      "klasa": "rogue",
+      "uloge": [
+        "dps"
+      ],
+      "rasa": null,
+      "tekst": "/use Instant Poison\n/use 16",
+      "linije": [
+        {
+          "linija": "/use Instant Poison",
+          "objasnjenje": "Uzmi otrov iz torbe (klasični Classic trik). Ako otrovi u Foreveru imaju rank u imenu, upiši točno ime iz torbe."
+        },
+        {
+          "linija": "/use 16",
+          "objasnjenje": "Slot 16 = glavna ruka; otrov se nanese na to oružje."
+        }
+      ],
+      "kada": "Prije dungeona i kad charges istekne (u Foreveru ih ima više).",
+      "kadaNe": "U borbi ne radi. Otrovi dolaze iz quest lanca od 20 i rade se u Professions prozoru.",
+      "level": 20,
+      "status": "iz Classica, testirati",
+      "izvor": [
+        "https://www.warcrafttavern.com/forever/guides/poisons/",
+        "https://news.blizzard.com/en-us/article/24310968/world-of-warcraft-forever-class-deep-dives-rogue-and-warlock",
+        "https://warcraft.wiki.gg/wiki/Useful_macros_(old)"
+      ],
+      "znakova": 27,
+      "faza": "kasnije",
+      "okidac": "Od levela 20, kad rogue nauči poisone.",
+      "istaknuto": false
+    },
+    {
+      "id": "rg-vanish",
+      "naslov": "Vanish (stop attack prvo)",
+      "svrha": "Zaustavi auto-attack pa Vanish, da ti vlastiti udarac ne skine stealth.",
+      "klasa": "rogue",
+      "uloge": [
+        "dps"
+      ],
+      "rasa": null,
+      "tekst": "#showtooltip Vanish\n/stopattack\n/cast Vanish",
+      "linije": [
+        {
+          "linija": "#showtooltip Vanish",
+          "objasnjenje": "Ikona."
+        },
+        {
+          "linija": "/stopattack",
+          "objasnjenje": "Prekini auto-attack; inače swing koji je već krenuo može izbaciti iz stealtha."
+        },
+        {
+          "linija": "/cast Vanish",
+          "objasnjenje": "Vanish (22), Flash Powder reagens. Mobovi te zaborave."
+        }
+      ],
+      "kada": "Aggro na tebi i healer ne stiže; wipe je neizbježan pa spasi repair.",
+      "kadaNe": "Vanish usred boss AoE-a ne pomaže (AoE te izbaci). Ne vanishaj dok tank još može tauntati.",
+      "level": 22,
+      "status": "provjereno za Forever",
+      "izvor": [
+        "https://rankedboost.com/world-of-warcraft/forever/macros/rogue/subtlety/",
+        "https://warcraft.wiki.gg/wiki/Useful_macros_(old)",
+        "https://wowforevertalent.com/abilities/rogue/"
+      ],
+      "znakova": 44,
+      "faza": "kasnije",
+      "okidac": "Od levela 22.",
+      "istaknuto": false
+    },
+    {
+      "id": "rg-blind-mouseover",
+      "naslov": "Blind na mouseover",
+      "svrha": "Blind moba pod mišem ili targeta, bez promjene targeta.",
+      "klasa": "rogue",
+      "uloge": [
+        "dps"
+      ],
+      "rasa": null,
+      "tekst": "#showtooltip\n/cast [@mouseover,harm,nodead][harm,nodead] Blind",
+      "linije": [
+        {
+          "linija": "#showtooltip",
+          "objasnjenje": "Ikona."
+        },
+        {
+          "linija": "/cast [@mouseover,harm,nodead][harm,nodead] Blind",
+          "objasnjenje": "Prvo neprijatelj ispod miša, inače tvoj target. Ako ni jedno nije živ neprijatelj, ništa se ne dogodi. Level 34, Blinding Powder, 5 min cd, 10 s."
+        }
+      ],
+      "kada": "Hitni CC: mob krene na healera, a nitko nema CC spreman.",
+      "kadaNe": "Ne za obične pullove; skup je i ima dug cd.",
+      "level": 34,
+      "status": "provjereno za Forever",
+      "izvor": [
+        "https://rankedboost.com/world-of-warcraft/forever/macros/rogue/",
+        "https://wowforevertalent.com/abilities/rogue/"
+      ],
+      "znakova": 62,
+      "faza": "kasnije",
+      "okidac": "Od levela 34.",
+      "istaknuto": false
+    },
+    {
+      "id": "dr-rebirth-mouseover",
+      "naslov": "Rebirth u borbi, Revive izvan nje (mouseover)",
+      "svrha": "Oživi mrtvog ispod miša ili mrtvog targeta: Rebirth u borbi, Revive van borbe; forma se skida samo ako postoji mrtvi.",
+      "klasa": "druid",
+      "uloge": [
+        "heal",
+        "dps",
+        "tank"
+      ],
+      "rasa": null,
+      "tekst": "#showtooltip\n/cancelform [@mouseover,help,dead][help,dead]\n/cast [combat,@mouseover,help,dead][combat,help,dead] Rebirth; [@mouseover,help,dead][help,dead] Revive",
+      "linije": [
+        {
+          "linija": "#showtooltip",
+          "objasnjenje": "Ikona prati borbu."
+        },
+        {
+          "linija": "/cancelform [@mouseover,help,dead][help,dead]",
+          "objasnjenje": "Izlaz iz forme samo kad je pod mišem/targetu mrtav prijatelj."
+        },
+        {
+          "linija": "/cast [combat,@mouseover,help,dead][combat,help,dead] Rebirth; [@mouseover,help,dead][help,dead] Revive",
+          "objasnjenje": "U borbi Rebirth (level 20, 30 min cd, treba seed reagens), inače Revive (level 12)."
+        }
+      ],
+      "kada": "Healer ili tank umre usred bossa: Rebirth. Poslije borbe: isti gumb, Revive.",
+      "kadaNe": "Ne diži DPS-a usred AoE-a; pričekaj da se makne mob. Pazi na reagens.",
+      "level": 20,
+      "status": "provjereno za Forever",
+      "izvor": [
+        "https://rankedboost.com/world-of-warcraft/forever/macros/druid/",
+        "https://wowforevertalent.com/abilities/druid/"
+      ],
+      "znakova": 162,
+      "lik": "niksa-alt",
+      "faza": "kasnije",
+      "okidac": "Od levela 20.",
+      "istaknuto": false
+    },
+    {
+      "id": "dr-innervate-healer",
+      "naslov": "Innervate na healera (focus, mouseover, sebe)",
+      "svrha": "Izlazi iz forme i daje Innervate: prvo focusu (shaman healer), pa mouseoveru, pa targetu, pa sebi.",
+      "klasa": "druid",
+      "uloge": [
+        "heal",
+        "dps",
+        "tank"
+      ],
+      "rasa": null,
+      "tekst": "#showtooltip Innervate\n/cancelform\n/cast [@focus,help,nodead][@mouseover,help,nodead][help,nodead][@player] Innervate",
+      "linije": [
+        {
+          "linija": "#showtooltip Innervate",
+          "objasnjenje": "Ikona."
+        },
+        {
+          "linija": "/cancelform",
+          "objasnjenje": "Innervate ne ide iz Bear/Cat/Travel forme. Svaki pritisak izbaci iz forme, pa ne stavljaj na tanking bar."
+        },
+        {
+          "linija": "/cast [@focus,help,nodead][@mouseover,help,nodead][help,nodead][@player] Innervate",
+          "objasnjenje": "Stavi healera u focus prije dungeona; onda je dovoljan jedan pritisak."
+        }
+      ],
+      "kada": "Healer ispod 30% mane na bossu; solo kad si ti healer i ostaneš bez mane.",
+      "kadaNe": "Ne u prvih 20 s borbe; Innervate najviše vrijedi kad je mana nisko. 6 min cooldown.",
+      "level": 40,
+      "status": "provjereno za Forever",
+      "izvor": [
+        "https://rankedboost.com/world-of-warcraft/forever/macros/druid/",
+        "https://wowforevertalent.com/abilities/druid/"
+      ],
+      "znakova": 117,
+      "lik": "niksa-alt",
+      "faza": "kasnije",
+      "okidac": "Od levela 40.",
+      "istaknuto": false
+    },
+    {
+      "id": "dr-bear-form",
+      "naslov": "Bear Form (ostani u formi)",
+      "svrha": "Ulazi u Bear bez rizika da te drugi pritisak izbaci.",
+      "klasa": "druid",
+      "uloge": [
+        "tank"
+      ],
+      "rasa": null,
+      "tekst": "#showtooltip\n/cast !Bear Form",
+      "linije": [
+        {
+          "linija": "#showtooltip",
+          "objasnjenje": "Ikona."
+        },
+        {
+          "linija": "/cast !Bear Form",
+          "objasnjenje": "Uskličnik sprječava izlazak na ponovni pritisak. Na 40 zamijeni s Dire Bear Form."
+        }
+      ],
+      "kada": "Tank uloga u dungeonu; solo kad te tuku dvojica.",
+      "kadaNe": "Kad treba healati: izađi macroom 'Izlaz iz forme'.",
+      "level": 10,
+      "status": "provjereno za Forever",
+      "izvor": [
+        "https://kami-labs.fr/en/wow-forever/macros-wow-forever-9-classes/",
+        "https://mmonster.co/wow-forever/guides/macros",
+        "https://wowforevertalent.com/abilities/druid/"
+      ],
+      "znakova": 29,
+      "lik": "niksa-alt",
+      "faza": "kasnije",
+      "okidac": "Kad druid počne tankati ili uskakati kao DPS.",
+      "istaknuto": false
+    },
+    {
+      "id": "sh-imbue-windfury-rockbiter",
+      "naslov": "Imbue: Windfury, sa Shiftom Rockbiter (off-tank)",
+      "svrha": "Stavlja imbue na glavno oružje: Windfury za DPS, Rockbiter sa Shiftom kad off-tankaš.",
+      "klasa": "shaman",
+      "uloge": [
+        "dps",
+        "tank"
+      ],
+      "rasa": null,
+      "tekst": "#showtooltip\n/cast [mod:shift] Rockbiter Weapon; Windfury Weapon",
+      "linije": [
+        {
+          "linija": "#showtooltip",
+          "objasnjenje": "Ikona prati modifikator."
+        },
+        {
+          "linija": "/cast [mod:shift] Rockbiter Weapon; Windfury Weapon",
+          "objasnjenje": "Imbue se baca na glavno oružje. Windfury od levela 30; Rockbiter od 1. U Foreveru imbue traje 60 min. Spirit Weapons talent: s Rockbiterom +30% threata, bez njega -30%."
+        }
+      ],
+      "kada": "Prije dungeona: Windfury za DPS. Kad Dex nema, Shift za Rockbiter pa štit (macro 'Off-tank: štit').",
+      "kadaNe": "Rockbiter dok netko drugi tanka: krade aggro zbog Spirit Weapons. Ne zaboravi vratiti Windfury kad tank dođe.",
+      "level": 1,
+      "status": "provjereno za Forever",
+      "izvor": [
+        "https://www.zockify.com/forever/shaman/",
+        "https://wowforevertalent.com/abilities/shaman/",
+        "https://mmonster.co/wow-forever/guides/macros"
+      ],
+      "znakova": 64,
+      "faza": "kasnije",
+      "okidac": "Kad shaman uzme Spirit Weapons i počne off-tankati.",
+      "istaknuto": false
     },
     {
       "id": "mg-frost-nova-blink",
@@ -1282,44 +970,16 @@
       ],
       "kada": "Mob dođe do tebe: Nova, okreni se, Blink, nastavi Frostbolt.",
       "kadaNe": "Nova na packu koji tank drži razbija pozicioniranje; samo kad mobovi idu na tebe.",
-      "level": 10,
+      "level": 20,
       "status": "provjereno za Forever",
       "izvor": [
         "https://rankedboost.com/world-of-warcraft/forever/macros/mage/",
         "https://wowforevertalent.com/abilities/mage/"
       ],
-      "znakova": 61
-    },
-    {
-      "id": "mg-nova-cone-of-cold",
-      "naslov": "Frost Nova, sa Shiftom Cone of Cold",
-      "svrha": "AoE kontrola: Nova bez modifikatora, Cone of Cold sa Shiftom.",
-      "klasa": "mage",
-      "uloge": [
-        "dps"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/cast [mod:shift] Cone of Cold; Frost Nova",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/cast [mod:shift] Cone of Cold; Frost Nova",
-          "objasnjenje": "Cone of Cold (level 26 u Classicu) usporava 40% na 6 s u Foreveru. Nova zamrzava."
-        }
-      ],
-      "kada": "Mobovi u melee dometu, ili završavanje AoE-a nakon Blizzarda.",
-      "kadaNe": "Cone of Cold razbija sheep/sap ako su blizu.",
-      "level": 10,
-      "status": "iz Classica, testirati",
-      "izvor": [
-        "https://www.zockify.com/forever/mage/",
-        "https://wowforevertalent.com/abilities/mage/",
-        "https://warcraft.wiki.gg/wiki/Useful_macros_(old)"
-      ],
-      "znakova": 55
+      "znakova": 61,
+      "faza": "kasnije",
+      "okidac": "Od levela 20, kad mage dobije Blink.",
+      "istaknuto": false
     },
     {
       "id": "mg-ice-block",
@@ -1357,1881 +1017,54 @@
         "https://rankedboost.com/world-of-warcraft/forever/macros/mage/frost/",
         "https://wowforevertalent.com/abilities/mage/"
       ],
-      "znakova": 113
+      "znakova": 113,
+      "faza": "kasnije",
+      "okidac": "Kad mage uzme Ice Block iz Frost talenata.",
+      "istaknuto": false
     },
     {
-      "id": "mg-fire-blast-finisher",
-      "naslov": "Fire Blast (prekini cast i dokrajči)",
-      "svrha": "Instant Fire Blast na target nakon prekida casta.",
-      "klasa": "mage",
+      "id": "opc-trinket-burst",
+      "naslov": "Trinketi uz glavni spell (predložak)",
+      "svrha": "Oba trinketa aktivira prije glavnog spella; zamijeni GLAVNI SPELL svojim.",
+      "klasa": "opcenito",
       "uloge": [
-        "dps"
+        "dps",
+        "heal",
+        "tank"
       ],
       "rasa": null,
-      "tekst": "#showtooltip Fire Blast\n/stopcasting\n/cast [harm,nodead] Fire Blast",
+      "tekst": "#showtooltip GLAVNI SPELL\n/use 13\n/use 14\n/cast GLAVNI SPELL",
       "linije": [
         {
-          "linija": "#showtooltip Fire Blast",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/stopcasting",
-          "objasnjenje": "Prekini Frostbolt kad mob ima malo HP-a."
-        },
-        {
-          "linija": "/cast [harm,nodead] Fire Blast",
-          "objasnjenje": "Level 6, instant, 8 s cd."
-        }
-      ],
-      "kada": "Mob na 5% dok ti Frostbolt tek kreće.",
-      "kadaNe": "Ne usred rotacije na bossu bez razloga; gubiš cast.",
-      "level": 6,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://rankedboost.com/world-of-warcraft/forever/macros/mage/",
-        "https://wowforevertalent.com/abilities/mage/"
-      ],
-      "znakova": 67
-    },
-    {
-      "id": "mg-conjure",
-      "naslov": "Conjure Water pa Food",
-      "svrha": "Prvi pritisak voda, drugi hrana; bez ranka uvijek najviši rank.",
-      "klasa": "mage",
-      "uloge": [
-        "dps"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/castsequence reset=10 Conjure Water, Conjure Food",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/castsequence reset=10 Conjure Water, Conjure Food",
-          "objasnjenje": "Redom: Water (level 4), Food (level 6). Nakon 10 s bez pritiska vraća se na vodu."
-        }
-      ],
-      "kada": "Prije dungeona napravi stackove za ekipu; voda shamanu, druidu i paladinu.",
-      "kadaNe": "U borbi ne radi. Ako sekvenca 'zapne' (castanje prekinuto), pričekaj 10 s.",
-      "level": 4,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://mmonster.co/wow-forever/guides/macros",
-        "https://wow-forever.gg/guides/setup/macros/",
-        "https://wowforevertalent.com/abilities/mage/"
-      ],
-      "znakova": 63
-    },
-    {
-      "id": "mg-arcane-intellect",
-      "naslov": "Arcane Intellect na mouseover, sa Shiftom Brilliance",
-      "svrha": "Buff na jedinicu pod mišem, target ili sebe; Shift za grupni buff.",
-      "klasa": "mage",
-      "uloge": [
-        "dps"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/cast [mod:shift] Arcane Brilliance; [@mouseover,help,nodead][help,nodead][@player] Arcane Intellect",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/cast [mod:shift] Arcane Brilliance; [@mouseover,help,nodead][help,nodead][@player] Arcane Intellect",
-          "objasnjenje": "Arcane Intellect (1) po jedan; Arcane Brilliance (56) cijela grupa, treba reagens."
-        }
-      ],
-      "kada": "Početak dungeona i nakon smrti.",
-      "kadaNe": "Na warriora i roguea je beskoristan (nemaju manu), ali ne šteti.",
-      "level": 1,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://mmonster.co/wow-forever/guides/macros",
-        "https://wowforevertalent.com/abilities/mage/"
-      ],
-      "znakova": 113
-    },
-    {
-      "id": "mg-mana-gem",
-      "naslov": "Mana gem (sve veličine)",
-      "svrha": "Koristi mana kamen koji imaš; svi dijele cooldown pa radi samo prvi dostupan.",
-      "klasa": "mage",
-      "uloge": [
-        "dps"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/use Mana Agate\n/use Mana Jade\n/use Mana Citrine\n/use Mana Ruby",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/use Mana Agate",
-          "objasnjenje": "Level 28."
-        },
-        {
-          "linija": "/use Mana Jade",
-          "objasnjenje": "Level 38."
-        },
-        {
-          "linija": "/use Mana Citrine",
-          "objasnjenje": "Level 48."
-        },
-        {
-          "linija": "/use Mana Ruby",
-          "objasnjenje": "Level 58. Linije za kamene koje nemaš bace grešku u chat; obriši ih dok ih ne naučiš."
-        }
-      ],
-      "kada": "Sredina bossa kad padne mana.",
-      "kadaNe": "Ne na 90% mane; vraća fiksan iznos.",
-      "level": 28,
-      "status": "iz Classica, testirati",
-      "izvor": [
-        "https://wowforevertalent.com/abilities/mage/",
-        "https://warcraft.wiki.gg/wiki/Useful_macros_(old)"
-      ],
-      "znakova": 76
-    },
-    {
-      "id": "mg-trinket-frostbolt",
-      "naslov": "Trinketi + Frostbolt",
-      "svrha": "Oba trinketa pa Frostbolt.",
-      "klasa": "mage",
-      "uloge": [
-        "dps"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip Frostbolt\n/use 13\n/use 14\n/cast Frostbolt",
-      "linije": [
-        {
-          "linija": "#showtooltip Frostbolt",
-          "objasnjenje": "Ikona."
+          "linija": "#showtooltip GLAVNI SPELL",
+          "objasnjenje": "Ikona glavnog spella, ne trinketa."
         },
         {
           "linija": "/use 13",
-          "objasnjenje": "Gornji trinket."
+          "objasnjenje": "Gornji trinket slot. Trinketi s on-use efektom nisu na GCD-u, pa se mogu u istom pritisku."
         },
         {
           "linija": "/use 14",
-          "objasnjenje": "Donji trinket."
+          "objasnjenje": "Donji trinket slot. Ako oba trinketa dijele cooldown, aktivira se samo prvi."
         },
         {
-          "linija": "/cast Frostbolt",
-          "objasnjenje": "Glavni spell."
+          "linija": "/cast GLAVNI SPELL",
+          "objasnjenje": "Glavni spell ide zadnji jer on troši GCD."
         }
       ],
-      "kada": "Boss burst nakon što tank drži aggro.",
-      "kadaNe": "Trinket bez on-use efekta samo baci grešku.",
-      "level": 1,
+      "kada": "Na bossu kad kreće burst; za healera uz veliki heal.",
+      "kadaNe": "Trinket bez on-use efekta (čisti stat) ništa ne radi, samo baci grešku u chat. Ako ti smeta greška, obriši liniju tog slota.",
+      "level": 40,
       "status": "provjereno za Forever",
       "izvor": [
         "https://mmonster.co/wow-forever/guides/macros",
         "https://rankedboost.com/world-of-warcraft/forever/macros/rogue/combat/"
       ],
-      "znakova": 54
-    },
-    {
-      "id": "mg-frost-blast",
-      "naslov": "Frost Blast (novi slow)",
-      "svrha": "Novi Forever spell: šteta i slow 40% na 9 s, cast 1,5 s.",
-      "klasa": "mage",
-      "uloge": [
-        "dps"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/cast [harm,nodead] Frost Blast",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/cast [harm,nodead] Frost Blast",
-          "objasnjenje": "Level 24 (ranks na 36 i 48). Brži od Frostbolta pa je dobar za kiting i bijeg."
-        }
-      ],
-      "kada": "Mob trči na tebe iz daljine; solo kiting.",
-      "kadaNe": "Nije glavni DPS spell; Frostbolt radi više štete.",
-      "level": 24,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-october-26/2360696",
-        "https://wowforevertalent.com/abilities/mage/"
-      ],
-      "znakova": 44
-    },
-    {
-      "id": "wr-charge-intercept",
-      "naslov": "Charge van borbe, Intercept u borbi",
-      "svrha": "Jedna tipka: Charge iz Battle Stancea, Intercept iz Berserkera; ako nisi u pravom stanceu, prebaci.",
-      "klasa": "warrior",
-      "uloge": [
-        "dps"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/startattack\n/cast [nocombat,stance:1] Charge; [combat,stance:3] Intercept; [nocombat] Battle Stance; Berserker Stance",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona prati stanje."
-        },
-        {
-          "linija": "/startattack",
-          "objasnjenje": "Auto-attack odmah."
-        },
-        {
-          "linija": "/cast [nocombat,stance:1] Charge; [combat,stance:3] Intercept; [nocombat] Battle Stance; Berserker Stance",
-          "objasnjenje": "Van borbe u Battle (stance:1): Charge (4). U borbi u Berserkeru (stance:3): Intercept (30). Inače prebaci u potreban stance; pritisni opet."
-        }
-      ],
-      "kada": "Dolazak do moba; u borbi do castera koji bježi.",
-      "kadaNe": "Ne Charge-aj prije tanka: Charge pulla. Pričekaj da Dex pulla pa Intercept.",
-      "level": 4,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://rankedboost.com/world-of-warcraft/forever/macros/warrior/",
-        "https://wowforevertalent.com/abilities/warrior/",
-        "https://mmonster.co/wow-forever/guides/macros"
-      ],
-      "znakova": 131
-    },
-    {
-      "id": "wr-overpower",
-      "naslov": "Overpower (prebaci u Battle)",
-      "svrha": "Overpower ako si u Battle Stanceu, inače prebaci u Battle.",
-      "klasa": "warrior",
-      "uloge": [
-        "dps"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip Overpower\n/cast [stance:1] Overpower; Battle Stance",
-      "linije": [
-        {
-          "linija": "#showtooltip Overpower",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/cast [stance:1] Overpower; Battle Stance",
-          "objasnjenje": "Overpower (12) samo u Battle. Tactical Mastery (uči se na 14 u Foreveru) zadrži do 10 ragea pri promjeni."
-        }
-      ],
-      "kada": "Mob dodgea (vidiš 'Dodge' iznad glave): odmah Overpower.",
-      "kadaNe": "Iz Berserkera gubiš rage iznad 10; ne skači bez razloga.",
-      "level": 12,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://rankedboost.com/world-of-warcraft/forever/macros/warrior/arms/",
-        "https://www.zockify.com/forever/warrior/",
-        "https://mmonster.co/wow-forever/guides/macros"
-      ],
-      "znakova": 64
-    },
-    {
-      "id": "wr-pummel-shield-bash",
-      "naslov": "Pummel u Berserkeru, Shield Bash sa štitom",
-      "svrha": "Interrupt ovisno o stanceu i opremi; ako ništa ne odgovara, prebaci u Berserker.",
-      "klasa": "warrior",
-      "uloge": [
-        "dps",
-        "tank"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/cast [stance:3] Pummel; [equipped:Shields] Shield Bash; Berserker Stance",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/cast [stance:3] Pummel; [equipped:Shields] Shield Bash; Berserker Stance",
-          "objasnjenje": "Pummel (38) traži Berserker. Shield Bash (12) traži štit. Inače prebacuje u Berserker; pritisni opet."
-        }
-      ],
-      "kada": "Caster mob heala ili casta.",
-      "kadaNe": "Kao DPS s 2H bez štita ispod 38 nemaš interrupt; tada javi mageu/shamanu.",
-      "level": 12,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://rankedboost.com/world-of-warcraft/forever/macros/warrior/",
-        "https://wowforevertalent.com/abilities/warrior/"
-      ],
-      "znakova": 86
-    },
-    {
-      "id": "wr-heroic-strike-cleave",
-      "istaknuto": true,
-      "naslov": "Heroic Strike + auto-attack, sa Shiftom Cleave",
-      "svrha": "Kreni auto-attack i queue Heroic Strike; Shift za Cleave na dva moba.",
-      "klasa": "warrior",
-      "uloge": [
-        "dps"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip [mod:shift] Cleave; Heroic Strike\n/startattack\n/cast [mod:shift] Cleave; Heroic Strike",
-      "linije": [
-        {
-          "linija": "#showtooltip [mod:shift] Cleave; Heroic Strike",
-          "objasnjenje": "Ikona prati modifikator."
-        },
-        {
-          "linija": "/startattack",
-          "objasnjenje": "Auto-attack i kad nemaš rage; inače promjena targeta pauzira bijele udarce."
-        },
-        {
-          "linija": "/cast [mod:shift] Cleave; Heroic Strike",
-          "objasnjenje": "Oboje on-next-swing, nisu na GCD-u. Heroic Strike od 1, Cleave od 20."
-        }
-      ],
-      "kada": "Višak ragea; Cleave kad su dva moba jedan uz drugoga.",
-      "kadaNe": "Cleave uz sheepanog moba ga budi.",
-      "level": 1,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://kami-labs.fr/en/wow-forever/macros-wow-forever-9-classes/",
-        "https://rankedboost.com/world-of-warcraft/forever/macros/warrior/fury/",
-        "https://wowforevertalent.com/abilities/warrior/"
-      ],
-      "znakova": 99
-    },
-    {
-      "id": "wr-execute",
-      "naslov": "Execute (Battle ili Berserker)",
-      "svrha": "Execute u Battle ili Berserkeru; iz Defensive prebacuje u Berserker.",
-      "klasa": "warrior",
-      "uloge": [
-        "dps"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip Execute\n/startattack\n/cast [stance:1/3] Execute; Berserker Stance",
-      "linije": [
-        {
-          "linija": "#showtooltip Execute",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/startattack",
-          "objasnjenje": "Auto-attack."
-        },
-        {
-          "linija": "/cast [stance:1/3] Execute; Berserker Stance",
-          "objasnjenje": "Execute (24) radi ispod 20% HP-a moba. Kosa crta u stance:1/3 znači 'ili'."
-        }
-      ],
-      "kada": "Mob ispod 20%: spamaj Execute umjesto ostalog.",
-      "kadaNe": "Troši sav rage; ne na trashu koji ionako umire za sekundu.",
-      "level": 24,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://rankedboost.com/world-of-warcraft/forever/macros/warrior/arms/",
-        "https://wowforevertalent.com/abilities/warrior/",
-        "https://warcraft.wiki.gg/wiki/Macro_conditionals"
-      ],
-      "znakova": 78
-    },
-    {
-      "id": "wr-bloodrage-berserker-rage",
-      "naslov": "Bloodrage, sa Shiftom Berserker Rage",
-      "svrha": "Rage iz zdravlja; Shift za Berserker Rage (skida fear, u Berserker stanceu).",
-      "klasa": "warrior",
-      "uloge": [
-        "dps"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip [mod:shift] Berserker Rage; Bloodrage\n/cast [mod:shift,stance:3] Berserker Rage; Bloodrage",
-      "linije": [
-        {
-          "linija": "#showtooltip [mod:shift] Berserker Rage; Bloodrage",
-          "objasnjenje": "Ikona prati modifikator."
-        },
-        {
-          "linija": "/cast [mod:shift,stance:3] Berserker Rage; Bloodrage",
-          "objasnjenje": "Bloodrage (10): 10 ragea odmah + 10 kroz 10 s, košta 20% baznog HP-a. Berserker Rage (30 u Foreveru, bilo 32)."
-        }
-      ],
-      "kada": "Prije pulla (Bloodrage) da imaš rage za prvi udarac; Berserker Rage kad te fearaju ili za extra rage.",
-      "kadaNe": "Bloodrage te stavlja u borbu: ne prije nego tank pulla. Ne na niskom HP-u.",
-      "level": 10,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://rankedboost.com/world-of-warcraft/forever/macros/warrior/fury/",
-        "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-october-26/2360696",
-        "https://wowforevertalent.com/abilities/warrior/"
-      ],
-      "znakova": 103
-    },
-    {
-      "id": "wr-taunt-backup",
-      "naslov": "Taunt (rezervni tank)",
-      "svrha": "Taunt ako si u Defensive; inače prebaci u Defensive.",
-      "klasa": "warrior",
-      "uloge": [
-        "tank"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip Taunt\n/cast [stance:2] Taunt; Defensive Stance",
-      "linije": [
-        {
-          "linija": "#showtooltip Taunt",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/cast [stance:2] Taunt; Defensive Stance",
-          "objasnjenje": "Taunt (10) samo u Defensive (stance:2). Prvi pritisak prebaci, drugi tauntira."
-        }
-      ],
-      "kada": "Kad Dexa nema i ti tankaš; ili kad mob krene na Niksu.",
-      "kadaNe": "Kao DPS ne tauntaj: skidaš aggro tanku.",
-      "level": 10,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://mmonster.co/wow-forever/guides/macros",
-        "https://wowforevertalent.com/abilities/warrior/"
-      ],
-      "znakova": 59
-    },
-    {
-      "id": "wr-stance-modifikatori",
-      "naslov": "Stance: Shift Defensive, Ctrl Berserker, inače Battle",
-      "svrha": "Tri stancea na jednoj tipki s modifikatorima.",
-      "klasa": "warrior",
-      "uloge": [
-        "dps",
-        "tank"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/cast [mod:shift] Defensive Stance; [mod:ctrl] Berserker Stance; Battle Stance",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/cast [mod:shift] Defensive Stance; [mod:ctrl] Berserker Stance; Battle Stance",
-          "objasnjenje": "Defensive od 10, Berserker od 30. Promjena stancea nije na GCD-u, ali gubiš rage iznad 10 (s Tactical Mastery)."
-        }
-      ],
-      "kada": "Stance dance: Battle za Overpower, Berserker za Intercept/Pummel, Defensive za Taunt.",
-      "kadaNe": "Ne ako ti Ctrl/Shift kombinacija već ima keybind; igra daje prednost keybindu.",
-      "level": 10,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://mmonster.co/wow-forever/guides/macros",
-        "https://wowforevertalent.com/abilities/warrior/"
-      ],
-      "znakova": 91
-    },
-    {
-      "id": "wr-trinket-burst",
-      "naslov": "Trinketi + Heroic Strike (burst)",
-      "svrha": "Trinketi i Heroic Strike u jednom pritisku.",
-      "klasa": "warrior",
-      "uloge": [
-        "dps"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip Heroic Strike\n/startattack\n/use 13\n/use 14\n/cast Heroic Strike",
-      "linije": [
-        {
-          "linija": "#showtooltip Heroic Strike",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/startattack",
-          "objasnjenje": "Auto-attack."
-        },
-        {
-          "linija": "/use 13",
-          "objasnjenje": "Gornji trinket."
-        },
-        {
-          "linija": "/use 14",
-          "objasnjenje": "Donji trinket."
-        },
-        {
-          "linija": "/cast Heroic Strike",
-          "objasnjenje": "On-next-swing, nije na GCD-u."
-        }
-      ],
-      "kada": "Početak bossa.",
-      "kadaNe": "Trinket bez on-use efekta baci grešku.",
-      "level": 1,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://mmonster.co/wow-forever/guides/macros",
-        "https://rankedboost.com/world-of-warcraft/forever/macros/rogue/combat/"
-      ],
-      "znakova": 75
-    },
-    {
-      "id": "rg-sap-mouseover",
-      "naslov": "Sap na mouseover",
-      "svrha": "Sap na humanoida pod mišem, inače target; u Foreveru Sap ne skida Stealth.",
-      "klasa": "rogue",
-      "uloge": [
-        "dps"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/cast [@mouseover,harm,nodead][harm,nodead] Sap",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/cast [@mouseover,harm,nodead][harm,nodead] Sap",
-          "objasnjenje": "Prvo neprijatelj ispod miša, inače tvoj target. Ako ni jedno nije živ neprijatelj, ništa se ne dogodi. Samo humanoidi van borbe."
-        }
-      ],
-      "kada": "Prije pulla na moba s oznakom (dogovor: cross ili moon). Ostaješ u stealthu.",
-      "kadaNe": "Ne na metu koju mage sheepa. Šteta budi.",
-      "level": 10,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://news.blizzard.com/en-us/article/24310968/world-of-warcraft-forever-class-deep-dives-rogue-and-warlock",
-        "https://www.zockify.com/forever/rogue/",
-        "https://rankedboost.com/world-of-warcraft/forever/macros/rogue/"
-      ],
-      "znakova": 60
-    },
-    {
-      "id": "rg-sap-blind",
-      "naslov": "Sap u stealthu, Blind inače",
-      "svrha": "Ista tipka: Sap dok si u stealthu, Blind kad nisi.",
-      "klasa": "rogue",
-      "uloge": [
-        "dps"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/cast [stealth,@mouseover,harm,nodead][stealth,harm,nodead] Sap; [@mouseover,harm,nodead][harm,nodead] Blind",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona prati stealth."
-        },
-        {
-          "linija": "/cast [stealth,@mouseover,harm,nodead][stealth,harm,nodead] Sap; [@mouseover,harm,nodead][harm,nodead] Blind",
-          "objasnjenje": "U stealthu Sap (10). Izvan stealtha Blind (34, treba Blinding Powder, 5 min cd)."
-        }
-      ],
-      "kada": "CC na dodatnom mobu u packu; Blind kad se Sap probudi.",
-      "kadaNe": "Blind je skup (reagens i cd); ne na mobu koji ionako umire.",
-      "level": 10,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://rankedboost.com/world-of-warcraft/forever/macros/rogue/",
-        "https://wowforevertalent.com/abilities/rogue/"
-      ],
-      "znakova": 121
-    },
-    {
-      "id": "rg-pick-pocket-cheap-shot",
-      "naslov": "Pick Pocket pa Cheap Shot",
-      "svrha": "Opljačka moba pa ga stunira u istom pritisku (Pick Pocket u Classicu nije na GCD-u).",
-      "klasa": "rogue",
-      "uloge": [
-        "dps"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip Cheap Shot\n/cast Pick Pocket\n/cast Cheap Shot",
-      "linije": [
-        {
-          "linija": "#showtooltip Cheap Shot",
-          "objasnjenje": "Ikona Cheap Shota."
-        },
-        {
-          "linija": "/cast Pick Pocket",
-          "objasnjenje": "Level 4, samo humanoidi u stealthu. Ako loot prozor iskoči i Cheap Shot ne prođe, pritisni opet."
-        },
-        {
-          "linija": "/cast Cheap Shot",
-          "objasnjenje": "Level 26, stun 4 s iz stealtha."
-        }
-      ],
-      "kada": "Solo i dungeoni (Scarlet Monastery, BRD): gold i lockboxovi s humanoida.",
-      "kadaNe": "Ne na sapanom mobu (šteta nije, ali stun ga 'probudi' nakon isteka). Ako Pick Pocket u Foreveru troši GCD, razdvoji u dva macroa.",
-      "level": 26,
-      "status": "iz Classica, testirati",
-      "izvor": [
-        "https://warcraft.wiki.gg/wiki/Useful_macros_(old)",
-        "https://wowforevertalent.com/abilities/rogue/"
-      ],
-      "znakova": 58
-    },
-    {
-      "id": "rg-kick",
-      "naslov": "Kick (Shift na focus)",
-      "svrha": "Interrupt targeta; sa Shiftom focusa.",
-      "klasa": "rogue",
-      "uloge": [
-        "dps"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip Kick\n/cast [mod:shift,@focus,harm,nodead][harm,nodead] Kick",
-      "linije": [
-        {
-          "linija": "#showtooltip Kick",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/cast [mod:shift,@focus,harm,nodead][harm,nodead] Kick",
-          "objasnjenje": "Kick (12), 5 s lock, 10 s cd. Melee domet, pa focus mora biti blizu."
-        }
-      ],
-      "kada": "Mob casta; rogue prekida melee castere, mage one na daljinu.",
-      "kadaNe": "Nema ga na cooldownu: nema zamjene osim Gouge (prekida, ali ne lockira).",
-      "level": 12,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://rankedboost.com/world-of-warcraft/forever/macros/rogue/",
-        "https://wowforevertalent.com/abilities/rogue/"
-      ],
-      "znakova": 72
-    },
-    {
-      "id": "rg-gouge-mouseover",
-      "naslov": "Gouge na mouseover",
-      "svrha": "Gouge moba pod mišem ili targeta: 4 s incapacitate, prekida cast.",
-      "klasa": "rogue",
-      "uloge": [
-        "dps"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/cast [@mouseover,harm,nodead][harm,nodead] Gouge",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/cast [@mouseover,harm,nodead][harm,nodead] Gouge",
-          "objasnjenje": "Prvo neprijatelj ispod miša, inače tvoj target. Ako ni jedno nije živ neprijatelj, ništa se ne dogodi. Level 6; mob te mora gledati."
-        }
-      ],
-      "kada": "Drugi mob te tuče: Gouge pa nastavi na skull. Ili brzi prekid casta kad je Kick na cd.",
-      "kadaNe": "Ne na mobu kojeg grupa tuče: šteta ga odmah budi.",
-      "level": 6,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://rankedboost.com/world-of-warcraft/forever/macros/rogue/combat/",
-        "https://wowforevertalent.com/abilities/rogue/"
-      ],
-      "znakova": 62
-    },
-    {
-      "id": "rg-sprint-gouge",
-      "naslov": "Sprint + Gouge (bijeg)",
-      "svrha": "Gouge target pa Sprint u istom pritisku.",
-      "klasa": "rogue",
-      "uloge": [
-        "dps"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip Sprint\n/cast Sprint\n/cast [harm,nodead] Gouge",
-      "linije": [
-        {
-          "linija": "#showtooltip Sprint",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/cast Sprint",
-          "objasnjenje": "Sprint (10) nije na GCD-u."
-        },
-        {
-          "linija": "/cast [harm,nodead] Gouge",
-          "objasnjenje": "Gouge (6) na target; onda trči."
-        }
-      ],
-      "kada": "Pull je otišao krivo i trebaš van.",
-      "kadaNe": "Ne kad Vanish ima smisla; Sprint samo bježi, Vanish resetira.",
-      "level": 10,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://rankedboost.com/world-of-warcraft/forever/macros/rogue/combat/",
-        "https://wowforevertalent.com/abilities/rogue/"
-      ],
-      "znakova": 58
-    },
-    {
-      "id": "rg-blind-mouseover",
-      "naslov": "Blind na mouseover",
-      "svrha": "Blind moba pod mišem ili targeta, bez promjene targeta.",
-      "klasa": "rogue",
-      "uloge": [
-        "dps"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/cast [@mouseover,harm,nodead][harm,nodead] Blind",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/cast [@mouseover,harm,nodead][harm,nodead] Blind",
-          "objasnjenje": "Prvo neprijatelj ispod miša, inače tvoj target. Ako ni jedno nije živ neprijatelj, ništa se ne dogodi. Level 34, Blinding Powder, 5 min cd, 10 s."
-        }
-      ],
-      "kada": "Hitni CC: mob krene na healera, a nitko nema CC spreman.",
-      "kadaNe": "Ne za obične pullove; skup je i ima dug cd.",
-      "level": 34,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://rankedboost.com/world-of-warcraft/forever/macros/rogue/",
-        "https://wowforevertalent.com/abilities/rogue/"
-      ],
-      "znakova": 62
-    },
-    {
-      "id": "rg-vanish",
-      "naslov": "Vanish (stop attack prvo)",
-      "svrha": "Zaustavi auto-attack pa Vanish, da ti vlastiti udarac ne skine stealth.",
-      "klasa": "rogue",
-      "uloge": [
-        "dps"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip Vanish\n/stopattack\n/cast Vanish",
-      "linije": [
-        {
-          "linija": "#showtooltip Vanish",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/stopattack",
-          "objasnjenje": "Prekini auto-attack; inače swing koji je već krenuo može izbaciti iz stealtha."
-        },
-        {
-          "linija": "/cast Vanish",
-          "objasnjenje": "Vanish (22), Flash Powder reagens. Mobovi te zaborave."
-        }
-      ],
-      "kada": "Aggro na tebi i healer ne stiže; wipe je neizbježan pa spasi repair.",
-      "kadaNe": "Vanish usred boss AoE-a ne pomaže (AoE te izbaci). Ne vanishaj dok tank još može tauntati.",
-      "level": 22,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://rankedboost.com/world-of-warcraft/forever/macros/rogue/subtlety/",
-        "https://warcraft.wiki.gg/wiki/Useful_macros_(old)",
-        "https://wowforevertalent.com/abilities/rogue/"
-      ],
-      "znakova": 44
-    },
-    {
-      "id": "rg-sinister-strike",
-      "naslov": "Sinister Strike + auto-attack",
-      "svrha": "Kreni auto-attack i Sinister Strike; radi i kad nemaš energije.",
-      "klasa": "rogue",
-      "uloge": [
-        "dps"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/startattack\n/cast Sinister Strike",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/startattack",
-          "objasnjenje": "Auto-attack odmah, i bez energije."
-        },
-        {
-          "linija": "/cast Sinister Strike",
-          "objasnjenje": "Glavni combo builder (1)."
-        }
-      ],
-      "kada": "Glavna tipka za sve.",
-      "kadaNe": "Ne iz stealtha: tada Cheap Shot/Ambush macro.",
-      "level": 1,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://kami-labs.fr/en/wow-forever/macros-wow-forever-9-classes/",
-        "https://mmonster.co/wow-forever/guides/macros",
-        "https://rankedboost.com/world-of-warcraft/forever/macros/rogue/"
-      ],
-      "znakova": 47
-    },
-    {
-      "id": "rg-cheap-shot-opener",
-      "naslov": "Cheap Shot iz stealtha, inače Sinister Strike",
-      "svrha": "Jedna tipka za opener i builder.",
-      "klasa": "rogue",
-      "uloge": [
-        "dps"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/cast [stealth] Cheap Shot; [harm,nodead] Sinister Strike\n/startattack",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona prati stealth."
-        },
-        {
-          "linija": "/cast [stealth] Cheap Shot; [harm,nodead] Sinister Strike",
-          "objasnjenje": "U stealthu Cheap Shot (26, stun 4 s, 2 combo pointa). Inače Sinister Strike."
-        },
-        {
-          "linija": "/startattack",
-          "objasnjenje": "Cheap Shot ne pokreće swing, pa ovo pokrene auto-attack."
-        }
-      ],
-      "kada": "Opener na mobu kojeg grupa tuče.",
-      "kadaNe": "Ne otvaraj prije tanka: stun ne drži aggro.",
-      "level": 26,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://rankedboost.com/world-of-warcraft/forever/macros/rogue/",
-        "https://wowforevertalent.com/abilities/rogue/"
-      ],
-      "znakova": 83
-    },
-    {
-      "id": "rg-poison-main-hand",
-      "naslov": "Otrov na glavno oružje",
-      "svrha": "Nanese Instant Poison na oružje u glavnoj ruci bez klikanja po torbi.",
-      "klasa": "rogue",
-      "uloge": [
-        "dps"
-      ],
-      "rasa": null,
-      "tekst": "/use Instant Poison\n/use 16",
-      "linije": [
-        {
-          "linija": "/use Instant Poison",
-          "objasnjenje": "Uzmi otrov iz torbe (klasični Classic trik). Ako otrovi u Foreveru imaju rank u imenu, upiši točno ime iz torbe."
-        },
-        {
-          "linija": "/use 16",
-          "objasnjenje": "Slot 16 = glavna ruka; otrov se nanese na to oružje."
-        }
-      ],
-      "kada": "Prije dungeona i kad charges istekne (u Foreveru ih ima više).",
-      "kadaNe": "U borbi ne radi. Otrovi dolaze iz quest lanca od 20 i rade se u Professions prozoru.",
-      "level": 20,
-      "status": "iz Classica, testirati",
-      "izvor": [
-        "https://www.warcrafttavern.com/forever/guides/poisons/",
-        "https://news.blizzard.com/en-us/article/24310968/world-of-warcraft-forever-class-deep-dives-rogue-and-warlock",
-        "https://warcraft.wiki.gg/wiki/Useful_macros_(old)"
-      ],
-      "znakova": 27
-    },
-    {
-      "id": "rg-poison-off-hand",
-      "naslov": "Otrov na drugo oružje",
-      "svrha": "Nanese Deadly Poison (ili drugi) na oružje u drugoj ruci.",
-      "klasa": "rogue",
-      "uloge": [
-        "dps"
-      ],
-      "rasa": null,
-      "tekst": "/use Deadly Poison\n/use 17",
-      "linije": [
-        {
-          "linija": "/use Deadly Poison",
-          "objasnjenje": "Deadly Poison od levela 30; prije toga koristi Crippling (20) ili Instant."
-        },
-        {
-          "linija": "/use 17",
-          "objasnjenje": "Slot 17 = druga ruka."
-        }
-      ],
-      "kada": "Zajedno s macroom za glavno oružje prije dungeona.",
-      "kadaNe": "U borbi ne radi.",
-      "level": 30,
-      "status": "iz Classica, testirati",
-      "izvor": [
-        "https://www.warcrafttavern.com/forever/guides/poisons/",
-        "https://warcraft.wiki.gg/wiki/Useful_macros_(old)"
-      ],
-      "znakova": 26
-    },
-    {
-      "id": "rg-trinket-burst",
-      "naslov": "Trinketi + Sinister Strike",
-      "svrha": "Oba trinketa pa Sinister Strike.",
-      "klasa": "rogue",
-      "uloge": [
-        "dps"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip Sinister Strike\n/startattack\n/use 13\n/use 14\n/cast Sinister Strike",
-      "linije": [
-        {
-          "linija": "#showtooltip Sinister Strike",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/startattack",
-          "objasnjenje": "Auto-attack."
-        },
-        {
-          "linija": "/use 13",
-          "objasnjenje": "Gornji trinket."
-        },
-        {
-          "linija": "/use 14",
-          "objasnjenje": "Donji trinket."
-        },
-        {
-          "linija": "/cast Sinister Strike",
-          "objasnjenje": "Glavni udarac."
-        }
-      ],
-      "kada": "Boss burst nakon što tank drži aggro.",
-      "kadaNe": "Trinket bez on-use efekta baci grešku.",
-      "level": 1,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://rankedboost.com/world-of-warcraft/forever/macros/rogue/combat/",
-        "https://mmonster.co/wow-forever/guides/macros"
-      ],
-      "znakova": 79
-    },
-    {
-      "id": "pl-seal-of-fury",
-      "naslov": "Seal of Fury (tank seal)",
-      "svrha": "Stavi tank seal: Holy šteta + apsorb sa štitom, a Judgement postaje taunt.",
-      "klasa": "paladin",
-      "uloge": [
-        "tank"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/cast Seal of Fury",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/cast Seal of Fury",
-          "objasnjenje": "Level 10 (rankovi do 58). Judgement ga u Foreveru ne troši, pa ga stavi jednom i obnovi kad istekne."
-        }
-      ],
-      "kada": "Uvijek prije pulla i čim istekne. Ovo je tvoj 'tank mode'.",
-      "kadaNe": "Kad nisi tank (netko drugi tanka): Seal of Righteousness, inače kradeš aggro.",
-      "level": 10,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://wowguide.net/en/guides/wow-forever-paladin-changes",
-        "https://wowforevertalent.com/abilities/paladin/",
-        "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-october-26/2360696"
-      ],
-      "znakova": 31
-    },
-    {
-      "id": "pl-judgement-taunt",
-      "istaknuto": true,
-      "naslov": "Judgement = taunt (mouseover)",
-      "svrha": "Judgement na moba pod mišem ili target; sa Seal of Fury to je taunt 4 s na 10 m.",
-      "klasa": "paladin",
-      "uloge": [
-        "tank"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip Judgement\n/startattack\n/cast [@mouseover,harm,nodead][harm,nodead] Judgement",
-      "linije": [
-        {
-          "linija": "#showtooltip Judgement",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/startattack",
-          "objasnjenje": "Auto-attack na metu ako ti je target."
-        },
-        {
-          "linija": "/cast [@mouseover,harm,nodead][harm,nodead] Judgement",
-          "objasnjenje": "Judgement (4), 10 s cd, 10 m. S aktivnim Seal of Fury taunt. Miš na nameplate moba koji ide na healera."
-        }
-      ],
-      "kada": "Svakih 10 s na mobu kojeg držiš (threat); hitno na mobu koji ode na Niksu.",
-      "kadaNe": "Ako promašiš, taunt je na cd; talent Swift Judgement resetira. Bez Seal of Fury nije taunt.",
-      "level": 10,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://rankedboost.com/world-of-warcraft/forever/macros/paladin/protection/",
-        "https://wowguide.net/en/guides/wow-forever-paladin-changes",
-        "https://wowforevertalent.com/abilities/paladin/"
-      ],
-      "znakova": 89
-    },
-    {
-      "id": "pl-holy-strike",
-      "naslov": "Holy Strike + auto-attack",
-      "svrha": "Osnovni udarac: weapon damage + Holy, 10 s cd.",
-      "klasa": "paladin",
-      "uloge": [
-        "tank",
-        "dps"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/startattack\n/cast Holy Strike",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/startattack",
-          "objasnjenje": "Auto-attack odmah."
-        },
-        {
-          "linija": "/cast Holy Strike",
-          "objasnjenje": "Level 6, ranks do 60. Novi Forever spell."
-        }
-      ],
-      "kada": "Na cooldownu, uvijek.",
-      "kadaNe": "Nema 'kada ne'; to je filler.",
-      "level": 6,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://rankedboost.com/world-of-warcraft/forever/macros/paladin/",
-        "https://wowforevertalent.com/abilities/paladin/"
-      ],
-      "znakova": 43
-    },
-    {
-      "id": "pl-consecration",
-      "naslov": "Consecration + auto-attack",
-      "svrha": "AoE threat oko tebe; u Foreveru puna šteta na prva 4 moba.",
-      "klasa": "paladin",
-      "uloge": [
-        "tank"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/startattack\n/cast Consecration",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/startattack",
-          "objasnjenje": "Auto-attack."
-        },
-        {
-          "linija": "/cast Consecration",
-          "objasnjenje": "Level 20, u Foreveru se uči kod trenera (nije talent). 8 s, mana skupa."
-        }
-      ],
-      "kada": "Pack od 2+ moba, čim ih dovučeš na jedno mjesto.",
-      "kadaNe": "Na jednom mobu troši manu bez razloga. Pazi na sheep/sap u krugu: Consecration ih budi.",
-      "level": 20,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://wowguide.net/en/guides/wow-forever-paladin-changes",
-        "https://wowforevertalent.com/abilities/paladin/",
-        "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-october-26/2360696"
-      ],
-      "znakova": 44
-    },
-    {
-      "id": "pl-holy-shield",
-      "naslov": "Holy Shield",
-      "svrha": "Block +30% i Holy šteta na blokirane udarce (Protection talent, 31 bodova).",
-      "klasa": "paladin",
-      "uloge": [
-        "tank"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/cast Holy Shield",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/cast Holy Shield",
-          "objasnjenje": "Talent (oko levela 40). Traži štit. Block chance podignut na 30% (1. 10.)."
-        }
-      ],
-      "kada": "Na cooldownu na svakom pullu.",
-      "kadaNe": "Bez štita ne radi.",
-      "level": 40,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-october-26/2360696",
-        "https://rankedboost.com/world-of-warcraft/forever/macros/paladin/protection/"
-      ],
-      "znakova": 30
-    },
-    {
-      "id": "pl-righteous-fury",
-      "naslov": "Righteous Fury",
-      "svrha": "Buff koji množi Holy threat; bez njega nisi tank.",
-      "klasa": "paladin",
-      "uloge": [
-        "tank"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/cast Righteous Fury",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/cast Righteous Fury",
-          "objasnjenje": "Level 16, 30 min. Provjeri da je uvijek gore prije pulla."
-        }
-      ],
-      "kada": "Prije svakog dungeona i nakon smrti.",
-      "kadaNe": "Kad nisi tank: skini ga desnim klikom na buff, inače kradeš aggro.",
-      "level": 16,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://wowforevertalent.com/abilities/paladin/",
-        "https://wowguide.net/en/guides/wow-forever-paladin-changes"
-      ],
-      "znakova": 33
-    },
-    {
-      "id": "pl-lay-on-hands-mouseover",
-      "naslov": "Lay on Hands na mouseover",
-      "svrha": "Prekini cast i puni heal na jedinicu pod mišem, target ili sebe; troši svu manu.",
-      "klasa": "paladin",
-      "uloge": [
-        "tank"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/stopcasting\n/cast [@mouseover,help,nodead][help,nodead][@player] Lay on Hands",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/stopcasting",
-          "objasnjenje": "Prekini cast koji je u tijeku."
-        },
-        {
-          "linija": "/cast [@mouseover,help,nodead][help,nodead][@player] Lay on Hands",
-          "objasnjenje": "Prvo pokuša na prijatelja ispod miša, ako ga nema onda na prijateljski target, a ako ni toga nema, na tebe. 'nodead' preskače mrtve. Level 10, 1 h cd."
-        }
-      ],
-      "kada": "Healer umire ili ti padaš ispod 15% bez heala u dometu.",
-      "kadaNe": "Nikad 'za svaki slučaj': 1 h cooldown i ostaneš bez mane.",
-      "level": 10,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://rankedboost.com/world-of-warcraft/forever/macros/paladin/holy/",
-        "https://mmonster.co/wow-forever/guides/macros",
-        "https://wowforevertalent.com/abilities/paladin/"
-      ],
-      "znakova": 91
-    },
-    {
-      "id": "pl-bop-mouseover",
-      "naslov": "Blessing of Protection na mouseover",
-      "svrha": "Imunitet na fizičku štetu na jedinicu pod mišem ili target (ne na sebe dok tankaš).",
-      "klasa": "paladin",
-      "uloge": [
-        "tank"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/cast [@mouseover,help,nodead][help,nodead] Blessing of Protection",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/cast [@mouseover,help,nodead][help,nodead] Blessing of Protection",
-          "objasnjenje": "Prijatelj pod mišem, inače prijateljski target. Nema [@player] namjerno: BoP na sebi znači da mobovi odu na healera. Level 10, 5 min cd."
-        }
-      ],
-      "kada": "Mob tuče Niksu ili Karkensa i Judgement je na cd: BoP na njih, pa taunt kad se vrati.",
-      "kadaNe": "Ne na sebe dok tankaš. Daje Forbearance: Divine Shield i LoH-ov partner na 1 min ne rade.",
-      "level": 10,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://wowforevertalent.com/abilities/paladin/",
-        "https://rankedboost.com/world-of-warcraft/forever/macros/paladin/",
-        "https://warcraft.wiki.gg/wiki/Useful_macros_(old)"
-      ],
-      "znakova": 79
-    },
-    {
-      "id": "pl-purify-cleanse-mouseover",
-      "naslov": "Purify / Cleanse na mouseover",
-      "svrha": "Dispel otrova i bolesti na jedinicu pod mišem, target ili sebe.",
-      "klasa": "paladin",
-      "uloge": [
-        "tank"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/cast [@mouseover,help,nodead][help,nodead][@player] Purify",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/cast [@mouseover,help,nodead][help,nodead][@player] Purify",
-          "objasnjenje": "Purify (8) skida otrov i bolest. Na 42 zamijeni riječ Purify s Cleanse (skida i magiju)."
-        }
-      ],
-      "kada": "Otrovi u Wailing Caverns, bolesti u Scholomance; dok healer radi svoje.",
-      "kadaNe": "Ne usred taunt rotacije ako nije hitno; dispel troši GCD koji ti treba za threat.",
-      "level": 8,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://wowforevertalent.com/abilities/paladin/",
-        "https://mmonster.co/wow-forever/guides/macros"
-      ],
-      "znakova": 72
-    },
-    {
-      "id": "pl-hammer-of-justice",
-      "naslov": "Hammer of Justice (Shift na focus)",
-      "svrha": "Stun target ili focus: prekida cast, kupuje vrijeme.",
-      "klasa": "paladin",
-      "uloge": [
-        "tank"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip Hammer of Justice\n/cast [mod:shift,@focus,harm,nodead][harm,nodead] Hammer of Justice",
-      "linije": [
-        {
-          "linija": "#showtooltip Hammer of Justice",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/cast [mod:shift,@focus,harm,nodead][harm,nodead] Hammer of Justice",
-          "objasnjenje": "Level 8, 1 min cd, 10 m. Shift: na focus (npr. caster koji stoji sa strane)."
-        }
-      ],
-      "kada": "Mob casta heal, a nitko nema interrupt spreman; ili bijeg mobu koji ide na healera.",
-      "kadaNe": "Ne na bossove (imuni na stun) i ne na sheepane.",
-      "level": 8,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://rankedboost.com/world-of-warcraft/forever/macros/paladin/",
-        "https://wowforevertalent.com/abilities/paladin/"
-      ],
-      "znakova": 98
-    },
-    {
-      "id": "pl-blessing-might-wisdom",
-      "naslov": "Blessing of Might na mouseover, sa Shiftom Wisdom",
-      "svrha": "Buff na jedinicu pod mišem, target ili sebe; Shift za Wisdom (mana).",
-      "klasa": "paladin",
-      "uloge": [
-        "tank"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip [mod:shift] Blessing of Wisdom; Blessing of Might\n/cast [mod:shift,@mouseover,help,nodead][mod:shift,help,nodead][mod:shift] Blessing of Wisdom; [@mouseover,help,nodead][help,nodead][@player] Blessing of Might",
-      "linije": [
-        {
-          "linija": "#showtooltip [mod:shift] Blessing of Wisdom; Blessing of Might",
-          "objasnjenje": "Ikona prati modifikator."
-        },
-        {
-          "linija": "/cast [mod:shift,@mouseover,help,nodead][mod:shift,help,nodead][mod:shift] Blessing of Wisdom; [@mouseover,help,nodead][help,nodead][@player] Blessing of Might",
-          "objasnjenje": "Might (4) warrior i rogue; Wisdom (14) shaman, mage, druid i ti. Jedan blessing po igraču."
-        }
-      ],
-      "kada": "Početak dungeona i nakon smrti; traje 5 min, pa obnavljaj.",
-      "kadaNe": "Ne stavljaj Salvation na sebe (u Foreveru je zaseban spell koji smanjuje threat 30%); Revoke ga skida.",
-      "level": 4,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://wowforevertalent.com/abilities/paladin/",
-        "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-october-26/2360696",
-        "https://mmonster.co/wow-forever/guides/macros"
-      ],
-      "znakova": 222
-    },
-    {
-      "id": "pl-flash-of-light-mouseover",
-      "naslov": "Flash of Light na mouseover",
-      "svrha": "Brzi mali heal na jedinicu pod mišem, target ili sebe.",
-      "klasa": "paladin",
-      "uloge": [
-        "tank"
-      ],
-      "rasa": null,
-      "tekst": "/cast [@mouseover,help,nodead][help,nodead][@player] Flash of Light",
-      "linije": [
-        {
-          "linija": "/cast [@mouseover,help,nodead][help,nodead][@player] Flash of Light",
-          "objasnjenje": "Prvo pokuša na prijatelja ispod miša, ako ga nema onda na prijateljski target, a ako ni toga nema, na tebe. 'nodead' preskače mrtve. Level 20 u Classicu."
-        }
-      ],
-      "kada": "Solo i kad healer padne: top-up sebe između pullova.",
-      "kadaNe": "U borbi kao tank gubiš threat dok healaš; samo ako Niksa ne može.",
-      "level": 20,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://mmonster.co/wow-forever/guides/macros",
-        "https://wowforevertalent.com/abilities/paladin/"
-      ],
-      "znakova": 67
-    },
-    {
-      "id": "rc-war-stomp",
-      "naslov": "War Stomp (tauren)",
-      "svrha": "Stun svih u blizini na 2 s, cooldown 90 s; radi i u formama.",
-      "klasa": "druid",
-      "uloge": [
-        "heal",
-        "tank",
-        "dps"
-      ],
-      "rasa": "tauren",
-      "tekst": "#showtooltip\n/cast War Stomp",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/cast War Stomp",
-          "objasnjenje": "Racial; cast 0,5 s. U Foreveru cd 90 s (bilo 2 min, dev notes 16. 10.). Po Zockifyju racijali poput War Stompa rade i u Bear/Cat formi."
-        }
-      ],
-      "kada": "Solo: mob te tuče dok castaš heal; stunaj pa Rejuvenation/Regrowth. Tank: kratki prekid castera u packu.",
-      "kadaNe": "U grupi pazi na sap/sheep u dometu: stun ih ne budi, ali tvoji sljedeći udarci hoće.",
-      "level": 1,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-october-26/2360696",
-        "https://lfcarry.com/guides/wow-forever-racials",
-        "https://www.zockify.com/forever/druid/"
-      ],
-      "znakova": 28,
-      "lik": "niksa-alt"
-    },
-    {
-      "id": "dr-healing-touch-mouseover",
-      "naslov": "Healing Touch na mouseover",
-      "svrha": "Veliki heal na jedinicu pod mišem, inače target, inače ti.",
-      "klasa": "druid",
-      "uloge": [
-        "heal"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/cast [@mouseover,help,nodead][help,nodead][@player] Healing Touch",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/cast [@mouseover,help,nodead][help,nodead][@player] Healing Touch",
-          "objasnjenje": "Prvo pokuša na prijatelja ispod miša, ako ga nema onda na prijateljski target, a ako ni toga nema, na tebe. 'nodead' preskače mrtve."
-        }
-      ],
-      "kada": "Glavni heal na tanka u grupi.",
-      "kadaNe": "Ne radi u formama (Bear, Cat, Travel); prvo macro 'Izlaz iz forme'.",
-      "level": 1,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://mmonster.co/wow-forever/guides/macros",
-        "https://rankedboost.com/world-of-warcraft/forever/macros/druid/restoration/",
-        "https://wowforevertalent.com/abilities/druid/"
-      ],
-      "znakova": 79,
-      "lik": "niksa-alt"
-    },
-    {
-      "id": "dr-regrowth-mouseover",
-      "naslov": "Regrowth na mouseover",
-      "svrha": "Srednji heal s HoT-om na jedinicu pod mišem.",
-      "klasa": "druid",
-      "uloge": [
-        "heal"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/cast [@mouseover,help,nodead][help,nodead][@player] Regrowth",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/cast [@mouseover,help,nodead][help,nodead][@player] Regrowth",
-          "objasnjenje": "Prvo pokuša na prijatelja ispod miša, ako ga nema onda na prijateljski target, a ako ni toga nema, na tebe. 'nodead' preskače mrtve."
-        }
-      ],
-      "kada": "Tank prima stalnu štetu; Regrowth daje odmah i tick kroz 21 s, a otvara Swiftmend.",
-      "kadaNe": "Skuplji od Rejuvenationa za malu štetu; solo radije Rejuvenation.",
-      "level": 12,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://rankedboost.com/world-of-warcraft/forever/macros/druid/restoration/",
-        "https://wowforevertalent.com/abilities/druid/"
-      ],
-      "znakova": 74,
-      "lik": "niksa-alt"
-    },
-    {
-      "id": "dr-rejuv-swiftmend",
-      "naslov": "Rejuvenation na mouseover, sa Shiftom Swiftmend",
-      "svrha": "HoT na jedinicu pod mišem; Shift troši njezin HoT za instant heal.",
-      "klasa": "druid",
-      "uloge": [
-        "heal"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip [mod:shift] Swiftmend; Rejuvenation\n/cast [mod:shift,@mouseover,help,nodead][mod:shift,help,nodead][mod:shift] Swiftmend; [@mouseover,help,nodead][help,nodead][@player] Rejuvenation",
-      "linije": [
-        {
-          "linija": "#showtooltip [mod:shift] Swiftmend; Rejuvenation",
-          "objasnjenje": "Ikona prati modifikator."
-        },
-        {
-          "linija": "/cast [mod:shift,@mouseover,help,nodead][mod:shift,help,nodead][mod:shift] Swiftmend; [@mouseover,help,nodead][help,nodead][@player] Rejuvenation",
-          "objasnjenje": "Shift: Swiftmend (u Foreveru po beta spellbooku na 25; rankedboost ga vodi kao talent) na istog. Inače Rejuvenation (level 4). Swiftmend traži aktivan Rejuvenation ili Regrowth na meti."
-        }
-      ],
-      "kada": "Rejuv na tanka čim pull krene; Swiftmend kad naglo padne.",
-      "kadaNe": "Ni jedno ne radi u formama. Swiftmend bez HoT-a na meti baci grešku.",
-      "level": 4,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://rankedboost.com/world-of-warcraft/forever/macros/druid/restoration/",
-        "https://wowforevertalent.com/abilities/druid/"
-      ],
-      "znakova": 194,
-      "lik": "niksa-alt"
-    },
-    {
-      "id": "dr-ns-healing-touch",
-      "naslov": "Nature's Swiftness + instant Healing Touch",
-      "svrha": "Hitni instant Healing Touch na mouseover/target/sebe.",
-      "klasa": "druid",
-      "uloge": [
-        "heal"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip Healing Touch\n/stopcasting\n/cast Nature's Swiftness\n/cast [@mouseover,help,nodead][help,nodead][@player] Healing Touch",
-      "linije": [
-        {
-          "linija": "#showtooltip Healing Touch",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/stopcasting",
-          "objasnjenje": "Prekini sporiji cast koji je u tijeku."
-        },
-        {
-          "linija": "/cast Nature's Swiftness",
-          "objasnjenje": "Nije na GCD-u; u Foreveru po beta spellbooku na 30 (u Classicu talent)."
-        },
-        {
-          "linija": "/cast [@mouseover,help,nodead][help,nodead][@player] Healing Touch",
-          "objasnjenje": "Instant veliki heal."
-        }
-      ],
-      "kada": "Tank pada, a Healing Touch od 3 s ne bi stigao.",
-      "kadaNe": "Ne za male rupe; 3 min cooldown. Ne radi u formi.",
-      "level": 30,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://rankedboost.com/world-of-warcraft/forever/macros/druid/restoration/",
-        "https://wowforevertalent.com/abilities/druid/"
-      ],
-      "znakova": 131,
-      "lik": "niksa-alt"
-    },
-    {
-      "id": "dr-innervate-healer",
-      "naslov": "Innervate na healera (focus, mouseover, sebe)",
-      "svrha": "Izlazi iz forme i daje Innervate: prvo focusu (shaman healer), pa mouseoveru, pa targetu, pa sebi.",
-      "klasa": "druid",
-      "uloge": [
-        "heal",
-        "dps",
-        "tank"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip Innervate\n/cancelform\n/cast [@focus,help,nodead][@mouseover,help,nodead][help,nodead][@player] Innervate",
-      "linije": [
-        {
-          "linija": "#showtooltip Innervate",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/cancelform",
-          "objasnjenje": "Innervate ne ide iz Bear/Cat/Travel forme. Svaki pritisak izbaci iz forme, pa ne stavljaj na tanking bar."
-        },
-        {
-          "linija": "/cast [@focus,help,nodead][@mouseover,help,nodead][help,nodead][@player] Innervate",
-          "objasnjenje": "Stavi healera u focus prije dungeona; onda je dovoljan jedan pritisak."
-        }
-      ],
-      "kada": "Healer ispod 30% mane na bossu; solo kad si ti healer i ostaneš bez mane.",
-      "kadaNe": "Ne u prvih 20 s borbe; Innervate najviše vrijedi kad je mana nisko. 6 min cooldown.",
-      "level": 40,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://rankedboost.com/world-of-warcraft/forever/macros/druid/",
-        "https://wowforevertalent.com/abilities/druid/"
-      ],
-      "znakova": 117,
-      "lik": "niksa-alt"
-    },
-    {
-      "id": "dr-rebirth-mouseover",
-      "naslov": "Rebirth u borbi, Revive izvan nje (mouseover)",
-      "svrha": "Oživi mrtvog ispod miša ili mrtvog targeta: Rebirth u borbi, Revive van borbe; forma se skida samo ako postoji mrtvi.",
-      "klasa": "druid",
-      "uloge": [
-        "heal",
-        "dps",
-        "tank"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/cancelform [@mouseover,help,dead][help,dead]\n/cast [combat,@mouseover,help,dead][combat,help,dead] Rebirth; [@mouseover,help,dead][help,dead] Revive",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona prati borbu."
-        },
-        {
-          "linija": "/cancelform [@mouseover,help,dead][help,dead]",
-          "objasnjenje": "Izlaz iz forme samo kad je pod mišem/targetu mrtav prijatelj."
-        },
-        {
-          "linija": "/cast [combat,@mouseover,help,dead][combat,help,dead] Rebirth; [@mouseover,help,dead][help,dead] Revive",
-          "objasnjenje": "U borbi Rebirth (level 20, 30 min cd, treba seed reagens), inače Revive (level 12)."
-        }
-      ],
-      "kada": "Healer ili tank umre usred bossa: Rebirth. Poslije borbe: isti gumb, Revive.",
-      "kadaNe": "Ne diži DPS-a usred AoE-a; pričekaj da se makne mob. Pazi na reagens.",
-      "level": 12,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://rankedboost.com/world-of-warcraft/forever/macros/druid/",
-        "https://wowforevertalent.com/abilities/druid/"
-      ],
-      "znakova": 162,
-      "lik": "niksa-alt"
-    },
-    {
-      "id": "dr-bear-form",
-      "naslov": "Bear Form (ostani u formi)",
-      "svrha": "Ulazi u Bear bez rizika da te drugi pritisak izbaci.",
-      "klasa": "druid",
-      "uloge": [
-        "tank"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/cast !Bear Form",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/cast !Bear Form",
-          "objasnjenje": "Uskličnik sprječava izlazak na ponovni pritisak. Na 40 zamijeni s Dire Bear Form."
-        }
-      ],
-      "kada": "Tank uloga u dungeonu; solo kad te tuku dvojica.",
-      "kadaNe": "Kad treba healati: izađi macroom 'Izlaz iz forme'.",
-      "level": 10,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://kami-labs.fr/en/wow-forever/macros-wow-forever-9-classes/",
-        "https://mmonster.co/wow-forever/guides/macros",
-        "https://wowforevertalent.com/abilities/druid/"
-      ],
-      "znakova": 29,
-      "lik": "niksa-alt"
-    },
-    {
-      "id": "dr-cancelform",
-      "naslov": "Izlaz iz forme",
-      "svrha": "Vraća u caster oblik iz bilo koje forme.",
-      "klasa": "druid",
-      "uloge": [
-        "heal",
-        "tank",
-        "dps"
-      ],
-      "rasa": null,
-      "tekst": "/cancelform",
-      "linije": [
-        {
-          "linija": "/cancelform",
-          "objasnjenje": "Skida trenutnu formu. Od 1. 10. forme su imune na Disarm, ali castanje i dalje traži izlazak."
-        }
-      ],
-      "kada": "Prije heala, Innervatea, Rebirtha.",
-      "kadaNe": "U borbi kao tank: izlazak iz Beara gubi oklop i rage; samo ako healer stvarno treba pomoć.",
-      "level": 10,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://kami-labs.fr/en/wow-forever/macros-wow-forever-9-classes/",
-        "https://mmonster.co/wow-forever/guides/macros",
-        "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-october-26/2360696"
-      ],
-      "znakova": 11,
-      "lik": "niksa-alt"
-    },
-    {
-      "id": "dr-travel-aquatic-cat",
-      "naslov": "Travel vani, Aquatic u vodi, Cat unutra",
-      "svrha": "Jedna tipka bira formu za kretanje ovisno gdje si.",
-      "klasa": "druid",
-      "uloge": [
-        "heal",
-        "tank",
-        "dps"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/cast [swimming] Aquatic Form; [outdoors] Travel Form; Cat Form",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/cast [swimming] Aquatic Form; [outdoors] Travel Form; Cat Form",
-          "objasnjenje": "Pliva: Aquatic (16). Vani: Travel (30). Unutra: Cat (20). Prije 30 obriši Travel dio pa vani ide Cat."
-        }
-      ],
-      "kada": "Kretanje po zoni i dungeonu bez razmišljanja o formi.",
-      "kadaNe": "Ne iz Moonkin forme (ne radi). Travel Form je samo vani i van borbe.",
-      "level": 16,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://rankedboost.com/world-of-warcraft/forever/macros/druid/",
-        "https://wowforevertalent.com/abilities/druid/"
-      ],
-      "znakova": 76,
-      "lik": "niksa-alt"
-    },
-    {
-      "id": "dr-growl-taunt",
-      "naslov": "Growl taunt (mouseover), sa Shiftom Challenging Roar",
-      "svrha": "Taunt moba pod mišem ili targeta; Shift dodaje AoE taunt.",
-      "klasa": "druid",
-      "uloge": [
-        "tank"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip Growl\n/cast [@mouseover,harm,nodead][harm,nodead] Growl\n/cast [mod:shift,@mouseover,harm,nodead][mod:shift,harm,nodead] Challenging Roar",
-      "linije": [
-        {
-          "linija": "#showtooltip Growl",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/cast [@mouseover,harm,nodead][harm,nodead] Growl",
-          "objasnjenje": "Growl (level 10) na neprijatelja pod mišem, inače target. Domet melee."
-        },
-        {
-          "linija": "/cast [mod:shift,@mouseover,harm,nodead][mod:shift,harm,nodead] Challenging Roar",
-          "objasnjenje": "Shift: Challenging Roar (level 28), taunt svih oko tebe na 6 s, 10 min cd."
-        }
-      ],
-      "kada": "Mob krene na healera: miš na njega u nameplateu i pritisni.",
-      "kadaNe": "Ne spamaj Growl na metu koju već držiš; koristi ga kad aggro ode.",
-      "level": 10,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://rankedboost.com/world-of-warcraft/forever/macros/druid/feral-combat/",
-        "https://wowforevertalent.com/abilities/druid/"
-      ],
-      "znakova": 149,
-      "lik": "niksa-alt"
-    },
-    {
-      "id": "dr-maul-startattack",
-      "naslov": "Maul + auto-attack (bear)",
-      "svrha": "Kreni auto-attack i queue Maul za sljedeći udarac.",
-      "klasa": "druid",
-      "uloge": [
-        "tank"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/startattack\n/cast Maul",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/startattack",
-          "objasnjenje": "Auto-attack odmah, i kad nemaš rage."
-        },
-        {
-          "linija": "/cast Maul",
-          "objasnjenje": "On-next-swing, nije na GCD-u; troši rage pa ga kombiniraj sa Swipeom kad ima više mobova."
-        }
-      ],
-      "kada": "Osnovni bear udarac na jednom mobu.",
-      "kadaNe": "Na packu od 3+: Swipe daje više threata po rageu.",
-      "level": 10,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://rankedboost.com/world-of-warcraft/forever/macros/druid/feral-combat/",
-        "https://kami-labs.fr/en/wow-forever/macros-wow-forever-9-classes/"
-      ],
-      "znakova": 36,
-      "lik": "niksa-alt"
-    },
-    {
-      "id": "dr-remove-curse-abolish-poison",
-      "naslov": "Abolish Poison, sa Shiftom Remove Curse",
-      "svrha": "Dispel na mouseover/target/sebe.",
-      "klasa": "druid",
-      "uloge": [
-        "heal"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/cast [mod:shift,@mouseover,help,nodead][mod:shift,help,nodead][mod:shift] Remove Curse; [@mouseover,help,nodead][help,nodead][@player] Abolish Poison",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona prati modifikator."
-        },
-        {
-          "linija": "/cast [mod:shift,@mouseover,help,nodead][mod:shift,help,nodead][mod:shift] Remove Curse; [@mouseover,help,nodead][help,nodead][@player] Abolish Poison",
-          "objasnjenje": "Shift: Remove Curse (24). Inače Abolish Poison (26); do 26 upiši Cure Poison (14)."
-        }
-      ],
-      "kada": "Otrovi u Wailing Caverns/Razorfen, curse-ovi u Scholomance.",
-      "kadaNe": "Ne skida bolesti ni magiju; to su shaman i paladin.",
-      "level": 14,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://wowforevertalent.com/abilities/druid/",
-        "https://rankedboost.com/world-of-warcraft/forever/macros/druid/restoration/"
-      ],
-      "znakova": 163,
-      "lik": "niksa-alt"
-    },
-    {
-      "id": "am-conjure",
-      "naslov": "Conjure Water pa Food (alt)",
-      "svrha": "Prvi pritisak voda, drugi hrana, za ekipu.",
-      "klasa": "alt-mage",
-      "uloge": [
-        "opcenito"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/castsequence reset=10 Conjure Water, Conjure Food",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/castsequence reset=10 Conjure Water, Conjure Food",
-          "objasnjenje": "Water (4), Food (6). Bez ranka uvijek najviši."
-        }
-      ],
-      "kada": "Kad ekipa treba vodu za dungeon, a Karkens je offline.",
-      "kadaNe": "U borbi ne radi.",
-      "level": 4,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://mmonster.co/wow-forever/guides/macros",
-        "https://wow-forever.gg/guides/setup/macros/",
-        "https://wowforevertalent.com/abilities/mage/"
-      ],
-      "znakova": 63,
-      "lik": "niksa-alt"
-    },
-    {
-      "id": "am-teleport",
-      "naslov": "Teleport: Orgrimmar, sa Shiftom Undercity",
-      "svrha": "Brzo u grad po AH i trenere.",
-      "klasa": "alt-mage",
-      "uloge": [
-        "opcenito"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/cast [mod:shift] Teleport: Undercity; Teleport: Orgrimmar",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/cast [mod:shift] Teleport: Undercity; Teleport: Orgrimmar",
-          "objasnjenje": "Oba level 20, treba Rune of Teleportation. Thunder Bluff na 30."
-        }
-      ],
-      "kada": "Nakon farmanja clotha: Orgrimmar za AH, Undercity za Enchanting trenera.",
-      "kadaNe": "Bez rune u torbi ne radi.",
-      "level": 20,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://wowforevertalent.com/abilities/mage/",
-        "https://www.zockify.com/forever/mage/"
-      ],
-      "znakova": 71,
-      "lik": "niksa-alt"
-    },
-    {
-      "id": "am-arcane-intellect-self",
-      "naslov": "Arcane Intellect na sebe",
-      "svrha": "Buff na sebe bez targeta.",
-      "klasa": "alt-mage",
-      "uloge": [
-        "opcenito"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/cast [@player] Arcane Intellect",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/cast [@player] Arcane Intellect",
-          "objasnjenje": "Level 1, uvijek na tebe."
-        }
-      ],
-      "kada": "Prije craftanja i farmanja.",
-      "kadaNe": "Nema.",
-      "level": 1,
-      "status": "provjereno za Forever",
-      "izvor": [
-        "https://mmonster.co/wow-forever/guides/macros",
-        "https://wowforevertalent.com/abilities/mage/"
-      ],
-      "znakova": 45,
-      "lik": "niksa-alt"
-    },
-    {
-      "id": "am-disenchant",
-      "naslov": "Disenchant",
-      "svrha": "Pokrene Disenchant pa klikneš predmet u torbi.",
-      "klasa": "alt-mage",
-      "uloge": [
-        "opcenito"
-      ],
-      "rasa": null,
-      "tekst": "#showtooltip\n/cast Disenchant",
-      "linije": [
-        {
-          "linija": "#showtooltip",
-          "objasnjenje": "Ikona."
-        },
-        {
-          "linija": "/cast Disenchant",
-          "objasnjenje": "Spell iz Enchantinga; nakon pritiska kursor traži predmet. Predmet se ne može odabrati automatski (Blizzard ne dopušta)."
-        }
-      ],
-      "kada": "Greenovi od ekipe za dust i essence.",
-      "kadaNe": "Ne diraj quest i BoE predmete koje netko treba; prvo pitaj u Discordu.",
-      "level": 5,
-      "status": "iz Classica, testirati",
-      "izvor": [
-        "https://warcraft.wiki.gg/wiki/Useful_macros_(old)"
-      ],
-      "znakova": 29,
-      "lik": "niksa-alt"
+      "znakova": 60,
+      "faza": "kasnije",
+      "okidac": "Od 40, kad postoje trinketi. Dodaj svoj racial (Blood Fury, Berserking) kao još jedan /cast red.",
+      "istaknuto": false
     }
-  ]
+  ],
+  "vodilja": "Na launchu instaliraj samo ovo. Ostalo kad dođeš do okidača."
 }
