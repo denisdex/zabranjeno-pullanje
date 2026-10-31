@@ -3,7 +3,7 @@
 window.HORDE = {
   ekipa: "Zaprešić Horde",
   guild: "Zabranjeno pullanje",
-  azurirano: "2026-10-29",
+  azurirano: "2026-10-31",
 
   // Vremena u UTC. Studeni je CET (UTC+1).
   // Rezervacija imena: do 3. 11. 2026. u 23:59 po Zagrebu.
@@ -516,7 +516,12 @@ window.HORDE = {
     ] },
     { datum: "2026-10-26", naslov: "Classic loot je natrag", stavke: [
       { tekst: "Mob koji nije ništa dropao opet se može kliknuti, kao u Classicu.", za: ["Svi"], tema: "Loot" },
-      { tekst: "Savage maknut, vraćen Command (+5% štete Hunter i Warlock petova).", za: ["Orc"], tema: "Racial" }
+      { tekst: "Savage maknut, vraćen Command (+5% štete Hunter i Warlock petova).", za: ["Orc"], tema: "Racial" },
+      { tekst: "Plainsrunning daje 2% brzine po stacku (bilo 1%), najviše 60% (bilo 30%), ali više ne ubrzava mount.", za: ["Tauren"], tema: "Racial" },
+      { tekst: "Endurance sad daje samo +5% Healtha, bez ostalih bonusa.", za: ["Tauren"], tema: "Racial" },
+      { tekst: "Wind-Blessed Haste smanjen na 2% (bilo 3%).", za: ["Skyborne"], tema: "Racial" },
+      { tekst: "Read Leyline daje +50% regena mane i healtha (bilo 100%) na 15 s; na Ley Lineu dobiješ Attuned na 1 h, koji ga vraća na 100%. Ne radi uz Innervate.", za: ["Skyborne"], tema: "Racial" },
+      { tekst: "Skysight daje +15% brzine (bilo 10%) na 15 s; na elemental convergenceu dobiješ Charged na 1 h, koji ga diže na 30%. Attuned i Charged ostaju nakon smrti, a nestaju ulaskom u raid.", za: ["Skyborne"], tema: "Racial" }
     ] },
     { datum: "2026-10-16", naslov: "Velika runda za klase", stavke: [
       { tekst: "Battle Shout je sad raid-wide, a Slam više ne prekida pushback.", za: ["Warrior"], tema: "Spell" },
