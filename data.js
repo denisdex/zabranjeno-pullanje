@@ -74,6 +74,7 @@ window.HORDE = {
   // zadaci: { naziv, od, do (level raspon), gotovo }; na profilu se prikazuju oni za trenutni level lika
   // profil: build, oprema i ciljevi za stranicu lika (#lik/ime-lika); plan: true = još nije stvaran build iz igre
   //   talenti: bodovi u tri stabla redom kako ih igra slaže
+  //   vodic: { naziv, url, izvor, tocke: [kratke rečenice] } = vanjski guide za levelanje, link i sažetak na profilu
   //   oprema i ciljevi: { slot, ime, kvaliteta: poor|common|uncommon|rare|epic|legendary, ikona (Wowhead ikona, npr. "inv_axe_09"), wowhead (ID itema), izvor }
   // oci: položaji očiju na fotki u postocima [[x, y], [x, y]] za sjaj (samo Undead), inače izostavi
   // boja: boja igrača (#rrggbb) umjesto boje klase, na webu i u cinematicu; u ekipi je svaka klasa jedan igrač
@@ -203,8 +204,16 @@ window.HORDE = {
         { naziv: "Pre-raid BiS lista s profila, Lionheart Helm kao cilj", od: 58, do: 60, gotovo: false }
       ],
       profil: {
-        specka: "Retribution (leveling)", talenti: [11, 5, 35], plan: true,
-        opisBuilda: "Ret za brzo levelanje solo i u grupi. Za tankanje dungeona kasnije Protection/Holy hibrid; na 40 dual spec, jedan spec za tank.",
+        specka: "Retribution (leveling)", talenti: [12, 8, 31], plan: true,
+        opisBuilda: "Ret za levelanje po Mobalytics guideu: Seal of Command na 22, Two-Handed Weapon Specialization, a do 60 i bodovi u Holy i Protection. Dungeone se može tankati i s Retom; na 40 dual spec, jedan spec za tank.",
+        vodic: { naziv: "Paladin Leveling Guide 1–60", url: "https://mobalytics.gg/wow-forever/classes/paladin-leveling-guide", izvor: "Mobalytics · yumytv · 31. 10. 2026.",
+          tocke: [
+            "Uvijek upaljeno: Retribution Aura, Blessing of Might i Seal of Righteousness.",
+            "Judgement i Holy Strike na cooldown, između njih auto-attack.",
+            "Oružje: spori dvoručnjak (3.3 ili sporiji), Seal of Command voli jake udarce.",
+            "Statovi: Stamina i Spirit, od 40 i Intellect.",
+            "Divine Shield i Blessing of Protection poništavaju pad: skači sa zepelina i litica."
+          ] },
         oprema: [],
         ciljevi: [
           { ime: "Arcanite Reaper", slot: "Main Hand", kvaliteta: "rare", ikona: "inv_axe_09", wowhead: 12784, izvor: "Blacksmithing", gotovo: false },

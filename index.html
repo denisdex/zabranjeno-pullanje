@@ -575,6 +575,12 @@ section[id] { scroll-margin-top: 84px; }
 .tree i b { position: absolute; inset: 0 auto 0 0; background: var(--c); }
 .tree strong { font: 800 1.08rem/1 var(--f-display); text-align: right; font-variant-numeric: tabular-nums; letter-spacing: .02em; }
 .build-tx { margin: 0; color: var(--dust); max-width: 42rem; }
+.vodic-g { margin-top: 16px; max-width: 42rem; border-left: 2px solid var(--c); background: rgba(236, 226, 212, .04); padding: 14px 18px; }
+.vodic-l { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; text-decoration: none; color: var(--bone); }
+.vodic-l b { font: 800 1.05rem/1.1 var(--f-display); text-transform: uppercase; letter-spacing: .02em; color: var(--c); }
+.vodic-l span { font-size: .6875rem; letter-spacing: .06em; color: var(--dust); }
+.vodic-l:hover b, .vodic-l:focus-visible b { text-decoration: underline; text-underline-offset: 3px; }
+.vodic-t { margin: 10px 0 0; padding-left: 18px; color: var(--dust); display: grid; gap: 4px; }
 .gear { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr); column-gap: 28px; }
 @media (min-width: 640px) { .gear { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .gear li { display: grid; grid-template-columns: 6.5rem minmax(0, 1fr); gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
@@ -3360,6 +3366,8 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
               return '<div class="tree"><span class="mono">' + esc(n) + '</span><i><b style="width:' + ((t[k] || 0) / 51 * 100).toFixed(1) + '%"></b></i><strong>' + (t[k] || 0) + "</strong></div>";
             }).join("") + "</div>" +
             (pf.opisBuilda ? '<p class="build-tx">' + esc(pf.opisBuilda) + "</p>" : "") +
+            (pf.vodic ? '<div class="vodic-g"><a class="vodic-l" href="' + esc(pf.vodic.url) + '" target="_blank" rel="noopener"><b>' + esc(pf.vodic.naziv) + '</b><span class="mono">' + esc(pf.vodic.izvor || "") + " ↗</span></a>" +
+              ((pf.vodic.tocke || []).length ? '<ul class="vodic-t">' + pf.vodic.tocke.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" : "") + "</div>" : "") +
             (MC_POC && MC_POC.klasa === p.klasa.toLowerCase() ? '<button type="button" class="mc-link mono" data-mc-klasa="' + esc(MC_POC.klasa) + '">' + esc(MC_POC.naslov) + " →</button>" : "") +
           "</div>" +
           "<div><h3 class=\"lab mono\">Oprema</h3>" +
