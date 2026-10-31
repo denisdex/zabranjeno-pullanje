@@ -111,7 +111,7 @@ window.HORDE = {
         biljeske: "Healer grupe. Kad kaže mana, svi stanu."
       } },
     { igrac: "Pero",    lik: "Melee Kitic",      klasa: "Warrior", rasa: "Orc",    uloga: "Melee DPS",  level: 0, foto: "assets/likovi/melee-kitic.jpg", boja: "#D9853B",
-      siroka: "assets/likovi/melee-kitic-wide.jpg", fokus: [50.3, 16.6],
+      siroka: "assets/likovi/melee-kitic-wide.jpg", fokus: [49.8, 45.5],
       gold: 0,
       zadaci: [
         { naziv: "Mining i Skinning naučiti čim izađeš iz Valley of Trials", od: 1, do: 10, gotovo: false },
