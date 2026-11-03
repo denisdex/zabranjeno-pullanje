@@ -518,7 +518,9 @@ section[id] { scroll-margin-top: 84px; }
   animation: ladica .42s var(--ease) both;
 }
 .prof[data-sirina="profil"] .prof-panel { width: min(720px, 100%); }
-.prof[data-sirina="vodic"] .prof-panel { width: min(680px, 100%); }
+/* vodič za dungeon: preko cijelog ekrana */
+.prof[data-sirina="vodic"] .prof-panel { width: 100%; overflow-x: hidden; border-left: 0; box-shadow: none; animation-name: ladica-full; }
+@keyframes ladica-full { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
 .prof[data-sirina="siroka"] .prof-panel { width: min(1320px, 90vw); }
 .prof-panel:focus { outline: none; }
 @keyframes ladica { from { transform: translateX(48px); } to { transform: none; } }
@@ -744,7 +746,8 @@ a.sl:hover b { text-decoration: underline; }
 @media (min-width: 1100px) { .lad-lista .log { columns: 2; column-gap: 48px; } .lad-lista .log > li { break-inside: avoid; } }
 
 /* ---------- vodič za dungeon (isti overlay kao profil) ---------- */
-.dng { padding: clamp(24px, 4.4vw, 60px); display: grid; gap: 34px; }
+.dng { --dp: clamp(24px, 4.4vw, 60px); padding: clamp(24px, 4.4vw, 60px) var(--dp); display: grid; gap: 34px; }
+.prof[data-sirina="vodic"] .dng { --dp: max(clamp(24px, 4.4vw, 60px), calc((100vw - 1240px) / 2)); }
 .dng-head { display: grid; gap: 10px; padding-right: 56px; }
 .dng-head p { margin: 0; color: var(--dust); }
 .dng-head p b { color: var(--ember); font-weight: 500; }
@@ -823,8 +826,8 @@ a.sl:hover b { text-decoration: underline; }
 
 /* slike dungeona (polje slika u data.js) */
 .dk-img { display: block; aspect-ratio: 2 / 1; margin: -16px -16px 2px; background: center / cover no-repeat; filter: saturate(.85) brightness(.82); }
-.dng-ban { margin: calc(clamp(24px, 4.4vw, 60px) * -1) calc(clamp(24px, 4.4vw, 60px) * -1) 0; }
-.dng-ban img { display: block; width: 100%; aspect-ratio: 16 / 7; object-fit: cover; -webkit-mask-image: linear-gradient(180deg, #000 55%, transparent); mask-image: linear-gradient(180deg, #000 55%, transparent); }
+.dng-ban { margin: calc(clamp(24px, 4.4vw, 60px) * -1) calc(var(--dp) * -1) 0; }
+.dng-ban img { display: block; width: 100%; aspect-ratio: 16 / 7; max-height: 58vh; object-fit: cover; -webkit-mask-image: linear-gradient(180deg, #000 55%, transparent); mask-image: linear-gradient(180deg, #000 55%, transparent); }
 
 /* placeholder kad slike nema: tamna ploča s runama i grbom */
 .dk-ph, .dng-ban-ph {
@@ -837,7 +840,7 @@ a.sl:hover b { text-decoration: underline; }
 }
 .dk-ph img { width: 54px; height: 54px; opacity: .55; filter: grayscale(.3); }
 .dk-ph em, .dng-ban-ph em { font-style: normal; font-size: .5625rem; color: var(--dust); }
-.dng-ban-ph { aspect-ratio: 16 / 6; -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent); mask-image: linear-gradient(180deg, #000 60%, transparent); }
+.dng-ban-ph { aspect-ratio: 16 / 6; max-height: 40vh; -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent); mask-image: linear-gradient(180deg, #000 60%, transparent); }
 .dng-ban-ph img { width: 84px; height: 84px; aspect-ratio: auto; opacity: .55; -webkit-mask-image: none; mask-image: none; }
 
 /* level timeline dungeona */
