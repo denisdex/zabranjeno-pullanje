@@ -9,8 +9,17 @@
    "url": "https://www.wowhead.com/news/rss/classic"
   }
  ],
- "azurirano": "2026-11-03T18:28:15Z",
+ "azurirano": "2026-11-03T23:59:52Z",
  "stavke": [
+  {
+   "datum": "2026-11-03T20:00:09Z",
+   "naslov": "Explore WoW: Forever with a Gamepad",
+   "link": "https://us.forums.blizzard.com/en/wow/t/explore-wow-forever-with-a-gamepad/2400119/1",
+   "izvor": "Blizzard",
+   "sazetak": "Prefer a gamepad? Get to know another way to play World of Warcraft: Forever, from moving and casting spells to adjusting your settings. Gamepad support is available in a beta state, with more improvements to come. View Full Article",
+   "oznake": [],
+   "vrsta": "vijest"
+  },
   {
    "datum": "2026-11-03T18:00:10Z",
    "naslov": "WoW: Forever—What’s New and What Feels Familiar",
@@ -408,15 +417,6 @@
    "link": "https://www.wowhead.com/news=382879/blizzcon-day-2-roundup-forever-forever-and-more-forever",
    "izvor": "Wowhead",
    "sazetak": "BlizzCon has ended, but don't worry - we've wrapped up the big recaps from today's panels. Continue reading »",
-   "oznake": [],
-   "vrsta": "vijest"
-  },
-  {
-   "datum": "2026-09-13T19:42:52Z",
-   "naslov": "WoW: Forever Webhook Now Available",
-   "link": "https://www.wowhead.com/news=382871/wow-forever-webhook-now-available",
-   "izvor": "Wowhead",
-   "sazetak": "We've created a new webhook for World of Warcraft: Forever, so you can keep up with all of the latest news and information regarding the newest flavor of WoW! Continue reading »",
    "oznake": [],
    "vrsta": "vijest"
   }
