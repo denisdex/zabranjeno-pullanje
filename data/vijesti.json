@@ -9,8 +9,20 @@
    "url": "https://www.wowhead.com/news/rss/classic"
   }
  ],
- "azurirano": "2026-10-30T18:38:47Z",
+ "azurirano": "2026-11-03T10:56:31Z",
  "stavke": [
+  {
+   "datum": "2026-11-03T03:20:33Z",
+   "naslov": "WoW Forever Beta Development Notes – Updated November 2",
+   "link": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696/9",
+   "izvor": "Blizzard",
+   "sazetak": "Since the last full update to the Beta on October 15, we’ve continued to work to solve issues, refine classes, improve gameplay in all areas, and address feedback we received from Beta testers. What follows are the updates and changes that…",
+   "oznake": [
+    "Patch notes",
+    "Beta"
+   ],
+   "vrsta": "patch"
+  },
   {
    "datum": "2026-10-30T17:20:18Z",
    "naslov": "WoW Weekly Recap - WoW: Forever, Talebound Demo, New Shop Decor Packs",
@@ -70,18 +82,6 @@
     "Launch"
    ],
    "vrsta": "vijest"
-  },
-  {
-   "datum": "2026-10-27T15:37:37Z",
-   "naslov": "WoW Forever Beta Development Notes – Updated October 26",
-   "link": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-october-26/2360696/8",
-   "izvor": "Blizzard",
-   "sazetak": "We’ve updated the previous post in this thread with some additions that were intended to be listed. Additional updates to Racial Abilities and Talents include: Orc Blood Fury’s cooldown reduced to 2 minutes (was 3 minutes). Troll…",
-   "oznake": [
-    "Patch notes",
-    "Beta"
-   ],
-   "vrsta": "patch"
   },
   {
    "datum": "2026-10-26T17:01:29Z",
