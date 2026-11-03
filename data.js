@@ -194,24 +194,91 @@ window.HORDE = {
       siroka: "assets/likovi/arsen-deadic-wide.jpg", fokus: [54.2, 20.1], ociSiroka: [[54.4, 18.6], [56.1, 19.0]],
       gold: 0,
       zadaci: [
-        { naziv: "Mining i Skinning; Righteous Fury čim ga naučiš, u svakom dungeonu", od: 1, do: 10, gotovo: false },
+        { naziv: "Mining for Dummies quest u startnoj zoni, pa Mining i Skinning; Righteous Fury u svakom dungeonu", od: 1, do: 10, gotovo: false },
+        { naziv: "Redemption: prvi paladin class quest na 12", od: 12, do: 14, gotovo: false },
+        { naziv: "Ragefire Chasm oko 15: Hidden Enemies daje oružje", od: 14, do: 18, gotovo: false },
         { naziv: "Jedini pullaš: nauči put kroz Ragefire i Wailing Caverns", od: 10, do: 20, gotovo: false },
         { naziv: "Kožu šalji Niksi, višak rude Peru ili na AH", od: 10, do: 40, gotovo: false },
+        { naziv: "Seal of Command na 22 i spori dvoručnjak, 3.3 ili sporiji", od: 20, do: 24, gotovo: false },
+        { naziv: "Wolfsbane class quest iz The Sepulchera prije Deadminesa, BFD-a i SFK-a", od: 20, do: 30, gotovo: false },
         { naziv: "Skupljaj tank opremu (štit, Stamina) za drugi spec", od: 30, do: 40, gotovo: false },
-        { naziv: "Dual spec: Protection tank i Retribution", od: 40, do: 42, gotovo: false },
+        { naziv: "Summon Warhorse i Unsealed Wrath odmah na 40", od: 40, do: 41, gotovo: false },
+        { naziv: "Dual spec: Protection tank i Retribution; od sad i Intellect", od: 40, do: 42, gotovo: false },
         { naziv: "Devilsaur koža u Un'Goru za Niksin Leatherworking", od: 40, do: 60, gotovo: false },
         { naziv: "Pre-raid BiS lista s profila, Lionheart Helm kao cilj", od: 58, do: 60, gotovo: false }
       ],
       profil: {
         specka: "Retribution (leveling)", talenti: [12, 8, 31], plan: true,
-        opisBuilda: "Ret za levelanje po Mobalytics guideu: Seal of Command na 22, Two-Handed Weapon Specialization, a do 60 i bodovi u Holy i Protection. Dungeone se može tankati i s Retom; na 40 dual spec, jedan spec za tank.",
-        vodic: { naziv: "Paladin Leveling Guide 1–60", url: "https://mobalytics.gg/wow-forever/classes/paladin-leveling-guide", izvor: "Mobalytics · yumytv · 31. 10. 2026.",
+        opisBuilda: "Ret za levelanje po Mobalytics guideu: 12 Holy, 8 Protection, 31 Retribution. Ključno Seal of Command na 22 i Unsealed Wrath na 40. Dungeone se može tankati i s Retom; na 40 dual spec, jedan spec za tank.",
+        vodic: { naziv: "Paladin Leveling Guide 1–60", url: "https://mobalytics.gg/wow-forever/classes/paladin-leveling-guide", izvor: "Mobalytics · yumytv · 2. 11. 2026.",
+          uvod: "Ret za levelanje: jaki udarci oružjem, seali, Judgement i Holy Strike, puno izdržljivosti pa malo sjedenja. S Retom se može tankati i healati dungeone; na 60 prelaziš na pravi tank ili heal build.",
+          snage: ["Može tank, heal ili DPS", "Jaki buffovi za grupu i hitne tipke (Lay on Hands, Divine Shield, Blessing of Protection)", "Besplatan mount na 40"],
+          slabosti: ["Spor, nema skok do mete", "Solo ubija sporije od prosjeka", "Aure i blessinge treba dogovarati s ekipom"],
+          // talenti redom po levelima; bodovi = koliko levela pokriva raspon
+          talentiPut: [
+            { od: 10, do: 14, ime: "Deflection" }, { od: 15, do: 17, ime: "Conviction" }, { od: 18, do: 19, ime: "Improved Judgement" },
+            { od: 20, do: 21, ime: "Pursuit of Justice" }, { od: 22, do: 22, ime: "Seal of Command", kljucno: true }, { od: 23, do: 24, ime: "Sanctified Judgement" },
+            { od: 25, do: 27, ime: "Two-Handed Weapon Specialization" }, { od: 28, do: 28, ime: "Sacred Arbiter" }, { od: 29, do: 29, ime: "Sanctified Judgement" },
+            { od: 30, do: 32, ime: "Vengeance" }, { od: 33, do: 33, ime: "Repentance" }, { od: 34, do: 34, ime: "Benediction" },
+            { od: 35, do: 39, ime: "Champion of the Light" }, { od: 40, do: 40, ime: "Unsealed Wrath", kljucno: true }, { od: 41, do: 45, ime: "Divine Strength" },
+            { od: 46, do: 47, ime: "Reverence" }, { od: 48, do: 52, ime: "Improved Seals" }, { od: 53, do: 57, ime: "Divine Intellect" },
+            { od: 58, do: 60, ime: "Precision" }
+          ],
+          rotacija: [
+            { faza: "1–19", tocke: [
+              "Stalno upaljeno: Retribution Aura, Blessing of Might, Seal of Righteousness.",
+              "Judgement i Holy Strike na cooldown, između auto-attack; seal obnovi kad padne.",
+              "Jedan po jedan mob, više njih na ovim levelima ne isplati se."] },
+            { faza: "20–39", tocke: [
+              "Retribution Aura stalno; Blessing of Might, a Blessing of Wisdom kad ti mana počne usporavati.",
+              "Mob koji živi 20+ sekundi: Seal of the Crusader > Judgement, pa Seal of Command.",
+              "Exorcism na undead i demone, Consecration na 3+ moba.",
+              "Judgement i Holy Strike na cooldown, po mogućnosti zajedno.",
+              "Hammer of Justice prije Judgementa sa Seal of Command: više štete na omamljenog.",
+              "Skoro mrtvog moba dovrši auto-attackom: mana se puni tek 5 s nakon zadnjeg casta."] },
+            { faza: "40+", tocke: [
+              "Retribution Aura i Blessing of Wisdom stalno.",
+              "Duži fight: Seal of the Crusader > Judgement, pa Seal of Command.",
+              "Exorcism na undead i demone, Consecration na 3+, Judgement i Holy Strike na cooldown.",
+              "Na 3 stacka Unsealed Wrath prebaci na Seal of Righteousness i udari da ih potrošiš, pa natrag na Seal of Command.",
+              "Ako je mob nisko, ostani na Seal of Righteousness i dovrši ga auto-attackom."] }
+          ],
+          leveli: [
+            { faza: "1–10", tekst: "Učiš osnovne skillove i tučeš mob po mob. Seal of Righteousness, Retribution Aura i Blessing of Might uvijek gore, Holy Strike i Judgement na cooldown. U startnoj zoni napravi quest za Mining for Dummies: Mining učiš bez odlaska u grad." },
+            { faza: "10–20", tekst: "Dobivaš većinu bitnih skillova. Koristi Divine Protection, Lay on Hands i Blessing of Protection na teškim mobovima, da se navikneš prije nego postane opasno. Na 12 class quest za Redemption kod trenera u gradu. Oko 15 prvi dungeon: Ragefire Chasm, quest Hidden Enemies daje dobro oružje." },
+            { faza: "20–39", tekst: "Na 20 stižu Consecration i Seal of Command; Consecration je skup, štedi ga za 3+ moba. Uz Seal of Command uvijek oružje brzine 3.3 ili sporije, a Hammer of Justice pojača udarac. U ranim 20-ima class quest za Wolfsbane iz The Sepulchera: vodi kroz Deadmines, Blackfathom Deeps i Shadowfang Keep, pa ga uzmi prije tih dungeona." },
+            { faza: "40+", tekst: "Na 40 kod trenera odmah Summon Warhorse: besplatan mount, spell u spellbooku. Stiže i Unsealed Wrath: dok udaraš sa Seal of Command skupljaš do 3 stacka, na 3 prebaci na Seal of Righteousness i udari, pa natrag. Guide za više levele dopunjuje se kad se otkriju questovi." }
+          ],
+          statovi: [
+            { ime: "Šteta oružja", tekst: "Najvažnije. Spor dvoručnjak, brzina 3.3 ili više; brže samo ako ima 15 % više DPS-a." },
+            { ime: "Stamina i Spirit", tekst: "Više HP-a i brža mana i HP između fightova, manje sjedenja." },
+            { ime: "Intellect (od 40)", tekst: "Kad je Champion of the Light pun, Intellect daje i spell power, crit i manu." },
+            { ime: "Strength i Spell Power", tekst: "Šteta, ali ne na račun Stamine i Spirita." },
+            { ime: "Healing i Agility", tekst: "Lijepo imati, nije prioritet." },
+            { ime: "Crit, Hit, Mp5", tekst: "Odlični, ali rijetki do 60: 1 % hita ili crita vrijedi otprilike 8–10 Strengtha." }
+          ],
+          potrosno: [
+            "Hrana s buffom uvijek: većina daje 5 % više XP-a.",
+            "Bandage (First Aid): HP bez trošenja mane, radi i u Divine Shieldu.",
+            "Mana drinkovi, puno ako healaš dungeon.",
+            "Healing i mana potioni: viši leveli često jeftino na AH.",
+            "Sharpening stoneovi i Weightstoneovi (Blacksmithing) za oružje.",
+            "Minor Wizard Oil: jeftin spell power za teške dijelove i dungeone."
+          ],
+          campfire: [
+            "Campfire buff traje sat vremena; obnoviš ga minutom sjedenja kraj vatre.",
+            "Paladin blessingi ne stackaju s istim campfire buffom: prvo pogledaj tko što ima.",
+            "Sharpening Wheel: Strength. Lodestone pregazi Blessing of Might, pa tada daj Wisdom.",
+            "Fish Bowl i Mana Well pregaze Blessing of Kings i Wisdom.",
+            "Camp Tent daje rested XP (5 % levela): sjedni u tuđi šator u gradu."
+          ],
           tocke: [
-            "Uvijek upaljeno: Retribution Aura, Blessing of Might i Seal of Righteousness.",
-            "Judgement i Holy Strike na cooldown, između njih auto-attack.",
-            "Oružje: spori dvoručnjak (3.3 ili sporiji), Seal of Command voli jake udarce.",
-            "Statovi: Stamina i Spirit, od 40 i Intellect.",
-            "Divine Shield i Blessing of Protection poništavaju pad: skači sa zepelina i litica."
+            "Raid-style party frameovi bliže sredini ekrana: lakši off-heal i buffovi.",
+            "Svaki dungeon na svom levelu, sa svim questovima: XP i nagrade su ovdje jako jaki.",
+            "Pally Power Forever ili EllesmereUI javljaju kad blessing, aura ili seal padne.",
+            "Divine Shield i Blessing of Protection poništavaju pad: skači sa zepelina i litica.",
+            "Mining: Find Minerals stalno upaljen, inače zaostaneš za rudom u zoni.",
+            "Prvi Waylaid Crate: Journeyman Textiles predaj za veliku nagradu i jak recept."
           ] },
         oprema: [],
         ciljevi: [

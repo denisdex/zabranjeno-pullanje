@@ -517,7 +517,14 @@ section[id] { scroll-margin-top: 84px; }
   padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px);
   animation: ladica .42s var(--ease) both;
 }
-.prof[data-sirina="profil"] .prof-panel { width: min(720px, 100%); }
+/* profil: preko cijelog ekrana, kadar centriran, sadržaj u dva stupca */
+.prof[data-sirina="profil"] .prof-panel { width: 100%; overflow-x: hidden; border-left: 0; box-shadow: none; animation-name: ladica-full; }
+.prof[data-sirina="profil"] .prof-art { max-width: min(100%, calc(72vh * 16 / 9)); margin-inline: auto; }
+.prof[data-sirina="profil"] .prof-info { max-width: 1240px; margin-inline: auto; padding-inline: clamp(20px, 4.4vw, 60px); }
+@media (min-width: 1000px) {
+  .prof[data-sirina="profil"] .prof-info { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 34px 56px; }
+  .prof[data-sirina="profil"] .p-build { grid-row: span 2; }
+}
 /* vodič za dungeon: preko cijelog ekrana */
 .prof[data-sirina="vodic"] .prof-panel { width: 100%; overflow-x: hidden; border-left: 0; box-shadow: none; animation-name: ladica-full; }
 @keyframes ladica-full { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
@@ -582,6 +589,31 @@ section[id] { scroll-margin-top: 84px; }
 .vodic-l b { font: 800 1.05rem/1.1 var(--f-display); text-transform: uppercase; letter-spacing: .02em; color: var(--c); }
 .vodic-l span { font-size: .6875rem; letter-spacing: .06em; color: var(--dust); }
 .vodic-l:hover b, .vodic-l:focus-visible b { text-decoration: underline; text-underline-offset: 3px; }
+/* guide u profilu (vodicHtml) */
+.vx { grid-column: 1 / -1; display: grid; gap: 30px; padding-top: 30px; border-top: 1px solid var(--line); }
+.vx-head { display: grid; gap: 10px; }
+.vx-head h3.lab { margin: 0; }
+.vx-uvod { margin: 0; color: var(--bone); max-width: 52rem; }
+.vx-b h4.lab { margin: 0 0 12px; color: var(--c); }
+.vx-sw, .vx-kol { display: grid; gap: 26px 40px; }
+.vx-faza { margin: 0 0 8px; color: var(--c); }
+.vx-kol p:not(.vx-faza) { margin: 0; color: var(--dust); }
+.vx-tal { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.vx-tal li { display: grid; grid-template-columns: 3.4rem minmax(0, 1fr); gap: 2px 10px; padding: 10px 12px; background: var(--iron); }
+.vx-tal li span { grid-row: span 2; color: var(--dust); font-variant-numeric: tabular-nums; }
+.vx-tal li b { font: 800 .98rem/1.1 var(--f-display); text-transform: uppercase; letter-spacing: .02em; }
+.vx-tal li em { font-style: normal; font-size: .625rem; color: var(--dust); }
+.vx-tal li.k { background: color-mix(in srgb, var(--c) 14%, var(--iron)); }
+.vx-tal li.k b, .vx-tal li.k span { color: var(--c); }
+.vx-ol { margin: 0; padding-left: 20px; display: grid; gap: 6px; color: var(--bone); }
+.vx-ol li::marker { color: var(--c); font-family: var(--f-mono); font-size: .75em; }
+.vx-stat { margin: 0; padding: 0; list-style: none; counter-reset: s; display: grid; gap: 10px; }
+.vx-stat li { counter-increment: s; display: grid; grid-template-columns: 1.6rem minmax(0, 1fr); gap: 2px 10px; }
+.vx-stat li::before { content: counter(s); grid-row: span 2; font: 900 1.2rem/1 var(--f-display); color: var(--c); }
+.vx-stat b { font: 800 .98rem/1.1 var(--f-display); text-transform: uppercase; letter-spacing: .02em; }
+.vx-stat span { color: var(--dust); }
+@media (min-width: 760px) { .vx-sw { grid-template-columns: 1fr 1fr; } .vx-kol { grid-template-columns: repeat(3, minmax(0, 1fr)); } .vx-kol4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } .vx-sav { grid-template-columns: 1fr 1fr; column-gap: 40px; } }
+@media (min-width: 1200px) { .vx-kol4 { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 .vodic-t { margin: 10px 0 0; padding-left: 18px; color: var(--dust); display: grid; gap: 4px; }
 .gear { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr); column-gap: 28px; }
 @media (min-width: 640px) { .gear { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
@@ -3342,6 +3374,33 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     var poSlugu = {};
     igraci.forEach(function (p, i) { poSlugu[slug(p.lik)] = { p: p, i: i }; });
 
+    // cijeli guide u profilu: zaglavlje, talenti po levelima, rotacija, leveli, statovi, potrošno, campfire, savjeti
+    function vodicHtml(v) {
+      function li(arr) { return (arr || []).map(function (x) { return "<li>" + esc(x) + "</li>"; }).join(""); }
+      function blok(naslov, html, cls) { return html ? '<div class="vx-b' + (cls ? " " + cls : "") + '"><h4 class="lab mono">' + naslov + "</h4>" + html + "</div>" : ""; }
+      var put = v.talentiPut || [];
+      return '<section class="vx" aria-label="Guide">' +
+        '<header class="vx-head"><h3 class="lab mono">Guide</h3><a class="vodic-l" href="' + esc(v.url) + '" target="_blank" rel="noopener"><b>' + esc(v.naziv) + '</b><span class="mono">' + esc(v.izvor || "") + " ↗</span></a>" +
+          (v.uvod ? '<p class="vx-uvod">' + esc(v.uvod) + "</p>" : "") + "</header>" +
+        (v.snage || v.slabosti ? '<div class="vx-sw">' + blok("Jako", '<ul class="dng-l">' + li(v.snage) + "</ul>") + blok("Slabo", '<ul class="dng-l dng-x">' + li(v.slabosti) + "</ul>") + "</div>" : "") +
+        blok("Talenti po levelima", put.length ? '<ol class="vx-tal">' + put.map(function (t) {
+          var n = t.do - t.od + 1;
+          return '<li class="' + (t.kljucno ? "k" : "") + '"><span class="mono">' + (t.od === t.do ? t.od : t.od + "–" + t.do) + "</span><b>" + esc(t.ime) + "</b><em class=\"mono\">" + n + (n === 1 ? " bod" : n < 5 ? " boda" : " bodova") + "</em></li>";
+        }).join("") + "</ol>" : "", "vx-siroko") +
+        blok("Rotacija", (v.rotacija || []).length ? '<div class="vx-kol">' + v.rotacija.map(function (r) {
+          return '<div><p class="vx-faza mono">lvl ' + esc(r.faza) + '</p><ol class="vx-ol">' + li(r.tocke) + "</ol></div>";
+        }).join("") + "</div>" : "", "vx-siroko") +
+        blok("Po levelima", (v.leveli || []).length ? '<div class="vx-kol vx-kol4">' + v.leveli.map(function (r) {
+          return '<div><p class="vx-faza mono">lvl ' + esc(r.faza) + "</p><p>" + esc(r.tekst) + "</p></div>";
+        }).join("") + "</div>" : "", "vx-siroko") +
+        '<div class="vx-kol">' +
+          blok("Statovi redom", (v.statovi || []).length ? '<ol class="vx-stat">' + v.statovi.map(function (x) { return "<li><b>" + esc(x.ime) + "</b><span>" + esc(x.tekst) + "</span></li>"; }).join("") + "</ol>" : "") +
+          blok("Uvijek u torbi", (v.potrosno || []).length ? '<ul class="dng-l">' + li(v.potrosno) + "</ul>" : "") +
+          blok("Campfire buffovi", (v.campfire || []).length ? '<ul class="dng-l">' + li(v.campfire) + "</ul>" : "") +
+        "</div>" +
+        blok("Savjeti", (v.tocke || []).length ? '<ul class="dng-l vx-sav">' + li(v.tocke) + "</ul>" : "", "vx-siroko") +
+      "</section>";
+    }
     function render(p, idx) {
       var pf = p.profil || {}, r = ULOGA[p.uloga], lvl = lvlOf(p);
       var t = pf.talenti || [0, 0, 0], st = STABLA[p.klasa] || ["", "", ""];
@@ -3363,14 +3422,12 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
           '</dd></div><div><dt class="mono">Klasa</dt><dd style="color:' + BOJE[p.klasa] + '">' + esc(p.klasa) + '</dd></div><div><dt class="mono">Uloga</dt><dd>' + esc(r) + "</dd></div></dl>" +
           '<div class="prof-row"><div class="prof-lvl"><h3 class="lab mono">Level</h3><span class="n">' + lvl + "<small>/60</small></span>" + gaugeHtml(p) + svjezina(p) + goldHtml(p) + "</div>" +
           '<div class="p-prof"><h3 class="lab mono">Profesije</h3>' + profHtml(p, true) + "</div></div>" +
-          "<div><h3 class=\"lab mono\">Trenutni build</h3>" +
+          '<div class="p-build"><h3 class="lab mono">Trenutni build</h3>' +
             '<div class="build-head"><b>' + esc(pf.specka || "još nema") + "</b><span>" + t.join("/") + "</span>" + (pf.plan ? "<em>plan</em>" : "") + "</div>" +
             '<div class="trees">' + st.map(function (n, k) {
               return '<div class="tree"><span class="mono">' + esc(n) + '</span><i><b style="width:' + ((t[k] || 0) / 51 * 100).toFixed(1) + '%"></b></i><strong>' + (t[k] || 0) + "</strong></div>";
             }).join("") + "</div>" +
             (pf.opisBuilda ? '<p class="build-tx">' + esc(pf.opisBuilda) + "</p>" : "") +
-            (pf.vodic ? '<div class="vodic-g"><a class="vodic-l" href="' + esc(pf.vodic.url) + '" target="_blank" rel="noopener"><b>' + esc(pf.vodic.naziv) + '</b><span class="mono">' + esc(pf.vodic.izvor || "") + " ↗</span></a>" +
-              ((pf.vodic.tocke || []).length ? '<ul class="vodic-t">' + pf.vodic.tocke.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" : "") + "</div>" : "") +
             (MC_POC && MC_POC.klasa === p.klasa.toLowerCase() ? '<button type="button" class="mc-link mono" data-mc-klasa="' + esc(MC_POC.klasa) + '">' + esc(MC_POC.naslov) + " →</button>" : "") +
           "</div>" +
           "<div><h3 class=\"lab mono\">Oprema</h3>" +
@@ -3386,6 +3443,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
             return '<li class="' + (c.gotovo ? "ok" : "") + '"' + (c.wowhead ? "" : tt) + ">" + (c.wowhead ? '<a href="https://www.wowhead.com/classic/item=' + c.wowhead + '" target="_blank" rel="noopener"' + tt + ">" + unutra + "</a>" : unutra) + "</li>";
           }).join("") + "</ul></div>" : "") +
           (pf.biljeske ? '<div><h3 class="lab mono">Bilješke</h3><p class="prof-note">' + esc(pf.biljeske) + "</p></div>" : "") +
+          (pf.vodic ? vodicHtml(pf.vodic) : "") +
         "</div></div>";
       var ime = body.querySelector(".p-name");
       if (ime) ime.id = "profIme";
