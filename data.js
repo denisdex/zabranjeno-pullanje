@@ -3,7 +3,7 @@
 window.HORDE = {
   ekipa: "Zaprešić Horde",
   guild: "Zabranjeno pullanje",
-  azurirano: "2026-10-31",
+  azurirano: "2026-11-03",
 
   // Vremena u UTC. Studeni je CET (UTC+1).
   // Rezervacija imena: do 3. 11. 2026. u 23:59 po Zagrebu.
@@ -515,8 +515,18 @@ window.HORDE = {
 
   // Patch notes: prijevod Blizzardovih development notes, najnovije gore.
   // Stavka: { tekst, za: [klase/rase ili "Svi"], tema: kratka oznaka što se mijenja (Racial, Spell, Rage, XP, Dungeoni, Loot, Zona...) }
-  izvorNovosti: "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-october-26/2360696",
+  izvorNovosti: "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
   novosti: [
+    { datum: "2026-11-03", naslov: "Patch za launch: više štete, novi threat", stavke: [
+      { tekst: "Damage svih klasa podignut, a mobovi viših levela dobili su više healtha da to izbalansira.", za: ["Svi"], tema: "Buff" },
+      { tekst: "Defensive Stance daje 80% threata (bilo 30%); Slam ima 15 s cooldowna (bilo 18 s).", za: ["Warrior"], tema: "Spell" },
+      { tekst: "Novi talent Reckless Swings (red 4): za 25% base healtha sljedeća 4 udarca daju po 5 Ragea više, 15 s cooldown.", za: ["Warrior"], tema: "Talent" },
+      { tekst: "Righteous Fury se uči na levelu 10 (bilo 16): +33% sav threat i još +90% threata od Holy štete. Blessing of Light maknut.", za: ["Paladin"], tema: "Spell" },
+      { tekst: "Lightning Bolt jači na svim rankovima (max rank +80%); Lava Burst maknut, umjesto njega Call of Thunder (+5% crita za Lightning Bolt i Chain Lightning).", za: ["Shaman"], tema: "Buff" },
+      { tekst: "Frost Blast maknut; Ice Lance ima 8 s cooldowna, dijeljenog s Fire Blastom, i opet 300% štete po frozen metama.", za: ["Mage"], tema: "Spell" },
+      { tekst: "Novi spell Shank na levelu 24: udarac off-hand oružjem za 50% weapon damagea, daje 15 Energyja, 10 s cooldown, ne može promašiti.", za: ["Rogue"], tema: "Novi spell" },
+      { tekst: "Ruins of Lordaeron questovi sad svi traže najmanje level 15 (bio miks 15 i 16).", za: ["Horde"], tema: "Dungeoni" }
+    ] },
     { datum: "2026-10-27", naslov: "Racijali, završna runda", stavke: [
       { tekst: "Blood Fury vraćen na 2 min cooldowna (bilo 3 min).", za: ["Orc"], tema: "Racial" },
       { tekst: "Berserking traje 15 s (bilo 10 s).", za: ["Troll"], tema: "Racial" },
