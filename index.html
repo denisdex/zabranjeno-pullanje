@@ -309,8 +309,8 @@ section[id] { scroll-margin-top: 84px; }
 .count-top { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px; }
 .count-label { margin: 0; font: 800 clamp(1.17rem, 2.808vw, 2.028rem)/1 var(--f-display); text-transform: uppercase; letter-spacing: .04em; color: var(--ember); }
 .flip-row {
-  /* četiri para zbijena u sredini, s dvotočkom između; blok je širok koliko treba (par je 1,37 × --dh) */
-  --dh: clamp(36px, 12.6vw, 120px);
+  /* tri grupe (sati : minute : sekunde) zbijene u sredini, s dvotočkom između; blok je širok koliko treba (par je 1,37 × --dh) */
+  --dh: clamp(36px, 16.4vw, 150px);
   position: relative; isolation: isolate; justify-self: center; width: fit-content; max-width: 100%;
   display: flex; justify-content: center; align-items: flex-end; gap: 0 clamp(5px, 1.6vw, 30px);
 }
@@ -327,8 +327,8 @@ section[id] { scroll-margin-top: 84px; }
   background: radial-gradient(50% 62% at 50% 55%, rgba(255, 110, 30, .2), rgba(255, 110, 30, 0) 72%);
   animation: tinja 3.4s ease-in-out infinite;
 }
-/* desktop: par do ~16 vw */
-@media (min-width: 640px) { .flip-row { --dh: clamp(36px, 11.6vw, 260px); } }
+/* desktop: tri grupe, par do ~20 vw */
+@media (min-width: 640px) { .flip-row { --dh: clamp(36px, 14.6vw, 300px); } }
 @keyframes tinja { 0%, 100% { opacity: .75; } 30% { opacity: 1; } 55% { opacity: .82; } 78% { opacity: .96; } }
 .unit { display: grid; gap: 10px; justify-items: center; }
 .unit .digits { display: flex; gap: calc(var(--dh) * .05); }
@@ -4682,7 +4682,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     flip.innerHTML = ""; digits = [];
     units.forEach(function (u, i) {
       if (u.word) { var w = document.createElement("span"); w.className = "word"; w.textContent = u.word; flip.appendChild(w); return; }
-      // dvotočka između dvije brojčane grupe (dani : sati : minute : sekunde)
+      // dvotočka između dvije brojčane grupe (sati : minute : sekunde)
       if (i && !units[i - 1].word) { var c = document.createElement("span"); c.className = "sep"; c.setAttribute("aria-hidden", "true"); c.textContent = ":"; flip.appendChild(c); }
       var box = document.createElement("div"); box.className = "unit";
       var row = document.createElement("div"); row.className = "digits";
@@ -4693,6 +4693,10 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       flip.appendChild(box);
       digits.push(arr);
     });
+  }
+  function satiJedinice(ms) {
+    var h = Math.floor(Math.max(0, ms) / 36e5);
+    return [{ n: Math.max(2, String(h).length), lab: "sati" }, { n: 2, lab: "minuta" }, { n: 2, lab: "sekundi" }];
   }
   function pad(n, w) { n = String(n); while (n.length < w) n = "0" + n; return n; }
   function showGroup(gi, num) {
@@ -4741,7 +4745,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       } else {
         $("cdLabel").textContent = "Portal se otvara za";
         flip.classList.remove("live");
-        buildUnits([{ n: 2, lab: "dana" }, { n: 2, lab: "sati" }, { n: 2, lab: "minuta" }, { n: 2, lab: "sekundi" }]);
+        buildUnits(satiJedinice(LAUNCH - now));
       }
     }
     var alarm = f === "prije" && LAUNCH - now <= 864e5;
@@ -4757,10 +4761,12 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
         "<span>Launch je bio <b>4. 11. 2026. u ponoć</b></span>";
     } else {
       var s = Math.max(0, Math.floor((LAUNCH - now) / 1000));
-      showGroup(0, Math.floor(s / 86400));
-      showGroup(1, Math.floor(s % 86400 / 3600));
-      showGroup(2, Math.floor(s % 3600 / 60));
-      showGroup(3, s % 60);
+      // samo sati (ukupno, bez dana) : minute : sekunde; kad sati padnu ispod 100, treća znamenka nestaje
+      var h = Math.floor(s / 3600);
+      if (Math.max(2, String(h).length) !== digits[0].length) buildUnits(satiJedinice(LAUNCH - now));
+      showGroup(0, h);
+      showGroup(1, Math.floor(s % 3600 / 60));
+      showGroup(2, s % 60);
       $("cdNext").innerHTML = (alarm ? "<span>Ovo je <b>ta noć</b>. Nitko ne spava.</span>" : "") + "<span>Launch: <b>sri 4. 11. u ponoć</b> (15:00 PST)</span>";
     }
     prog(now);
