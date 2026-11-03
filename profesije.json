@@ -34,8 +34,8 @@
       "secondary": [{ "name": "First Aid", "skill": 0 }, { "name": "Cooking", "skill": 0 }] },
     { "id": "mage", "name": "Janica Frostelich", "account": "karken", "class": "Mage", "race": "Troll", "role": "grupa",
       "professions": [
-        { "name": "Herbalism", "skill": 0, "phase": "stalno" },
-        { "name": "Alchemy", "skill": 0, "phase": "stalno" }
+        { "name": "Mining", "skill": 0, "phase": "stalno" },
+        { "name": "Herbalism", "skill": 0, "phase": "stalno" }
       ],
       "secondary": [{ "name": "First Aid", "skill": 0 }, { "name": "Cooking", "skill": 0 }] },
     { "id": "rogue", "name": "Nikola Roguevic", "account": "zuga", "class": "Rogue", "race": "Undead", "role": "grupa",
