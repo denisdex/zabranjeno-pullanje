@@ -88,13 +88,13 @@ window.HORDE = {
       siroka: "assets/likovi/saman-saulic-wide.jpg", fokus: [50.3, 18],
       gold: 0,
       zadaci: [
-        { naziv: "Herbalism i Skinning; Earth totem quest na 4", od: 1, do: 10, gotovo: false },
+        { naziv: "Skinning i Leatherworking od prvog dana; Earth totem quest na 4", od: 1, do: 10, gotovo: false },
         { naziv: "Fire totem quest na 10", od: 10, do: 12, gotovo: false },
-        { naziv: "Bilje šalji svom druidu za Alchemy", od: 10, do: 40, gotovo: false },
+        { naziv: "Armor kitovi za ekipu, leather i mail oprema za sebe", od: 10, do: 40, gotovo: false },
         { naziv: "Water totem quest (Call of Water) na 20", od: 20, do: 22, gotovo: false },
         { naziv: "Air totem quest (Call of Air) na 30", od: 30, do: 32, gotovo: false },
-        { naziv: "Dual spec: Resto za grupu; Herbalism mijenjaš za Leatherworking", od: 40, do: 42, gotovo: false },
-        { naziv: "Armor kitovi za Pera i Žugu, mail za sebe", od: 40, do: 60, gotovo: false },
+        { naziv: "Dual spec: Resto za grupu", od: 40, do: 42, gotovo: false },
+        { naziv: "Višak kitova na AH, dobro se prodaju", od: 40, do: 60, gotovo: false },
         { naziv: "Devilsaur Leather iz Un'Gora: Gauntlets i Leggings za Pera i Žugu", od: 50, do: 60, gotovo: false }
       ],
       profil: {
@@ -115,12 +115,11 @@ window.HORDE = {
       siroka: "assets/likovi/melee-kitic-wide.jpg", fokus: [50.3, 28.8],
       gold: 0,
       zadaci: [
-        { naziv: "Mining i Skinning naučiti čim izađeš iz Valley of Trials", od: 1, do: 10, gotovo: false },
+        { naziv: "Mining i Engineering naučiti čim izađeš iz Valley of Trials", od: 1, do: 10, gotovo: false },
         { naziv: "Defensive Stance quest na 10 kod Warrior trenera", od: 10, do: 12, gotovo: false },
-        { naziv: "Kožu šalji Niksi za Leatherworking", od: 10, do: 40, gotovo: false },
+        { naziv: "Dinamit za AoE pullove; rudu skupljaš sam", od: 10, do: 40, gotovo: false },
         { naziv: "Copper i Tin barove čuvaj za Engineering, višak na AH", od: 20, do: 40, gotovo: false },
         { naziv: "Berserker Stance quest na 30", od: 30, do: 32, gotovo: false },
-        { naziv: "Engineering umjesto Skinninga", od: 40, do: 42, gotovo: false },
         { naziv: "Hand of Justice i Savage Gladiator Chain iz BRD-a", od: 50, do: 60, gotovo: false },
         { naziv: "Arcanite Reaper: Thorium Niksinom druidu za transmute", od: 58, do: 60, gotovo: false }
       ],
@@ -144,9 +143,9 @@ window.HORDE = {
       siroka: "assets/likovi/janica-frostelic-wide.jpg", fokus: [50, 18.4],
       gold: 0,
       zadaci: [
-        { naziv: "Mining i Herbalism čim izađeš iz start zone", od: 1, do: 10, gotovo: false },
+        { naziv: "Herbalism i Alchemy čim izađeš iz start zone", od: 1, do: 10, gotovo: false },
         { naziv: "Polymorph u svakom pullu s humanoidima, vježba u Ragefireu", od: 10, do: 20, gotovo: false },
-        { naziv: "Bilje šalji Niksinom druidu za Alchemy, rudu Peru", od: 10, do: 40, gotovo: false },
+        { naziv: "Healing i Mana potioni za ekipu prije svakog dungeona", od: 10, do: 40, gotovo: false },
         { naziv: "Teleport: Orgrimmar na 20", od: 20, do: 22, gotovo: false },
         { naziv: "Conjure Water i hrana za ekipu prije svakog dungeona", od: 20, do: 60, gotovo: false },
         { naziv: "Portali na 40: Orgrimmar i Undercity za ekipu", od: 40, do: 42, gotovo: false },
@@ -169,9 +168,9 @@ window.HORDE = {
       siroka: "assets/likovi/nikola-roguevic-wide.jpg", fokus: [48.8, 16.6], ociSiroka: [[47.7, 14.2], [50.0, 14.1]],
       gold: 0,
       zadaci: [
-        { naziv: "Mining i Skinning", od: 1, do: 10, gotovo: false },
+        { naziv: "Skinning i Herbalism", od: 1, do: 10, gotovo: false },
         { naziv: "Sap na humanoide prije svakog pulla, kad Dex kaže", od: 10, do: 20, gotovo: false },
-        { naziv: "Kožu šalji Niksi, rudu Peru", od: 10, do: 40, gotovo: false },
+        { naziv: "Kožu šalji Niksi, bilje Karkenu", od: 10, do: 40, gotovo: false },
         { naziv: "Poisons quest na 20", od: 20, do: 22, gotovo: false },
         { naziv: "Lockpicking za škrinje u dungeonima", od: 30, do: 40, gotovo: false },
         { naziv: "Mask of the Unforgiven, Cadaverous Armor i Devilsaur set", od: 50, do: 60, gotovo: false }
@@ -195,9 +194,9 @@ window.HORDE = {
       siroka: "assets/likovi/arsen-deadic-wide.jpg", fokus: [54.2, 20.1], ociSiroka: [[54.4, 18.6], [56.1, 19.0]],
       gold: 0,
       zadaci: [
-        { naziv: "Herbalism i Skinning; Righteous Fury čim ga naučiš, u svakom dungeonu", od: 1, do: 10, gotovo: false },
+        { naziv: "Mining i Skinning; Righteous Fury čim ga naučiš, u svakom dungeonu", od: 1, do: 10, gotovo: false },
         { naziv: "Jedini pullaš: nauči put kroz Ragefire i Wailing Caverns", od: 10, do: 20, gotovo: false },
-        { naziv: "Bilje šalji Niksinom druidu, kožu Niksi", od: 10, do: 40, gotovo: false },
+        { naziv: "Kožu šalji Niksi, višak rude Peru ili na AH", od: 10, do: 40, gotovo: false },
         { naziv: "Skupljaj tank opremu (štit, Stamina) za drugi spec", od: 30, do: 40, gotovo: false },
         { naziv: "Dual spec: Protection tank i Retribution", od: 40, do: 42, gotovo: false },
         { naziv: "Devilsaur koža u Un'Goru za Niksin Leatherworking", od: 40, do: 60, gotovo: false },
@@ -581,15 +580,16 @@ window.HORDE = {
   // Ekonomija: tko kome što, gold ciljevi, zarada i AH; tokovi materijala su u profesije.json (flows)
   ekonomija: {
     duguje: [
-      { tko: "Pero, Žuga, Dex", kome: "Niksa (Shaman)", sto: "Sva koža", kad: "do 60" },
-      { tko: "Žuga, Karken", kome: "Pero", sto: "Ruda za Engineering", kad: "od 40" },
-      { tko: "Karken, Dex, Niksa", kome: "Niksin druid", sto: "Bilje za Alchemy", kad: "stalno" },
+      { tko: "Žuga, Dex", kome: "Niksa (Shaman)", sto: "Sva koža za Leatherworking", kad: "do 60" },
+      { tko: "Dex", kome: "Pero", sto: "Višak rude za Engineering", kad: "stalno" },
+      { tko: "Žuga", kome: "Karken, Niksin druid", sto: "Bilje za Alchemy", kad: "stalno" },
       { tko: "Svi", kome: "Niksin mage alt", sto: "Cloth i greenovi za Tailoring i Enchanting", kad: "stalno" },
-      { tko: "Pero, Žuga, Karken", kome: "Niksin druid", sto: "Thorium za Arcanite transmute", kad: "na 60" },
-      { tko: "Niksa (Shaman)", kome: "Pero, Žuga", sto: "Armor kitovi, Devilsaur set", kad: "od 40" },
+      { tko: "Pero, Dex", kome: "Niksin druid", sto: "Thorium za Arcanite transmute", kad: "na 60" },
+      { tko: "Niksa (Shaman)", kome: "Svi", sto: "Armor kitovi; Devilsaur set za Pera i Žugu", kad: "od 10" },
+      { tko: "Karken", kome: "Svi", sto: "Healing i Mana potioni za dungeone", kad: "od 10" },
       { tko: "Niksin druid", kome: "Svi", sto: "Potioni i flaskovi", kad: "stalno" },
       { tko: "Niksin mage alt", kome: "Svi i AH", sto: "Torbe, enchanti, dust", kad: "stalno" },
-      { tko: "Pero", kome: "Svi", sto: "Bombe za teške pullove", kad: "od 40" }
+      { tko: "Pero", kome: "Svi", sto: "Dinamit i bombe za teške pullove", kad: "stalno" }
     ],
     ciljevi: [
       { naziv: "Prvi mount", level: 40, gold: 120, napomena: "100 g trening + 20 g mount, 60% brže. Honored s Hordom: 10% manje." },

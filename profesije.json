@@ -11,15 +11,13 @@
     { "id": "warrior", "name": "Melee Kitic", "account": "pero", "class": "Warrior", "race": "Orc", "role": "grupa",
       "professions": [
         { "name": "Mining", "skill": 0, "phase": "stalno" },
-        { "name": "Skinning", "skill": 0, "phase": "do40" },
-        { "name": "Engineering", "skill": 0, "phase": "nakon40" }
+        { "name": "Engineering", "skill": 0, "phase": "stalno" }
       ],
       "secondary": [{ "name": "First Aid", "skill": 0 }, { "name": "Cooking", "skill": 0 }] },
     { "id": "shaman", "name": "Saman Saulic", "account": "niksa", "class": "Shaman", "race": "Orc", "role": "grupa",
       "professions": [
-        { "name": "Herbalism", "skill": 0, "phase": "do40" },
         { "name": "Skinning", "skill": 0, "phase": "stalno" },
-        { "name": "Leatherworking", "skill": 0, "phase": "nakon40" }
+        { "name": "Leatherworking", "skill": 0, "phase": "stalno" }
       ],
       "secondary": [{ "name": "First Aid", "skill": 0 }, { "name": "Cooking", "skill": 0 }] },
     { "id": "druid", "name": "", "account": "niksa", "class": "Druid", "race": "Tauren", "role": "solo", "level": 0,
@@ -36,19 +34,19 @@
       "secondary": [{ "name": "First Aid", "skill": 0 }, { "name": "Cooking", "skill": 0 }] },
     { "id": "mage", "name": "Janica Frostelich", "account": "karken", "class": "Mage", "race": "Troll", "role": "grupa",
       "professions": [
-        { "name": "Mining", "skill": 0, "phase": "stalno" },
-        { "name": "Herbalism", "skill": 0, "phase": "stalno" }
+        { "name": "Herbalism", "skill": 0, "phase": "stalno" },
+        { "name": "Alchemy", "skill": 0, "phase": "stalno" }
       ],
       "secondary": [{ "name": "First Aid", "skill": 0 }, { "name": "Cooking", "skill": 0 }] },
     { "id": "rogue", "name": "Nikola Roguevic", "account": "zuga", "class": "Rogue", "race": "Undead", "role": "grupa",
       "professions": [
-        { "name": "Mining", "skill": 0, "phase": "stalno" },
-        { "name": "Skinning", "skill": 0, "phase": "stalno" }
+        { "name": "Skinning", "skill": 0, "phase": "stalno" },
+        { "name": "Herbalism", "skill": 0, "phase": "stalno" }
       ],
       "secondary": [{ "name": "First Aid", "skill": 0 }, { "name": "Cooking", "skill": 0 }] },
     { "id": "paladin", "name": "Arsen Deadic", "account": "dex", "class": "Paladin", "race": "Undead", "role": "grupa",
       "professions": [
-        { "name": "Herbalism", "skill": 0, "phase": "stalno" },
+        { "name": "Mining", "skill": 0, "phase": "stalno" },
         { "name": "Skinning", "skill": 0, "phase": "stalno" }
       ],
       "secondary": [{ "name": "First Aid", "skill": 0 }, { "name": "Cooking", "skill": 0 }] }
