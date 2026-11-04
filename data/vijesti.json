@@ -9,8 +9,40 @@
    "url": "https://www.wowhead.com/news/rss/classic"
   }
  ],
- "azurirano": "2026-11-03T23:59:52Z",
+ "azurirano": "2026-11-04T21:54:37Z",
  "stavke": [
+  {
+   "datum": "2026-11-04T19:35:16Z",
+   "naslov": "WoW Forever Beta Development Notes – Updated November 2",
+   "link": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696/10",
+   "izvor": "Blizzard",
+   "sazetak": "We’ve added this section to the previous post. User Interface and Accessibility Swing Timer bar will no longer fade out due to distance until the swing finishes. When combined bag is enabled, the background art of the inventory slots are…",
+   "oznake": [
+    "Patch notes",
+    "Beta"
+   ],
+   "vrsta": "patch"
+  },
+  {
+   "datum": "2026-11-04T18:13:53Z",
+   "naslov": "World of Warcraft: Forever Launch Time",
+   "link": "https://us.forums.blizzard.com/en/wow/t/world-of-warcraft-forever-launch-time/2400905/1",
+   "izvor": "Blizzard",
+   "sazetak": "WoW Forever launches simultaneously in all regions today at 3:00 p.m. PST. That’s: Time Zone Location Time Date HST Honolulu 1:00 p.m. Nov. 4 AKST Juneau 2:00 p.m. Nov. 4 PST Los Angeles 3:00 p.m. Nov. 4 PCT Vancouver 4:00 p.m. Nov. 4 MST…",
+   "oznake": [
+    "Launch"
+   ],
+   "vrsta": "vijest"
+  },
+  {
+   "datum": "2026-11-04T17:55:14Z",
+   "naslov": "Introducing The Forever Files: Wowhead's Forever Newsletter",
+   "link": "https://www.wowhead.com/news=383736/introducing-the-forever-files-wowheads-forever-newsletter",
+   "izvor": "Wowhead",
+   "sazetak": "With the launch of WoW: Forever, Wowhead is launching another jam-packed newsletter - sign up for The Forever Files today! Continue reading »",
+   "oznake": [],
+   "vrsta": "vijest"
+  },
   {
    "datum": "2026-11-03T20:00:09Z",
    "naslov": "Explore WoW: Forever with a Gamepad",
@@ -39,18 +71,6 @@
     "Klase"
    ],
    "vrsta": "vijest"
-  },
-  {
-   "datum": "2026-11-03T03:20:33Z",
-   "naslov": "WoW Forever Beta Development Notes – Updated November 2",
-   "link": "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696/9",
-   "izvor": "Blizzard",
-   "sazetak": "Since the last full update to the Beta on October 15, we’ve continued to work to solve issues, refine classes, improve gameplay in all areas, and address feedback we received from Beta testers. What follows are the updates and changes that…",
-   "oznake": [
-    "Patch notes",
-    "Beta"
-   ],
-   "vrsta": "patch"
   },
   {
    "datum": "2026-10-30T17:20:18Z",
@@ -400,24 +420,6 @@
    "oznake": [
     "Intervju"
    ],
-   "vrsta": "vijest"
-  },
-  {
-   "datum": "2026-09-16T17:29:40Z",
-   "naslov": "WoW: Forever Will Have Addon Changes from Midnight",
-   "link": "https://www.wowhead.com/news=382921/wow-forever-will-have-addon-changes-from-midnight",
-   "izvor": "Wowhead",
-   "sazetak": "Blizzard has announced through the WoW UI Discord that the Midnight addon disarmament changes will be active in WoW: Forever. Continue reading »",
-   "oznake": [],
-   "vrsta": "vijest"
-  },
-  {
-   "datum": "2026-09-14T05:06:37Z",
-   "naslov": "BlizzCon Day 2 Roundup: Forever, Forever, and More Forever!",
-   "link": "https://www.wowhead.com/news=382879/blizzcon-day-2-roundup-forever-forever-and-more-forever",
-   "izvor": "Wowhead",
-   "sazetak": "BlizzCon has ended, but don't worry - we've wrapped up the big recaps from today's panels. Continue reading »",
-   "oznake": [],
    "vrsta": "vijest"
   }
  ]
