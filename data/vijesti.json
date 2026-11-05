@@ -9,8 +9,37 @@
    "url": "https://www.wowhead.com/news/rss/classic"
   }
  ],
- "azurirano": "2026-11-05T11:00:03Z",
+ "azurirano": "2026-11-05T18:46:34Z",
  "stavke": [
+  {
+   "datum": "2026-11-05T17:00:00Z",
+   "naslov": "The Weekly Reset with Taliesin and Evitel: Forever Forever? Talebound and More",
+   "link": "https://www.wowhead.com/news=383691/the-weekly-reset-with-taliesin-and-evitel-forever-forever-talebound-and-more",
+   "izvor": "Wowhead",
+   "sazetak": "Taliesin and Evitel check out WoW: Forever, where it's going, and how it's different from Retail. Also Talebound, decor, and more. Continue reading »",
+   "oznake": [],
+   "vrsta": "vijest"
+  },
+  {
+   "datum": "2026-11-05T15:42:52Z",
+   "naslov": "Known Issues - WoW Forever - Updated Nov. 5",
+   "link": "https://us.forums.blizzard.com/en/wow/t/known-issues-wow-forever-updated-nov-5/2402363/1",
+   "izvor": "Blizzard",
+   "sazetak": "In this thread, we will discuss issues that the WoW Forever team have determined to be notable, impactful, and already tracked with plans to fix in the future. This is not a comprehensive list of issues, and it will be updated regularly…",
+   "oznake": [],
+   "vrsta": "patch"
+  },
+  {
+   "datum": "2026-11-05T15:22:45Z",
+   "naslov": "WoW Forever Bug Report Forum Guidelines",
+   "link": "https://us.forums.blizzard.com/en/wow/t/wow-forever-bug-report-forum-guidelines/2402319/1",
+   "izvor": "Blizzard",
+   "sazetak": "Welcome! Please read this before posting in this forum. What follows are guidelines for how this forum should and shouldn’t be used. WoW Forever Bug Report Forum Guidelines: Please do not post off-topic banter or discussions. The purpose…",
+   "oznake": [
+    "Vodič"
+   ],
+   "vrsta": "vijest"
+  },
   {
    "datum": "2026-11-04T19:35:16Z",
    "naslov": "WoW Forever Beta Development Notes – Updated November 2",
@@ -229,37 +258,6 @@
    "izvor": "Blizzard",
    "sazetak": "The WoW Forever Beta is going offline in a few minutes. In this region, the Stress Test will begin at 2:00 p.m. PDT. To prepare for that, go to your Battle.net App and look for Stress Test under the Game Version selector on the WoW Forever…",
    "oznake": [],
-   "vrsta": "vijest"
-  },
-  {
-   "datum": "2026-10-20T21:00:12Z",
-   "naslov": "Claim Your World of Warcraft: Forever Character Names",
-   "link": "https://us.forums.blizzard.com/en/wow/t/claim-your-world-of-warcraft-forever-character-names/2387945/1",
-   "izvor": "Blizzard",
-   "sazetak": "Get ready to make your mark in Azeroth! World of Warcraft: Forever Early Name reservations will be available from October 27 through November 3, offering an early opportunity to reserve names for up to three characters. View Full Article",
-   "oznake": [
-    "Imena"
-   ],
-   "vrsta": "vijest"
-  },
-  {
-   "datum": "2026-10-20T20:30:35Z",
-   "naslov": "Heads Up -- WoW Forever Stress Test on October 21",
-   "link": "https://us.forums.blizzard.com/en/wow/t/heads-up-wow-forever-stress-test-on-october-21/2387920/1",
-   "izvor": "Blizzard",
-   "sazetak": "Tomorrow, October 21, we will take the WoW Forever Beta offline and we will then open WoW Forever on its proper regional hardware. Date Timezone Stress Test Start Time End Time October 21 CEST 19:00 03:00 October 21 BST/IST 18:00 02:00…",
-   "oznake": [],
-   "vrsta": "vijest"
-  },
-  {
-   "datum": "2026-10-20T19:00:16Z",
-   "naslov": "World of Warcraft: Forever Raid Overview—Locations, Raid Sizes, and Attunement",
-   "link": "https://us.forums.blizzard.com/en/wow/t/world-of-warcraft-forever-raid-overview%E2%80%94locations-raid-sizes-and-attunement/2387821/1",
-   "izvor": "Blizzard",
-   "sazetak": "Barrow Deeps, Hyjal Summit, and Onyxia’s Lair unlock in World of Warcraft: Forever on December 9. Learn where to find each level 60 raid, how many players you’ll need, and how to earn the Drakefire Amulet required to enter Onyxia’s Lair…",
-   "oznake": [
-    "Raid"
-   ],
    "vrsta": "vijest"
   },
   {
