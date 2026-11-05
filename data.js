@@ -214,15 +214,28 @@ window.HORDE = {
           uvod: "Ret za levelanje: jaki udarci oružjem, seali, Judgement i Holy Strike, puno izdržljivosti pa malo sjedenja. S Retom se može tankati i healati dungeone; na 60 prelaziš na pravi tank ili heal build.",
           snage: ["Može tank, heal ili DPS", "Jaki buffovi za grupu i hitne tipke (Lay on Hands, Divine Shield, Blessing of Protection)", "Besplatan mount na 40"],
           slabosti: ["Spor, nema skok do mete", "Solo ubija sporije od prosjeka", "Aure i blessinge treba dogovarati s ekipom"],
-          // talenti redom po levelima; bodovi = koliko levela pokriva raspon
+          // talenti redom po levelima (Mobalytics, provjereno 5. 11. 2026.), prikazuju se u "Trenutni build"
+          //   bodovi = koliko levela pokriva raspon; stablo = tab u igri; max = rangovi talenta; ikona = Wowhead ikona
           talentiPut: [
-            { od: 10, do: 14, ime: "Deflection" }, { od: 15, do: 17, ime: "Conviction" }, { od: 18, do: 19, ime: "Improved Judgement" },
-            { od: 20, do: 21, ime: "Pursuit of Justice" }, { od: 22, do: 22, ime: "Seal of Command", kljucno: true }, { od: 23, do: 24, ime: "Sanctified Judgement" },
-            { od: 25, do: 27, ime: "Two-Handed Weapon Specialization" }, { od: 28, do: 28, ime: "Sacred Arbiter" }, { od: 29, do: 29, ime: "Sanctified Judgement" },
-            { od: 30, do: 32, ime: "Vengeance" }, { od: 33, do: 33, ime: "Repentance" }, { od: 34, do: 34, ime: "Benediction" },
-            { od: 35, do: 39, ime: "Champion of the Light" }, { od: 40, do: 40, ime: "Unsealed Wrath", kljucno: true }, { od: 41, do: 45, ime: "Divine Strength" },
-            { od: 46, do: 47, ime: "Reverence" }, { od: 48, do: 52, ime: "Improved Seals" }, { od: 53, do: 57, ime: "Divine Intellect" },
-            { od: 58, do: 60, ime: "Precision" }
+            { od: 10, do: 14, ime: "Deflection", stablo: "Retribution", max: 5, ikona: "ability_parry" },
+            { od: 15, do: 17, ime: "Conviction", stablo: "Retribution", max: 3, ikona: "spell_holy_retributionaura" },
+            { od: 18, do: 19, ime: "Improved Judgement", stablo: "Retribution", max: 2, ikona: "spell_holy_righteousfury" },
+            { od: 20, do: 21, ime: "Pursuit of Justice", stablo: "Retribution", max: 2, ikona: "spell_holy_persuitofjustice" },
+            { od: 22, do: 22, ime: "Seal of Command", stablo: "Retribution", max: 1, ikona: "ability_warrior_innerrage", kljucno: true },
+            { od: 23, do: 24, ime: "Sanctified Judgement", stablo: "Retribution", max: 3, ikona: "ability_paladin_judgementblue" },
+            { od: 25, do: 27, ime: "Two-Handed Weapon Specialization", stablo: "Retribution", max: 3, ikona: "inv_hammer_04" },
+            { od: 28, do: 28, ime: "Sacred Arbiter", stablo: "Retribution", max: 1, ikona: "inv_sword_08" },
+            { od: 29, do: 29, ime: "Sanctified Judgement", stablo: "Retribution", max: 3, ikona: "ability_paladin_judgementblue" },
+            { od: 30, do: 32, ime: "Vengeance", stablo: "Retribution", max: 3, ikona: "ability_racial_avatar" },
+            { od: 33, do: 33, ime: "Repentance", stablo: "Retribution", max: 1, ikona: "spell_holy_prayerofhealing" },
+            { od: 34, do: 34, ime: "Benediction", stablo: "Retribution", max: 5, ikona: "spell_frost_windwalkon" },
+            { od: 35, do: 39, ime: "Champion of the Light", stablo: "Retribution", max: 5, ikona: "ability_paladin_enlightenedjudgements" },
+            { od: 40, do: 40, ime: "Unsealed Wrath", stablo: "Retribution", max: 1, ikona: "spell_holy_blessedresillience", kljucno: true },
+            { od: 41, do: 45, ime: "Divine Strength", stablo: "Holy", max: 5, ikona: "ability_golemthunderclap" },
+            { od: 46, do: 47, ime: "Reverence", stablo: "Holy", max: 2, ikona: "spell_holy_divineillumination" },
+            { od: 48, do: 52, ime: "Improved Seals", stablo: "Holy", max: 5, ikona: "ability_thunderbolt" },
+            { od: 53, do: 57, ime: "Divine Intellect", stablo: "Protection", max: 5, ikona: "spell_nature_sleep" },
+            { od: 58, do: 60, ime: "Precision", stablo: "Protection", max: 3, ikona: "ability_rogue_ambush" }
           ],
           rotacija: [
             { faza: "1–19", tocke: [
