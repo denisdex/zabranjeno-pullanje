@@ -3,7 +3,7 @@
 window.HORDE = {
   ekipa: "Zaprešić Horde",
   guild: "Zabranjeno pullanje",
-  azurirano: "2026-11-03",
+  azurirano: "2026-11-05",
 
   // Vremena u UTC. Studeni je CET (UTC+1).
   // Rezervacija imena: do 3. 11. 2026. u 23:59 po Zagrebu.
@@ -584,6 +584,12 @@ window.HORDE = {
   // Stavka: { tekst, za: [klase/rase ili "Svi"], tema: kratka oznaka što se mijenja (Racial, Spell, Rage, XP, Dungeoni, Loot, Zona...) }
   izvorNovosti: "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
   novosti: [
+    { datum: "2026-11-04", naslov: "Dodatak: sučelje", stavke: [
+      { tekst: "Swing Timer bar više ne nestaje zbog udaljenosti dok udarac ne završi.", za: ["Svi"], tema: "Bug fix" },
+      { tekst: "Nameplatei sad ispravno prikazuju Elite status neprijatelja, a debuff ikone na njima mogu se klikati kroz.", za: ["Svi"], tema: "Bug fix" },
+      { tekst: "Ubojstvo igrača na Honor capu više ne prikazuje dobiveni honor u floating textu ni chatu.", za: ["Svi"], tema: "PvP" },
+      { tekst: "U izborniku keybindova prelazak mišem preko keybinda highlighta gumb na action baru.", za: ["Svi"], tema: "Bug fix" }
+    ] },
     { datum: "2026-11-03", naslov: "Patch za launch: više štete, novi threat", stavke: [
       { tekst: "Damage svih klasa podignut, a mobovi viših levela dobili su više healtha da to izbalansira.", za: ["Svi"], tema: "Buff" },
       { tekst: "Defensive Stance daje 80% threata (bilo 30%); Slam ima 15 s cooldowna (bilo 18 s).", za: ["Warrior"], tema: "Spell" },
