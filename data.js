@@ -2,7 +2,7 @@
 // promijeni vrijednost, pa ponovno objavi stranicu (link ostaje isti).
 window.HORDE = {
   ekipa: "Zaprešić Horde",
-  guild: "Zabranjeno pullanje",
+  guild: "Kafana na Balkanu",
   azurirano: "2026-11-06",
 
   // Vremena u UTC. Studeni je CET (UTC+1).
@@ -53,8 +53,9 @@ window.HORDE = {
   // achievementi: novi (koje posjetitelj još nije vidio) iskaču kao tost dolje u sredini, jedan po jedan
   // { id (jedinstven, ne mijenja se), naziv, opis, datum (GGGG-MM-DD), igraci: tko ga je dobio }
   achievementi: [
-    { id: "web-online", naziv: "Web online", opis: "Zabranjeno pullanje ima svoju stranicu.", datum: "2026-10-29", igraci: ["Pero", "Niksa", "Karken", "Žuga", "Dex"] },
+    { id: "web-online", naziv: "Web online", opis: "Ekipa ima svoju stranicu.", datum: "2026-10-29", igraci: ["Pero", "Niksa", "Karken", "Žuga", "Dex"] },
     { id: "ime-guilda", naziv: "Guild ima ime", opis: "Od sad smo Zabranjeno pullanje. Tabard još čeka gold.", datum: "2026-10-29", igraci: ["Pero", "Niksa", "Karken", "Žuga", "Dex"] },
+    { id: "novo-ime-guilda", naziv: "Novo ime", opis: "Guild se sad zove Kafana na Balkanu. Niksa je GM, ekipa je na broju.", datum: "2026-11-06", igraci: ["Pero", "Niksa", "Karken", "Žuga", "Dex"] },
     { id: "imena-rezervirana", naziv: "Imena rezervirana", opis: "Niksa, Žuga i Dex imaju likove potvrđene u igri: Saman Saulic, Nikola Roguevic, Arsen Deadic.", datum: "2026-10-29", igraci: ["Niksa", "Žuga", "Dex"] }
   ],
 

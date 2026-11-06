@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Zaprešić → Azeroth · Zabranjeno pullanje</title>
-<meta name="description" content="Cinematic guilda Zabranjeno pullanje: od noćnog Zaprešića do Azerotha.">
+<title>Zaprešić → Azeroth · Kafana na Balkanu</title>
+<meta name="description" content="Cinematic guilda Kafana na Balkanu: od noćnog Zaprešića do Azerotha.">
 <meta name="theme-color" content="#050404">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -148,8 +148,8 @@ button { font: inherit; color: inherit; }
   <div class="udarni" id="udarni"></div>
   <div class="kraj">
     <div class="kraj-in">
-      <div class="logo" id="logo"><img src="assets/logo-zp.svg" alt="Grb guilda Zabranjeno pullanje"></div>
-      <h2 class="naslov" id="naslov" aria-label="Zabranjeno pullanje"></h2>
+      <div class="logo" id="logo"><img src="assets/logo-zp.svg" alt="Grb guilda Kafana na Balkanu"></div>
+      <h2 class="naslov" id="naslov" aria-label="Kafana na Balkanu"></h2>
       <p class="pod" id="pod">World of Warcraft: Forever · <b>Horda</b><br>4. 11. 2026.</p>
       <div class="gumbi" id="gumbi">
         <button type="button" class="btn" id="ponovi">↻ Ponovi</button>
@@ -950,7 +950,7 @@ button { font: inherit; color: inherit; }
   });
 
   var naslov = $("naslov");
-  naslov.innerHTML = "Zabranjeno".split("").map(function (c) { return "<span>" + c + "</span>"; }).join("") + "<br>" + "pullanje".split("").map(function (c) { return "<span>" + c + "</span>"; }).join("");
+  naslov.innerHTML = "Kafana na".split("").map(function (c) { return "<span>" + (c === " " ? "&nbsp;" : c) + "</span>"; }).join("") + "<br>" + "Balkanu".split("").map(function (c) { return "<span>" + c + "</span>"; }).join("");
   var slova = naslov.querySelectorAll("span");
 
   /* ================= potres ================= */

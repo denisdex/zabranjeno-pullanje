@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><title>Zabranjeno pullanje</title><defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><title>Kafana na Balkanu</title><defs>
   <radialGradient id="zpbg" cx="50%" cy="40%" r="62%"><stop offset="0" stop-color="#3a1712"/><stop offset=".7" stop-color="#1a0d0a"/><stop offset="1" stop-color="#0c0605"/></radialGradient>
   <linearGradient id="zpgold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6d98a"/><stop offset=".35" stop-color="#c8923c"/><stop offset=".6" stop-color="#8a5a1e"/><stop offset=".8" stop-color="#e2b562"/><stop offset="1" stop-color="#7a4c18"/></linearGradient>
   <linearGradient id="zpred" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff4a3a"/><stop offset=".45" stop-color="#c1121f"/><stop offset="1" stop-color="#6e070e"/></linearGradient>

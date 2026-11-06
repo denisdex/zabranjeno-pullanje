@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Osvježava data/*.json za web Zabranjeno pullanje.
+"""Osvježava data/*.json za web Kafana na Balkanu.
 
 Pokreće ga GitHub Actions svaki sat (.github/workflows/podaci.yml), a može se pokrenuti i lokalno:
     python3 skripte/osvjezi.py
