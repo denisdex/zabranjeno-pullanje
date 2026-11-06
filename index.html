@@ -1917,7 +1917,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
 <script src="data.js"></script>
 <script>
 /* ---------- intro (splash) ----------
-   Svaki dolazak na web (i refresh): puni cinematic ~34 s kreće odmah (žeravica, grb, natpis, 3D logo, montaža Forever kadrova,
+   Od 2026-11-06 dolazak na web i refresh puštaju samo kratki ulaz (0,6 s); puni cinematic ~34 s ide samo na "▶ Intro" i Kino (žeravica, grb, natpis, 3D logo, montaža Forever kadrova,
    roster reveal ekipe, JOŠ N DANA, rascjep). Link s hashom i povratak s cinematica (./?web): 0,6 s. Reduced-motion: 0,4 s fade.
    Preglednik ne da zvuk bez geste, pa intro kreće tiho: gore desno "Skip video" (i Esc/Space/scroll) vodi na web,
    a "🔊 Zvuk" ili prvi dodir bilo gdje drugdje pali Orgrimmar temu. "▶ Intro" u izborniku i kartica u Kinu ga puštaju ponovno.
@@ -1934,8 +1934,9 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
   function nacin() {
     if (dbg) return "puni";
     if (reduce) return "fade";
-    if (location.hash.length > 1 || izCinematica()) return "hash";
-    return "puni";
+    izCinematica();
+    // od 2026-11-06 dolazak na web ne pušta puni cinematic (Dex), samo kratki ulaz; puni ide na "▶ Intro"
+    return "hash";
   }
   // došao s cinematica ("Na web →" vodi na ./?web); ?web se makne iz adrese pa refresh opet pušta puni intro
   function izCinematica() {
