@@ -3,7 +3,7 @@
 window.HORDE = {
   ekipa: "Zaprešić Horde",
   guild: "Zabranjeno pullanje",
-  azurirano: "2026-11-05",
+  azurirano: "2026-11-06",
 
   // Vremena u UTC. Studeni je CET (UTC+1).
   // Rezervacija imena: do 3. 11. 2026. u 23:59 po Zagrebu.
@@ -84,7 +84,7 @@ window.HORDE = {
   // portret (foto) je 720×960 izrez iz istog kadra; oci i ociSiroka već uračunavaju 4 % povećanja slike na kartici
   // imena: gdje se govori o ljudima piše igrac (Pero, Niksa, Karken, Žuga, Dex); lik samo kao naslov kartice/profila i u kontekstu igre
   igraci: [
-    { igrac: "Niksa",   lik: "Saman Saulic",    klasa: "Shaman",  rasa: "Orc",    uloga: "Healer",     level: 0, foto: "assets/likovi/saman-saulic.jpg",
+    { igrac: "Niksa",   lik: "Saman Saulic",    klasa: "Shaman",  rasa: "Orc",    uloga: "Healer",     level: 15, foto: "assets/likovi/saman-saulic.jpg",
       siroka: "assets/likovi/saman-saulic-wide.jpg", fokus: [50.3, 18],
       gold: 0,
       zadaci: [
@@ -111,7 +111,7 @@ window.HORDE = {
         ],
         biljeske: "Healer grupe. Kad kaže mana, svi stanu."
       } },
-    { igrac: "Pero",    lik: "Melee Kitic",      klasa: "Warrior", rasa: "Orc",    uloga: "Melee DPS",  level: 0, foto: "assets/likovi/melee-kitic.jpg", boja: "#D9853B",
+    { igrac: "Pero",    lik: "Melee Kitic",      klasa: "Warrior", rasa: "Orc",    uloga: "Melee DPS",  level: 16, foto: "assets/likovi/melee-kitic.jpg", boja: "#D9853B",
       siroka: "assets/likovi/melee-kitic-wide.jpg", fokus: [50.3, 28.8],
       gold: 0,
       zadaci: [
@@ -139,7 +139,7 @@ window.HORDE = {
         ],
         biljeske: "Kao DPS ne pulla. Kad Dex nije tu, Warrior je rezervni tank."
       } },
-    { igrac: "Karken", lik: "Janica Frostelich", klasa: "Mage",    rasa: "Troll",  uloga: "Ranged DPS", level: 0, foto: "assets/likovi/janica-frostelic.jpg", boja: "#55D98B",
+    { igrac: "Karken", lik: "Janica Frostelich", klasa: "Mage",    rasa: "Troll",  uloga: "Ranged DPS", level: 15, foto: "assets/likovi/janica-frostelic.jpg", boja: "#55D98B",
       siroka: "assets/likovi/janica-frostelic-wide.jpg", fokus: [50, 18.4],
       gold: 0,
       zadaci: [
@@ -164,7 +164,7 @@ window.HORDE = {
         ],
         biljeske: "Voda i hrana za ekipu, Polymorph na drugi target."
       } },
-    { igrac: "Žuga",    lik: "Nikola Roguevic",  klasa: "Rogue",   rasa: "Undead", uloga: "Melee DPS",  level: 0, foto: "assets/likovi/nikola-roguevic.jpg", oci: [[48.7, 14.2], [54.2, 14.1]],
+    { igrac: "Žuga",    lik: "Nikola Roguevic",  klasa: "Rogue",   rasa: "Undead", uloga: "Melee DPS",  level: 16, foto: "assets/likovi/nikola-roguevic.jpg", oci: [[48.7, 14.2], [54.2, 14.1]],
       siroka: "assets/likovi/nikola-roguevic-wide.jpg", fokus: [48.8, 16.6], ociSiroka: [[47.7, 14.2], [50.0, 14.1]],
       gold: 0,
       zadaci: [
@@ -190,7 +190,7 @@ window.HORDE = {
         ],
         biljeske: "Sap na drugi target prije pulla, kad Dex kaže."
       } },
-    { igrac: "Dex",     lik: "Arsen Deadic",     klasa: "Paladin", rasa: "Undead", uloga: "Tank",       level: 0, foto: "assets/likovi/arsen-deadic.jpg", oci: [[57.4, 18.5], [61.4, 19.0]],
+    { igrac: "Dex",     lik: "Arsen Deadic",     klasa: "Paladin", rasa: "Undead", uloga: "Tank",       level: 16, foto: "assets/likovi/arsen-deadic.jpg", oci: [[57.4, 18.5], [61.4, 19.0]],
       siroka: "assets/likovi/arsen-deadic-wide.jpg", fokus: [54.2, 20.1], ociSiroka: [[54.4, 18.6], [56.1, 19.0]],
       gold: 0,
       zadaci: [
@@ -597,6 +597,15 @@ window.HORDE = {
   // Stavka: { tekst, za: [klase/rase ili "Svi"], tema: kratka oznaka što se mijenja (Racial, Spell, Rage, XP, Dungeoni, Loot, Zona...) }
   izvorNovosti: "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
   novosti: [
+    { datum: "2026-11-05", naslov: "Hotfixovi: respawni, torbe i Plainsrunning", stavke: [
+      { tekst: "Yarrog Baneshadow u Durotaru više ne respawna presporo.", za: ["Horde"], tema: "Bug fix" },
+      { tekst: "Deathstalker Erland za quest Escorting Erland respawna puno brže.", za: ["Horde"], tema: "Bug fix" },
+      { tekst: "Trade supply vendori na Zephras Isleu prodaju apprentice torbe za profesije.", za: ["Svi"], tema: "Profesije" },
+      { tekst: "Lotheluum Starbreeze u Zephrasu sad trenira Druide.", za: ["Druid"], tema: "Bug fix" },
+      { tekst: "Plainsrunning se više ne može stackati u pripremi battlegrounda, a stackovi padaju kad nosiš flag.", za: ["Tauren"], tema: "PvP" },
+      { tekst: "Murloci u Dustwallow Marshu više ne respawnaju prebrzo; Pelluk u Swamp of Sorrows opet se pojavljuje.", za: ["Svi"], tema: "Bug fix" },
+      { tekst: "Mild Spices se vendoru prodaju za 1 copper (bilo 2).", za: ["Svi"], tema: "Loot" }
+    ] },
     { datum: "2026-11-04", naslov: "Dodatak: sučelje", stavke: [
       { tekst: "Swing Timer bar više ne nestaje zbog udaljenosti dok udarac ne završi.", za: ["Svi"], tema: "Bug fix" },
       { tekst: "Nameplatei sad ispravno prikazuju Elite status neprijatelja, a debuff ikone na njima mogu se klikati kroz.", za: ["Svi"], tema: "Bug fix" },
