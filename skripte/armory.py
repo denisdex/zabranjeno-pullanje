@@ -237,10 +237,12 @@ def main():
             doc["likovi"][ime] = rez
             promjena = True
             print("  %s: novo (level %s)" % (ime, rez.get("level")))
-    if not promjena:
-        print("  bez novih podataka, data/likovi.json ostaje isti")
-        return False
-    doc["azurirano"] = sada
+    # "provjereno" se upiše svaki put, da web pokaže kad je zadnji refresh (i kad se ništa nije promijenilo)
+    doc["provjereno"] = sada
+    if promjena:
+        doc["azurirano"] = sada
+    else:
+        print("  bez novih podataka u likovima, upisujem samo vrijeme provjere")
     with open(put, "w", encoding="utf-8") as f:
         json.dump(doc, f, ensure_ascii=False, indent=1)
         f.write("\n")

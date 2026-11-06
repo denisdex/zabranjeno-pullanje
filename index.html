@@ -2782,6 +2782,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       if (a.oprema && a.oprema.length) p.profil.oprema = a.oprema;
       if (a.profesije) p.armoryProfesije = a.profesije;
       p.armory = a;
+      a.provjereno = ARM.provjereno || ARM.azurirano;
       p.azuriranoAuto = a.azurirano || ARM.azurirano;
     });
   }
@@ -2795,6 +2796,12 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     return "prije " + Math.round(h / 24) + " dana";
   }
 
+  // "6. 11. u 14:05" po lokalnom vremenu, uz "prije 2 h"
+  function kad(iso) {
+    var d = new Date(iso);
+    if (isNaN(d)) return "";
+    return d.getDate() + ". " + (d.getMonth() + 1) + ". u " + d.getHours() + ":" + String(d.getMinutes()).padStart(2, "0") + " (" + prije(iso) + ")";
+  }
   function pokreni(ARM, VIJ) {
   var D = window.HORDE;
   spojiAutomatsko(D, ARM, VIJ);
@@ -3432,7 +3439,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
         }).join("") + "</ul></div>";
       }).join("");
       return '<section class="arm" aria-label="U igri sad">' +
-        '<header class="arm-head"><h3 class="lab mono">U igri sad</h3><p class="mono">' + meta + (a.azurirano ? " · podaci " + prije(a.azurirano) : "") + "</p></header>" +
+        '<header class="arm-head"><h3 class="lab mono">U igri sad</h3><p class="mono">' + meta + (a.provjereno ? " · zadnji refresh " + kad(a.provjereno) : "") + "</p></header>" +
         (st.length ? '<dl class="arm-st">' + st.map(function (x) { return "<div><dt class=\"mono\">" + esc(x[0]) + "</dt><dd>" + esc(String(br(x[1]))) + "</dd></div>"; }).join("") + "</dl>" : "") +
         '<div class="arm-kol">' +
           (prof ? '<div><h4 class="lab mono">Profesije u igri</h4><ul class="arm-bar">' + prof + "</ul></div>" : "") +

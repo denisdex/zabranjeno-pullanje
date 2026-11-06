@@ -1,9 +1,9 @@
 name: Podaci
 
-# Svaki sat osvježi data/*.json (vijesti, armory) i commita samo ako se nešto promijenilo.
+# Svaka 3 sata osvježi data/*.json (vijesti, armory) i commita samo ako se nešto promijenilo.
 on:
   schedule:
-    - cron: "17 * * * *"
+    - cron: "17 */3 * * *"
   workflow_dispatch:
 
 permissions:
