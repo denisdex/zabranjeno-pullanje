@@ -9,8 +9,19 @@
    "url": "https://www.wowhead.com/news/rss/classic"
   }
  ],
- "azurirano": "2026-11-06T00:18:33Z",
+ "azurirano": "2026-11-06T07:57:07Z",
  "stavke": [
+  {
+   "datum": "2026-11-06T02:34:10Z",
+   "naslov": "WoW: Forever Hotfixes - November 5, 2026",
+   "link": "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-5-2026/2403040/1",
+   "izvor": "Blizzard",
+   "sazetak": "Hotfixes November 5, 2026 Enemies and NPCs Durotar - Fixed an issue where Yarrog Baneshadow was respawning more slowly than intended. Zephras - Lotheluum Starbreeze now offers training to Druids as expected. Dustwallow Marsh - Fixed an…",
+   "oznake": [
+    "Hotfix"
+   ],
+   "vrsta": "patch"
+  },
   {
    "datum": "2026-11-05T22:00:07Z",
    "naslov": "WoW: Forever– Watch Forging Forever",
@@ -249,15 +260,6 @@
    "oznake": [
     "Beta"
    ],
-   "vrsta": "vijest"
-  },
-  {
-   "datum": "2026-10-21T17:02:04Z",
-   "naslov": "Gather Around the Campfire in World of Warcraft: Forever",
-   "link": "https://us.forums.blizzard.com/en/wow/t/gather-around-the-campfire-in-world-of-warcraft-forever/2388645/1",
-   "izvor": "Blizzard",
-   "sazetak": "The Camping system in World of Warcraft: Forever lets players create shared campsites where they can rest, craft, and gain useful benefits from profession-made features. Beginning with the Cooking profession’s Basic Campfire, the system…",
-   "oznake": [],
    "vrsta": "vijest"
   },
   {
