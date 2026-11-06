@@ -641,13 +641,23 @@ section[id] { scroll-margin-top: 84px; }
 .arm-ig figcaption { position: absolute; left: 10px; right: 10px; bottom: 8px; font-size: .5625rem; letter-spacing: .06em; color: var(--dust); }
 .arm-h4 { margin: 18px 0 10px; color: var(--c); }
 .arm-sit { margin: 8px 0 0; font-size: .625rem; letter-spacing: .04em; color: var(--dust); }
-.arm-sad { border-left: 2px solid var(--c); background: rgba(236, 226, 212, .04); padding: 16px 18px; }
-.arm-sad h4.lab { margin: 0 0 10px; color: var(--c); }
-.sad-l { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
-.sad-l li { display: grid; grid-template-columns: 5.6rem minmax(0, 1fr); gap: 10px; align-items: baseline; }
-.sad-l em { font-style: normal; font-size: .5625rem; letter-spacing: .08em; text-transform: uppercase; color: var(--dust); }
-.sad-l li.hitno em { color: #ff7a2e; }
-.sad-l li.hitno span { color: var(--bone); font-weight: 600; }
+.an { border-left: 2px solid var(--c); background: rgba(236, 226, 212, .04); padding: 18px 20px; display: grid; gap: 16px; }
+.an h4.lab { margin: 0; color: var(--c); }
+.an-t { margin: 0 0 8px; font-size: .5625rem; letter-spacing: .1em; text-transform: uppercase; color: var(--dust); }
+.an-rang { margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.an-rang div { background: var(--night); padding: 10px 12px; }
+.an-rang dt { color: var(--dust); font-size: .5625rem; letter-spacing: .08em; margin-bottom: 6px; }
+.an-rang dd { margin: 0; font: 800 1.3rem/1 var(--f-display); font-variant-numeric: tabular-nums; display: flex; align-items: baseline; gap: 8px; }
+.an-rang small { font-size: .5625rem; color: var(--dust); letter-spacing: .04em; font-weight: 400; }
+.an-rang .an-1 small { color: var(--c); }
+.an-sw { display: grid; gap: 16px 32px; }
+@media (min-width: 760px) { .an-sw { grid-template-columns: 1fr 1fr; } }
+.an-pr { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; counter-reset: an; }
+.an-pr li { counter-increment: an; display: grid; grid-template-columns: 1.6rem 5.6rem minmax(0, 1fr); gap: 10px; align-items: baseline; }
+.an-pr li::before { content: counter(an); font: 900 1rem/1 var(--f-display); color: var(--c); }
+.an-pr em { font-style: normal; font-size: .5625rem; letter-spacing: .08em; text-transform: uppercase; color: var(--dust); }
+.an-pr li.an-odmah em, .an-pr li.an-odmah span { color: #ff7a2e; font-weight: 600; }
+@media (max-width: 559px) { .an-pr li { grid-template-columns: 1.4rem minmax(0, 1fr); } .an-pr em { grid-column: 2; } .an-pr span { grid-column: 2; } }
 .arm-det summary { cursor: pointer; color: var(--c); margin-bottom: 10px; }
 .arm-q { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; max-height: 22rem; overflow: auto; }
 .arm-q li { border-bottom: 1px solid var(--line); padding: 4px 0; }
@@ -3536,45 +3546,100 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     var PRAZNO_VAZNO = ["Head", "Shoulder", "Back", "Chest", "Wrist", "Hands", "Waist", "Legs", "Feet", "Main Hand"];
     var SAKUPLJACKE = { Mining: 1, Herbalism: 1, Skinning: 1 };
     var sadP = null;
-    function sadHtml(a) {
-      var p = sadP, lvl = p ? lvlOf(p) : a.level || 0, t = [];
-      var slob = Math.max(0, lvl - 9) - (a.talenti || []).reduce(function (x, y) { return x + (+y || 0); }, 0);
-      if (slob > 0) t.push(["hitno", "Imaš " + slob + " nepotrošen" + (slob === 1 ? " talent bod" : "a talent boda") + ". Otvori talente (N)."]);
+    // "Analiza i što dalje": usporedba s ekipom, jake i slabe strane po ulozi, prioritetni prijedlozi; sve iz igre + trikovi iz data.js
+    function statN(a, ime) { var x = ((a || {}).statistika || []).filter(function (y) { return y.ime === ime; })[0]; return x ? +x.n || 0 : 0; }
+    function analizaHtml(a) {
+      var p = sadP, lvl = p ? lvlOf(p) : a.level || 0, pr = [], jako = [], slabo = [];
+      var tim = igraci.filter(function (x) { return x.armory; });
+      // mjesto u ekipi: 1 = najbolji; za smrti je manje bolje
+      function mjesto(fn, manjeBolje) {
+        var v = fn(a), bolji = tim.filter(function (x) { var w = fn(x.armory); return manjeBolje ? w < v : w > v; }).length;
+        return bolji + 1;
+      }
+      function prosj(fn) { return tim.length ? tim.reduce(function (z, x) { return z + fn(x.armory); }, 0) / tim.length : 0; }
+      var M = [
+        ["Level", function (x) { return x.level || 0; }, false],
+        ["ilvl", function (x) { return x.ilvl || 0; }, false],
+        ["Ubojstva", function (x) { return statN(x, "Total kills"); }, false],
+        ["Questovi", function (x) { return statN(x, "Quests completed"); }, false],
+        ["Smrti", function (x) { return statN(x, "Total deaths"); }, true]
+      ];
+      var rang = M.map(function (m) { return [m[0], m[1](a), mjesto(m[1], m[2])]; });
+      // usporedbe s prosjekom ekipe
+      var il = a.ilvl || 0, ilP = prosj(function (x) { return x.ilvl || 0; });
+      if (il > ilP + .5) jako.push("Oprema iznad prosjeka ekipe (ilvl " + il + ", prosjek " + ilP.toFixed(1).replace(".", ",") + ").");
+      else if (il < ilP - .5) slabo.push("Oprema ispod prosjeka ekipe (ilvl " + il + ", prosjek " + ilP.toFixed(1).replace(".", ",") + ").");
+      var sm = statN(a, "Total deaths"), smP = prosj(function (x) { return statN(x, "Total deaths"); });
+      if (sm <= smP * .6) jako.push("Malo umire: " + sm + " smrti, ekipa u prosjeku " + Math.round(smP) + ".");
+      else if (sm >= smP * 1.3) slabo.push("Umire više od ekipe: " + sm + " smrti, prosjek " + Math.round(smP) + ". Pogledaj HP prije pulla i jedi između borbi.");
+      var qs = statN(a, "Quests completed"), qP = prosj(function (x) { return statN(x, "Quests completed"); });
+      if (qs >= qP + 5) jako.push("Najviše questa: " + qs + " završeno.");
+      else if (qs <= qP - 8) slabo.push("Zaostaje u questovima: " + qs + ", ekipa " + Math.round(qP) + ". Questovi daju i XP i opremu.");
+      // stat za ulogu
+      var s = a.statovi || {}, uloga = p ? p.uloga : "";
+      function rangStat(k) { return mjesto(function (x) { return +((x.statovi || {})[k]) || 0; }, false); }
+      if (uloga === "Tank") {
+        var ra = rangStat("armor"), rh = rangStat("hp");
+        (ra === 1 ? jako : ra >= 4 ? slabo : jako).push("Armor " + s.armor + " (" + ra + ". u ekipi), HP " + s.hp + " (" + rh + ".). Tanku trebaju oba na vrhu.");
+        if (s.parry || s.block) jako.push("Parry " + String(s.parry).replace(".", ",") + " %, block " + String(s.block).replace(".", ",") + " %.");
+      } else if (uloga === "Healer") {
+        jako.push("Mana " + s.resurs + ", Intellect " + s["int"] + ", Spirit " + s.spi + ". Za heal prvo Intellect, pa Spirit.");
+      } else if (p && p.klasa === "Mage") {
+        var ri = rangStat("int");
+        (ri === 1 ? jako : slabo).push("Intellect " + s["int"] + " (" + ri + ". u ekipi), spell crit " + String(s.spellCrit).replace(".", ",") + " %. Na clothu traži Intellect i Stamina.");
+      } else if (uloga === "Melee DPS") {
+        var rap = rangStat("ap");
+        (rap <= 2 ? jako : slabo).push("Attack power " + s.ap + " (" + rap + ". u ekipi), crit " + String(s.crit).replace(".", ",") + " %, DPS oružja " + String(s.dps).replace(".", ",") + ".");
+      }
+      // oprema
       var ima = {};
       (a.oprema || []).forEach(function (o) { ima[o.slot] = o; });
-      var prazni = PRAZNO_VAZNO.filter(function (s) { return !ima[s]; });
-      if (p && (p.klasa === "Paladin" || p.klasa === "Warrior" || p.klasa === "Shaman") && p.uloga === "Tank" && !ima["Off Hand"]) prazni.push("Off Hand (štit)");
-      if (prazni.length) t.push(["oprema", "Prazno: " + prazni.join(", ") + ". Bilo koji green ili quest nagrada je bolja od ničega."]);
-      if (lvl >= 20) { var nak = ["Neck", "Finger 1", "Trinket 1"].filter(function (s) { return !ima[s]; }); if (nak.length) t.push(["oprema", "Još bez: " + nak.join(", ").replace("Finger 1", "prstena").replace("Trinket 1", "trinketa") + ". Pogledaj AH i quest nagrade."]); }
-      var sivi = (a.oprema || []).filter(function (o) { return o.kvaliteta === "poor" || o.kvaliteta === "common"; });
-      if (sivi.length) t.push(["oprema", "Za zamjenu: " + sivi.map(function (o) { return o.ime + " (" + o.slot + ")"; }).join(", ") + "."]);
-      var prim = (a.profesije || []).filter(function (x) { return x.vrsta === "primarna"; });
-      if (prim.length < 2) t.push(["prof", "Imaš slobodno mjesto za još jednu profesiju."]);
-      (a.profesije || []).forEach(function (x) {
-        var m = x.max || 75;
-        var sljedeci = m === 75 ? [10, "Journeyman (do 150)"] : m === 150 ? [20, "Expert (do 225)"] : m === 225 ? [35, "Artisan (do 300)"] : null;
-        if (sljedeci && x.skill >= m - 25) t.push(["prof", x.name + " " + x.skill + "/" + m + ": " + (lvl >= sljedeci[0] ? "idi kod trenera po " + sljedeci[1] + "." : "za " + sljedeci[1] + " treba level " + sljedeci[0] + ".")]);
-        if (SAKUPLJACKE[x.name] && x.skill < lvl * 5 - 30) t.push(["prof", x.name + " zaostaje: " + x.skill + ", za level " + lvl + " dobro je oko " + Math.min(300, lvl * 5) + "."]);
-        if (x.name === "First Aid" && x.skill < Math.min(lvl * 5, 225) - 40) t.push(["prof", "First Aid je " + x.skill + ": bandage spašavaju dungeon, dobro ga je držati oko " + Math.min(lvl * 5, 225) + "."]);
-      });
-      var q = (a.questovi || {}).uLogu || [];
-      if (q.length >= 25) t.push(["quest", q.length + " questova u logu: obriši sive i one iz zona u koje se ne vraćaš."]);
-      if (a.zadnjiLogin && Date.now() - Date.parse(a.zadnjiLogin) > 3 * 864e5) t.push(["info", "Nije bio u igri " + prije(a.zadnjiLogin).replace("prije ", "") + "."]);
-      // guide vs igra: koje talente bi po guideu imao do sad, a koje stvarno ima
+      var popunjeno = Object.keys(ima).length;
+      var dobri = (a.oprema || []).filter(function (o) { return o.kvaliteta === "uncommon" || o.kvaliteta === "rare" || o.kvaliteta === "epic"; }).length;
+      (dobri >= popunjeno - 1 ? jako : slabo).push("Oprema: " + popunjeno + " od 17 slotova, od toga " + dobri + " green ili bolje.");
+      // ---------- prijedlozi, po važnosti ----------
+      var slob = Math.max(0, lvl - 9) - (a.talenti || []).reduce(function (x, y) { return x + (+y || 0); }, 0);
+      if (slob > 0) pr.push(["odmah", "Potroši " + slob + (slob === 1 ? " talent bod" : " talent boda") + " (N u igri)."]);
       var put = p && p.profil && p.profil.vodic && p.profil.vodic.talentiPut;
       if (put && put.length && (a.talentiPopis || []).length) {
         var treba = {}, imaT = {};
         put.forEach(function (x) { var n = Math.min(lvl, x.do) - x.od + 1; if (n > 0) treba[x.ime] = (treba[x.ime] || 0) + n; });
         a.talentiPopis.forEach(function (x) { imaT[x.ime] = x.rang; });
         var razl = Object.keys(treba).some(function (k) { return imaT[k] !== treba[k]; }) || Object.keys(imaT).some(function (k) { return !treba[k]; });
-        if (razl) t.push(["tal", "Guide do levela " + lvl + ": " + Object.keys(treba).map(function (k) { return k + " " + treba[k]; }).join(", ") + ". U igri imaš: " + a.talentiPopis.map(function (x) { return x.ime + " " + x.rang; }).join(", ") + "."]);
+        if (razl) pr.push(["talenti", "Talenti odstupaju od guidea. Guide do " + lvl + ": " + Object.keys(treba).map(function (k) { return k + " " + treba[k]; }).join(", ") + "; imaš: " + a.talentiPopis.map(function (x) { return x.ime + " " + x.rang; }).join(", ") + ". Reset kod trenera je jeftin do 20."]);
+        var sljedeci = put.filter(function (x) { return x.kljucno && x.od > lvl; })[0];
+        if (sljedeci) pr.push(["cilj", "Sljedeći ključni talent: " + sljedeci.ime + " na levelu " + sljedeci.od + "."]);
       }
+      var prazni = ["Head", "Shoulder", "Back", "Chest", "Wrist", "Hands", "Waist", "Legs", "Feet", "Main Hand"].filter(function (x) { return !ima[x]; });
+      if (p && p.uloga === "Tank" && !ima["Off Hand"]) prazni.push("Off Hand (štit)");
+      if (prazni.length) pr.push(["oprema", "Popuni prazno: " + prazni.join(", ") + ". Quest nagrade ili jeftini greenovi s AH-a."]);
+      var sivi = (a.oprema || []).filter(function (o) { return o.kvaliteta === "poor" || o.kvaliteta === "common"; });
+      if (sivi.length) pr.push(["oprema", "Zamijeni: " + sivi.map(function (o) { return o.ime; }).join(", ") + "."]);
+      // dungeon za ovaj level
+      var dng = (D.dungeoni || []).filter(function (d) { return d.od <= lvl + 1 && lvl <= d.do; }).map(function (d) { return d.ime + " (" + d.od + "–" + d.do + ")"; });
+      if (dng.length) pr.push(["dungeon", "Za tvoj level: " + dng.join(", ") + ". Dosad ste ušli u " + statN(a, "Total 5-player dungeons entered") + "."]);
+      var faza = ((D.roadmap || {}).faze || []).filter(function (f) { return f.od <= lvl && lvl < f.do; })[0];
+      if (faza && faza.zone) pr.push(["zone", "Leveling zone do " + faza.do + ": " + faza.zone + "."]);
+      var prim = (a.profesije || []).filter(function (x) { return x.vrsta === "primarna"; });
+      if (prim.length < 2) pr.push(["profesije", "Imaš slobodno mjesto za drugu profesiju."]);
+      (a.profesije || []).forEach(function (x) {
+        var m = x.max || 75, sl = m === 75 ? [10, "Journeyman"] : m === 150 ? [20, "Expert"] : m === 225 ? [35, "Artisan"] : null;
+        if (sl && x.skill >= m - 25) pr.push(["profesije", x.name + " " + x.skill + "/" + m + ": " + (lvl >= sl[0] ? "idi treneru po " + sl[1] + "." : sl[1] + " tek na levelu " + sl[0] + ".")]);
+        if ({ Mining: 1, Herbalism: 1, Skinning: 1 }[x.name] && x.skill < lvl * 5 - 30) pr.push(["profesije", x.name + " " + x.skill + " zaostaje za levelom (cilj oko " + Math.min(300, lvl * 5) + ")."]);
+        if (x.name === "First Aid" && x.skill < Math.min(lvl * 5, 225) - 40) pr.push(["profesije", "First Aid " + x.skill + ": diži ga na oko " + Math.min(lvl * 5, 225) + ", bandage spašavaju dungeon."]);
+      });
+      var zad = p ? zadaciSad(p) : [];
+      zad.slice(0, 2).forEach(function (z) { pr.push(["zadatak", z.naziv + " (lvl " + z.od + "–" + z.do + ")."]); });
+      var q = (a.questovi || {}).uLogu || [];
+      if (q.length >= 25) pr.push(["questovi", q.length + " questova u logu: obriši sive i one iz zona u koje se ne vraćaš."]);
       var tr = ((p && p.trikovi) || []).filter(function (x) { return x.od <= lvl && lvl <= x.do; });
-      if (!t.length && !tr.length) return "";
-      var IME = { hitno: "Odmah", oprema: "Oprema", prof: "Profesije", quest: "Questovi", info: "Info", tal: "Talenti" };
-      return '<div class="arm-sad"><h4 class="lab mono">Što sad · lvl ' + lvl + "</h4>" +
-        (t.length ? '<ul class="sad-l">' + t.map(function (x) { return '<li class="' + x[0] + '"><em class="mono">' + IME[x[0]] + "</em><span>" + esc(x[1]) + "</span></li>"; }).join("") + "</ul>" : "") +
-        (tr.length ? '<h4 class="lab mono arm-h4">Tips &amp; tricks</h4><ul class="dng-l">' + tr.map(function (x) { return "<li>" + esc(x.tekst) + "</li>"; }).join("") + "</ul>" : "") + "</div>";
+      function li(arr) { return arr.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join(""); }
+      return '<div class="an"><h4 class="lab mono">Analiza i što dalje · lvl ' + lvl + "</h4>" +
+        '<dl class="an-rang">' + rang.map(function (r) { return '<div class="' + (r[2] === 1 ? "an-1" : "") + '"><dt class="mono">' + r[0] + "</dt><dd>" + r[1] + '<small class="mono">' + r[2] + ". od " + tim.length + "</small></dd></div>"; }).join("") + "</dl>" +
+        '<div class="an-sw">' + (jako.length ? '<div><p class="an-t mono">Jako</p><ul class="dng-l">' + li(jako) + "</ul></div>" : "") +
+          (slabo.length ? '<div><p class="an-t mono">Za popraviti</p><ul class="dng-l dng-x">' + li(slabo) + "</ul></div>" : "") + "</div>" +
+        (pr.length ? '<p class="an-t mono">Prijedlozi redom</p><ol class="an-pr">' + pr.map(function (x) { return '<li class="an-' + x[0] + '"><em class="mono">' + esc(x[0]) + "</em><span>" + esc(x[1]) + "</span></li>"; }).join("") + "</ol>" : "") +
+        (tr.length ? '<p class="an-t mono">Tips &amp; tricks</p><ul class="dng-l">' + li(tr.map(function (x) { return x.tekst; })) + "</ul>" : "") + "</div>";
     }
     // "U igri sad": sve što Blizzard API zna o liku (skripte/armory.py → data/likovi.json)
     function armoryHtml(a) {
@@ -3617,7 +3682,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
           (brojke.length ? '<h4 class="lab mono arm-h4">Brojke</h4><dl class="arm-st arm-br">' + brojke.map(function (x) { return "<div><dt class=\"mono\">" + esc(x[0]) + "</dt><dd>" + esc(String(x[1])) + "</dd></div>"; }).join("") + "</dl>" +
             (naj || kont ? '<p class="arm-sit mono">' + [naj && naj.opis ? "najviše ubija: " + esc(naj.opis) + " (" + naj.n + ")" : "", kont && kont.opis ? "najviše na " + esc(kont.opis) : ""].filter(Boolean).join(" · ") + "</p>" : "") : "") +
           "</div></div>" +
-        sadHtml(a) +
+        analizaHtml(a) +
         '<div class="arm-kol">' +
           (prof ? '<div><h4 class="lab mono">Profesije u igri</h4><ul class="arm-bar">' + prof + "</ul></div>" : "") +
           (tal ? '<div><h4 class="lab mono">Uzeti talenti</h4><div class="arm-tals">' + tal + "</div></div>" : "") +
