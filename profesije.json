@@ -33,12 +33,12 @@
       "professions": [
         {
           "name": "Mining",
-          "skill": 61,
+          "skill": 64,
           "phase": "stalno"
         },
         {
           "name": "Blacksmithing",
-          "skill": 5,
+          "skill": 15,
           "phase": "stalno"
         }
       ],
@@ -49,7 +49,7 @@
         },
         {
           "name": "First Aid",
-          "skill": 1
+          "skill": 4
         }
       ]
     },
@@ -62,13 +62,13 @@
       "role": "grupa",
       "professions": [
         {
-          "name": "Skinning",
-          "skill": 59,
+          "name": "Leatherworking",
+          "skill": 75,
           "phase": "stalno"
         },
         {
-          "name": "Mining",
-          "skill": 24,
+          "name": "Skinning",
+          "skill": 75,
           "phase": "stalno"
         }
       ],
@@ -132,7 +132,7 @@
         },
         {
           "name": "Skinning",
-          "skill": 115,
+          "skill": 116,
           "phase": "stalno"
         }
       ],
@@ -161,12 +161,12 @@
       "professions": [
         {
           "name": "Mining",
-          "skill": 14,
+          "skill": 21,
           "phase": "stalno"
         },
         {
           "name": "Herbalism",
-          "skill": 11,
+          "skill": 34,
           "phase": "stalno"
         }
       ],
@@ -181,7 +181,7 @@
         },
         {
           "name": "First Aid",
-          "skill": 11
+          "skill": 15
         }
       ]
     }
@@ -330,6 +330,60 @@
       "character": "warrior",
       "profession": "Blacksmithing",
       "skill": 5
+    },
+    {
+      "date": "2026-11-06",
+      "character": "warrior",
+      "profession": "Mining",
+      "skill": 64
+    },
+    {
+      "date": "2026-11-06",
+      "character": "warrior",
+      "profession": "Blacksmithing",
+      "skill": 15
+    },
+    {
+      "date": "2026-11-06",
+      "character": "warrior",
+      "profession": "First Aid",
+      "skill": 4
+    },
+    {
+      "date": "2026-11-06",
+      "character": "shaman",
+      "profession": "Leatherworking",
+      "skill": 75
+    },
+    {
+      "date": "2026-11-06",
+      "character": "shaman",
+      "profession": "Skinning",
+      "skill": 75
+    },
+    {
+      "date": "2026-11-06",
+      "character": "rogue",
+      "profession": "Skinning",
+      "skill": 116
+    },
+    {
+      "date": "2026-11-06",
+      "character": "paladin",
+      "profession": "Mining",
+      "skill": 21
+    },
+    {
+      "date": "2026-11-06",
+      "character": "paladin",
+      "profession": "Herbalism",
+      "skill": 34
+    },
+    {
+      "date": "2026-11-06",
+      "character": "paladin",
+      "profession": "First Aid",
+      "skill": 15
     }
   ],
   "flows": [

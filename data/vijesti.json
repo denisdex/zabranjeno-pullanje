@@ -9,8 +9,26 @@
    "url": "https://www.wowhead.com/news/rss/classic"
   }
  ],
- "azurirano": "2026-11-06T07:57:07Z",
+ "azurirano": "2026-11-06T19:28:45Z",
  "stavke": [
+  {
+   "datum": "2026-11-06T18:31:23Z",
+   "naslov": "The Adventure Begins in WoW: Forever, Stay Connected with Discord, and Taldramir Takes Shape in WoW Weekly",
+   "link": "https://www.wowhead.com/news=383784/the-adventure-begins-in-wow-forever-stay-connected-with-discord-and-taldramir",
+   "izvor": "Wowhead",
+   "sazetak": "Blizzard has released a new issue of their WoW Weekly blog post, recapping the Forever launch, Discord integration, and the reveal of a new Forever Legendary weapon. Continue reading »",
+   "oznake": [],
+   "vrsta": "vijest"
+  },
+  {
+   "datum": "2026-11-06T18:10:08Z",
+   "naslov": "The Adventure Begins in WoW: Forever, Stay Connected with Discord, and Taldramir Takes Shape in WoW…",
+   "link": "https://us.forums.blizzard.com/en/wow/t/the-adventure-begins-in-wow-forever-stay-connected-with-discord-and-taldramir-takes-shape-in-wow%E2%80%A6/2403854/1",
+   "izvor": "Blizzard",
+   "sazetak": "Azeroth has a new home, and the adventure is just getting started! This week in WoW Weekly, discover that World of Warcraft: Forever is now live, join ongoing conversations on Discord in and out of the game, explore another way to play…",
+   "oznake": [],
+   "vrsta": "vijest"
+  },
   {
    "datum": "2026-11-06T02:34:10Z",
    "naslov": "WoW: Forever Hotfixes - November 5, 2026",
@@ -252,17 +270,6 @@
    "vrsta": "vijest"
   },
   {
-   "datum": "2026-10-22T01:46:44Z",
-   "naslov": "Forever Beta Will Return Shortly",
-   "link": "https://us.forums.blizzard.com/en/wow/t/forever-beta-will-return-shortly/2389150/1",
-   "izvor": "Blizzard",
-   "sazetak": "Good evening folks, We hit a small snag while turning the WoW Forever Beta back online. We’re working right now to get it back. In the meantime, you can speed this up by fully exiting the Battle.net Desktop App to force the update to…",
-   "oznake": [
-    "Beta"
-   ],
-   "vrsta": "vijest"
-  },
-  {
    "datum": "2026-10-16T17:03:18Z",
    "naslov": "Midnight 12.1.5 Live, Patch 12.1.7 & WoW: Forever - WoW Weekly Recap",
    "link": "https://www.wowhead.com/news=383465/midnight-12-1-5-live-patch-12-1-7-and-wow-forever-wow-weekly-recap",
@@ -409,15 +416,6 @@
    "oznake": [
     "Intervju"
    ],
-   "vrsta": "vijest"
-  },
-  {
-   "datum": "2026-09-16T17:29:40Z",
-   "naslov": "WoW: Forever Will Have Addon Changes from Midnight",
-   "link": "https://www.wowhead.com/news=382921/wow-forever-will-have-addon-changes-from-midnight",
-   "izvor": "Wowhead",
-   "sazetak": "Blizzard has announced through the WoW UI Discord that the Midnight addon disarmament changes will be active in WoW: Forever. Continue reading »",
-   "oznake": [],
    "vrsta": "vijest"
   }
  ]
