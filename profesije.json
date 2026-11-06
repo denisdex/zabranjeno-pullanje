@@ -33,7 +33,12 @@
       "professions": [
         {
           "name": "Mining",
-          "skill": 59,
+          "skill": 61,
+          "phase": "stalno"
+        },
+        {
+          "name": "Blacksmithing",
+          "skill": 5,
           "phase": "stalno"
         }
       ],
@@ -313,6 +318,18 @@
       "character": "paladin",
       "profession": "First Aid",
       "skill": 11
+    },
+    {
+      "date": "2026-11-06",
+      "character": "warrior",
+      "profession": "Mining",
+      "skill": 61
+    },
+    {
+      "date": "2026-11-06",
+      "character": "warrior",
+      "profession": "Blacksmithing",
+      "skill": 5
     }
   ],
   "flows": [

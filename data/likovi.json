@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-06T10:01:15Z",
+ "azurirano": "2026-11-06T14:29:06Z",
  "likovi": {
   "Saman Saulic": {
    "level": 15,
@@ -445,11 +445,11 @@
    "azurirano": "2026-11-06T10:00:43Z"
   },
   "Melee Kitic": {
-   "level": 16,
-   "xp": 1009,
+   "level": 17,
+   "xp": 2241,
    "guild": "Kafana na Balkanu",
-   "ilvl": 7,
-   "zadnjiLogin": "2026-11-06T00:55:37Z",
+   "ilvl": 9,
+   "zadnjiLogin": "2026-11-06T13:56:52Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -483,44 +483,43 @@
     },
     {
      "slot": "Waist",
-     "ime": "Cinched Belt",
+     "ime": "Runed Copper Belt",
      "kvaliteta": "uncommon",
-     "wowhead": 5328,
+     "wowhead": 2857,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132492.jpg",
-     "ilvl": 15
+     "ilvl": 18
     },
     {
      "slot": "Legs",
-     "ime": "Raptorscale Pants",
+     "ime": "Gargoyle Leggings",
      "kvaliteta": "uncommon",
-     "wowhead": 281267,
+     "wowhead": 15451,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/134583.jpg",
-     "ilvl": 8,
-     "enchant": "Enchanted: Stamina +1 and Armor +8"
+     "ilvl": 18
     },
     {
      "slot": "Feet",
-     "ime": "Lightweight Boots",
-     "kvaliteta": "common",
-     "wowhead": 4946,
+     "ime": "Copper Chain Boots",
+     "kvaliteta": "uncommon",
+     "wowhead": 3469,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132535.jpg",
      "ilvl": 10
     },
     {
      "slot": "Wrist",
-     "ime": "Garrison Cuffs",
+     "ime": "Runed Copper Bracers",
      "kvaliteta": "uncommon",
-     "wowhead": 270003,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132612.jpg",
-     "ilvl": 18
+     "wowhead": 2854,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132602.jpg",
+     "ilvl": 19
     },
     {
      "slot": "Hands",
-     "ime": "Worn Mail Gloves",
-     "kvaliteta": "poor",
-     "wowhead": 1734,
+     "ime": "Runed Copper Gauntlets",
+     "kvaliteta": "uncommon",
+     "wowhead": 3472,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132938.jpg",
-     "ilvl": 11
+     "ilvl": 12
     },
     {
      "slot": "Finger 1",
@@ -550,8 +549,14 @@
    "profesije": [
     {
      "name": "Mining",
-     "skill": 59,
+     "skill": 61,
      "max": 150,
+     "vrsta": "primarna"
+    },
+    {
+     "name": "Blacksmithing",
+     "skill": 5,
+     "max": 75,
      "vrsta": "primarna"
     },
     {
@@ -568,48 +573,54 @@
     }
    ],
    "statovi": {
-    "hp": 471,
+    "hp": 524,
     "resurs": 100,
     "resursIme": "Rage",
-    "str": 48,
+    "str": 56,
     "agi": 30,
-    "sta": 50,
+    "sta": 55,
     "int": 19,
-    "spi": 36,
-    "armor": 585,
-    "ap": 124,
-    "spellPower": 1,
-    "crit": 7.06,
+    "spi": 37,
+    "armor": 664,
+    "ap": 143,
+    "spellPower": 0,
+    "crit": 9.17,
     "spellCrit": 0.0,
-    "rangedCrit": 1.39,
-    "dodge": 4.19,
-    "parry": 4.64,
-    "block": 4.64,
-    "dps": 24.9
+    "rangedCrit": 1.05,
+    "dodge": 4.17,
+    "parry": 4.76,
+    "block": 4.76,
+    "dps": 26.3
    },
    "reputacije": [
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 576,
+     "vrijednost": 982,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Friendly",
-     "vrijednost": 4726,
+     "vrijednost": 5057,
      "max": 6000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Friendly",
-     "vrijednost": 650,
+     "vrijednost": 881,
      "max": 6000
     },
     {
      "ime": "Ratchet",
      "status": "Neutral",
-     "vrijednost": 2165,
+     "vrijednost": 2265,
+     "max": 3000
+    },
+    {
+     "ime": "Undercity",
+     "status": "Neutral",
+     "vrijednost": 1656,
      "max": 3000
     },
     {
@@ -629,12 +640,6 @@
      "status": "Neutral",
      "vrijednost": 1182,
      "max": 3000
-    },
-    {
-     "ime": "Powderfuse",
-     "status": "Neutral",
-     "vrijednost": 1182,
-     "max": 3000
     }
    ],
    "statistika": [
@@ -642,6 +647,17 @@
      "kat": "Character",
      "ime": "Times camped",
      "n": 1
+    },
+    {
+     "kat": "Consumables",
+     "ime": "Bandages used",
+     "n": 3
+    },
+    {
+     "kat": "Consumables",
+     "ime": "Bandage used most",
+     "n": 3,
+     "opis": "Linen Bandage"
     },
     {
      "kat": "Consumables",
@@ -671,7 +687,7 @@
     {
      "kat": "Gear",
      "ime": "Greed rolls made on loot",
-     "n": 1
+     "n": 4
     },
     {
      "kat": "Gear",
@@ -691,48 +707,48 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 974
+     "n": 1081
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 961
+     "n": 1063
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 971
+     "n": 1077
     },
     {
      "kat": "Creatures",
      "ime": "Different creature types killed",
-     "n": 4
+     "n": 5
     },
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 541,
+     "n": 582,
      "opis": "Humanoid"
     },
     {
      "kat": "Creatures",
      "ime": "Critters killed",
-     "n": 3
+     "n": 4
     },
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 423
+     "n": 500
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 392
+     "n": 469
     },
     {
      "kat": "Killing Blows",
      "ime": "Continent with the most Killing Blows",
-     "n": 392,
+     "n": 412,
      "opis": "Kalimdor"
     },
     {
@@ -753,7 +769,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 83
+     "n": 96
     },
     {
      "kat": "Quests",
@@ -768,12 +784,12 @@
     {
      "kat": "Skills",
      "ime": "Professions learned",
-     "n": 1
+     "n": 2
     },
     {
      "kat": "Skills",
      "ime": "Professions at maximum skill",
-     "n": 1
+     "n": 2
     },
     {
      "kat": "Skills",
@@ -807,8 +823,18 @@
     },
     {
      "kat": "Professions",
+     "ime": "Highest Blacksmithing skill",
+     "n": 1
+    },
+    {
+     "kat": "Professions",
+     "ime": "Blacksmithing Plans learned",
+     "n": 12
+    },
+    {
+     "kat": "Professions",
      "ime": "Highest Mining skill",
-     "n": 59
+     "n": 60
     },
     {
      "kat": "Professions",
@@ -818,12 +844,12 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 8
+     "n": 9
     },
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
-     "n": 3
+     "n": 4
     },
     {
      "kat": "Social",
@@ -833,29 +859,36 @@
    ],
    "questovi": {
     "uLogu": [
-     "Centaur Bracers",
-     "The Demon Seed",
-     "Miner's Fortune",
-     "The Power to Destroy...",
+     "Arugal's Folly",
+     "The Engraved Ring",
+     "A Recipe For Death",
      "Threat from Below",
-     "Lost in Battle",
-     "Trouble at the Docks",
-     "Kolkar Leaders",
-     "Harpy Raiders",
-     "Tribes at War",
-     "Nugget Slugs",
-     "The Stagnant Oasis",
+     "Rot Hide Ichor",
      "Stolen Booty",
+     "The Demon Seed",
+     "The Zhevra",
+     "Raptor Horns",
+     "Miner's Fortune",
+     "Verog the Dervish",
      "Consumed by Hatred",
      "The Guns of Northwatch",
-     "Stormy Potential",
+     "The Stagnant Oasis",
+     "Trouble at the Docks",
+     "Harpy Raiders",
+     "Tribes at War",
+     "Centaur Bracers",
+     "Beren's Peril",
+     "Goblin Invaders",
      "Raptor Thieves",
-     "Fungal Spores",
-     "The Zhevra",
-     "The Spirits of Stonetalon",
-     "Raptor Horns"
+     "Light's Justice",
+     "Avenge My Village",
+     "Lost in Battle",
+     "Nugget Slugs",
+     "Border Crossings",
+     "A Frightened Request",
+     "Return to Quinn (Again)"
     ],
-    "zavrseno": 108
+    "zavrseno": 121
    },
    "mountovi": [],
    "petovi": [],
@@ -865,7 +898,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg",
-   "azurirano": "2026-11-06T10:00:43Z"
+   "azurirano": "2026-11-06T14:29:06Z"
   },
   "Janica Frostelich": {
    "level": 15,
@@ -2290,10 +2323,10 @@
    "azurirano": "2026-11-06T10:00:43Z"
   }
  },
- "provjereno": "2026-11-06T10:13:11Z",
+ "provjereno": "2026-11-06T14:29:06Z",
  "guild": {
   "ime": "Kafana na Balkanu",
-  "clanova": 7,
+  "clanova": 6,
   "osnovan": "2026-11-05T20:24:04Z",
   "ruleset": "Normal",
   "roster": [
@@ -2320,6 +2353,17 @@
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg"
    },
    {
+    "ime": "Melee Kitic",
+    "level": 17,
+    "klasa": "Warrior",
+    "rasa": "Orc",
+    "rang": 3,
+    "slug": "melee-kitic",
+    "ilvl": 9,
+    "zadnjiLogin": "2026-11-06T13:56:52Z",
+    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg"
+   },
+   {
     "ime": "Arsen Deadic",
     "level": 16,
     "klasa": "Paladin",
@@ -2329,28 +2373,6 @@
     "ilvl": 7,
     "zadnjiLogin": "2026-11-06T01:15:08Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg"
-   },
-   {
-    "ime": "Melee Kitic",
-    "level": 16,
-    "klasa": "Warrior",
-    "rasa": "Orc",
-    "rang": 3,
-    "slug": "melee-kitic",
-    "ilvl": 7,
-    "zadnjiLogin": "2026-11-06T00:55:37Z",
-    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg"
-   },
-   {
-    "ime": "Lock Mile",
-    "level": 20,
-    "klasa": "Warlock",
-    "rasa": "Orc",
-    "rang": 4,
-    "slug": "lock-mile",
-    "ilvl": 9,
-    "zadnjiLogin": "2026-11-06T00:25:49Z",
-    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/17/2526225-avatar.jpg"
    },
    {
     "ime": "Janica Frostelich",
