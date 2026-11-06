@@ -40,19 +40,7 @@ window.HORDE = {
     ]
   },
 
-  // wallOfShame: sekcija iznad Kina; upisuje se samo ono što se stvarno dogodilo
-  //   brojaci: po igraču koliko je krivih pullova, smrti i wipeova skrivio
-  //   unosi: { datum: "GGGG-MM-DD", tko: "Pero" (ili "Pero, Žuga"), sto: "što se dogodilo", slika: "assets/sramota/x.jpg" (neobavezno) }
-  wallOfShame: {
-    brojaci: {
-      Niksa:   { pullovi: 0, smrti: 0, wipeovi: 0 },
-      Pero:    { pullovi: 0, smrti: 0, wipeovi: 0 },
-      Karken: { pullovi: 0, smrti: 0, wipeovi: 0 },
-      "Žuga":  { pullovi: 0, smrti: 0, wipeovi: 0 },
-      Dex:     { pullovi: 0, smrti: 0, wipeovi: 0 }
-    },
-    unosi: []
-  },
+  // Wall of Shame (smrti, smrti u dungeonu, need rollovi) i gold: gold API ne daje pa ga nema; smrti dolaze iz igre (data/likovi.json)
 
   // kino: videi u sekciji Kino na dnu stranice, redom kako stoje; novi mini video = novi red
   // { id (jedinstven), naslov, opis (jedna rečenica), trajanje ("m:ss"), poster (16:9, assets/kino/), url }
@@ -88,7 +76,6 @@ window.HORDE = {
   igraci: [
     { igrac: "Niksa",   lik: "Saman Saulic",    klasa: "Shaman",  rasa: "Orc",    uloga: "Healer",     level: 15, foto: "assets/likovi/saman-saulic.jpg",
       siroka: "assets/likovi/saman-saulic-wide.jpg", fokus: [50.3, 18],
-      gold: 0,
       // savjeti po levelu, u profilu u bloku "Što sad"
       trikovi: [
         { od: 10, do: 30, tekst: "Lightning Shield prije pulla, Earth Shock prekida castere (geomancere, shamane)." },
@@ -122,7 +109,6 @@ window.HORDE = {
       } },
     { igrac: "Pero",    lik: "Melee Kitic",      klasa: "Warrior", rasa: "Orc",    uloga: "Melee DPS",  level: 16, foto: "assets/likovi/melee-kitic.jpg", boja: "#D9853B",
       siroka: "assets/likovi/melee-kitic-wide.jpg", fokus: [50.3, 28.8],
-      gold: 0,
       // savjeti po levelu, u profilu u bloku "Što sad"
       trikovi: [
         { od: 10, do: 30, tekst: "Charge, Rend, pa Heroic Strike samo kad imaš viška Ragea." },
@@ -137,7 +123,7 @@ window.HORDE = {
         { naziv: "Copper i Tin barovi na AH dok nitko nema Engineering ni Blacksmithing", od: 20, do: 40, gotovo: false },
         { naziv: "Berserker Stance quest na 30", od: 30, do: 32, gotovo: false },
         { naziv: "Hand of Justice i Savage Gladiator Chain iz BRD-a", od: 50, do: 60, gotovo: false },
-        { naziv: "Arcanite Reaper: Thorium Niksinom druidu za transmute", od: 58, do: 60, gotovo: false }
+        { naziv: "Arcanite Reaper: Arcanite bar s Alchemy transmutea (Karken) ili s AH-a", od: 58, do: 60, gotovo: false }
       ],
       profil: {
         specka: "Arms 2H", talenti: [31, 20, 0], plan: true,
@@ -157,7 +143,6 @@ window.HORDE = {
       } },
     { igrac: "Karken", lik: "Janica Frostelich", klasa: "Mage",    rasa: "Troll",  uloga: "Ranged DPS", level: 15, foto: "assets/likovi/janica-frostelic.jpg", boja: "#55D98B",
       siroka: "assets/likovi/janica-frostelic-wide.jpg", fokus: [50, 18.4],
-      gold: 0,
       // savjeti po levelu, u profilu u bloku "Što sad"
       trikovi: [
         { od: 10, do: 30, tekst: "Frost Nova, korak natrag, Frostbolt: kiting štedi život i manu." },
@@ -172,7 +157,7 @@ window.HORDE = {
         { naziv: "Teleport: Orgrimmar na 20", od: 20, do: 22, gotovo: false },
         { naziv: "Conjure Water i hrana za ekipu prije svakog dungeona", od: 20, do: 60, gotovo: false },
         { naziv: "Portali na 40: Orgrimmar i Undercity za ekipu", od: 40, do: 42, gotovo: false },
-        { naziv: "Robe of the Archmage od Niksinog alta (Tailoring) i Magister's set (Dungeon Set 1)", od: 50, do: 60, gotovo: false }
+        { naziv: "Robe of the Archmage (Tailoring, AH) i Magister's set (Dungeon Set 1)", od: 50, do: 60, gotovo: false }
       ],
       profil: {
         specka: "Frost", talenti: [17, 0, 34], plan: true,
@@ -189,7 +174,6 @@ window.HORDE = {
       } },
     { igrac: "Žuga",    lik: "Nikola Roguevic",  klasa: "Rogue",   rasa: "Undead", uloga: "Melee DPS",  level: 16, foto: "assets/likovi/nikola-roguevic.jpg", oci: [[48.7, 14.2], [54.2, 14.1]],
       siroka: "assets/likovi/nikola-roguevic-wide.jpg", fokus: [48.8, 16.6], ociSiroka: [[47.7, 14.2], [50.0, 14.1]],
-      gold: 0,
       // savjeti po levelu, u profilu u bloku "Što sad"
       trikovi: [
         { od: 10, do: 30, tekst: "Sinister Strike do 4–5 combo pointa, pa Slice and Dice na dužim borbama, Eviscerate na kraju." },
@@ -222,7 +206,6 @@ window.HORDE = {
       } },
     { igrac: "Dex",     lik: "Arsen Deadic",     klasa: "Paladin", rasa: "Undead", uloga: "Tank",       level: 16, foto: "assets/likovi/arsen-deadic.jpg", oci: [[57.4, 18.5], [61.4, 19.0]],
       siroka: "assets/likovi/arsen-deadic-wide.jpg", fokus: [54.2, 20.1], ociSiroka: [[54.4, 18.6], [56.1, 19.0]],
-      gold: 0,
       // savjeti po levelu, u profilu u bloku "Što sad"
       trikovi: [
         { od: 10, do: 30, tekst: "Seal, Judgement, pa odmah novi seal: Judgement troši seal." },
@@ -727,11 +710,7 @@ window.HORDE = {
       { tko: "Žuga", kome: "Svi", sto: "Armor kitovi; Devilsaur set za Pera i sebe", kad: "od 10" },
       { tko: "Dex", kome: "Karken", sto: "Bilje za Alchemy", kad: "stalno" },
       { tko: "Karken", kome: "Svi", sto: "Healing i Mana potioni", kad: "stalno" },
-      { tko: "Pero, Niksa, Dex", kome: "AH ili spremi", sto: "Ruda i barovi (nitko još nema Engineering ni Blacksmithing)", kad: "stalno" },
-      { tko: "Svi", kome: "Niksin mage alt", sto: "Cloth i greenovi za Tailoring i Enchanting", kad: "stalno" },
-      { tko: "Pero, Niksa, Dex", kome: "Niksin druid", sto: "Thorium za Arcanite transmute", kad: "na 60" },
-      { tko: "Niksin druid", kome: "Svi", sto: "Flaskovi i transmute", kad: "stalno" },
-      { tko: "Niksin mage alt", kome: "Svi i AH", sto: "Torbe, enchanti, dust", kad: "stalno" }
+      { tko: "Pero, Niksa, Dex", kome: "AH ili spremi", sto: "Ruda i barovi (nitko još nema Engineering ni Blacksmithing)", kad: "stalno" }
     ],
     ciljevi: [
       { naziv: "Prvi mount", level: 40, gold: 120, napomena: "100 g trening + 20 g mount, 60% brže. Honored s Hordom: 10% manje." },

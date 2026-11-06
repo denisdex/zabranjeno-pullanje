@@ -1,5 +1,5 @@
 {
-  "_upute": "Profesije i skill likova iz rostera (Saman, Melee, Janica, Nikola, Arsen) pune se same iz igre (skripte/armory.py, Blizzard API, svaka 3 sata); ručno ih ne mijenjati. Ručno se vode samo alti (druid, mage alt): novi skill = promijeni 'skill' i dodaj red u 'history' (YYYY-MM-DD). phase: do40, stalno, nakon40. role: grupa, solo, alt.",
+  "_upute": "Profesije i skill likova pune se sami iz igre (skripte/armory.py, Blizzard API, svaka 3 sata); ručno se ništa ne upisuje. Novi lik u ekipi = dodaj ga u data.js (igraci), skripta ga onda povuče. flows: tko što skuplja i za koju profesiju.",
   "accounts": [
     {
       "id": "pero",
@@ -79,69 +79,6 @@
         {
           "name": "First Aid",
           "skill": 20
-        }
-      ]
-    },
-    {
-      "id": "druid",
-      "name": "",
-      "account": "niksa",
-      "class": "Druid",
-      "race": "Tauren",
-      "role": "solo",
-      "level": 0,
-      "professions": [
-        {
-          "name": "Herbalism",
-          "skill": 0,
-          "phase": "stalno"
-        },
-        {
-          "name": "Alchemy",
-          "skill": 0,
-          "phase": "stalno"
-        }
-      ],
-      "secondary": [
-        {
-          "name": "First Aid",
-          "skill": 0
-        },
-        {
-          "name": "Cooking",
-          "skill": 0
-        }
-      ]
-    },
-    {
-      "id": "magealt",
-      "name": "",
-      "account": "niksa",
-      "class": "Mage",
-      "race": "Orc",
-      "role": "alt",
-      "level": 0,
-      "napomena": "Ostaje na levelu 10–20 u Orgrimmaru",
-      "professions": [
-        {
-          "name": "Enchanting",
-          "skill": 0,
-          "phase": "stalno"
-        },
-        {
-          "name": "Tailoring",
-          "skill": 0,
-          "phase": "stalno"
-        }
-      ],
-      "secondary": [
-        {
-          "name": "First Aid",
-          "skill": 0
-        },
-        {
-          "name": "Cooking",
-          "skill": 0
         }
       ]
     },
@@ -393,12 +330,10 @@
     {
       "item": "Ruda",
       "from": "Mining",
-      "to": "Engineering",
-      "kome": "grupa",
+      "to": "AH",
+      "kome": "AH ili spremi",
       "proizvodi": [
-        "Bombe i dinamit za dungeone",
-        "Goggles i Target Dummy",
-        "Thorium za Arcanite na 60"
+        "Barovi na AH dok nitko nema Engineering ni Blacksmithing"
       ]
     },
     {
@@ -408,28 +343,7 @@
       "kome": "grupa i AH",
       "proizvodi": [
         "Healing i Mana potioni",
-        "Elixiri za dungeone",
-        "Flasks i Arcanite transmute na 60"
-      ]
-    },
-    {
-      "item": "Cloth",
-      "from": "drop",
-      "to": "Tailoring",
-      "kome": "grupa i AH",
-      "proizvodi": [
-        "Torbe za cijelu ekipu",
-        "Višak torbi na AH"
-      ]
-    },
-    {
-      "item": "Greenovi",
-      "from": "drop",
-      "to": "Enchanting",
-      "kome": "grupa i AH",
-      "proizvodi": [
-        "Enchanti za oružje i opremu ekipe",
-        "Dust i essence na AH"
+        "Elixiri za dungeone"
       ]
     }
   ]

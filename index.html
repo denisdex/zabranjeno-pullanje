@@ -2571,24 +2571,6 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
         <div class="hs-ctl"><div class="str"><button class="hs-b prev" type="button" aria-label="Prethodno"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button><button class="hs-b next" type="button" aria-label="Sljedeće"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div><span class="mono" style="color:var(--dust)">Svi likovi, i alt i solo</span></div></div>
       <h3 class="pr-h mono">Napredak kroz vrijeme</h3>
       <div id="prGraf"></div>
-      <details class="pr-unos">
-        <summary class="mono">Kako upisati novi skill</summary>
-        <div class="pr-unos-in">
-          <ol class="mono">
-            <li>Otvori <b>profesije.json</b> u repou na GitHubu i klikni olovku.</li>
-            <li>Kod lika promijeni <b>skill</b> profesije, a u <b>history</b> dodaj red koji složi forma ispod.</li>
-            <li>Commit. Kad je deploy uključen, web se sam osvježi.</li>
-          </ol>
-          <form id="unForma" class="un">
-            <label for="unLik" class="mono">Lik</label><select id="unLik"></select>
-            <label for="unProf" class="mono">Profesija</label><select id="unProf"></select>
-            <label for="unSkill" class="mono">Skill</label><input id="unSkill" type="number" min="0" max="300" inputmode="numeric" value="0">
-            <label for="unDat" class="mono">Datum</label><input id="unDat" type="date">
-            <button class="vidi" type="submit">Složi red</button>
-          </form>
-          <div id="unIzlazBox" class="un-iz" hidden><code id="unIzlaz"></code><button type="button" class="hs-b" id="unKopiraj" style="width:auto;padding:0 14px">Kopiraj</button></div>
-        </div>
-      </details>
     </div>
   </section>
 
@@ -3260,30 +3242,6 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
         }).join("") + "</ul>";
     }
 
-    // unos: forma složi red za profesije.json
-    var sel = $("unLik"), selP = $("unProf");
-    sel.innerHTML = L.map(function (l) { return '<option value="' + esc(l.id) + '">' + esc(l.vlasnik + " · " + imeLika(l)) + "</option>"; }).join("");
-    function profOpcije() {
-      var l = L.filter(function (z) { return z.id === sel.value; })[0];
-      selP.innerHTML = l ? l.primarne.concat(l.sekundarne).map(function (x) { return '<option lang="en">' + esc(x.ime) + "</option>"; }).join("") : "";
-    }
-    sel.onchange = profOpcije; profOpcije();
-    var dd = new Date(); $("unDat").value = dd.getFullYear() + "-" + String(dd.getMonth() + 1).padStart(2, "0") + "-" + String(dd.getDate()).padStart(2, "0");
-    $("unForma").onsubmit = function (e) {
-      e.preventDefault();
-      var sk = Math.max(0, Math.min(PRAGOVI.max, parseInt($("unSkill").value, 10) || 0));
-      var red = '{ "date": "' + $("unDat").value + '", "character": "' + sel.value + '", "profession": "' + selP.value + '", "skill": ' + sk + " }";
-      $("unIzlaz").textContent = red;
-      $("unIzlazBox").hidden = false;
-    };
-    $("unKopiraj").onclick = function () {
-      var t = $("unIzlaz").textContent, b = this;
-      function ok() { b.textContent = "Kopirano"; setTimeout(function () { b.textContent = "Kopiraj"; }, 1600); }
-      try {
-        navigator.clipboard.writeText(t).then(ok, function () { oznaci(); });
-      } catch (err) { oznaci(); }
-      function oznaci() { var r = document.createRange(); r.selectNodeContents($("unIzlaz")); var s2 = getSelection(); s2.removeAllRanges(); s2.addRange(r); }
-    };
   }
 
   // manufaktura u Ekonomiji: tokovi iz profesije.json, tko skuplja i tko izrađuje se izračuna iz likova
@@ -3342,9 +3300,6 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     "</div>";
   }
   function lvlOf(p) { return Math.max(0, Math.min(60, +p.level || 0)); }
-  function goldHtml(p) {
-    return '<div class="p-gold"><span class="mono">Gold</span><b>' + Math.max(0, +p.gold || 0) + " g</b></div>";
-  }
   // zadaci za trenutni level lika; ako nema ničeg otvorenog sad, sljedeća dva
   function zadaciSad(p) {
     var L = Math.max(1, lvlOf(p)), z = p.zadaci || [];
@@ -3372,7 +3327,6 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
         (p.armory ? '<p class="p-ig-l mono">' + [p.armory.specka ? esc(p.armory.specka) + " " + (p.armory.talenti || []).join("/") : "", p.armory.ilvl ? "ilvl " + p.armory.ilvl : "", p.armory.zadnjiLogin ? "u igri " + prije(p.armory.zadnjiLogin) : ""].filter(Boolean).join(" · ") + "</p>" : "") +
         '<div class="p-lvl"><div class="lvl-head"><span class="mono">Level</span><span class="n">' + lvl + '<small>/60</small></span></div>' + gaugeHtml(p) + svjezina(p) + "</div>" +
         '<div class="p-prof" data-prof-lik="' + slug(p.lik) + '"><span class="lab mono">Profesije</span>' + profHtml(p) + "</div>" +
-        goldHtml(p) +
         '<a class="p-more mono" href="#lik/' + slug(p.lik) + '">Otvori profil</a>' +
       "</div></div></article>";
   }).join("");
@@ -3705,7 +3659,11 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       var t = pf.talenti || [0, 0, 0], st = STABLA[p.klasa] || ["", "", ""];
       var oprema = {};
       (pf.oprema || []).forEach(function (o) { oprema[o.slot] = o; });
-      var ciljevi = pf.ciljevi || [], gotovo = ciljevi.filter(function (c) { return c.gotovo; }).length;
+      // pre-raid BiS: kvačica se sama upali kad je predmet u opremi iz igre (Blizzard API)
+      var uOpremi = {};
+      ((p.armory && p.armory.oprema) || []).forEach(function (o) { if (o.wowhead) uOpremi[o.wowhead] = 1; });
+      var ciljevi = (pf.ciljevi || []).map(function (c) { var x = Object.assign({}, c); x.gotovo = !!(c.wowhead && uOpremi[c.wowhead]); return x; });
+      var gotovo = ciljevi.filter(function (c) { return c.gotovo; }).length;
       panel.style.setProperty("--c", BOJE[p.klasa]);
       body.innerHTML =
         '<div class="prof-grid"><div class="prof-art">' + portretHtml(p, idx, true) + "</div>" +
@@ -3719,7 +3677,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
           })() +
           '<dl class="prof-meta"><div><dt class="mono">Igrač</dt><dd>' + esc(p.igrac) + '</dd></div><div><dt class="mono">Rasa</dt><dd>' + esc(p.rasa) +
           '</dd></div><div><dt class="mono">Klasa</dt><dd style="color:' + BOJE[p.klasa] + '">' + esc(p.klasa) + '</dd></div><div><dt class="mono">Uloga</dt><dd>' + esc(r) + "</dd></div></dl>" +
-          '<div class="prof-row"><div class="prof-lvl"><h3 class="lab mono">Level</h3><span class="n">' + lvl + "<small>/60</small></span>" + gaugeHtml(p) + svjezina(p) + goldHtml(p) + "</div>" +
+          '<div class="prof-row"><div class="prof-lvl"><h3 class="lab mono">Level</h3><span class="n">' + lvl + "<small>/60</small></span>" + gaugeHtml(p) + svjezina(p) + "</div>" +
           '<div class="p-prof"><h3 class="lab mono">Profesije</h3>' + profHtml(p, true) + "</div></div>" +
           (sadP = p, armoryHtml(p.armory)) +
           '<div class="p-build"><h3 class="lab mono">Trenutni build</h3>' +
@@ -4461,32 +4419,23 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     Array.prototype.forEach.call(document.querySelectorAll("main section[id], main .hero"), function (s) { io.observe(s); });
   })();
 
-  /* ---------- Wall of Shame: brojači po igraču i popis sramota (data.js wallOfShame); prazno dok se nešto stvarno ne dogodi ---------- */
+  /* ---------- Wall of Shame: brojke iz igre (Blizzard API statistika), bez ručnog upisivanja ---------- */
   (function () {
-    var W = D.wallOfShame || {}, B = W.brojaci || {};
-    var U = (W.unosi || []).slice().sort(function (a, b) { return a.datum < b.datum ? 1 : -1; });
-    var MJ = ["sij", "velj", "ožu", "tra", "svi", "lip", "srp", "kol", "ruj", "lis", "stu", "pro"];
-    function zbroj(b) { return (b.pullovi || 0) + (b.smrti || 0) + (b.wipeovi || 0); }
-    // kralj sramote: samo jedan igrač s najviše, i tek kad nije sve 0
-    var max = Math.max.apply(null, igraci.map(function (p) { return zbroj(B[p.igrac] || {}); }).concat(0));
-    var vodeci = max > 0 ? igraci.filter(function (p) { return zbroj(B[p.igrac] || {}) === max; }) : [];
+    function st(p, ime) {
+      var x = ((p.armory || {}).statistika || []).filter(function (y) { return y.ime === ime; })[0];
+      return x ? +x.n || 0 : 0;
+    }
+    var MJERE = [["Smrti", "Total deaths"], ["U dungeonu", "Total deaths in 5-player dungeons"], ["Need rollovi", "Need rolls made on loot"]];
+    var smrti = igraci.map(function (p) { return st(p, "Total deaths"); });
+    var max = Math.max.apply(null, smrti.concat(0));
+    var vodeci = max > 0 ? igraci.filter(function (p, i) { return smrti[i] === max; }) : [];
     function broj(n, lab) { return "<div><dt>" + lab + "</dt><dd" + (n ? "" : ' class="nula"') + ">" + n + "</dd></div>"; }
     var ekipa = '<div class="wos-ekipa">' + igraci.map(function (p) {
-      var b = B[p.igrac] || {};
       return '<div class="wos-ig' + (vodeci.length === 1 && vodeci[0] === p ? " kralj" : "") + '" style="--c:' + BOJE[p.klasa] + '">' + avatar(p) +
-        "<b>" + esc(p.igrac) + "</b><dl>" + broj(b.pullovi || 0, "Krivi pull") + broj(b.smrti || 0, "Smrti") + broj(b.wipeovi || 0, "Wipeovi") + "</dl></div>";
+        "<b>" + esc(p.igrac) + "</b><dl>" + MJERE.map(function (m) { return broj(st(p, m[1]), m[0]); }).join("") + "</dl></div>";
     }).join("") + "</div>";
-    var lista = U.length
-      ? '<ol class="wos-lista">' + U.map(function (u) {
-          var p = POIGRACU[u.tko], d = new Date(u.datum + "T12:00:00");
-          return '<li style="--c:' + (p ? BOJE[p.klasa] : "var(--dust)") + '"><div class="dt"><b>' + d.getDate() + '</b><span class="mono">' + MJ[d.getMonth()] + "</span></div>" +
-            '<div><p class="tko">' + sAvatarima(u.tko) + "</p><p>" + esc(u.sto) + "</p></div>" +
-            (u.slika ? '<a class="wos-slika" href="' + esc(u.slika) + '" target="_blank" rel="noopener"><img src="' + esc(u.slika) + '" alt="Screenshot: ' + esc(u.sto) + '" loading="lazy"></a>' : "") + "</li>";
-        }).join("") + "</ol>"
-      : '<div class="wos-prazno"><img src="assets/logo-zp.svg" alt=""><div><b>Ploča je zasad čista.</b></div></div>';
-    $("wos").innerHTML = ekipa + lista;
-    var n = U.length;
-    $("wosMeta").textContent = n ? n + (n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20) ? " sramote" : " sramota") : "";
+    $("wos").innerHTML = ekipa;
+    $("wosMeta").textContent = vodeci.length === 1 ? "kralj smrti: " + vodeci[0].igrac + " (" + max + ")" : "";
   })();
 
   /* ---------- Kino: kartice iz data.js; video u overlayu preko cijelog ekrana, nakon kraja ili ✕ natrag na isto mjesto ---------- */
