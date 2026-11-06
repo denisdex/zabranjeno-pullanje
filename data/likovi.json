@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-06T09:51:23Z",
+ "azurirano": "2026-11-06T10:01:15Z",
  "likovi": {
   "Saman Saulic": {
    "level": 15,
@@ -205,9 +205,244 @@
      "max": 3000
     }
    ],
+   "statistika": [
+    {
+     "kat": "Character",
+     "ime": "Times camped",
+     "n": 3
+    },
+    {
+     "kat": "Consumables",
+     "ime": "Health potions consumed",
+     "n": 1
+    },
+    {
+     "kat": "Consumables",
+     "ime": "Beverages consumed",
+     "n": 27
+    },
+    {
+     "kat": "Reputation",
+     "ime": "Most Horde factions at Exalted",
+     "n": 4
+    },
+    {
+     "kat": "Reputation",
+     "ime": "Total factions encountered",
+     "n": 12
+    },
+    {
+     "kat": "Gear",
+     "ime": "Mounts owned",
+     "n": 1
+    },
+    {
+     "kat": "Gear",
+     "ime": "Greed rolls made on loot",
+     "n": 6
+    },
+    {
+     "kat": "Gear",
+     "ime": "Need rolls made on loot",
+     "n": 13
+    },
+    {
+     "kat": "Dungeons & Raids",
+     "ime": "Total 5-player dungeons entered",
+     "n": 1
+    },
+    {
+     "kat": "Boss Kills",
+     "ime": "Bazzalan kills (Ragefire Chasm)",
+     "n": 1
+    },
+    {
+     "kat": "Kills",
+     "ime": "Total kills",
+     "n": 891
+    },
+    {
+     "kat": "Kills",
+     "ime": "Total kills that grant experience or honor",
+     "n": 873
+    },
+    {
+     "kat": "Creatures",
+     "ime": "Creatures killed",
+     "n": 888
+    },
+    {
+     "kat": "Creatures",
+     "ime": "Different creature types killed",
+     "n": 4
+    },
+    {
+     "kat": "Creatures",
+     "ime": "Creature type killed the most",
+     "n": 464,
+     "opis": "Humanoid"
+    },
+    {
+     "kat": "Creatures",
+     "ime": "Critters killed",
+     "n": 3
+    },
+    {
+     "kat": "Killing Blows",
+     "ime": "Total Killing Blows",
+     "n": 197
+    },
+    {
+     "kat": "Killing Blows",
+     "ime": "World Killing Blows",
+     "n": 196
+    },
+    {
+     "kat": "Killing Blows",
+     "ime": "Continent with the most Killing Blows",
+     "n": 196,
+     "opis": "Kalimdor"
+    },
+    {
+     "kat": "Deaths",
+     "ime": "Total deaths",
+     "n": 10
+    },
+    {
+     "kat": "Dungeons and Raids",
+     "ime": "Total raid and dungeon deaths",
+     "n": 1
+    },
+    {
+     "kat": "Dungeons and Raids",
+     "ime": "Total deaths in 5-player dungeons",
+     "n": 1
+    },
+    {
+     "kat": "Quests",
+     "ime": "Quests completed",
+     "n": 85
+    },
+    {
+     "kat": "Quests",
+     "ime": "Average quests completed per day",
+     "n": 0
+    },
+    {
+     "kat": "Quests",
+     "ime": "Quests abandoned",
+     "n": 12
+    },
+    {
+     "kat": "Skills",
+     "ime": "Professions learned",
+     "n": 2
+    },
+    {
+     "kat": "Skills",
+     "ime": "Professions at maximum skill",
+     "n": 2
+    },
+    {
+     "kat": "Skills",
+     "ime": "Secondary skills at maximum skill",
+     "n": 3
+    },
+    {
+     "kat": "Skills",
+     "ime": "Weapon skills at maximum skill",
+     "n": 4
+    },
+    {
+     "kat": "Secondary Skills",
+     "ime": "Cooking skill",
+     "n": 3
+    },
+    {
+     "kat": "Secondary Skills",
+     "ime": "Cooking Recipes known",
+     "n": 10
+    },
+    {
+     "kat": "Secondary Skills",
+     "ime": "First Aid skill",
+     "n": 20
+    },
+    {
+     "kat": "Secondary Skills",
+     "ime": "First Aid Manuals learned",
+     "n": 6
+    },
+    {
+     "kat": "Secondary Skills",
+     "ime": "Fishing skill",
+     "n": 1
+    },
+    {
+     "kat": "Professions",
+     "ime": "Highest Mining skill",
+     "n": 24
+    },
+    {
+     "kat": "Professions",
+     "ime": "Smelting Recipes learned",
+     "n": 9
+    },
+    {
+     "kat": "Professions",
+     "ime": "Highest Skinning skill",
+     "n": 59
+    },
+    {
+     "kat": "Travel",
+     "ime": "Flight paths taken",
+     "n": 8
+    },
+    {
+     "kat": "Travel",
+     "ime": "Number of times hearthed",
+     "n": 3
+    }
+   ],
+   "questovi": {
+    "uLogu": [
+     "Centaur Bracers",
+     "Threat from Below",
+     "Miner's Fortune",
+     "Camping 101: Fishing",
+     "Return to the Crossroads",
+     "Kolkar Leaders",
+     "Harpy Raiders",
+     "Preparation for Ceremony",
+     "Call of Fire",
+     "Nugget Slugs",
+     "Light's Justice",
+     "The Stagnant Oasis",
+     "Stolen Booty",
+     "Traditions of the Bluff",
+     "The Guns of Northwatch",
+     "Raptor Thieves",
+     "Winds in the Desert",
+     "Fungal Spores",
+     "The Zhevra",
+     "The Spirits of Stonetalon",
+     "Raptor Horns",
+     "Battle of Warsong Gulch",
+     "Skull Rock"
+    ],
+    "zavrseno": 134
+   },
+   "mountovi": [
+    "Cerulean Prideclaw"
+   ],
+   "petovi": [],
+   "pvp": {
+    "hk": 0,
+    "rang": 0
+   },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg",
-   "azurirano": "2026-11-06T09:51:23Z"
+   "azurirano": "2026-11-06T10:00:43Z"
   },
   "Melee Kitic": {
    "level": 16,
@@ -402,9 +637,235 @@
      "max": 3000
     }
    ],
+   "statistika": [
+    {
+     "kat": "Character",
+     "ime": "Times camped",
+     "n": 1
+    },
+    {
+     "kat": "Consumables",
+     "ime": "Health potions consumed",
+     "n": 5
+    },
+    {
+     "kat": "Consumables",
+     "ime": "Food eaten",
+     "n": 5
+    },
+    {
+     "kat": "Reputation",
+     "ime": "Most factions at Honored or higher",
+     "n": 1
+    },
+    {
+     "kat": "Reputation",
+     "ime": "Most Horde factions at Exalted",
+     "n": 4
+    },
+    {
+     "kat": "Reputation",
+     "ime": "Total factions encountered",
+     "n": 11
+    },
+    {
+     "kat": "Gear",
+     "ime": "Greed rolls made on loot",
+     "n": 1
+    },
+    {
+     "kat": "Gear",
+     "ime": "Need rolls made on loot",
+     "n": 6
+    },
+    {
+     "kat": "Dungeons & Raids",
+     "ime": "Total 5-player dungeons entered",
+     "n": 1
+    },
+    {
+     "kat": "Boss Kills",
+     "ime": "Bazzalan kills (Ragefire Chasm)",
+     "n": 1
+    },
+    {
+     "kat": "Kills",
+     "ime": "Total kills",
+     "n": 974
+    },
+    {
+     "kat": "Kills",
+     "ime": "Total kills that grant experience or honor",
+     "n": 961
+    },
+    {
+     "kat": "Creatures",
+     "ime": "Creatures killed",
+     "n": 971
+    },
+    {
+     "kat": "Creatures",
+     "ime": "Different creature types killed",
+     "n": 4
+    },
+    {
+     "kat": "Creatures",
+     "ime": "Creature type killed the most",
+     "n": 541,
+     "opis": "Humanoid"
+    },
+    {
+     "kat": "Creatures",
+     "ime": "Critters killed",
+     "n": 3
+    },
+    {
+     "kat": "Killing Blows",
+     "ime": "Total Killing Blows",
+     "n": 423
+    },
+    {
+     "kat": "Killing Blows",
+     "ime": "World Killing Blows",
+     "n": 392
+    },
+    {
+     "kat": "Killing Blows",
+     "ime": "Continent with the most Killing Blows",
+     "n": 392,
+     "opis": "Kalimdor"
+    },
+    {
+     "kat": "Deaths",
+     "ime": "Total deaths",
+     "n": 11
+    },
+    {
+     "kat": "Dungeons and Raids",
+     "ime": "Total raid and dungeon deaths",
+     "n": 2
+    },
+    {
+     "kat": "Dungeons and Raids",
+     "ime": "Total deaths in 5-player dungeons",
+     "n": 2
+    },
+    {
+     "kat": "Quests",
+     "ime": "Quests completed",
+     "n": 83
+    },
+    {
+     "kat": "Quests",
+     "ime": "Average quests completed per day",
+     "n": 0
+    },
+    {
+     "kat": "Quests",
+     "ime": "Quests abandoned",
+     "n": 3
+    },
+    {
+     "kat": "Skills",
+     "ime": "Professions learned",
+     "n": 1
+    },
+    {
+     "kat": "Skills",
+     "ime": "Professions at maximum skill",
+     "n": 1
+    },
+    {
+     "kat": "Skills",
+     "ime": "Secondary skills at maximum skill",
+     "n": 2
+    },
+    {
+     "kat": "Skills",
+     "ime": "Weapon skills at maximum skill",
+     "n": 5
+    },
+    {
+     "kat": "Secondary Skills",
+     "ime": "Cooking skill",
+     "n": 1
+    },
+    {
+     "kat": "Secondary Skills",
+     "ime": "Cooking Recipes known",
+     "n": 10
+    },
+    {
+     "kat": "Secondary Skills",
+     "ime": "First Aid skill",
+     "n": 1
+    },
+    {
+     "kat": "Secondary Skills",
+     "ime": "First Aid Manuals learned",
+     "n": 4
+    },
+    {
+     "kat": "Professions",
+     "ime": "Highest Mining skill",
+     "n": 59
+    },
+    {
+     "kat": "Professions",
+     "ime": "Smelting Recipes learned",
+     "n": 9
+    },
+    {
+     "kat": "Travel",
+     "ime": "Flight paths taken",
+     "n": 8
+    },
+    {
+     "kat": "Travel",
+     "ime": "Number of times hearthed",
+     "n": 3
+    },
+    {
+     "kat": "Social",
+     "ime": "Total times LOL'd",
+     "n": 1
+    }
+   ],
+   "questovi": {
+    "uLogu": [
+     "Centaur Bracers",
+     "The Demon Seed",
+     "Miner's Fortune",
+     "The Power to Destroy...",
+     "Threat from Below",
+     "Lost in Battle",
+     "Trouble at the Docks",
+     "Kolkar Leaders",
+     "Harpy Raiders",
+     "Tribes at War",
+     "Nugget Slugs",
+     "The Stagnant Oasis",
+     "Stolen Booty",
+     "Consumed by Hatred",
+     "The Guns of Northwatch",
+     "Stormy Potential",
+     "Raptor Thieves",
+     "Fungal Spores",
+     "The Zhevra",
+     "The Spirits of Stonetalon",
+     "Raptor Horns"
+    ],
+    "zavrseno": 108
+   },
+   "mountovi": [],
+   "petovi": [],
+   "pvp": {
+    "hk": 0,
+    "rang": 0
+   },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg",
-   "azurirano": "2026-11-06T09:51:23Z"
+   "azurirano": "2026-11-06T10:00:43Z"
   },
   "Janica Frostelich": {
    "level": 15,
@@ -604,9 +1065,256 @@
      "max": 3000
     }
    ],
+   "statistika": [
+    {
+     "kat": "Character",
+     "ime": "Times camped",
+     "n": 2
+    },
+    {
+     "kat": "Consumables",
+     "ime": "Beverages consumed",
+     "n": 74
+    },
+    {
+     "kat": "Consumables",
+     "ime": "Food eaten",
+     "n": 3
+    },
+    {
+     "kat": "Reputation",
+     "ime": "Most Horde factions at Exalted",
+     "n": 4
+    },
+    {
+     "kat": "Reputation",
+     "ime": "Total factions encountered",
+     "n": 11
+    },
+    {
+     "kat": "Gear",
+     "ime": "Mounts owned",
+     "n": 1
+    },
+    {
+     "kat": "Gear",
+     "ime": "Greed rolls made on loot",
+     "n": 2
+    },
+    {
+     "kat": "Gear",
+     "ime": "Need rolls made on loot",
+     "n": 7
+    },
+    {
+     "kat": "World",
+     "ime": "Duels lost",
+     "n": 1
+    },
+    {
+     "kat": "Dungeons & Raids",
+     "ime": "Total 5-player dungeons entered",
+     "n": 1
+    },
+    {
+     "kat": "Boss Kills",
+     "ime": "Bazzalan kills (Ragefire Chasm)",
+     "n": 1
+    },
+    {
+     "kat": "Kills",
+     "ime": "Total kills",
+     "n": 849
+    },
+    {
+     "kat": "Kills",
+     "ime": "Total kills that grant experience or honor",
+     "n": 837
+    },
+    {
+     "kat": "Creatures",
+     "ime": "Creatures killed",
+     "n": 847
+    },
+    {
+     "kat": "Creatures",
+     "ime": "Different creature types killed",
+     "n": 4
+    },
+    {
+     "kat": "Creatures",
+     "ime": "Creature type killed the most",
+     "n": 458,
+     "opis": "Humanoid"
+    },
+    {
+     "kat": "Creatures",
+     "ime": "Critters killed",
+     "n": 2
+    },
+    {
+     "kat": "Killing Blows",
+     "ime": "Total Killing Blows",
+     "n": 233
+    },
+    {
+     "kat": "Killing Blows",
+     "ime": "World Killing Blows",
+     "n": 222
+    },
+    {
+     "kat": "Killing Blows",
+     "ime": "Continent with the most Killing Blows",
+     "n": 222,
+     "opis": "Kalimdor"
+    },
+    {
+     "kat": "Deaths",
+     "ime": "Total deaths",
+     "n": 6
+    },
+    {
+     "kat": "Dungeons and Raids",
+     "ime": "Total raid and dungeon deaths",
+     "n": 1
+    },
+    {
+     "kat": "Dungeons and Raids",
+     "ime": "Total deaths in 5-player dungeons",
+     "n": 1
+    },
+    {
+     "kat": "Quests",
+     "ime": "Quests completed",
+     "n": 73
+    },
+    {
+     "kat": "Quests",
+     "ime": "Average quests completed per day",
+     "n": 0
+    },
+    {
+     "kat": "Quests",
+     "ime": "Quests abandoned",
+     "n": 8
+    },
+    {
+     "kat": "Skills",
+     "ime": "Professions learned",
+     "n": 2
+    },
+    {
+     "kat": "Skills",
+     "ime": "Professions at maximum skill",
+     "n": 2
+    },
+    {
+     "kat": "Skills",
+     "ime": "Secondary skills at maximum skill",
+     "n": 2
+    },
+    {
+     "kat": "Skills",
+     "ime": "Weapon skills at maximum skill",
+     "n": 3
+    },
+    {
+     "kat": "Secondary Skills",
+     "ime": "Cooking skill",
+     "n": 1
+    },
+    {
+     "kat": "Secondary Skills",
+     "ime": "Cooking Recipes known",
+     "n": 10
+    },
+    {
+     "kat": "Secondary Skills",
+     "ime": "First Aid skill",
+     "n": 3
+    },
+    {
+     "kat": "Secondary Skills",
+     "ime": "First Aid Manuals learned",
+     "n": 4
+    },
+    {
+     "kat": "Professions",
+     "ime": "Highest Alchemy skill",
+     "n": 1
+    },
+    {
+     "kat": "Professions",
+     "ime": "Alchemy Recipes learned",
+     "n": 8
+    },
+    {
+     "kat": "Professions",
+     "ime": "Highest Herbalism skill",
+     "n": 9
+    },
+    {
+     "kat": "Travel",
+     "ime": "Flight paths taken",
+     "n": 6
+    },
+    {
+     "kat": "Travel",
+     "ime": "Number of times hearthed",
+     "n": 2
+    }
+   ],
+   "questovi": {
+    "uLogu": [
+     "Until Death Do Us Part",
+     "Centaur Bracers",
+     "A New Plague",
+     "Miner's Fortune",
+     "Deaths in the Family",
+     "Return to the Crossroads",
+     "Threat from Below",
+     "Wenikee Boltbucket",
+     "Speak with Un'thuwa",
+     "Patience",
+     "Kolkar Leaders",
+     "Harpy Raiders",
+     "Preparation for Ceremony",
+     "Light's Justice",
+     "Dark Storms",
+     "Stolen Booty",
+     "Traditions of the Bluff",
+     "Camping 101: First Aid",
+     "Camping 101: Herbalism",
+     "The Guns of Northwatch",
+     "The Argent Emissary",
+     "Raptor Thieves",
+     "Delivery to Silverpine Forest",
+     "Fungal Spores",
+     "That Shadowvale Green Elixir",
+     "The Zhevra",
+     "Discipline",
+     "The Forgotten Pools",
+     "Camping 101: Alchemy",
+     "The Spirits of Stonetalon",
+     "Yelmak's Medley",
+     "Raptor Horns",
+     "Battle of Warsong Gulch",
+     "A Putrid Task",
+     "The Haunted Mills"
+    ],
+    "zavrseno": 92
+   },
+   "mountovi": [
+    "Cerulean Prideclaw"
+   ],
+   "petovi": [],
+   "pvp": {
+    "hk": 0,
+    "rang": 0
+   },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/249/2574073-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/249/2574073-avatar.jpg",
-   "azurirano": "2026-11-06T09:51:23Z"
+   "azurirano": "2026-11-06T10:00:43Z"
   },
   "Nikola Roguevic": {
    "level": 16,
@@ -826,9 +1534,292 @@
      "max": 3000
     }
    ],
+   "statistika": [
+    {
+     "kat": "Character",
+     "ime": "Times camped",
+     "n": 3
+    },
+    {
+     "kat": "Consumables",
+     "ime": "Bandages used",
+     "n": 6
+    },
+    {
+     "kat": "Consumables",
+     "ime": "Bandage used most",
+     "n": 6,
+     "opis": "Linen Bandage"
+    },
+    {
+     "kat": "Consumables",
+     "ime": "Health potions consumed",
+     "n": 7
+    },
+    {
+     "kat": "Consumables",
+     "ime": "Food eaten",
+     "n": 2
+    },
+    {
+     "kat": "Reputation",
+     "ime": "Most Horde factions at Exalted",
+     "n": 4
+    },
+    {
+     "kat": "Reputation",
+     "ime": "Total factions encountered",
+     "n": 14
+    },
+    {
+     "kat": "Gear",
+     "ime": "Mounts owned",
+     "n": 2
+    },
+    {
+     "kat": "Gear",
+     "ime": "Greed rolls made on loot",
+     "n": 10
+    },
+    {
+     "kat": "Gear",
+     "ime": "Need rolls made on loot",
+     "n": 10
+    },
+    {
+     "kat": "World",
+     "ime": "Duels won",
+     "n": 1
+    },
+    {
+     "kat": "Dungeons & Raids",
+     "ime": "Total 5-player dungeons entered",
+     "n": 1
+    },
+    {
+     "kat": "Boss Kills",
+     "ime": "Bazzalan kills (Ragefire Chasm)",
+     "n": 1
+    },
+    {
+     "kat": "Kills",
+     "ime": "Total kills",
+     "n": 1089
+    },
+    {
+     "kat": "Kills",
+     "ime": "Total kills that grant experience or honor",
+     "n": 1064
+    },
+    {
+     "kat": "Creatures",
+     "ime": "Creatures killed",
+     "n": 1084
+    },
+    {
+     "kat": "Creatures",
+     "ime": "Different creature types killed",
+     "n": 6
+    },
+    {
+     "kat": "Creatures",
+     "ime": "Creature type killed the most",
+     "n": 464,
+     "opis": "Humanoid"
+    },
+    {
+     "kat": "Creatures",
+     "ime": "Critters killed",
+     "n": 5
+    },
+    {
+     "kat": "Killing Blows",
+     "ime": "Total Killing Blows",
+     "n": 535
+    },
+    {
+     "kat": "Killing Blows",
+     "ime": "World Killing Blows",
+     "n": 489
+    },
+    {
+     "kat": "Killing Blows",
+     "ime": "Continent with the most Killing Blows",
+     "n": 339,
+     "opis": "Eastern Kingdoms"
+    },
+    {
+     "kat": "Deaths",
+     "ime": "Total deaths",
+     "n": 4
+    },
+    {
+     "kat": "Dungeons and Raids",
+     "ime": "Total raid and dungeon deaths",
+     "n": 1
+    },
+    {
+     "kat": "Dungeons and Raids",
+     "ime": "Total deaths in 5-player dungeons",
+     "n": 1
+    },
+    {
+     "kat": "Quests",
+     "ime": "Quests completed",
+     "n": 84
+    },
+    {
+     "kat": "Quests",
+     "ime": "Average quests completed per day",
+     "n": 0
+    },
+    {
+     "kat": "Skills",
+     "ime": "Professions learned",
+     "n": 3
+    },
+    {
+     "kat": "Skills",
+     "ime": "Professions at maximum skill",
+     "n": 3
+    },
+    {
+     "kat": "Skills",
+     "ime": "Secondary skills at maximum skill",
+     "n": 3
+    },
+    {
+     "kat": "Skills",
+     "ime": "Weapon skills at maximum skill",
+     "n": 10
+    },
+    {
+     "kat": "Secondary Skills",
+     "ime": "Cooking skill",
+     "n": 20
+    },
+    {
+     "kat": "Secondary Skills",
+     "ime": "Cooking Recipes known",
+     "n": 18
+    },
+    {
+     "kat": "Secondary Skills",
+     "ime": "First Aid skill",
+     "n": 64
+    },
+    {
+     "kat": "Secondary Skills",
+     "ime": "First Aid Manuals learned",
+     "n": 10
+    },
+    {
+     "kat": "Secondary Skills",
+     "ime": "Fishing skill",
+     "n": 2
+    },
+    {
+     "kat": "Secondary Skills",
+     "ime": "Fish caught",
+     "n": 1
+    },
+    {
+     "kat": "Secondary Skills",
+     "ime": "Fish and other things caught",
+     "n": 1
+    },
+    {
+     "kat": "Professions",
+     "ime": "Highest Herbalism skill",
+     "n": 33
+    },
+    {
+     "kat": "Professions",
+     "ime": "Highest Leatherworking skill",
+     "n": 45
+    },
+    {
+     "kat": "Professions",
+     "ime": "Leatherworking Patterns learned",
+     "n": 40
+    },
+    {
+     "kat": "Professions",
+     "ime": "Highest Skinning skill",
+     "n": 115
+    },
+    {
+     "kat": "Travel",
+     "ime": "Flight paths taken",
+     "n": 9
+    },
+    {
+     "kat": "Travel",
+     "ime": "Number of times hearthed",
+     "n": 1
+    },
+    {
+     "kat": "Social",
+     "ime": "Total times LOL'd",
+     "n": 18
+    }
+   ],
+   "questovi": {
+    "uLogu": [
+     "Centaur Bracers",
+     "Miner's Fortune",
+     "Beasts of Thunder Ridge",
+     "Rear Guard Patrol",
+     "Camping 101: Fishing",
+     "Lost in Battle",
+     "Trouble at the Docks",
+     "Kolkar Leaders",
+     "Harpy Raiders",
+     "Tribes at War",
+     "Preparation for Ceremony",
+     "Nugget Slugs",
+     "Light's Justice",
+     "The Stagnant Oasis",
+     "At War With The Scarlet Crusade",
+     "Stolen Booty",
+     "Traditions of the Bluff",
+     "Find the Shattered Hand",
+     "The Family Crypt",
+     "Bandarion Keep",
+     "Consumed by Hatred",
+     "The Guns of Northwatch",
+     "Raptor Thieves",
+     "Delivery to Silverpine Forest",
+     "Fungal Spores",
+     "That Shadowvale Green Elixir",
+     "Return the Book",
+     "The Zhevra",
+     "The Deathstalkers",
+     "The Spirits of Stonetalon",
+     "A New Plague",
+     "Raptor Horns",
+     "Fenwick Thatros",
+     "Battle of Warsong Gulch"
+    ],
+    "zavrseno": 126
+   },
+   "mountovi": [
+    "Cerulean Prideclaw",
+    "Veteran Adventurer's Loyal Companion"
+   ],
+   "petovi": [
+    "Mini Diablo",
+    "Pachimari",
+    "Panda Cub",
+    "Zergling"
+   ],
+   "pvp": {
+    "hk": 0,
+    "rang": 0
+   },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg",
-   "azurirano": "2026-11-06T09:51:23Z"
+   "azurirano": "2026-11-06T10:00:43Z"
   },
   "Arsen Deadic": {
    "level": 16,
@@ -1034,10 +2025,354 @@
      "max": 3000
     }
    ],
+   "statistika": [
+    {
+     "kat": "Character",
+     "ime": "Times camped",
+     "n": 2
+    },
+    {
+     "kat": "Consumables",
+     "ime": "Beverages consumed",
+     "n": 2
+    },
+    {
+     "kat": "Consumables",
+     "ime": "Food eaten",
+     "n": 8
+    },
+    {
+     "kat": "Reputation",
+     "ime": "Most Horde factions at Exalted",
+     "n": 4
+    },
+    {
+     "kat": "Reputation",
+     "ime": "Total factions encountered",
+     "n": 12
+    },
+    {
+     "kat": "Gear",
+     "ime": "Mounts owned",
+     "n": 2
+    },
+    {
+     "kat": "Gear",
+     "ime": "Greed rolls made on loot",
+     "n": 10
+    },
+    {
+     "kat": "Gear",
+     "ime": "Need rolls made on loot",
+     "n": 6
+    },
+    {
+     "kat": "Dungeons & Raids",
+     "ime": "Total 5-player dungeons entered",
+     "n": 1
+    },
+    {
+     "kat": "Boss Kills",
+     "ime": "Bazzalan kills (Ragefire Chasm)",
+     "n": 1
+    },
+    {
+     "kat": "Kills",
+     "ime": "Total kills",
+     "n": 1137
+    },
+    {
+     "kat": "Kills",
+     "ime": "Total kills that grant experience or honor",
+     "n": 1114
+    },
+    {
+     "kat": "Creatures",
+     "ime": "Creatures killed",
+     "n": 1133
+    },
+    {
+     "kat": "Creatures",
+     "ime": "Different creature types killed",
+     "n": 6
+    },
+    {
+     "kat": "Creatures",
+     "ime": "Creature type killed the most",
+     "n": 488,
+     "opis": "Humanoid"
+    },
+    {
+     "kat": "Creatures",
+     "ime": "Critters killed",
+     "n": 4
+    },
+    {
+     "kat": "Killing Blows",
+     "ime": "Total Killing Blows",
+     "n": 403
+    },
+    {
+     "kat": "Killing Blows",
+     "ime": "World Killing Blows",
+     "n": 371
+    },
+    {
+     "kat": "Killing Blows",
+     "ime": "Continent with the most Killing Blows",
+     "n": 255,
+     "opis": "Eastern Kingdoms"
+    },
+    {
+     "kat": "Deaths",
+     "ime": "Total deaths",
+     "n": 3
+    },
+    {
+     "kat": "Dungeons and Raids",
+     "ime": "Total raid and dungeon deaths",
+     "n": 2
+    },
+    {
+     "kat": "Dungeons and Raids",
+     "ime": "Total deaths in 5-player dungeons",
+     "n": 2
+    },
+    {
+     "kat": "Quests",
+     "ime": "Quests completed",
+     "n": 84
+    },
+    {
+     "kat": "Quests",
+     "ime": "Average quests completed per day",
+     "n": 0
+    },
+    {
+     "kat": "Quests",
+     "ime": "Quests abandoned",
+     "n": 6
+    },
+    {
+     "kat": "Skills",
+     "ime": "Professions learned",
+     "n": 2
+    },
+    {
+     "kat": "Skills",
+     "ime": "Professions at maximum skill",
+     "n": 2
+    },
+    {
+     "kat": "Skills",
+     "ime": "Secondary skills at maximum skill",
+     "n": 3
+    },
+    {
+     "kat": "Skills",
+     "ime": "Weapon skills at maximum skill",
+     "n": 5
+    },
+    {
+     "kat": "Secondary Skills",
+     "ime": "Cooking skill",
+     "n": 1
+    },
+    {
+     "kat": "Secondary Skills",
+     "ime": "Cooking Recipes known",
+     "n": 10
+    },
+    {
+     "kat": "Secondary Skills",
+     "ime": "First Aid skill",
+     "n": 11
+    },
+    {
+     "kat": "Secondary Skills",
+     "ime": "First Aid Manuals learned",
+     "n": 4
+    },
+    {
+     "kat": "Secondary Skills",
+     "ime": "Fishing skill",
+     "n": 1
+    },
+    {
+     "kat": "Professions",
+     "ime": "Highest Herbalism skill",
+     "n": 11
+    },
+    {
+     "kat": "Professions",
+     "ime": "Highest Mining skill",
+     "n": 14
+    },
+    {
+     "kat": "Professions",
+     "ime": "Smelting Recipes learned",
+     "n": 7
+    },
+    {
+     "kat": "Travel",
+     "ime": "Flight paths taken",
+     "n": 7
+    },
+    {
+     "kat": "Travel",
+     "ime": "Number of times hearthed",
+     "n": 1
+    },
+    {
+     "kat": "Social",
+     "ime": "Total times LOL'd",
+     "n": 3
+    }
+   ],
+   "questovi": {
+    "uLogu": [
+     "Encroachment",
+     "Centaur Bracers",
+     "Miner's Fortune",
+     "Rear Guard Patrol",
+     "Lost in Battle",
+     "Camping 101: First Aid",
+     "The Book of Ur",
+     "The Lich's Identity",
+     "Camping 101: Herbalism",
+     "Trouble at the Docks",
+     "Kolkar Leaders",
+     "Harpy Raiders",
+     "Tribes at War",
+     "Preparation for Ceremony",
+     "Camping 101: Fishing",
+     "Nugget Slugs",
+     "Light's Justice",
+     "The Stagnant Oasis",
+     "Stolen Booty",
+     "Traditions of the Bluff",
+     "The Family Crypt",
+     "Conscript of the Horde",
+     "Consumed by Hatred",
+     "The Guns of Northwatch",
+     "Camping 101: Mining",
+     "Murlocs at the Gates",
+     "A Missing Hand",
+     "Raptor Thieves",
+     "Winds in the Desert",
+     "Fungal Spores",
+     "The Zhevra",
+     "As Above, So Below",
+     "The Spirits of Stonetalon",
+     "Yelmak's Medley",
+     "Raptor Horns",
+     "The One That Got Away",
+     "Battle of Warsong Gulch"
+    ],
+    "zavrseno": 102
+   },
+   "mountovi": [
+    "Cerulean Prideclaw",
+    "Veteran Adventurer's Loyal Companion"
+   ],
+   "petovi": [
+    "Mini Diablo",
+    "Pachimari",
+    "Panda Cub",
+    "Zergling"
+   ],
+   "pvp": {
+    "hk": 0,
+    "rang": 0
+   },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg",
-   "azurirano": "2026-11-06T09:51:23Z"
+   "azurirano": "2026-11-06T10:00:43Z"
   }
  },
- "provjereno": "2026-11-06T09:53:08Z"
+ "provjereno": "2026-11-06T10:01:15Z",
+ "guild": {
+  "ime": "Kafana na Balkanu",
+  "clanova": 7,
+  "osnovan": "2026-11-05T20:24:04Z",
+  "ruleset": "Normal",
+  "roster": [
+   {
+    "ime": "Saman Saulic",
+    "level": 15,
+    "klasa": "Shaman",
+    "rasa": "Orc",
+    "rang": 0,
+    "slug": "saman-saulic",
+    "ilvl": 8,
+    "zadnjiLogin": "2026-11-06T01:16:41Z",
+    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg"
+   },
+   {
+    "ime": "Nikola Roguevic",
+    "level": 16,
+    "klasa": "Rogue",
+    "rasa": "Undead",
+    "rang": 1,
+    "slug": "nikola-roguevic",
+    "ilvl": 5,
+    "zadnjiLogin": "2026-11-06T01:17:00Z",
+    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg"
+   },
+   {
+    "ime": "Arsen Deadic",
+    "level": 16,
+    "klasa": "Paladin",
+    "rasa": "Undead",
+    "rang": 3,
+    "slug": "arsen-deadic",
+    "ilvl": 7,
+    "zadnjiLogin": "2026-11-06T01:15:08Z",
+    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg"
+   },
+   {
+    "ime": "Melee Kitic",
+    "level": 16,
+    "klasa": "Warrior",
+    "rasa": "Orc",
+    "rang": 3,
+    "slug": "melee-kitic",
+    "ilvl": 7,
+    "zadnjiLogin": "2026-11-06T00:55:37Z",
+    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg"
+   },
+   {
+    "ime": "Lock Mile",
+    "level": 20,
+    "klasa": "Warlock",
+    "rasa": "Orc",
+    "rang": 4,
+    "slug": "lock-mile",
+    "ilvl": 9,
+    "zadnjiLogin": "2026-11-06T00:25:49Z",
+    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/17/2526225-avatar.jpg"
+   },
+   {
+    "ime": "Janica Frostelich",
+    "level": 15,
+    "klasa": "Mage",
+    "rasa": "Troll",
+    "rang": 4,
+    "slug": "janica-frostelich",
+    "ilvl": 8,
+    "zadnjiLogin": "2026-11-06T01:24:47Z",
+    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/249/2574073-avatar.jpg"
+   },
+   {
+    "ime": "Yuserious Son",
+    "level": 10,
+    "klasa": "Paladin",
+    "rasa": "Undead",
+    "rang": 4,
+    "slug": "yuserious-son",
+    "ilvl": 3,
+    "zadnjiLogin": "2026-11-05T15:33:14Z"
+   }
+  ]
+ }
 }

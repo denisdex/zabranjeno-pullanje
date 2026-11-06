@@ -1,67 +1,436 @@
 {
-  "_upute": "Jedini izvor za profesije. Novi skill: promijeni 'skill' kod lika i dodaj red u 'history' s datumom (YYYY-MM-DD). Prazno ime = još nije poznato. phase: do40 (samo do levela 40), stalno, nakon40 (uzima se na 40). role: grupa, solo, alt. Level likova iz rostera uzima se iz data.js; 'level' ovdje upiši samo za likove kojih nema u rosteru (druid, alt).",
+  "_upute": "Profesije i skill likova iz rostera (Saman, Melee, Janica, Nikola, Arsen) pune se same iz igre (skripte/armory.py, Blizzard API, svaka 3 sata); ručno ih ne mijenjati. Ručno se vode samo alti (druid, mage alt): novi skill = promijeni 'skill' i dodaj red u 'history' (YYYY-MM-DD). phase: do40, stalno, nakon40. role: grupa, solo, alt.",
   "accounts": [
-    { "id": "pero", "owner": "Pero" },
-    { "id": "niksa", "owner": "Niksa" },
-    { "id": "karken", "owner": "Karken" },
-    { "id": "zuga", "owner": "Žuga" },
-    { "id": "dex", "owner": "Dex" }
+    {
+      "id": "pero",
+      "owner": "Pero"
+    },
+    {
+      "id": "niksa",
+      "owner": "Niksa"
+    },
+    {
+      "id": "karken",
+      "owner": "Karken"
+    },
+    {
+      "id": "zuga",
+      "owner": "Žuga"
+    },
+    {
+      "id": "dex",
+      "owner": "Dex"
+    }
   ],
   "characters": [
-    { "id": "warrior", "name": "Melee Kitic", "account": "pero", "class": "Warrior", "race": "Orc", "role": "grupa",
+    {
+      "id": "warrior",
+      "name": "Melee Kitic",
+      "account": "pero",
+      "class": "Warrior",
+      "race": "Orc",
+      "role": "grupa",
       "professions": [
-        { "name": "Mining", "skill": 0, "phase": "stalno" },
-        { "name": "Engineering", "skill": 0, "phase": "stalno" }
+        {
+          "name": "Mining",
+          "skill": 59,
+          "phase": "stalno"
+        }
       ],
-      "secondary": [{ "name": "First Aid", "skill": 0 }, { "name": "Cooking", "skill": 0 }] },
-    { "id": "shaman", "name": "Saman Saulic", "account": "niksa", "class": "Shaman", "race": "Orc", "role": "grupa",
+      "secondary": [
+        {
+          "name": "Cooking",
+          "skill": 1
+        },
+        {
+          "name": "First Aid",
+          "skill": 1
+        }
+      ]
+    },
+    {
+      "id": "shaman",
+      "name": "Saman Saulic",
+      "account": "niksa",
+      "class": "Shaman",
+      "race": "Orc",
+      "role": "grupa",
       "professions": [
-        { "name": "Skinning", "skill": 0, "phase": "stalno" },
-        { "name": "Leatherworking", "skill": 0, "phase": "stalno" }
+        {
+          "name": "Skinning",
+          "skill": 59,
+          "phase": "stalno"
+        },
+        {
+          "name": "Mining",
+          "skill": 24,
+          "phase": "stalno"
+        }
       ],
-      "secondary": [{ "name": "First Aid", "skill": 0 }, { "name": "Cooking", "skill": 0 }] },
-    { "id": "druid", "name": "", "account": "niksa", "class": "Druid", "race": "Tauren", "role": "solo", "level": 0,
+      "secondary": [
+        {
+          "name": "Cooking",
+          "skill": 3
+        },
+        {
+          "name": "Fishing",
+          "skill": 1
+        },
+        {
+          "name": "First Aid",
+          "skill": 20
+        }
+      ]
+    },
+    {
+      "id": "druid",
+      "name": "",
+      "account": "niksa",
+      "class": "Druid",
+      "race": "Tauren",
+      "role": "solo",
+      "level": 0,
       "professions": [
-        { "name": "Herbalism", "skill": 0, "phase": "stalno" },
-        { "name": "Alchemy", "skill": 0, "phase": "stalno" }
+        {
+          "name": "Herbalism",
+          "skill": 0,
+          "phase": "stalno"
+        },
+        {
+          "name": "Alchemy",
+          "skill": 0,
+          "phase": "stalno"
+        }
       ],
-      "secondary": [{ "name": "First Aid", "skill": 0 }, { "name": "Cooking", "skill": 0 }] },
-    { "id": "magealt", "name": "", "account": "niksa", "class": "Mage", "race": "Orc", "role": "alt", "level": 0, "napomena": "Ostaje na levelu 10–20 u Orgrimmaru",
+      "secondary": [
+        {
+          "name": "First Aid",
+          "skill": 0
+        },
+        {
+          "name": "Cooking",
+          "skill": 0
+        }
+      ]
+    },
+    {
+      "id": "magealt",
+      "name": "",
+      "account": "niksa",
+      "class": "Mage",
+      "race": "Orc",
+      "role": "alt",
+      "level": 0,
+      "napomena": "Ostaje na levelu 10–20 u Orgrimmaru",
       "professions": [
-        { "name": "Enchanting", "skill": 0, "phase": "stalno" },
-        { "name": "Tailoring", "skill": 0, "phase": "stalno" }
+        {
+          "name": "Enchanting",
+          "skill": 0,
+          "phase": "stalno"
+        },
+        {
+          "name": "Tailoring",
+          "skill": 0,
+          "phase": "stalno"
+        }
       ],
-      "secondary": [{ "name": "First Aid", "skill": 0 }, { "name": "Cooking", "skill": 0 }] },
-    { "id": "mage", "name": "Janica Frostelich", "account": "karken", "class": "Mage", "race": "Troll", "role": "grupa",
+      "secondary": [
+        {
+          "name": "First Aid",
+          "skill": 0
+        },
+        {
+          "name": "Cooking",
+          "skill": 0
+        }
+      ]
+    },
+    {
+      "id": "mage",
+      "name": "Janica Frostelich",
+      "account": "karken",
+      "class": "Mage",
+      "race": "Troll",
+      "role": "grupa",
       "professions": [
-        { "name": "Mining", "skill": 0, "phase": "stalno" },
-        { "name": "Herbalism", "skill": 0, "phase": "stalno" }
+        {
+          "name": "Alchemy",
+          "skill": 1,
+          "phase": "stalno"
+        },
+        {
+          "name": "Herbalism",
+          "skill": 9,
+          "phase": "stalno"
+        }
       ],
-      "secondary": [{ "name": "First Aid", "skill": 0 }, { "name": "Cooking", "skill": 0 }] },
-    { "id": "rogue", "name": "Nikola Roguevic", "account": "zuga", "class": "Rogue", "race": "Undead", "role": "grupa",
+      "secondary": [
+        {
+          "name": "Cooking",
+          "skill": 1
+        },
+        {
+          "name": "First Aid",
+          "skill": 6
+        }
+      ]
+    },
+    {
+      "id": "rogue",
+      "name": "Nikola Roguevic",
+      "account": "zuga",
+      "class": "Rogue",
+      "race": "Undead",
+      "role": "grupa",
       "professions": [
-        { "name": "Skinning", "skill": 0, "phase": "stalno" },
-        { "name": "Herbalism", "skill": 0, "phase": "stalno" }
+        {
+          "name": "Leatherworking",
+          "skill": 50,
+          "phase": "stalno"
+        },
+        {
+          "name": "Skinning",
+          "skill": 115,
+          "phase": "stalno"
+        }
       ],
-      "secondary": [{ "name": "First Aid", "skill": 0 }, { "name": "Cooking", "skill": 0 }] },
-    { "id": "paladin", "name": "Arsen Deadic", "account": "dex", "class": "Paladin", "race": "Undead", "role": "grupa",
+      "secondary": [
+        {
+          "name": "Cooking",
+          "skill": 20
+        },
+        {
+          "name": "Fishing",
+          "skill": 2
+        },
+        {
+          "name": "First Aid",
+          "skill": 67
+        }
+      ]
+    },
+    {
+      "id": "paladin",
+      "name": "Arsen Deadic",
+      "account": "dex",
+      "class": "Paladin",
+      "race": "Undead",
+      "role": "grupa",
       "professions": [
-        { "name": "Mining", "skill": 0, "phase": "stalno" },
-        { "name": "Skinning", "skill": 0, "phase": "stalno" }
+        {
+          "name": "Mining",
+          "skill": 14,
+          "phase": "stalno"
+        },
+        {
+          "name": "Herbalism",
+          "skill": 11,
+          "phase": "stalno"
+        }
       ],
-      "secondary": [{ "name": "First Aid", "skill": 0 }, { "name": "Cooking", "skill": 0 }] }
+      "secondary": [
+        {
+          "name": "Cooking",
+          "skill": 1
+        },
+        {
+          "name": "Fishing",
+          "skill": 1
+        },
+        {
+          "name": "First Aid",
+          "skill": 11
+        }
+      ]
+    }
   ],
-  "history": [],
+  "history": [
+    {
+      "date": "2026-11-06",
+      "character": "warrior",
+      "profession": "Mining",
+      "skill": 59
+    },
+    {
+      "date": "2026-11-06",
+      "character": "warrior",
+      "profession": "Cooking",
+      "skill": 1
+    },
+    {
+      "date": "2026-11-06",
+      "character": "warrior",
+      "profession": "First Aid",
+      "skill": 1
+    },
+    {
+      "date": "2026-11-06",
+      "character": "shaman",
+      "profession": "Skinning",
+      "skill": 59
+    },
+    {
+      "date": "2026-11-06",
+      "character": "shaman",
+      "profession": "Mining",
+      "skill": 24
+    },
+    {
+      "date": "2026-11-06",
+      "character": "shaman",
+      "profession": "Cooking",
+      "skill": 3
+    },
+    {
+      "date": "2026-11-06",
+      "character": "shaman",
+      "profession": "Fishing",
+      "skill": 1
+    },
+    {
+      "date": "2026-11-06",
+      "character": "shaman",
+      "profession": "First Aid",
+      "skill": 20
+    },
+    {
+      "date": "2026-11-06",
+      "character": "mage",
+      "profession": "Alchemy",
+      "skill": 1
+    },
+    {
+      "date": "2026-11-06",
+      "character": "mage",
+      "profession": "Herbalism",
+      "skill": 9
+    },
+    {
+      "date": "2026-11-06",
+      "character": "mage",
+      "profession": "Cooking",
+      "skill": 1
+    },
+    {
+      "date": "2026-11-06",
+      "character": "mage",
+      "profession": "First Aid",
+      "skill": 6
+    },
+    {
+      "date": "2026-11-06",
+      "character": "rogue",
+      "profession": "Leatherworking",
+      "skill": 50
+    },
+    {
+      "date": "2026-11-06",
+      "character": "rogue",
+      "profession": "Skinning",
+      "skill": 115
+    },
+    {
+      "date": "2026-11-06",
+      "character": "rogue",
+      "profession": "Cooking",
+      "skill": 20
+    },
+    {
+      "date": "2026-11-06",
+      "character": "rogue",
+      "profession": "Fishing",
+      "skill": 2
+    },
+    {
+      "date": "2026-11-06",
+      "character": "rogue",
+      "profession": "First Aid",
+      "skill": 67
+    },
+    {
+      "date": "2026-11-06",
+      "character": "paladin",
+      "profession": "Mining",
+      "skill": 14
+    },
+    {
+      "date": "2026-11-06",
+      "character": "paladin",
+      "profession": "Herbalism",
+      "skill": 11
+    },
+    {
+      "date": "2026-11-06",
+      "character": "paladin",
+      "profession": "Cooking",
+      "skill": 1
+    },
+    {
+      "date": "2026-11-06",
+      "character": "paladin",
+      "profession": "Fishing",
+      "skill": 1
+    },
+    {
+      "date": "2026-11-06",
+      "character": "paladin",
+      "profession": "First Aid",
+      "skill": 11
+    }
+  ],
   "flows": [
-    { "item": "Koža", "from": "Skinning", "to": "Leatherworking", "kome": "grupa",
-      "proizvodi": ["Armor kitovi za sve", "Leather za Roguea, mail za Shamana", "Devilsaur Gauntlets i Leggings (BiS za Warriora i Roguea)"] },
-    { "item": "Ruda", "from": "Mining", "to": "Engineering", "kome": "grupa",
-      "proizvodi": ["Bombe i dinamit za dungeone", "Goggles i Target Dummy", "Thorium za Arcanite na 60"] },
-    { "item": "Bilje", "from": "Herbalism", "to": "Alchemy", "kome": "grupa i AH",
-      "proizvodi": ["Healing i Mana potioni", "Elixiri za dungeone", "Flasks i Arcanite transmute na 60"] },
-    { "item": "Cloth", "from": "drop", "to": "Tailoring", "kome": "grupa i AH",
-      "proizvodi": ["Torbe za cijelu ekipu", "Višak torbi na AH"] },
-    { "item": "Greenovi", "from": "drop", "to": "Enchanting", "kome": "grupa i AH",
-      "proizvodi": ["Enchanti za oružje i opremu ekipe", "Dust i essence na AH"] }
+    {
+      "item": "Koža",
+      "from": "Skinning",
+      "to": "Leatherworking",
+      "kome": "grupa",
+      "proizvodi": [
+        "Armor kitovi za sve",
+        "Leather za Roguea, mail za Shamana",
+        "Devilsaur Gauntlets i Leggings (BiS za Warriora i Roguea)"
+      ]
+    },
+    {
+      "item": "Ruda",
+      "from": "Mining",
+      "to": "Engineering",
+      "kome": "grupa",
+      "proizvodi": [
+        "Bombe i dinamit za dungeone",
+        "Goggles i Target Dummy",
+        "Thorium za Arcanite na 60"
+      ]
+    },
+    {
+      "item": "Bilje",
+      "from": "Herbalism",
+      "to": "Alchemy",
+      "kome": "grupa i AH",
+      "proizvodi": [
+        "Healing i Mana potioni",
+        "Elixiri za dungeone",
+        "Flasks i Arcanite transmute na 60"
+      ]
+    },
+    {
+      "item": "Cloth",
+      "from": "drop",
+      "to": "Tailoring",
+      "kome": "grupa i AH",
+      "proizvodi": [
+        "Torbe za cijelu ekipu",
+        "Višak torbi na AH"
+      ]
+    },
+    {
+      "item": "Greenovi",
+      "from": "drop",
+      "to": "Enchanting",
+      "kome": "grupa i AH",
+      "proizvodi": [
+        "Enchanti za oružje i opremu ekipe",
+        "Dust i essence na AH"
+      ]
+    }
   ]
 }

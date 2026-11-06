@@ -202,6 +202,41 @@ def dohvati_lika(k, ime):
         reps.sort(key=lambda r: (-(r["tier"] or 0), -(r["vrijednost"] or 0)))
         rez["reputacije"] = [{k2: v for k2, v in r.items() if k2 != "tier"} for r in reps[:8]]
 
+    # statistika iz igre (ubojstva, smrti, questovi, potioni, bossovi...): sve kategorije, ravno
+    sa = sigurno(lambda: k.get(baza + "/achievements/statistics"))
+    if sa:
+        stat = []
+
+        def hodaj(c, kat):
+            for x in c.get("statistics") or []:
+                if x.get("quantity") is not None:
+                    q = x["quantity"]
+                    r = {"kat": kat, "ime": x.get("name"), "n": int(q) if float(q).is_integer() else q}
+                    if x.get("description"):
+                        r["opis"] = x["description"]
+                    stat.append(r)
+            for sc in c.get("sub_categories") or []:
+                hodaj(sc, sc.get("name", kat))
+        for c in sa.get("categories", []):
+            hodaj(c, c.get("name", ""))
+        rez["statistika"] = stat
+
+    qs = sigurno(lambda: k.get(baza + "/quests"))
+    qz = sigurno(lambda: k.get(baza + "/quests/completed"))
+    if qs or qz:
+        rez["questovi"] = {"uLogu": [q.get("name") for q in (qs or {}).get("in_progress", [])],
+                           "zavrseno": len((qz or {}).get("quests", []))}
+
+    mo = sigurno(lambda: k.get(baza + "/collections/mounts"))
+    if mo:
+        rez["mountovi"] = [m["mount"]["name"] for m in mo.get("mounts", []) if m.get("mount")]
+    pe = sigurno(lambda: k.get(baza + "/collections/pets"))
+    if pe:
+        rez["petovi"] = sorted({x.get("name") or (x.get("species") or {}).get("name") for x in pe.get("pets", [])} - {None})
+    pv = sigurno(lambda: k.get(baza + "/pvp-summary"))
+    if pv:
+        rez["pvp"] = {"hk": pv.get("honorable_kills", 0), "rang": pv.get("pvp_rank", 0)}
+
     md = sigurno(lambda: k.get(baza + "/character-media"))
     if md:
         a = {x.get("key"): x.get("value") for x in md.get("assets", [])}
@@ -210,6 +245,67 @@ def dohvati_lika(k, ime):
         if a.get("avatar"):
             rez["avatar"] = a["avatar"]
     return {x: v for x, v in rez.items() if v is not None}
+
+
+KLASE = {1: "Warrior", 2: "Paladin", 3: "Hunter", 4: "Rogue", 5: "Priest", 7: "Shaman", 8: "Mage", 9: "Warlock", 11: "Druid"}
+RASE = {2: "Orc", 5: "Undead", 6: "Tauren", 8: "Troll", 10: "Blood Elf"}
+
+
+def dohvati_guild(k, slug):
+    """Guild i roster (svi članovi, ne samo nas pet). Level u rosteru Blizzard osvježava sporije od profila."""
+    g = k.get("/data/wow/guild/" + slug)
+    r = k.get("/data/wow/guild/" + slug + "/roster")
+    clanovi = []
+    for m in r.get("members", []):
+        c = m.get("character", {})
+        clanovi.append({"ime": " ".join(x for x in (c.get("name"), c.get("surname")) if x), "level": c.get("level"),
+                        "klasa": KLASE.get((c.get("playable_class") or {}).get("id")), "rasa": RASE.get((c.get("playable_race") or {}).get("id")),
+                        "rang": m.get("rank"), "slug": c.get("slug")})
+    # roster kasni, pa se za svakog člana uzme svjež profil (level, ilvl, zadnji login) i avatar
+    for cl in clanovi:
+        if not cl.get("slug"):
+            continue
+        pr = sigurno(lambda: k.get("/profile/wow/character/" + cl["slug"]))
+        if pr:
+            cl["level"] = pr.get("level", cl["level"])
+            cl["ilvl"] = pr.get("equipped_item_level")
+            cl["zadnjiLogin"] = iso(pr.get("last_login_timestamp"))
+        md = sigurno(lambda: k.get("/profile/wow/character/" + cl["slug"] + "/character-media"))
+        if md:
+            cl["avatar"] = next((x.get("value") for x in md.get("assets", []) if x.get("key") == "avatar"), None)
+    clanovi.sort(key=lambda x: (x["rang"] if x["rang"] is not None else 99, -(x["level"] or 0)))
+    return {"ime": g.get("name"), "clanova": g.get("member_count"), "osnovan": iso(g.get("created_timestamp")),
+            "ruleset": (g.get("ruleset") or {}).get("name"), "roster": clanovi}
+
+
+def sinkroniziraj_profesije(likovi, dan):
+    """profesije.json prati igru: profesije i skill likova iz rostera prepišu se iz API-ja, a svaka
+    promjena skilla doda red u history (legacy pragovi i graf na webu). Alti (druid, mage) ostaju ručni."""
+    put = os.path.join(KORIJEN, "profesije.json")
+    with open(put, encoding="utf-8") as f:
+        doc = json.load(f)
+    promjena = False
+    for c in doc.get("characters", []):
+        a = likovi.get(c.get("name") or "")
+        if not a or "profesije" not in a:
+            continue
+        staro = {x["name"]: x.get("skill", 0) for x in c.get("professions", []) + c.get("secondary", [])}
+        faze = {x["name"]: x.get("phase", "stalno") for x in c.get("professions", [])}
+        prim = [{"name": x["name"], "skill": x["skill"], "phase": faze.get(x["name"], "stalno")} for x in a["profesije"] if x.get("vrsta") == "primarna"]
+        sek = [{"name": x["name"], "skill": x["skill"]} for x in a["profesije"] if x.get("vrsta") != "primarna"]
+        if prim != c.get("professions") or sek != c.get("secondary"):
+            c["professions"], c["secondary"] = prim, sek
+            promjena = True
+        for x in prim + sek:
+            if x["skill"] and x["skill"] != staro.get(x["name"]):
+                doc.setdefault("history", []).append({"date": dan, "character": c["id"], "profession": x["name"], "skill": x["skill"]})
+                promjena = True
+    if promjena:
+        with open(put, "w", encoding="utf-8") as f:
+            json.dump(doc, f, ensure_ascii=False, indent=2)
+            f.write("\n")
+        print("  profesije.json usklađen s igrom")
+    return promjena
 
 
 def main():
@@ -237,6 +333,16 @@ def main():
             doc["likovi"][ime] = rez
             promjena = True
             print("  %s: novo (level %s)" % (ime, rez.get("level")))
+    try:
+        sinkroniziraj_profesije(doc["likovi"], sada[:10])
+    except Exception as e:
+        print("  profesije.json nije usklađen (%s)" % e)
+    gslug = next((re.sub(r"[^a-z0-9]+", "-", l["guild"].lower()).strip("-") for l in doc["likovi"].values() if l.get("guild")), None)
+    if gslug:
+        g = sigurno(lambda: dohvati_guild(k, gslug))
+        if g and g != doc.get("guild"):
+            doc["guild"] = g
+            promjena = True
     # "provjereno" se upiše svaki put, da web pokaže kad je zadnji refresh (i kad se ništa nije promijenilo)
     doc["provjereno"] = sada
     if promjena:

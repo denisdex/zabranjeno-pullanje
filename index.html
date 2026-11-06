@@ -630,6 +630,78 @@ section[id] { scroll-margin-top: 84px; }
 .arm-tal li { display: flex; justify-content: space-between; gap: 10px; border-bottom: 1px solid var(--line); padding: 4px 0; }
 .arm-tal b { font-weight: 500; }
 .arm-tal em { font-style: normal; color: var(--c); }
+/* render lika iz igre: Blizzardov kadar 1600x1200, lik je u sredini, pa se uveća i centrira */
+.p-ig { position: absolute; z-index: 3; right: 8px; bottom: 8px; width: 30%; aspect-ratio: 3 / 4; background: radial-gradient(closest-side, color-mix(in srgb, var(--c) 30%, transparent), transparent) , rgba(12, 9, 8, .55); background-size: 300% auto, auto; background-position: 50% 58%, 0 0; background-repeat: no-repeat; border: 1px solid color-mix(in srgb, var(--c) 45%, transparent); backdrop-filter: blur(3px); }
+.p-ig[style] { background-size: 300% auto; background-position: 50% 58%; background-repeat: no-repeat; background-color: rgba(12, 9, 8, .6); }
+.p-ig em { position: absolute; left: 0; right: 0; bottom: 3px; text-align: center; font-style: normal; font-size: .5rem; letter-spacing: .1em; color: var(--c); text-transform: uppercase; }
+.p-ig-l { margin: -4px 0 0; font-size: .625rem; letter-spacing: .04em; color: #6fae5a; }
+.arm-top { display: grid; gap: 22px; }
+@media (min-width: 760px) { .arm-top { grid-template-columns: minmax(200px, 300px) minmax(0, 1fr); align-items: start; } }
+.arm-ig { margin: 0; aspect-ratio: 3 / 4; position: relative; background-size: 300% auto; background-position: 50% 58%; background-repeat: no-repeat; background-color: var(--iron-2); background-image: none; border: 1px solid var(--line); box-shadow: inset 0 -80px 80px -40px color-mix(in srgb, var(--c) 22%, transparent); }
+.arm-ig figcaption { position: absolute; left: 10px; right: 10px; bottom: 8px; font-size: .5625rem; letter-spacing: .06em; color: var(--dust); }
+.arm-h4 { margin: 18px 0 10px; color: var(--c); }
+.arm-sit { margin: 8px 0 0; font-size: .625rem; letter-spacing: .04em; color: var(--dust); }
+.arm-sad { border-left: 2px solid var(--c); background: rgba(236, 226, 212, .04); padding: 16px 18px; }
+.arm-sad h4.lab { margin: 0 0 10px; color: var(--c); }
+.sad-l { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.sad-l li { display: grid; grid-template-columns: 5.6rem minmax(0, 1fr); gap: 10px; align-items: baseline; }
+.sad-l em { font-style: normal; font-size: .5625rem; letter-spacing: .08em; text-transform: uppercase; color: var(--dust); }
+.sad-l li.hitno em { color: #ff7a2e; }
+.sad-l li.hitno span { color: var(--bone); font-weight: 600; }
+.arm-det summary { cursor: pointer; color: var(--c); margin-bottom: 10px; }
+.arm-q { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; max-height: 22rem; overflow: auto; }
+.arm-q li { border-bottom: 1px solid var(--line); padding: 4px 0; }
+.arm-q a { color: var(--bone); text-decoration: none; }
+.arm-q a:hover { color: var(--c); }
+.arm-sv li { display: flex; justify-content: space-between; gap: 10px; }
+.arm-sv span { color: var(--dust); }
+.arm-chip { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.arm-chip li { border: 1px solid color-mix(in srgb, var(--c) 45%, transparent); padding: 4px 8px; font-size: .8125rem; }
+.arm-chip li.pet { border-style: dashed; color: var(--dust); }
+/* Guild sekcija */
+.gh { display: grid; gap: 14px; margin-bottom: 26px; }
+.gh-tag { margin: 0; color: var(--ember); font-size: .6875rem; letter-spacing: .1em; text-transform: uppercase; }
+.gh-ime { margin: 0; font: 900 clamp(2rem, 6vw, 4.2rem)/.9 var(--f-display); text-transform: uppercase; letter-spacing: .01em; color: var(--bone); overflow-wrap: anywhere; }
+.gh-f { margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(8.5rem, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.gh-f div { background: var(--night); padding: 12px 14px; }
+.gh-f dt { color: var(--dust); font-size: .5625rem; letter-spacing: .08em; margin-bottom: 6px; }
+.gh-f dd { margin: 0; font: 800 1.35rem/1 var(--f-display); font-variant-numeric: tabular-nums; }
+#guild .gr { display: block; border-top: 1px solid var(--line); }
+.gr-h, .gr-r { display: grid; grid-template-columns: 44px minmax(0, 1.6fr) minmax(5rem, .8fr) 3.6rem 7.5rem 7rem; gap: 14px; align-items: center; padding: 10px 6px; border-bottom: 1px solid var(--line); }
+.gr-h { color: var(--dust); font-size: .5625rem; letter-spacing: .08em; padding-block: 8px; }
+a.gr-r { color: inherit; text-decoration: none; }
+a.gr-r:hover, a.gr-r:focus-visible { background: rgba(236, 226, 212, .05); }
+.gr-av { position: relative; width: 44px; height: 44px; display: grid; place-items: center; overflow: hidden; background: color-mix(in srgb, var(--k) 22%, var(--iron-2)); border: 1px solid color-mix(in srgb, var(--k) 60%, transparent); font: 900 1.2rem/1 var(--f-display); color: var(--k); }
+.gr-av img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.gr-ime { display: grid; gap: 3px; min-width: 0; }
+.gr-ime b { font: 800 1.05rem/1.1 var(--f-display); text-transform: uppercase; letter-spacing: .02em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.gr-ime span { font-size: .625rem; color: var(--dust); letter-spacing: .04em; }
+.gr-lvl { display: grid; grid-template-columns: 2rem minmax(0, 1fr); gap: 8px; align-items: center; }
+.gr-lvl b { font: 800 1.15rem/1 var(--f-display); font-variant-numeric: tabular-nums; }
+.gr-lvl i { position: relative; height: 5px; background: var(--iron-2); }
+.gr-lvl s { position: absolute; inset: 0 auto 0 0; }
+.gr-c { font-size: .6875rem; color: var(--dust); }
+.gr-rang.gm { color: var(--ember); }
+@media (max-width: 760px) {
+  .gr-h { display: none; }
+  .gr-r { grid-template-columns: 44px minmax(0, 1fr) 4.6rem; row-gap: 4px; }
+  .gr-r .gr-c { grid-column: 2 / -1; display: inline; }
+  .gr-r .gr-c:empty { display: none; }
+}
+.g-pod { margin: 34px 0 14px; color: var(--ember); }
+.gbs { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 22px 28px; }
+.gb h4.lab { margin: 0 0 8px; color: var(--bone); }
+.gb ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 5px; }
+.gb li { display: grid; grid-template-columns: 4.2rem minmax(0, 1fr) 3rem; gap: 8px; align-items: center; font-size: .8125rem; color: var(--dust); }
+.gb li.prvi { color: var(--bone); font-weight: 600; }
+.gb li.prvi span::after { content: " ★"; color: var(--ember); }
+.gb i { position: relative; height: 7px; background: var(--iron-2); }
+.gb s { position: absolute; inset: 0 auto 0 0; }
+.gb b { text-align: right; font-weight: 500; font-variant-numeric: tabular-nums; }
+.gboss { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.gboss li { display: flex; flex-wrap: wrap; gap: 4px 14px; border-bottom: 1px solid var(--line); padding: 6px 0; }
+.gboss span { color: var(--dust); }
+.g-nap { margin: 22px 0 0; font-size: .5625rem; color: var(--dust); opacity: .7; }
 /* guide u profilu (vodicHtml) */
 .vx { grid-column: 1 / -1; display: grid; gap: 30px; padding-top: 30px; border-top: 1px solid var(--line); }
 .vx-head { display: grid; gap: 10px; }
@@ -2321,6 +2393,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     <nav class="menu" id="menu" aria-label="Sekcije">
       <ul class="nav-l" id="navL">
         <li><a href="#ekipa">Ekipa</a></li>
+        <li><a href="#guild">Guild</a></li>
         <li><a href="#novosti">News</a></li>
         <li class="dd"><button type="button" class="dd-b" aria-expanded="false" aria-controls="ddPlan">Plan<span class="dd-s" aria-hidden="true">▾</span></button>
           <div class="dd-p" id="ddPlan"><a href="#roadmap">Roadmap</a><a href="#dungeoni">Dungeoni</a><a href="#guide">Guide &amp; Rules</a></div></li>
@@ -2391,6 +2464,16 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
         <div class="party-bar mono" id="partyBar"></div>
       </div>
       <div class="plates" id="plates"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="guild">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Guild</h2>
+        <span class="meta mono" id="guildMeta"></span>
+      </div>
+      <div id="guildBody"><p class="prazno mono">Guild se učitava iz igre…</p></div>
     </div>
   </section>
 
@@ -2770,6 +2853,8 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
   Promise.race([Promise.all([dohvatiJson("data/likovi.json"), dohvatiJson("data/vijesti.json")]), rok]).then(function (res) { pokreni(res[0], res[1]); });
 
   function spojiAutomatsko(D, ARM, VIJ) {
+    D.guildAuto = ARM && ARM.guild ? ARM.guild : null;
+    D.armoryProvjereno = ARM ? ARM.provjereno || ARM.azurirano : null;
     D.vijestiAuto = VIJ && VIJ.stavke ? VIJ.stavke : [];
     D.vijestiAzurirano = VIJ ? VIJ.azurirano : null;
     if (!ARM || !ARM.likovi) return;
@@ -3248,6 +3333,8 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     // u profilu je cijeli lik vidljiv, a prazan rub popuni zamućena ista slika
     if (veliki && p.foto && !sir) h = '<img class="pbg" src="' + esc(p.foto) + '" alt="" aria-hidden="true">' + h;
     // na kartici: široki kadar za hover (učita se tek na prvi prelazak mišem)
+    // na kartici: lik kakav je sad u igri (render s opremom iz Blizzard API-ja)
+    if (!veliki && p.armory && p.armory.slika) h += '<span class="p-ig" style="background-image:url(' + esc(p.armory.slika) + ')" title="' + esc(p.lik) + ' u igri, s trenutnom opremom"><em class="mono">u igri</em></span>';
     if (!veliki && p.siroka) h += '<img class="p-wide" data-src="' + esc(p.siroka) + '" alt="" aria-hidden="true" style="--fx:' + fokus(p)[0] + "%;--fy:" + fokus(p)[1] + '%">';
     return '<div class="portrait' + (sir ? " siroki" : "") + '">' + h + '<div class="fog"></div>' +
       '<div class="p-top mono"><span class="role">' + IKONE[r] + esc(p.uloga) + "</span><span>" + esc(p.klasa) + "</span></div>" +
@@ -3282,12 +3369,73 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
         '<div class="p-body">' +
         '<p class="p-who"><span class="mono">Igrač</span><b>' + esc(p.igrac) + "</b></p>" +
         '<dl class="p-meta"><div><dt class="mono">Rasa</dt><dd>' + esc(p.rasa) + '</dd></div><div><dt class="mono">Klasa</dt><dd>' + esc(p.klasa) + '</dd></div><div><dt class="mono">Uloga</dt><dd>' + esc(r) + "</dd></div></dl>" +
+        (p.armory ? '<p class="p-ig-l mono">' + [p.armory.specka ? esc(p.armory.specka) + " " + (p.armory.talenti || []).join("/") : "", p.armory.ilvl ? "ilvl " + p.armory.ilvl : "", p.armory.zadnjiLogin ? "u igri " + prije(p.armory.zadnjiLogin) : ""].filter(Boolean).join(" · ") + "</p>" : "") +
         '<div class="p-lvl"><div class="lvl-head"><span class="mono">Level</span><span class="n">' + lvl + '<small>/60</small></span></div>' + gaugeHtml(p) + svjezina(p) + "</div>" +
         '<div class="p-prof" data-prof-lik="' + slug(p.lik) + '"><span class="lab mono">Profesije</span>' + profHtml(p) + "</div>" +
         goldHtml(p) +
         '<a class="p-more mono" href="#lik/' + slug(p.lik) + '">Otvori profil</a>' +
       "</div></div></article>";
   }).join("");
+
+  // ---------- Guild: roster i brojke iz igre (data/likovi.json → guild, statistika) ----------
+  (function () {
+    var G = D.guildAuto, el = $("guildBody");
+    if (!el) return;
+    if (!G) { el.innerHTML = '<p class="prazno mono">Podaci o guildu dolaze iz igre (Blizzard API). Još nisu skinuti.</p>'; return; }
+    var nasi = {};
+    igraci.forEach(function (p) { nasi[p.lik] = p; });
+    var RANG = D.guildRangovi || {};
+    function rangIme(r) { return RANG[r] || (r === 0 ? "Guild Master" : "Rang " + r); }
+    var lv = G.roster.map(function (m) { return m.level || 0; });
+    var prosjek = lv.length ? Math.round(lv.reduce(function (a, b) { return a + b; }, 0) / lv.length) : 0;
+    var osn = G.osnovan ? new Date(G.osnovan) : null;
+    $("guildMeta").innerHTML = "Iz igre · " + (D.armoryProvjereno ? "refresh " + prije(D.armoryProvjereno) : "");
+    var cinjenice = [["Članova", G.clanova || G.roster.length], ["Prosječni level", prosjek], ["Najviši", Math.max.apply(null, lv.concat([0]))], ["Osnovan", osn ? osn.getDate() + ". " + (osn.getMonth() + 1) + ". " + osn.getFullYear() + "." : "–"], ["Server", "EU · " + (G.ruleset || "Normal")]];
+    var roster = G.roster.map(function (m) {
+      var p = nasi[m.ime], boja = (p && BOJE[m.klasa]) || BOJE_KLASA[m.klasa] || "#ece2d4";
+      var av = m.avatar ? '<img src="' + esc(m.avatar) + '" alt="" loading="lazy" onerror="this.remove()">' : "";
+      var unutra = '<span class="gr-av" style="--k:' + boja + '">' + esc((m.ime || "?").charAt(0)) + av + "</span>" +
+        '<span class="gr-ime"><b style="color:' + boja + '">' + esc(m.ime) + '</b><span class="mono">' + esc([m.rasa, m.klasa].filter(Boolean).join(" ")) + (p ? " · " + esc(p.igrac) : "") + "</span></span>" +
+        '<span class="gr-lvl"><b>' + (m.level || "–") + '</b><i><s style="width:' + ((m.level || 0) / 60 * 100).toFixed(1) + "%;background:" + boja + '"></s></i></span>' +
+        '<span class="gr-c mono">' + (m.ilvl ? "ilvl " + m.ilvl : "") + "</span>" +
+        '<span class="gr-c mono gr-rang' + (m.rang === 0 ? " gm" : "") + '">' + esc(rangIme(m.rang)) + "</span>" +
+        '<span class="gr-c mono">' + (m.zadnjiLogin ? prije(m.zadnjiLogin) : "") + "</span>";
+      return p ? '<a class="gr-r" href="#lik/' + slug(p.lik) + '">' + unutra + "</a>" : '<div class="gr-r">' + unutra + "</div>";
+    }).join("");
+    // ekipa u brojkama: statistika iz igre za nas pet, vođa svake brojke označen
+    var MJERE = [["Ubojstva", "Total kills"], ["Smrti", "Total deaths"], ["Questovi", "Quests completed"], ["Dungeoni", "Total 5-player dungeons entered"],
+      ["Killing blowovi", "Total Killing Blows"], ["Health potioni", "Health potions consumed"], ["Bandage", "Bandages used"], ["Hrana", "Food eaten"],
+      ["Flight pathovi", "Flight paths taken"], ["Need rollovi", "Need rolls made on loot"], ["Dobiveni duelovi", "Duels won"], ["LOL", "Total times LOL'd"]];
+    function stat(p, ime) {
+      var s = ((p.armory || {}).statistika || []).filter(function (x) { return x.ime === ime; })[0];
+      return s ? +s.n || 0 : 0;
+    }
+    var sNama = igraci.filter(function (p) { return p.armory && p.armory.statistika; });
+    var brojke = MJERE.map(function (mj) {
+      var red = sNama.map(function (p) { return { p: p, n: stat(p, mj[1]) }; }).sort(function (a, b) { return b.n - a.n; });
+      var max = red.length ? red[0].n : 0;
+      if (!max) return "";
+      return '<div class="gb"><h4 class="lab mono">' + esc(mj[0]) + '</h4><ol>' + red.map(function (r, i) {
+        return '<li class="' + (i === 0 ? "prvi" : "") + '"><span>' + esc(r.p.igrac) + '</span><i><s style="width:' + (r.n / max * 100).toFixed(1) + "%;background:" + BOJE[r.p.klasa] + '"></s></i><b class="mono">' + r.n + "</b></li>";
+      }).join("") + "</ol></div>";
+    }).join("");
+    // bossovi koje je netko od nas ubio
+    var bossovi = {};
+    sNama.forEach(function (p) {
+      p.armory.statistika.forEach(function (x) {
+        if (x.kat !== "Boss Kills" || !x.n) return;
+        (bossovi[x.ime] = bossovi[x.ime] || []).push(p.igrac + (x.n > 1 ? " ×" + x.n : ""));
+      });
+    });
+    var bk = Object.keys(bossovi).map(function (b) { return "<li><b>" + esc(b.replace(/ kills \(/, " (")) + "</b><span>" + esc(bossovi[b].join(", ")) + "</span></li>"; }).join("");
+    el.innerHTML =
+      '<div class="gh" data-reveal><p class="gh-tag mono">Horde · guild ekipe</p><h3 class="gh-ime">&lt;' + esc(G.ime) + '&gt;</h3>' +
+        '<dl class="gh-f">' + cinjenice.map(function (c) { return '<div><dt class="mono">' + c[0] + "</dt><dd>" + esc(String(c[1])) + "</dd></div>"; }).join("") + "</dl></div>" +
+      '<div class="gr" data-reveal><div class="gr-h mono"><span></span><span>Lik</span><span>Level</span><span>ilvl</span><span>Rang</span><span>Zadnji put u igri</span></div>' + roster + "</div>" +
+      (brojke ? '<h3 class="g-pod lab mono">Ekipa u brojkama</h3><div class="gbs" data-reveal>' + brojke + "</div>" : "") +
+      (bk ? '<h3 class="g-pod lab mono">Ubijeni bossovi</h3><ul class="gboss">' + bk + "</ul>" : "") +
+      '<p class="g-nap mono">Imena rangova API ne daje; upisuju se u data.js (guildRangovi).</p>';
+  })();
 
   // 3D nagib pločica na hover i dodir
   Array.prototype.forEach.call(document.querySelectorAll(".plate"), function (el) {
@@ -3417,6 +3565,50 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     var poSlugu = {};
     igraci.forEach(function (p, i) { poSlugu[slug(p.lik)] = { p: p, i: i }; });
 
+    // "Što sad": savjeti izračunati iz igre (talenti, prazni slotovi, sivi predmeti, profesije, questlog) + ručni trikovi iz data.js po levelu
+    var PRAZNO_VAZNO = ["Head", "Shoulder", "Back", "Chest", "Wrist", "Hands", "Waist", "Legs", "Feet", "Main Hand"];
+    var SAKUPLJACKE = { Mining: 1, Herbalism: 1, Skinning: 1 };
+    var sadP = null;
+    function sadHtml(a) {
+      var p = sadP, lvl = p ? lvlOf(p) : a.level || 0, t = [];
+      var slob = Math.max(0, lvl - 9) - (a.talenti || []).reduce(function (x, y) { return x + (+y || 0); }, 0);
+      if (slob > 0) t.push(["hitno", "Imaš " + slob + " nepotrošen" + (slob === 1 ? " talent bod" : "a talent boda") + ". Otvori talente (N)."]);
+      var ima = {};
+      (a.oprema || []).forEach(function (o) { ima[o.slot] = o; });
+      var prazni = PRAZNO_VAZNO.filter(function (s) { return !ima[s]; });
+      if (p && (p.klasa === "Paladin" || p.klasa === "Warrior" || p.klasa === "Shaman") && p.uloga === "Tank" && !ima["Off Hand"]) prazni.push("Off Hand (štit)");
+      if (prazni.length) t.push(["oprema", "Prazno: " + prazni.join(", ") + ". Bilo koji green ili quest nagrada je bolja od ničega."]);
+      if (lvl >= 20) { var nak = ["Neck", "Finger 1", "Trinket 1"].filter(function (s) { return !ima[s]; }); if (nak.length) t.push(["oprema", "Još bez: " + nak.join(", ").replace("Finger 1", "prstena").replace("Trinket 1", "trinketa") + ". Pogledaj AH i quest nagrade."]); }
+      var sivi = (a.oprema || []).filter(function (o) { return o.kvaliteta === "poor" || o.kvaliteta === "common"; });
+      if (sivi.length) t.push(["oprema", "Za zamjenu: " + sivi.map(function (o) { return o.ime + " (" + o.slot + ")"; }).join(", ") + "."]);
+      var prim = (a.profesije || []).filter(function (x) { return x.vrsta === "primarna"; });
+      if (prim.length < 2) t.push(["prof", "Imaš slobodno mjesto za još jednu profesiju."]);
+      (a.profesije || []).forEach(function (x) {
+        var m = x.max || 75;
+        var sljedeci = m === 75 ? [10, "Journeyman (do 150)"] : m === 150 ? [20, "Expert (do 225)"] : m === 225 ? [35, "Artisan (do 300)"] : null;
+        if (sljedeci && x.skill >= m - 25) t.push(["prof", x.name + " " + x.skill + "/" + m + ": " + (lvl >= sljedeci[0] ? "idi kod trenera po " + sljedeci[1] + "." : "za " + sljedeci[1] + " treba level " + sljedeci[0] + ".")]);
+        if (SAKUPLJACKE[x.name] && x.skill < lvl * 5 - 30) t.push(["prof", x.name + " zaostaje: " + x.skill + ", za level " + lvl + " dobro je oko " + Math.min(300, lvl * 5) + "."]);
+        if (x.name === "First Aid" && x.skill < Math.min(lvl * 5, 225) - 40) t.push(["prof", "First Aid je " + x.skill + ": bandage spašavaju dungeon, dobro ga je držati oko " + Math.min(lvl * 5, 225) + "."]);
+      });
+      var q = (a.questovi || {}).uLogu || [];
+      if (q.length >= 25) t.push(["quest", q.length + " questova u logu: obriši sive i one iz zona u koje se ne vraćaš."]);
+      if (a.zadnjiLogin && Date.now() - Date.parse(a.zadnjiLogin) > 3 * 864e5) t.push(["info", "Nije bio u igri " + prije(a.zadnjiLogin).replace("prije ", "") + "."]);
+      // guide vs igra: koje talente bi po guideu imao do sad, a koje stvarno ima
+      var put = p && p.profil && p.profil.vodic && p.profil.vodic.talentiPut;
+      if (put && put.length && (a.talentiPopis || []).length) {
+        var treba = {}, imaT = {};
+        put.forEach(function (x) { var n = Math.min(lvl, x.do) - x.od + 1; if (n > 0) treba[x.ime] = (treba[x.ime] || 0) + n; });
+        a.talentiPopis.forEach(function (x) { imaT[x.ime] = x.rang; });
+        var razl = Object.keys(treba).some(function (k) { return imaT[k] !== treba[k]; }) || Object.keys(imaT).some(function (k) { return !treba[k]; });
+        if (razl) t.push(["tal", "Guide do levela " + lvl + ": " + Object.keys(treba).map(function (k) { return k + " " + treba[k]; }).join(", ") + ". U igri imaš: " + a.talentiPopis.map(function (x) { return x.ime + " " + x.rang; }).join(", ") + "."]);
+      }
+      var tr = ((p && p.trikovi) || []).filter(function (x) { return x.od <= lvl && lvl <= x.do; });
+      if (!t.length && !tr.length) return "";
+      var IME = { hitno: "Odmah", oprema: "Oprema", prof: "Profesije", quest: "Questovi", info: "Info", tal: "Talenti" };
+      return '<div class="arm-sad"><h4 class="lab mono">Što sad · lvl ' + lvl + "</h4>" +
+        (t.length ? '<ul class="sad-l">' + t.map(function (x) { return '<li class="' + x[0] + '"><em class="mono">' + IME[x[0]] + "</em><span>" + esc(x[1]) + "</span></li>"; }).join("") + "</ul>" : "") +
+        (tr.length ? '<h4 class="lab mono arm-h4">Tips &amp; tricks</h4><ul class="dng-l">' + tr.map(function (x) { return "<li>" + esc(x.tekst) + "</li>"; }).join("") + "</ul>" : "") + "</div>";
+    }
     // "U igri sad": sve što Blizzard API zna o liku (skripte/armory.py → data/likovi.json)
     function armoryHtml(a) {
       if (!a) return "";
@@ -3439,13 +3631,35 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
           return '<li title="' + esc(t.opis || "") + '"><b>' + esc(t.ime) + '</b><em class="mono">' + t.rang + "</em></li>";
         }).join("") + "</ul></div>";
       }).join("");
+      var stat = {};
+      (a.statistika || []).forEach(function (x) { stat[x.ime] = x; });
+      var brojke = [["Ubojstva", "Total kills"], ["Smrti", "Total deaths"], ["Questovi", "Quests completed"], ["Dungeoni", "Total 5-player dungeons entered"], ["Killing blowovi", "Total Killing Blows"],
+        ["Health potioni", "Health potions consumed"], ["Bandage", "Bandages used"], ["Hrana", "Food eaten"], ["Flight pathovi", "Flight paths taken"], ["Hearth", "Number of times hearthed"],
+        ["Need / Greed", null], ["LOL", "Total times LOL'd"]].map(function (b) {
+          if (!b[1]) return stat["Need rolls made on loot"] ? [b[0], (stat["Need rolls made on loot"] || {}).n + " / " + ((stat["Greed rolls made on loot"] || {}).n || 0)] : null;
+          return stat[b[1]] ? [b[0], stat[b[1]].n + (stat[b[1]].opis && !/^\d/.test(stat[b[1]].opis) ? "" : "")] : null;
+        }).filter(Boolean);
+      var naj = stat["Creature type killed the most"], kont = stat["Continent with the most Killing Blows"];
+      var q = a.questovi || {};
+      var sveStat = (a.statistika || []).filter(function (x) { return x.n; });
       return '<section class="arm" aria-label="U igri sad">' +
         '<header class="arm-head"><h3 class="lab mono">U igri sad</h3><p class="mono">' + meta + (a.provjereno ? " · zadnji refresh " + kad(a.provjereno) : "") + "</p></header>" +
-        (st.length ? '<dl class="arm-st">' + st.map(function (x) { return "<div><dt class=\"mono\">" + esc(x[0]) + "</dt><dd>" + esc(String(br(x[1]))) + "</dd></div>"; }).join("") + "</dl>" : "") +
+        '<div class="arm-top">' +
+          (a.slika ? '<figure class="arm-ig" style="background-image:url(' + esc(a.slika) + ')"><figcaption class="mono">Ovako izgleda sad, s opremom iz igre</figcaption></figure>' : "") +
+          "<div>" + (st.length ? '<dl class="arm-st">' + st.map(function (x) { return "<div><dt class=\"mono\">" + esc(x[0]) + "</dt><dd>" + esc(String(br(x[1]))) + "</dd></div>"; }).join("") + "</dl>" : "") +
+          (brojke.length ? '<h4 class="lab mono arm-h4">Brojke</h4><dl class="arm-st arm-br">' + brojke.map(function (x) { return "<div><dt class=\"mono\">" + esc(x[0]) + "</dt><dd>" + esc(String(x[1])) + "</dd></div>"; }).join("") + "</dl>" +
+            (naj || kont ? '<p class="arm-sit mono">' + [naj && naj.opis ? "najviše ubija: " + esc(naj.opis) + " (" + naj.n + ")" : "", kont && kont.opis ? "najviše na " + esc(kont.opis) : ""].filter(Boolean).join(" · ") + "</p>" : "") : "") +
+          "</div></div>" +
+        sadHtml(a) +
         '<div class="arm-kol">' +
           (prof ? '<div><h4 class="lab mono">Profesije u igri</h4><ul class="arm-bar">' + prof + "</ul></div>" : "") +
           (tal ? '<div><h4 class="lab mono">Uzeti talenti</h4><div class="arm-tals">' + tal + "</div></div>" : "") +
           (rep ? '<div><h4 class="lab mono">Reputacije</h4><ul class="arm-bar">' + rep + "</ul></div>" : "") +
+        "</div>" +
+        '<div class="arm-kol">' +
+          ((q.uLogu || []).length ? '<details class="arm-det"><summary class="lab mono">Questovi u logu · ' + q.uLogu.length + (q.zavrseno ? " · završeno " + q.zavrseno : "") + '</summary><ul class="arm-q">' + q.uLogu.map(function (x) { return '<li><a href="https://www.wowhead.com/classic/search?q=' + encodeURIComponent(x) + '" target="_blank" rel="noopener">' + esc(x) + "</a></li>"; }).join("") + "</ul></details>" : "") +
+          ((a.mountovi || []).length || (a.petovi || []).length ? '<div><h4 class="lab mono">Mountovi i petovi</h4><ul class="arm-chip">' + (a.mountovi || []).map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + (a.petovi || []).map(function (x) { return '<li class="pet">' + esc(x) + "</li>"; }).join("") + "</ul></div>" : "") +
+          (sveStat.length ? '<details class="arm-det"><summary class="lab mono">Sva statistika iz igre · ' + sveStat.length + '</summary><ul class="arm-q arm-sv">' + sveStat.map(function (x) { return "<li><span>" + esc(x.ime) + (x.opis ? " · " + esc(x.opis) : "") + "</span><b class=\"mono\">" + x.n + "</b></li>"; }).join("") + "</ul></details>" : "") +
         "</div></section>";
     }
     // redoslijed talenata u "Trenutni build": level, ikona, stablo i rang; prošli leveli blijede, trenutni je označen
@@ -3507,7 +3721,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
           '</dd></div><div><dt class="mono">Klasa</dt><dd style="color:' + BOJE[p.klasa] + '">' + esc(p.klasa) + '</dd></div><div><dt class="mono">Uloga</dt><dd>' + esc(r) + "</dd></div></dl>" +
           '<div class="prof-row"><div class="prof-lvl"><h3 class="lab mono">Level</h3><span class="n">' + lvl + "<small>/60</small></span>" + gaugeHtml(p) + svjezina(p) + goldHtml(p) + "</div>" +
           '<div class="p-prof"><h3 class="lab mono">Profesije</h3>' + profHtml(p, true) + "</div></div>" +
-          armoryHtml(p.armory) +
+          (sadP = p, armoryHtml(p.armory)) +
           '<div class="p-build"><h3 class="lab mono">Trenutni build</h3>' +
             '<div class="build-head"><b>' + esc(pf.specka || "još nema") + "</b><span>" + t.join("/") + "</span>" + (pf.plan ? "<em>plan</em>" : "") + "</div>" +
             '<div class="trees">' + st.map(function (n, k) {
