@@ -1557,8 +1557,21 @@ footer .f-kino:hover { color: var(--bone); }
   content: "Kralj sramote"; position: absolute; top: -9px; right: 10px; padding: 3px 7px;
   font: 500 .5rem/1 var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--night); background: var(--c);
 }
+/* kralj sramote: uvijek prvi, veći i u sjaju svoje boje */
+.wos-ig.kralj { padding-block: 18px; background: linear-gradient(180deg, color-mix(in srgb, var(--c) 16%, var(--iron)), var(--iron) 70%); border-color: color-mix(in srgb, var(--c) 55%, transparent); box-shadow: 0 0 34px -8px color-mix(in srgb, var(--c) 55%, transparent); }
+.wos-ig.kralj .ava { width: 60px; height: 60px; }
+@media (max-width: 759px) {
+  .wos-ig { grid-template-columns: auto minmax(0, 1fr); }
+  .wos-ig dl { grid-column: 1 / -1; grid-template-columns: repeat(3, minmax(0, 1fr)); padding-top: 10px; border-top: 1px solid var(--line); }
+}
+.wos-ig.kralj b { font-size: 1.6rem; }
+.wos-ig.kralj dd { font-size: 1.9rem; }
 @media (min-width: 760px) {
-  .wos-ekipa { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .wos-ekipa { grid-template-columns: minmax(0, 1.55fr) repeat(4, minmax(0, 1fr)); align-items: end; }
+  .wos-ig.kralj { padding-block: 28px 24px; }
+  .wos-ig.kralj .ava { width: 96px; height: 96px; }
+  .wos-ig.kralj b { font-size: 2.1rem; }
+  .wos-ig.kralj dd { font-size: 2.4rem; }
   .wos-ig { grid-template-columns: minmax(0, 1fr); justify-items: center; text-align: center; padding: 18px 10px 16px; }
   .wos-ig .ava { width: 60px; height: 60px; }
 }
@@ -4426,16 +4439,20 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       return x ? +x.n || 0 : 0;
     }
     var MJERE = [["Smrti", "Total deaths"], ["U dungeonu", "Total deaths in 5-player dungeons"], ["Need rollovi", "Need rolls made on loot"]];
-    var smrti = igraci.map(function (p) { return st(p, "Total deaths"); });
-    var max = Math.max.apply(null, smrti.concat(0));
-    var vodeci = max > 0 ? igraci.filter(function (p, i) { return smrti[i] === max; }) : [];
+    // poredak sramote: smrti, pa smrti u dungeonu, pa need rollovi; najsramotniji uvijek prvi i veći
+    var redom = igraci.slice().sort(function (a, b) {
+      return st(b, "Total deaths") - st(a, "Total deaths") || st(b, "Total deaths in 5-player dungeons") - st(a, "Total deaths in 5-player dungeons") ||
+        st(b, "Need rolls made on loot") - st(a, "Need rolls made on loot");
+    });
+    var max = redom.length ? st(redom[0], "Total deaths") : 0;
+    var vodeci = max > 0 ? [redom[0]] : [];
     function broj(n, lab) { return "<div><dt>" + lab + "</dt><dd" + (n ? "" : ' class="nula"') + ">" + n + "</dd></div>"; }
-    var ekipa = '<div class="wos-ekipa">' + igraci.map(function (p) {
-      return '<div class="wos-ig' + (vodeci.length === 1 && vodeci[0] === p ? " kralj" : "") + '" style="--c:' + BOJE[p.klasa] + '">' + avatar(p) +
+    var ekipa = '<div class="wos-ekipa">' + redom.map(function (p) {
+      return '<div class="wos-ig' + (vodeci[0] === p ? " kralj" : "") + '" style="--c:' + BOJE[p.klasa] + '">' + avatar(p) +
         "<b>" + esc(p.igrac) + "</b><dl>" + MJERE.map(function (m) { return broj(st(p, m[1]), m[0]); }).join("") + "</dl></div>";
     }).join("") + "</div>";
     $("wos").innerHTML = ekipa;
-    $("wosMeta").textContent = vodeci.length === 1 ? "kralj smrti: " + vodeci[0].igrac + " (" + max + ")" : "";
+    $("wosMeta").textContent = vodeci.length ? "kralj sramote: " + vodeci[0].igrac + " (" + max + " smrti)" : "";
   })();
 
   /* ---------- Kino: kartice iz data.js; video u overlayu preko cijelog ekrana, nakon kraja ili ✕ natrag na isto mjesto ---------- */
