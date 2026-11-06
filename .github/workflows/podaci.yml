@@ -23,6 +23,9 @@ jobs:
         with:
           python-version: "3.12"
       - name: Osvježi podatke
+        env:
+          BLIZZARD_CLIENT_ID: ${{ secrets.BLIZZARD_CLIENT_ID }}
+          BLIZZARD_CLIENT_SECRET: ${{ secrets.BLIZZARD_CLIENT_SECRET }}
         run: python skripte/osvjezi.py
       - name: Commit ako se nešto promijenilo
         run: |

@@ -27,21 +27,18 @@ Web čita `data/vijesti.json` i `data/likovi.json`. Kad ih nema ili su prazni, k
   Project configuration → Build & deploy → Link repository → GitHub → `denisdex/zabranjeno-pullanje`,
   grana `main`, build naredba prazna, publish directory `.` (korijen). Od tada svaki push i auto-commit deploya sam.
 
-## Armory nakon launcha (4. 11. 2026.)
+## Armory (Blizzard API, od 2026-11-06)
 
-Javni armoryji za Forever prije launcha još ne vraćaju likove, pa `armory.py` zasad ne radi ništa. Kad prorade:
-
-1. U `data.js` upiši `armory: { regija: "eu", realm: "<ime realma>" }` (realm na kojem igramo).
-2. Otvori profil jednog našeg lika na aotc.gg/forever ili armorywowforever.com i provjeri adresu.
-   Ako je drugačija, popravi popis `PREDLOSCI` u `skripte/armory.py`.
-3. U funkciji `parsiraj()` (označeno s TODO) dopiši gdje stranica drži talente, opremu i profesije.
-   Dok to nije dopisano, skripta upisuje samo level.
-4. Pokreni lokalno `python3 skripte/osvjezi.py` i pogledaj `data/likovi.json`, pa push.
+`skripte/armory.py` vuče likove iz službenog Blizzard API-ja (namespace `profile-forever-eu`, lik po slugu
+`ime-prezime`): level, guild, ilvl, statovi, oprema s ikonama, talenti, profesije, reputacije i render lika.
+Ključevi se čitaju iz okoline (`BLIZZARD_CLIENT_ID`, `BLIZZARD_CLIENT_SECRET`); na GitHubu su u
+Settings → Secrets and variables → Actions. Bez njih skripta preskoči armory i ništa ne mijenja.
+Klijent je napravljen na develop.battle.net (Dexov račun). Ključevi nikad ne idu u repo.
 
 ## Lokalno
 
 ```bash
-python3 skripte/osvjezi.py
+BLIZZARD_CLIENT_ID=... BLIZZARD_CLIENT_SECRET=... python3 skripte/osvjezi.py
 ```
 
 Prije svog pusha napravi `git pull --rebase`, jer bot svaki sat može dodati svoj commit.

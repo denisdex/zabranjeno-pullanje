@@ -1,4 +1,1042 @@
 {
- "azurirano": null,
- "likovi": {}
+ "azurirano": "2026-11-06T09:51:23Z",
+ "likovi": {
+  "Saman Saulic": {
+   "level": 15,
+   "xp": 7169,
+   "guild": "Kafana na Balkanu",
+   "ilvl": 8,
+   "zadnjiLogin": "2026-11-06T01:16:41Z",
+   "izvor": "Blizzard API",
+   "talenti": [
+    0,
+    5,
+    0
+   ],
+   "specka": "Enhancement",
+   "talentiPopis": [
+    {
+     "ime": "Concussion",
+     "rang": 1,
+     "stablo": "Elemental Combat",
+     "opis": "Increases the damage done by your Lightning Bolt, Chain Lightning, and Earth Shock spells by 1%."
+    },
+    {
+     "ime": "Thundering Strikes",
+     "rang": 5,
+     "stablo": "Enhancement",
+     "opis": "Improves your chance to get a critical strike with all spells and attacks by 5%."
+    }
+   ],
+   "oprema": [
+    {
+     "slot": "Chest",
+     "ime": "Burnt Leather Vest",
+     "kvaliteta": "uncommon",
+     "wowhead": 2961,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135013.jpg",
+     "ilvl": 11,
+     "enchant": "Enchanted: Stamina +1 and Armor +8"
+    },
+    {
+     "slot": "Waist",
+     "ime": "Binding Girdle",
+     "kvaliteta": "uncommon",
+     "wowhead": 5275,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132490.jpg",
+     "ilvl": 15
+    },
+    {
+     "slot": "Legs",
+     "ime": "Dredgemire Leggings",
+     "kvaliteta": "uncommon",
+     "wowhead": 15450,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/134587.jpg",
+     "ilvl": 18
+    },
+    {
+     "slot": "Feet",
+     "ime": "Tiger Hide Boots",
+     "kvaliteta": "common",
+     "wowhead": 4942,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132542.jpg",
+     "ilvl": 12
+    },
+    {
+     "slot": "Wrist",
+     "ime": "Mogra's Friendship Bracelet",
+     "kvaliteta": "uncommon",
+     "wowhead": 281269,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132603.jpg",
+     "ilvl": 10
+    },
+    {
+     "slot": "Hands",
+     "ime": "Tribal Gloves",
+     "kvaliteta": "common",
+     "wowhead": 3286,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132953.jpg",
+     "ilvl": 12
+    },
+    {
+     "slot": "Finger 1",
+     "ime": "Depleted Ritual Band",
+     "kvaliteta": "common",
+     "wowhead": 281268,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133348.jpg",
+     "ilvl": 9
+    },
+    {
+     "slot": "Back",
+     "ime": "Harvest Cloak",
+     "kvaliteta": "uncommon",
+     "wowhead": 4771,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133762.jpg",
+     "ilvl": 17
+    },
+    {
+     "slot": "Main Hand",
+     "ime": "Staff of Orgrimmar",
+     "kvaliteta": "rare",
+     "wowhead": 15444,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135225.jpg",
+     "ilvl": 18
+    }
+   ],
+   "profesije": [
+    {
+     "name": "Skinning",
+     "skill": 59,
+     "max": 75,
+     "vrsta": "primarna"
+    },
+    {
+     "name": "Mining",
+     "skill": 24,
+     "max": 75,
+     "vrsta": "primarna"
+    },
+    {
+     "name": "Cooking",
+     "skill": 3,
+     "max": 75,
+     "vrsta": "sekundarna"
+    },
+    {
+     "name": "Fishing",
+     "skill": 1,
+     "max": 75,
+     "vrsta": "sekundarna"
+    },
+    {
+     "name": "First Aid",
+     "skill": 20,
+     "max": 75,
+     "vrsta": "sekundarna"
+    }
+   ],
+   "statovi": {
+    "hp": 355,
+    "resurs": 550,
+    "resursIme": "Mana",
+    "str": 36,
+    "agi": 29,
+    "sta": 40,
+    "int": 38,
+    "spi": 47,
+    "armor": 329,
+    "ap": 82,
+    "spellPower": 18,
+    "crit": 8.28,
+    "spellCrit": 9.87,
+    "rangedCrit": 3.28,
+    "dodge": 4.68,
+    "parry": 0.0,
+    "block": 4.44,
+    "dps": 17.7
+   },
+   "reputacije": [
+    {
+     "ime": "Orgrimmar",
+     "status": "Friendly",
+     "vrijednost": 5738,
+     "max": 6000
+    },
+    {
+     "ime": "Darkspear Trolls",
+     "status": "Friendly",
+     "vrijednost": 3926,
+     "max": 6000
+    },
+    {
+     "ime": "Thunder Bluff",
+     "status": "Friendly",
+     "vrijednost": 700,
+     "max": 6000
+    },
+    {
+     "ime": "Ratchet",
+     "status": "Neutral",
+     "vrijednost": 1865,
+     "max": 3000
+    },
+    {
+     "ime": "Everlook",
+     "status": "Neutral",
+     "vrijednost": 1182,
+     "max": 3000
+    },
+    {
+     "ime": "Booty Bay",
+     "status": "Neutral",
+     "vrijednost": 1182,
+     "max": 3000
+    },
+    {
+     "ime": "Gadgetzan",
+     "status": "Neutral",
+     "vrijednost": 1182,
+     "max": 3000
+    },
+    {
+     "ime": "Powderfuse",
+     "status": "Neutral",
+     "vrijednost": 1182,
+     "max": 3000
+    }
+   ],
+   "slika": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-main-raw.png",
+   "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg",
+   "azurirano": "2026-11-06T09:51:23Z"
+  },
+  "Melee Kitic": {
+   "level": 16,
+   "xp": 1009,
+   "guild": "Kafana na Balkanu",
+   "ilvl": 7,
+   "zadnjiLogin": "2026-11-06T00:55:37Z",
+   "izvor": "Blizzard API",
+   "talenti": [
+    0,
+    7,
+    0
+   ],
+   "specka": "Fury",
+   "talentiPopis": [
+    {
+     "ime": "Cruelty",
+     "rang": 5,
+     "stablo": "Fury",
+     "opis": "Improves your chance to get a critical strike with melee attacks by 5%."
+    },
+    {
+     "ime": "Unbridled Wrath",
+     "rang": 2,
+     "stablo": "Fury",
+     "opis": "Gives you a 24% chance to generate 1 additional Rage when you deal melee damage with a weapon."
+    }
+   ],
+   "oprema": [
+    {
+     "slot": "Chest",
+     "ime": "Battle Chain Tunic",
+     "kvaliteta": "uncommon",
+     "wowhead": 3283,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132719.jpg",
+     "ilvl": 13,
+     "enchant": "Enchanted: Stamina +1 and Armor +8"
+    },
+    {
+     "slot": "Waist",
+     "ime": "Cinched Belt",
+     "kvaliteta": "uncommon",
+     "wowhead": 5328,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132492.jpg",
+     "ilvl": 15
+    },
+    {
+     "slot": "Legs",
+     "ime": "Raptorscale Pants",
+     "kvaliteta": "uncommon",
+     "wowhead": 281267,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/134583.jpg",
+     "ilvl": 8,
+     "enchant": "Enchanted: Stamina +1 and Armor +8"
+    },
+    {
+     "slot": "Feet",
+     "ime": "Lightweight Boots",
+     "kvaliteta": "common",
+     "wowhead": 4946,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132535.jpg",
+     "ilvl": 10
+    },
+    {
+     "slot": "Wrist",
+     "ime": "Garrison Cuffs",
+     "kvaliteta": "uncommon",
+     "wowhead": 270003,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132612.jpg",
+     "ilvl": 18
+    },
+    {
+     "slot": "Hands",
+     "ime": "Worn Mail Gloves",
+     "kvaliteta": "poor",
+     "wowhead": 1734,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132938.jpg",
+     "ilvl": 11
+    },
+    {
+     "slot": "Finger 1",
+     "ime": "Depleted Ritual Band",
+     "kvaliteta": "common",
+     "wowhead": 281268,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133348.jpg",
+     "ilvl": 9
+    },
+    {
+     "slot": "Back",
+     "ime": "Handsewn Cloak",
+     "kvaliteta": "common",
+     "wowhead": 4944,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133763.jpg",
+     "ilvl": 12
+    },
+    {
+     "slot": "Main Hand",
+     "ime": "Axe of Orgrimmar",
+     "kvaliteta": "rare",
+     "wowhead": 15424,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132395.jpg",
+     "ilvl": 18
+    }
+   ],
+   "profesije": [
+    {
+     "name": "Mining",
+     "skill": 59,
+     "max": 150,
+     "vrsta": "primarna"
+    },
+    {
+     "name": "Cooking",
+     "skill": 1,
+     "max": 75,
+     "vrsta": "sekundarna"
+    },
+    {
+     "name": "First Aid",
+     "skill": 1,
+     "max": 75,
+     "vrsta": "sekundarna"
+    }
+   ],
+   "statovi": {
+    "hp": 471,
+    "resurs": 100,
+    "resursIme": "Rage",
+    "str": 48,
+    "agi": 30,
+    "sta": 50,
+    "int": 19,
+    "spi": 36,
+    "armor": 585,
+    "ap": 124,
+    "spellPower": 1,
+    "crit": 7.06,
+    "spellCrit": 0.0,
+    "rangedCrit": 1.39,
+    "dodge": 4.19,
+    "parry": 4.64,
+    "block": 4.64,
+    "dps": 24.9
+   },
+   "reputacije": [
+    {
+     "ime": "Orgrimmar",
+     "status": "Honored",
+     "vrijednost": 576,
+     "max": 12000
+    },
+    {
+     "ime": "Darkspear Trolls",
+     "status": "Friendly",
+     "vrijednost": 4726,
+     "max": 6000
+    },
+    {
+     "ime": "Thunder Bluff",
+     "status": "Friendly",
+     "vrijednost": 650,
+     "max": 6000
+    },
+    {
+     "ime": "Ratchet",
+     "status": "Neutral",
+     "vrijednost": 2165,
+     "max": 3000
+    },
+    {
+     "ime": "Everlook",
+     "status": "Neutral",
+     "vrijednost": 1182,
+     "max": 3000
+    },
+    {
+     "ime": "Booty Bay",
+     "status": "Neutral",
+     "vrijednost": 1182,
+     "max": 3000
+    },
+    {
+     "ime": "Gadgetzan",
+     "status": "Neutral",
+     "vrijednost": 1182,
+     "max": 3000
+    },
+    {
+     "ime": "Powderfuse",
+     "status": "Neutral",
+     "vrijednost": 1182,
+     "max": 3000
+    }
+   ],
+   "slika": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-main-raw.png",
+   "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg",
+   "azurirano": "2026-11-06T09:51:23Z"
+  },
+  "Janica Frostelich": {
+   "level": 15,
+   "xp": 689,
+   "guild": "Kafana na Balkanu",
+   "ilvl": 8,
+   "zadnjiLogin": "2026-11-06T01:24:47Z",
+   "izvor": "Blizzard API",
+   "talenti": [
+    0,
+    1,
+    3
+   ],
+   "specka": "Frost",
+   "talentiPopis": [
+    {
+     "ime": "Incineration",
+     "rang": 1,
+     "stablo": "Fire",
+     "opis": "Increases the critical strike chance of your Fire Blast, Ice Lance, Arcane Blast, and Scorch spells by 2%."
+    },
+    {
+     "ime": "Precision",
+     "rang": 3,
+     "stablo": "Frost",
+     "opis": "Improves your chance to hit with all spells by 6%."
+    }
+   ],
+   "oprema": [
+    {
+     "slot": "Chest",
+     "ime": "Beaded Wraps of Spirit",
+     "kvaliteta": "uncommon",
+     "wowhead": 14094,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135009.jpg",
+     "ilvl": 11,
+     "enchant": "Enchanted: Stamina +1 and Armor +8"
+    },
+    {
+     "slot": "Waist",
+     "ime": "Aboriginal Sash of Spirit",
+     "kvaliteta": "uncommon",
+     "wowhead": 14113,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132494.jpg",
+     "ilvl": 15
+    },
+    {
+     "slot": "Legs",
+     "ime": "Ghastly Trousers",
+     "kvaliteta": "uncommon",
+     "wowhead": 15449,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/134594.jpg",
+     "ilvl": 18
+    },
+    {
+     "slot": "Feet",
+     "ime": "Dirt-trodden Boots",
+     "kvaliteta": "common",
+     "wowhead": 4936,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132542.jpg",
+     "ilvl": 8
+    },
+    {
+     "slot": "Wrist",
+     "ime": "Featherbead Bracers",
+     "kvaliteta": "uncommon",
+     "wowhead": 15452,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132607.jpg",
+     "ilvl": 18
+    },
+    {
+     "slot": "Hands",
+     "ime": "Heavy Linen Gloves",
+     "kvaliteta": "uncommon",
+     "wowhead": 4307,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132939.jpg",
+     "ilvl": 10
+    },
+    {
+     "slot": "Finger 1",
+     "ime": "Depleted Ritual Band",
+     "kvaliteta": "common",
+     "wowhead": 281268,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133348.jpg",
+     "ilvl": 9
+    },
+    {
+     "slot": "Back",
+     "ime": "Handsewn Cloak",
+     "kvaliteta": "common",
+     "wowhead": 4944,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133763.jpg",
+     "ilvl": 12
+    },
+    {
+     "slot": "Main Hand",
+     "ime": "Staff of Orgrimmar",
+     "kvaliteta": "rare",
+     "wowhead": 15444,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135225.jpg",
+     "ilvl": 18
+    }
+   ],
+   "profesije": [
+    {
+     "name": "Alchemy",
+     "skill": 1,
+     "max": 75,
+     "vrsta": "primarna"
+    },
+    {
+     "name": "Herbalism",
+     "skill": 9,
+     "max": 75,
+     "vrsta": "primarna"
+    },
+    {
+     "name": "Cooking",
+     "skill": 1,
+     "max": 75,
+     "vrsta": "sekundarna"
+    },
+    {
+     "name": "First Aid",
+     "skill": 6,
+     "max": 75,
+     "vrsta": "sekundarna"
+    }
+   ],
+   "statovi": {
+    "hp": 312,
+    "resurs": 726,
+    "resursIme": "Mana",
+    "str": 23,
+    "agi": 31,
+    "sta": 29,
+    "int": 49,
+    "spi": 45,
+    "armor": 183,
+    "ap": 13,
+    "spellPower": 19,
+    "crit": 4.35,
+    "spellCrit": 4.06,
+    "rangedCrit": 2.67,
+    "dodge": 4.71,
+    "parry": 0.0,
+    "block": 0.0,
+    "dps": 12.7
+   },
+   "reputacije": [
+    {
+     "ime": "Darkspear Trolls",
+     "status": "Friendly",
+     "vrijednost": 4710,
+     "max": 6000
+    },
+    {
+     "ime": "Orgrimmar",
+     "status": "Friendly",
+     "vrijednost": 4622,
+     "max": 6000
+    },
+    {
+     "ime": "Thunder Bluff",
+     "status": "Friendly",
+     "vrijednost": 637,
+     "max": 6000
+    },
+    {
+     "ime": "Ratchet",
+     "status": "Neutral",
+     "vrijednost": 1675,
+     "max": 3000
+    },
+    {
+     "ime": "Everlook",
+     "status": "Neutral",
+     "vrijednost": 1087,
+     "max": 3000
+    },
+    {
+     "ime": "Booty Bay",
+     "status": "Neutral",
+     "vrijednost": 1087,
+     "max": 3000
+    },
+    {
+     "ime": "Gadgetzan",
+     "status": "Neutral",
+     "vrijednost": 1087,
+     "max": 3000
+    },
+    {
+     "ime": "Powderfuse",
+     "status": "Neutral",
+     "vrijednost": 1087,
+     "max": 3000
+    }
+   ],
+   "slika": "https://render.worldofwarcraft.com/forever-eu/character/249/2574073-main-raw.png",
+   "avatar": "https://render.worldofwarcraft.com/forever-eu/character/249/2574073-avatar.jpg",
+   "azurirano": "2026-11-06T09:51:23Z"
+  },
+  "Nikola Roguevic": {
+   "level": 16,
+   "xp": 1433,
+   "guild": "Kafana na Balkanu",
+   "ilvl": 5,
+   "zadnjiLogin": "2026-11-06T01:17:00Z",
+   "izvor": "Blizzard API",
+   "talenti": [
+    2,
+    3,
+    0
+   ],
+   "specka": "Combat",
+   "talentiPopis": [
+    {
+     "ime": "Remorseless Attacks",
+     "rang": 2,
+     "stablo": "Assassination",
+     "opis": "After killing a non-trivial enemy, gives you a 40% increased critical strike chance on your next Sinister Strike, Backstab, Ambush, Mutilate, or Ghostly Strike. Lasts 20 sec."
+    },
+    {
+     "ime": "Coup de Grace",
+     "rang": 1,
+     "stablo": "Combat",
+     "opis": "Increases the damage done by your Eviscerate ability by 7%, and the damage and storage rate of your Death Mark ability by 7%."
+    },
+    {
+     "ime": "Efficient Strikes",
+     "rang": 2,
+     "stablo": "Combat",
+     "opis": "Reduces the Energy cost of your Sinister Strike and Hemorrhage abilities by 5."
+    }
+   ],
+   "oprema": [
+    {
+     "slot": "Chest",
+     "ime": "Grizzly Jerkin of the Boar",
+     "kvaliteta": "uncommon",
+     "wowhead": 15304,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132716.jpg",
+     "ilvl": 16,
+     "enchant": "Enchanted: Stamina +1 and Armor +8"
+    },
+    {
+     "slot": "Waist",
+     "ime": "Lupine Cord of Arcane Protection",
+     "kvaliteta": "uncommon",
+     "wowhead": 15011,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132492.jpg",
+     "ilvl": 15
+    },
+    {
+     "slot": "Legs",
+     "ime": "Dredgemire Leggings",
+     "kvaliteta": "uncommon",
+     "wowhead": 15450,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/134587.jpg",
+     "ilvl": 18
+    },
+    {
+     "slot": "Feet",
+     "ime": "Burnt Leather Boots",
+     "kvaliteta": "common",
+     "wowhead": 2963,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132543.jpg",
+     "ilvl": 9
+    },
+    {
+     "slot": "Wrist",
+     "ime": "Savannah Bracers",
+     "kvaliteta": "uncommon",
+     "wowhead": 15453,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132606.jpg",
+     "ilvl": 18
+    },
+    {
+     "slot": "Hands",
+     "ime": "Sewing Gloves",
+     "kvaliteta": "common",
+     "wowhead": 5939,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132939.jpg",
+     "ilvl": 8
+    },
+    {
+     "slot": "Back",
+     "ime": "Laced Cloak",
+     "kvaliteta": "poor",
+     "wowhead": 1741,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133765.jpg",
+     "ilvl": 17
+    },
+    {
+     "slot": "Main Hand",
+     "ime": "Notched Shortsword of the Wolf",
+     "kvaliteta": "uncommon",
+     "wowhead": 727,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135274.jpg",
+     "ilvl": 10
+    },
+    {
+     "slot": "Off Hand",
+     "ime": "Notched Shortsword of the Wolf",
+     "kvaliteta": "uncommon",
+     "wowhead": 727,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135274.jpg",
+     "ilvl": 10
+    },
+    {
+     "slot": "Ranged",
+     "ime": "Boot Knife",
+     "kvaliteta": "poor",
+     "wowhead": 5379,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135426.jpg",
+     "ilvl": 8
+    }
+   ],
+   "profesije": [
+    {
+     "name": "Leatherworking",
+     "skill": 50,
+     "max": 75,
+     "vrsta": "primarna"
+    },
+    {
+     "name": "Skinning",
+     "skill": 115,
+     "max": 150,
+     "vrsta": "primarna"
+    },
+    {
+     "name": "Cooking",
+     "skill": 20,
+     "max": 75,
+     "vrsta": "sekundarna"
+    },
+    {
+     "name": "Fishing",
+     "skill": 2,
+     "max": 75,
+     "vrsta": "sekundarna"
+    },
+    {
+     "name": "First Aid",
+     "skill": 67,
+     "max": 75,
+     "vrsta": "sekundarna"
+    }
+   ],
+   "statovi": {
+    "hp": 411,
+    "resurs": 100,
+    "resursIme": "Energy",
+    "str": 34,
+    "agi": 43,
+    "sta": 41,
+    "int": 21,
+    "spi": 39,
+    "armor": 378,
+    "ap": 89,
+    "spellPower": 0,
+    "crit": 6.7,
+    "spellCrit": 0.0,
+    "rangedCrit": 6.34,
+    "dodge": 13.43,
+    "parry": 4.56,
+    "block": 0.0,
+    "dps": 11.8
+   },
+   "reputacije": [
+    {
+     "ime": "Undercity",
+     "status": "Friendly",
+     "vrijednost": 5291,
+     "max": 6000
+    },
+    {
+     "ime": "Orgrimmar",
+     "status": "Friendly",
+     "vrijednost": 200,
+     "max": 6000
+    },
+    {
+     "ime": "Darkspear Trolls",
+     "status": "Neutral",
+     "vrijednost": 2600,
+     "max": 3000
+    },
+    {
+     "ime": "Ratchet",
+     "status": "Neutral",
+     "vrijednost": 1865,
+     "max": 3000
+    },
+    {
+     "ime": "Everlook",
+     "status": "Neutral",
+     "vrijednost": 1182,
+     "max": 3000
+    },
+    {
+     "ime": "Booty Bay",
+     "status": "Neutral",
+     "vrijednost": 1182,
+     "max": 3000
+    },
+    {
+     "ime": "Gadgetzan",
+     "status": "Neutral",
+     "vrijednost": 1182,
+     "max": 3000
+    },
+    {
+     "ime": "Powderfuse",
+     "status": "Neutral",
+     "vrijednost": 1182,
+     "max": 3000
+    }
+   ],
+   "slika": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-main-raw.png",
+   "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg",
+   "azurirano": "2026-11-06T09:51:23Z"
+  },
+  "Arsen Deadic": {
+   "level": 16,
+   "xp": 640,
+   "guild": "Kafana na Balkanu",
+   "ilvl": 7,
+   "zadnjiLogin": "2026-11-06T01:15:08Z",
+   "izvor": "Blizzard API",
+   "talenti": [
+    5,
+    0,
+    2
+   ],
+   "specka": "Holy",
+   "talentiPopis": [
+    {
+     "ime": "Divine Strength",
+     "rang": 5,
+     "stablo": "Holy",
+     "opis": "Increases your Strength by 10%."
+    },
+    {
+     "ime": "Deflection",
+     "rang": 2,
+     "stablo": "Retribution",
+     "opis": "Increases your Parry chance by 2%."
+    }
+   ],
+   "oprema": [
+    {
+     "slot": "Chest",
+     "ime": "Battle Chain Tunic",
+     "kvaliteta": "uncommon",
+     "wowhead": 3283,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132719.jpg",
+     "ilvl": 13,
+     "enchant": "Enchanted: Stamina +1 and Armor +8"
+    },
+    {
+     "slot": "Waist",
+     "ime": "Cinched Belt",
+     "kvaliteta": "uncommon",
+     "wowhead": 5328,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132492.jpg",
+     "ilvl": 15
+    },
+    {
+     "slot": "Legs",
+     "ime": "Gargoyle Leggings",
+     "kvaliteta": "uncommon",
+     "wowhead": 15451,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/134583.jpg",
+     "ilvl": 18
+    },
+    {
+     "slot": "Feet",
+     "ime": "Finscale Soles",
+     "kvaliteta": "uncommon",
+     "wowhead": 281285,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132535.jpg",
+     "ilvl": 11
+    },
+    {
+     "slot": "Wrist",
+     "ime": "Garrison Cuffs",
+     "kvaliteta": "uncommon",
+     "wowhead": 270003,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132612.jpg",
+     "ilvl": 18
+    },
+    {
+     "slot": "Hands",
+     "ime": "Worn Mail Gloves",
+     "kvaliteta": "poor",
+     "wowhead": 1734,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132938.jpg",
+     "ilvl": 11
+    },
+    {
+     "slot": "Back",
+     "ime": "Satyrskin Cloak",
+     "kvaliteta": "rare",
+     "wowhead": 273005,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133770.jpg",
+     "ilvl": 18
+    },
+    {
+     "slot": "Main Hand",
+     "ime": "Hammer of Orgrimmar",
+     "kvaliteta": "rare",
+     "wowhead": 15445,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133060.jpg",
+     "ilvl": 18
+    },
+    {
+     "slot": "Off Hand",
+     "ime": "Welding Shield",
+     "kvaliteta": "uncommon",
+     "wowhead": 5325,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/134952.jpg",
+     "ilvl": 16
+    }
+   ],
+   "profesije": [
+    {
+     "name": "Mining",
+     "skill": 14,
+     "max": 75,
+     "vrsta": "primarna"
+    },
+    {
+     "name": "Herbalism",
+     "skill": 11,
+     "max": 75,
+     "vrsta": "primarna"
+    },
+    {
+     "name": "Cooking",
+     "skill": 1,
+     "max": 75,
+     "vrsta": "sekundarna"
+    },
+    {
+     "name": "Fishing",
+     "skill": 1,
+     "max": 75,
+     "vrsta": "sekundarna"
+    },
+    {
+     "name": "First Aid",
+     "skill": 11,
+     "max": 75,
+     "vrsta": "sekundarna"
+    }
+   ],
+   "statovi": {
+    "hp": 421,
+    "resurs": 440,
+    "resursIme": "Mana",
+    "str": 52,
+    "agi": 27,
+    "sta": 46,
+    "int": 27,
+    "spi": 44,
+    "armor": 990,
+    "ap": 132,
+    "spellPower": 1,
+    "crit": 4.29,
+    "spellCrit": 4.81,
+    "rangedCrit": 1.41,
+    "dodge": 4.21,
+    "parry": 6.64,
+    "block": 4.64,
+    "dps": 21.8
+   },
+   "reputacije": [
+    {
+     "ime": "Undercity",
+     "status": "Friendly",
+     "vrijednost": 5216,
+     "max": 6000
+    },
+    {
+     "ime": "Orgrimmar",
+     "status": "Friendly",
+     "vrijednost": 181,
+     "max": 6000
+    },
+    {
+     "ime": "Darkspear Trolls",
+     "status": "Neutral",
+     "vrijednost": 2581,
+     "max": 3000
+    },
+    {
+     "ime": "Ratchet",
+     "status": "Neutral",
+     "vrijednost": 1865,
+     "max": 3000
+    },
+    {
+     "ime": "Everlook",
+     "status": "Neutral",
+     "vrijednost": 1182,
+     "max": 3000
+    },
+    {
+     "ime": "Booty Bay",
+     "status": "Neutral",
+     "vrijednost": 1182,
+     "max": 3000
+    },
+    {
+     "ime": "Gadgetzan",
+     "status": "Neutral",
+     "vrijednost": 1182,
+     "max": 3000
+    },
+    {
+     "ime": "Powderfuse",
+     "status": "Neutral",
+     "vrijednost": 1182,
+     "max": 3000
+    }
+   ],
+   "slika": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-main-raw.png",
+   "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg",
+   "azurirano": "2026-11-06T09:51:23Z"
+  }
+ }
 }
