@@ -9,7 +9,7 @@
    "url": "https://www.wowhead.com/news/rss/classic"
   }
  ],
- "azurirano": "2026-11-06T19:28:45Z",
+ "azurirano": "2026-11-07T00:57:35Z",
  "stavke": [
   {
    "datum": "2026-11-06T18:31:23Z",
@@ -261,15 +261,6 @@
    "vrsta": "vijest"
   },
   {
-   "datum": "2026-10-22T15:33:08Z",
-   "naslov": "The Roleplay-PvP Ruleset is Coming to WoW Forever",
-   "link": "https://us.forums.blizzard.com/en/wow/t/the-roleplay-pvp-ruleset-is-coming-to-wow-forever/2389502/1",
-   "izvor": "Blizzard",
-   "sazetak": "Greetings, In a recent episode of the WoW Forever Podcast we discussed some of our concerns with adding a Roleplay-PVP ruleset in WoW Forever, but we also mentioned that we were still discussing the topic internally and watching player…",
-   "oznake": [],
-   "vrsta": "vijest"
-  },
-  {
    "datum": "2026-10-16T17:03:18Z",
    "naslov": "Midnight 12.1.5 Live, Patch 12.1.7 & WoW: Forever - WoW Weekly Recap",
    "link": "https://www.wowhead.com/news=383465/midnight-12-1-5-live-patch-12-1-7-and-wow-forever-wow-weekly-recap",
@@ -416,6 +407,15 @@
    "oznake": [
     "Intervju"
    ],
+   "vrsta": "vijest"
+  },
+  {
+   "datum": "2026-09-16T17:29:40Z",
+   "naslov": "WoW: Forever Will Have Addon Changes from Midnight",
+   "link": "https://www.wowhead.com/news=382921/wow-forever-will-have-addon-changes-from-midnight",
+   "izvor": "Wowhead",
+   "sazetak": "Blizzard has announced through the WoW UI Discord that the Midnight addon disarmament changes will be active in WoW: Forever. Continue reading »",
+   "oznake": [],
    "vrsta": "vijest"
   }
  ]

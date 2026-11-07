@@ -33,12 +33,12 @@
       "professions": [
         {
           "name": "Mining",
-          "skill": 64,
+          "skill": 70,
           "phase": "stalno"
         },
         {
           "name": "Blacksmithing",
-          "skill": 15,
+          "skill": 40,
           "phase": "stalno"
         }
       ],
@@ -49,7 +49,7 @@
         },
         {
           "name": "First Aid",
-          "skill": 4
+          "skill": 41
         }
       ]
     },
@@ -97,12 +97,12 @@
       "professions": [
         {
           "name": "Alchemy",
-          "skill": 1,
+          "skill": 6,
           "phase": "stalno"
         },
         {
           "name": "Herbalism",
-          "skill": 9,
+          "skill": 10,
           "phase": "stalno"
         }
       ],
@@ -113,7 +113,7 @@
         },
         {
           "name": "First Aid",
-          "skill": 6
+          "skill": 20
         }
       ]
     },
@@ -384,6 +384,42 @@
       "character": "paladin",
       "profession": "First Aid",
       "skill": 15
+    },
+    {
+      "date": "2026-11-07",
+      "character": "warrior",
+      "profession": "Mining",
+      "skill": 70
+    },
+    {
+      "date": "2026-11-07",
+      "character": "warrior",
+      "profession": "Blacksmithing",
+      "skill": 40
+    },
+    {
+      "date": "2026-11-07",
+      "character": "warrior",
+      "profession": "First Aid",
+      "skill": 41
+    },
+    {
+      "date": "2026-11-07",
+      "character": "mage",
+      "profession": "Alchemy",
+      "skill": 6
+    },
+    {
+      "date": "2026-11-07",
+      "character": "mage",
+      "profession": "Herbalism",
+      "skill": 10
+    },
+    {
+      "date": "2026-11-07",
+      "character": "mage",
+      "profession": "First Aid",
+      "skill": 20
     }
   ],
   "flows": [

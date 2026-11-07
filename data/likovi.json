@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-06T19:28:45Z",
+ "azurirano": "2026-11-07T00:57:35Z",
  "likovi": {
   "Saman Saulic": {
    "level": 17,
@@ -468,10 +468,10 @@
   },
   "Melee Kitic": {
    "level": 18,
-   "xp": 5455,
+   "xp": 6030,
    "guild": "Kafana na Balkanu",
    "ilvl": 9,
-   "zadnjiLogin": "2026-11-06T18:18:44Z",
+   "zadnjiLogin": "2026-11-06T20:29:24Z",
    "izvor": "Blizzard API",
    "talenti": [
     1,
@@ -577,13 +577,13 @@
    "profesije": [
     {
      "name": "Mining",
-     "skill": 64,
+     "skill": 70,
      "max": 150,
      "vrsta": "primarna"
     },
     {
      "name": "Blacksmithing",
-     "skill": 15,
+     "skill": 40,
      "max": 75,
      "vrsta": "primarna"
     },
@@ -595,7 +595,7 @@
     },
     {
      "name": "First Aid",
-     "skill": 4,
+     "skill": 41,
      "max": 75,
      "vrsta": "sekundarna"
     }
@@ -624,19 +624,19 @@
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 1182,
+     "vrijednost": 1195,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Friendly",
-     "vrijednost": 5182,
+     "vrijednost": 5195,
      "max": 6000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Friendly",
-     "vrijednost": 1006,
+     "vrijednost": 1018,
      "max": 6000
     },
     {
@@ -648,7 +648,7 @@
     {
      "ime": "Undercity",
      "status": "Neutral",
-     "vrijednost": 2081,
+     "vrijednost": 2131,
      "max": 3000
     },
     {
@@ -710,7 +710,7 @@
     {
      "kat": "Reputation",
      "ime": "Total factions encountered",
-     "n": 12
+     "n": 11
     },
     {
      "kat": "Gear",
@@ -822,7 +822,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 108
+     "n": 109
     },
     {
      "kat": "Quests",
@@ -877,12 +877,12 @@
     {
      "kat": "Professions",
      "ime": "Highest Blacksmithing skill",
-     "n": 13
+     "n": 40
     },
     {
      "kat": "Professions",
      "ime": "Blacksmithing Plans learned",
-     "n": 12
+     "n": 34
     },
     {
      "kat": "Professions",
@@ -897,12 +897,12 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 15
+     "n": 16
     },
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
-     "n": 6
+     "n": 7
     },
     {
      "kat": "Social",
@@ -912,7 +912,7 @@
    ],
    "questovi": {
     "uLogu": [
-     "Raleigh and the Undercity",
+     "This Is Spinal Axe",
      "A Recipe For Death",
      "Rot Hide Ichor",
      "Stolen Booty",
@@ -933,6 +933,7 @@
      "Beren's Peril",
      "Goblin Invaders",
      "Raptor Thieves",
+     "A Husband's Revenge",
      "Ziz Fizziks",
      "Light's Justice",
      "Avenge My Village",
@@ -942,7 +943,7 @@
      "Border Crossings",
      "A Frightened Request"
     ],
-    "zavrseno": 133
+    "zavrseno": 134
    },
    "mountovi": [],
    "petovi": [],
@@ -952,14 +953,14 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg",
-   "azurirano": "2026-11-06T19:28:45Z"
+   "azurirano": "2026-11-07T00:57:35Z"
   },
   "Janica Frostelich": {
    "level": 16,
-   "xp": 3091,
+   "xp": 7403,
    "guild": "Kafana na Balkanu",
    "ilvl": 8,
-   "zadnjiLogin": "2026-11-06T18:41:47Z",
+   "zadnjiLogin": "2026-11-06T23:59:21Z",
    "izvor": "Blizzard API",
    "talenti": [
     1,
@@ -1066,18 +1067,26 @@
      "wowhead": 15444,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135225.jpg",
      "ilvl": 18
+    },
+    {
+     "slot": "Ranged",
+     "ime": "Lesser Magic Wand",
+     "kvaliteta": "uncommon",
+     "wowhead": 11287,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135139.jpg",
+     "ilvl": 15
     }
    ],
    "profesije": [
     {
      "name": "Alchemy",
-     "skill": 1,
+     "skill": 6,
      "max": 75,
      "vrsta": "primarna"
     },
     {
      "name": "Herbalism",
-     "skill": 9,
+     "skill": 10,
      "max": 75,
      "vrsta": "primarna"
     },
@@ -1089,7 +1098,7 @@
     },
     {
      "name": "First Aid",
-     "skill": 6,
+     "skill": 20,
      "max": 75,
      "vrsta": "sekundarna"
     }
@@ -1105,11 +1114,11 @@
     "spi": 49,
     "armor": 184,
     "ap": 13,
-    "spellPower": 19,
-    "crit": 4.15,
+    "spellPower": 20,
+    "crit": 4.23,
     "spellCrit": 3.73,
     "rangedCrit": 2.47,
-    "dodge": 4.71,
+    "dodge": 4.83,
     "parry": 0.0,
     "block": 0.0,
     "dps": 12.7
@@ -1118,25 +1127,31 @@
     {
      "ime": "Darkspear Trolls",
      "status": "Friendly",
-     "vrijednost": 4866,
+     "vrijednost": 4922,
      "max": 6000
     },
     {
      "ime": "Orgrimmar",
      "status": "Friendly",
-     "vrijednost": 4797,
+     "vrijednost": 4853,
      "max": 6000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Friendly",
-     "vrijednost": 643,
+     "vrijednost": 700,
      "max": 6000
     },
     {
      "ime": "Ratchet",
      "status": "Neutral",
      "vrijednost": 1675,
+     "max": 3000
+    },
+    {
+     "ime": "Undercity",
+     "status": "Neutral",
+     "vrijednost": 1306,
      "max": 3000
     },
     {
@@ -1153,12 +1168,6 @@
     },
     {
      "ime": "Gadgetzan",
-     "status": "Neutral",
-     "vrijednost": 1087,
-     "max": 3000
-    },
-    {
-     "ime": "Powderfuse",
      "status": "Neutral",
      "vrijednost": 1087,
      "max": 3000
@@ -1188,7 +1197,7 @@
     {
      "kat": "Reputation",
      "ime": "Total factions encountered",
-     "n": 12
+     "n": 11
     },
     {
      "kat": "Gear",
@@ -1198,7 +1207,7 @@
     {
      "kat": "Gear",
      "ime": "Greed rolls made on loot",
-     "n": 2
+     "n": 3
     },
     {
      "kat": "Gear",
@@ -1233,27 +1242,27 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 859
+     "n": 906
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 846
+     "n": 891
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 856
+     "n": 903
     },
     {
      "kat": "Creatures",
      "ime": "Different creature types killed",
-     "n": 5
+     "n": 6
     },
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 460,
+     "n": 471,
      "opis": "Humanoid"
     },
     {
@@ -1264,12 +1273,12 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 234
+     "n": 247
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 223
+     "n": 236
     },
     {
      "kat": "Killing Blows",
@@ -1295,7 +1304,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 82
+     "n": 85
     },
     {
      "kat": "Quests",
@@ -1365,53 +1374,58 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 11
+     "n": 13
     },
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
-     "n": 4
+     "n": 5
     }
    ],
    "questovi": {
     "uLogu": [
-     "Discipline",
+     "Centaur Bracers",
+     "Beren's Peril",
      "A New Plague",
-     "A Putrid Task",
-     "Threat from Below",
-     "Stolen Booty",
-     "The Zhevra",
-     "Raptor Horns",
      "Miner's Fortune",
-     "Fungal Spores",
-     "The Forgotten Pools",
+     "Threat from Below",
+     "Lost in Battle",
+     "Wenikee Boltbucket",
+     "Chol'aruk the Ravener",
+     "Speak with Un'thuwa",
+     "Patience",
+     "Border Crossings",
+     "Avenge My Village",
+     "Trouble at the Docks",
+     "Kolkar Leaders",
+     "Harpy Raiders",
+     "Tribes at War",
+     "Light's Justice",
+     "Arachnophobia",
+     "A Frightened Request",
+     "Stolen Booty",
+     "Camping 101: First Aid",
+     "A Recipe For Death",
+     "Camping 101: Herbalism",
      "Consumed by Hatred",
      "The Guns of Northwatch",
-     "Trouble at the Docks",
-     "Harpy Raiders",
-     "Kolkar Leaders",
-     "Tribes at War",
      "Deepmoss Spider Eggs",
-     "Centaur Bracers",
      "Goblin Invaders",
      "Raptor Thieves",
-     "Speak with Un'thuwa",
-     "Light's Justice",
-     "Avenge My Village",
-     "Wenikee Boltbucket",
-     "Arachnophobia",
-     "Yelmak's Medley",
-     "Lost in Battle",
-     "Battle of Warsong Gulch",
-     "Patience",
-     "A Frightened Request",
-     "Chol'aruk the Ravener",
+     "Wild Eyes",
      "WANTED: Bruuz",
-     "Camping 101: First Aid",
-     "Camping 101: Herbalism",
-     "Camping 101: Alchemy"
+     "Fungal Spores",
+     "Arugal's Folly",
+     "The Zhevra",
+     "Discipline",
+     "The Forgotten Pools",
+     "Camping 101: Alchemy",
+     "Yelmak's Medley",
+     "Raptor Horns",
+     "Battle of Warsong Gulch",
+     "A Putrid Task"
     ],
-    "zavrseno": 101
+    "zavrseno": 104
    },
    "mountovi": [
     "Cerulean Prideclaw"
@@ -1423,7 +1437,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/249/2574073-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/249/2574073-avatar.jpg",
-   "azurirano": "2026-11-06T19:28:45Z"
+   "azurirano": "2026-11-07T00:57:35Z"
   },
   "Nikola Roguevic": {
    "level": 16,
@@ -2426,7 +2440,7 @@
    "azurirano": "2026-11-06T19:28:45Z"
   }
  },
- "provjereno": "2026-11-06T19:28:45Z",
+ "provjereno": "2026-11-07T00:57:35Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 6,
@@ -2463,7 +2477,7 @@
     "rang": 3,
     "slug": "melee-kitic",
     "ilvl": 9,
-    "zadnjiLogin": "2026-11-06T18:18:44Z",
+    "zadnjiLogin": "2026-11-06T20:29:24Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg"
    },
    {
@@ -2485,7 +2499,7 @@
     "rang": 4,
     "slug": "janica-frostelich",
     "ilvl": 8,
-    "zadnjiLogin": "2026-11-06T18:41:47Z",
+    "zadnjiLogin": "2026-11-06T23:59:21Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/249/2574073-avatar.jpg"
    },
    {
@@ -2496,7 +2510,8 @@
     "rang": 4,
     "slug": "yuserious-son",
     "ilvl": 6,
-    "zadnjiLogin": "2026-11-06T16:47:57Z"
+    "zadnjiLogin": "2026-11-06T16:47:57Z",
+    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/6/6269702-avatar.jpg"
    }
   ]
  }
