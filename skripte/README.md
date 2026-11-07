@@ -21,11 +21,8 @@ Web čita `data/vijesti.json` i `data/likovi.json`. Kad ih nema ili su prazni, k
 ## Gdje se vidi
 
 - **GitHub Pages** (https://denisdex.github.io/zabranjeno-pullanje/) se osvježi sam nakon svakog auto-commita.
-- **Netlify** (https://zabranjeno-pullanje.netlify.app) zasad nije vezan na GitHub: novi podaci se tamo vide tek
-  nakon ručnog deploya (`netlify deploy --prod --dir .` u ovom folderu).
-  Jedini ručni korak da i Netlify ide sam: u Chromeu otvoriti Netlify → projekt zabranjeno-pullanje →
-  Project configuration → Build & deploy → Link repository → GitHub → `denisdex/zabranjeno-pullanje`,
-  grana `main`, build naredba prazna, publish directory `.` (korijen). Od tada svaki push i auto-commit deploya sam.
+- **Netlify** (https://zabranjeno-pullanje.netlify.app) je od 2026-11-07 vezan na GitHub (`main`, bez build naredbe,
+  publish iz korijena): svaki push i auto-commit deploya sam. Ručni `netlify deploy` više ne treba.
 
 ## Armory (Blizzard API, od 2026-11-06)
 
