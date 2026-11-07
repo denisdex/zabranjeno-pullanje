@@ -1,8 +1,8 @@
 name: Podaci
 
-# Svaka 3 sata osvježi data/*.json (vijesti, armory) i commita samo ako se nešto promijenilo.
+# Svaka 2 sata osvježi data/*.json (vijesti, armory) i commita samo ako se nešto promijenilo.
 # GitHub zna preskočiti zakazana pokretanja, pa cron kuca svaki sat, a posao se
-# radi tek kad su podaci stariji od ~2 h 40 min. Propušteni termin nadoknadi idući sat.
+# radi tek kad su podaci stariji od ~1 h 40 min. Glavni okidač je launchd na Denisovom Macu (svaka 2 h).
 on:
   schedule:
     - cron: "17 * * * *"
@@ -30,7 +30,7 @@ jobs:
           try:
               t = json.load(open("data/likovi.json"))["provjereno"]
               star = d.datetime.now(d.timezone.utc) - d.datetime.fromisoformat(t.replace("Z", "+00:00"))
-              print("radi=" + ("1" if star.total_seconds() > 160 * 60 else "0"))
+              print("radi=" + ("1" if star.total_seconds() > 100 * 60 else "0"))
           except Exception:
               print("radi=1")
           PY

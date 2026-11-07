@@ -132,7 +132,7 @@
         },
         {
           "name": "Skinning",
-          "skill": 143,
+          "skill": 144,
           "phase": "stalno"
         }
       ],
@@ -143,11 +143,11 @@
         },
         {
           "name": "Fishing",
-          "skill": 2
+          "skill": 3
         },
         {
           "name": "First Aid",
-          "skill": 75
+          "skill": 85
         }
       ]
     },
@@ -161,12 +161,12 @@
       "professions": [
         {
           "name": "Mining",
-          "skill": 21,
+          "skill": 22,
           "phase": "stalno"
         },
         {
           "name": "Herbalism",
-          "skill": 34,
+          "skill": 36,
           "phase": "stalno"
         }
       ],
@@ -181,7 +181,7 @@
         },
         {
           "name": "First Aid",
-          "skill": 15
+          "skill": 50
         }
       ]
     }
@@ -468,6 +468,42 @@
       "character": "rogue",
       "profession": "First Aid",
       "skill": 75
+    },
+    {
+      "date": "2026-11-07",
+      "character": "rogue",
+      "profession": "Skinning",
+      "skill": 144
+    },
+    {
+      "date": "2026-11-07",
+      "character": "rogue",
+      "profession": "Fishing",
+      "skill": 3
+    },
+    {
+      "date": "2026-11-07",
+      "character": "rogue",
+      "profession": "First Aid",
+      "skill": 85
+    },
+    {
+      "date": "2026-11-07",
+      "character": "paladin",
+      "profession": "Mining",
+      "skill": 22
+    },
+    {
+      "date": "2026-11-07",
+      "character": "paladin",
+      "profession": "Herbalism",
+      "skill": 36
+    },
+    {
+      "date": "2026-11-07",
+      "character": "paladin",
+      "profession": "First Aid",
+      "skill": 50
     }
   ],
   "flows": [

@@ -2899,9 +2899,9 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     if (isNaN(d)) return "";
     return d.getDate() + ". " + (d.getMonth() + 1) + ". u " + d.getHours() + ":" + String(d.getMinutes()).padStart(2, "0") + " (" + prije(iso) + ")";
   }
-  // iduće osvježavanje: cron kuca svaki sat u :17 (UTC), posao se radi kad je zadnje starije od 2 h 40 min
+  // iduće osvježavanje: cron kuca svaki sat u :17 (UTC), posao se radi kad je zadnje starije od 1 h 40 min
   function iduce(iso) {
-    var rok = Math.max(Date.parse(iso) + 160 * 6e4, Date.now());
+    var rok = Math.max(Date.parse(iso) + 100 * 6e4, Date.now());
     var d = new Date(rok); d.setUTCMinutes(17, 0, 0);
     if (d < rok) d.setUTCHours(d.getUTCHours() + 1);
     return d.getHours() + ":17";
@@ -2909,7 +2909,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
   function oznakaSvjezine(iso) {
     var el = document.getElementById("svjezina");
     if (!el || !iso) return;
-    var staro = (Date.now() - Date.parse(iso)) / 36e5 > 5;
+    var staro = (Date.now() - Date.parse(iso)) / 36e5 > 3.5;
     el.classList.toggle("staro", staro);
     var d = new Date(iso);
     el.innerHTML = "<i aria-hidden=\"true\"></i><span>Iz igre osvježeno <b>" + d.getDate() + ". " + (d.getMonth() + 1) + ". u " + d.getHours() + ":" + String(d.getMinutes()).padStart(2, "0") + "</b> · " + prije(iso) + " · iduće oko " + iduce(iso) + "</span>";
