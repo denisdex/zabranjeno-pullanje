@@ -33,7 +33,7 @@
       "professions": [
         {
           "name": "Mining",
-          "skill": 75,
+          "skill": 76,
           "phase": "stalno"
         },
         {
@@ -127,12 +127,12 @@
       "professions": [
         {
           "name": "Leatherworking",
-          "skill": 50,
+          "skill": 85,
           "phase": "stalno"
         },
         {
           "name": "Skinning",
-          "skill": 116,
+          "skill": 143,
           "phase": "stalno"
         }
       ],
@@ -147,7 +147,7 @@
         },
         {
           "name": "First Aid",
-          "skill": 67
+          "skill": 75
         }
       ]
     },
@@ -444,6 +444,30 @@
       "character": "shaman",
       "profession": "First Aid",
       "skill": 50
+    },
+    {
+      "date": "2026-11-07",
+      "character": "warrior",
+      "profession": "Mining",
+      "skill": 76
+    },
+    {
+      "date": "2026-11-07",
+      "character": "rogue",
+      "profession": "Leatherworking",
+      "skill": 85
+    },
+    {
+      "date": "2026-11-07",
+      "character": "rogue",
+      "profession": "Skinning",
+      "skill": 143
+    },
+    {
+      "date": "2026-11-07",
+      "character": "rogue",
+      "profession": "First Aid",
+      "skill": 75
     }
   ],
   "flows": [
