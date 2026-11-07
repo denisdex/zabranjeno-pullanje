@@ -247,6 +247,13 @@ section[id] { scroll-margin-top: 84px; }
 }
 .hero-main { grid-area: main; display: grid; gap: 14px; }
 .hero-main .eyebrow { color: var(--ember); margin: 0; }
+.svjezina[hidden] { display: none; }
+.svjezina { display: inline-flex; align-items: center; gap: 10px; justify-self: start; margin: 4px 0 0;
+  padding: 6px 12px; border: 1px solid rgba(255, 255, 255, .1); border-radius: 999px; background: rgba(12, 6, 5, .55);
+  font-size: .75rem; line-height: 1.4; color: var(--dust); letter-spacing: .02em; }
+.svjezina b { color: var(--bone, #efe2c6); font-weight: 500; }
+.svjezina i { width: 8px; height: 8px; border-radius: 50%; background: #3ec46d; box-shadow: 0 0 10px rgba(62, 196, 109, .7); flex: none; }
+.svjezina.staro i { background: #e0a03a; box-shadow: 0 0 10px rgba(224, 160, 58, .7); }
 .hero-main h1 {
   margin: 0; font: 900 clamp(2.6rem, 12.8vw, 5.4rem)/.86 var(--f-display);
   letter-spacing: .01em; text-transform: uppercase;
@@ -2446,6 +2453,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       <div class="hero-main">
         <p class="eyebrow mono">Guild · Zaprešić Horde · 5 likova · World of Warcraft: Forever</p>
         <h1 id="naslov">Kafana na <span>Balkanu</span></h1>
+        <p class="svjezina mono" id="svjezina" hidden></p>
       </div>
       <div class="stage" id="stage">
         <picture class="still">
@@ -2850,7 +2858,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
 <script>
 (function () {
   "use strict";
-  // automatski podaci: GitHub Actions svaki sat puni data/*.json; bez njih stranica radi iz data.js
+  // automatski podaci: GitHub Actions svaka 3 sata puni data/*.json; bez njih stranica radi iz data.js
   function dohvatiJson(url) {
     return fetch(url, { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
   }
@@ -2893,9 +2901,25 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     if (isNaN(d)) return "";
     return d.getDate() + ". " + (d.getMonth() + 1) + ". u " + d.getHours() + ":" + String(d.getMinutes()).padStart(2, "0") + " (" + prije(iso) + ")";
   }
+  // iduće zakazano osvježavanje: cron "17 */3 * * *" (UTC), GitHub zna kasniti do sat
+  function iduce() {
+    var d = new Date(); d.setUTCMinutes(17, 0, 0);
+    while (d.getUTCHours() % 3 || d <= Date.now()) d.setUTCHours(d.getUTCHours() + 1);
+    return d.getHours() + ":17";
+  }
+  function oznakaSvjezine(iso) {
+    var el = document.getElementById("svjezina");
+    if (!el || !iso) return;
+    var staro = (Date.now() - Date.parse(iso)) / 36e5 > 5;
+    el.classList.toggle("staro", staro);
+    var d = new Date(iso);
+    el.innerHTML = "<i aria-hidden=\"true\"></i><span>Iz igre osvježeno <b>" + d.getDate() + ". " + (d.getMonth() + 1) + ". u " + d.getHours() + ":" + String(d.getMinutes()).padStart(2, "0") + "</b> · " + prije(iso) + " · iduće oko " + iduce() + "</span>";
+    el.hidden = false;
+  }
   function pokreni(ARM, VIJ) {
   var D = window.HORDE;
   spojiAutomatsko(D, ARM, VIJ);
+  oznakaSvjezine(D.armoryProvjereno);
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var $ = function (id) { return document.getElementById(id); };
 
