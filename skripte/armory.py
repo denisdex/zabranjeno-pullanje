@@ -343,6 +343,14 @@ def main():
         if g and g != doc.get("guild"):
             doc["guild"] = g
             promjena = True
+    # povijest levela za Utrku do 60: nova točka samo kad se level ili xp promijene (nema dodatnih poziva API-ja)
+    povijest = doc.setdefault("povijest", {})
+    for ime, l in doc["likovi"].items():
+        if not isinstance(l.get("level"), int):
+            continue
+        tocke = povijest.setdefault(ime, [])
+        if not tocke or tocke[-1][1:] != [l["level"], l.get("xp") or 0]:
+            tocke.append([sada, l["level"], l.get("xp") or 0])
     # "provjereno" se upiše svaki put, da web pokaže kad je zadnji refresh (i kad se ništa nije promijenilo)
     doc["provjereno"] = sada
     if promjena:

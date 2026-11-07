@@ -698,6 +698,31 @@ a.gr-r:hover, a.gr-r:focus-visible { background: rgba(236, 226, 212, .05); }
 .gr-lvl i { position: relative; height: 5px; background: var(--iron-2); }
 .gr-lvl s { position: absolute; inset: 0 auto 0 0; }
 .gr-c { font-size: .6875rem; color: var(--dust); }
+/* Utrka do 60 */
+.ut { display: grid; gap: 28px; }
+.ut-l { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.ut-r { display: grid; grid-template-columns: 1.6rem minmax(0, 1fr) minmax(0, 1.4fr); gap: 6px 14px; align-items: center; padding: 12px 4px; border-bottom: 1px solid var(--line); }
+.ut-r.prvi { padding-block: 16px; }
+.ut-no { font: 800 1.1rem/1 var(--f-display); color: var(--dust); font-variant-numeric: tabular-nums; }
+.ut-r.prvi .ut-no { color: var(--ember); }
+.ut-ime { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.ut-ime b { font: 800 1.05rem/1.1 var(--f-display); text-transform: uppercase; letter-spacing: .02em; color: var(--c); }
+.ut-ime span { display: block; font-size: .625rem; color: var(--dust); letter-spacing: .04em; }
+.ut-tr { display: grid; gap: 6px; }
+.ut-tr i { position: relative; display: block; height: 8px; background: var(--iron-2); }
+.ut-tr s { position: absolute; inset: 0 auto 0 0; background: var(--c); }
+.ut-tr p { margin: 0; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 12px; font-size: .6875rem; color: var(--dust); }
+.ut-tr p b { color: var(--bone); font-weight: 500; }
+.ut-g { border: 1px solid var(--line); background: rgba(12, 9, 8, .5); padding: 14px 10px 6px; }
+.ut-g svg { display: block; width: 100%; height: auto; overflow: visible; }
+.ut-g text { font: 400 11px var(--f-mono); fill: var(--dust); }
+.ut-g .os line { stroke: var(--line); }
+.ut-nap { margin: 0; font-size: .6875rem; color: var(--dust); }
+@media (max-width: 640px) {
+  .ut-r { grid-template-columns: 1.6rem minmax(0, 1fr); }
+  .ut-tr { grid-column: 2; }
+}
+@media (min-width: 1000px) { .ut { grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); align-items: start; } }
 .gr-rang.gm { color: var(--ember); }
 @media (max-width: 760px) {
   .gr-h { display: none; }
@@ -2424,6 +2449,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       <ul class="nav-l" id="navL">
         <li><a href="#ekipa">Ekipa</a></li>
         <li><a href="#guild">Guild</a></li>
+        <li><a href="#utrka">Utrka</a></li>
         <li><a href="#novosti">News</a></li>
         <li class="dd"><button type="button" class="dd-b" aria-expanded="false" aria-controls="ddPlan">Plan<span class="dd-s" aria-hidden="true">▾</span></button>
           <div class="dd-p" id="ddPlan"><a href="#roadmap">Roadmap</a><a href="#dungeoni">Dungeoni</a></div></li>
@@ -2504,6 +2530,16 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
         <span class="meta mono" id="guildMeta"></span>
       </div>
       <div id="guildBody"><p class="prazno mono">Guild se učitava iz igre…</p></div>
+    </div>
+  </section>
+
+  <section class="sec" id="utrka">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Utrka do 60</h2>
+        <span class="meta mono" id="utrkaMeta"></span>
+      </div>
+      <div id="utrkaBody"><p class="prazno mono">Utrka se učitava iz igre…</p></div>
     </div>
   </section>
 
@@ -2828,6 +2864,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
 
   function spojiAutomatsko(D, ARM, VIJ) {
     D.guildAuto = ARM && ARM.guild ? ARM.guild : null;
+    D.povijest = ARM && ARM.povijest ? ARM.povijest : null;
     D.armoryProvjereno = ARM ? ARM.provjereno || ARM.azurirano : null;
     D.vijestiAuto = VIJ && VIJ.stavke ? VIJ.stavke : [];
     D.vijestiAzurirano = VIJ ? VIJ.azurirano : null;
@@ -3379,6 +3416,70 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       (brojke ? '<h3 class="g-pod lab mono">Ekipa u brojkama</h3><div class="gbs" data-reveal>' + brojke + "</div>" : "") +
       (bk ? '<h3 class="g-pod lab mono">Ubijeni bossovi</h3><ul class="gboss">' + bk + "</ul>" : "") +
       '<p class="g-nap mono">Imena rangova API ne daje; upisuju se u data.js (guildRangovi).</p>';
+  })();
+
+  // ---------- Utrka do 60: povijest levela iz data/likovi.json (svaka točka = jedno osvježavanje) ----------
+  (function () {
+    var el = $("utrkaBody"), P = D.povijest;
+    if (!el) return;
+    if (!P) { el.innerHTML = '<p class="prazno mono">Povijest levela dolazi iz igre. Još nije skinuta.</p>'; return; }
+    // xp potreban za sljedeći level (Classic tablica, 1–59)
+    var XP = [0, 400, 900, 1400, 2100, 2800, 3600, 4500, 5400, 6500, 7600, 8800, 10100, 11400, 12900, 14400, 16000, 17700, 19400, 21300, 23200, 25200, 27300, 29400, 31700, 34000, 36400, 38900, 41400, 44300, 47400, 50800, 54500, 58600, 62800, 67100, 71600, 76100, 80800, 85700, 90700, 95800, 101000, 106300, 111800, 117500, 123200, 129100, 135100, 141200, 147500, 153900, 160400, 167100, 173900, 180800, 187900, 195000, 202300, 209800];
+    var KUM = [0, 0];
+    for (var i = 2; i <= 60; i++) KUM[i] = KUM[i - 1] + XP[i - 1];
+    function ukupno(lvl, xp) { return lvl >= 60 ? KUM[60] : KUM[lvl] + Math.min(xp || 0, XP[lvl] - 1); }
+    function decimalni(lvl, xp) { return lvl >= 60 ? 60 : lvl + Math.min(xp || 0, XP[lvl] - 1) / XP[lvl]; }
+    var L = Date.parse(D.datumi.launch), sad = Date.now(), DAN = 864e5;
+    function dat(t) { var d = new Date(t); return d.getDate() + ". " + (d.getMonth() + 1) + "."; }
+    var redovi = igraci.map(function (p) {
+      var t = (P[p.lik] || []).map(function (x) { return { t: Date.parse(x[0]), lvl: x[1], xp: x[2], v: decimalni(x[1], x[2]) }; });
+      if (!t.length) return null;
+      var z = t[t.length - 1], uk = ukupno(z.lvl, z.xp);
+      var dani = Math.max((sad - L) / DAN, .5), tempo = uk / dani;
+      // napredak u zadnja 24 h: zadnja točka starija od 24 h kao početak
+      var dan0 = t.filter(function (x) { return x.t <= sad - DAN; }).pop() || t[0];
+      return { p: p, t: t, z: z, uk: uk, pct: uk / KUM[60] * 100, eta: z.lvl >= 60 ? null : sad + (KUM[60] - uk) / tempo * DAN, d24: z.v - dan0.v };
+    }).filter(Boolean).sort(function (a, b) { return b.uk - a.uk; });
+    if (!redovi.length) { el.innerHTML = '<p class="prazno mono">Još nema točaka za utrku.</p>'; return; }
+    var vodi = redovi[0];
+    $("utrkaMeta").innerHTML = "Vodi <b>" + esc(vodi.p.igrac) + "</b> · " + vodi.pct.toFixed(1).replace(".", ",") + " % puta do 60";
+
+    var lista = '<ol class="ut-l">' + redovi.map(function (r, i) {
+      var c = BOJE[r.p.klasa] || "#ece2d4";
+      return '<li class="ut-r' + (i === 0 ? " prvi" : "") + '" style="--c:' + c + '">' +
+        '<span class="ut-no">' + (i + 1) + "</span>" +
+        '<span class="ut-ime">' + avatar(r.p) + "<span><b>" + esc(r.p.igrac) + "</b><span>" + esc(r.p.lik) + " · lvl " + (Math.floor(r.z.v * 10) / 10).toFixed(1).replace(".", ",") + "</span></span></span>" +
+        '<span class="ut-tr"><i><s style="width:' + Math.max(r.pct, .6).toFixed(2) + '%"></s></i>' +
+        "<p><span><b>" + r.pct.toFixed(1).replace(".", ",") + " %</b> do 60</span>" +
+        "<span>24 h: <b>" + (r.d24 > 0 ? "+" + r.d24.toFixed(1).replace(".", ",") + " lvl" : "–") + "</b></span>" +
+        "<span>60 oko <b>" + (r.eta ? dat(r.eta) : "dosegnut") + "</b></span></p></span></li>";
+    }).join("") + "</ol>";
+
+    // graf: level kroz vrijeme od launcha
+    // širina po stvarnom prostoru, da slova na mobitelu ostanu čitljiva (11 px)
+    var sir = el.clientWidth || 640, W = Math.round(Math.max(300, Math.min(640, window.innerWidth >= 1000 ? sir * .53 : sir - 22))), H = W < 480 ? 240 : 300, ml = 30, mr = 64, mt = 10, mb = 26;
+    var maxV = Math.max.apply(null, redovi.map(function (r) { return r.z.v; }));
+    var yMax = Math.min(60, Math.ceil((maxV + 2) / 5) * 5), x1 = Math.max(sad, L + DAN);
+    function X(t) { return ml + (t - L) / (x1 - L) * (W - ml - mr); }
+    function Y(v) { return mt + (1 - (v - 1) / (yMax - 1)) * (H - mt - mb); }
+    var os = "";
+    for (var v = 5; v <= yMax; v += 5) os += '<line x1="' + ml + '" x2="' + (W - mr) + '" y1="' + Y(v).toFixed(1) + '" y2="' + Y(v).toFixed(1) + '"/><text x="' + (ml - 6) + '" y="' + (Y(v) + 4).toFixed(1) + '" text-anchor="end">' + v + "</text>";
+    var korak = DAN * Math.max(1, Math.ceil((x1 - L) / DAN / ((W - ml - mr) / 56)));
+    for (var d = L; d <= x1; d += korak) os += '<text x="' + X(d).toFixed(1) + '" y="' + (H - 6) + '" text-anchor="middle">' + dat(d) + "</text>";
+    // oznake na kraju linija razmaknute da se ne preklapaju
+    var oznake = redovi.map(function (r) { return { r: r, y: Y(r.z.v) }; }).sort(function (a, b) { return a.y - b.y; });
+    for (var k = 1; k < oznake.length; k++) if (oznake[k].y - oznake[k - 1].y < 13) oznake[k].y = oznake[k - 1].y + 13;
+    var linije = redovi.slice().reverse().map(function (r) {
+      var c = BOJE[r.p.klasa] || "#ece2d4";
+      var tocke = r.t.concat([{ t: sad, v: r.z.v }]).map(function (x) { return X(x.t).toFixed(1) + "," + Y(x.v).toFixed(1); }).join(" ");
+      return '<polyline points="' + tocke + '" fill="none" stroke="' + c + '" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>' +
+        '<circle cx="' + X(sad).toFixed(1) + '" cy="' + Y(r.z.v).toFixed(1) + '" r="4" fill="' + c + '"/>';
+    }).join("") + oznake.map(function (o) {
+      return '<text x="' + (X(sad) + 9).toFixed(1) + '" y="' + (o.y + 4).toFixed(1) + '" style="fill:' + (BOJE[o.r.p.klasa] || "#ece2d4") + '">' + esc(o.r.p.igrac) + "</text>";
+    }).join("");
+    var graf = '<figure class="ut-g" style="margin:0"><svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Level svakog igrača od launcha do danas"><g class="os">' + os + "</g>" + linije + "</svg></figure>";
+
+    el.innerHTML = '<div class="ut"><div>' + lista + '<p class="ut-nap mono" style="margin-top:12px">„60 oko“ je gruba procjena: ukupni XP od launcha podijeljen s danima. Kako se skupljaju podaci, bit će točnija.</p></div>' + graf + "</div>";
   })();
 
   // 3D nagib pločica na hover i dodir
