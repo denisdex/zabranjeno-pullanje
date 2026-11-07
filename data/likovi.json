@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-07T21:07:19Z",
+ "azurirano": "2026-11-07T23:06:53Z",
  "likovi": {
   "Saman Saulic": {
    "level": 18,
@@ -1467,15 +1467,15 @@
    "azurirano": "2026-11-07T00:57:35Z"
   },
   "Nikola Roguevic": {
-   "level": 19,
-   "xp": 13581,
+   "level": 20,
+   "xp": 14032,
    "guild": "Kafana na Balkanu",
-   "ilvl": 12,
-   "zadnjiLogin": "2026-11-07T16:50:47Z",
+   "ilvl": 13,
+   "zadnjiLogin": "2026-11-07T23:04:04Z",
    "izvor": "Blizzard API",
    "talenti": [
     2,
-    8,
+    9,
     0
    ],
    "specka": "Combat",
@@ -1503,9 +1503,23 @@
      "rang": 3,
      "stablo": "Combat",
      "opis": "Increases your Parry chance by 6%."
+    },
+    {
+     "ime": "Precision",
+     "rang": 1,
+     "stablo": "Combat",
+     "opis": "Improves your chance to hit by 1%."
     }
    ],
    "oprema": [
+    {
+     "slot": "Neck",
+     "ime": "Roadwatcher's Confidence",
+     "kvaliteta": "uncommon",
+     "wowhead": 281265,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133288.jpg",
+     "ilvl": 20
+    },
     {
      "slot": "Chest",
      "ime": "Grizzly Jerkin of the Boar",
@@ -1525,12 +1539,12 @@
     },
     {
      "slot": "Legs",
-     "ime": "Dredgemire Leggings",
+     "ime": "Greasy Tinker's Pants",
      "kvaliteta": "uncommon",
-     "wowhead": 15450,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/134587.jpg",
+     "wowhead": 5327,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/134582.jpg",
      "ilvl": 18,
-     "enchant": "Enchanted: Stamina +1 and Armor +8"
+     "enchant": "Enchanted: Stamina +2 and Armor +16"
     },
     {
      "slot": "Feet",
@@ -1626,78 +1640,78 @@
     },
     {
      "name": "First Aid",
-     "skill": 85,
+     "skill": 89,
      "max": 150,
      "vrsta": "sekundarna"
     }
    ],
    "statovi": {
-    "hp": 651,
+    "hp": 653,
     "resurs": 100,
     "resursIme": "Energy",
-    "str": 38,
-    "agi": 65,
-    "sta": 61,
-    "int": 21,
+    "str": 41,
+    "agi": 69,
+    "sta": 60,
+    "int": 22,
     "spi": 38,
-    "armor": 498,
-    "ap": 127,
+    "armor": 514,
+    "ap": 136,
     "spellPower": 0,
-    "crit": 8.51,
+    "crit": 8.48,
     "spellCrit": 0.0,
-    "rangedCrit": 8.07,
-    "dodge": 16.91,
+    "rangedCrit": 8.12,
+    "dodge": 16.84,
     "parry": 10.8,
     "block": 0.0,
-    "dps": 21.3
+    "dps": 22.0
    },
    "reputacije": [
     {
      "ime": "Undercity",
      "status": "Honored",
-     "vrijednost": 557,
+     "vrijednost": 1467,
      "max": 12000
     },
     {
      "ime": "Orgrimmar",
      "status": "Friendly",
-     "vrijednost": 1451,
+     "vrijednost": 1723,
      "max": 6000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Friendly",
-     "vrijednost": 138,
+     "vrijednost": 411,
      "max": 6000
-    },
-    {
-     "ime": "Thunder Bluff",
-     "status": "Neutral",
-     "vrijednost": 2033,
-     "max": 3000
     },
     {
      "ime": "Ratchet",
      "status": "Neutral",
-     "vrijednost": 1865,
+     "vrijednost": 2480,
+     "max": 3000
+    },
+    {
+     "ime": "Thunder Bluff",
+     "status": "Neutral",
+     "vrijednost": 2306,
      "max": 3000
     },
     {
      "ime": "Everlook",
      "status": "Neutral",
-     "vrijednost": 1182,
+     "vrijednost": 1490,
      "max": 3000
     },
     {
      "ime": "Booty Bay",
      "status": "Neutral",
-     "vrijednost": 1182,
+     "vrijednost": 1490,
      "max": 3000
     },
     {
      "ime": "Gadgetzan",
      "status": "Neutral",
-     "vrijednost": 1182,
+     "vrijednost": 1490,
      "max": 3000
     }
    ],
@@ -1710,7 +1724,7 @@
     {
      "kat": "Consumables",
      "ime": "Bandages used",
-     "n": 10
+     "n": 11
     },
     {
      "kat": "Consumables",
@@ -1726,7 +1740,7 @@
     {
      "kat": "Consumables",
      "ime": "Elixirs consumed",
-     "n": 2
+     "n": 3
     },
     {
      "kat": "Consumables",
@@ -1746,7 +1760,7 @@
     {
      "kat": "Reputation",
      "ime": "Total factions encountered",
-     "n": 14
+     "n": 12
     },
     {
      "kat": "Gear",
@@ -1786,17 +1800,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 1432
+     "n": 1508
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 1355
+     "n": 1386
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 1415
+     "n": 1490
     },
     {
      "kat": "Creatures",
@@ -1806,34 +1820,34 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 570,
+     "n": 629,
      "opis": "Humanoid"
     },
     {
      "kat": "Creatures",
      "ime": "Critters killed",
-     "n": 17
+     "n": 18
     },
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 760
+     "n": 837
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 660
+     "n": 737
     },
     {
      "kat": "Killing Blows",
      "ime": "Continent with the most Killing Blows",
-     "n": 410,
+     "n": 459,
      "opis": "Eastern Kingdoms"
     },
     {
      "kat": "Deaths",
      "ime": "Total deaths",
-     "n": 11
+     "n": 12
     },
     {
      "kat": "Dungeons and Raids",
@@ -1853,7 +1867,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 124
+     "n": 149
     },
     {
      "kat": "Quests",
@@ -1863,7 +1877,7 @@
     {
      "kat": "Quests",
      "ime": "Quests abandoned",
-     "n": 10
+     "n": 11
     },
     {
      "kat": "Skills",
@@ -1898,7 +1912,7 @@
     {
      "kat": "Secondary Skills",
      "ime": "First Aid skill",
-     "n": 85
+     "n": 86
     },
     {
      "kat": "Secondary Skills",
@@ -1933,22 +1947,22 @@
     {
      "kat": "Professions",
      "ime": "Highest Skinning skill",
-     "n": 143
+     "n": 144
     },
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 24
+     "n": 28
     },
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
-     "n": 5
+     "n": 6
     },
     {
      "kat": "Social",
      "ime": "Total times LOL'd",
-     "n": 25
+     "n": 26
     },
     {
      "kat": "Social",
@@ -1959,11 +1973,12 @@
    "questovi": {
     "uLogu": [
      "Arugal's Folly",
+     "Raleigh and the Undercity",
      "A Recipe For Death",
+     "Rot Hide Ichor",
      "Stolen Booty",
-     "The Decrepit Ferry",
+     "The Family Crypt",
      "Raptor Horns",
-     "Miner's Fortune",
      "Consumed by Hatred",
      "The Guns of Northwatch",
      "Egg Hunt",
@@ -1973,31 +1988,30 @@
      "Harpy Raiders",
      "Tribes at War",
      "Deepmoss Spider Eggs",
-     "Return to Quinn",
      "Beren's Peril",
      "Goblin Invaders",
      "Deviate Eradication",
+     "Blueleaf Tubers",
      "Leaders of the Fang",
-     "The Deathstalkers",
      "Deathstalkers in Shadowfang",
-     "Plundering the Plunderers",
      "Deviate Hides",
      "Ziz Fizziks",
-     "Fenwick Thatros",
+     "Mission: Possible But Not Probable",
+     "Tools of the Trade",
      "Stolen Silver",
      "Light's Justice",
      "Avenge My Village",
+     "The Warsong Reports",
      "Arachnophobia",
-     "Report to Kadrak",
      "Lost in Battle",
-     "Nugget Slugs",
+     "Samophlange Manual",
      "Ambermill Investigations",
      "A Frightened Request",
-     "Watching the Roads",
      "WANTED: Bruuz",
-     "Camping 101: Fishing"
+     "Camping 101: Fishing",
+     "Rear Guard Patrol"
     ],
-    "zavrseno": 167
+    "zavrseno": 192
    },
    "mountovi": [
     "Cerulean Prideclaw",
@@ -2015,14 +2029,14 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg",
-   "azurirano": "2026-11-07T18:58:22Z"
+   "azurirano": "2026-11-07T23:06:53Z"
   },
   "Arsen Deadic": {
-   "level": 18,
-   "xp": 19313,
+   "level": 19,
+   "xp": 17,
    "guild": "Kafana na Balkanu",
    "ilvl": 10,
-   "zadnjiLogin": "2026-11-07T16:51:06Z",
+   "zadnjiLogin": "2026-11-07T22:58:37Z",
    "izvor": "Blizzard API",
    "talenti": [
     5,
@@ -2130,19 +2144,19 @@
    "profesije": [
     {
      "name": "Mining",
-     "skill": 22,
-     "max": 75,
+     "skill": 70,
+     "max": 150,
      "vrsta": "primarna"
     },
     {
-     "name": "Herbalism",
-     "skill": 36,
+     "name": "Blacksmithing",
+     "skill": 61,
      "max": 75,
      "vrsta": "primarna"
     },
     {
      "name": "Cooking",
-     "skill": 1,
+     "skill": 59,
      "max": 75,
      "vrsta": "sekundarna"
     },
@@ -2154,30 +2168,30 @@
     },
     {
      "name": "First Aid",
-     "skill": 50,
+     "skill": 52,
      "max": 150,
      "vrsta": "sekundarna"
     }
    ],
    "statovi": {
-    "hp": 564,
-    "resurs": 509,
+    "hp": 587,
+    "resurs": 545,
     "resursIme": "Mana",
-    "str": 58,
+    "str": 59,
     "agi": 29,
-    "sta": 58,
+    "sta": 59,
     "int": 29,
     "spi": 46,
     "armor": 1169,
-    "ap": 150,
+    "ap": 155,
     "spellPower": 1,
-    "crit": 4.36,
+    "crit": 4.28,
     "spellCrit": 4.78,
-    "rangedCrit": 0.92,
-    "dodge": 4.28,
-    "parry": 8.8,
-    "block": 4.8,
-    "dps": 23.1
+    "rangedCrit": 0.72,
+    "dodge": 4.16,
+    "parry": 8.68,
+    "block": 4.68,
+    "dps": 23.5
    },
    "reputacije": [
     {
@@ -2233,7 +2247,7 @@
     {
      "kat": "Character",
      "ime": "Times camped",
-     "n": 5
+     "n": 6
     },
     {
      "kat": "Consumables",
@@ -2254,7 +2268,7 @@
     {
      "kat": "Consumables",
      "ime": "Food eaten",
-     "n": 8
+     "n": 10
     },
     {
      "kat": "Reputation",
@@ -2309,7 +2323,7 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 1446
+     "n": 1553
     },
     {
      "kat": "Kills",
@@ -2319,17 +2333,17 @@
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 1441
+     "n": 1548
     },
     {
      "kat": "Creatures",
      "ime": "Different creature types killed",
-     "n": 6
+     "n": 7
     },
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 691,
+     "n": 695,
      "opis": "Humanoid"
     },
     {
@@ -2340,12 +2354,12 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 583
+     "n": 690
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 551
+     "n": 658
     },
     {
      "kat": "Killing Blows",
@@ -2356,7 +2370,7 @@
     {
      "kat": "Deaths",
      "ime": "Total deaths",
-     "n": 10
+     "n": 11
     },
     {
      "kat": "Dungeons and Raids",
@@ -2371,7 +2385,7 @@
     {
      "kat": "World",
      "ime": "Deaths from falling",
-     "n": 1
+     "n": 2
     },
     {
      "kat": "Quests",
@@ -2391,12 +2405,12 @@
     {
      "kat": "Skills",
      "ime": "Professions learned",
-     "n": 2
+     "n": 3
     },
     {
      "kat": "Skills",
      "ime": "Professions at maximum skill",
-     "n": 2
+     "n": 3
     },
     {
      "kat": "Skills",
@@ -2406,7 +2420,7 @@
     {
      "kat": "Skills",
      "ime": "Weapon skills at maximum skill",
-     "n": 5
+     "n": 7
     },
     {
      "kat": "Secondary Skills",
@@ -2426,12 +2440,22 @@
     {
      "kat": "Secondary Skills",
      "ime": "First Aid Manuals learned",
-     "n": 10
+     "n": 8
     },
     {
      "kat": "Secondary Skills",
      "ime": "Fishing skill",
      "n": 1
+    },
+    {
+     "kat": "Professions",
+     "ime": "Highest Blacksmithing skill",
+     "n": 61
+    },
+    {
+     "kat": "Professions",
+     "ime": "Blacksmithing Plans learned",
+     "n": 56
     },
     {
      "kat": "Professions",
@@ -2441,22 +2465,22 @@
     {
      "kat": "Professions",
      "ime": "Highest Mining skill",
-     "n": 22
+     "n": 70
     },
     {
      "kat": "Professions",
      "ime": "Smelting Recipes learned",
-     "n": 9
+     "n": 15
     },
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 17
+     "n": 18
     },
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
-     "n": 3
+     "n": 4
     },
     {
      "kat": "Social",
@@ -2467,6 +2491,7 @@
    "questovi": {
     "uLogu": [
      "Arugal's Folly",
+     "WANTED: Syndicate Personnel",
      "A Recipe For Death",
      "Rot Hide Ichor",
      "Stolen Booty",
@@ -2515,10 +2540,10 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg",
-   "azurirano": "2026-11-07T18:58:22Z"
+   "azurirano": "2026-11-07T23:06:53Z"
   }
  },
- "provjereno": "2026-11-07T21:07:19Z",
+ "provjereno": "2026-11-07T23:06:53Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 6,
@@ -2538,14 +2563,25 @@
    },
    {
     "ime": "Nikola Roguevic",
-    "level": 19,
+    "level": 20,
     "klasa": "Rogue",
     "rasa": "Undead",
     "rang": 1,
     "slug": "nikola-roguevic",
-    "ilvl": 12,
-    "zadnjiLogin": "2026-11-07T16:50:47Z",
+    "ilvl": 13,
+    "zadnjiLogin": "2026-11-07T23:04:04Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg"
+   },
+   {
+    "ime": "Arsen Deadic",
+    "level": 19,
+    "klasa": "Paladin",
+    "rasa": "Undead",
+    "rang": 3,
+    "slug": "arsen-deadic",
+    "ilvl": 10,
+    "zadnjiLogin": "2026-11-07T22:58:37Z",
+    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg"
    },
    {
     "ime": "Melee Kitic",
@@ -2557,17 +2593,6 @@
     "ilvl": 9,
     "zadnjiLogin": "2026-11-07T19:42:59Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg"
-   },
-   {
-    "ime": "Arsen Deadic",
-    "level": 18,
-    "klasa": "Paladin",
-    "rasa": "Undead",
-    "rang": 3,
-    "slug": "arsen-deadic",
-    "ilvl": 10,
-    "zadnjiLogin": "2026-11-07T16:51:06Z",
-    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg"
    },
    {
     "ime": "Yuserious Son",
@@ -2710,6 +2735,11 @@
     "2026-11-07T18:58:22Z",
     19,
     13581
+   ],
+   [
+    "2026-11-07T23:06:53Z",
+    20,
+    14032
    ]
   ],
   "Arsen Deadic": [
@@ -2737,6 +2767,11 @@
     "2026-11-07T18:58:22Z",
     18,
     19313
+   ],
+   [
+    "2026-11-07T23:06:53Z",
+    19,
+    17
    ]
   ]
  }

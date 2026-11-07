@@ -147,7 +147,7 @@
         },
         {
           "name": "First Aid",
-          "skill": 85
+          "skill": 89
         }
       ]
     },
@@ -161,19 +161,19 @@
       "professions": [
         {
           "name": "Mining",
-          "skill": 22,
+          "skill": 70,
           "phase": "stalno"
         },
         {
-          "name": "Herbalism",
-          "skill": 36,
+          "name": "Blacksmithing",
+          "skill": 61,
           "phase": "stalno"
         }
       ],
       "secondary": [
         {
           "name": "Cooking",
-          "skill": 1
+          "skill": 59
         },
         {
           "name": "Fishing",
@@ -181,7 +181,7 @@
         },
         {
           "name": "First Aid",
-          "skill": 50
+          "skill": 52
         }
       ]
     }
@@ -504,6 +504,36 @@
       "character": "paladin",
       "profession": "First Aid",
       "skill": 50
+    },
+    {
+      "date": "2026-11-07",
+      "character": "rogue",
+      "profession": "First Aid",
+      "skill": 89
+    },
+    {
+      "date": "2026-11-07",
+      "character": "paladin",
+      "profession": "Mining",
+      "skill": 70
+    },
+    {
+      "date": "2026-11-07",
+      "character": "paladin",
+      "profession": "Blacksmithing",
+      "skill": 61
+    },
+    {
+      "date": "2026-11-07",
+      "character": "paladin",
+      "profession": "Cooking",
+      "skill": 59
+    },
+    {
+      "date": "2026-11-07",
+      "character": "paladin",
+      "profession": "First Aid",
+      "skill": 52
     }
   ],
   "flows": [
