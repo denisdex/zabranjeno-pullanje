@@ -9,8 +9,19 @@
    "url": "https://www.wowhead.com/news/rss/classic"
   }
  ],
- "azurirano": "2026-11-07T00:57:35Z",
+ "azurirano": "2026-11-07T10:20:48Z",
  "stavke": [
+  {
+   "datum": "2026-11-07T01:07:59Z",
+   "naslov": "WoW: Forever Hotfixes - November 6, 2026",
+   "link": "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-6-2026/2403040/4",
+   "izvor": "Blizzard",
+   "sazetak": "November 6, 2026 Classes Fixed an issue with the Quick and the Dead Legacy Talent where it sometimes did not work as intended. Cooldown Manager The Cooldown Manager will now correctly display the duration of crowd control spells at all…",
+   "oznake": [
+    "Hotfix"
+   ],
+   "vrsta": "patch"
+  },
   {
    "datum": "2026-11-06T18:31:23Z",
    "naslov": "The Adventure Begins in WoW: Forever, Stay Connected with Discord, and Taldramir Takes Shape in WoW Weekly",
@@ -28,17 +39,6 @@
    "sazetak": "Azeroth has a new home, and the adventure is just getting started! This week in WoW Weekly, discover that World of Warcraft: Forever is now live, join ongoing conversations on Discord in and out of the game, explore another way to play…",
    "oznake": [],
    "vrsta": "vijest"
-  },
-  {
-   "datum": "2026-11-06T02:34:10Z",
-   "naslov": "WoW: Forever Hotfixes - November 5, 2026",
-   "link": "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-5-2026/2403040/1",
-   "izvor": "Blizzard",
-   "sazetak": "Hotfixes November 5, 2026 Enemies and NPCs Durotar - Fixed an issue where Yarrog Baneshadow was respawning more slowly than intended. Zephras - Lotheluum Starbreeze now offers training to Druids as expected. Dustwallow Marsh - Fixed an…",
-   "oznake": [
-    "Hotfix"
-   ],
-   "vrsta": "patch"
   },
   {
    "datum": "2026-11-05T22:00:07Z",
@@ -238,29 +238,6 @@
    "vrsta": "vijest"
   },
   {
-   "datum": "2026-10-22T17:00:00Z",
-   "naslov": "The WoW Forever Beta Celebration is Underway",
-   "link": "https://us.forums.blizzard.com/en/wow/t/the-wow-forever-beta-celebration-is-underway/2389633/1",
-   "izvor": "Blizzard",
-   "sazetak": "The WoW Forever Beta will end 24 hours from now, at 10:00 a.m. PDT on Friday, October 23, and until that fateful moment, we’re celebrating the joy and wonder of WoW Forever with 24 hours of shenanigans and upheaval in Zephras Isle, Dun…",
-   "oznake": [
-    "Beta"
-   ],
-   "vrsta": "vijest"
-  },
-  {
-   "datum": "2026-10-22T16:21:16Z",
-   "naslov": "The WoW: Forever Podcast: Episode 5 - End of Beta Special",
-   "link": "https://us.forums.blizzard.com/en/wow/t/the-wow-forever-podcast-episode-5-end-of-beta-special/2389565/1",
-   "izvor": "Blizzard",
-   "sazetak": "End of Beta Special | Episode 5 - The WoW: Forever Podcast",
-   "oznake": [
-    "Beta",
-    "Podcast"
-   ],
-   "vrsta": "vijest"
-  },
-  {
    "datum": "2026-10-16T17:03:18Z",
    "naslov": "Midnight 12.1.5 Live, Patch 12.1.7 & WoW: Forever - WoW Weekly Recap",
    "link": "https://www.wowhead.com/news=383465/midnight-12-1-5-live-patch-12-1-7-and-wow-forever-wow-weekly-recap",
@@ -415,6 +392,24 @@
    "link": "https://www.wowhead.com/news=382921/wow-forever-will-have-addon-changes-from-midnight",
    "izvor": "Wowhead",
    "sazetak": "Blizzard has announced through the WoW UI Discord that the Midnight addon disarmament changes will be active in WoW: Forever. Continue reading »",
+   "oznake": [],
+   "vrsta": "vijest"
+  },
+  {
+   "datum": "2026-09-14T05:06:37Z",
+   "naslov": "BlizzCon Day 2 Roundup: Forever, Forever, and More Forever!",
+   "link": "https://www.wowhead.com/news=382879/blizzcon-day-2-roundup-forever-forever-and-more-forever",
+   "izvor": "Wowhead",
+   "sazetak": "BlizzCon has ended, but don't worry - we've wrapped up the big recaps from today's panels. Continue reading »",
+   "oznake": [],
+   "vrsta": "vijest"
+  },
+  {
+   "datum": "2026-09-13T19:42:52Z",
+   "naslov": "WoW: Forever Webhook Now Available",
+   "link": "https://www.wowhead.com/news=382871/wow-forever-webhook-now-available",
+   "izvor": "Wowhead",
+   "sazetak": "We've created a new webhook for World of Warcraft: Forever, so you can keep up with all of the latest news and information regarding the newest flavor of WoW! Continue reading »",
    "oznake": [],
    "vrsta": "vijest"
   }
