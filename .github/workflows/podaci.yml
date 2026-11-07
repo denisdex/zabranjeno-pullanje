@@ -1,9 +1,11 @@
 name: Podaci
 
 # Svaka 3 sata osvježi data/*.json (vijesti, armory) i commita samo ako se nešto promijenilo.
+# GitHub zna preskočiti zakazana pokretanja, pa cron kuca svaki sat, a posao se
+# radi tek kad su podaci stariji od ~2 h 40 min. Propušteni termin nadoknadi idući sat.
 on:
   schedule:
-    - cron: "17 */3 * * *"
+    - cron: "17 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -19,15 +21,32 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+      - name: Treba li osvježiti
+        id: rok
+        run: |
+          if [ "${{ github.event_name }}" != "schedule" ]; then echo "radi=1" >> "$GITHUB_OUTPUT"; exit 0; fi
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json, datetime as d
+          try:
+              t = json.load(open("data/likovi.json"))["provjereno"]
+              star = d.datetime.now(d.timezone.utc) - d.datetime.fromisoformat(t.replace("Z", "+00:00"))
+              print("radi=" + ("1" if star.total_seconds() > 160 * 60 else "0"))
+          except Exception:
+              print("radi=1")
+          PY
       - uses: actions/setup-python@v5
+        if: steps.rok.outputs.radi == '1'
+
         with:
           python-version: "3.12"
       - name: Osvježi podatke
+        if: steps.rok.outputs.radi == '1'
         env:
           BLIZZARD_CLIENT_ID: ${{ secrets.BLIZZARD_CLIENT_ID }}
           BLIZZARD_CLIENT_SECRET: ${{ secrets.BLIZZARD_CLIENT_SECRET }}
         run: python skripte/osvjezi.py
       - name: Commit ako se nešto promijenilo
+        if: steps.rok.outputs.radi == '1'
         run: |
           if [ -n "$(git status --porcelain data profesije.json)" ]; then
             git config user.name "github-actions[bot]"

@@ -2899,10 +2899,11 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     if (isNaN(d)) return "";
     return d.getDate() + ". " + (d.getMonth() + 1) + ". u " + d.getHours() + ":" + String(d.getMinutes()).padStart(2, "0") + " (" + prije(iso) + ")";
   }
-  // iduće zakazano osvježavanje: cron "17 */3 * * *" (UTC), GitHub zna kasniti do sat
-  function iduce() {
-    var d = new Date(); d.setUTCMinutes(17, 0, 0);
-    while (d.getUTCHours() % 3 || d <= Date.now()) d.setUTCHours(d.getUTCHours() + 1);
+  // iduće osvježavanje: cron kuca svaki sat u :17 (UTC), posao se radi kad je zadnje starije od 2 h 40 min
+  function iduce(iso) {
+    var rok = Math.max(Date.parse(iso) + 160 * 6e4, Date.now());
+    var d = new Date(rok); d.setUTCMinutes(17, 0, 0);
+    if (d < rok) d.setUTCHours(d.getUTCHours() + 1);
     return d.getHours() + ":17";
   }
   function oznakaSvjezine(iso) {
@@ -2911,7 +2912,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     var staro = (Date.now() - Date.parse(iso)) / 36e5 > 5;
     el.classList.toggle("staro", staro);
     var d = new Date(iso);
-    el.innerHTML = "<i aria-hidden=\"true\"></i><span>Iz igre osvježeno <b>" + d.getDate() + ". " + (d.getMonth() + 1) + ". u " + d.getHours() + ":" + String(d.getMinutes()).padStart(2, "0") + "</b> · " + prije(iso) + " · iduće oko " + iduce() + "</span>";
+    el.innerHTML = "<i aria-hidden=\"true\"></i><span>Iz igre osvježeno <b>" + d.getDate() + ". " + (d.getMonth() + 1) + ". u " + d.getHours() + ":" + String(d.getMinutes()).padStart(2, "0") + "</b> · " + prije(iso) + " · iduće oko " + iduce(iso) + "</span>";
     el.hidden = false;
   }
   function pokreni(ARM, VIJ) {
