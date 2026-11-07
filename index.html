@@ -2426,9 +2426,8 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
         <li><a href="#guild">Guild</a></li>
         <li><a href="#novosti">News</a></li>
         <li class="dd"><button type="button" class="dd-b" aria-expanded="false" aria-controls="ddPlan">Plan<span class="dd-s" aria-hidden="true">▾</span></button>
-          <div class="dd-p" id="ddPlan"><a href="#roadmap">Roadmap</a><a href="#dungeoni">Dungeoni</a><a href="#guide">Guide &amp; Rules</a></div></li>
-        <li class="dd"><button type="button" class="dd-b" aria-expanded="false" aria-controls="ddEko">Ekonomija<span class="dd-s" aria-hidden="true">▾</span></button>
-          <div class="dd-p" id="ddEko"><a href="#ekonomija">Ekonomija</a><a href="#profesije">Profesije</a></div></li>
+          <div class="dd-p" id="ddPlan"><a href="#roadmap">Roadmap</a><a href="#dungeoni">Dungeoni</a></div></li>
+        <li><a href="#profesije">Profesije</a></li>
         <li class="dd"><button type="button" class="dd-b" aria-expanded="false" aria-controls="ddVod">Vodič<span class="dd-s" aria-hidden="true">▾</span></button>
           <div class="dd-p" id="ddVod"><a href="#savjeti">Savjeti</a><a href="#addoni">Addoni</a><a href="#macroi">Macroi</a></div></li>
       </ul>
@@ -2529,28 +2528,6 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     </div>
   </section>
 
-  <section class="sec" id="guide">
-    <div class="wrap">
-      <div class="sec-head">
-        <h2>Guide &amp; Rules</h2>
-      </div>
-      <div class="gr">
-        <div class="gr-vodic">
-          <h3 class="gr-h">Prva noć <span>plan po koracima</span></h3>
-          <div class="night">
-            <div class="goal"><span class="lab mono">Cilj prve noći</span><b id="cilj"></b></div>
-            <div class="hs" id="routeHs"><ol class="hs-track route" id="route"></ol>
-              <div class="hs-ctl"><div class="str"><button class="hs-b prev" type="button" aria-label="Prethodno"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button><button class="hs-b next" type="button" aria-label="Sljedeće"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div></div></div>
-          </div>
-        </div>
-        <div class="gr-pravila">
-          <h3 class="gr-h">Pravila ekipe <span>vrijede od prvog dana</span></h3>
-          <ol class="upute" id="uputeLista"></ol>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section class="sec" id="roadmap">
     <div class="wrap">
       <div class="sec-head">
@@ -2570,22 +2547,6 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
       </div>
       <div class="dtl" id="dtl"></div>
       <div class="hs" id="instHs"><div class="hs-track" id="inst"></div><div class="hs-ctl"><div class="str"><button class="hs-b prev" type="button" aria-label="Prethodno"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button><button class="hs-b next" type="button" aria-label="Sljedeće"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div><button class="vidi" type="button" data-tekst="Vidi sve dungeone" data-naslov="Svi dungeoni">Vidi sve dungeone</button></div></div>
-    </div>
-  </section>
-
-  <section class="sec" id="ekonomija">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="kicker mono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="currentColor" opacity=".25"/><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Manufaktura</p>
-        <h2>Ekonomija</h2>
-      </div>
-      <div class="lanci" id="lanci"><p class="prazno mono">Učitavam tokove iz profesije.json…</p></div>
-      <div class="gold"><div class="gold-c" id="goldCilj" style="display:contents"></div><div class="dnevno" id="dnevno"></div></div>
-      <button class="vidi eko-vise" id="ekoVise" type="button" aria-expanded="false" aria-controls="ekoDet">Tko kome što i AH plan</button>
-      <div class="eko-det" id="ekoDet" hidden>
-        <div><h3 class="lab mono" style="color:var(--ember);margin:0 0 10px">Tko kome što</h3><div class="tbl"><table class="duguje"><thead><tr><th>Tko</th><th>Kome</th><th>Što</th><th>Kad</th></tr></thead><tbody id="duguje"></tbody></table></div></div>
-        <div><h3 class="lab mono" style="color:var(--ember);margin:0 0 10px">Što prodati na AH</h3><ul class="ah" id="ahPlan"></ul></div>
-      </div>
     </div>
   </section>
 
@@ -3291,25 +3252,7 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
 
   }
 
-  // manufaktura u Ekonomiji: tokovi iz profesije.json, tko skuplja i tko izrađuje se izračuna iz likova
-  function renderLanci() {
-    var STR = '<span class="str" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"/></svg></span>';
-    function chip(l) { return '<span style="--c:' + bojaLika(l) + '">' + esc(osoba(l)) + "</span>"; }
-    function sa(ime) { return PROF.likovi.filter(function (l) { return l.primarne.some(function (x) { return x.ime === ime; }); }); }
-    $("lanci").innerHTML = PROF.tokovi.map(function (f) {
-      var sk = f.from === "drop" ? '<span>Svi</span>' : sa(f.from).map(chip).join("");
-      var iz = sa(f.to);
-      var od = iz.length && iz.every(function (l) { return l.primarne.some(function (x) { return x.ime === f.to && x.faza === "nakon40"; }); }) ? "od lvl 40" : "odmah";
-      return '<div class="lanac">' +
-        '<div class="kol"><span class="mono">Skupljaju · ' + esc(f.from === "drop" ? "drop sa svih moba" : f.from) + '</span><div class="who">' + sk + "</div></div>" + STR +
-        '<div class="kol"><span class="mono">Sirovina</span><span class="sir">' + esc(f.item) + "</span></div>" + STR +
-        '<div class="kol"><span class="mono">Izrađuje · ' + od + '</span><div class="who">' + (iz.map(chip).join("") || "<span>nitko još</span>") + '</div><span class="mono" lang="en">' + esc(f.to) + "</span></div>" + STR +
-        '<div class="kol"><span class="mono">Proizvodi · ' + esc(f.kome || "") + "</span><ul>" + (f.proizvodi || []).map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul></div>" +
-      "</div>";
-    }).join("");
-  }
-
-  naProf.push(renderProfesije, renderLanci, function () {
+  naProf.push(renderProfesije, function () {
     // kartice i otvoreni profil dobiju profesije čim stignu
     Array.prototype.forEach.call(document.querySelectorAll("[data-prof-lik]"), function (el) {
       var p = igraci.filter(function (x) { return slug(x.lik) === el.getAttribute("data-prof-lik"); })[0];
@@ -4635,25 +4578,6 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     }, { passive: true });
   }
 
-  /* ---------- prva noć: plan po fazama ---------- */
-  (function () {
-    var N = D.prvaNoc || {};
-    var START = { Orc: "Durotar · Valley of Trials", Troll: "Durotar · Valley of Trials", Undead: "Tirisfal Glades · Deathknell" };
-    var grupe = {};
-    igraci.forEach(function (p) { var z = START[p.rasa] || p.rasa; (grupe[z] = grupe[z] || []).push(p); });
-    var startHtml = '<div class="starts">' + Object.keys(grupe).map(function (z) {
-      return '<div><span class="z mono">' + esc(z) + '</span><div class="who">' + grupe[z].map(function (p) {
-        return '<span style="--c:' + BOJE[p.klasa] + '">' + avatar(p) + esc(p.igrac) + "</span>";
-      }).join("") + "</div></div>";
-    }).join("") + "</div>";
-    $("route").innerHTML = (N.koraci || []).map(function (k, i) {
-      return '<li><span class="no">' + String(i + 1).padStart(2, "0") + '</span><span class="when mono">' + esc(k.kad) + "</span><h3>" + esc(k.naslov) + "</h3><p>" + esc(k.tekst) + "</p>" +
-        (k.startovi ? "<div>" + startHtml + "</div>" : "") + "</li>";
-    }).join("");
-    $("cilj").textContent = N.cilj || "";
-    hsPostavi($("routeHs"));
-  })();
-
   /* ---------- news & updates: vijesti lijevo, patchevi i hotfixevi desno ---------- */
   (function () {
     var MJ = ["sij", "velj", "ožu", "tra", "svi", "lip", "srp", "kol", "ruj", "lis", "stu", "pro"];
@@ -4780,75 +4704,6 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
 
   vidiSve($("logVij"), 3, "Više detalja", "Vijesti");
   vidiSve($("logPatch"), 3, "Više detalja", "Patchevi i hotfixevi");
-
-  /* ---------- upute ---------- */
-  $("uputeLista").innerHTML = (D.upute || []).map(function (u) {
-    return "<li><b>" + esc(u.naslov) + "</b><span>" + esc(u.tekst) + "</span></li>";
-  }).join("");
-
-  /* ---------- ekonomija: lanci, gold ciljevi, tko kome što ---------- */
-  (function () {
-    var E = D.ekonomija;
-    if (!E) return;
-    var POIME = {};
-    igraci.forEach(function (p) { POIME[p.igrac] = p; });
-    var STR = '<span class="str" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"/></svg></span>';
-    function chip(ime) {
-      var p = POIME[ime];
-      return "<span" + (p ? ' style="--c:' + BOJE[p.klasa] + '"' : "") + ">" + esc(ime) + "</span>";
-    }
-    // procjena golda do cilja iz roadmapa i dnevne zarade
-    var R = D.roadmap, dana = R ? R.planiraniTjedni * 7 : 49;
-    function udioDo(level) {
-      var u = 0;
-      (R ? R.faze : []).forEach(function (f) { if (f.udio !== null && f.do <= level) u = Math.max(u, f.udio); });
-      return u;
-    }
-    function zaradaDo(level) {
-      var ukupno = 0, prije = 0;
-      E.dnevno.forEach(function (d) {
-        if (d.od >= level) return;
-        var u = udioDo(Math.min(d.do, level)) - udioDo(d.od);
-        ukupno += Math.max(0, u) * dana * (d.min + d.max) / 2;
-      });
-      return Math.round(ukupno);
-    }
-    $("goldCilj").innerHTML = E.ciljevi.map(function (c) {
-      var z = zaradaDo(c.level), dovoljno = z >= c.gold;
-      return '<div class="gc" data-reveal><b>' + esc(c.naziv) + ' · lvl ' + c.level + '</b><span class="g">' + c.gold + "<small>g</small></span>" +
-        "<p>" + esc(c.napomena) + "</p>" +
-        '<p class="proc mono">Procjena do levela ' + c.level + ": oko " + z + " g po igraču · " + (dovoljno ? "stiže se" : "treba farmati") + "</p></div>";
-    }).join("");
-    $("dnevno").innerHTML = E.dnevno.map(function (d) {
-      var sad = AVG >= d.od && (AVG < d.do || (d.od === d.do && AVG >= 60)) || (AVG < 1 && d.od === 1);
-      return '<div class="' + (sad ? "sad" : "") + '"><span class="mono">lvl ' + (d.od === d.do ? d.od : d.od + "–" + d.do) + "</span><b>" + d.min + "–" + d.max + " g</b><span class=\"mono\">dnevno</span></div>";
-    }).join("");
-    $("duguje").innerHTML = E.duguje.map(function (d) {
-      return "<tr><td>" + sAvatarima(d.tko) + "</td><td>" + sAvatarima(d.kome) + "</td><td>" + esc(d.sto) + "</td><td>" + esc(d.kad) + "</td></tr>";
-    }).join("");
-    $("ahPlan").innerHTML = E.prodaja.map(function (a) { return "<li><b>" + esc(a.faza) + "</b><span>" + esc(a.tekst) + "</span></li>"; }).join("");
-    var b = $("ekoVise"), det = $("ekoDet");
-    b.addEventListener("click", function () {
-      var o = det.hidden;
-      det.hidden = !o;
-      b.setAttribute("aria-expanded", o ? "true" : "false");
-      b.textContent = o ? "Sakrij tablicu i AH plan" : "Tko kome što i AH plan";
-    });
-  })();
-
-  /* ---------- prva noć (Guide & Rules): nakon launcha ili od levela 10 sklopljena, pravila ostaju ---------- */
-  (function () {
-    var sec = $("guide"), gotovo = Date.now() > Date.parse(D.datumi.launch) + 864e5 || AVG >= 10;
-    if (!gotovo) return;
-    sec.classList.add("sklopljeno");
-    var b = document.createElement("button");
-    b.type = "button"; b.className = "vidi otvori-noc"; b.textContent = "Prikaži plan prve noći";
-    b.addEventListener("click", function () {
-      var z = sec.classList.toggle("sklopljeno");
-      b.textContent = z ? "Prikaži plan prve noći" : "Sakrij plan";
-    });
-    sec.querySelector(".gr-vodic .gr-h").after(b);
-  })();
 
   /* ---------- roadmap do 60 ---------- */
   (function () {
