@@ -8,7 +8,7 @@ bez ikakvih API ključeva i tajni.
 
 ## Kako radi
 
-- `.github/workflows/podaci.yml` se pokreće svaka 3 sata (i ručno: Actions → Podaci → Run workflow, ili `gh workflow run podaci.yml`).
+- `.github/workflows/podaci.yml` se pokreće svaka 2 sata, sam sebe u lancu: nakon osvježavanja čeka 2 h pa pokrene idući run; cron svaki sat je samo rezerva ako lanac pukne (i ručno: Actions → Podaci → Run workflow, ili `gh workflow run podaci.yml`).
 - Pokreće `skripte/osvjezi.py`:
   - **vijesti** → `data/vijesti.json`: službeni Blizzardovi postovi (Blue Tracker RSS na forumu) i Wowhead vijesti (Classic RSS), samo ono što spominje Forever ili Classic+. Za svaku vijest: naslov, datum, link, izvor, kratki sažetak iz feeda i oznake izvedene iz naslova. Polje `vrsta` (`patch` ili `vijest`) dijeli sekciju News & Updates: patch notes, hotfixevi, balans i bug fixevi idu u desni stupac, sve ostalo lijevo.
   - **armory** → `data/likovi.json` (`skripte/armory.py`): level, talenti, oprema i profesije za likove iz `data.js`.
@@ -38,4 +38,4 @@ Klijent je napravljen na develop.battle.net (Dexov račun). Ključevi nikad ne i
 BLIZZARD_CLIENT_ID=... BLIZZARD_CLIENT_SECRET=... python3 skripte/osvjezi.py
 ```
 
-Prije svog pusha napravi `git pull --rebase`, jer bot svaka 3 sata može dodati svoj commit.
+Prije svog pusha napravi `git pull --rebase`, jer bot svaka 2 sata može dodati svoj commit.

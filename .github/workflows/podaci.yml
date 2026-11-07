@@ -1,8 +1,10 @@
 name: Podaci
 
 # Svaka 2 sata osvježi data/*.json (vijesti, armory) i commita samo ako se nešto promijenilo.
-# GitHub zna preskočiti zakazana pokretanja, pa cron kuca svaki sat, a posao se
-# radi tek kad su podaci stariji od ~1 h 40 min. Glavni okidač je launchd na Denisovom Macu (svaka 2 h).
+# Glavni okidač je lanac: nakon osvježavanja posao "lanac" čeka 2 sata pa pokrene idući run
+# (workflow_dispatch preko GITHUB_TOKEN-a smije pokrenuti novi run). Uvijek živi samo jedan lanac:
+# novi poništi stari. GitHubov cron zna preskakati termine, pa je samo rezerva: kuca svaki sat,
+# a radi tek kad su podaci stariji od 2 h 20 min (lanac je pukao) i tada lanac pokrene iznova.
 on:
   schedule:
     - cron: "17 * * * *"
@@ -10,15 +12,17 @@ on:
 
 permissions:
   contents: write
-
-concurrency:
-  group: podaci
-  cancel-in-progress: false
+  actions: write
 
 jobs:
   osvjezi:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    concurrency:
+      group: podaci
+      cancel-in-progress: false
+    outputs:
+      radi: ${{ steps.rok.outputs.radi }}
     steps:
       - uses: actions/checkout@v4
       - name: Treba li osvježiti
@@ -30,13 +34,12 @@ jobs:
           try:
               t = json.load(open("data/likovi.json"))["provjereno"]
               star = d.datetime.now(d.timezone.utc) - d.datetime.fromisoformat(t.replace("Z", "+00:00"))
-              print("radi=" + ("1" if star.total_seconds() > 100 * 60 else "0"))
+              print("radi=" + ("1" if star.total_seconds() > 140 * 60 else "0"))
           except Exception:
               print("radi=1")
           PY
       - uses: actions/setup-python@v5
         if: steps.rok.outputs.radi == '1'
-
         with:
           python-version: "3.12"
       - name: Osvježi podatke
@@ -53,7 +56,23 @@ jobs:
             git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
             git add data profesije.json
             git commit -m "auto: podaci $(date -u '+%Y-%m-%d %H:%M') UTC"
-            git push
+            git pull --rebase -q && git push
           else
             echo "Nema promjena, ništa se ne commita."
           fi
+
+  lanac:
+    needs: osvjezi
+    if: always() && needs.osvjezi.outputs.radi == '1'
+    runs-on: ubuntu-latest
+    timeout-minutes: 130
+    concurrency:
+      group: lanac
+      cancel-in-progress: true
+    steps:
+      - name: Čekaj 2 sata pa pokreni idući run
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          sleep 7080
+          gh workflow run podaci.yml -R "${{ github.repository }}"

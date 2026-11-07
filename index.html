@@ -2899,12 +2899,10 @@ span[data-tt], b[data-tt], th[data-tt] { text-decoration: underline dotted rgba(
     if (isNaN(d)) return "";
     return d.getDate() + ". " + (d.getMonth() + 1) + ". u " + d.getHours() + ":" + String(d.getMinutes()).padStart(2, "0") + " (" + prije(iso) + ")";
   }
-  // iduće osvježavanje: cron kuca svaki sat u :17 (UTC), posao se radi kad je zadnje starije od 1 h 40 min
+  // iduće osvježavanje: lanac u GitHub Actions pokrene idući run ~2 h nakon zadnjeg (+ par minuta za run)
   function iduce(iso) {
-    var rok = Math.max(Date.parse(iso) + 100 * 6e4, Date.now());
-    var d = new Date(rok); d.setUTCMinutes(17, 0, 0);
-    if (d < rok) d.setUTCHours(d.getUTCHours() + 1);
-    return d.getHours() + ":17";
+    var d = new Date(Math.max(Date.parse(iso) + 125 * 6e4, Date.now()));
+    return d.getHours() + ":" + String(d.getMinutes()).padStart(2, "0");
   }
   function oznakaSvjezine(iso) {
     var el = document.getElementById("svjezina");
