@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-07T18:58:22Z",
+ "azurirano": "2026-11-07T21:07:19Z",
  "likovi": {
   "Saman Saulic": {
    "level": 18,
@@ -481,10 +481,10 @@
   },
   "Melee Kitic": {
    "level": 19,
-   "xp": 4156,
+   "xp": 11893,
    "guild": "Kafana na Balkanu",
    "ilvl": 9,
-   "zadnjiLogin": "2026-11-07T12:37:34Z",
+   "zadnjiLogin": "2026-11-07T19:42:59Z",
    "izvor": "Blizzard API",
    "talenti": [
     1,
@@ -584,7 +584,8 @@
      "kvaliteta": "rare",
      "wowhead": 15424,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132395.jpg",
-     "ilvl": 18
+     "ilvl": 18,
+     "enchant": "Sharpened +2"
     },
     {
      "slot": "Ranged",
@@ -622,48 +623,48 @@
     }
    ],
    "statovi": {
-    "hp": 243,
+    "hp": 573,
     "resurs": 100,
     "resursIme": "Rage",
-    "str": 25,
-    "agi": 8,
-    "sta": 24,
-    "int": 5,
-    "spi": 16,
-    "armor": 156,
-    "ap": 87,
+    "str": 61,
+    "agi": 32,
+    "sta": 57,
+    "int": 20,
+    "spi": 38,
+    "armor": 671,
+    "ap": 159,
     "spellPower": 0,
-    "crit": 5.92,
+    "crit": 9.28,
     "spellCrit": 0.0,
-    "rangedCrit": 0.0,
-    "dodge": 0.88,
-    "parry": 4.8,
-    "block": 4.8,
-    "dps": 5.6
+    "rangedCrit": 0.6,
+    "dodge": 4.24,
+    "parry": 4.92,
+    "block": 4.92,
+    "dps": 28.0
    },
    "reputacije": [
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 1628,
+     "vrijednost": 1672,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Friendly",
-     "vrijednost": 5340,
+     "vrijednost": 5383,
      "max": 6000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Friendly",
-     "vrijednost": 1163,
+     "vrijednost": 1207,
      "max": 6000
     },
     {
      "ime": "Undercity",
      "status": "Neutral",
-     "vrijednost": 2497,
+     "vrijednost": 2672,
      "max": 3000
     },
     {
@@ -700,12 +701,12 @@
     {
      "kat": "Consumables",
      "ime": "Bandages used",
-     "n": 9
+     "n": 13
     },
     {
      "kat": "Consumables",
      "ime": "Bandage used most",
-     "n": 9,
+     "n": 13,
      "opis": "Linen Bandage"
     },
     {
@@ -776,17 +777,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 1347
+     "n": 1421
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 1238
+     "n": 1311
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 1342
+     "n": 1416
     },
     {
      "kat": "Creatures",
@@ -796,7 +797,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 743,
+     "n": 744,
      "opis": "Humanoid"
     },
     {
@@ -807,12 +808,12 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 709
+     "n": 752
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 678
+     "n": 721
     },
     {
      "kat": "Killing Blows",
@@ -823,7 +824,7 @@
     {
      "kat": "Deaths",
      "ime": "Total deaths",
-     "n": 18
+     "n": 19
     },
     {
      "kat": "Dungeons and Raids",
@@ -843,7 +844,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 120
+     "n": 123
     },
     {
      "kat": "Quests",
@@ -918,12 +919,12 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 19
+     "n": 21
     },
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
-     "n": 9
+     "n": 10
     },
     {
      "kat": "Social",
@@ -937,6 +938,7 @@
      "A Recipe For Death",
      "Rot Hide Ichor",
      "Stolen Booty",
+     "Wand to Bethor",
      "Raptor Horns",
      "Miner's Fortune",
      "Verog the Dervish",
@@ -949,7 +951,6 @@
      "Harpy Raiders",
      "Tribes at War",
      "Centaur Bracers",
-     "Journey to Hillsbrad Foothills",
      "Prowlers of the Barrens",
      "Beren's Peril",
      "Goblin Invaders",
@@ -969,7 +970,7 @@
      "Watching the Roads",
      "Chol'aruk the Ravener"
     ],
-    "zavrseno": 145
+    "zavrseno": 148
    },
    "mountovi": [],
    "petovi": [],
@@ -979,7 +980,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg",
-   "azurirano": "2026-11-07T15:25:25Z"
+   "azurirano": "2026-11-07T21:07:19Z"
   },
   "Janica Frostelich": {
    "level": 16,
@@ -2517,7 +2518,7 @@
    "azurirano": "2026-11-07T18:58:22Z"
   }
  },
- "provjereno": "2026-11-07T19:08:09Z",
+ "provjereno": "2026-11-07T21:07:19Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 6,
@@ -2554,7 +2555,7 @@
     "rang": 3,
     "slug": "melee-kitic",
     "ilvl": 9,
-    "zadnjiLogin": "2026-11-07T12:37:34Z",
+    "zadnjiLogin": "2026-11-07T19:42:59Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg"
    },
    {
@@ -2576,7 +2577,7 @@
     "rang": 4,
     "slug": "yuserious-son",
     "ilvl": 9,
-    "zadnjiLogin": "2026-11-07T15:44:51Z",
+    "zadnjiLogin": "2026-11-07T20:12:00Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/6/6269702-avatar.jpg"
    },
    {
@@ -2650,6 +2651,11 @@
     "2026-11-07T15:25:25Z",
     19,
     4156
+   ],
+   [
+    "2026-11-07T21:07:19Z",
+    19,
+    11893
    ]
   ],
   "Janica Frostelich": [
