@@ -63,23 +63,23 @@
       "professions": [
         {
           "name": "Leatherworking",
-          "skill": 75,
+          "skill": 81,
           "phase": "stalno"
         },
         {
           "name": "Skinning",
-          "skill": 100,
+          "skill": 132,
           "phase": "stalno"
         }
       ],
       "secondary": [
         {
           "name": "Cooking",
-          "skill": 3
+          "skill": 35
         },
         {
           "name": "Fishing",
-          "skill": 1
+          "skill": 78
         },
         {
           "name": "First Aid",
@@ -181,7 +181,7 @@
         },
         {
           "name": "First Aid",
-          "skill": 52
+          "skill": 53
         }
       ]
     }
@@ -540,6 +540,36 @@
       "character": "mage",
       "profession": "Herbalism",
       "skill": 11
+    },
+    {
+      "date": "2026-11-08",
+      "character": "shaman",
+      "profession": "Leatherworking",
+      "skill": 81
+    },
+    {
+      "date": "2026-11-08",
+      "character": "shaman",
+      "profession": "Skinning",
+      "skill": 132
+    },
+    {
+      "date": "2026-11-08",
+      "character": "shaman",
+      "profession": "Cooking",
+      "skill": 35
+    },
+    {
+      "date": "2026-11-08",
+      "character": "shaman",
+      "profession": "Fishing",
+      "skill": 78
+    },
+    {
+      "date": "2026-11-08",
+      "character": "paladin",
+      "profession": "First Aid",
+      "skill": 53
     }
   ],
   "flows": [
