@@ -1,16 +1,16 @@
 {
- "azurirano": "2026-11-08T11:57:29Z",
+ "azurirano": "2026-11-08T13:56:52Z",
  "likovi": {
   "Saman Saulic": {
-   "level": 21,
-   "xp": 11448,
+   "level": 22,
+   "xp": 13190,
    "guild": "Kafana na Balkanu",
-   "ilvl": 10,
-   "zadnjiLogin": "2026-11-08T03:19:42Z",
+   "ilvl": 12,
+   "zadnjiLogin": "2026-11-08T11:57:33Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
-    6,
+    7,
     5
    ],
    "specka": "Enhancement",
@@ -29,9 +29,9 @@
     },
     {
      "ime": "Mental Dexterity",
-     "rang": 1,
+     "rang": 2,
      "stablo": "Enhancement",
-     "opis": "Increases your Attack Power by an amount equal to 50% of your Intellect."
+     "opis": "Increases your Attack Power by an amount equal to 100% of your Intellect."
     },
     {
      "ime": "Tidal Focus",
@@ -51,36 +51,35 @@
     },
     {
      "slot": "Chest",
-     "ime": "Burnt Leather Vest",
+     "ime": "Native Vest of the Owl",
      "kvaliteta": "uncommon",
-     "wowhead": 2961,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135013.jpg",
-     "ilvl": 11,
-     "enchant": "Enchanted: Stamina +1 and Armor +8"
+     "wowhead": 14096,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135009.jpg",
+     "ilvl": 16
     },
     {
      "slot": "Waist",
-     "ime": "Binding Girdle",
+     "ime": "Grassland Sash",
      "kvaliteta": "uncommon",
-     "wowhead": 5275,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132490.jpg",
-     "ilvl": 15
+     "wowhead": 6477,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132491.jpg",
+     "ilvl": 20
     },
     {
      "slot": "Legs",
-     "ime": "Greasy Tinker's Pants",
+     "ime": "Sea Dog Britches",
      "kvaliteta": "uncommon",
-     "wowhead": 5327,
+     "wowhead": 5310,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/134582.jpg",
-     "ilvl": 18
+     "ilvl": 20
     },
     {
      "slot": "Feet",
-     "ime": "Bard's Boots of the Whale",
+     "ime": "Buckled Boots",
      "kvaliteta": "uncommon",
-     "wowhead": 6557,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132539.jpg",
-     "ilvl": 16
+     "wowhead": 5311,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132537.jpg",
+     "ilvl": 21
     },
     {
      "slot": "Wrist",
@@ -519,7 +518,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg",
-   "azurirano": "2026-11-08T11:57:29Z"
+   "azurirano": "2026-11-08T13:56:52Z"
   },
   "Melee Kitic": {
    "level": 20,
@@ -1526,7 +1525,7 @@
    "xp": 20790,
    "guild": "Kafana na Balkanu",
    "ilvl": 15,
-   "zadnjiLogin": "2026-11-08T05:28:16Z",
+   "zadnjiLogin": "2026-11-08T13:45:06Z",
    "izvor": "Blizzard API",
    "talenti": [
     2,
@@ -1670,7 +1669,8 @@
      "kvaliteta": "rare",
      "wowhead": 272998,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132369.jpg",
-     "ilvl": 18
+     "ilvl": 18,
+     "enchant": "Instant Poison (59 |4Charge:Charges;)"
     },
     {
      "slot": "Off Hand",
@@ -1678,7 +1678,8 @@
      "kvaliteta": "rare",
      "wowhead": 14151,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135661.jpg",
-     "ilvl": 18
+     "ilvl": 18,
+     "enchant": "Instant Poison (60 |4Charge:Charges;)"
     },
     {
      "slot": "Ranged",
@@ -1886,7 +1887,7 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 1815
+     "n": 1816
     },
     {
      "kat": "Kills",
@@ -1896,7 +1897,7 @@
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 1797
+     "n": 1798
     },
     {
      "kat": "Creatures",
@@ -1906,7 +1907,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 698,
+     "n": 699,
      "opis": "Humanoid"
     },
     {
@@ -1917,12 +1918,12 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 983
+     "n": 984
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 822
+     "n": 823
     },
     {
      "kat": "Killing Blows",
@@ -2023,7 +2024,7 @@
     {
      "kat": "Professions",
      "ime": "Highest Leatherworking skill",
-     "n": 85
+     "n": 107
     },
     {
      "kat": "Professions",
@@ -2043,7 +2044,7 @@
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
-     "n": 8
+     "n": 9
     },
     {
      "kat": "Social",
@@ -2105,7 +2106,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg",
-   "azurirano": "2026-11-08T05:59:47Z"
+   "azurirano": "2026-11-08T13:56:52Z"
   },
   "Arsen Deadic": {
    "level": 21,
@@ -2667,10 +2668,10 @@
    "azurirano": "2026-11-08T11:57:29Z"
   }
  },
- "provjereno": "2026-11-08T11:57:29Z",
+ "provjereno": "2026-11-08T13:56:52Z",
  "guild": {
   "ime": "Kafana na Balkanu",
-  "clanova": 8,
+  "clanova": 7,
   "osnovan": "2026-11-05T20:24:04Z",
   "ruleset": "Normal",
   "roster": [
@@ -2693,7 +2694,7 @@
     "rang": 1,
     "slug": "nikola-roguevic",
     "ilvl": 15,
-    "zadnjiLogin": "2026-11-08T05:28:16Z",
+    "zadnjiLogin": "2026-11-08T13:45:06Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg"
    },
    {
@@ -2717,17 +2718,6 @@
     "ilvl": 9,
     "zadnjiLogin": "2026-11-08T10:18:17Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg"
-   },
-   {
-    "ime": "Yeet Mcneat",
-    "level": 29,
-    "klasa": "Paladin",
-    "rasa": "Undead",
-    "rang": 4,
-    "slug": "yeet-mcneat",
-    "ilvl": 27,
-    "zadnjiLogin": "2026-11-08T00:11:51Z",
-    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/209/7550161-avatar.jpg"
    },
    {
     "ime": "Yuserious Son",
@@ -2790,6 +2780,11 @@
     "2026-11-08T04:00:36Z",
     21,
     11448
+   ],
+   [
+    "2026-11-08T13:56:52Z",
+    22,
+    13190
    ]
   ],
   "Melee Kitic": [
