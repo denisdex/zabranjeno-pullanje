@@ -127,7 +127,7 @@
       "professions": [
         {
           "name": "Leatherworking",
-          "skill": 85,
+          "skill": 107,
           "phase": "stalno"
         },
         {
@@ -139,11 +139,11 @@
       "secondary": [
         {
           "name": "Cooking",
-          "skill": 20
+          "skill": 30
         },
         {
           "name": "Fishing",
-          "skill": 3
+          "skill": 23
         },
         {
           "name": "First Aid",
@@ -570,6 +570,24 @@
       "character": "paladin",
       "profession": "First Aid",
       "skill": 53
+    },
+    {
+      "date": "2026-11-08",
+      "character": "rogue",
+      "profession": "Leatherworking",
+      "skill": 107
+    },
+    {
+      "date": "2026-11-08",
+      "character": "rogue",
+      "profession": "Cooking",
+      "skill": 30
+    },
+    {
+      "date": "2026-11-08",
+      "character": "rogue",
+      "profession": "Fishing",
+      "skill": 23
     }
   ],
   "flows": [
