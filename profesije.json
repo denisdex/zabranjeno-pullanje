@@ -102,7 +102,7 @@
         },
         {
           "name": "Herbalism",
-          "skill": 10,
+          "skill": 11,
           "phase": "stalno"
         }
       ],
@@ -534,6 +534,12 @@
       "character": "paladin",
       "profession": "First Aid",
       "skill": 52
+    },
+    {
+      "date": "2026-11-08",
+      "character": "mage",
+      "profession": "Herbalism",
+      "skill": 11
     }
   ],
   "flows": [

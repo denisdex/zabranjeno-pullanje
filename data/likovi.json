@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-07T23:06:53Z",
+ "azurirano": "2026-11-08T02:01:01Z",
  "likovi": {
   "Saman Saulic": {
    "level": 18,
@@ -983,16 +983,16 @@
    "azurirano": "2026-11-07T21:07:19Z"
   },
   "Janica Frostelich": {
-   "level": 16,
-   "xp": 7403,
+   "level": 18,
+   "xp": 7183,
    "guild": "Kafana na Balkanu",
-   "ilvl": 8,
-   "zadnjiLogin": "2026-11-06T23:59:21Z",
+   "ilvl": 12,
+   "zadnjiLogin": "2026-11-08T01:50:00Z",
    "izvor": "Blizzard API",
    "talenti": [
     1,
     1,
-    5
+    7
    ],
    "specka": "Frost",
    "talentiPopis": [
@@ -1019,25 +1019,30 @@
      "rang": 3,
      "stablo": "Frost",
      "opis": "Improves your chance to hit with all spells by 6%."
+    },
+    {
+     "ime": "Frostbite",
+     "rang": 2,
+     "stablo": "Frost",
+     "opis": "Gives your Chill effects a 10% chance to Freeze the target for 5 sec."
     }
    ],
    "oprema": [
     {
      "slot": "Chest",
-     "ime": "Beaded Wraps of Spirit",
-     "kvaliteta": "uncommon",
-     "wowhead": 14094,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135009.jpg",
-     "ilvl": 11,
-     "enchant": "Enchanted: Stamina +1 and Armor +8"
+     "ime": "Rotmender's Garb",
+     "kvaliteta": "rare",
+     "wowhead": 286978,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135008.jpg",
+     "ilvl": 23
     },
     {
      "slot": "Waist",
-     "ime": "Aboriginal Sash of Spirit",
-     "kvaliteta": "uncommon",
-     "wowhead": 14113,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132494.jpg",
-     "ilvl": 15
+     "ime": "Rotmender's Sash",
+     "kvaliteta": "rare",
+     "wowhead": 286980,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132500.jpg",
+     "ilvl": 22
     },
     {
      "slot": "Legs",
@@ -1049,11 +1054,11 @@
     },
     {
      "slot": "Feet",
-     "ime": "Dirt-trodden Boots",
-     "kvaliteta": "common",
-     "wowhead": 4936,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132542.jpg",
-     "ilvl": 8
+     "ime": "Buccaneer's Boots of the Eagle",
+     "kvaliteta": "uncommon",
+     "wowhead": 14174,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132539.jpg",
+     "ilvl": 19
     },
     {
      "slot": "Wrist",
@@ -1065,11 +1070,11 @@
     },
     {
      "slot": "Hands",
-     "ime": "Heavy Linen Gloves",
-     "kvaliteta": "uncommon",
-     "wowhead": 4307,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132939.jpg",
-     "ilvl": 10
+     "ime": "Rotmender's Gloves",
+     "kvaliteta": "rare",
+     "wowhead": 286979,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132956.jpg",
+     "ilvl": 22
     },
     {
      "slot": "Finger 1",
@@ -1081,19 +1086,19 @@
     },
     {
      "slot": "Back",
-     "ime": "Handsewn Cloak",
-     "kvaliteta": "common",
-     "wowhead": 4944,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133763.jpg",
-     "ilvl": 12
+     "ime": "Grave Shroud",
+     "kvaliteta": "uncommon",
+     "wowhead": 279865,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133762.jpg",
+     "ilvl": 23
     },
     {
      "slot": "Main Hand",
-     "ime": "Staff of Orgrimmar",
+     "ime": "Gnarled Necromancer's Staff",
      "kvaliteta": "rare",
-     "wowhead": 15444,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135225.jpg",
-     "ilvl": 18
+     "wowhead": 251534,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135153.jpg",
+     "ilvl": 24
     },
     {
      "slot": "Ranged",
@@ -1113,7 +1118,7 @@
     },
     {
      "name": "Herbalism",
-     "skill": 10,
+     "skill": 11,
      "max": 75,
      "vrsta": "primarna"
     },
@@ -1131,24 +1136,24 @@
     }
    ],
    "statovi": {
-    "hp": 347,
-    "resurs": 720,
+    "hp": 487,
+    "resurs": 1191,
     "resursIme": "Mana",
-    "str": 23,
-    "agi": 31,
-    "sta": 32,
-    "int": 47,
-    "spi": 49,
-    "armor": 184,
-    "ap": 13,
-    "spellPower": 20,
-    "crit": 4.23,
-    "spellCrit": 3.73,
-    "rangedCrit": 2.47,
-    "dodge": 4.83,
+    "str": 26,
+    "agi": 25,
+    "sta": 43,
+    "int": 76,
+    "spi": 65,
+    "armor": 222,
+    "ap": 16,
+    "spellPower": 31,
+    "crit": 3.72,
+    "spellCrit": 5.27,
+    "rangedCrit": 1.6,
+    "dodge": 4.32,
     "parry": 0.0,
     "block": 0.0,
-    "dps": 12.7
+    "dps": 16.3
    },
    "reputacije": [
     {
@@ -1170,15 +1175,15 @@
      "max": 6000
     },
     {
-     "ime": "Ratchet",
+     "ime": "Undercity",
      "status": "Neutral",
-     "vrijednost": 1675,
+     "vrijednost": 1781,
      "max": 3000
     },
     {
-     "ime": "Undercity",
+     "ime": "Ratchet",
      "status": "Neutral",
-     "vrijednost": 1306,
+     "vrijednost": 1675,
      "max": 3000
     },
     {
@@ -1204,17 +1209,28 @@
     {
      "kat": "Character",
      "ime": "Times camped",
-     "n": 2
+     "n": 21
+    },
+    {
+     "kat": "Consumables",
+     "ime": "Bandages used",
+     "n": 1
+    },
+    {
+     "kat": "Consumables",
+     "ime": "Bandage used most",
+     "n": 1,
+     "opis": "Linen Bandage"
     },
     {
      "kat": "Consumables",
      "ime": "Beverages consumed",
-     "n": 76
+     "n": 150
     },
     {
      "kat": "Consumables",
      "ime": "Food eaten",
-     "n": 3
+     "n": 4
     },
     {
      "kat": "Reputation",
@@ -1234,22 +1250,22 @@
     {
      "kat": "Gear",
      "ime": "Greed rolls made on loot",
-     "n": 3
+     "n": 13
     },
     {
      "kat": "Gear",
      "ime": "Need rolls made on loot",
-     "n": 7
+     "n": 13
     },
     {
      "kat": "Player vs. Player",
      "ime": "Total deaths from other players",
-     "n": 2
+     "n": 3
     },
     {
      "kat": "Player vs. Player",
      "ime": "Total deaths from opposite faction",
-     "n": 2
+     "n": 3
     },
     {
      "kat": "World",
@@ -1259,6 +1275,11 @@
     {
      "kat": "Dungeons & Raids",
      "ime": "Total 5-player dungeons entered",
+     "n": 2
+    },
+    {
+     "kat": "Boss Kills",
+     "ime": "Rath'mael Kills (Ruins of Lordaeron)",
      "n": 1
     },
     {
@@ -1269,17 +1290,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 906
+     "n": 1118
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 891
+     "n": 1084
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 903
+     "n": 1113
     },
     {
      "kat": "Creatures",
@@ -1295,17 +1316,17 @@
     {
      "kat": "Creatures",
      "ime": "Critters killed",
-     "n": 3
+     "n": 5
     },
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 247
+     "n": 281
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 236
+     "n": 250
     },
     {
      "kat": "Killing Blows",
@@ -1316,22 +1337,22 @@
     {
      "kat": "Deaths",
      "ime": "Total deaths",
-     "n": 18
+     "n": 21
     },
     {
      "kat": "Dungeons and Raids",
      "ime": "Total raid and dungeon deaths",
-     "n": 1
+     "n": 3
     },
     {
      "kat": "Dungeons and Raids",
      "ime": "Total deaths in 5-player dungeons",
-     "n": 1
+     "n": 3
     },
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 85
+     "n": 94
     },
     {
      "kat": "Quests",
@@ -1341,7 +1362,7 @@
     {
      "kat": "Quests",
      "ime": "Quests abandoned",
-     "n": 16
+     "n": 19
     },
     {
      "kat": "Skills",
@@ -1376,7 +1397,7 @@
     {
      "kat": "Secondary Skills",
      "ime": "First Aid skill",
-     "n": 7
+     "n": 26
     },
     {
      "kat": "Secondary Skills",
@@ -1386,7 +1407,7 @@
     {
      "kat": "Professions",
      "ime": "Highest Alchemy skill",
-     "n": 1
+     "n": 6
     },
     {
      "kat": "Professions",
@@ -1396,12 +1417,12 @@
     {
      "kat": "Professions",
      "ime": "Highest Herbalism skill",
-     "n": 9
+     "n": 11
     },
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 13
+     "n": 14
     },
     {
      "kat": "Travel",
@@ -1411,48 +1432,46 @@
    ],
    "questovi": {
     "uLogu": [
-     "Centaur Bracers",
-     "Beren's Peril",
+     "Discipline",
      "A New Plague",
-     "Miner's Fortune",
+     "A Putrid Task",
      "Threat from Below",
-     "Lost in Battle",
-     "Wenikee Boltbucket",
-     "Chol'aruk the Ravener",
-     "Speak with Un'thuwa",
-     "Patience",
-     "Border Crossings",
-     "Avenge My Village",
-     "Trouble at the Docks",
-     "Kolkar Leaders",
-     "Harpy Raiders",
-     "Tribes at War",
-     "Light's Justice",
-     "Arachnophobia",
-     "A Frightened Request",
      "Stolen Booty",
-     "Camping 101: First Aid",
-     "A Recipe For Death",
-     "Camping 101: Herbalism",
+     "The Zhevra",
+     "Raptor Horns",
+     "Miner's Fortune",
+     "Fungal Spores",
+     "The Forgotten Pools",
      "Consumed by Hatred",
      "The Guns of Northwatch",
+     "Trouble at the Docks",
+     "Harpy Raiders",
+     "Kolkar Leaders",
+     "Tribes at War",
      "Deepmoss Spider Eggs",
+     "Centaur Bracers",
+     "Beren's Peril",
      "Goblin Invaders",
      "Raptor Thieves",
-     "Wild Eyes",
-     "WANTED: Bruuz",
-     "Fungal Spores",
-     "Arugal's Folly",
-     "The Zhevra",
-     "Discipline",
-     "The Forgotten Pools",
-     "Camping 101: Alchemy",
+     "The Book of Ur",
+     "Speak with Un'thuwa",
+     "Avenge My Village",
+     "Wenikee Boltbucket",
+     "Arachnophobia",
      "Yelmak's Medley",
-     "Raptor Horns",
+     "Lost in Battle",
      "Battle of Warsong Gulch",
-     "A Putrid Task"
+     "Patience",
+     "Border Crossings",
+     "A Frightened Request",
+     "Chol'aruk the Ravener",
+     "Hides for the Forsaken",
+     "WANTED: Bruuz",
+     "Camping 101: First Aid",
+     "Camping 101: Herbalism",
+     "Camping 101: Alchemy"
     ],
-    "zavrseno": 104
+    "zavrseno": 113
    },
    "mountovi": [
     "Cerulean Prideclaw"
@@ -1464,7 +1483,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/249/2574073-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/249/2574073-avatar.jpg",
-   "azurirano": "2026-11-07T00:57:35Z"
+   "azurirano": "2026-11-08T02:01:01Z"
   },
   "Nikola Roguevic": {
    "level": 20,
@@ -2543,10 +2562,10 @@
    "azurirano": "2026-11-07T23:06:53Z"
   }
  },
- "provjereno": "2026-11-08T01:26:23Z",
+ "provjereno": "2026-11-08T02:01:01Z",
  "guild": {
   "ime": "Kafana na Balkanu",
-  "clanova": 6,
+  "clanova": 8,
   "osnovan": "2026-11-05T20:24:04Z",
   "ruleset": "Normal",
   "roster": [
@@ -2595,26 +2614,48 @@
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg"
    },
    {
+    "ime": "Yeet Mcneat",
+    "level": 29,
+    "klasa": "Paladin",
+    "rasa": "Undead",
+    "rang": 4,
+    "slug": "yeet-mcneat",
+    "ilvl": 27,
+    "zadnjiLogin": "2026-11-08T00:11:51Z",
+    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/209/7550161-avatar.jpg"
+   },
+   {
     "ime": "Yuserious Son",
-    "level": 18,
+    "level": 19,
     "klasa": "Paladin",
     "rasa": "Undead",
     "rang": 4,
     "slug": "yuserious-son",
-    "ilvl": 9,
-    "zadnjiLogin": "2026-11-07T20:12:00Z",
+    "ilvl": 10,
+    "zadnjiLogin": "2026-11-08T01:30:16Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/6/6269702-avatar.jpg"
    },
    {
     "ime": "Janica Frostelich",
-    "level": 16,
+    "level": 18,
     "klasa": "Mage",
     "rasa": "Troll",
     "rang": 4,
     "slug": "janica-frostelich",
-    "ilvl": 8,
-    "zadnjiLogin": "2026-11-06T23:59:21Z",
+    "ilvl": 12,
+    "zadnjiLogin": "2026-11-08T01:50:00Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/249/2574073-avatar.jpg"
+   },
+   {
+    "ime": "Venos Xx",
+    "level": 15,
+    "klasa": "Druid",
+    "rasa": "Tauren",
+    "rang": 4,
+    "slug": "venos-xx",
+    "ilvl": 7,
+    "zadnjiLogin": "2026-11-08T00:42:25Z",
+    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/253/13774333-avatar.jpg"
    }
   ]
  },
@@ -2703,6 +2744,11 @@
     "2026-11-07T00:57:35Z",
     16,
     7403
+   ],
+   [
+    "2026-11-08T02:01:01Z",
+    18,
+    7183
    ]
   ],
   "Nikola Roguevic": [
