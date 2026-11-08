@@ -38,7 +38,7 @@
         },
         {
           "name": "Blacksmithing",
-          "skill": 75,
+          "skill": 84,
           "phase": "stalno"
         }
       ],
@@ -68,7 +68,7 @@
         },
         {
           "name": "Skinning",
-          "skill": 132,
+          "skill": 141,
           "phase": "stalno"
         }
       ],
@@ -600,6 +600,18 @@
       "character": "warrior",
       "profession": "First Aid",
       "skill": 49
+    },
+    {
+      "date": "2026-11-08",
+      "character": "warrior",
+      "profession": "Blacksmithing",
+      "skill": 84
+    },
+    {
+      "date": "2026-11-08",
+      "character": "shaman",
+      "profession": "Skinning",
+      "skill": 141
     }
   ],
   "flows": [
