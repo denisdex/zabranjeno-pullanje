@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-08T21:54:18Z",
+ "azurirano": "2026-11-08T23:53:55Z",
  "likovi": {
   "Saman Saulic": {
    "level": 22,
@@ -522,10 +522,10 @@
   },
   "Melee Kitic": {
    "level": 24,
-   "xp": 5876,
+   "xp": 19406,
    "guild": "Kafana na Balkanu",
    "ilvl": 17,
-   "zadnjiLogin": "2026-11-08T21:44:44Z",
+   "zadnjiLogin": "2026-11-08T23:43:46Z",
    "izvor": "Blizzard API",
    "talenti": [
     1,
@@ -668,7 +668,7 @@
    "profesije": [
     {
      "name": "Mining",
-     "skill": 83,
+     "skill": 86,
      "max": 150,
      "vrsta": "primarna"
     },
@@ -703,43 +703,43 @@
     "armor": 867,
     "ap": 222,
     "spellPower": 0,
-    "crit": 9.49,
+    "crit": 9.77,
     "spellCrit": 0.0,
     "rangedCrit": 0.29,
-    "dodge": 4.33,
-    "parry": 4.56,
-    "block": 4.56,
+    "dodge": 4.45,
+    "parry": 4.68,
+    "block": 4.68,
     "dps": 36.4
    },
    "reputacije": [
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 3747,
+     "vrijednost": 3947,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Honored",
-     "vrijednost": 333,
+     "vrijednost": 383,
      "max": 12000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Friendly",
-     "vrijednost": 3046,
+     "vrijednost": 3096,
      "max": 6000
     },
     {
      "ime": "Undercity",
      "status": "Friendly",
-     "vrijednost": 1378,
+     "vrijednost": 1428,
      "max": 6000
     },
     {
      "ime": "Ratchet",
      "status": "Friendly",
-     "vrijednost": 6,
+     "vrijednost": 156,
      "max": 6000
     },
     {
@@ -751,13 +751,13 @@
     {
      "ime": "Everlook",
      "status": "Neutral",
-     "vrijednost": 1553,
+     "vrijednost": 1628,
      "max": 3000
     },
     {
      "ime": "Booty Bay",
      "status": "Neutral",
-     "vrijednost": 1553,
+     "vrijednost": 1628,
      "max": 3000
     }
    ],
@@ -765,7 +765,7 @@
     {
      "kat": "Character",
      "ime": "Times camped",
-     "n": 17
+     "n": 19
     },
     {
      "kat": "Consumables",
@@ -786,7 +786,7 @@
     {
      "kat": "Consumables",
      "ime": "Food eaten",
-     "n": 5
+     "n": 7
     },
     {
      "kat": "Reputation",
@@ -806,12 +806,12 @@
     {
      "kat": "Gear",
      "ime": "Greed rolls made on loot",
-     "n": 26
+     "n": 54
     },
     {
      "kat": "Gear",
      "ime": "Need rolls made on loot",
-     "n": 17
+     "n": 19
     },
     {
      "kat": "Player vs. Player",
@@ -836,7 +836,7 @@
     {
      "kat": "Dungeons & Raids",
      "ime": "Total 5-player dungeons entered",
-     "n": 2
+     "n": 3
     },
     {
      "kat": "Boss Kills",
@@ -849,50 +849,55 @@
      "n": 1
     },
     {
+     "kat": "Boss Kills",
+     "ime": "Mutanus the Devourer kills (Wailing Caverns)",
+     "n": 1
+    },
+    {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 2068
+     "n": 2374
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 1759
+     "n": 2022
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 2059
+     "n": 2356
     },
     {
      "kat": "Creatures",
      "ime": "Different creature types killed",
-     "n": 7
+     "n": 8
     },
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 1141,
+     "n": 1211,
      "opis": "Humanoid"
     },
     {
      "kat": "Creatures",
      "ime": "Critters killed",
-     "n": 9
+     "n": 18
     },
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 1027
+     "n": 1082
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 977
+     "n": 979
     },
     {
      "kat": "Killing Blows",
      "ime": "Continent with the most Killing Blows",
-     "n": 773,
+     "n": 775,
      "opis": "Kalimdor"
     },
     {
@@ -918,7 +923,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 175
+     "n": 177
     },
     {
      "kat": "Quests",
@@ -968,7 +973,7 @@
     {
      "kat": "Secondary Skills",
      "ime": "First Aid Manuals learned",
-     "n": 10
+     "n": 8
     },
     {
      "kat": "Professions",
@@ -993,12 +998,12 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 36
+     "n": 37
     },
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
-     "n": 14
+     "n": 15
     },
     {
      "kat": "Social",
@@ -1026,20 +1031,19 @@
      "The Warsong Reports",
      "A Recipe For Death",
      "Watching the Roads",
-     "Betrayal from Within",
      "Melor Sends Word",
      "Arugal Must Die",
      "The Guns of Northwatch",
      "Deepmoss Spider Eggs",
      "Goblin Invaders",
-     "WANTED: Bruuz",
      "The Ashenvale Hunt",
      "Ambermill Investigations",
      "Hezrul Bloodmark",
      "Hamuul Runetotem",
+     "The Glowing Shard",
      "Ziz Fizziks"
     ],
-    "zavrseno": 201
+    "zavrseno": 203
    },
    "mountovi": [],
    "petovi": [],
@@ -1049,7 +1053,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg",
-   "azurirano": "2026-11-08T21:54:18Z"
+   "azurirano": "2026-11-08T23:53:55Z"
   },
   "Janica Frostelich": {
    "level": 18,
@@ -2701,7 +2705,7 @@
    "azurirano": "2026-11-08T17:55:44Z"
   }
  },
- "provjereno": "2026-11-08T21:54:18Z",
+ "provjereno": "2026-11-08T23:53:55Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 7,
@@ -2738,7 +2742,7 @@
     "rang": 3,
     "slug": "melee-kitic",
     "ilvl": 17,
-    "zadnjiLogin": "2026-11-08T21:44:44Z",
+    "zadnjiLogin": "2026-11-08T23:43:46Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg"
    },
    {
@@ -2880,6 +2884,11 @@
     "2026-11-08T21:54:18Z",
     24,
     5876
+   ],
+   [
+    "2026-11-08T23:53:55Z",
+    24,
+    19406
    ]
   ],
   "Janica Frostelich": [
