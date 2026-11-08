@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-08T17:55:44Z",
+ "azurirano": "2026-11-08T19:55:06Z",
  "likovi": {
   "Saman Saulic": {
    "level": 22,
@@ -2673,7 +2673,7 @@
    "azurirano": "2026-11-08T17:55:44Z"
   }
  },
- "provjereno": "2026-11-08T17:55:44Z",
+ "provjereno": "2026-11-08T19:55:06Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 7,
@@ -2726,13 +2726,13 @@
    },
    {
     "ime": "Yuserious Son",
-    "level": 19,
+    "level": 21,
     "klasa": "Paladin",
     "rasa": "Undead",
     "rang": 4,
     "slug": "yuserious-son",
-    "ilvl": 10,
-    "zadnjiLogin": "2026-11-08T01:30:16Z",
+    "ilvl": 13,
+    "zadnjiLogin": "2026-11-08T19:10:45Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/6/6269702-avatar.jpg"
    },
    {
