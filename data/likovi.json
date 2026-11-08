@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-08T15:56:30Z",
+ "azurirano": "2026-11-08T17:55:44Z",
  "likovi": {
   "Saman Saulic": {
    "level": 22,
@@ -2117,10 +2117,10 @@
   },
   "Arsen Deadic": {
    "level": 21,
-   "xp": 961,
+   "xp": 20226,
    "guild": "Kafana na Balkanu",
    "ilvl": 13,
-   "zadnjiLogin": "2026-11-08T11:38:03Z",
+   "zadnjiLogin": "2026-11-08T17:32:14Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -2247,7 +2247,7 @@
    "profesije": [
     {
      "name": "Mining",
-     "skill": 70,
+     "skill": 73,
      "max": 150,
      "vrsta": "primarna"
     },
@@ -2288,43 +2288,43 @@
     "armor": 1132,
     "ap": 157,
     "spellPower": 27,
-    "crit": 10.0,
+    "crit": 10.24,
     "spellCrit": 10.76,
     "rangedCrit": 0.12,
-    "dodge": 4.04,
-    "parry": 9.76,
-    "block": 4.76,
+    "dodge": 4.2,
+    "parry": 9.92,
+    "block": 4.92,
     "dps": 20.8
    },
    "reputacije": [
     {
      "ime": "Undercity",
      "status": "Honored",
-     "vrijednost": 2137,
+     "vrijednost": 3187,
      "max": 12000
     },
     {
      "ime": "Orgrimmar",
      "status": "Friendly",
-     "vrijednost": 1101,
+     "vrijednost": 1363,
      "max": 6000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Friendly",
-     "vrijednost": 407,
+     "vrijednost": 670,
      "max": 6000
+    },
+    {
+     "ime": "Thunder Bluff",
+     "status": "Neutral",
+     "vrijednost": 2028,
+     "max": 3000
     },
     {
      "ime": "Ratchet",
      "status": "Neutral",
      "vrijednost": 1930,
-     "max": 3000
-    },
-    {
-     "ime": "Thunder Bluff",
-     "status": "Neutral",
-     "vrijednost": 1766,
      "max": 3000
     },
     {
@@ -2366,7 +2366,7 @@
     {
      "kat": "Consumables",
      "ime": "Health potions consumed",
-     "n": 1
+     "n": 2
     },
     {
      "kat": "Consumables",
@@ -2381,7 +2381,7 @@
     {
      "kat": "Consumables",
      "ime": "Food eaten",
-     "n": 13
+     "n": 15
     },
     {
      "kat": "Reputation",
@@ -2406,12 +2406,12 @@
     {
      "kat": "Gear",
      "ime": "Greed rolls made on loot",
-     "n": 27
+     "n": 35
     },
     {
      "kat": "Gear",
      "ime": "Need rolls made on loot",
-     "n": 15
+     "n": 16
     },
     {
      "kat": "Player vs. Player",
@@ -2441,17 +2441,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 1863
+     "n": 2066
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 1660
+     "n": 1818
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 1857
+     "n": 2060
     },
     {
      "kat": "Creatures",
@@ -2461,7 +2461,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 754,
+     "n": 834,
      "opis": "Humanoid"
     },
     {
@@ -2488,23 +2488,23 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 823
+     "n": 888
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 749
+     "n": 814
     },
     {
      "kat": "Killing Blows",
      "ime": "Continent with the most Killing Blows",
-     "n": 504,
+     "n": 569,
      "opis": "Eastern Kingdoms"
     },
     {
      "kat": "Deaths",
      "ime": "Total deaths",
-     "n": 16
+     "n": 18
     },
     {
      "kat": "Dungeons and Raids",
@@ -2529,7 +2529,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 145
+     "n": 158
     },
     {
      "kat": "Quests",
@@ -2539,7 +2539,7 @@
     {
      "kat": "Quests",
      "ime": "Quests abandoned",
-     "n": 22
+     "n": 28
     },
     {
      "kat": "Skills",
@@ -2609,7 +2609,7 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 22
+     "n": 24
     },
     {
      "kat": "Travel",
@@ -2624,10 +2624,8 @@
    ],
    "questovi": {
     "uLogu": [
-     "Arugal's Folly",
-     "Resting in Pieces",
-     "WANTED: Syndicate Personnel",
-     "The Weaver",
+     "Assault on Fenris Isle",
+     "The Lich's Identity",
      "A Recipe For Death",
      "Stolen Booty",
      "Raptor Horns",
@@ -2639,22 +2637,22 @@
      "Harpy Raiders",
      "Kolkar Leaders",
      "Centaur Bracers",
-     "Journey to Hillsbrad Foothills",
      "Prowlers of the Barrens",
-     "Beren's Peril",
      "Goblin Invaders",
      "Raptor Thieves",
-     "Rot Hide Origins",
      "A Husband's Revenge",
      "The Book of Ur",
      "Deathstalkers in Shadowfang",
      "Avenge My Village",
      "Yelmak's Medley",
      "Nugget Slugs",
-     "Into Fenris Keep",
-     "Camping 101: Fishing"
+     "Lumina Windsinger",
+     "The Offering Stone",
+     "Camping 101: Fishing",
+     "Arugal's Folly",
+     "Stop the Spread"
     ],
-    "zavrseno": 181
+    "zavrseno": 194
    },
    "mountovi": [
     "Cerulean Prideclaw",
@@ -2672,10 +2670,10 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg",
-   "azurirano": "2026-11-08T11:57:29Z"
+   "azurirano": "2026-11-08T17:55:44Z"
   }
  },
- "provjereno": "2026-11-08T15:56:30Z",
+ "provjereno": "2026-11-08T17:55:44Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 7,
@@ -2712,7 +2710,7 @@
     "rang": 3,
     "slug": "arsen-deadic",
     "ilvl": 13,
-    "zadnjiLogin": "2026-11-08T11:38:03Z",
+    "zadnjiLogin": "2026-11-08T17:32:14Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg"
    },
    {
@@ -2960,6 +2958,11 @@
     "2026-11-08T11:57:29Z",
     21,
     961
+   ],
+   [
+    "2026-11-08T17:55:44Z",
+    21,
+    20226
    ]
   ]
  }

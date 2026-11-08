@@ -161,7 +161,7 @@
       "professions": [
         {
           "name": "Mining",
-          "skill": 70,
+          "skill": 73,
           "phase": "stalno"
         },
         {
@@ -618,6 +618,12 @@
       "character": "warrior",
       "profession": "Mining",
       "skill": 80
+    },
+    {
+      "date": "2026-11-08",
+      "character": "paladin",
+      "profession": "Mining",
+      "skill": 73
     }
   ],
   "flows": [
