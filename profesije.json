@@ -33,7 +33,7 @@
       "professions": [
         {
           "name": "Mining",
-          "skill": 76,
+          "skill": 78,
           "phase": "stalno"
         },
         {
@@ -49,7 +49,7 @@
         },
         {
           "name": "First Aid",
-          "skill": 41
+          "skill": 49
         }
       ]
     },
@@ -63,23 +63,23 @@
       "professions": [
         {
           "name": "Leatherworking",
-          "skill": 75,
+          "skill": 81,
           "phase": "stalno"
         },
         {
           "name": "Skinning",
-          "skill": 100,
+          "skill": 132,
           "phase": "stalno"
         }
       ],
       "secondary": [
         {
           "name": "Cooking",
-          "skill": 3
+          "skill": 35
         },
         {
           "name": "Fishing",
-          "skill": 1
+          "skill": 78
         },
         {
           "name": "First Aid",
@@ -127,7 +127,7 @@
       "professions": [
         {
           "name": "Leatherworking",
-          "skill": 85,
+          "skill": 107,
           "phase": "stalno"
         },
         {
@@ -139,11 +139,11 @@
       "secondary": [
         {
           "name": "Cooking",
-          "skill": 20
+          "skill": 30
         },
         {
           "name": "Fishing",
-          "skill": 3
+          "skill": 23
         },
         {
           "name": "First Aid",
@@ -181,7 +181,7 @@
         },
         {
           "name": "First Aid",
-          "skill": 52
+          "skill": 53
         }
       ]
     }
@@ -540,6 +540,66 @@
       "character": "mage",
       "profession": "Herbalism",
       "skill": 11
+    },
+    {
+      "date": "2026-11-08",
+      "character": "shaman",
+      "profession": "Leatherworking",
+      "skill": 81
+    },
+    {
+      "date": "2026-11-08",
+      "character": "shaman",
+      "profession": "Skinning",
+      "skill": 132
+    },
+    {
+      "date": "2026-11-08",
+      "character": "shaman",
+      "profession": "Cooking",
+      "skill": 35
+    },
+    {
+      "date": "2026-11-08",
+      "character": "shaman",
+      "profession": "Fishing",
+      "skill": 78
+    },
+    {
+      "date": "2026-11-08",
+      "character": "paladin",
+      "profession": "First Aid",
+      "skill": 53
+    },
+    {
+      "date": "2026-11-08",
+      "character": "rogue",
+      "profession": "Leatherworking",
+      "skill": 107
+    },
+    {
+      "date": "2026-11-08",
+      "character": "rogue",
+      "profession": "Cooking",
+      "skill": 30
+    },
+    {
+      "date": "2026-11-08",
+      "character": "rogue",
+      "profession": "Fishing",
+      "skill": 23
+    },
+    {
+      "date": "2026-11-08",
+      "character": "warrior",
+      "profession": "Mining",
+      "skill": 78
+    },
+    {
+      "date": "2026-11-08",
+      "character": "warrior",
+      "profession": "First Aid",
+      "skill": 49
     }
   ],
   "flows": [
