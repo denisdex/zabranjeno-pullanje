@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-09T13:51:01Z",
+ "azurirano": "2026-11-09T15:52:36Z",
  "likovi": {
   "Saman Saulic": {
    "level": 26,
@@ -1620,10 +1620,10 @@
   },
   "Nikola Roguevic": {
    "level": 26,
-   "xp": 605,
+   "xp": 9123,
    "guild": "Kafana na Balkanu",
    "ilvl": 16,
-   "zadnjiLogin": "2026-11-09T11:04:54Z",
+   "zadnjiLogin": "2026-11-09T15:29:50Z",
    "izvor": "Blizzard API",
    "talenti": [
     2,
@@ -1780,8 +1780,7 @@
      "kvaliteta": "rare",
      "wowhead": 6504,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135314.jpg",
-     "ilvl": 24,
-     "enchant": "Instant Poison (44 |4Charge:Charges;)"
+     "ilvl": 24
     },
     {
      "slot": "Off Hand",
@@ -1789,8 +1788,7 @@
      "kvaliteta": "rare",
      "wowhead": 271204,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/134298.jpg",
-     "ilvl": 20,
-     "enchant": "Instant Poison (46 |4Charge:Charges;)"
+     "ilvl": 20
     },
     {
      "slot": "Ranged",
@@ -1810,7 +1808,7 @@
     },
     {
      "name": "Skinning",
-     "skill": 163,
+     "skill": 166,
      "max": 225,
      "vrsta": "primarna"
     },
@@ -1829,7 +1827,7 @@
     {
      "name": "First Aid",
      "skill": 150,
-     "max": 150,
+     "max": 225,
      "vrsta": "sekundarna"
     }
    ],
@@ -1845,11 +1843,11 @@
     "armor": 700,
     "ap": 194,
     "spellPower": 0,
-    "crit": 9.12,
+    "crit": 9.32,
     "spellCrit": 0.0,
-    "rangedCrit": 8.84,
-    "dodge": 19.49,
-    "parry": 10.76,
+    "rangedCrit": 9.04,
+    "dodge": 19.65,
+    "parry": 10.92,
     "block": 0.0,
     "dps": 29.5
    },
@@ -1923,7 +1921,7 @@
     {
      "kat": "Consumables",
      "ime": "Health potions consumed",
-     "n": 13
+     "n": 14
     },
     {
      "kat": "Consumables",
@@ -1933,7 +1931,7 @@
     {
      "kat": "Consumables",
      "ime": "Beverages consumed",
-     "n": 5
+     "n": 6
     },
     {
      "kat": "Consumables",
@@ -1963,7 +1961,7 @@
     {
      "kat": "Gear",
      "ime": "Greed rolls made on loot",
-     "n": 88
+     "n": 90
     },
     {
      "kat": "Gear",
@@ -1998,17 +1996,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 3016
+     "n": 3074
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 2400
+     "n": 2458
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 2982
+     "n": 3040
     },
     {
      "kat": "Creatures",
@@ -2018,7 +2016,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 1260,
+     "n": 1311,
      "opis": "Humanoid"
     },
     {
@@ -2045,12 +2043,12 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 1605
+     "n": 1652
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 1332
+     "n": 1379
     },
     {
      "kat": "Killing Blows",
@@ -2131,12 +2129,12 @@
     {
      "kat": "Secondary Skills",
      "ime": "First Aid skill",
-     "n": 141
+     "n": 150
     },
     {
      "kat": "Secondary Skills",
      "ime": "First Aid Manuals learned",
-     "n": 24
+     "n": 26
     },
     {
      "kat": "Secondary Skills",
@@ -2171,7 +2169,7 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 51
+     "n": 53
     },
     {
      "kat": "Travel",
@@ -2181,7 +2179,7 @@
     {
      "kat": "Social",
      "ime": "Total times LOL'd",
-     "n": 30
+     "n": 32
     },
     {
      "kat": "Social",
@@ -2197,16 +2195,23 @@
      "Stonetalon Standstill",
      "Avenge My Village",
      "The Lost Pages",
+     "Bloodfury Trinkets",
+     "Cycle of Rebirth",
      "Warsong Supplies",
      "Ashenvale Outrunners",
      "Arachnophobia",
+     "Cenarius' Legacy",
      "The Warsong Reports",
      "Satyr Horns",
      "Source of Power",
+     "Calling in the Reserves",
      "Arugal Must Die",
      "Blueleaf Tubers",
      "Deepmoss Spider Eggs",
      "Goblin Invaders",
+     "Elemental War",
+     "Trouble in the Deeps",
+     "Harpies Threaten",
      "Steelsnap",
      "Ziz Fizziks"
     ],
@@ -2228,14 +2233,14 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg",
-   "azurirano": "2026-11-09T11:51:36Z"
+   "azurirano": "2026-11-09T15:52:36Z"
   },
   "Arsen Deadic": {
-   "level": 22,
-   "xp": 24574,
+   "level": 23,
+   "xp": 2051,
    "guild": "Kafana na Balkanu",
    "ilvl": 14,
-   "zadnjiLogin": "2026-11-09T00:15:04Z",
+   "zadnjiLogin": "2026-11-09T15:51:18Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -2393,54 +2398,54 @@
     }
    ],
    "statovi": {
-    "hp": 692,
-    "resurs": 824,
+    "hp": 719,
+    "resurs": 864,
     "resursIme": "Mana",
-    "str": 65,
-    "agi": 30,
-    "sta": 65,
+    "str": 66,
+    "agi": 31,
+    "sta": 66,
     "int": 43,
-    "spi": 47,
-    "armor": 1396,
-    "ap": 176,
+    "spi": 48,
+    "armor": 1398,
+    "ap": 181,
     "spellPower": 11,
-    "crit": 10.28,
-    "spellCrit": 11.2,
+    "crit": 10.01,
+    "spellCrit": 11.16,
     "rangedCrit": 0.0,
-    "dodge": 4.24,
-    "parry": 9.96,
-    "block": 4.96,
-    "dps": 28.1
+    "dodge": 4.01,
+    "parry": 9.8,
+    "block": 4.8,
+    "dps": 28.5
    },
    "reputacije": [
     {
      "ime": "Undercity",
      "status": "Honored",
-     "vrijednost": 3337,
+     "vrijednost": 3412,
      "max": 12000
     },
     {
      "ime": "Orgrimmar",
      "status": "Friendly",
-     "vrijednost": 1401,
+     "vrijednost": 1626,
      "max": 6000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Friendly",
-     "vrijednost": 707,
+     "vrijednost": 782,
      "max": 6000
     },
     {
      "ime": "Ratchet",
      "status": "Neutral",
-     "vrijednost": 2180,
+     "vrijednost": 2280,
      "max": 3000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Neutral",
-     "vrijednost": 2066,
+     "vrijednost": 2216,
      "max": 3000
     },
     {
@@ -2452,13 +2457,13 @@
     {
      "ime": "Everlook",
      "status": "Neutral",
-     "vrijednost": 1340,
+     "vrijednost": 1390,
      "max": 3000
     },
     {
      "ime": "Booty Bay",
      "status": "Neutral",
-     "vrijednost": 1340,
+     "vrijednost": 1390,
      "max": 3000
     }
    ],
@@ -2497,7 +2502,7 @@
     {
      "kat": "Consumables",
      "ime": "Food eaten",
-     "n": 20
+     "n": 21
     },
     {
      "kat": "Reputation",
@@ -2562,17 +2567,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 2529
+     "n": 2592
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 2224
+     "n": 2236
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 2514
+     "n": 2577
     },
     {
      "kat": "Creatures",
@@ -2582,7 +2587,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 920,
+     "n": 945,
      "opis": "Humanoid"
     },
     {
@@ -2609,12 +2614,12 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 990
+     "n": 1053
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 839
+     "n": 902
     },
     {
      "kat": "Killing Blows",
@@ -2650,7 +2655,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 163
+     "n": 168
     },
     {
      "kat": "Quests",
@@ -2660,7 +2665,7 @@
     {
      "kat": "Quests",
      "ime": "Quests abandoned",
-     "n": 29
+     "n": 30
     },
     {
      "kat": "Skills",
@@ -2720,7 +2725,7 @@
     {
      "kat": "Professions",
      "ime": "Highest Mining skill",
-     "n": 73
+     "n": 75
     },
     {
      "kat": "Professions",
@@ -2730,7 +2735,7 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 29
+     "n": 32
     },
     {
      "kat": "Travel",
@@ -2747,21 +2752,24 @@
     "uLogu": [
      "A Husband's Revenge",
      "Centaur Bracers",
+     "Smart Drinks",
      "Deviate Hides",
      "Miner's Fortune",
      "Deathstalkers in Shadowfang",
      "Stop the Spread",
      "Lost in Battle",
+     "Chol'aruk the Ravener",
      "The Book of Ur",
      "The Lich's Identity",
      "Avenge My Village",
      "Kolkar Leaders",
      "Egg Hunt",
+     "Echeyakee",
      "Harpy Raiders",
+     "Dig Rat Stew",
      "Nugget Slugs",
-     "Prowlers of the Barrens",
      "Lumina Windsinger",
-     "The Stagnant Oasis",
+     "Altered Beings",
      "Stolen Booty",
      "A Recipe For Death",
      "Consumed by Hatred",
@@ -2770,17 +2778,16 @@
      "Blueleaf Tubers",
      "Deepmoss Spider Eggs",
      "Goblin Invaders",
-     "Raptor Thieves",
      "A Lesson in Divinity",
+     "Stolen Silver",
+     "The Ashenvale Hunt",
      "The Offering Stone",
      "Assault on Fenris Isle",
-     "Yelmak's Medley",
-     "Raptor Horns",
      "Report to Kadrak",
      "Arugal's Folly",
      "Ziz Fizziks"
     ],
-    "zavrseno": 200
+    "zavrseno": 205
    },
    "mountovi": [
     "Cerulean Prideclaw",
@@ -2798,10 +2805,10 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg",
-   "azurirano": "2026-11-09T01:53:41Z"
+   "azurirano": "2026-11-09T15:52:36Z"
   }
  },
- "provjereno": "2026-11-09T13:51:01Z",
+ "provjereno": "2026-11-09T15:52:36Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 7,
@@ -2827,7 +2834,7 @@
     "rang": 1,
     "slug": "nikola-roguevic",
     "ilvl": 16,
-    "zadnjiLogin": "2026-11-09T11:04:54Z",
+    "zadnjiLogin": "2026-11-09T15:29:50Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg"
    },
    {
@@ -2843,13 +2850,13 @@
    },
    {
     "ime": "Arsen Deadic",
-    "level": 22,
+    "level": 23,
     "klasa": "Paladin",
     "rasa": "Undead",
     "rang": 3,
     "slug": "arsen-deadic",
     "ilvl": 14,
-    "zadnjiLogin": "2026-11-09T00:15:04Z",
+    "zadnjiLogin": "2026-11-09T15:51:18Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg"
    },
    {
@@ -3079,6 +3086,11 @@
     "2026-11-09T11:51:36Z",
     26,
     605
+   ],
+   [
+    "2026-11-09T15:52:36Z",
+    26,
+    9123
    ]
   ],
   "Arsen Deadic": [
@@ -3131,6 +3143,11 @@
     "2026-11-09T01:53:41Z",
     22,
     24574
+   ],
+   [
+    "2026-11-09T15:52:36Z",
+    23,
+    2051
    ]
   ]
  }

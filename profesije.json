@@ -132,7 +132,7 @@
         },
         {
           "name": "Skinning",
-          "skill": 163,
+          "skill": 166,
           "phase": "stalno"
         }
       ],
@@ -714,6 +714,12 @@
       "character": "shaman",
       "profession": "Fishing",
       "skill": 89
+    },
+    {
+      "date": "2026-11-09",
+      "character": "rogue",
+      "profession": "Skinning",
+      "skill": 166
     }
   ],
   "flows": [
