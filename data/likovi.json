@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-09T15:52:36Z",
+ "azurirano": "2026-11-09T17:52:26Z",
  "likovi": {
   "Saman Saulic": {
    "level": 26,
@@ -1620,10 +1620,10 @@
   },
   "Nikola Roguevic": {
    "level": 26,
-   "xp": 9123,
+   "xp": 16737,
    "guild": "Kafana na Balkanu",
    "ilvl": 16,
-   "zadnjiLogin": "2026-11-09T15:29:50Z",
+   "zadnjiLogin": "2026-11-09T16:06:33Z",
    "izvor": "Blizzard API",
    "talenti": [
     2,
@@ -1808,7 +1808,7 @@
     },
     {
      "name": "Skinning",
-     "skill": 166,
+     "skill": 168,
      "max": 225,
      "vrsta": "primarna"
     },
@@ -1845,7 +1845,7 @@
     "spellPower": 0,
     "crit": 9.32,
     "spellCrit": 0.0,
-    "rangedCrit": 9.04,
+    "rangedCrit": 9.08,
     "dodge": 19.65,
     "parry": 10.92,
     "block": 0.0,
@@ -1855,25 +1855,25 @@
     {
      "ime": "Undercity",
      "status": "Honored",
-     "vrijednost": 4180,
+     "vrijednost": 4205,
      "max": 12000
     },
     {
      "ime": "Orgrimmar",
      "status": "Friendly",
-     "vrijednost": 3398,
+     "vrijednost": 3423,
      "max": 6000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Friendly",
-     "vrijednost": 1411,
+     "vrijednost": 1436,
      "max": 6000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Friendly",
-     "vrijednost": 568,
+     "vrijednost": 668,
      "max": 6000
     },
     {
@@ -1996,17 +1996,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 3074
+     "n": 3081
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 2458
+     "n": 2465
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 3040
+     "n": 3047
     },
     {
      "kat": "Creatures",
@@ -2043,12 +2043,12 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 1652
+     "n": 1659
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 1379
+     "n": 1386
     },
     {
      "kat": "Killing Blows",
@@ -2084,7 +2084,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 206
+     "n": 209
     },
     {
      "kat": "Quests",
@@ -2134,7 +2134,7 @@
     {
      "kat": "Secondary Skills",
      "ime": "First Aid Manuals learned",
-     "n": 26
+     "n": 24
     },
     {
      "kat": "Secondary Skills",
@@ -2164,7 +2164,7 @@
     {
      "kat": "Professions",
      "ime": "Highest Skinning skill",
-     "n": 163
+     "n": 166
     },
     {
      "kat": "Travel",
@@ -2189,13 +2189,13 @@
    ],
    "questovi": {
     "uLogu": [
+     "Bloodfury Bloodline",
      "Deathstalkers in Shadowfang",
      "Lost in Battle",
      "Changing Tastes",
      "Stonetalon Standstill",
      "Avenge My Village",
      "The Lost Pages",
-     "Bloodfury Trinkets",
      "Cycle of Rebirth",
      "Warsong Supplies",
      "Ashenvale Outrunners",
@@ -2209,13 +2209,11 @@
      "Blueleaf Tubers",
      "Deepmoss Spider Eggs",
      "Goblin Invaders",
-     "Elemental War",
      "Trouble in the Deeps",
-     "Harpies Threaten",
      "Steelsnap",
      "Ziz Fizziks"
     ],
-    "zavrseno": 256
+    "zavrseno": 259
    },
    "mountovi": [
     "Cerulean Prideclaw",
@@ -2233,7 +2231,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg",
-   "azurirano": "2026-11-09T15:52:36Z"
+   "azurirano": "2026-11-09T17:52:26Z"
   },
   "Arsen Deadic": {
    "level": 23,
@@ -2808,7 +2806,7 @@
    "azurirano": "2026-11-09T15:52:36Z"
   }
  },
- "provjereno": "2026-11-09T15:52:36Z",
+ "provjereno": "2026-11-09T17:52:26Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 7,
@@ -2834,7 +2832,7 @@
     "rang": 1,
     "slug": "nikola-roguevic",
     "ilvl": 16,
-    "zadnjiLogin": "2026-11-09T15:29:50Z",
+    "zadnjiLogin": "2026-11-09T16:06:33Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg"
    },
    {
@@ -2878,7 +2876,7 @@
     "rang": 4,
     "slug": "venos-xx",
     "ilvl": 14,
-    "zadnjiLogin": "2026-11-09T13:46:29Z",
+    "zadnjiLogin": "2026-11-09T17:55:10Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/253/13774333-avatar.jpg"
    },
    {
@@ -3091,6 +3089,11 @@
     "2026-11-09T15:52:36Z",
     26,
     9123
+   ],
+   [
+    "2026-11-09T17:52:26Z",
+    26,
+    16737
    ]
   ],
   "Arsen Deadic": [
