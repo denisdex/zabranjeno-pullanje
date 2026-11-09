@@ -33,7 +33,7 @@
       "professions": [
         {
           "name": "Mining",
-          "skill": 86,
+          "skill": 88,
           "phase": "stalno"
         },
         {
@@ -726,6 +726,12 @@
       "character": "rogue",
       "profession": "Skinning",
       "skill": 168
+    },
+    {
+      "date": "2026-11-09",
+      "character": "warrior",
+      "profession": "Mining",
+      "skill": 88
     }
   ],
   "flows": [
