@@ -63,12 +63,12 @@
       "professions": [
         {
           "name": "Leatherworking",
-          "skill": 81,
+          "skill": 127,
           "phase": "stalno"
         },
         {
           "name": "Skinning",
-          "skill": 141,
+          "skill": 165,
           "phase": "stalno"
         }
       ],
@@ -79,7 +79,7 @@
         },
         {
           "name": "Fishing",
-          "skill": 78
+          "skill": 86
         },
         {
           "name": "First Aid",
@@ -127,27 +127,27 @@
       "professions": [
         {
           "name": "Leatherworking",
-          "skill": 107,
+          "skill": 125,
           "phase": "stalno"
         },
         {
           "name": "Skinning",
-          "skill": 144,
+          "skill": 162,
           "phase": "stalno"
         }
       ],
       "secondary": [
         {
           "name": "Cooking",
-          "skill": 30
+          "skill": 65
         },
         {
           "name": "Fishing",
-          "skill": 23
+          "skill": 25
         },
         {
           "name": "First Aid",
-          "skill": 89
+          "skill": 141
         }
       ]
     },
@@ -161,7 +161,7 @@
       "professions": [
         {
           "name": "Mining",
-          "skill": 73,
+          "skill": 75,
           "phase": "stalno"
         },
         {
@@ -642,6 +642,60 @@
       "character": "warrior",
       "profession": "Mining",
       "skill": 86
+    },
+    {
+      "date": "2026-11-09",
+      "character": "shaman",
+      "profession": "Leatherworking",
+      "skill": 127
+    },
+    {
+      "date": "2026-11-09",
+      "character": "shaman",
+      "profession": "Skinning",
+      "skill": 165
+    },
+    {
+      "date": "2026-11-09",
+      "character": "shaman",
+      "profession": "Fishing",
+      "skill": 86
+    },
+    {
+      "date": "2026-11-09",
+      "character": "rogue",
+      "profession": "Leatherworking",
+      "skill": 125
+    },
+    {
+      "date": "2026-11-09",
+      "character": "rogue",
+      "profession": "Skinning",
+      "skill": 162
+    },
+    {
+      "date": "2026-11-09",
+      "character": "rogue",
+      "profession": "Cooking",
+      "skill": 65
+    },
+    {
+      "date": "2026-11-09",
+      "character": "rogue",
+      "profession": "Fishing",
+      "skill": 25
+    },
+    {
+      "date": "2026-11-09",
+      "character": "rogue",
+      "profession": "First Aid",
+      "skill": 141
+    },
+    {
+      "date": "2026-11-09",
+      "character": "paladin",
+      "profession": "Mining",
+      "skill": 75
     }
   ],
   "flows": [
