@@ -1,16 +1,16 @@
 {
- "azurirano": "2026-11-09T11:51:36Z",
+ "azurirano": "2026-11-09T13:51:01Z",
  "likovi": {
   "Saman Saulic": {
-   "level": 25,
-   "xp": 18974,
+   "level": 26,
+   "xp": 3543,
    "guild": "Kafana na Balkanu",
-   "ilvl": 19,
-   "zadnjiLogin": "2026-11-09T01:40:43Z",
+   "ilvl": 20,
+   "zadnjiLogin": "2026-11-09T12:09:10Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
-    10,
+    11,
     5
    ],
    "specka": "Enhancement",
@@ -44,6 +44,12 @@
      "rang": 1,
      "stablo": "Enhancement",
      "opis": "Increases the damage done by your Lightning Shield orbs by 5%."
+    },
+    {
+     "ime": "Shamanistic Focus",
+     "rang": 1,
+     "stablo": "Enhancement",
+     "opis": "Reduces the mana cost of your Shock and Lightning Shield spells by 45%."
     },
     {
      "ime": "Tidal Focus",
@@ -87,11 +93,11 @@
     },
     {
      "slot": "Waist",
-     "ime": "Grassland Sash",
+     "ime": "Beastmaster's Girdle",
      "kvaliteta": "uncommon",
-     "wowhead": 6477,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132491.jpg",
-     "ilvl": 20
+     "wowhead": 5355,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132493.jpg",
+     "ilvl": 28
     },
     {
      "slot": "Legs",
@@ -188,7 +194,7 @@
     },
     {
      "name": "Fishing",
-     "skill": 86,
+     "skill": 89,
      "max": 150,
      "vrsta": "sekundarna"
     },
@@ -200,72 +206,72 @@
     }
    ],
    "statovi": {
-    "hp": 320,
-    "resurs": 600,
+    "hp": 727,
+    "resurs": 1050,
     "resursIme": "Mana",
-    "str": 26,
-    "agi": 11,
-    "sta": 26,
-    "int": 25,
-    "spi": 30,
-    "armor": 93,
-    "ap": 119,
+    "str": 61,
+    "agi": 38,
+    "sta": 65,
+    "int": 53,
+    "spi": 69,
+    "armor": 457,
+    "ap": 233,
     "spellPower": 19,
-    "crit": 6.65,
-    "spellCrit": 8.36,
-    "rangedCrit": 0.0,
-    "dodge": 2.61,
+    "crit": 9.6,
+    "spellCrit": 9.47,
+    "rangedCrit": 0.92,
+    "dodge": 4.96,
     "parry": 0.0,
-    "block": 4.84,
-    "dps": 7.2
+    "block": 4.68,
+    "dps": 37.1
    },
    "reputacije": [
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 3933,
+     "vrijednost": 4146,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Honored",
-     "vrijednost": 13,
+     "vrijednost": 301,
      "max": 12000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Friendly",
-     "vrijednost": 3335,
-     "max": 6000
-    },
-    {
-     "ime": "Undercity",
-     "status": "Friendly",
-     "vrijednost": 958,
+     "vrijednost": 3660,
      "max": 6000
     },
     {
      "ime": "Ratchet",
      "status": "Friendly",
-     "vrijednost": 850,
+     "vrijednost": 1175,
+     "max": 6000
+    },
+    {
+     "ime": "Undercity",
+     "status": "Friendly",
+     "vrijednost": 1096,
      "max": 6000
     },
     {
      "ime": "Everlook",
      "status": "Neutral",
-     "vrijednost": 2175,
+     "vrijednost": 2337,
      "max": 3000
     },
     {
      "ime": "Booty Bay",
      "status": "Neutral",
-     "vrijednost": 2175,
+     "vrijednost": 2337,
      "max": 3000
     },
     {
      "ime": "Gadgetzan",
      "status": "Neutral",
-     "vrijednost": 2175,
+     "vrijednost": 2337,
      "max": 3000
     }
    ],
@@ -293,12 +299,12 @@
     {
      "kat": "Consumables",
      "ime": "Beverages consumed",
-     "n": 57
+     "n": 59
     },
     {
      "kat": "Consumables",
      "ime": "Food eaten",
-     "n": 5
+     "n": 6
     },
     {
      "kat": "Reputation",
@@ -363,17 +369,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 2517
+     "n": 2585
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 2122
+     "n": 2140
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 2493
+     "n": 2561
     },
     {
      "kat": "Creatures",
@@ -383,7 +389,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 1124,
+     "n": 1168,
      "opis": "Humanoid"
     },
     {
@@ -410,17 +416,17 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 910
+     "n": 963
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 816
+     "n": 869
     },
     {
      "kat": "Killing Blows",
      "ime": "Continent with the most Killing Blows",
-     "n": 736,
+     "n": 789,
      "opis": "Kalimdor"
     },
     {
@@ -446,7 +452,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 203
+     "n": 214
     },
     {
      "kat": "Quests",
@@ -456,7 +462,7 @@
     {
      "kat": "Quests",
      "ime": "Quests abandoned",
-     "n": 17
+     "n": 18
     },
     {
      "kat": "Skills",
@@ -501,17 +507,17 @@
     {
      "kat": "Secondary Skills",
      "ime": "Fishing skill",
-     "n": 86
+     "n": 89
     },
     {
      "kat": "Secondary Skills",
      "ime": "Fish caught",
-     "n": 93
+     "n": 100
     },
     {
      "kat": "Secondary Skills",
      "ime": "Fish and other things caught",
-     "n": 93
+     "n": 100
     },
     {
      "kat": "Professions",
@@ -531,12 +537,12 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 52
+     "n": 55
     },
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
-     "n": 13
+     "n": 14
     }
    ],
    "questovi": {
@@ -544,22 +550,22 @@
      "Beren's Peril",
      "Pigments for Paints",
      "Deviate Hides",
-     "Her Name Is Olgra",
-     "Arachnophobia",
+     "Jin'Zil's Forest Magic",
+     "The Elder Crone",
+     "Shredding Machines",
+     "Bloodfury Trinkets",
+     "Cycle of Rebirth",
+     "Cenarius' Legacy",
      "The Warsong Reports",
      "A Recipe For Death",
-     "Letter to Jin'Zil",
-     "Kill Grundig Darkcloud",
+     "Calling in the Reserves",
+     "Further Instructions",
      "Blueleaf Tubers",
-     "Deepmoss Spider Eggs",
-     "Goblin Invaders",
+     "Harpies Threaten",
      "Mura Runetotem",
-     "Battle of Warsong Gulch",
-     "Steelsnap",
-     "Isha Awak",
-     "Ziz Fizziks"
+     "Steelsnap"
     ],
-    "zavrseno": 265
+    "zavrseno": 276
    },
    "mountovi": [
     "Cerulean Prideclaw"
@@ -571,7 +577,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg",
-   "azurirano": "2026-11-09T01:53:41Z"
+   "azurirano": "2026-11-09T13:51:01Z"
   },
   "Melee Kitic": {
    "level": 24,
@@ -2795,7 +2801,7 @@
    "azurirano": "2026-11-09T01:53:41Z"
   }
  },
- "provjereno": "2026-11-09T11:51:36Z",
+ "provjereno": "2026-11-09T13:51:01Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 7,
@@ -2804,13 +2810,13 @@
   "roster": [
    {
     "ime": "Saman Saulic",
-    "level": 25,
+    "level": 26,
     "klasa": "Shaman",
     "rasa": "Orc",
     "rang": 0,
     "slug": "saman-saulic",
-    "ilvl": 19,
-    "zadnjiLogin": "2026-11-09T01:40:43Z",
+    "ilvl": 20,
+    "zadnjiLogin": "2026-11-09T12:09:10Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg"
    },
    {
@@ -2865,7 +2871,7 @@
     "rang": 4,
     "slug": "venos-xx",
     "ilvl": 14,
-    "zadnjiLogin": "2026-11-09T11:43:11Z",
+    "zadnjiLogin": "2026-11-09T13:46:29Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/253/13774333-avatar.jpg"
    },
    {
@@ -2917,6 +2923,11 @@
     "2026-11-09T01:53:41Z",
     25,
     18974
+   ],
+   [
+    "2026-11-09T13:51:01Z",
+    26,
+    3543
    ]
   ],
   "Melee Kitic": [
