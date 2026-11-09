@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-09T07:52:04Z",
+ "azurirano": "2026-11-09T09:51:50Z",
  "likovi": {
   "Saman Saulic": {
    "level": 25,
@@ -1614,10 +1614,10 @@
   },
   "Nikola Roguevic": {
    "level": 25,
-   "xp": 15452,
+   "xp": 21360,
    "guild": "Kafana na Balkanu",
    "ilvl": 16,
-   "zadnjiLogin": "2026-11-09T01:40:38Z",
+   "zadnjiLogin": "2026-11-09T09:52:32Z",
    "izvor": "Blizzard API",
    "talenti": [
     2,
@@ -1796,7 +1796,7 @@
     },
     {
      "name": "Skinning",
-     "skill": 162,
+     "skill": 163,
      "max": 225,
      "vrsta": "primarna"
     },
@@ -1831,11 +1831,11 @@
     "armor": 696,
     "ap": 189,
     "spellPower": 0,
-    "crit": 8.9,
+    "crit": 9.5,
     "spellCrit": 0.0,
-    "rangedCrit": 9.22,
-    "dodge": 19.12,
-    "parry": 10.88,
+    "rangedCrit": 9.3,
+    "dodge": 19.16,
+    "parry": 10.92,
     "block": 0.0,
     "dps": 29.2
    },
@@ -1843,25 +1843,25 @@
     {
      "ime": "Undercity",
      "status": "Honored",
-     "vrijednost": 3942,
+     "vrijednost": 3986,
      "max": 12000
     },
     {
      "ime": "Orgrimmar",
      "status": "Friendly",
-     "vrijednost": 2598,
+     "vrijednost": 2773,
      "max": 6000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Friendly",
-     "vrijednost": 1173,
+     "vrijednost": 1217,
      "max": 6000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Friendly",
-     "vrijednost": 331,
+     "vrijednost": 375,
      "max": 6000
     },
     {
@@ -1893,7 +1893,7 @@
     {
      "kat": "Character",
      "ime": "Times camped",
-     "n": 15
+     "n": 22
     },
     {
      "kat": "Consumables",
@@ -1909,7 +1909,7 @@
     {
      "kat": "Consumables",
      "ime": "Health potions consumed",
-     "n": 12
+     "n": 13
     },
     {
      "kat": "Consumables",
@@ -1939,7 +1939,7 @@
     {
      "kat": "Reputation",
      "ime": "Total factions encountered",
-     "n": 16
+     "n": 14
     },
     {
      "kat": "Gear",
@@ -1984,17 +1984,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 2927
+     "n": 2978
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 2359
+     "n": 2382
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 2894
+     "n": 2945
     },
     {
      "kat": "Creatures",
@@ -2004,7 +2004,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 1173,
+     "n": 1224,
      "opis": "Humanoid"
     },
     {
@@ -2031,12 +2031,12 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 1517
+     "n": 1570
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 1244
+     "n": 1297
     },
     {
      "kat": "Killing Blows",
@@ -2072,7 +2072,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 198
+     "n": 200
     },
     {
      "kat": "Quests",
@@ -2107,12 +2107,12 @@
     {
      "kat": "Secondary Skills",
      "ime": "Cooking skill",
-     "n": 60
+     "n": 65
     },
     {
      "kat": "Secondary Skills",
      "ime": "Cooking Recipes known",
-     "n": 26
+     "n": 24
     },
     {
      "kat": "Secondary Skills",
@@ -2152,7 +2152,7 @@
     {
      "kat": "Professions",
      "ime": "Highest Skinning skill",
-     "n": 161
+     "n": 162
     },
     {
      "kat": "Travel",
@@ -2179,9 +2179,9 @@
     "uLogu": [
      "Deathstalkers in Shadowfang",
      "Lost in Battle",
+     "Betrayal from Within",
      "Changing Tastes",
      "Avenge My Village",
-     "Tribes at War",
      "Arachnophobia",
      "The Warsong Reports",
      "Source of Power",
@@ -2194,7 +2194,7 @@
      "Steelsnap",
      "Ziz Fizziks"
     ],
-    "zavrseno": 248
+    "zavrseno": 250
    },
    "mountovi": [
     "Cerulean Prideclaw",
@@ -2212,7 +2212,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg",
-   "azurirano": "2026-11-09T01:53:41Z"
+   "azurirano": "2026-11-09T09:51:50Z"
   },
   "Arsen Deadic": {
    "level": 22,
@@ -2785,7 +2785,7 @@
    "azurirano": "2026-11-09T01:53:41Z"
   }
  },
- "provjereno": "2026-11-09T07:52:04Z",
+ "provjereno": "2026-11-09T09:51:50Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 7,
@@ -2811,7 +2811,7 @@
     "rang": 1,
     "slug": "nikola-roguevic",
     "ilvl": 16,
-    "zadnjiLogin": "2026-11-09T01:40:38Z",
+    "zadnjiLogin": "2026-11-09T09:52:32Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg"
    },
    {
@@ -3048,6 +3048,11 @@
     "2026-11-09T01:53:41Z",
     25,
     15452
+   ],
+   [
+    "2026-11-09T09:51:50Z",
+    25,
+    21360
    ]
   ],
   "Arsen Deadic": [

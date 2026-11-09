@@ -132,7 +132,7 @@
         },
         {
           "name": "Skinning",
-          "skill": 162,
+          "skill": 163,
           "phase": "stalno"
         }
       ],
@@ -696,6 +696,12 @@
       "character": "paladin",
       "profession": "Mining",
       "skill": 75
+    },
+    {
+      "date": "2026-11-09",
+      "character": "rogue",
+      "profession": "Skinning",
+      "skill": 163
     }
   ],
   "flows": [
