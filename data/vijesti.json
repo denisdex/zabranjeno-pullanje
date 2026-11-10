@@ -9,8 +9,19 @@
    "url": "https://www.wowhead.com/news/rss/classic"
   }
  ],
- "azurirano": "2026-11-10T03:53:01Z",
+ "azurirano": "2026-11-10T05:52:48Z",
  "stavke": [
+  {
+   "datum": "2026-11-10T04:23:46Z",
+   "naslov": "WoW: Forever Hotfixes - November 9, 2026",
+   "link": "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-9-2026/2403040/5",
+   "izvor": "Blizzard",
+   "sazetak": "November 9, 2026 Classes Druid The Cooldown Manager no longer shows Berserk, and now correctly shows Lacerate when learned. Idol of Ferocity no longer lists Mangle as an ability it discounts. Feral Fixed an issue where Feral Charge (Cat)…",
+   "oznake": [
+    "Hotfix"
+   ],
+   "vrsta": "patch"
+  },
   {
    "datum": "2026-11-10T00:36:27Z",
    "naslov": "Prepare for Forever, Try Midnight’s Talebound, and Discover Sweet Treats in WoW Weekly",
@@ -19,17 +30,6 @@
    "sazetak": "From the global launch of World of Warcraft: Forever on November 4 to the eerie adventures of Midnight’s Talebound demo and November’s sweet-themed Trading Post, this week’s news is packed with helpful guides, fresh stories, new rewards…",
    "oznake": [],
    "vrsta": "vijest"
-  },
-  {
-   "datum": "2026-11-07T01:07:59Z",
-   "naslov": "WoW: Forever Hotfixes - November 6, 2026",
-   "link": "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-6-2026/2403040/4",
-   "izvor": "Blizzard",
-   "sazetak": "November 6, 2026 Classes Fixed an issue with the Quick and the Dead Legacy Talent where it sometimes did not work as intended. Cooldown Manager The Cooldown Manager will now correctly display the duration of crowd control spells at all…",
-   "oznake": [
-    "Hotfix"
-   ],
-   "vrsta": "patch"
   },
   {
    "datum": "2026-11-06T18:31:23Z",
@@ -227,15 +227,6 @@
    "vrsta": "vijest"
   },
   {
-   "datum": "2026-10-23T17:06:49Z",
-   "naslov": "Dive Into WoW: Forever, the Gods of Zul’Aman, Hallow’s End, and More in WoW Weekly",
-   "link": "https://us.forums.blizzard.com/en/wow/t/dive-into-wow-forever-the-gods-of-zul%E2%80%99aman-hallow%E2%80%99s-end-and-more-in-wow-weekly/2390481/1",
-   "izvor": "Blizzard",
-   "sazetak": "From the latest news in World of Warcraft: Forever to the launch of the Gods of Zul'Aman content update in Burning Crusade Classic Anniversary, this week's news is packed with fresh insights, eerie in-game events, new rewards, and…",
-   "oznake": [],
-   "vrsta": "vijest"
-  },
-  {
    "datum": "2026-10-16T17:03:18Z",
    "naslov": "Midnight 12.1.5 Live, Patch 12.1.7 & WoW: Forever - WoW Weekly Recap",
    "link": "https://www.wowhead.com/news=383465/midnight-12-1-5-live-patch-12-1-7-and-wow-forever-wow-weekly-recap",
@@ -409,6 +400,17 @@
    "izvor": "Wowhead",
    "sazetak": "We've created a new webhook for World of Warcraft: Forever, so you can keep up with all of the latest news and information regarding the newest flavor of WoW! Continue reading »",
    "oznake": [],
+   "vrsta": "vijest"
+  },
+  {
+   "datum": "2026-09-13T05:51:05Z",
+   "naslov": "BlizzCon Day 1 Roundup: Classic+, Collectors Edition Fixes, and Everything You Might Have Missed",
+   "link": "https://www.wowhead.com/news=382857/blizzcon-day-1-roundup-classic-collectors-edition-fixes-and-everything-you-might",
+   "izvor": "Wowhead",
+   "sazetak": "The first day of Blizzcon is over, and there's so much new info our heads are spinning - so here's everything you might have missed! Continue reading »",
+   "oznake": [
+    "Klase"
+   ],
    "vrsta": "vijest"
   }
  ]
