@@ -63,12 +63,12 @@
       "professions": [
         {
           "name": "Leatherworking",
-          "skill": 127,
+          "skill": 150,
           "phase": "stalno"
         },
         {
           "name": "Skinning",
-          "skill": 184,
+          "skill": 205,
           "phase": "stalno"
         }
       ],
@@ -79,7 +79,7 @@
         },
         {
           "name": "Fishing",
-          "skill": 145
+          "skill": 159
         },
         {
           "name": "First Aid",
@@ -780,6 +780,24 @@
       "character": "rogue",
       "profession": "Skinning",
       "skill": 182
+    },
+    {
+      "date": "2026-11-10",
+      "character": "shaman",
+      "profession": "Leatherworking",
+      "skill": 150
+    },
+    {
+      "date": "2026-11-10",
+      "character": "shaman",
+      "profession": "Skinning",
+      "skill": 205
+    },
+    {
+      "date": "2026-11-10",
+      "character": "shaman",
+      "profession": "Fishing",
+      "skill": 159
     }
   ],
   "flows": [

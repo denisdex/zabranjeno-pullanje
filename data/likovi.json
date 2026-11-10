@@ -1,26 +1,20 @@
 {
- "azurirano": "2026-11-10T15:50:43Z",
+ "azurirano": "2026-11-10T19:49:21Z",
  "likovi": {
   "Saman Saulic": {
-   "level": 28,
-   "xp": 14096,
+   "level": 30,
+   "xp": 11249,
    "guild": "Kafana na Balkanu",
-   "ilvl": 21,
-   "zadnjiLogin": "2026-11-10T01:48:11Z",
+   "ilvl": 24,
+   "zadnjiLogin": "2026-11-10T18:46:14Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
-    13,
-    5
+    21,
+    0
    ],
    "specka": "Enhancement",
    "talentiPopis": [
-    {
-     "ime": "Concussion",
-     "rang": 1,
-     "stablo": "Elemental Combat",
-     "opis": "Increases the damage done by your Lightning Bolt, Chain Lightning, and Earth Shock spells by 1%."
-    },
     {
      "ime": "Thundering Strikes",
      "rang": 5,
@@ -29,9 +23,9 @@
     },
     {
      "ime": "Ancestral Knowledge",
-     "rang": 1,
+     "rang": 3,
      "stablo": "Enhancement",
-     "opis": "Increases your Intellect by 2%."
+     "opis": "Increases your Intellect by 6%."
     },
     {
      "ime": "Mental Dexterity",
@@ -40,16 +34,10 @@
      "opis": "Increases your Attack Power by an amount equal to 150% of your Intellect."
     },
     {
-     "ime": "Improved Lightning Shield",
-     "rang": 1,
-     "stablo": "Enhancement",
-     "opis": "Increases the damage done by your Lightning Shield orbs by 5%."
-    },
-    {
      "ime": "Elemental Weapons",
-     "rang": 2,
+     "rang": 3,
      "stablo": "Enhancement",
-     "opis": "Increases the melee attack power bonus of your Rockbiter Weapon by 13%, your Windfury Weapon effect by 27% and increases the damage caused by your Flametongue Weapon and Frostbrand Weapon by 10%."
+     "opis": "Increases the melee attack power bonus of your Rockbiter Weapon by 20%, your Windfury Weapon effect by 40% and increases the damage caused by your Flametongue Weapon and Frostbrand Weapon by 15%."
     },
     {
      "ime": "Shamanistic Focus",
@@ -58,20 +46,38 @@
      "opis": "Reduces the mana cost of your Shock and Lightning Shield spells by 45%."
     },
     {
-     "ime": "Tidal Focus",
-     "rang": 5,
-     "stablo": "Restoration",
-     "opis": "Reduces the Mana cost of your healing spells by 5% and improves your chance to hit by 5%."
+     "ime": "Flurry",
+     "rang": 2,
+     "stablo": "Enhancement",
+     "opis": "Increases your attack speed by 12% for your next 3 swings after dealing a melee critical strike."
+    },
+    {
+     "ime": "Stormstrike",
+     "rang": 1,
+     "stablo": "Enhancement",
+     "opis": "Instantly strike for 150% weapon damage and increase the damage you deal to the target with your next Lightning Bolt, Chain Lightning, or Earth Shock spell by 20% for 12 sec."
+    },
+    {
+     "ime": "Improved Ghost Wolf",
+     "rang": 2,
+     "stablo": "Enhancement",
+     "opis": "Reduces the cast time of your Ghost Wolf spell by 3.0 sec, and Ghost Wolf may be used indoors."
+    },
+    {
+     "ime": "Improved Stormstrike",
+     "rang": 1,
+     "stablo": "Enhancement",
+     "opis": "When you Stormstrike, you have a 50% chance to gain 50% mana regeneration while casting spells for 15 sec, and Stormstrike's cooldown has a 50% chance to reset each time you Dodge or Parry."
     }
    ],
    "oprema": [
     {
      "slot": "Head",
-     "ime": "Taurajo Headband",
-     "kvaliteta": "common",
-     "wowhead": 279391,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133693.jpg",
-     "ilvl": 23
+     "ime": "Spirit Hunter Headdress",
+     "kvaliteta": "uncommon",
+     "wowhead": 6720,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133119.jpg",
+     "ilvl": 37
     },
     {
      "slot": "Neck",
@@ -91,11 +97,11 @@
     },
     {
      "slot": "Chest",
-     "ime": "Barkshell Tunic",
+     "ime": "Brawnhide Armor",
      "kvaliteta": "uncommon",
-     "wowhead": 5316,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135009.jpg",
-     "ilvl": 25
+     "wowhead": 15471,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132716.jpg",
+     "ilvl": 29
     },
     {
      "slot": "Waist",
@@ -139,18 +145,26 @@
     },
     {
      "slot": "Finger 1",
-     "ime": "Totemic Clan Ring",
-     "kvaliteta": "uncommon",
-     "wowhead": 5313,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/134413.jpg",
-     "ilvl": 25
-    },
-    {
-     "slot": "Finger 2",
      "ime": "Harpy Claw Ring",
      "kvaliteta": "uncommon",
      "wowhead": 281252,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133345.jpg",
+     "ilvl": 26
+    },
+    {
+     "slot": "Finger 2",
+     "ime": "Inventor's League Ring",
+     "kvaliteta": "uncommon",
+     "wowhead": 15467,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133364.jpg",
+     "ilvl": 31
+    },
+    {
+     "slot": "Trinket 1",
+     "ime": "Worgenbane Talisman",
+     "kvaliteta": "rare",
+     "wowhead": 273643,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133439.jpg",
      "ilvl": 26
     },
     {
@@ -168,7 +182,7 @@
      "wowhead": 270018,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133052.jpg",
      "ilvl": 24,
-     "enchant": "Flametongue 3"
+     "enchant": "Windfury 1"
     },
     {
      "slot": "Ranged",
@@ -182,13 +196,13 @@
    "profesije": [
     {
      "name": "Leatherworking",
-     "skill": 127,
-     "max": 150,
+     "skill": 150,
+     "max": 225,
      "vrsta": "primarna"
     },
     {
      "name": "Skinning",
-     "skill": 184,
+     "skill": 205,
      "max": 225,
      "vrsta": "primarna"
     },
@@ -200,7 +214,7 @@
     },
     {
      "name": "Fishing",
-     "skill": 145,
+     "skill": 159,
      "max": 225,
      "vrsta": "sekundarna"
     },
@@ -212,48 +226,48 @@
     }
    ],
    "statovi": {
-    "hp": 834,
-    "resurs": 1128,
+    "hp": 985,
+    "resurs": 1210,
     "resursIme": "Mana",
-    "str": 68,
-    "agi": 34,
-    "sta": 72,
-    "int": 54,
-    "spi": 83,
-    "armor": 466,
-    "ap": 265,
-    "spellPower": 22,
-    "crit": 9.54,
-    "spellCrit": 9.35,
-    "rangedCrit": 0.06,
-    "dodge": 4.54,
+    "str": 71,
+    "agi": 49,
+    "sta": 83,
+    "int": 55,
+    "spi": 99,
+    "armor": 559,
+    "ap": 276,
+    "spellPower": 14,
+    "crit": 10.71,
+    "spellCrit": 9.25,
+    "rangedCrit": 0.79,
+    "dodge": 5.67,
     "parry": 0.0,
     "block": 4.72,
-    "dps": 39.4
+    "dps": 40.2
    },
    "reputacije": [
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 5127,
+     "vrijednost": 5702,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Honored",
-     "vrijednost": 1038,
+     "vrijednost": 1613,
      "max": 12000
     },
     {
      "ime": "Thunder Bluff",
-     "status": "Friendly",
-     "vrijednost": 4616,
-     "max": 6000
+     "status": "Honored",
+     "vrijednost": 147,
+     "max": 12000
     },
     {
      "ime": "Undercity",
      "status": "Friendly",
-     "vrijednost": 1533,
+     "vrijednost": 2877,
      "max": 6000
     },
     {
@@ -285,7 +299,7 @@
     {
      "kat": "Character",
      "ime": "Times camped",
-     "n": 36
+     "n": 52
     },
     {
      "kat": "Consumables",
@@ -295,7 +309,7 @@
     {
      "kat": "Consumables",
      "ime": "Mana potions consumed",
-     "n": 8
+     "n": 9
     },
     {
      "kat": "Consumables",
@@ -315,7 +329,7 @@
     {
      "kat": "Reputation",
      "ime": "Most factions at Honored or higher",
-     "n": 2
+     "n": 3
     },
     {
      "kat": "Reputation",
@@ -335,12 +349,12 @@
     {
      "kat": "Gear",
      "ime": "Greed rolls made on loot",
-     "n": 84
+     "n": 97
     },
     {
      "kat": "Gear",
      "ime": "Need rolls made on loot",
-     "n": 22
+     "n": 27
     },
     {
      "kat": "Player vs. Player",
@@ -355,7 +369,7 @@
     {
      "kat": "Dungeons & Raids",
      "ime": "Total 5-player dungeons entered",
-     "n": 6
+     "n": 8
     },
     {
      "kat": "Boss Kills",
@@ -373,19 +387,24 @@
      "n": 1
     },
     {
+     "kat": "Boss Kills",
+     "ime": "Archmage Arugal kills (Shadowfang Keep)",
+     "n": 1
+    },
+    {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 3377
+     "n": 3773
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 2725
+     "n": 2933
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 3350
+     "n": 3741
     },
     {
      "kat": "Creatures",
@@ -395,13 +414,13 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 1347,
+     "n": 1582,
      "opis": "Humanoid"
     },
     {
      "kat": "Creatures",
      "ime": "Critters killed",
-     "n": 24
+     "n": 29
     },
     {
      "kat": "Honorable Kills",
@@ -422,23 +441,23 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 1356
+     "n": 1548
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 1261
+     "n": 1424
     },
     {
      "kat": "Killing Blows",
      "ime": "Continent with the most Killing Blows",
-     "n": 998,
+     "n": 1064,
      "opis": "Kalimdor"
     },
     {
      "kat": "Deaths",
      "ime": "Total deaths",
-     "n": 31
+     "n": 36
     },
     {
      "kat": "Dungeons and Raids",
@@ -451,14 +470,24 @@
      "n": 3
     },
     {
+     "kat": "World",
+     "ime": "Deaths from falling",
+     "n": 1
+    },
+    {
      "kat": "Resurrection",
      "ime": "Resurrected by priests",
      "n": 1
     },
     {
+     "kat": "Resurrection",
+     "ime": "Spirit returned to body by shamans",
+     "n": 1
+    },
+    {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 241
+     "n": 267
     },
     {
      "kat": "Quests",
@@ -468,7 +497,7 @@
     {
      "kat": "Quests",
      "ime": "Quests abandoned",
-     "n": 19
+     "n": 22
     },
     {
      "kat": "Skills",
@@ -513,62 +542,80 @@
     {
      "kat": "Secondary Skills",
      "ime": "Fishing skill",
-     "n": 145
+     "n": 159
     },
     {
      "kat": "Secondary Skills",
      "ime": "Fish caught",
-     "n": 239
+     "n": 290
     },
     {
      "kat": "Secondary Skills",
      "ime": "Fish and other things caught",
-     "n": 239
+     "n": 290
     },
     {
      "kat": "Professions",
      "ime": "Highest Leatherworking skill",
-     "n": 127
+     "n": 150
     },
     {
      "kat": "Professions",
      "ime": "Leatherworking Patterns learned",
-     "n": 58
+     "n": 64
     },
     {
      "kat": "Professions",
      "ime": "Highest Skinning skill",
-     "n": 184
+     "n": 205
     },
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 81
+     "n": 98
     },
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
-     "n": 16
+     "n": 17
     }
    ],
    "questovi": {
     "uLogu": [
      "A Recipe For Death",
+     "Prison Break In",
+     "Helcular's Revenge",
+     "Craftsman's Writ: Pilferer's Gloves",
+     "Humbert's Sword",
+     "Stone Tokens",
+     "Elixir of Agony",
+     "A Vengeful Fate",
+     "Elixir of Pain",
+     "To Steal From Thieves",
+     "The Flying Machine Airport",
      "A New Ore Sample",
+     "Compendium of the Fallen",
      "The Sacred Flame",
-     "Beren's Peril",
-     "Steelsnap",
+     "The Hammer May Fall",
+     "Dangerous!",
+     "Regthar Deathgate",
+     "Battle of Hillsbrad",
+     "Test of Endurance",
      "Blueleaf Tubers",
-     "Journey to Tarren Mill",
      "Ordanus",
-     "Deviate Hides",
+     "Rig Wars",
      "The Essence of Aku'Mai",
+     "Grimtotem Spying",
      "Boulderslide Ravine",
      "King of the Foulweald",
      "Amongst the Ruins",
-     "Changing Tastes"
+     "Soothing Turtle Bisque",
+     "Changing Tastes",
+     "Elemental Aid",
+     "Key to the City",
+     "The Grave Knight"
     ],
-    "zavrseno": 303
+    "zavrseno": 331
    },
    "mountovi": [
     "Cerulean Prideclaw"
@@ -580,7 +627,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg",
-   "azurirano": "2026-11-10T01:53:37Z"
+   "azurirano": "2026-11-10T19:49:21Z"
   },
   "Melee Kitic": {
    "level": 25,
@@ -2849,7 +2896,7 @@
    "azurirano": "2026-11-10T15:50:43Z"
   }
  },
- "provjereno": "2026-11-10T17:49:57Z",
+ "provjereno": "2026-11-10T19:49:21Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 7,
@@ -2858,13 +2905,13 @@
   "roster": [
    {
     "ime": "Saman Saulic",
-    "level": 28,
+    "level": 30,
     "klasa": "Shaman",
     "rasa": "Orc",
     "rang": 0,
     "slug": "saman-saulic",
-    "ilvl": 21,
-    "zadnjiLogin": "2026-11-10T01:48:11Z",
+    "ilvl": 24,
+    "zadnjiLogin": "2026-11-10T18:46:14Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg"
    },
    {
@@ -2913,13 +2960,13 @@
    },
    {
     "ime": "Venos Xx",
-    "level": 21,
+    "level": 22,
     "klasa": "Druid",
     "rasa": "Tauren",
     "rang": 4,
     "slug": "venos-xx",
-    "ilvl": 16,
-    "zadnjiLogin": "2026-11-10T13:07:16Z",
+    "ilvl": 17,
+    "zadnjiLogin": "2026-11-10T19:39:46Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/253/13774333-avatar.jpg"
    },
    {
@@ -2986,6 +3033,11 @@
     "2026-11-10T01:53:37Z",
     28,
     14096
+   ],
+   [
+    "2026-11-10T19:49:21Z",
+    30,
+    11249
    ]
   ],
   "Melee Kitic": [
