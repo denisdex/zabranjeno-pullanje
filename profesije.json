@@ -68,7 +68,7 @@
         },
         {
           "name": "Skinning",
-          "skill": 171,
+          "skill": 184,
           "phase": "stalno"
         }
       ],
@@ -79,7 +79,7 @@
         },
         {
           "name": "Fishing",
-          "skill": 140
+          "skill": 145
         },
         {
           "name": "First Aid",
@@ -132,7 +132,7 @@
         },
         {
           "name": "Skinning",
-          "skill": 170,
+          "skill": 180,
           "phase": "stalno"
         }
       ],
@@ -161,7 +161,7 @@
       "professions": [
         {
           "name": "Mining",
-          "skill": 75,
+          "skill": 76,
           "phase": "stalno"
         },
         {
@@ -750,6 +750,30 @@
       "character": "rogue",
       "profession": "Skinning",
       "skill": 170
+    },
+    {
+      "date": "2026-11-10",
+      "character": "shaman",
+      "profession": "Skinning",
+      "skill": 184
+    },
+    {
+      "date": "2026-11-10",
+      "character": "shaman",
+      "profession": "Fishing",
+      "skill": 145
+    },
+    {
+      "date": "2026-11-10",
+      "character": "rogue",
+      "profession": "Skinning",
+      "skill": 180
+    },
+    {
+      "date": "2026-11-10",
+      "character": "paladin",
+      "profession": "Mining",
+      "skill": 76
     }
   ],
   "flows": [

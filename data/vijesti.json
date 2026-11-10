@@ -9,8 +9,17 @@
    "url": "https://www.wowhead.com/news/rss/classic"
   }
  ],
- "azurirano": "2026-11-07T10:20:48Z",
+ "azurirano": "2026-11-10T01:53:37Z",
  "stavke": [
+  {
+   "datum": "2026-11-10T00:36:27Z",
+   "naslov": "Prepare for Forever, Try Midnight’s Talebound, and Discover Sweet Treats in WoW Weekly",
+   "link": "https://us.forums.blizzard.com/en/wow/t/prepare-for-forever-try-midnight%E2%80%99s-talebound-and-discover-sweet-treats-in-wow-weekly/2408677/1",
+   "izvor": "Blizzard",
+   "sazetak": "From the global launch of World of Warcraft: Forever on November 4 to the eerie adventures of Midnight’s Talebound demo and November’s sweet-themed Trading Post, this week’s news is packed with helpful guides, fresh stories, new rewards…",
+   "oznake": [],
+   "vrsta": "vijest"
+  },
   {
    "datum": "2026-11-07T01:07:59Z",
    "naslov": "WoW: Forever Hotfixes - November 6, 2026",
@@ -401,15 +410,6 @@
    "link": "https://www.wowhead.com/news=382879/blizzcon-day-2-roundup-forever-forever-and-more-forever",
    "izvor": "Wowhead",
    "sazetak": "BlizzCon has ended, but don't worry - we've wrapped up the big recaps from today's panels. Continue reading »",
-   "oznake": [],
-   "vrsta": "vijest"
-  },
-  {
-   "datum": "2026-09-13T19:42:52Z",
-   "naslov": "WoW: Forever Webhook Now Available",
-   "link": "https://www.wowhead.com/news=382871/wow-forever-webhook-now-available",
-   "izvor": "Wowhead",
-   "sazetak": "We've created a new webhook for World of Warcraft: Forever, so you can keep up with all of the latest news and information regarding the newest flavor of WoW! Continue reading »",
    "oznake": [],
    "vrsta": "vijest"
   }
