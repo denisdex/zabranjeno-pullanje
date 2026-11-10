@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-10T13:51:28Z",
+ "azurirano": "2026-11-10T15:50:43Z",
  "likovi": {
   "Saman Saulic": {
    "level": 28,
@@ -1627,11 +1627,11 @@
    "azurirano": "2026-11-08T21:54:18Z"
   },
   "Nikola Roguevic": {
-   "level": 27,
-   "xp": 24092,
+   "level": 28,
+   "xp": 9504,
    "guild": "Kafana na Balkanu",
    "ilvl": 18,
-   "zadnjiLogin": "2026-11-10T01:50:49Z",
+   "zadnjiLogin": "2026-11-10T15:49:44Z",
    "izvor": "Blizzard API",
    "talenti": [
     2,
@@ -1774,11 +1774,11 @@
     },
     {
      "slot": "Finger 2",
-     "ime": "Slain Baron's Signet",
-     "kvaliteta": "uncommon",
-     "wowhead": 279867,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133361.jpg",
-     "ilvl": 23
+     "ime": "Seal of Sylvanas",
+     "kvaliteta": "rare",
+     "wowhead": 6414,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133357.jpg",
+     "ilvl": 29
     },
     {
      "slot": "Back",
@@ -1794,8 +1794,7 @@
      "kvaliteta": "rare",
      "wowhead": 6504,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135314.jpg",
-     "ilvl": 24,
-     "enchant": "Instant Poison (47 |4Charge:Charges;)"
+     "ilvl": 24
     },
     {
      "slot": "Off Hand",
@@ -1803,8 +1802,7 @@
      "kvaliteta": "rare",
      "wowhead": 271204,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/134298.jpg",
-     "ilvl": 20,
-     "enchant": "Instant Poison (56 |4Charge:Charges;)"
+     "ilvl": 20
     },
     {
      "slot": "Ranged",
@@ -1824,7 +1822,7 @@
     },
     {
      "name": "Skinning",
-     "skill": 180,
+     "skill": 182,
      "max": 225,
      "vrsta": "primarna"
     },
@@ -1848,48 +1846,48 @@
     }
    ],
    "statovi": {
-    "hp": 1055,
+    "hp": 1135,
     "resurs": 100,
     "resursIme": "Energy",
-    "str": 50,
-    "agi": 104,
-    "sta": 88,
+    "str": 51,
+    "agi": 106,
+    "sta": 94,
     "int": 33,
-    "spi": 42,
-    "armor": 714,
-    "ap": 198,
+    "spi": 43,
+    "armor": 718,
+    "ap": 209,
     "spellPower": 0,
-    "crit": 9.08,
+    "crit": 8.7,
     "spellCrit": 0.0,
-    "rangedCrit": 8.88,
-    "dodge": 19.16,
-    "parry": 10.92,
+    "rangedCrit": 8.46,
+    "dodge": 18.54,
+    "parry": 10.72,
     "block": 0.0,
-    "dps": 29.8
+    "dps": 30.6
    },
    "reputacije": [
     {
      "ime": "Undercity",
      "status": "Honored",
-     "vrijednost": 4498,
+     "vrijednost": 4830,
      "max": 12000
     },
     {
      "ime": "Orgrimmar",
      "status": "Friendly",
-     "vrijednost": 3923,
+     "vrijednost": 4030,
      "max": 6000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Friendly",
-     "vrijednost": 1805,
+     "vrijednost": 1911,
      "max": 6000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Friendly",
-     "vrijednost": 1562,
+     "vrijednost": 1812,
      "max": 6000
     },
     {
@@ -1921,7 +1919,7 @@
     {
      "kat": "Character",
      "ime": "Times camped",
-     "n": 23
+     "n": 25
     },
     {
      "kat": "Consumables",
@@ -1977,12 +1975,12 @@
     {
      "kat": "Gear",
      "ime": "Greed rolls made on loot",
-     "n": 99
+     "n": 110
     },
     {
      "kat": "Gear",
      "ime": "Need rolls made on loot",
-     "n": 23
+     "n": 28
     },
     {
      "kat": "World",
@@ -1992,7 +1990,7 @@
     {
      "kat": "Dungeons & Raids",
      "ime": "Total 5-player dungeons entered",
-     "n": 10
+     "n": 11
     },
     {
      "kat": "Boss Kills",
@@ -2010,19 +2008,24 @@
      "n": 2
     },
     {
+     "kat": "Boss Kills",
+     "ime": "Archmage Arugal kills (Shadowfang Keep)",
+     "n": 1
+    },
+    {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 3500
+     "n": 3643
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 2781
+     "n": 2849
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 3460
+     "n": 3598
     },
     {
      "kat": "Creatures",
@@ -2032,13 +2035,13 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 1522,
+     "n": 1580,
      "opis": "Humanoid"
     },
     {
      "kat": "Creatures",
      "ime": "Critters killed",
-     "n": 34
+     "n": 39
     },
     {
      "kat": "Honorable Kills",
@@ -2059,33 +2062,33 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 1895
+     "n": 1948
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 1622
+     "n": 1632
     },
     {
      "kat": "Killing Blows",
      "ime": "Continent with the most Killing Blows",
-     "n": 927,
+     "n": 937,
      "opis": "Kalimdor"
     },
     {
      "kat": "Deaths",
      "ime": "Total deaths",
-     "n": 15
+     "n": 16
     },
     {
      "kat": "Dungeons and Raids",
      "ime": "Total raid and dungeon deaths",
-     "n": 3
+     "n": 4
     },
     {
      "kat": "Dungeons and Raids",
      "ime": "Total deaths in 5-player dungeons",
-     "n": 3
+     "n": 4
     },
     {
      "kat": "World",
@@ -2100,7 +2103,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 231
+     "n": 237
     },
     {
      "kat": "Quests",
@@ -2175,22 +2178,22 @@
     {
      "kat": "Professions",
      "ime": "Leatherworking Patterns learned",
-     "n": 104
+     "n": 106
     },
     {
      "kat": "Professions",
      "ime": "Highest Skinning skill",
-     "n": 178
+     "n": 182
     },
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 58
+     "n": 62
     },
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
-     "n": 11
+     "n": 12
     },
     {
      "kat": "Social",
@@ -2206,25 +2209,32 @@
    "questovi": {
     "uLogu": [
      "Craftsman's Writ: Ornate Spyglass",
-     "Arugal Must Die",
+     "Elixir of Suffering",
+     "Elixir of Agony",
+     "Elixir of Pain",
+     "A New Ore Sample",
+     "Blood of Innocents",
+     "Stolen Freewind Supplies",
+     "Stop the Screeching",
      "Steelsnap",
      "Stonetalon Standstill",
      "Blueleaf Tubers",
-     "Journey to Tarren Mill",
      "Ordanus",
-     "Deathstalkers in Shadowfang",
      "Trouble in the Deeps",
+     "WANTED: Arnak Grimtotem",
      "Satyr Horns",
      "The Warsong Reports",
-     "Calling in the Reserves",
+     "The Horn of Xelthos",
      "Warsong Supplies",
+     "Alien Egg",
+     "Wind Rider",
      "Changing Tastes",
+     "Pacify the Centaur",
      "Ashenvale Outrunners",
      "The Lost Pages",
-     "Her Name Is Olgra",
      "Source of Power"
     ],
-    "zavrseno": 281
+    "zavrseno": 287
    },
    "mountovi": [
     "Cerulean Prideclaw",
@@ -2242,14 +2252,14 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg",
-   "azurirano": "2026-11-10T01:53:37Z"
+   "azurirano": "2026-11-10T15:50:43Z"
   },
   "Arsen Deadic": {
    "level": 25,
-   "xp": 3556,
+   "xp": 25816,
    "guild": "Kafana na Balkanu",
    "ilvl": 15,
-   "zadnjiLogin": "2026-11-10T01:17:20Z",
+   "zadnjiLogin": "2026-11-10T15:44:30Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -2438,37 +2448,37 @@
     "armor": 1400,
     "ap": 191,
     "spellPower": 11,
-    "crit": 9.9,
+    "crit": 10.1,
     "spellCrit": 11.11,
     "rangedCrit": 0.0,
-    "dodge": 3.9,
-    "parry": 9.76,
-    "block": 4.76,
+    "dodge": 4.06,
+    "parry": 9.92,
+    "block": 4.92,
     "dps": 29.2
    },
    "reputacije": [
     {
      "ime": "Undercity",
      "status": "Honored",
-     "vrijednost": 3836,
+     "vrijednost": 4136,
      "max": 12000
     },
     {
      "ime": "Orgrimmar",
      "status": "Friendly",
-     "vrijednost": 2556,
+     "vrijednost": 2631,
      "max": 6000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Friendly",
-     "vrijednost": 1281,
+     "vrijednost": 1356,
      "max": 6000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Friendly",
-     "vrijednost": 330,
+     "vrijednost": 405,
      "max": 6000
     },
     {
@@ -2500,7 +2510,7 @@
     {
      "kat": "Character",
      "ime": "Times camped",
-     "n": 17
+     "n": 21
     },
     {
      "kat": "Consumables",
@@ -2531,12 +2541,12 @@
     {
      "kat": "Consumables",
      "ime": "Beverages consumed",
-     "n": 31
+     "n": 33
     },
     {
      "kat": "Consumables",
      "ime": "Food eaten",
-     "n": 27
+     "n": 28
     },
     {
      "kat": "Reputation",
@@ -2561,12 +2571,12 @@
     {
      "kat": "Gear",
      "ime": "Greed rolls made on loot",
-     "n": 89
+     "n": 99
     },
     {
      "kat": "Gear",
      "ime": "Need rolls made on loot",
-     "n": 26
+     "n": 27
     },
     {
      "kat": "Player vs. Player",
@@ -2581,7 +2591,7 @@
     {
      "kat": "Dungeons & Raids",
      "ime": "Total 5-player dungeons entered",
-     "n": 4
+     "n": 5
     },
     {
      "kat": "Boss Kills",
@@ -2599,19 +2609,24 @@
      "n": 1
     },
     {
+     "kat": "Boss Kills",
+     "ime": "Archmage Arugal kills (Shadowfang Keep)",
+     "n": 1
+    },
+    {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 3099
+     "n": 3232
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 2632
+     "n": 2729
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 3080
+     "n": 3208
     },
     {
      "kat": "Creatures",
@@ -2621,13 +2636,13 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 1214,
+     "n": 1263,
      "opis": "Humanoid"
     },
     {
      "kat": "Creatures",
      "ime": "Critters killed",
-     "n": 15
+     "n": 20
     },
     {
      "kat": "Honorable Kills",
@@ -2648,7 +2663,7 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 1292
+     "n": 1323
     },
     {
      "kat": "Killing Blows",
@@ -2664,17 +2679,17 @@
     {
      "kat": "Deaths",
      "ime": "Total deaths",
-     "n": 23
+     "n": 25
     },
     {
      "kat": "Dungeons and Raids",
      "ime": "Total raid and dungeon deaths",
-     "n": 5
+     "n": 7
     },
     {
      "kat": "Dungeons and Raids",
      "ime": "Total deaths in 5-player dungeons",
-     "n": 5
+     "n": 7
     },
     {
      "kat": "World",
@@ -2684,12 +2699,12 @@
     {
      "kat": "Resurrection",
      "ime": "Spirit returned to body by shamans",
-     "n": 3
+     "n": 4
     },
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 198
+     "n": 200
     },
     {
      "kat": "Quests",
@@ -2790,7 +2805,6 @@
      "Dig Rat Stew",
      "The Guns of Northwatch",
      "Egg Hunt",
-     "Arugal Must Die",
      "Further Instructions",
      "A Husband's Revenge",
      "The Book of Ur",
@@ -2798,7 +2812,6 @@
      "Ordanus",
      "Smart Drinks",
      "Leaders of the Fang",
-     "Deathstalkers in Shadowfang",
      "Deviate Hides",
      "Trouble in the Deeps",
      "Stolen Silver",
@@ -2815,7 +2828,7 @@
      "Arugal's Folly",
      "Stop the Spread"
     ],
-    "zavrseno": 237
+    "zavrseno": 239
    },
    "mountovi": [
     "Cerulean Prideclaw",
@@ -2833,10 +2846,10 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg",
-   "azurirano": "2026-11-10T01:53:37Z"
+   "azurirano": "2026-11-10T15:50:43Z"
   }
  },
- "provjereno": "2026-11-10T13:51:28Z",
+ "provjereno": "2026-11-10T15:50:43Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 7,
@@ -2856,13 +2869,13 @@
    },
    {
     "ime": "Nikola Roguevic",
-    "level": 27,
+    "level": 28,
     "klasa": "Rogue",
     "rasa": "Undead",
     "rang": 1,
     "slug": "nikola-roguevic",
     "ilvl": 18,
-    "zadnjiLogin": "2026-11-10T01:50:49Z",
+    "zadnjiLogin": "2026-11-10T15:49:44Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg"
    },
    {
@@ -2873,7 +2886,7 @@
     "rang": 3,
     "slug": "arsen-deadic",
     "ilvl": 15,
-    "zadnjiLogin": "2026-11-10T01:17:20Z",
+    "zadnjiLogin": "2026-11-10T15:44:30Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg"
    },
    {
@@ -2895,7 +2908,7 @@
     "rang": 4,
     "slug": "yuserious-son",
     "ilvl": 20,
-    "zadnjiLogin": "2026-11-09T20:14:11Z",
+    "zadnjiLogin": "2026-11-10T15:44:30Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/6/6269702-avatar.jpg"
    },
    {
@@ -3149,6 +3162,11 @@
     "2026-11-10T01:53:37Z",
     27,
     24092
+   ],
+   [
+    "2026-11-10T15:50:43Z",
+    28,
+    9504
    ]
   ],
   "Arsen Deadic": [
@@ -3216,6 +3234,11 @@
     "2026-11-10T01:53:37Z",
     25,
     3556
+   ],
+   [
+    "2026-11-10T15:50:43Z",
+    25,
+    25816
    ]
   ]
  }
