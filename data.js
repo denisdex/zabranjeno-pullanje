@@ -3,7 +3,7 @@
 window.HORDE = {
   ekipa: "Zaprešić Horde",
   guild: "Kafana na Balkanu",
-  azurirano: "2026-11-09",
+  azurirano: "2026-11-10",
 
   // Vremena u UTC. Studeni je CET (UTC+1).
   // Rezervacija imena: do 3. 11. 2026. u 23:59 po Zagrebu.
@@ -75,7 +75,7 @@ window.HORDE = {
   // portret (foto) je 720×960 izrez iz istog kadra; oci i ociSiroka već uračunavaju 4 % povećanja slike na kartici
   // imena: gdje se govori o ljudima piše igrac (Pero, Niksa, Karken, Žuga, Dex); lik samo kao naslov kartice/profila i u kontekstu igre
   igraci: [
-    { igrac: "Niksa",   lik: "Saman Saulic",    klasa: "Shaman",  rasa: "Orc",    uloga: "Healer",     level: 25, foto: "assets/likovi/saman-saulic.jpg",
+    { igrac: "Niksa",   lik: "Saman Saulic",    klasa: "Shaman",  rasa: "Orc",    uloga: "Healer",     level: 28, foto: "assets/likovi/saman-saulic.jpg",
       siroka: "assets/likovi/saman-saulic-wide.jpg", fokus: [50.3, 18],
       // savjeti po levelu, u profilu u bloku "Što sad"
       trikovi: [
@@ -108,7 +108,7 @@ window.HORDE = {
         ],
         biljeske: "Healer grupe. Kad kaže mana, svi stanu."
       } },
-    { igrac: "Pero",    lik: "Melee Kitic",      klasa: "Warrior", rasa: "Orc",    uloga: "Melee DPS",  level: 24, foto: "assets/likovi/melee-kitic.jpg", boja: "#D9853B",
+    { igrac: "Pero",    lik: "Melee Kitic",      klasa: "Warrior", rasa: "Orc",    uloga: "Melee DPS",  level: 25, foto: "assets/likovi/melee-kitic.jpg", boja: "#D9853B",
       siroka: "assets/likovi/melee-kitic-wide.jpg", fokus: [50.3, 28.8],
       // savjeti po levelu, u profilu u bloku "Što sad"
       trikovi: [
@@ -173,7 +173,7 @@ window.HORDE = {
         ],
         biljeske: "Voda i hrana za ekipu, Polymorph na drugi target."
       } },
-    { igrac: "Žuga",    lik: "Nikola Roguevic",  klasa: "Rogue",   rasa: "Undead", uloga: "Melee DPS",  level: 25, foto: "assets/likovi/nikola-roguevic.jpg", oci: [[48.7, 14.2], [54.2, 14.1]],
+    { igrac: "Žuga",    lik: "Nikola Roguevic",  klasa: "Rogue",   rasa: "Undead", uloga: "Melee DPS",  level: 27, foto: "assets/likovi/nikola-roguevic.jpg", oci: [[48.7, 14.2], [54.2, 14.1]],
       siroka: "assets/likovi/nikola-roguevic-wide.jpg", fokus: [48.8, 16.6], ociSiroka: [[47.7, 14.2], [50.0, 14.1]],
       // savjeti po levelu, u profilu u bloku "Što sad"
       trikovi: [
@@ -205,7 +205,7 @@ window.HORDE = {
         ],
         biljeske: "Sap na drugi target prije pulla, kad Dex kaže."
       } },
-    { igrac: "Dex",     lik: "Arsen Deadic",     klasa: "Paladin", rasa: "Undead", uloga: "Tank",       level: 22, foto: "assets/likovi/arsen-deadic.jpg", oci: [[57.4, 18.5], [61.4, 19.0]],
+    { igrac: "Dex",     lik: "Arsen Deadic",     klasa: "Paladin", rasa: "Undead", uloga: "Tank",       level: 25, foto: "assets/likovi/arsen-deadic.jpg", oci: [[57.4, 18.5], [61.4, 19.0]],
       siroka: "assets/likovi/arsen-deadic-wide.jpg", fokus: [54.2, 20.1], ociSiroka: [[54.4, 18.6], [56.1, 19.0]],
       // savjeti po levelu, u profilu u bloku "Što sad"
       trikovi: [
@@ -618,6 +618,17 @@ window.HORDE = {
   // Stavka: { tekst, za: [klase/rase ili "Svi"], tema: kratka oznaka što se mijenja (Racial, Spell, Rage, XP, Dungeoni, Loot, Zona...) }
   izvorNovosti: "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
   novosti: [
+    { datum: "2026-11-09", naslov: "Hotfixovi: Mage, Shaman, dungeoni i gužva u zonama", stavke: [
+      { tekst: "Flamestrike tickovi na zemlji više ne troše Clearcasting; šansa za Arcane Concentration proc dijeli se na cast i svaki bolt (bilo 10 % na cast i opet po boltu).", za: ["Mage"], tema: "Spell" },
+      { tekst: "Lightning Overload sad radi točnu štetu za Lightning Bolt; Lightning Mastery ima novi vizualni efekt.", za: ["Shaman"], tema: "Bug fix" },
+      { tekst: "Consecration više ne prestaje raditi štetu kad meta u njemu despawna; Cooldown Manager ispravno prikazuje Seale.", za: ["Paladin"], tema: "Bug fix" },
+      { tekst: "Thunder Clap u Cooldown Manageru pokazuje samo cooldown, ne i trajanje.", za: ["Warrior"], tema: "Bug fix" },
+      { tekst: "Blackrock Depths: vrata prijestolne dvorane otvaraju se i nakon wipea na Emperoru Thaurissanu, Heart of the Mountain može se lootati više puta; Stratholme: više se ne može mountati unutra; Blackfathom Deeps: release nakon smrti opet radi.", za: ["Svi"], tema: "Dungeoni" },
+      { tekst: "The Drowned City: mobovi radili oko 30 % više štete nego što treba, popravljeno; Deathless Marrow lakši (health mobova −25 %, Fireball Sorcerera −25 %, Charge Watchera −50 %).", za: ["Svi"], tema: "Dungeoni" },
+      { tekst: "Waylaid Crates i Craftsman's Writs sad padaju i u dungeonima; Nifty Stopwatch više ne dijeli cooldown sa Sprintom, Blinkom i Dashom.", za: ["Svi"], tema: "Loot" },
+      { tekst: "Cultivation ide na cooldown tek kad cast završi.", za: ["Tauren"], tema: "Racial" },
+      { tekst: "Smanjen broj igrača po zoni gdje je bila gužva (više na PvP realmovima); flight path Camp Taurajo – Thunder Bluff više ne prolazi kroz objekte.", za: ["Svi"], tema: "Zona" }
+    ] },
     { datum: "2026-11-08", naslov: "Više XP-a u dungeonima", stavke: [
       { tekst: "Kill XP u dungeonima povećan za 50 % (hotfix od 8. 11. oko 20:05 po našem vremenu), da se isplati ići na više runova.", za: ["Svi"], tema: "XP" }
     ] },
