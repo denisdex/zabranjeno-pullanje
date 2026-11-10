@@ -9,7 +9,7 @@
    "url": "https://www.wowhead.com/news/rss/classic"
   }
  ],
- "azurirano": "2026-11-10T01:53:37Z",
+ "azurirano": "2026-11-10T03:53:01Z",
  "stavke": [
   {
    "datum": "2026-11-10T00:36:27Z",
@@ -236,17 +236,6 @@
    "vrsta": "vijest"
   },
   {
-   "datum": "2026-10-23T17:01:12Z",
-   "naslov": "Thank You For Testing the WoW Forever Beta",
-   "link": "https://us.forums.blizzard.com/en/wow/t/thank-you-for-testing-the-wow-forever-beta/2390466/1",
-   "izvor": "Blizzard",
-   "sazetak": "The WoW Forever Beta is now closed, and we’re incredibly grateful to everyone who joined us over the last five weeks of playtesting, data gathering, bug reporting, and feedback. We’re now quickly moving into a period of a few short days…",
-   "oznake": [
-    "Beta"
-   ],
-   "vrsta": "vijest"
-  },
-  {
    "datum": "2026-10-16T17:03:18Z",
    "naslov": "Midnight 12.1.5 Live, Patch 12.1.7 & WoW: Forever - WoW Weekly Recap",
    "link": "https://www.wowhead.com/news=383465/midnight-12-1-5-live-patch-12-1-7-and-wow-forever-wow-weekly-recap",
@@ -410,6 +399,15 @@
    "link": "https://www.wowhead.com/news=382879/blizzcon-day-2-roundup-forever-forever-and-more-forever",
    "izvor": "Wowhead",
    "sazetak": "BlizzCon has ended, but don't worry - we've wrapped up the big recaps from today's panels. Continue reading »",
+   "oznake": [],
+   "vrsta": "vijest"
+  },
+  {
+   "datum": "2026-09-13T19:42:52Z",
+   "naslov": "WoW: Forever Webhook Now Available",
+   "link": "https://www.wowhead.com/news=382871/wow-forever-webhook-now-available",
+   "izvor": "Wowhead",
+   "sazetak": "We've created a new webhook for World of Warcraft: Forever, so you can keep up with all of the latest news and information regarding the newest flavor of WoW! Continue reading »",
    "oznake": [],
    "vrsta": "vijest"
   }
