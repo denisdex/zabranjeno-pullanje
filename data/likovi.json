@@ -1,12 +1,12 @@
 {
- "azurirano": "2026-11-11T09:45:32Z",
+ "azurirano": "2026-11-11T11:45:26Z",
  "likovi": {
   "Saman Saulic": {
    "level": 30,
    "xp": 39693,
    "guild": "Kafana na Balkanu",
    "ilvl": 24,
-   "zadnjiLogin": "2026-11-11T09:26:48Z",
+   "zadnjiLogin": "2026-11-11T10:58:11Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -541,7 +541,7 @@
     {
      "kat": "Secondary Skills",
      "ime": "Fishing skill",
-     "n": 161
+     "n": 163
     },
     {
      "kat": "Secondary Skills",
@@ -571,7 +571,7 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 109
+     "n": 110
     },
     {
      "kat": "Travel",
@@ -630,7 +630,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg",
-   "azurirano": "2026-11-11T09:45:32Z"
+   "azurirano": "2026-11-11T11:45:26Z"
   },
   "Melee Kitic": {
    "level": 26,
@@ -1706,14 +1706,14 @@
   },
   "Nikola Roguevic": {
    "level": 28,
-   "xp": 9504,
+   "xp": 12615,
    "guild": "Kafana na Balkanu",
    "ilvl": 18,
-   "zadnjiLogin": "2026-11-10T15:49:44Z",
+   "zadnjiLogin": "2026-11-11T11:17:51Z",
    "izvor": "Blizzard API",
    "talenti": [
     2,
-    16,
+    17,
     0
    ],
    "specka": "Combat",
@@ -1765,6 +1765,12 @@
      "rang": 1,
      "stablo": "Combat",
      "opis": "A strike that becomes active after parrying an opponent's attack.  This attack deals 150% weapon damage and disarms the target for 6 sec."
+    },
+    {
+     "ime": "Flawless Execution",
+     "rang": 1,
+     "stablo": "Combat",
+     "opis": "Reduces the Energy cost of your Eviscerate ability by 15."
     },
     {
      "ime": "Aggression",
@@ -1827,11 +1833,11 @@
     },
     {
      "slot": "Wrist",
-     "ime": "Spare Part Bindings",
-     "kvaliteta": "uncommon",
-     "wowhead": 279875,
+     "ime": "Black Wolf Bracers",
+     "kvaliteta": "rare",
+     "wowhead": 3230,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132606.jpg",
-     "ilvl": 24
+     "ilvl": 27
     },
     {
      "slot": "Hands",
@@ -1924,24 +1930,24 @@
     }
    ],
    "statovi": {
-    "hp": 1135,
+    "hp": 1175,
     "resurs": 100,
     "resursIme": "Energy",
     "str": 51,
-    "agi": 106,
-    "sta": 94,
+    "agi": 103,
+    "sta": 98,
     "int": 33,
     "spi": 43,
-    "armor": 718,
-    "ap": 209,
+    "armor": 738,
+    "ap": 210,
     "spellPower": 0,
-    "crit": 8.7,
+    "crit": 8.53,
     "spellCrit": 0.0,
-    "rangedCrit": 8.46,
-    "dodge": 18.54,
-    "parry": 10.72,
+    "rangedCrit": 8.21,
+    "dodge": 18.11,
+    "parry": 10.8,
     "block": 0.0,
-    "dps": 30.6
+    "dps": 30.7
    },
    "reputacije": [
     {
@@ -1975,6 +1981,12 @@
      "max": 6000
     },
     {
+     "ime": "Durotar Supply and Logistics",
+     "status": "Neutral",
+     "vrijednost": 2075,
+     "max": 3000
+    },
+    {
      "ime": "Everlook",
      "status": "Neutral",
      "vrijednost": 2007,
@@ -1985,19 +1997,13 @@
      "status": "Neutral",
      "vrijednost": 2007,
      "max": 3000
-    },
-    {
-     "ime": "Gadgetzan",
-     "status": "Neutral",
-     "vrijednost": 2007,
-     "max": 3000
     }
    ],
    "statistika": [
     {
      "kat": "Character",
      "ime": "Times camped",
-     "n": 25
+     "n": 27
     },
     {
      "kat": "Consumables",
@@ -2013,7 +2019,7 @@
     {
      "kat": "Consumables",
      "ime": "Health potions consumed",
-     "n": 16
+     "n": 17
     },
     {
      "kat": "Consumables",
@@ -2023,7 +2029,7 @@
     {
      "kat": "Consumables",
      "ime": "Beverages consumed",
-     "n": 7
+     "n": 8
     },
     {
      "kat": "Consumables",
@@ -2068,7 +2074,7 @@
     {
      "kat": "Dungeons & Raids",
      "ime": "Total 5-player dungeons entered",
-     "n": 11
+     "n": 12
     },
     {
      "kat": "Boss Kills",
@@ -2093,7 +2099,7 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 3643
+     "n": 3650
     },
     {
      "kat": "Kills",
@@ -2103,7 +2109,7 @@
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 3598
+     "n": 3605
     },
     {
      "kat": "Creatures",
@@ -2113,7 +2119,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 1580,
+     "n": 1582,
      "opis": "Humanoid"
     },
     {
@@ -2140,12 +2146,12 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 1948
+     "n": 1955
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 1632
+     "n": 1633
     },
     {
      "kat": "Killing Blows",
@@ -2181,7 +2187,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 237
+     "n": 239
     },
     {
      "kat": "Quests",
@@ -2266,12 +2272,12 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 62
+     "n": 64
     },
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
-     "n": 12
+     "n": 14
     },
     {
      "kat": "Social",
@@ -2286,15 +2292,19 @@
    ],
    "questovi": {
     "uLogu": [
-     "Craftsman's Writ: Ornate Spyglass",
+     "WANTED: Syndicate Personnel",
+     "Humbert's Sword",
      "Elixir of Suffering",
      "Elixir of Agony",
      "Elixir of Pain",
      "A New Ore Sample",
+     "The Rescue",
      "Blood of Innocents",
      "Stolen Freewind Supplies",
+     "Dangerous!",
      "Stop the Screeching",
      "Steelsnap",
+     "Battle of Hillsbrad",
      "Stonetalon Standstill",
      "Blueleaf Tubers",
      "Ordanus",
@@ -2302,7 +2312,6 @@
      "WANTED: Arnak Grimtotem",
      "Satyr Horns",
      "The Warsong Reports",
-     "The Horn of Xelthos",
      "Warsong Supplies",
      "Alien Egg",
      "Wind Rider",
@@ -2310,9 +2319,10 @@
      "Pacify the Centaur",
      "Ashenvale Outrunners",
      "The Lost Pages",
+     "The Grave Knight",
      "Source of Power"
     ],
-    "zavrseno": 287
+    "zavrseno": 289
    },
    "mountovi": [
     "Cerulean Prideclaw",
@@ -2330,7 +2340,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg",
-   "azurirano": "2026-11-10T15:50:43Z"
+   "azurirano": "2026-11-11T11:45:26Z"
   },
   "Arsen Deadic": {
    "level": 25,
@@ -2927,7 +2937,7 @@
    "azurirano": "2026-11-10T15:50:43Z"
   }
  },
- "provjereno": "2026-11-11T09:45:32Z",
+ "provjereno": "2026-11-11T11:45:26Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 7,
@@ -2942,7 +2952,7 @@
     "rang": 0,
     "slug": "saman-saulic",
     "ilvl": 24,
-    "zadnjiLogin": "2026-11-11T09:26:48Z",
+    "zadnjiLogin": "2026-11-11T10:58:11Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg"
    },
    {
@@ -2953,7 +2963,7 @@
     "rang": 1,
     "slug": "nikola-roguevic",
     "ilvl": 18,
-    "zadnjiLogin": "2026-11-10T15:49:44Z",
+    "zadnjiLogin": "2026-11-11T11:17:51Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg"
    },
    {
@@ -3270,6 +3280,11 @@
     "2026-11-10T15:50:43Z",
     28,
     9504
+   ],
+   [
+    "2026-11-11T11:45:26Z",
+    28,
+    12615
    ]
   ],
   "Arsen Deadic": [
