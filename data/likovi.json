@@ -1,12 +1,12 @@
 {
- "azurirano": "2026-11-11T01:47:42Z",
+ "azurirano": "2026-11-11T09:45:32Z",
  "likovi": {
   "Saman Saulic": {
    "level": 30,
    "xp": 39693,
    "guild": "Kafana na Balkanu",
    "ilvl": 24,
-   "zadnjiLogin": "2026-11-11T00:10:55Z",
+   "zadnjiLogin": "2026-11-11T09:26:48Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -181,8 +181,7 @@
      "kvaliteta": "rare",
      "wowhead": 270018,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133052.jpg",
-     "ilvl": 24,
-     "enchant": "Windfury 1"
+     "ilvl": 24
     },
     {
      "slot": "Ranged",
@@ -214,7 +213,7 @@
     },
     {
      "name": "Fishing",
-     "skill": 161,
+     "skill": 163,
      "max": 225,
      "vrsta": "sekundarna"
     },
@@ -299,7 +298,7 @@
     {
      "kat": "Character",
      "ime": "Times camped",
-     "n": 55
+     "n": 56
     },
     {
      "kat": "Consumables",
@@ -547,12 +546,12 @@
     {
      "kat": "Secondary Skills",
      "ime": "Fish caught",
-     "n": 298
+     "n": 304
     },
     {
      "kat": "Secondary Skills",
      "ime": "Fish and other things caught",
-     "n": 298
+     "n": 304
     },
     {
      "kat": "Professions",
@@ -572,7 +571,7 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 107
+     "n": 109
     },
     {
      "kat": "Travel",
@@ -582,41 +581,42 @@
    ],
    "questovi": {
     "uLogu": [
-     "Boulderslide Ravine",
-     "Elemental Aid",
-     "Compendium of the Fallen",
-     "A New Ore Sample",
-     "Singing Blue Shards",
-     "The Grave Knight",
-     "Craftsman's Writ: Pilferer's Gloves",
-     "A Vengeful Fate",
-     "Ordanus",
-     "Changing Tastes",
-     "Prison Break In",
-     "Rig Wars",
-     "The Essence of Aku'Mai",
-     "Regthar Deathgate",
-     "The Sacred Flame",
-     "The Hammer May Fall",
-     "Battle of Hillsbrad",
-     "Amongst the Ruins",
-     "Helcular's Revenge",
-     "Dangerous!",
-     "A Recipe For Death",
-     "Bloodscalp Ears",
      "Investigate the Camp",
-     "Elixir of Agony",
-     "Blueleaf Tubers",
-     "Test of Strength",
-     "Key to the City",
-     "Grimtotem Spying",
-     "King of the Foulweald",
-     "The Flying Machine Airport",
+     "Singing Blue Shards",
+     "Bloodscalp Ears",
+     "A Recipe For Death",
      "Scaring Shaky",
+     "Prison Break In",
+     "Supply and Demand",
+     "Helcular's Revenge",
+     "Craftsman's Writ: Pilferer's Gloves",
      "Humbert's Sword",
+     "Stone Tokens",
+     "Elixir of Agony",
+     "A Vengeful Fate",
      "Elixir of Pain",
      "To Steal From Thieves",
-     "Stone Tokens"
+     "The Flying Machine Airport",
+     "A New Ore Sample",
+     "Compendium of the Fallen",
+     "Test of Strength",
+     "The Sacred Flame",
+     "The Hammer May Fall",
+     "Dangerous!",
+     "Regthar Deathgate",
+     "Battle of Hillsbrad",
+     "Blueleaf Tubers",
+     "Ordanus",
+     "Rig Wars",
+     "The Essence of Aku'Mai",
+     "Grimtotem Spying",
+     "Boulderslide Ravine",
+     "King of the Foulweald",
+     "Amongst the Ruins",
+     "Changing Tastes",
+     "Elemental Aid",
+     "Key to the City",
+     "The Grave Knight"
     ],
     "zavrseno": 335
    },
@@ -630,14 +630,14 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg",
-   "azurirano": "2026-11-11T01:47:42Z"
+   "azurirano": "2026-11-11T09:45:32Z"
   },
   "Melee Kitic": {
    "level": 26,
-   "xp": 16076,
+   "xp": 17726,
    "guild": "Kafana na Balkanu",
    "ilvl": 18,
-   "zadnjiLogin": "2026-11-10T22:45:34Z",
+   "zadnjiLogin": "2026-11-11T07:50:49Z",
    "izvor": "Blizzard API",
    "talenti": [
     1,
@@ -763,11 +763,19 @@
     },
     {
      "slot": "Main Hand",
-     "ime": "Forsaken Greataxe",
-     "kvaliteta": "rare",
-     "wowhead": 251533,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132409.jpg",
-     "ilvl": 24
+     "ime": "Ridge Cleaver of Frost Protection",
+     "kvaliteta": "uncommon",
+     "wowhead": 15230,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132415.jpg",
+     "ilvl": 25
+    },
+    {
+     "slot": "Off Hand",
+     "ime": "Claystone Shortsword",
+     "kvaliteta": "uncommon",
+     "wowhead": 16891,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135324.jpg",
+     "ilvl": 21
     },
     {
      "slot": "Ranged",
@@ -798,55 +806,61 @@
      "vrsta": "sekundarna"
     },
     {
+     "name": "Fishing",
+     "skill": 2,
+     "max": 75,
+     "vrsta": "sekundarna"
+    },
+    {
      "name": "First Aid",
-     "skill": 57,
+     "skill": 65,
      "max": 150,
      "vrsta": "sekundarna"
     }
    ],
    "statovi": {
-    "hp": 996,
+    "hp": 1016,
     "resurs": 100,
     "resursIme": "Rage",
-    "str": 87,
+    "str": 79,
     "agi": 46,
-    "sta": 88,
+    "sta": 90,
     "int": 20,
     "spi": 42,
     "armor": 915,
-    "ap": 238,
+    "ap": 222,
     "spellPower": 0,
-    "crit": 9.88,
+    "crit": 6.52,
     "spellCrit": 0.0,
     "rangedCrit": 0.24,
     "dodge": 4.76,
     "parry": 4.76,
     "block": 4.76,
-    "dps": 37.5
+    "dps": 28.6
    },
    "reputacije": [
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 4456,
+     "vrijednost": 4481,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Honored",
-     "vrijednost": 761,
+     "vrijednost": 786,
      "max": 12000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Friendly",
-     "vrijednost": 3706,
+     "vrijednost": 3806,
      "max": 6000
     },
     {
      "ime": "Undercity",
      "status": "Friendly",
-     "vrijednost": 2425,
+     "vrijednost": 2450,
      "max": 6000
     },
     {
@@ -914,7 +928,7 @@
     {
      "kat": "Reputation",
      "ime": "Total factions encountered",
-     "n": 13
+     "n": 15
     },
     {
      "kat": "Gear",
@@ -1046,7 +1060,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 205
+     "n": 206
     },
     {
      "kat": "Quests",
@@ -1099,6 +1113,16 @@
      "n": 8
     },
     {
+     "kat": "Secondary Skills",
+     "ime": "Fish caught",
+     "n": 1
+    },
+    {
+     "kat": "Secondary Skills",
+     "ime": "Fish and other things caught",
+     "n": 1
+    },
+    {
      "kat": "Professions",
      "ime": "Highest Blacksmithing skill",
      "n": 84
@@ -1106,17 +1130,17 @@
     {
      "kat": "Professions",
      "ime": "Blacksmithing Plans learned",
-     "n": 40
+     "n": 42
     },
     {
      "kat": "Professions",
      "ime": "Highest Mining skill",
-     "n": 92
+     "n": 93
     },
     {
      "kat": "Professions",
      "ime": "Smelting Recipes learned",
-     "n": 9
+     "n": 15
     },
     {
      "kat": "Travel",
@@ -1126,7 +1150,7 @@
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
-     "n": 18
+     "n": 19
     },
     {
      "kat": "Social",
@@ -1136,36 +1160,35 @@
    ],
    "questovi": {
     "uLogu": [
-     "A Husband's Revenge",
-     "Brutal Armor",
-     "Boulderslide Ravine",
-     "Beren's Peril",
-     "Pigments for Paints",
-     "In Nightmares",
-     "Stop the Spread",
-     "Her Name Is Olgra",
-     "Shredding Machines",
-     "The Sacred Flame",
-     "Bloodfury Trinkets",
-     "Cycle of Rebirth",
-     "Arachnophobia",
-     "Cenarius' Legacy",
-     "The Warsong Reports",
+     "Assault on Fenris Isle",
+     "The Ashenvale Hunt",
      "A Recipe For Death",
-     "Watching the Roads",
-     "Calling in the Reserves",
+     "Shredding Machines",
+     "Cenarius' Legacy",
      "Further Instructions",
+     "The Sacred Flame",
+     "Beren's Peril",
+     "A Husband's Revenge",
      "Blueleaf Tubers",
      "Leaders of the Fang",
-     "The Ashenvale Hunt",
-     "Elemental War",
-     "Ambermill Investigations",
-     "Assault on Fenris Isle",
+     "Brutal Armor",
      "Trouble in the Deeps",
+     "In Nightmares",
+     "Cycle of Rebirth",
+     "The Warsong Reports",
      "Harpies Threaten",
-     "Arugal's Folly"
+     "Elemental War",
+     "Boulderslide Ravine",
+     "Calling in the Reserves",
+     "Ambermill Investigations",
+     "Bloodfury Trinkets",
+     "Watching the Roads",
+     "Her Name Is Olgra",
+     "Pigments for Paints",
+     "Arugal's Folly",
+     "Stop the Spread"
     ],
-    "zavrseno": 233
+    "zavrseno": 234
    },
    "mountovi": [],
    "petovi": [],
@@ -1175,7 +1198,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg",
-   "azurirano": "2026-11-10T23:48:29Z"
+   "azurirano": "2026-11-11T09:45:32Z"
   },
   "Janica Frostelich": {
    "level": 18,
@@ -2904,7 +2927,7 @@
    "azurirano": "2026-11-10T15:50:43Z"
   }
  },
- "provjereno": "2026-11-11T07:46:06Z",
+ "provjereno": "2026-11-11T09:45:32Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 7,
@@ -2919,7 +2942,7 @@
     "rang": 0,
     "slug": "saman-saulic",
     "ilvl": 24,
-    "zadnjiLogin": "2026-11-11T00:10:55Z",
+    "zadnjiLogin": "2026-11-11T09:26:48Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg"
    },
    {
@@ -2941,7 +2964,7 @@
     "rang": 3,
     "slug": "melee-kitic",
     "ilvl": 18,
-    "zadnjiLogin": "2026-11-10T22:45:34Z",
+    "zadnjiLogin": "2026-11-11T07:50:49Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg"
    },
    {
@@ -3133,6 +3156,11 @@
     "2026-11-10T23:48:29Z",
     26,
     16076
+   ],
+   [
+    "2026-11-11T09:45:32Z",
+    26,
+    17726
    ]
   ],
   "Janica Frostelich": [

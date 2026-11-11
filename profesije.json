@@ -48,8 +48,12 @@
           "skill": 1
         },
         {
+          "name": "Fishing",
+          "skill": 2
+        },
+        {
           "name": "First Aid",
-          "skill": 57
+          "skill": 65
         }
       ]
     },
@@ -79,7 +83,7 @@
         },
         {
           "name": "Fishing",
-          "skill": 161
+          "skill": 163
         },
         {
           "name": "First Aid",
@@ -822,6 +826,24 @@
       "character": "shaman",
       "profession": "Fishing",
       "skill": 161
+    },
+    {
+      "date": "2026-11-11",
+      "character": "warrior",
+      "profession": "Fishing",
+      "skill": 2
+    },
+    {
+      "date": "2026-11-11",
+      "character": "warrior",
+      "profession": "First Aid",
+      "skill": 65
+    },
+    {
+      "date": "2026-11-11",
+      "character": "shaman",
+      "profession": "Fishing",
+      "skill": 163
     }
   ],
   "flows": [
