@@ -1,12 +1,12 @@
 {
- "azurirano": "2026-11-11T13:45:15Z",
+ "azurirano": "2026-11-11T15:45:05Z",
  "likovi": {
   "Saman Saulic": {
    "level": 30,
    "xp": 39693,
    "guild": "Kafana na Balkanu",
    "ilvl": 24,
-   "zadnjiLogin": "2026-11-11T13:38:09Z",
+   "zadnjiLogin": "2026-11-11T14:47:42Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -631,14 +631,14 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg",
-   "azurirano": "2026-11-11T13:45:15Z"
+   "azurirano": "2026-11-11T15:45:05Z"
   },
   "Melee Kitic": {
-   "level": 26,
-   "xp": 17726,
+   "level": 27,
+   "xp": 7321,
    "guild": "Kafana na Balkanu",
-   "ilvl": 18,
-   "zadnjiLogin": "2026-11-11T07:50:49Z",
+   "ilvl": 19,
+   "zadnjiLogin": "2026-11-11T15:29:59Z",
    "izvor": "Blizzard API",
    "talenti": [
     1,
@@ -715,11 +715,11 @@
     },
     {
      "slot": "Feet",
-     "ime": "Safety Boots",
+     "ime": "Draftsman Boots",
      "kvaliteta": "uncommon",
-     "wowhead": 270009,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132535.jpg",
-     "ilvl": 20
+     "wowhead": 6668,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132537.jpg",
+     "ilvl": 27
     },
     {
      "slot": "Wrist",
@@ -764,19 +764,11 @@
     },
     {
      "slot": "Main Hand",
-     "ime": "Ridge Cleaver of Frost Protection",
-     "kvaliteta": "uncommon",
-     "wowhead": 15230,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132415.jpg",
-     "ilvl": 25
-    },
-    {
-     "slot": "Off Hand",
-     "ime": "Claystone Shortsword",
-     "kvaliteta": "uncommon",
-     "wowhead": 16891,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135324.jpg",
-     "ilvl": 21
+     "ime": "Forsaken Greataxe",
+     "kvaliteta": "rare",
+     "wowhead": 251533,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132409.jpg",
+     "ilvl": 24
     },
     {
      "slot": "Ranged",
@@ -790,7 +782,7 @@
    "profesije": [
     {
      "name": "Mining",
-     "skill": 93,
+     "skill": 100,
      "max": 150,
      "vrsta": "primarna"
     },
@@ -820,72 +812,72 @@
     }
    ],
    "statovi": {
-    "hp": 1016,
+    "hp": 1059,
     "resurs": 100,
     "resursIme": "Rage",
-    "str": 79,
-    "agi": 46,
-    "sta": 90,
+    "str": 90,
+    "agi": 47,
+    "sta": 93,
     "int": 20,
-    "spi": 42,
-    "armor": 915,
-    "ap": 222,
+    "spi": 43,
+    "armor": 863,
+    "ap": 247,
     "spellPower": 0,
-    "crit": 6.52,
+    "crit": 9.76,
     "spellCrit": 0.0,
-    "rangedCrit": 0.24,
+    "rangedCrit": 0.16,
     "dodge": 4.76,
     "parry": 4.76,
     "block": 4.76,
-    "dps": 28.6
+    "dps": 38.1
    },
    "reputacije": [
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 4481,
+     "vrijednost": 4702,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Honored",
-     "vrijednost": 786,
+     "vrijednost": 932,
      "max": 12000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Friendly",
-     "vrijednost": 3806,
+     "vrijednost": 4316,
      "max": 6000
     },
     {
      "ime": "Undercity",
      "status": "Friendly",
-     "vrijednost": 2450,
+     "vrijednost": 2596,
      "max": 6000
     },
     {
      "ime": "Ratchet",
      "status": "Friendly",
-     "vrijednost": 782,
+     "vrijednost": 932,
      "max": 6000
-    },
-    {
-     "ime": "Durotar Supply and Logistics",
-     "status": "Neutral",
-     "vrijednost": 2000,
-     "max": 3000
     },
     {
      "ime": "Everlook",
      "status": "Neutral",
-     "vrijednost": 1941,
+     "vrijednost": 2016,
      "max": 3000
     },
     {
      "ime": "Booty Bay",
      "status": "Neutral",
-     "vrijednost": 1941,
+     "vrijednost": 2016,
+     "max": 3000
+    },
+    {
+     "ime": "Gadgetzan",
+     "status": "Neutral",
+     "vrijednost": 2016,
      "max": 3000
     }
    ],
@@ -898,7 +890,7 @@
     {
      "kat": "Consumables",
      "ime": "Bandages used",
-     "n": 24
+     "n": 29
     },
     {
      "kat": "Consumables",
@@ -929,7 +921,7 @@
     {
      "kat": "Reputation",
      "ime": "Total factions encountered",
-     "n": 15
+     "n": 13
     },
     {
      "kat": "Gear",
@@ -989,17 +981,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 2705
+     "n": 2803
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 2192
+     "n": 2267
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 2682
+     "n": 2780
     },
     {
      "kat": "Creatures",
@@ -1009,7 +1001,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 1386,
+     "n": 1424,
      "opis": "Humanoid"
     },
     {
@@ -1020,23 +1012,23 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 1308
+     "n": 1403
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 1166
+     "n": 1261
     },
     {
      "kat": "Killing Blows",
      "ime": "Continent with the most Killing Blows",
-     "n": 945,
+     "n": 1040,
      "opis": "Kalimdor"
     },
     {
      "kat": "Deaths",
      "ime": "Total deaths",
-     "n": 30
+     "n": 31
     },
     {
      "kat": "Dungeons and Raids",
@@ -1061,7 +1053,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 206
+     "n": 219
     },
     {
      "kat": "Quests",
@@ -1086,7 +1078,7 @@
     {
      "kat": "Skills",
      "ime": "Secondary skills at maximum skill",
-     "n": 2
+     "n": 3
     },
     {
      "kat": "Skills",
@@ -1106,12 +1098,17 @@
     {
      "kat": "Secondary Skills",
      "ime": "First Aid skill",
-     "n": 57
+     "n": 65
     },
     {
      "kat": "Secondary Skills",
      "ime": "First Aid Manuals learned",
      "n": 8
+    },
+    {
+     "kat": "Secondary Skills",
+     "ime": "Fishing skill",
+     "n": 2
     },
     {
      "kat": "Secondary Skills",
@@ -1136,7 +1133,7 @@
     {
      "kat": "Professions",
      "ime": "Highest Mining skill",
-     "n": 93
+     "n": 100
     },
     {
      "kat": "Professions",
@@ -1146,12 +1143,12 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 44
+     "n": 46
     },
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
-     "n": 19
+     "n": 21
     },
     {
      "kat": "Social",
@@ -1162,34 +1159,29 @@
    "questovi": {
     "uLogu": [
      "Assault on Fenris Isle",
-     "The Ashenvale Hunt",
      "A Recipe For Death",
-     "Shredding Machines",
-     "Cenarius' Legacy",
-     "Further Instructions",
+     "Jin'Zil's Forest Magic",
      "The Sacred Flame",
      "Beren's Peril",
      "A Husband's Revenge",
      "Blueleaf Tubers",
+     "Ordanus",
      "Leaders of the Fang",
      "Brutal Armor",
      "Trouble in the Deeps",
-     "In Nightmares",
-     "Cycle of Rebirth",
      "The Warsong Reports",
      "Harpies Threaten",
      "Elemental War",
-     "Boulderslide Ravine",
      "Calling in the Reserves",
+     "New Life",
      "Ambermill Investigations",
      "Bloodfury Trinkets",
      "Watching the Roads",
      "Her Name Is Olgra",
-     "Pigments for Paints",
      "Arugal's Folly",
      "Stop the Spread"
     ],
-    "zavrseno": 234
+    "zavrseno": 249
    },
    "mountovi": [],
    "petovi": [],
@@ -1199,7 +1191,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg",
-   "azurirano": "2026-11-11T09:45:32Z"
+   "azurirano": "2026-11-11T15:45:05Z"
   },
   "Janica Frostelich": {
    "level": 18,
@@ -2348,7 +2340,7 @@
    "xp": 8558,
    "guild": "Kafana na Balkanu",
    "ilvl": 17,
-   "zadnjiLogin": "2026-11-11T12:42:29Z",
+   "zadnjiLogin": "2026-11-11T14:54:32Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -2385,7 +2377,7 @@
      "ime": "Seal of Command",
      "rang": 1,
      "stablo": "Retribution",
-     "opis": "Gives the Paladin a chance to deal additional Holy damage equal to 70% of normal weapon damage.  Only one Seal can be active on the Paladin at any one time.  Lasts 30 sec.\r\n\r\nUnleashing this Seal's energy will judge an enemy, instantly causing 65 to 69 Holy damage, 130 to 139 if the target is stunned or incapacitated."
+     "opis": "Gives the Paladin a chance to deal additional Holy damage equal to 70% of normal weapon damage.  Only one Seal can be active on the Paladin at any one time.  Lasts 30 sec.\r\n\r\nUnleashing this Seal's energy will judge an enemy, instantly causing 65 to 70 Holy damage, 129 to 139 if the target is stunned or incapacitated."
     },
     {
      "ime": "Pursuit of Justice",
@@ -2547,7 +2539,7 @@
     "spellPower": 8,
     "crit": 10.04,
     "spellCrit": 11.42,
-    "rangedCrit": 0.0,
+    "rangedCrit": 6.0,
     "dodge": 4.04,
     "parry": 9.88,
     "block": 4.88,
@@ -2871,7 +2863,7 @@
     {
      "kat": "Professions",
      "ime": "Highest Mining skill",
-     "n": 77
+     "n": 78
     },
     {
      "kat": "Professions",
@@ -2936,10 +2928,10 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg",
-   "azurirano": "2026-11-11T13:45:15Z"
+   "azurirano": "2026-11-11T15:45:05Z"
   }
  },
- "provjereno": "2026-11-11T13:45:15Z",
+ "provjereno": "2026-11-11T15:45:05Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 7,
@@ -2954,7 +2946,7 @@
     "rang": 0,
     "slug": "saman-saulic",
     "ilvl": 24,
-    "zadnjiLogin": "2026-11-11T13:38:09Z",
+    "zadnjiLogin": "2026-11-11T14:47:42Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg"
    },
    {
@@ -2969,6 +2961,17 @@
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg"
    },
    {
+    "ime": "Melee Kitic",
+    "level": 27,
+    "klasa": "Warrior",
+    "rasa": "Orc",
+    "rang": 3,
+    "slug": "melee-kitic",
+    "ilvl": 19,
+    "zadnjiLogin": "2026-11-11T15:29:59Z",
+    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg"
+   },
+   {
     "ime": "Arsen Deadic",
     "level": 26,
     "klasa": "Paladin",
@@ -2976,19 +2979,8 @@
     "rang": 3,
     "slug": "arsen-deadic",
     "ilvl": 17,
-    "zadnjiLogin": "2026-11-11T12:42:29Z",
+    "zadnjiLogin": "2026-11-11T14:54:32Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg"
-   },
-   {
-    "ime": "Melee Kitic",
-    "level": 26,
-    "klasa": "Warrior",
-    "rasa": "Orc",
-    "rang": 3,
-    "slug": "melee-kitic",
-    "ilvl": 18,
-    "zadnjiLogin": "2026-11-11T07:50:49Z",
-    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg"
    },
    {
     "ime": "Yuserious Son",
@@ -2998,18 +2990,18 @@
     "rang": 4,
     "slug": "yuserious-son",
     "ilvl": 20,
-    "zadnjiLogin": "2026-11-10T15:44:30Z",
+    "zadnjiLogin": "2026-11-11T15:25:30Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/6/6269702-avatar.jpg"
    },
    {
     "ime": "Venos Xx",
-    "level": 24,
+    "level": 25,
     "klasa": "Druid",
     "rasa": "Tauren",
     "rang": 4,
     "slug": "venos-xx",
     "ilvl": 19,
-    "zadnjiLogin": "2026-11-11T13:25:19Z",
+    "zadnjiLogin": "2026-11-11T15:35:44Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/253/13774333-avatar.jpg"
    },
    {
@@ -3173,6 +3165,11 @@
     "2026-11-11T09:45:32Z",
     26,
     17726
+   ],
+   [
+    "2026-11-11T15:45:05Z",
+    27,
+    7321
    ]
   ],
   "Janica Frostelich": [
