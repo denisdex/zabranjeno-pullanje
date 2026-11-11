@@ -1,12 +1,12 @@
 {
- "azurirano": "2026-11-11T11:45:26Z",
+ "azurirano": "2026-11-11T13:45:15Z",
  "likovi": {
   "Saman Saulic": {
    "level": 30,
    "xp": 39693,
    "guild": "Kafana na Balkanu",
    "ilvl": 24,
-   "zadnjiLogin": "2026-11-11T10:58:11Z",
+   "zadnjiLogin": "2026-11-11T13:38:09Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -181,7 +181,8 @@
      "kvaliteta": "rare",
      "wowhead": 270018,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133052.jpg",
-     "ilvl": 24
+     "ilvl": 24,
+     "enchant": "Windfury 1"
     },
     {
      "slot": "Ranged",
@@ -630,7 +631,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg",
-   "azurirano": "2026-11-11T11:45:26Z"
+   "azurirano": "2026-11-11T13:45:15Z"
   },
   "Melee Kitic": {
    "level": 26,
@@ -2343,11 +2344,11 @@
    "azurirano": "2026-11-11T11:45:26Z"
   },
   "Arsen Deadic": {
-   "level": 25,
-   "xp": 25816,
+   "level": 26,
+   "xp": 8558,
    "guild": "Kafana na Balkanu",
-   "ilvl": 15,
-   "zadnjiLogin": "2026-11-10T15:44:30Z",
+   "ilvl": 17,
+   "zadnjiLogin": "2026-11-11T12:42:29Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -2384,7 +2385,7 @@
      "ime": "Seal of Command",
      "rang": 1,
      "stablo": "Retribution",
-     "opis": "Gives the Paladin a chance to deal additional Holy damage equal to 70% of normal weapon damage.  Only one Seal can be active on the Paladin at any one time.  Lasts 30 sec.\r\n\r\nUnleashing this Seal's energy will judge an enemy, instantly causing 62 to 67 Holy damage, 125 to 134 if the target is stunned or incapacitated."
+     "opis": "Gives the Paladin a chance to deal additional Holy damage equal to 70% of normal weapon damage.  Only one Seal can be active on the Paladin at any one time.  Lasts 30 sec.\r\n\r\nUnleashing this Seal's energy will judge an enemy, instantly causing 65 to 69 Holy damage, 130 to 139 if the target is stunned or incapacitated."
     },
     {
      "ime": "Pursuit of Justice",
@@ -2445,10 +2446,10 @@
     },
     {
      "slot": "Wrist",
-     "ime": "Tabitha's Cuffs",
+     "ime": "Gnoll Shackles",
      "kvaliteta": "uncommon",
-     "wowhead": 251486,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132609.jpg",
+     "wowhead": 276722,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132605.jpg",
      "ilvl": 24
     },
     {
@@ -2461,11 +2462,19 @@
     },
     {
      "slot": "Finger 1",
-     "ime": "Harpy Claw Ring",
+     "ime": "Loop of Sacrifice",
      "kvaliteta": "uncommon",
-     "wowhead": 281252,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133345.jpg",
-     "ilvl": 26
+     "wowhead": 281673,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133368.jpg",
+     "ilvl": 28
+    },
+    {
+     "slot": "Finger 2",
+     "ime": "Seal of Sylvanas",
+     "kvaliteta": "rare",
+     "wowhead": 6414,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133357.jpg",
+     "ilvl": 29
     },
     {
      "slot": "Back",
@@ -2495,7 +2504,7 @@
    "profesije": [
     {
      "name": "Mining",
-     "skill": 76,
+     "skill": 78,
      "max": 150,
      "vrsta": "primarna"
     },
@@ -2525,48 +2534,48 @@
     }
    ],
    "statovi": {
-    "hp": 776,
-    "resurs": 947,
+    "hp": 846,
+    "resurs": 1124,
     "resursIme": "Mana",
-    "str": 68,
-    "agi": 32,
-    "sta": 69,
-    "int": 45,
-    "spi": 54,
-    "armor": 1400,
-    "ap": 191,
-    "spellPower": 11,
-    "crit": 10.1,
-    "spellCrit": 11.11,
+    "str": 75,
+    "agi": 33,
+    "sta": 74,
+    "int": 55,
+    "spi": 50,
+    "armor": 1464,
+    "ap": 214,
+    "spellPower": 8,
+    "crit": 10.04,
+    "spellCrit": 11.42,
     "rangedCrit": 0.0,
-    "dodge": 4.06,
-    "parry": 9.92,
-    "block": 4.92,
-    "dps": 29.2
+    "dodge": 4.04,
+    "parry": 9.88,
+    "block": 4.88,
+    "dps": 30.8
    },
    "reputacije": [
     {
      "ime": "Undercity",
      "status": "Honored",
-     "vrijednost": 4136,
+     "vrijednost": 4811,
      "max": 12000
     },
     {
      "ime": "Orgrimmar",
      "status": "Friendly",
-     "vrijednost": 2631,
+     "vrijednost": 2800,
      "max": 6000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Friendly",
-     "vrijednost": 1356,
+     "vrijednost": 1525,
      "max": 6000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Friendly",
-     "vrijednost": 405,
+     "vrijednost": 573,
      "max": 6000
     },
     {
@@ -2634,7 +2643,7 @@
     {
      "kat": "Consumables",
      "ime": "Food eaten",
-     "n": 28
+     "n": 29
     },
     {
      "kat": "Reputation",
@@ -2649,7 +2658,7 @@
     {
      "kat": "Reputation",
      "ime": "Total factions encountered",
-     "n": 14
+     "n": 15
     },
     {
      "kat": "Gear",
@@ -2669,12 +2678,12 @@
     {
      "kat": "Player vs. Player",
      "ime": "Total deaths from other players",
-     "n": 2
+     "n": 3
     },
     {
      "kat": "Player vs. Player",
      "ime": "Total deaths from opposite faction",
-     "n": 2
+     "n": 3
     },
     {
      "kat": "Dungeons & Raids",
@@ -2704,17 +2713,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 3232
+     "n": 3326
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 2729
+     "n": 2756
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 3208
+     "n": 3302
     },
     {
      "kat": "Creatures",
@@ -2724,7 +2733,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 1263,
+     "n": 1300,
      "opis": "Humanoid"
     },
     {
@@ -2751,23 +2760,23 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 1323
+     "n": 1408
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 1141
+     "n": 1226
     },
     {
      "kat": "Killing Blows",
      "ime": "Continent with the most Killing Blows",
-     "n": 580,
+     "n": 665,
      "opis": "Eastern Kingdoms"
     },
     {
      "kat": "Deaths",
      "ime": "Total deaths",
-     "n": 25
+     "n": 26
     },
     {
      "kat": "Dungeons and Raids",
@@ -2792,7 +2801,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 200
+     "n": 215
     },
     {
      "kat": "Quests",
@@ -2802,7 +2811,7 @@
     {
      "kat": "Quests",
      "ime": "Quests abandoned",
-     "n": 37
+     "n": 38
     },
     {
      "kat": "Skills",
@@ -2862,17 +2871,17 @@
     {
      "kat": "Professions",
      "ime": "Highest Mining skill",
-     "n": 76
+     "n": 77
     },
     {
      "kat": "Professions",
      "ime": "Smelting Recipes learned",
-     "n": 13
+     "n": 15
     },
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 40
+     "n": 43
     },
     {
      "kat": "Travel",
@@ -2887,14 +2896,10 @@
    ],
    "questovi": {
     "uLogu": [
-     "Assault on Fenris Isle",
-     "A Recipe For Death",
-     "A Lesson in Divinity",
      "Dig Rat Stew",
      "The Guns of Northwatch",
      "Egg Hunt",
      "Further Instructions",
-     "A Husband's Revenge",
      "The Book of Ur",
      "Blueleaf Tubers",
      "Ordanus",
@@ -2909,14 +2914,11 @@
      "Calling in the Reserves",
      "Warsong Supplies",
      "Lost in Battle",
+     "A Moon-Kissed Blade",
      "Ashenvale Outrunners",
-     "Lumina Windsinger",
-     "Chol'aruk the Ravener",
-     "The Offering Stone",
-     "Arugal's Folly",
-     "Stop the Spread"
+     "Chol'aruk the Ravener"
     ],
-    "zavrseno": 239
+    "zavrseno": 254
    },
    "mountovi": [
     "Cerulean Prideclaw",
@@ -2934,10 +2936,10 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg",
-   "azurirano": "2026-11-10T15:50:43Z"
+   "azurirano": "2026-11-11T13:45:15Z"
   }
  },
- "provjereno": "2026-11-11T11:45:26Z",
+ "provjereno": "2026-11-11T13:45:15Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 7,
@@ -2952,7 +2954,7 @@
     "rang": 0,
     "slug": "saman-saulic",
     "ilvl": 24,
-    "zadnjiLogin": "2026-11-11T10:58:11Z",
+    "zadnjiLogin": "2026-11-11T13:38:09Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg"
    },
    {
@@ -2967,6 +2969,17 @@
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg"
    },
    {
+    "ime": "Arsen Deadic",
+    "level": 26,
+    "klasa": "Paladin",
+    "rasa": "Undead",
+    "rang": 3,
+    "slug": "arsen-deadic",
+    "ilvl": 17,
+    "zadnjiLogin": "2026-11-11T12:42:29Z",
+    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg"
+   },
+   {
     "ime": "Melee Kitic",
     "level": 26,
     "klasa": "Warrior",
@@ -2976,17 +2989,6 @@
     "ilvl": 18,
     "zadnjiLogin": "2026-11-11T07:50:49Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg"
-   },
-   {
-    "ime": "Arsen Deadic",
-    "level": 25,
-    "klasa": "Paladin",
-    "rasa": "Undead",
-    "rang": 3,
-    "slug": "arsen-deadic",
-    "ilvl": 15,
-    "zadnjiLogin": "2026-11-10T15:44:30Z",
-    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg"
    },
    {
     "ime": "Yuserious Son",
@@ -3001,13 +3003,13 @@
    },
    {
     "ime": "Venos Xx",
-    "level": 22,
+    "level": 24,
     "klasa": "Druid",
     "rasa": "Tauren",
     "rang": 4,
     "slug": "venos-xx",
-    "ilvl": 17,
-    "zadnjiLogin": "2026-11-10T22:25:26Z",
+    "ilvl": 19,
+    "zadnjiLogin": "2026-11-11T13:25:19Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/253/13774333-avatar.jpg"
    },
    {
@@ -3357,6 +3359,11 @@
     "2026-11-10T15:50:43Z",
     25,
     25816
+   ],
+   [
+    "2026-11-11T13:45:15Z",
+    26,
+    8558
    ]
   ]
  }
