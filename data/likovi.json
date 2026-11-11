@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-11T21:44:12Z",
+ "azurirano": "2026-11-11T23:44:02Z",
  "likovi": {
   "Saman Saulic": {
    "level": 30,
@@ -2933,10 +2933,10 @@
    "azurirano": "2026-11-11T17:44:51Z"
   }
  },
- "provjereno": "2026-11-11T21:44:12Z",
+ "provjereno": "2026-11-11T23:44:02Z",
  "guild": {
   "ime": "Kafana na Balkanu",
-  "clanova": 7,
+  "clanova": 8,
   "osnovan": "2026-11-05T20:24:04Z",
   "ruleset": "Normal",
   "roster": [
@@ -2985,6 +2985,17 @@
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg"
    },
    {
+    "ime": "Venos Xx",
+    "level": 26,
+    "klasa": "Druid",
+    "rasa": "Tauren",
+    "rang": 4,
+    "slug": "venos-xx",
+    "ilvl": 19,
+    "zadnjiLogin": "2026-11-11T23:39:54Z",
+    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/253/13774333-avatar.jpg"
+   },
+   {
     "ime": "Yuserious Son",
     "level": 25,
     "klasa": "Paladin",
@@ -2996,17 +3007,6 @@
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/6/6269702-avatar.jpg"
    },
    {
-    "ime": "Venos Xx",
-    "level": 25,
-    "klasa": "Druid",
-    "rasa": "Tauren",
-    "rang": 4,
-    "slug": "venos-xx",
-    "ilvl": 19,
-    "zadnjiLogin": "2026-11-11T19:05:54Z",
-    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/253/13774333-avatar.jpg"
-   },
-   {
     "ime": "Janica Frostelich",
     "level": 18,
     "klasa": "Mage",
@@ -3016,6 +3016,16 @@
     "ilvl": 12,
     "zadnjiLogin": "2026-11-08T20:24:47Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/249/2574073-avatar.jpg"
+   },
+   {
+    "ime": "Mate Bullic",
+    "level": 11,
+    "klasa": "Shaman",
+    "rasa": "Tauren",
+    "rang": 4,
+    "slug": "mate-bullic",
+    "ilvl": 2,
+    "zadnjiLogin": "2026-11-11T22:49:43Z"
    }
   ]
  },
