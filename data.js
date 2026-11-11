@@ -3,7 +3,7 @@
 window.HORDE = {
   ekipa: "Zaprešić Horde",
   guild: "Kafana na Balkanu",
-  azurirano: "2026-11-10",
+  azurirano: "2026-11-11",
 
   // Vremena u UTC. Studeni je CET (UTC+1).
   // Rezervacija imena: do 3. 11. 2026. u 23:59 po Zagrebu.
@@ -75,7 +75,7 @@ window.HORDE = {
   // portret (foto) je 720×960 izrez iz istog kadra; oci i ociSiroka već uračunavaju 4 % povećanja slike na kartici
   // imena: gdje se govori o ljudima piše igrac (Pero, Niksa, Karken, Žuga, Dex); lik samo kao naslov kartice/profila i u kontekstu igre
   igraci: [
-    { igrac: "Niksa",   lik: "Saman Saulic",    klasa: "Shaman",  rasa: "Orc",    uloga: "Healer",     level: 28, foto: "assets/likovi/saman-saulic.jpg",
+    { igrac: "Niksa",   lik: "Saman Saulic",    klasa: "Shaman",  rasa: "Orc",    uloga: "Healer",     level: 30, foto: "assets/likovi/saman-saulic.jpg",
       siroka: "assets/likovi/saman-saulic-wide.jpg", fokus: [50.3, 18],
       // savjeti po levelu, u profilu u bloku "Što sad"
       trikovi: [
@@ -108,7 +108,7 @@ window.HORDE = {
         ],
         biljeske: "Healer grupe. Kad kaže mana, svi stanu."
       } },
-    { igrac: "Pero",    lik: "Melee Kitic",      klasa: "Warrior", rasa: "Orc",    uloga: "Melee DPS",  level: 25, foto: "assets/likovi/melee-kitic.jpg", boja: "#D9853B",
+    { igrac: "Pero",    lik: "Melee Kitic",      klasa: "Warrior", rasa: "Orc",    uloga: "Melee DPS",  level: 26, foto: "assets/likovi/melee-kitic.jpg", boja: "#D9853B",
       siroka: "assets/likovi/melee-kitic-wide.jpg", fokus: [50.3, 28.8],
       // savjeti po levelu, u profilu u bloku "Što sad"
       trikovi: [
@@ -173,7 +173,7 @@ window.HORDE = {
         ],
         biljeske: "Voda i hrana za ekipu, Polymorph na drugi target."
       } },
-    { igrac: "Žuga",    lik: "Nikola Roguevic",  klasa: "Rogue",   rasa: "Undead", uloga: "Melee DPS",  level: 27, foto: "assets/likovi/nikola-roguevic.jpg", oci: [[48.7, 14.2], [54.2, 14.1]],
+    { igrac: "Žuga",    lik: "Nikola Roguevic",  klasa: "Rogue",   rasa: "Undead", uloga: "Melee DPS",  level: 28, foto: "assets/likovi/nikola-roguevic.jpg", oci: [[48.7, 14.2], [54.2, 14.1]],
       siroka: "assets/likovi/nikola-roguevic-wide.jpg", fokus: [48.8, 16.6], ociSiroka: [[47.7, 14.2], [50.0, 14.1]],
       // savjeti po levelu, u profilu u bloku "Što sad"
       trikovi: [
@@ -618,6 +618,16 @@ window.HORDE = {
   // Stavka: { tekst, za: [klase/rase ili "Svi"], tema: kratka oznaka što se mijenja (Racial, Spell, Rage, XP, Dungeoni, Loot, Zona...) }
   izvorNovosti: "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
   novosti: [
+    { datum: "2026-11-10", naslov: "Hotfixovi: class tuning (Enhancement, Affliction, petovi) i zlato za questove", stavke: [
+      { tekst: "Enhancement tuning: Stormstrike radi 100% weapon damagea (bilo 150%) uz 8 s cooldown (bilo 6 s); Mental Dexterity daje 33/66/100% Intellecta kao Attack Power (bilo 50/100/150%); Maelstrom Weapon daje 20% brži cast i jeftiniji Mana cost po stacku na svim rankovima, a aktivira se 6/7/8/9/10 puta u minuti (bilo 20).", za: ["Shaman"], tema: "Nerf" },
+      { tekst: "Weapon imbue i totem sada se mogu koristiti zajedno; Maelstrom Weapon se može pratiti u Cooldown Manageru; Rage of the Storm ima 16 Strengtha (bilo Intellect) i brzinu 3.6 (bilo 3.2).", za: ["Shaman"], tema: "Spell" },
+      { tekst: "Wrack radi 30% manje štete i više ne pojačava periodičnu štetu; dok se channela, Siphon Life, Corruption i Bane of Agony tickaju 100% brže. Soul Siphon pojačava Drain Life, Drain Soul i Wrack za 4/8/12% po svakom od ta tri DoT-a, do 36%. Bane of Havoc sad ima global cooldown.", za: ["Warlock"], tema: "Spell" },
+      { tekst: "Base health Impa, Voidwalkera, Incubusa i Succubusa veći je za oko 15%; prva 4 ranka Impovog Firebolta imaju veću base štetu.", za: ["Warlock"], tema: "Buff" },
+      { tekst: "Health Hunter peta ispravljen sa 150% na 115% normalnog; Arcane Shot i Summon Hawk koštaju 11% base Mana na svim rankovima; melee šteta Hawka veća za oko 80%.", za: ["Hunter"], tema: "Spell" },
+      { tekst: "Sweeping Strikes više ne gubi charge ako nije pogođena druga meta.", za: ["Warrior"], tema: "Bug fix" },
+      { tekst: "Većina questova od levela 48 naviše sad daje i gold; popravljeni Call of Water, Helping Hands i Chief Engineer Scooty; više Glade Vipera u Riverglades i Nightbane stvorenja u Duskwoodu.", za: ["Svi"], tema: "XP" },
+      { tekst: "Racial vendor mountovi su Bind-on-Pickup; minimalni deposit na Auction Houseu je 1 copper (bilo 1 silver); Tanning Rack, Coarse Grinding Stone (skill-upovi do 90) i Journeyman Campfire Kit (Cooking 90, bilo 140) lakši.", za: ["Svi"], tema: "Profesije" }
+    ] },
     { datum: "2026-11-09", naslov: "Hotfixovi: Mage, Shaman, dungeoni i gužva u zonama", stavke: [
       { tekst: "Flamestrike tickovi na zemlji više ne troše Clearcasting; šansa za Arcane Concentration proc dijeli se na cast i svaki bolt (bilo 10 % na cast i opet po boltu).", za: ["Mage"], tema: "Spell" },
       { tekst: "Lightning Overload sad radi točnu štetu za Lightning Bolt; Lightning Mastery ima novi vizualni efekt.", za: ["Shaman"], tema: "Bug fix" },
