@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-11T15:45:05Z",
+ "azurirano": "2026-11-11T17:44:51Z",
  "likovi": {
   "Saman Saulic": {
    "level": 30,
@@ -2340,7 +2340,7 @@
    "xp": 8558,
    "guild": "Kafana na Balkanu",
    "ilvl": 17,
-   "zadnjiLogin": "2026-11-11T14:54:32Z",
+   "zadnjiLogin": "2026-11-11T16:36:25Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -2377,7 +2377,7 @@
      "ime": "Seal of Command",
      "rang": 1,
      "stablo": "Retribution",
-     "opis": "Gives the Paladin a chance to deal additional Holy damage equal to 70% of normal weapon damage.  Only one Seal can be active on the Paladin at any one time.  Lasts 30 sec.\r\n\r\nUnleashing this Seal's energy will judge an enemy, instantly causing 65 to 70 Holy damage, 129 to 139 if the target is stunned or incapacitated."
+     "opis": "Gives the Paladin a chance to deal additional Holy damage equal to 70% of normal weapon damage.  Only one Seal can be active on the Paladin at any one time.  Lasts 30 sec.\r\n\r\nUnleashing this Seal's energy will judge an enemy, instantly causing 65 to 70 Holy damage, 130 to 139 if the target is stunned or incapacitated."
     },
     {
      "ime": "Pursuit of Justice",
@@ -2539,7 +2539,7 @@
     "spellPower": 8,
     "crit": 10.04,
     "spellCrit": 11.42,
-    "rangedCrit": 6.0,
+    "rangedCrit": 0.0,
     "dodge": 4.04,
     "parry": 9.88,
     "block": 4.88,
@@ -2599,7 +2599,7 @@
     {
      "kat": "Character",
      "ime": "Times camped",
-     "n": 21
+     "n": 22
     },
     {
      "kat": "Consumables",
@@ -2928,10 +2928,10 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg",
-   "azurirano": "2026-11-11T15:45:05Z"
+   "azurirano": "2026-11-11T17:44:51Z"
   }
  },
- "provjereno": "2026-11-11T15:45:05Z",
+ "provjereno": "2026-11-11T17:44:51Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 7,
@@ -2979,7 +2979,7 @@
     "rang": 3,
     "slug": "arsen-deadic",
     "ilvl": 17,
-    "zadnjiLogin": "2026-11-11T14:54:32Z",
+    "zadnjiLogin": "2026-11-11T16:36:25Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg"
    },
    {
