@@ -1,12 +1,12 @@
 {
- "azurirano": "2026-11-10T23:48:29Z",
+ "azurirano": "2026-11-11T01:47:42Z",
  "likovi": {
   "Saman Saulic": {
    "level": 30,
-   "xp": 39443,
+   "xp": 39693,
    "guild": "Kafana na Balkanu",
    "ilvl": 24,
-   "zadnjiLogin": "2026-11-10T23:41:31Z",
+   "zadnjiLogin": "2026-11-11T00:10:55Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -299,7 +299,7 @@
     {
      "kat": "Character",
      "ime": "Times camped",
-     "n": 54
+     "n": 55
     },
     {
      "kat": "Consumables",
@@ -542,7 +542,7 @@
     {
      "kat": "Secondary Skills",
      "ime": "Fishing skill",
-     "n": 159
+     "n": 161
     },
     {
      "kat": "Secondary Skills",
@@ -567,7 +567,7 @@
     {
      "kat": "Professions",
      "ime": "Highest Skinning skill",
-     "n": 205
+     "n": 208
     },
     {
      "kat": "Travel",
@@ -577,7 +577,7 @@
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
-     "n": 18
+     "n": 19
     }
    ],
    "questovi": {
@@ -630,7 +630,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg",
-   "azurirano": "2026-11-10T23:48:29Z"
+   "azurirano": "2026-11-11T01:47:42Z"
   },
   "Melee Kitic": {
    "level": 26,
@@ -2904,7 +2904,7 @@
    "azurirano": "2026-11-10T15:50:43Z"
   }
  },
- "provjereno": "2026-11-10T23:48:29Z",
+ "provjereno": "2026-11-11T01:47:42Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 7,
@@ -2919,7 +2919,7 @@
     "rang": 0,
     "slug": "saman-saulic",
     "ilvl": 24,
-    "zadnjiLogin": "2026-11-10T23:41:31Z",
+    "zadnjiLogin": "2026-11-11T00:10:55Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg"
    },
    {
@@ -3051,6 +3051,11 @@
     "2026-11-10T23:48:29Z",
     30,
     39443
+   ],
+   [
+    "2026-11-11T01:47:42Z",
+    30,
+    39693
    ]
   ],
   "Melee Kitic": [
