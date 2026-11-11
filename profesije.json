@@ -53,7 +53,7 @@
         },
         {
           "name": "First Aid",
-          "skill": 65
+          "skill": 70
         }
       ]
     },
@@ -136,7 +136,7 @@
         },
         {
           "name": "Skinning",
-          "skill": 182,
+          "skill": 186,
           "phase": "stalno"
         }
       ],
@@ -856,6 +856,18 @@
       "character": "warrior",
       "profession": "Mining",
       "skill": 100
+    },
+    {
+      "date": "2026-11-11",
+      "character": "warrior",
+      "profession": "First Aid",
+      "skill": 70
+    },
+    {
+      "date": "2026-11-11",
+      "character": "rogue",
+      "profession": "Skinning",
+      "skill": 186
     }
   ],
   "flows": [

@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-11T19:44:21Z",
+ "azurirano": "2026-11-11T21:44:12Z",
  "likovi": {
   "Saman Saulic": {
    "level": 30,
@@ -635,13 +635,13 @@
   },
   "Melee Kitic": {
    "level": 27,
-   "xp": 7321,
+   "xp": 15057,
    "guild": "Kafana na Balkanu",
    "ilvl": 19,
-   "zadnjiLogin": "2026-11-11T15:29:59Z",
+   "zadnjiLogin": "2026-11-11T20:46:16Z",
    "izvor": "Blizzard API",
    "talenti": [
-    1,
+    3,
     15,
     0
    ],
@@ -649,9 +649,9 @@
    "talentiPopis": [
     {
      "ime": "Improved Rend",
-     "rang": 1,
+     "rang": 3,
      "stablo": "Arms",
-     "opis": "Increases the Bleed damage done by your Rend ability by 12%."
+     "opis": "Increases the Bleed damage done by your Rend ability by 35%."
     },
     {
      "ime": "Cruelty",
@@ -806,7 +806,7 @@
     },
     {
      "name": "First Aid",
-     "skill": 65,
+     "skill": 70,
      "max": 150,
      "vrsta": "sekundarna"
     }
@@ -823,12 +823,12 @@
     "armor": 863,
     "ap": 247,
     "spellPower": 0,
-    "crit": 9.76,
+    "crit": 9.96,
     "spellCrit": 0.0,
     "rangedCrit": 0.16,
-    "dodge": 4.76,
-    "parry": 4.76,
-    "block": 4.76,
+    "dodge": 4.84,
+    "parry": 4.84,
+    "block": 4.84,
     "dps": 38.1
    },
    "reputacije": [
@@ -890,7 +890,7 @@
     {
      "kat": "Consumables",
      "ime": "Bandages used",
-     "n": 29
+     "n": 32
     },
     {
      "kat": "Consumables",
@@ -981,17 +981,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 2803
+     "n": 2856
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 2267
+     "n": 2320
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 2780
+     "n": 2833
     },
     {
      "kat": "Creatures",
@@ -1001,7 +1001,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 1424,
+     "n": 1465,
      "opis": "Humanoid"
     },
     {
@@ -1012,23 +1012,23 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 1403
+     "n": 1456
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 1261
+     "n": 1314
     },
     {
      "kat": "Killing Blows",
      "ime": "Continent with the most Killing Blows",
-     "n": 1040,
+     "n": 1093,
      "opis": "Kalimdor"
     },
     {
      "kat": "Deaths",
      "ime": "Total deaths",
-     "n": 31
+     "n": 33
     },
     {
      "kat": "Dungeons and Raids",
@@ -1148,7 +1148,7 @@
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
-     "n": 21
+     "n": 22
     },
     {
      "kat": "Social",
@@ -1191,7 +1191,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg",
-   "azurirano": "2026-11-11T15:45:05Z"
+   "azurirano": "2026-11-11T21:44:12Z"
   },
   "Janica Frostelich": {
    "level": 18,
@@ -1699,10 +1699,10 @@
   },
   "Nikola Roguevic": {
    "level": 28,
-   "xp": 12615,
+   "xp": 16213,
    "guild": "Kafana na Balkanu",
    "ilvl": 18,
-   "zadnjiLogin": "2026-11-11T11:17:51Z",
+   "zadnjiLogin": "2026-11-11T21:15:42Z",
    "izvor": "Blizzard API",
    "talenti": [
     2,
@@ -1871,7 +1871,8 @@
      "kvaliteta": "rare",
      "wowhead": 6504,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135314.jpg",
-     "ilvl": 24
+     "ilvl": 24,
+     "enchant": "Instant Poison (22 |4Charge:Charges;)"
     },
     {
      "slot": "Off Hand",
@@ -1879,7 +1880,8 @@
      "kvaliteta": "rare",
      "wowhead": 271204,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/134298.jpg",
-     "ilvl": 20
+     "ilvl": 20,
+     "enchant": "Instant Poison (43 |4Charge:Charges;)"
     },
     {
      "slot": "Ranged",
@@ -1899,7 +1901,7 @@
     },
     {
      "name": "Skinning",
-     "skill": 182,
+     "skill": 186,
      "max": 225,
      "vrsta": "primarna"
     },
@@ -1934,11 +1936,11 @@
     "armor": 738,
     "ap": 210,
     "spellPower": 0,
-    "crit": 8.53,
+    "crit": 8.61,
     "spellCrit": 0.0,
-    "rangedCrit": 8.21,
-    "dodge": 18.11,
-    "parry": 10.8,
+    "rangedCrit": 8.25,
+    "dodge": 18.15,
+    "parry": 10.84,
     "block": 0.0,
     "dps": 30.7
    },
@@ -2092,17 +2094,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 3650
+     "n": 3670
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 2849
+     "n": 2869
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 3605
+     "n": 3625
     },
     {
      "kat": "Creatures",
@@ -2139,12 +2141,12 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 1955
+     "n": 1975
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 1633
+     "n": 1653
     },
     {
      "kat": "Killing Blows",
@@ -2333,7 +2335,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg",
-   "azurirano": "2026-11-11T11:45:26Z"
+   "azurirano": "2026-11-11T21:44:12Z"
   },
   "Arsen Deadic": {
    "level": 26,
@@ -2931,7 +2933,7 @@
    "azurirano": "2026-11-11T17:44:51Z"
   }
  },
- "provjereno": "2026-11-11T19:44:21Z",
+ "provjereno": "2026-11-11T21:44:12Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 7,
@@ -2957,7 +2959,7 @@
     "rang": 1,
     "slug": "nikola-roguevic",
     "ilvl": 18,
-    "zadnjiLogin": "2026-11-11T11:17:51Z",
+    "zadnjiLogin": "2026-11-11T21:15:42Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg"
    },
    {
@@ -2968,7 +2970,7 @@
     "rang": 3,
     "slug": "melee-kitic",
     "ilvl": 19,
-    "zadnjiLogin": "2026-11-11T15:29:59Z",
+    "zadnjiLogin": "2026-11-11T20:46:16Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg"
    },
    {
@@ -3170,6 +3172,11 @@
     "2026-11-11T15:45:05Z",
     27,
     7321
+   ],
+   [
+    "2026-11-11T21:44:12Z",
+    27,
+    15057
    ]
   ],
   "Janica Frostelich": [
@@ -3284,6 +3291,11 @@
     "2026-11-11T11:45:26Z",
     28,
     12615
+   ],
+   [
+    "2026-11-11T21:44:12Z",
+    28,
+    16213
    ]
   ],
   "Arsen Deadic": [
