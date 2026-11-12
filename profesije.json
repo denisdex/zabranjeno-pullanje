@@ -131,12 +131,12 @@
       "professions": [
         {
           "name": "Leatherworking",
-          "skill": 125,
+          "skill": 132,
           "phase": "stalno"
         },
         {
           "name": "Skinning",
-          "skill": 190,
+          "skill": 192,
           "phase": "stalno"
         }
       ],
@@ -151,7 +151,7 @@
         },
         {
           "name": "First Aid",
-          "skill": 150
+          "skill": 169
         }
       ]
     },
@@ -898,6 +898,24 @@
       "character": "paladin",
       "profession": "First Aid",
       "skill": 67
+    },
+    {
+      "date": "2026-11-12",
+      "character": "rogue",
+      "profession": "Leatherworking",
+      "skill": 132
+    },
+    {
+      "date": "2026-11-12",
+      "character": "rogue",
+      "profession": "Skinning",
+      "skill": 192
+    },
+    {
+      "date": "2026-11-12",
+      "character": "rogue",
+      "profession": "First Aid",
+      "skill": 169
     }
   ],
   "flows": [
