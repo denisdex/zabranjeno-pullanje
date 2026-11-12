@@ -9,14 +9,14 @@
    "url": "https://www.wowhead.com/news/rss/classic"
   }
  ],
- "azurirano": "2026-11-11T03:47:01Z",
+ "azurirano": "2026-11-12T01:43:48Z",
  "stavke": [
   {
-   "datum": "2026-11-11T03:27:33Z",
-   "naslov": "WoW: Forever Hotfixes - November 10, 2026",
-   "link": "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-10-2026/2403040/6",
+   "datum": "2026-11-12T00:48:47Z",
+   "naslov": "WoW: Forever Hotfixes - November 11, 2026",
+   "link": "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-11-2026/2403040/8",
    "izvor": "Blizzard",
-   "sazetak": "November 10, 2026 Auction House With realm restarts: Adjusted the minimum deposit amount to 1 copper (was 1 silver). Fixed a bug causing unread mail to incorrectly read as from ‘Stormwind Auction House’ for all players. Fixed a bug that…",
+   "sazetak": "November 11, 2026 Classes Druid Feral Rend and Tear now works on Pounce Bleed. Hunter Fixed an issue where Volley was activating procs. Fixed an issue where Volley would continue to channel even when the Hunter had started moving. Paladin…",
    "oznake": [
     "Hotfix"
    ],
