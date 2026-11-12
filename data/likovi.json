@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-12T07:43:37Z",
+ "azurirano": "2026-11-12T11:43:11Z",
  "likovi": {
   "Saman Saulic": {
    "level": 31,
@@ -1737,10 +1737,10 @@
   },
   "Nikola Roguevic": {
    "level": 29,
-   "xp": 15966,
+   "xp": 22784,
    "guild": "Kafana na Balkanu",
    "ilvl": 20,
-   "zadnjiLogin": "2026-11-12T04:22:16Z",
+   "zadnjiLogin": "2026-11-12T11:13:39Z",
    "izvor": "Blizzard API",
    "talenti": [
     2,
@@ -1944,7 +1944,7 @@
     },
     {
      "name": "Skinning",
-     "skill": 192,
+     "skill": 196,
      "max": 225,
      "vrsta": "primarna"
     },
@@ -1981,9 +1981,9 @@
     "spellPower": 0,
     "crit": 8.26,
     "spellCrit": 0.0,
-    "rangedCrit": 7.86,
-    "dodge": 17.45,
-    "parry": 10.84,
+    "rangedCrit": 7.9,
+    "dodge": 17.49,
+    "parry": 10.88,
     "block": 0.0,
     "dps": 37.5
    },
@@ -1991,25 +1991,25 @@
     {
      "ime": "Undercity",
      "status": "Honored",
-     "vrijednost": 5042,
+     "vrijednost": 5055,
      "max": 12000
     },
     {
      "ime": "Orgrimmar",
      "status": "Friendly",
-     "vrijednost": 4336,
+     "vrijednost": 4348,
      "max": 6000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Friendly",
-     "vrijednost": 2517,
+     "vrijednost": 2530,
      "max": 6000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Friendly",
-     "vrijednost": 2175,
+     "vrijednost": 2225,
      "max": 6000
     },
     {
@@ -2046,7 +2046,7 @@
     {
      "kat": "Consumables",
      "ime": "Bandages used",
-     "n": 16
+     "n": 17
     },
     {
      "kat": "Consumables",
@@ -2147,17 +2147,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 4095
+     "n": 4147
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 3067
+     "n": 3119
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 4050
+     "n": 4102
     },
     {
      "kat": "Creatures",
@@ -2167,7 +2167,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 1908,
+     "n": 1953,
      "opis": "Humanoid"
     },
     {
@@ -2194,17 +2194,17 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 2122
+     "n": 2150
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 1716
+     "n": 1744
     },
     {
      "kat": "Killing Blows",
      "ime": "Continent with the most Killing Blows",
-     "n": 988,
+     "n": 1016,
      "opis": "Kalimdor"
     },
     {
@@ -2240,7 +2240,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 253
+     "n": 254
     },
     {
      "kat": "Quests",
@@ -2285,7 +2285,7 @@
     {
      "kat": "Secondary Skills",
      "ime": "First Aid skill",
-     "n": 150
+     "n": 169
     },
     {
      "kat": "Secondary Skills",
@@ -2310,7 +2310,7 @@
     {
      "kat": "Professions",
      "ime": "Highest Leatherworking skill",
-     "n": 125
+     "n": 132
     },
     {
      "kat": "Professions",
@@ -2320,7 +2320,7 @@
     {
      "kat": "Professions",
      "ime": "Highest Skinning skill",
-     "n": 190
+     "n": 192
     },
     {
      "kat": "Travel",
@@ -2335,7 +2335,7 @@
     {
      "kat": "Social",
      "ime": "Total times LOL'd",
-     "n": 38
+     "n": 39
     },
     {
      "kat": "Social",
@@ -2362,12 +2362,14 @@
      "Troll Charm",
      "Satyr Horns",
      "The Rescue",
+     "Sacred Fire",
      "Source of Power",
      "Wind Rider",
      "The Swarm Grows",
      "Blood of Innocents",
      "WANTED: Syndicate Personnel",
      "Elixir of Agony",
+     "Hypercapacitor Gizmo",
      "Pacify the Centaur",
      "Blueleaf Tubers",
      "Elixir of Suffering",
@@ -2378,10 +2380,9 @@
      "Stolen Freewind Supplies",
      "WANTED: Arnak Grimtotem",
      "To Steal From Thieves",
-     "Steelsnap",
-     "Serpent Wild"
+     "Steelsnap"
     ],
-    "zavrseno": 304
+    "zavrseno": 305
    },
    "mountovi": [
     "Cerulean Prideclaw",
@@ -2399,7 +2400,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg",
-   "azurirano": "2026-11-12T05:43:40Z"
+   "azurirano": "2026-11-12T11:43:11Z"
   },
   "Arsen Deadic": {
    "level": 27,
@@ -3010,7 +3011,7 @@
    "azurirano": "2026-11-12T03:43:38Z"
   }
  },
- "provjereno": "2026-11-12T09:43:11Z",
+ "provjereno": "2026-11-12T11:43:11Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 8,
@@ -3036,7 +3037,7 @@
     "rang": 1,
     "slug": "nikola-roguevic",
     "ilvl": 20,
-    "zadnjiLogin": "2026-11-12T04:22:16Z",
+    "zadnjiLogin": "2026-11-12T11:13:39Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg"
    },
    {
@@ -3413,6 +3414,11 @@
     "2026-11-12T05:43:40Z",
     29,
     15966
+   ],
+   [
+    "2026-11-12T11:43:11Z",
+    29,
+    22784
    ]
   ],
   "Arsen Deadic": [
