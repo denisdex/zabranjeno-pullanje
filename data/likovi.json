@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-12T05:43:40Z",
+ "azurirano": "2026-11-12T07:43:37Z",
  "likovi": {
   "Saman Saulic": {
    "level": 31,
@@ -658,10 +658,10 @@
   },
   "Melee Kitic": {
    "level": 28,
-   "xp": 15761,
+   "xp": 19101,
    "guild": "Kafana na Balkanu",
-   "ilvl": 19,
-   "zadnjiLogin": "2026-11-12T01:04:14Z",
+   "ilvl": 20,
+   "zadnjiLogin": "2026-11-12T07:32:33Z",
    "izvor": "Blizzard API",
    "talenti": [
     3,
@@ -720,12 +720,11 @@
     },
     {
      "slot": "Chest",
-     "ime": "Prospector's Chestpiece",
+     "ime": "Slayer's Surcoat",
      "kvaliteta": "uncommon",
-     "wowhead": 14562,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132724.jpg",
-     "ilvl": 23,
-     "enchant": "Enchanted: Stamina +2 and Armor +16"
+     "wowhead": 14751,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132629.jpg",
+     "ilvl": 33
     },
     {
      "slot": "Waist",
@@ -814,7 +813,7 @@
    "profesije": [
     {
      "name": "Mining",
-     "skill": 104,
+     "skill": 106,
      "max": 150,
      "vrsta": "primarna"
     },
@@ -847,45 +846,45 @@
     "hp": 1133,
     "resurs": 100,
     "resursIme": "Rage",
-    "str": 84,
-    "agi": 45,
+    "str": 92,
+    "agi": 42,
     "sta": 98,
     "int": 21,
     "spi": 43,
-    "armor": 907,
-    "ap": 238,
+    "armor": 1010,
+    "ap": 254,
     "spellPower": 0,
-    "crit": 7.71,
+    "crit": 7.8,
     "spellCrit": 0.0,
     "rangedCrit": 0.0,
-    "dodge": 4.27,
-    "parry": 4.68,
-    "block": 4.68,
-    "dps": 42.6
+    "dodge": 4.0,
+    "parry": 4.72,
+    "block": 4.72,
+    "dps": 43.7
    },
    "reputacije": [
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 4902,
+     "vrijednost": 5052,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Honored",
-     "vrijednost": 1582,
+     "vrijednost": 1620,
      "max": 12000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Friendly",
-     "vrijednost": 4666,
+     "vrijednost": 4703,
      "max": 6000
     },
     {
      "ime": "Undercity",
      "status": "Friendly",
-     "vrijednost": 2796,
+     "vrijednost": 2833,
      "max": 6000
     },
     {
@@ -922,7 +921,7 @@
     {
      "kat": "Consumables",
      "ime": "Bandages used",
-     "n": 32
+     "n": 33
     },
     {
      "kat": "Consumables",
@@ -1023,17 +1022,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 3205
+     "n": 3212
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 2484
+     "n": 2485
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 3182
+     "n": 3189
     },
     {
      "kat": "Creatures",
@@ -1043,7 +1042,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 1737,
+     "n": 1743,
      "opis": "Humanoid"
     },
     {
@@ -1054,17 +1053,17 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 1545
+     "n": 1552
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 1322
+     "n": 1329
     },
     {
      "kat": "Killing Blows",
      "ime": "Continent with the most Killing Blows",
-     "n": 1096,
+     "n": 1103,
      "opis": "Kalimdor"
     },
     {
@@ -1095,7 +1094,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 229
+     "n": 231
     },
     {
      "kat": "Quests",
@@ -1105,7 +1104,7 @@
     {
      "kat": "Quests",
      "ime": "Quests abandoned",
-     "n": 8
+     "n": 9
     },
     {
      "kat": "Skills",
@@ -1185,12 +1184,12 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 50
+     "n": 52
     },
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
-     "n": 25
+     "n": 26
     },
     {
      "kat": "Social",
@@ -1208,7 +1207,6 @@
      "Ordanus",
      "Her Name Is Olgra",
      "The Sacred Flame",
-     "The Warsong Reports",
      "Troll Charm",
      "A Recipe For Death",
      "Watching the Roads",
@@ -1217,12 +1215,11 @@
      "Blueleaf Tubers",
      "Leaders of the Fang",
      "Ambermill Investigations",
-     "Vorsha the Lasher",
      "Assault on Fenris Isle",
      "Between a Rock and a Thistlefur",
      "Arugal's Folly"
     ],
-    "zavrseno": 261
+    "zavrseno": 263
    },
    "mountovi": [],
    "petovi": [],
@@ -1232,7 +1229,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg",
-   "azurirano": "2026-11-12T01:43:48Z"
+   "azurirano": "2026-11-12T07:43:37Z"
   },
   "Janica Frostelich": {
    "level": 18,
@@ -3013,7 +3010,7 @@
    "azurirano": "2026-11-12T03:43:38Z"
   }
  },
- "provjereno": "2026-11-12T05:43:40Z",
+ "provjereno": "2026-11-12T07:43:37Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 8,
@@ -3049,8 +3046,8 @@
     "rasa": "Orc",
     "rang": 3,
     "slug": "melee-kitic",
-    "ilvl": 19,
-    "zadnjiLogin": "2026-11-12T01:04:14Z",
+    "ilvl": 20,
+    "zadnjiLogin": "2026-11-12T07:32:33Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg"
    },
    {
@@ -3277,6 +3274,11 @@
     "2026-11-12T01:43:48Z",
     28,
     15761
+   ],
+   [
+    "2026-11-12T07:43:37Z",
+    28,
+    19101
    ]
   ],
   "Janica Frostelich": [
