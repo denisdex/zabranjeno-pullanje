@@ -3,7 +3,7 @@
 window.HORDE = {
   ekipa: "Zaprešić Horde",
   guild: "Kafana na Balkanu",
-  azurirano: "2026-11-11",
+  azurirano: "2026-11-12",
 
   // Vremena u UTC. Studeni je CET (UTC+1).
   // Rezervacija imena: do 3. 11. 2026. u 23:59 po Zagrebu.
@@ -205,7 +205,7 @@ window.HORDE = {
         ],
         biljeske: "Sap na drugi target prije pulla, kad Dex kaže."
       } },
-    { igrac: "Dex",     lik: "Arsen Deadic",     klasa: "Paladin", rasa: "Undead", uloga: "Tank",       level: 25, foto: "assets/likovi/arsen-deadic.jpg", oci: [[57.4, 18.5], [61.4, 19.0]],
+    { igrac: "Dex",     lik: "Arsen Deadic",     klasa: "Paladin", rasa: "Undead", uloga: "Tank",       level: 26, foto: "assets/likovi/arsen-deadic.jpg", oci: [[57.4, 18.5], [61.4, 19.0]],
       siroka: "assets/likovi/arsen-deadic-wide.jpg", fokus: [54.2, 20.1], ociSiroka: [[54.4, 18.6], [56.1, 19.0]],
       // savjeti po levelu, u profilu u bloku "Što sad"
       trikovi: [
@@ -618,6 +618,16 @@ window.HORDE = {
   // Stavka: { tekst, za: [klase/rase ili "Svi"], tema: kratka oznaka što se mijenja (Racial, Spell, Rage, XP, Dungeoni, Loot, Zona...) }
   izvorNovosti: "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
   novosti: [
+    { datum: "2026-11-11", naslov: "Hotfixovi: Judgement kao ranged napad, Tailoring torbe i Riverglades", stavke: [
+      { tekst: "Judgement se sad računa kao Ranged Attack: više ne aktivira melee procove s itema i efekata i koristi Ranged Hit chance.", za: ["Paladin"], tema: "Spell" },
+      { tekst: "Unsealed Fury (Retribution) više ne stvara echo od napada iz Windfury Totema.", za: ["Paladin"], tema: "Bug fix" },
+      { tekst: "Flametongue Totem Rank 2 nije radio, sad radi.", za: ["Shaman"], tema: "Bug fix" },
+      { tekst: "Volley više ne aktivira procove i prestaje channelati kad se pomakneš; Rend and Tear radi i na Pounce Bleed; Twilight Focus i Confounding Flash rade u Shadowformu.", za: ["Hunter", "Druid", "Priest"], tema: "Bug fix" },
+      { tekst: "Riverglades: Smash od Twilight Enforcera radi puno manje štete, Executioner Morg slabiji, a Mark of Flames od Twilight Forgemastera daje +50 štete (bilo 1000).", za: ["Svi"], tema: "Zona" },
+      { tekst: "Tailoring torbe skuplje, ali s ispravnim brojem slotova: Green i Red Woolen Bag 5 Bolt of Woolen Cloth (bilo 4), 10 slotova; Green Silk Pack 5 Bolt of Silk (bilo 4), 12 slotova; Black Silk Pack 6 (bilo 5), 12 slotova; Red Mageweave Bag 5 Bolt of Mageweave (bilo 4), 14 slotova.", za: ["Svi"], tema: "Profesije" },
+      { tekst: "Bloody Claws of Attack daju +1 Fist Weapon skill kako treba; Earthen Silk Slippers više ne daju previše spell damagea.", za: ["Svi"], tema: "Loot" },
+      { tekst: "Popravljeni questovi Scarlet Diversions (Western Plaguelands), The Giant in the Den (Witherbark Mallet, Arathi Highlands) i Freedom for All Creatures (Feralas); opet se može mountati u Shen'dralasu. Item Restoration privremeno ugašen zbog ozbiljnog buga.", za: ["Svi"], tema: "Bug fix" },
+    ] },
     { datum: "2026-11-10", naslov: "Hotfixovi: class tuning (Enhancement, Affliction, petovi) i zlato za questove", stavke: [
       { tekst: "Enhancement tuning: Stormstrike radi 100% weapon damagea (bilo 150%) uz 8 s cooldown (bilo 6 s); Mental Dexterity daje 33/66/100% Intellecta kao Attack Power (bilo 50/100/150%); Maelstrom Weapon daje 20% brži cast i jeftiniji Mana cost po stacku na svim rankovima, a aktivira se 6/7/8/9/10 puta u minuti (bilo 20).", za: ["Shaman"], tema: "Nerf" },
       { tekst: "Weapon imbue i totem sada se mogu koristiti zajedno; Maelstrom Weapon se može pratiti u Cooldown Manageru; Rage of the Storm ima 16 Strengtha (bilo Intellect) i brzinu 3.6 (bilo 3.2).", za: ["Shaman"], tema: "Spell" },
