@@ -9,18 +9,29 @@
    "url": "https://www.wowhead.com/news/rss/classic"
   }
  ],
- "azurirano": "2026-11-12T01:43:48Z",
+ "azurirano": "2026-11-12T19:41:23Z",
  "stavke": [
   {
-   "datum": "2026-11-12T00:48:47Z",
+   "datum": "2026-11-12T19:10:52Z",
    "naslov": "WoW: Forever Hotfixes - November 11, 2026",
-   "link": "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-11-2026/2403040/8",
+   "link": "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-11-2026/2403040/9",
    "izvor": "Blizzard",
-   "sazetak": "November 11, 2026 Classes Druid Feral Rend and Tear now works on Pounce Bleed. Hunter Fixed an issue where Volley was activating procs. Fixed an issue where Volley would continue to channel even when the Hunter had started moving. Paladin…",
+   "sazetak": "Please note: Due to an unexpected delay in deployment, the following changes went live to all regions at 10:45 a.m. PST today. Classes Shaman Weapon imbues and Weapon totems can now be used at the same time. Enhancement Stormstrike damage…",
    "oznake": [
     "Hotfix"
    ],
    "vrsta": "patch"
+  },
+  {
+   "datum": "2026-11-12T17:46:04Z",
+   "naslov": "The WoW Forever Podcast: Episode 7 - Turbo Nerds Lore-ing Out ft. @Nobbel87 & Platinum WoW",
+   "link": "https://us.forums.blizzard.com/en/wow/t/the-wow-forever-podcast-episode-7-turbo-nerds-lore-ing-out-ft-nobbel87-platinum-wow/2412856/1",
+   "izvor": "Blizzard",
+   "sazetak": "Turbo Nerds Lore-ing Out | Episode 7 - The WoW: Forever Podcast",
+   "oznake": [
+    "Podcast"
+   ],
+   "vrsta": "vijest"
   },
   {
    "datum": "2026-11-10T00:36:27Z",
@@ -194,17 +205,6 @@
    "sazetak": "World of Warcraft: Forever invites players into a reimagined original Azeroth where exploration, community, and the journey itself take center stage. Begin at level one, shape a character of your own, and learn the essentials for finding…",
    "oznake": [
     "Vodič"
-   ],
-   "vrsta": "vijest"
-  },
-  {
-   "datum": "2026-10-27T19:00:06Z",
-   "naslov": "Your Next Adventure in WoW: Forever Starts in the WoW Portal Room",
-   "link": "https://us.forums.blizzard.com/en/wow/t/your-next-adventure-in-wow-forever-starts-in-the-wow-portal-room/2393349/1",
-   "izvor": "Blizzard",
-   "sazetak": "Whether you’re new to Azeroth, returning after a break, or have made World of Warcraft part of your life for years, the WoW Portal Room is a welcoming Discord server where you can meet fellow adventurers and find your next community. View…",
-   "oznake": [
-    "Launch"
    ],
    "vrsta": "vijest"
   },
