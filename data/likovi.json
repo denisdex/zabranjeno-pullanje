@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-12T13:42:33Z",
+ "azurirano": "2026-11-12T15:42:02Z",
  "likovi": {
   "Saman Saulic": {
    "level": 32,
@@ -2399,10 +2399,10 @@
   },
   "Arsen Deadic": {
    "level": 27,
-   "xp": 381,
+   "xp": 14508,
    "guild": "Kafana na Balkanu",
    "ilvl": 19,
-   "zadnjiLogin": "2026-11-12T01:59:12Z",
+   "zadnjiLogin": "2026-11-12T15:28:32Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -2598,43 +2598,43 @@
     "armor": 1514,
     "ap": 255,
     "spellPower": 8,
-    "crit": 6.0,
+    "crit": 8.78,
     "spellCrit": 11.21,
     "rangedCrit": 0.14,
-    "dodge": 3.94,
-    "parry": 9.76,
-    "block": 4.76,
+    "dodge": 4.02,
+    "parry": 9.84,
+    "block": 4.84,
     "dps": 38.6
    },
    "reputacije": [
     {
      "ime": "Undercity",
      "status": "Honored",
-     "vrijednost": 4892,
+     "vrijednost": 5017,
      "max": 12000
     },
     {
      "ime": "Orgrimmar",
      "status": "Friendly",
-     "vrijednost": 2881,
+     "vrijednost": 3306,
      "max": 6000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Friendly",
-     "vrijednost": 1850,
+     "vrijednost": 2050,
      "max": 6000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Friendly",
-     "vrijednost": 655,
+     "vrijednost": 780,
      "max": 6000
     },
     {
      "ime": "Ratchet",
      "status": "Neutral",
-     "vrijednost": 2605,
+     "vrijednost": 2655,
      "max": 3000
     },
     {
@@ -2646,13 +2646,13 @@
     {
      "ime": "Everlook",
      "status": "Neutral",
-     "vrijednost": 1552,
+     "vrijednost": 1577,
      "max": 3000
     },
     {
      "ime": "Booty Bay",
      "status": "Neutral",
-     "vrijednost": 1552,
+     "vrijednost": 1577,
      "max": 3000
     }
    ],
@@ -2721,7 +2721,7 @@
     {
      "kat": "Gear",
      "ime": "Greed rolls made on loot",
-     "n": 131
+     "n": 132
     },
     {
      "kat": "Gear",
@@ -2731,12 +2731,12 @@
     {
      "kat": "Player vs. Player",
      "ime": "Total deaths from other players",
-     "n": 4
+     "n": 5
     },
     {
      "kat": "Player vs. Player",
      "ime": "Total deaths from opposite faction",
-     "n": 4
+     "n": 5
     },
     {
      "kat": "Dungeons & Raids",
@@ -2776,17 +2776,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 3691
+     "n": 3724
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 2950
+     "n": 2975
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 3667
+     "n": 3700
     },
     {
      "kat": "Creatures",
@@ -2796,7 +2796,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 1589,
+     "n": 1604,
      "opis": "Humanoid"
     },
     {
@@ -2823,12 +2823,12 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 1469
+     "n": 1481
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 1226
+     "n": 1238
     },
     {
      "kat": "Killing Blows",
@@ -2839,7 +2839,7 @@
     {
      "kat": "Deaths",
      "ime": "Total deaths",
-     "n": 32
+     "n": 34
     },
     {
      "kat": "Dungeons and Raids",
@@ -2862,9 +2862,14 @@
      "n": 5
     },
     {
+     "kat": "Resurrection",
+     "ime": "Redeemed by paladins",
+     "n": 1
+    },
+    {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 218
+     "n": 224
     },
     {
      "kat": "Quests",
@@ -2874,7 +2879,7 @@
     {
      "kat": "Quests",
      "ime": "Quests abandoned",
-     "n": 40
+     "n": 41
     },
     {
      "kat": "Skills",
@@ -2944,7 +2949,7 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 50
+     "n": 53
     },
     {
      "kat": "Travel",
@@ -2959,12 +2964,10 @@
    ],
    "questovi": {
     "uLogu": [
-     "Boulderslide Ravine",
      "Smart Drinks",
      "Deviate Hides",
      "Lost in Battle",
      "Chol'aruk the Ravener",
-     "Ordanus",
      "The Book of Ur",
      "Stonetalon Standstill",
      "The Essence of Aku'Mai",
@@ -2972,20 +2975,19 @@
      "Dig Rat Stew",
      "A Moon-Kissed Blade",
      "Warsong Supplies",
-     "Ashenvale Outrunners",
-     "The Warsong Reports",
      "Troll Charm",
      "Satyr Horns",
      "Calling in the Reserves",
-     "Further Instructions",
      "The Guns of Northwatch",
      "Blueleaf Tubers",
      "Seeking the Kor Gem",
      "Leaders of the Fang",
      "Vorsha the Lasher",
-     "Between a Rock and a Thistlefur"
+     "The Den",
+     "Between a Rock and a Thistlefur",
+     "Gerenzo Wrenchwhistle"
     ],
-    "zavrseno": 259
+    "zavrseno": 265
    },
    "mountovi": [
     "Cerulean Prideclaw",
@@ -3003,10 +3005,10 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg",
-   "azurirano": "2026-11-12T03:43:38Z"
+   "azurirano": "2026-11-12T15:42:02Z"
   }
  },
- "provjereno": "2026-11-12T13:42:33Z",
+ "provjereno": "2026-11-12T15:42:02Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 8,
@@ -3054,7 +3056,7 @@
     "rang": 3,
     "slug": "arsen-deadic",
     "ilvl": 19,
-    "zadnjiLogin": "2026-11-12T01:59:12Z",
+    "zadnjiLogin": "2026-11-12T15:28:32Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg"
    },
    {
@@ -3506,6 +3508,11 @@
     "2026-11-12T03:43:38Z",
     27,
     381
+   ],
+   [
+    "2026-11-12T15:42:02Z",
+    27,
+    14508
    ]
   ]
  }
