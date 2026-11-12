@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-12T01:43:48Z",
+ "azurirano": "2026-11-12T03:43:38Z",
  "likovi": {
   "Saman Saulic": {
    "level": 31,
@@ -1740,10 +1740,10 @@
   },
   "Nikola Roguevic": {
    "level": 29,
-   "xp": 6563,
+   "xp": 9527,
    "guild": "Kafana na Balkanu",
    "ilvl": 20,
-   "zadnjiLogin": "2026-11-12T01:26:27Z",
+   "zadnjiLogin": "2026-11-12T01:59:05Z",
    "izvor": "Blizzard API",
    "talenti": [
     2,
@@ -1920,7 +1920,7 @@
      "wowhead": 16886,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135343.jpg",
      "ilvl": 32,
-     "enchant": "Instant Poison (51 |4Charge:Charges;)"
+     "enchant": "Instant Poison (16 |4Charge:Charges;)"
     },
     {
      "slot": "Off Hand",
@@ -1929,7 +1929,7 @@
      "wowhead": 1292,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132417.jpg",
      "ilvl": 25,
-     "enchant": "Instant Poison (60 |4Charge:Charges;)"
+     "enchant": "Instant Poison (36 |4Charge:Charges;)"
     },
     {
      "slot": "Ranged",
@@ -1984,11 +1984,11 @@
     "armor": 779,
     "ap": 240,
     "spellPower": 0,
-    "crit": 8.14,
+    "crit": 8.22,
     "spellCrit": 0.0,
     "rangedCrit": 7.86,
-    "dodge": 17.37,
-    "parry": 10.76,
+    "dodge": 17.45,
+    "parry": 10.84,
     "block": 0.0,
     "dps": 37.5
    },
@@ -2051,7 +2051,7 @@
     {
      "kat": "Consumables",
      "ime": "Bandages used",
-     "n": 15
+     "n": 16
     },
     {
      "kat": "Consumables",
@@ -2152,17 +2152,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 4060
+     "n": 4091
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 3034
+     "n": 3063
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 4015
+     "n": 4046
     },
     {
      "kat": "Creatures",
@@ -2172,7 +2172,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 1881,
+     "n": 1908,
      "opis": "Humanoid"
     },
     {
@@ -2199,17 +2199,17 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 2089
+     "n": 2118
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 1683
+     "n": 1712
     },
     {
      "kat": "Killing Blows",
      "ime": "Continent with the most Killing Blows",
-     "n": 955,
+     "n": 984,
      "opis": "Kalimdor"
     },
     {
@@ -2325,7 +2325,7 @@
     {
      "kat": "Professions",
      "ime": "Highest Skinning skill",
-     "n": 189
+     "n": 190
     },
     {
      "kat": "Travel",
@@ -2360,6 +2360,7 @@
      "Craftsman's Writ: Crafted Solid Shot",
      "Battle of Hillsbrad",
      "Dangerous!",
+     "Shadumbra's Head",
      "Warsong Supplies",
      "Ashenvale Outrunners",
      "The Warsong Reports",
@@ -2402,14 +2403,14 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg",
-   "azurirano": "2026-11-12T01:43:48Z"
+   "azurirano": "2026-11-12T03:43:38Z"
   },
   "Arsen Deadic": {
-   "level": 26,
-   "xp": 8558,
+   "level": 27,
+   "xp": 381,
    "guild": "Kafana na Balkanu",
-   "ilvl": 17,
-   "zadnjiLogin": "2026-11-11T16:36:25Z",
+   "ilvl": 19,
+   "zadnjiLogin": "2026-11-12T01:59:12Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -2446,7 +2447,7 @@
      "ime": "Seal of Command",
      "rang": 1,
      "stablo": "Retribution",
-     "opis": "Gives the Paladin a chance to deal additional Holy damage equal to 70% of normal weapon damage.  Only one Seal can be active on the Paladin at any one time.  Lasts 30 sec.\r\n\r\nUnleashing this Seal's energy will judge an enemy, instantly causing 65 to 70 Holy damage, 130 to 139 if the target is stunned or incapacitated."
+     "opis": "Gives the Paladin a chance to deal additional Holy damage equal to 70% of normal weapon damage.  Only one Seal can be active on the Paladin at any one time.  Lasts 30 sec.\r\n\r\nUnleashing this Seal's energy will judge an enemy, instantly causing 67 to 72 Holy damage, 135 to 144 if the target is stunned or incapacitated."
     },
     {
      "ime": "Pursuit of Justice",
@@ -2474,11 +2475,11 @@
     },
     {
      "slot": "Chest",
-     "ime": "Veteran Armor",
+     "ime": "Grunt's Chestpiece of the Bear",
      "kvaliteta": "uncommon",
-     "wowhead": 2977,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132631.jpg",
-     "ilvl": 16
+     "wowhead": 15514,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132624.jpg",
+     "ilvl": 26
     },
     {
      "slot": "Waist",
@@ -2490,12 +2491,11 @@
     },
     {
      "slot": "Legs",
-     "ime": "Gargoyle Leggings",
+     "ime": "Grunt's Legguards of Strength",
      "kvaliteta": "uncommon",
-     "wowhead": 15451,
+     "wowhead": 15511,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/134583.jpg",
-     "ilvl": 18,
-     "enchant": "Enchanted: Stamina +2 and Armor +16"
+     "ilvl": 24
     },
     {
      "slot": "Feet",
@@ -2515,11 +2515,11 @@
     },
     {
      "slot": "Hands",
-     "ime": "Grip of Fear",
+     "ime": "Algae Fists",
      "kvaliteta": "rare",
-     "wowhead": 271208,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132938.jpg",
-     "ilvl": 22
+     "wowhead": 6906,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132944.jpg",
+     "ilvl": 28
     },
     {
      "slot": "Finger 1",
@@ -2547,11 +2547,11 @@
     },
     {
      "slot": "Main Hand",
-     "ime": "Stinging Viper",
+     "ime": "Outlaw Sabre",
      "kvaliteta": "rare",
-     "wowhead": 6472,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135472.jpg",
-     "ilvl": 24
+     "wowhead": 16886,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135343.jpg",
+     "ilvl": 32
     },
     {
      "slot": "Off Hand",
@@ -2565,7 +2565,7 @@
    "profesije": [
     {
      "name": "Mining",
-     "skill": 78,
+     "skill": 80,
      "max": 150,
      "vrsta": "primarna"
     },
@@ -2589,54 +2589,54 @@
     },
     {
      "name": "First Aid",
-     "skill": 53,
+     "skill": 67,
      "max": 150,
      "vrsta": "sekundarna"
     }
    ],
    "statovi": {
-    "hp": 846,
-    "resurs": 1124,
+    "hp": 947,
+    "resurs": 1076,
     "resursIme": "Mana",
-    "str": 75,
-    "agi": 33,
-    "sta": 74,
-    "int": 55,
-    "spi": 50,
-    "armor": 1464,
-    "ap": 214,
+    "str": 86,
+    "agi": 34,
+    "sta": 82,
+    "int": 49,
+    "spi": 48,
+    "armor": 1514,
+    "ap": 255,
     "spellPower": 8,
-    "crit": 10.04,
-    "spellCrit": 11.42,
-    "rangedCrit": 0.0,
-    "dodge": 4.04,
-    "parry": 9.88,
-    "block": 4.88,
-    "dps": 30.8
+    "crit": 6.0,
+    "spellCrit": 11.21,
+    "rangedCrit": 0.14,
+    "dodge": 3.94,
+    "parry": 9.76,
+    "block": 4.76,
+    "dps": 38.6
    },
    "reputacije": [
     {
      "ime": "Undercity",
      "status": "Honored",
-     "vrijednost": 4811,
+     "vrijednost": 4892,
      "max": 12000
     },
     {
      "ime": "Orgrimmar",
      "status": "Friendly",
-     "vrijednost": 2800,
+     "vrijednost": 2881,
      "max": 6000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Friendly",
-     "vrijednost": 1525,
+     "vrijednost": 1850,
      "max": 6000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Friendly",
-     "vrijednost": 573,
+     "vrijednost": 655,
      "max": 6000
     },
     {
@@ -2668,7 +2668,7 @@
     {
      "kat": "Character",
      "ime": "Times camped",
-     "n": 22
+     "n": 30
     },
     {
      "kat": "Consumables",
@@ -2684,12 +2684,12 @@
     {
      "kat": "Consumables",
      "ime": "Health potions consumed",
-     "n": 5
+     "n": 6
     },
     {
      "kat": "Consumables",
      "ime": "Mana potions consumed",
-     "n": 1
+     "n": 2
     },
     {
      "kat": "Consumables",
@@ -2699,12 +2699,12 @@
     {
      "kat": "Consumables",
      "ime": "Beverages consumed",
-     "n": 33
+     "n": 37
     },
     {
      "kat": "Consumables",
      "ime": "Food eaten",
-     "n": 29
+     "n": 30
     },
     {
      "kat": "Reputation",
@@ -2729,27 +2729,32 @@
     {
      "kat": "Gear",
      "ime": "Greed rolls made on loot",
-     "n": 99
+     "n": 131
     },
     {
      "kat": "Gear",
      "ime": "Need rolls made on loot",
-     "n": 27
+     "n": 37
     },
     {
      "kat": "Player vs. Player",
      "ime": "Total deaths from other players",
-     "n": 3
+     "n": 4
     },
     {
      "kat": "Player vs. Player",
      "ime": "Total deaths from opposite faction",
-     "n": 3
+     "n": 4
     },
     {
      "kat": "Dungeons & Raids",
      "ime": "Total 5-player dungeons entered",
-     "n": 5
+     "n": 7
+    },
+    {
+     "kat": "Boss Kills",
+     "ime": "Edwin VanCleef Kills (Deadmines)",
+     "n": 1
     },
     {
      "kat": "Boss Kills",
@@ -2772,19 +2777,24 @@
      "n": 1
     },
     {
+     "kat": "Boss Kills",
+     "ime": "Aku'mai kills (Blackfathom Deeps)",
+     "n": 1
+    },
+    {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 3326
+     "n": 3691
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 2756
+     "n": 2950
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 3302
+     "n": 3667
     },
     {
      "kat": "Creatures",
@@ -2794,7 +2804,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 1300,
+     "n": 1589,
      "opis": "Humanoid"
     },
     {
@@ -2821,7 +2831,7 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 1408
+     "n": 1469
     },
     {
      "kat": "Killing Blows",
@@ -2837,17 +2847,17 @@
     {
      "kat": "Deaths",
      "ime": "Total deaths",
-     "n": 26
+     "n": 32
     },
     {
      "kat": "Dungeons and Raids",
      "ime": "Total raid and dungeon deaths",
-     "n": 7
+     "n": 10
     },
     {
      "kat": "Dungeons and Raids",
      "ime": "Total deaths in 5-player dungeons",
-     "n": 7
+     "n": 10
     },
     {
      "kat": "World",
@@ -2857,12 +2867,12 @@
     {
      "kat": "Resurrection",
      "ime": "Spirit returned to body by shamans",
-     "n": 4
+     "n": 5
     },
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 215
+     "n": 218
     },
     {
      "kat": "Quests",
@@ -2872,7 +2882,7 @@
     {
      "kat": "Quests",
      "ime": "Quests abandoned",
-     "n": 38
+     "n": 40
     },
     {
      "kat": "Skills",
@@ -2907,7 +2917,7 @@
     {
      "kat": "Secondary Skills",
      "ime": "First Aid skill",
-     "n": 53
+     "n": 67
     },
     {
      "kat": "Secondary Skills",
@@ -2932,7 +2942,7 @@
     {
      "kat": "Professions",
      "ime": "Highest Mining skill",
-     "n": 78
+     "n": 80
     },
     {
      "kat": "Professions",
@@ -2942,12 +2952,12 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 43
+     "n": 50
     },
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
-     "n": 4
+     "n": 6
     },
     {
      "kat": "Social",
@@ -2957,29 +2967,33 @@
    ],
    "questovi": {
     "uLogu": [
-     "Dig Rat Stew",
-     "The Guns of Northwatch",
-     "Egg Hunt",
-     "Further Instructions",
-     "The Book of Ur",
-     "Blueleaf Tubers",
-     "Ordanus",
-     "Smart Drinks",
-     "Leaders of the Fang",
-     "Deviate Hides",
-     "Trouble in the Deeps",
-     "Stolen Silver",
-     "The Warsong Reports",
-     "Protect Kaya",
      "Boulderslide Ravine",
-     "Calling in the Reserves",
-     "Warsong Supplies",
+     "Smart Drinks",
+     "Deviate Hides",
      "Lost in Battle",
+     "Chol'aruk the Ravener",
+     "Ordanus",
+     "The Book of Ur",
+     "Stonetalon Standstill",
+     "The Essence of Aku'Mai",
+     "Egg Hunt",
+     "Dig Rat Stew",
      "A Moon-Kissed Blade",
+     "Warsong Supplies",
      "Ashenvale Outrunners",
-     "Chol'aruk the Ravener"
+     "The Warsong Reports",
+     "Troll Charm",
+     "Satyr Horns",
+     "Calling in the Reserves",
+     "Further Instructions",
+     "The Guns of Northwatch",
+     "Blueleaf Tubers",
+     "Seeking the Kor Gem",
+     "Leaders of the Fang",
+     "Vorsha the Lasher",
+     "Between a Rock and a Thistlefur"
     ],
-    "zavrseno": 254
+    "zavrseno": 259
    },
    "mountovi": [
     "Cerulean Prideclaw",
@@ -2997,10 +3011,10 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg",
-   "azurirano": "2026-11-11T17:44:51Z"
+   "azurirano": "2026-11-12T03:43:38Z"
   }
  },
- "provjereno": "2026-11-12T01:43:48Z",
+ "provjereno": "2026-11-12T03:43:38Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 8,
@@ -3026,7 +3040,7 @@
     "rang": 1,
     "slug": "nikola-roguevic",
     "ilvl": 20,
-    "zadnjiLogin": "2026-11-12T01:26:27Z",
+    "zadnjiLogin": "2026-11-12T01:59:05Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg"
    },
    {
@@ -3042,13 +3056,13 @@
    },
    {
     "ime": "Arsen Deadic",
-    "level": 26,
+    "level": 27,
     "klasa": "Paladin",
     "rasa": "Undead",
     "rang": 3,
     "slug": "arsen-deadic",
-    "ilvl": 17,
-    "zadnjiLogin": "2026-11-11T16:36:25Z",
+    "ilvl": 19,
+    "zadnjiLogin": "2026-11-12T01:59:12Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg"
    },
    {
@@ -3388,6 +3402,11 @@
     "2026-11-12T01:43:48Z",
     29,
     6563
+   ],
+   [
+    "2026-11-12T03:43:38Z",
+    29,
+    9527
    ]
   ],
   "Arsen Deadic": [
@@ -3465,6 +3484,11 @@
     "2026-11-11T13:45:15Z",
     26,
     8558
+   ],
+   [
+    "2026-11-12T03:43:38Z",
+    27,
+    381
    ]
   ]
  }
