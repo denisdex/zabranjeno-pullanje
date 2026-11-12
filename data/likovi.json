@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-12T19:41:24Z",
+ "azurirano": "2026-11-12T21:41:20Z",
  "likovi": {
   "Saman Saulic": {
    "level": 32,
@@ -653,10 +653,10 @@
   },
   "Melee Kitic": {
    "level": 28,
-   "xp": 19101,
+   "xp": 26308,
    "guild": "Kafana na Balkanu",
    "ilvl": 20,
-   "zadnjiLogin": "2026-11-12T15:57:03Z",
+   "zadnjiLogin": "2026-11-12T20:40:43Z",
    "izvor": "Blizzard API",
    "talenti": [
     3,
@@ -699,11 +699,11 @@
    "oprema": [
     {
      "slot": "Head",
-     "ime": "Taurajo Headband",
-     "kvaliteta": "common",
-     "wowhead": 279391,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133693.jpg",
-     "ilvl": 23
+     "ime": "Veteran's Silvered Chain Helm",
+     "kvaliteta": "rare",
+     "wowhead": 250528,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133141.jpg",
+     "ilvl": 25
     },
     {
      "slot": "Shoulder",
@@ -808,13 +808,13 @@
    "profesije": [
     {
      "name": "Mining",
-     "skill": 111,
+     "skill": 123,
      "max": 150,
      "vrsta": "primarna"
     },
     {
      "name": "Blacksmithing",
-     "skill": 100,
+     "skill": 101,
      "max": 150,
      "vrsta": "primarna"
     },
@@ -826,7 +826,7 @@
     },
     {
      "name": "Fishing",
-     "skill": 2,
+     "skill": 3,
      "max": 75,
      "vrsta": "sekundarna"
     },
@@ -838,24 +838,24 @@
     }
    ],
    "statovi": {
-    "hp": 1133,
+    "hp": 1223,
     "resurs": 100,
     "resursIme": "Rage",
-    "str": 92,
+    "str": 102,
     "agi": 42,
-    "sta": 98,
+    "sta": 107,
     "int": 21,
     "spi": 43,
-    "armor": 1010,
-    "ap": 254,
+    "armor": 1145,
+    "ap": 274,
     "spellPower": 0,
-    "crit": 7.8,
+    "crit": 8.52,
     "spellCrit": 0.0,
     "rangedCrit": 0.0,
-    "dodge": 4.0,
-    "parry": 4.72,
-    "block": 4.72,
-    "dps": 43.7
+    "dodge": 4.08,
+    "parry": 4.8,
+    "block": 4.8,
+    "dps": 45.2
    },
    "reputacije": [
     {
@@ -873,7 +873,7 @@
     {
      "ime": "Thunder Bluff",
      "status": "Friendly",
-     "vrijednost": 4703,
+     "vrijednost": 4753,
      "max": 6000
     },
     {
@@ -962,12 +962,12 @@
     {
      "kat": "Player vs. Player",
      "ime": "Total deaths from other players",
-     "n": 1
+     "n": 2
     },
     {
      "kat": "Player vs. Player",
      "ime": "Total deaths from opposite faction",
-     "n": 1
+     "n": 2
     },
     {
      "kat": "World",
@@ -1017,17 +1017,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 3212
+     "n": 3241
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 2485
+     "n": 2502
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 3189
+     "n": 3218
     },
     {
      "kat": "Creatures",
@@ -1037,7 +1037,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 1743,
+     "n": 1769,
      "opis": "Humanoid"
     },
     {
@@ -1048,23 +1048,23 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 1552
+     "n": 1578
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 1329
+     "n": 1355
     },
     {
      "kat": "Killing Blows",
      "ime": "Continent with the most Killing Blows",
-     "n": 1103,
+     "n": 1129,
      "opis": "Kalimdor"
     },
     {
      "kat": "Deaths",
      "ime": "Total deaths",
-     "n": 36
+     "n": 37
     },
     {
      "kat": "Dungeons and Raids",
@@ -1089,7 +1089,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 231
+     "n": 233
     },
     {
      "kat": "Quests",
@@ -1134,7 +1134,7 @@
     {
      "kat": "Secondary Skills",
      "ime": "First Aid skill",
-     "n": 70
+     "n": 72
     },
     {
      "kat": "Secondary Skills",
@@ -1149,12 +1149,12 @@
     {
      "kat": "Secondary Skills",
      "ime": "Fish caught",
-     "n": 1
+     "n": 2
     },
     {
      "kat": "Secondary Skills",
      "ime": "Fish and other things caught",
-     "n": 1
+     "n": 2
     },
     {
      "kat": "Professions",
@@ -1169,7 +1169,7 @@
     {
      "kat": "Professions",
      "ime": "Highest Mining skill",
-     "n": 106
+     "n": 111
     },
     {
      "kat": "Professions",
@@ -1179,7 +1179,7 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 54
+     "n": 55
     },
     {
      "kat": "Travel",
@@ -1198,23 +1198,25 @@
      "Brutal Armor",
      "Bloodfury Bloodline",
      "Beren's Peril",
+     "A New Ore Sample",
      "Stop the Spread",
      "Ordanus",
+     "Rig Wars",
      "Her Name Is Olgra",
      "The Sacred Flame",
      "Troll Charm",
      "A Recipe For Death",
      "Watching the Roads",
-     "Calling in the Reserves",
      "Allegiance to the Old Gods",
      "Blueleaf Tubers",
      "Leaders of the Fang",
      "Ambermill Investigations",
      "Assault on Fenris Isle",
      "Between a Rock and a Thistlefur",
+     "Chief Engineer Scooty",
      "Arugal's Folly"
     ],
-    "zavrseno": 263
+    "zavrseno": 265
    },
    "mountovi": [],
    "petovi": [],
@@ -1224,7 +1226,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg",
-   "azurirano": "2026-11-12T17:41:33Z"
+   "azurirano": "2026-11-12T21:41:20Z"
   },
   "Janica Frostelich": {
    "level": 18,
@@ -3007,7 +3009,7 @@
    "azurirano": "2026-11-12T15:42:02Z"
   }
  },
- "provjereno": "2026-11-12T19:41:24Z",
+ "provjereno": "2026-11-12T21:41:20Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 8,
@@ -3044,7 +3046,7 @@
     "rang": 3,
     "slug": "melee-kitic",
     "ilvl": 20,
-    "zadnjiLogin": "2026-11-12T15:57:03Z",
+    "zadnjiLogin": "2026-11-12T20:40:43Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg"
    },
    {
@@ -3059,6 +3061,17 @@
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg"
    },
    {
+    "ime": "Yuserious Son",
+    "level": 28,
+    "klasa": "Paladin",
+    "rasa": "Undead",
+    "rang": 4,
+    "slug": "yuserious-son",
+    "ilvl": 23,
+    "zadnjiLogin": "2026-11-12T20:52:26Z",
+    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/6/6269702-avatar.jpg"
+   },
+   {
     "ime": "Venos Xx",
     "level": 28,
     "klasa": "Druid",
@@ -3068,17 +3081,6 @@
     "ilvl": 20,
     "zadnjiLogin": "2026-11-12T19:40:43Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/253/13774333-avatar.jpg"
-   },
-   {
-    "ime": "Yuserious Son",
-    "level": 27,
-    "klasa": "Paladin",
-    "rasa": "Undead",
-    "rang": 4,
-    "slug": "yuserious-son",
-    "ilvl": 21,
-    "zadnjiLogin": "2026-11-12T00:35:42Z",
-    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/6/6269702-avatar.jpg"
    },
    {
     "ime": "Janica Frostelich",
@@ -3099,7 +3101,7 @@
     "rang": 4,
     "slug": "mate-bullic",
     "ilvl": 4,
-    "zadnjiLogin": "2026-11-12T19:32:14Z"
+    "zadnjiLogin": "2026-11-12T21:17:05Z"
    }
   ]
  },
@@ -3286,6 +3288,11 @@
     "2026-11-12T07:43:37Z",
     28,
     19101
+   ],
+   [
+    "2026-11-12T21:41:20Z",
+    28,
+    26308
    ]
   ],
   "Janica Frostelich": [
