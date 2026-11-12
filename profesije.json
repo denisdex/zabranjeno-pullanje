@@ -33,7 +33,7 @@
       "professions": [
         {
           "name": "Mining",
-          "skill": 93,
+          "skill": 106,
           "phase": "stalno"
         },
         {
@@ -48,8 +48,12 @@
           "skill": 1
         },
         {
+          "name": "Fishing",
+          "skill": 2
+        },
+        {
           "name": "First Aid",
-          "skill": 57
+          "skill": 70
         }
       ]
     },
@@ -68,7 +72,7 @@
         },
         {
           "name": "Skinning",
-          "skill": 208,
+          "skill": 209,
           "phase": "stalno"
         }
       ],
@@ -79,7 +83,7 @@
         },
         {
           "name": "Fishing",
-          "skill": 161
+          "skill": 163
         },
         {
           "name": "First Aid",
@@ -127,12 +131,12 @@
       "professions": [
         {
           "name": "Leatherworking",
-          "skill": 125,
+          "skill": 132,
           "phase": "stalno"
         },
         {
           "name": "Skinning",
-          "skill": 182,
+          "skill": 192,
           "phase": "stalno"
         }
       ],
@@ -147,7 +151,7 @@
         },
         {
           "name": "First Aid",
-          "skill": 150
+          "skill": 169
         }
       ]
     },
@@ -161,7 +165,7 @@
       "professions": [
         {
           "name": "Mining",
-          "skill": 76,
+          "skill": 80,
           "phase": "stalno"
         },
         {
@@ -181,7 +185,7 @@
         },
         {
           "name": "First Aid",
-          "skill": 53
+          "skill": 67
         }
       ]
     }
@@ -822,6 +826,102 @@
       "character": "shaman",
       "profession": "Fishing",
       "skill": 161
+    },
+    {
+      "date": "2026-11-11",
+      "character": "warrior",
+      "profession": "Fishing",
+      "skill": 2
+    },
+    {
+      "date": "2026-11-11",
+      "character": "warrior",
+      "profession": "First Aid",
+      "skill": 65
+    },
+    {
+      "date": "2026-11-11",
+      "character": "shaman",
+      "profession": "Fishing",
+      "skill": 163
+    },
+    {
+      "date": "2026-11-11",
+      "character": "paladin",
+      "profession": "Mining",
+      "skill": 78
+    },
+    {
+      "date": "2026-11-11",
+      "character": "warrior",
+      "profession": "Mining",
+      "skill": 100
+    },
+    {
+      "date": "2026-11-11",
+      "character": "warrior",
+      "profession": "First Aid",
+      "skill": 70
+    },
+    {
+      "date": "2026-11-11",
+      "character": "rogue",
+      "profession": "Skinning",
+      "skill": 186
+    },
+    {
+      "date": "2026-11-12",
+      "character": "warrior",
+      "profession": "Mining",
+      "skill": 104
+    },
+    {
+      "date": "2026-11-12",
+      "character": "shaman",
+      "profession": "Skinning",
+      "skill": 209
+    },
+    {
+      "date": "2026-11-12",
+      "character": "rogue",
+      "profession": "Skinning",
+      "skill": 190
+    },
+    {
+      "date": "2026-11-12",
+      "character": "paladin",
+      "profession": "Mining",
+      "skill": 80
+    },
+    {
+      "date": "2026-11-12",
+      "character": "paladin",
+      "profession": "First Aid",
+      "skill": 67
+    },
+    {
+      "date": "2026-11-12",
+      "character": "rogue",
+      "profession": "Leatherworking",
+      "skill": 132
+    },
+    {
+      "date": "2026-11-12",
+      "character": "rogue",
+      "profession": "Skinning",
+      "skill": 192
+    },
+    {
+      "date": "2026-11-12",
+      "character": "rogue",
+      "profession": "First Aid",
+      "skill": 169
+    },
+    {
+      "date": "2026-11-12",
+      "character": "warrior",
+      "profession": "Mining",
+      "skill": 106
     }
   ],
   "flows": [
