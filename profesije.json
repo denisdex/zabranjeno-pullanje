@@ -33,12 +33,12 @@
       "professions": [
         {
           "name": "Mining",
-          "skill": 106,
+          "skill": 111,
           "phase": "stalno"
         },
         {
           "name": "Blacksmithing",
-          "skill": 84,
+          "skill": 100,
           "phase": "stalno"
         }
       ],
@@ -53,7 +53,7 @@
         },
         {
           "name": "First Aid",
-          "skill": 70
+          "skill": 72
         }
       ]
     },
@@ -136,7 +136,7 @@
         },
         {
           "name": "Skinning",
-          "skill": 196,
+          "skill": 198,
           "phase": "stalno"
         }
       ],
@@ -934,6 +934,30 @@
       "character": "shaman",
       "profession": "Skinning",
       "skill": 210
+    },
+    {
+      "date": "2026-11-12",
+      "character": "warrior",
+      "profession": "Mining",
+      "skill": 111
+    },
+    {
+      "date": "2026-11-12",
+      "character": "warrior",
+      "profession": "Blacksmithing",
+      "skill": 100
+    },
+    {
+      "date": "2026-11-12",
+      "character": "warrior",
+      "profession": "First Aid",
+      "skill": 72
+    },
+    {
+      "date": "2026-11-12",
+      "character": "rogue",
+      "profession": "Skinning",
+      "skill": 198
     }
   ],
   "flows": [
