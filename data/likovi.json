@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-13T17:40:07Z",
+ "azurirano": "2026-11-13T19:39:58Z",
  "likovi": {
   "Saman Saulic": {
    "level": 33,
@@ -3030,7 +3030,7 @@
    "azurirano": "2026-11-13T17:40:07Z"
   }
  },
- "provjereno": "2026-11-13T17:40:07Z",
+ "provjereno": "2026-11-13T19:39:58Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 8,
@@ -3116,13 +3116,13 @@
    },
    {
     "ime": "Mate Bullic",
-    "level": 14,
+    "level": 15,
     "klasa": "Shaman",
     "rasa": "Tauren",
     "rang": 4,
     "slug": "mate-bullic",
-    "ilvl": 4,
-    "zadnjiLogin": "2026-11-13T11:42:52Z",
+    "ilvl": 7,
+    "zadnjiLogin": "2026-11-13T18:07:09Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/33/21412897-avatar.jpg"
    }
   ]

@@ -9,8 +9,39 @@
    "url": "https://www.wowhead.com/news/rss/classic"
   }
  ],
- "azurirano": "2026-11-12T19:41:23Z",
+ "azurirano": "2026-11-13T19:39:57Z",
  "stavke": [
+  {
+   "datum": "2026-11-13T18:12:25Z",
+   "naslov": "The WoW: Forever Podcast, a New Short Story, This Week’s Videos, and More! — WoW Weekly",
+   "link": "https://www.wowhead.com/news=383869/the-wow-forever-podcast-a-new-short-story-this-week-s-videos-and-more-wow-weekly",
+   "izvor": "Wowhead",
+   "sazetak": "Blizzard has posted a recap of this week in WoW, highlighting the continuation of the WoW: Forever podcast, a new short story, and more! Continue reading »",
+   "oznake": [
+    "Podcast"
+   ],
+   "vrsta": "vijest"
+  },
+  {
+   "datum": "2026-11-13T18:03:52Z",
+   "naslov": "WoW Weekly Highlights the WoW: Forever Podcast, a New Short Story, This Week’s Videos, and More!",
+   "link": "https://us.forums.blizzard.com/en/wow/t/wow-weekly-highlights-the-wow-forever-podcast-a-new-short-story-this-week%E2%80%99s-videos-and-more/2414430/1",
+   "izvor": "Blizzard",
+   "sazetak": "This week’s WoW Weekly is packed with lore, stories, and more! Join Sean Copeland as we dive deeper into the lore on the World of Warcraft: Forever Podcast, gather around the campfire for legendary tales from Demar Brant in the “Cost of…",
+   "oznake": [
+    "Podcast"
+   ],
+   "vrsta": "vijest"
+  },
+  {
+   "datum": "2026-11-13T18:02:13Z",
+   "naslov": "Watch the WoW: Forever Short Story, “Cost of Honor”",
+   "link": "https://us.forums.blizzard.com/en/wow/t/watch-the-wow-forever-short-story-%E2%80%9Ccost-of-honor%E2%80%9D/2414424/1",
+   "izvor": "Blizzard",
+   "sazetak": "Join Demar Brant for a special fireside telling of our newest short story to learn through tales of war, sacrifice, and hard choices, that the true strength of a people lies not in victory alone, but in the courage to protect one another…",
+   "oznake": [],
+   "vrsta": "vijest"
+  },
   {
    "datum": "2026-11-12T19:10:52Z",
    "naslov": "WoW: Forever Hotfixes - November 11, 2026",
@@ -382,26 +413,6 @@
    "izvor": "Wowhead",
    "sazetak": "BlizzCon has ended, but don't worry - we've wrapped up the big recaps from today's panels. Continue reading »",
    "oznake": [],
-   "vrsta": "vijest"
-  },
-  {
-   "datum": "2026-09-13T19:42:52Z",
-   "naslov": "WoW: Forever Webhook Now Available",
-   "link": "https://www.wowhead.com/news=382871/wow-forever-webhook-now-available",
-   "izvor": "Wowhead",
-   "sazetak": "We've created a new webhook for World of Warcraft: Forever, so you can keep up with all of the latest news and information regarding the newest flavor of WoW! Continue reading »",
-   "oznake": [],
-   "vrsta": "vijest"
-  },
-  {
-   "datum": "2026-09-13T05:51:05Z",
-   "naslov": "BlizzCon Day 1 Roundup: Classic+, Collectors Edition Fixes, and Everything You Might Have Missed",
-   "link": "https://www.wowhead.com/news=382857/blizzcon-day-1-roundup-classic-collectors-edition-fixes-and-everything-you-might",
-   "izvor": "Wowhead",
-   "sazetak": "The first day of Blizzcon is over, and there's so much new info our heads are spinning - so here's everything you might have missed! Continue reading »",
-   "oznake": [
-    "Klase"
-   ],
    "vrsta": "vijest"
   }
  ]
