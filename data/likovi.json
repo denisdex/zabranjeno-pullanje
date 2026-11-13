@@ -1,12 +1,12 @@
 {
- "azurirano": "2026-11-13T11:41:01Z",
+ "azurirano": "2026-11-13T13:40:44Z",
  "likovi": {
   "Saman Saulic": {
    "level": 32,
-   "xp": 29329,
+   "xp": 54126,
    "guild": "Kafana na Balkanu",
    "ilvl": 27,
-   "zadnjiLogin": "2026-11-13T00:59:59Z",
+   "zadnjiLogin": "2026-11-13T13:23:51Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -189,8 +189,7 @@
      "kvaliteta": "rare",
      "wowhead": 273841,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133046.jpg",
-     "ilvl": 28,
-     "enchant": "Windfury 1"
+     "ilvl": 28
     },
     {
      "slot": "Ranged",
@@ -245,9 +244,9 @@
     "armor": 567,
     "ap": 285,
     "spellPower": 21,
-    "crit": 10.13,
+    "crit": 10.21,
     "spellCrit": 9.4,
-    "rangedCrit": 0.65,
+    "rangedCrit": 0.81,
     "dodge": 5.13,
     "parry": 0.0,
     "block": 4.88,
@@ -257,25 +256,25 @@
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 6496,
+     "vrijednost": 6671,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Honored",
-     "vrijednost": 2557,
+     "vrijednost": 2788,
      "max": 12000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Honored",
-     "vrijednost": 1203,
+     "vrijednost": 1472,
      "max": 12000
     },
     {
      "ime": "Undercity",
      "status": "Friendly",
-     "vrijednost": 4065,
+     "vrijednost": 4483,
      "max": 6000
     },
     {
@@ -307,7 +306,7 @@
     {
      "kat": "Character",
      "ime": "Times camped",
-     "n": 83
+     "n": 84
     },
     {
      "kat": "Consumables",
@@ -327,7 +326,7 @@
     {
      "kat": "Consumables",
      "ime": "Beverages consumed",
-     "n": 94
+     "n": 98
     },
     {
      "kat": "Consumables",
@@ -347,7 +346,7 @@
     {
      "kat": "Reputation",
      "ime": "Total factions encountered",
-     "n": 18
+     "n": 20
     },
     {
      "kat": "Gear",
@@ -357,7 +356,7 @@
     {
      "kat": "Gear",
      "ime": "Greed rolls made on loot",
-     "n": 139
+     "n": 142
     },
     {
      "kat": "Gear",
@@ -412,17 +411,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 4684
+     "n": 4764
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 3474
+     "n": 3543
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 4652
+     "n": 4732
     },
     {
      "kat": "Creatures",
@@ -432,7 +431,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 2311,
+     "n": 2380,
      "opis": "Humanoid"
     },
     {
@@ -459,12 +458,12 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 2027
+     "n": 2090
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 1806
+     "n": 1869
     },
     {
      "kat": "Killing Blows",
@@ -505,7 +504,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 294
+     "n": 301
     },
     {
      "kat": "Quests",
@@ -560,7 +559,7 @@
     {
      "kat": "Secondary Skills",
      "ime": "Fishing skill",
-     "n": 163
+     "n": 168
     },
     {
      "kat": "Secondary Skills",
@@ -585,12 +584,12 @@
     {
      "kat": "Professions",
      "ime": "Highest Skinning skill",
-     "n": 210
+     "n": 213
     },
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 121
+     "n": 122
     },
     {
      "kat": "Travel",
@@ -601,40 +600,43 @@
    "questovi": {
     "uLogu": [
      "Elemental Aid",
+     "Bracers of Binding",
      "Compendium of the Fallen",
+     "Call to Arms",
      "Hunting in Stranglethorn",
+     "Dalaran Patrols",
      "Carved Centaur Totems",
      "The Grave Knight",
+     "Raising Spirits",
      "Craftsman's Writ: Pilferer's Gloves",
      "Helcular's Revenge",
+     "Foul Magics",
      "A Vengeful Fate",
      "Ordanus",
      "Changing Tastes",
      "Ancient Gurubashi Idol",
-     "Prison Break In",
      "Going, Going, Guano!",
      "Rig Wars",
      "Battle of Hillsbrad",
      "The Sacred Flame",
-     "The Hammer May Fall",
      "Centaur Bounty",
      "Stealing Supplies",
      "Family Tree",
+     "The Princess Trapped",
      "Source of Power",
      "Investigate the Camp",
      "Magram Alliance",
      "The Swarm Grows",
      "Elixir of Agony",
      "Blueleaf Tubers",
-     "Key to the City",
+     "Anyone Can Cook",
      "Thundering Hearts",
+     "Valuable Vantages",
      "Clam Bait",
      "Humbert's Sword",
-     "Test of Lore",
-     "To Steal From Thieves",
-     "Stone Tokens"
+     "Test of Lore"
     ],
-    "zavrseno": 361
+    "zavrseno": 368
    },
    "mountovi": [
     "Cerulean Prideclaw"
@@ -648,14 +650,14 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg",
-   "azurirano": "2026-11-13T01:41:17Z"
+   "azurirano": "2026-11-13T13:40:44Z"
   },
   "Melee Kitic": {
    "level": 29,
    "xp": 32812,
    "guild": "Kafana na Balkanu",
    "ilvl": 22,
-   "zadnjiLogin": "2026-11-13T11:01:01Z",
+   "zadnjiLogin": "2026-11-13T12:19:43Z",
    "izvor": "Blizzard API",
    "talenti": [
     3,
@@ -911,7 +913,7 @@
     {
      "kat": "Character",
      "ime": "Times camped",
-     "n": 20
+     "n": 32
     },
     {
      "kat": "Consumables",
@@ -1134,7 +1136,7 @@
     {
      "kat": "Secondary Skills",
      "ime": "First Aid skill",
-     "n": 72
+     "n": 74
     },
     {
      "kat": "Secondary Skills",
@@ -1144,7 +1146,7 @@
     {
      "kat": "Secondary Skills",
      "ime": "Fishing skill",
-     "n": 3
+     "n": 4
     },
     {
      "kat": "Secondary Skills",
@@ -1159,12 +1161,12 @@
     {
      "kat": "Professions",
      "ime": "Highest Blacksmithing skill",
-     "n": 101
+     "n": 110
     },
     {
      "kat": "Professions",
      "ime": "Blacksmithing Plans learned",
-     "n": 50
+     "n": 52
     },
     {
      "kat": "Professions",
@@ -1174,7 +1176,7 @@
     {
      "kat": "Professions",
      "ime": "Smelting Recipes learned",
-     "n": 19
+     "n": 18
     },
     {
      "kat": "Travel",
@@ -1228,7 +1230,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg",
-   "azurirano": "2026-11-13T11:41:01Z"
+   "azurirano": "2026-11-13T13:40:44Z"
   },
   "Janica Frostelich": {
    "level": 18,
@@ -3015,7 +3017,7 @@
    "azurirano": "2026-11-13T01:41:17Z"
   }
  },
- "provjereno": "2026-11-13T11:41:01Z",
+ "provjereno": "2026-11-13T13:40:44Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 8,
@@ -3030,7 +3032,7 @@
     "rang": 0,
     "slug": "saman-saulic",
     "ilvl": 27,
-    "zadnjiLogin": "2026-11-13T00:59:59Z",
+    "zadnjiLogin": "2026-11-13T13:23:51Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg"
    },
    {
@@ -3052,7 +3054,7 @@
     "rang": 3,
     "slug": "melee-kitic",
     "ilvl": 22,
-    "zadnjiLogin": "2026-11-13T11:01:01Z",
+    "zadnjiLogin": "2026-11-13T12:19:43Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg"
    },
    {
@@ -3067,6 +3069,17 @@
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg"
    },
    {
+    "ime": "Venos Xx",
+    "level": 30,
+    "klasa": "Druid",
+    "rasa": "Tauren",
+    "rang": 4,
+    "slug": "venos-xx",
+    "ilvl": 19,
+    "zadnjiLogin": "2026-11-13T13:35:29Z",
+    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/253/13774333-avatar.jpg"
+   },
+   {
     "ime": "Yuserious Son",
     "level": 28,
     "klasa": "Paladin",
@@ -3076,17 +3089,6 @@
     "ilvl": 23,
     "zadnjiLogin": "2026-11-12T20:52:26Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/6/6269702-avatar.jpg"
-   },
-   {
-    "ime": "Venos Xx",
-    "level": 28,
-    "klasa": "Druid",
-    "rasa": "Tauren",
-    "rang": 4,
-    "slug": "venos-xx",
-    "ilvl": 21,
-    "zadnjiLogin": "2026-11-13T00:05:56Z",
-    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/253/13774333-avatar.jpg"
    },
    {
     "ime": "Janica Frostelich",
@@ -3107,7 +3109,7 @@
     "rang": 4,
     "slug": "mate-bullic",
     "ilvl": 4,
-    "zadnjiLogin": "2026-11-12T22:54:29Z",
+    "zadnjiLogin": "2026-11-13T11:42:52Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/33/21412897-avatar.jpg"
    }
   ]
@@ -3198,6 +3200,11 @@
     "2026-11-13T01:41:17Z",
     32,
     29329
+   ],
+   [
+    "2026-11-13T13:40:44Z",
+    32,
+    54126
    ]
   ],
   "Melee Kitic": [
