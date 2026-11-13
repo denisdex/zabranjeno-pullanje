@@ -1,12 +1,12 @@
 {
- "azurirano": "2026-11-12T23:41:18Z",
+ "azurirano": "2026-11-13T01:41:17Z",
  "likovi": {
   "Saman Saulic": {
    "level": 32,
-   "xp": 5519,
+   "xp": 29329,
    "guild": "Kafana na Balkanu",
    "ilvl": 27,
-   "zadnjiLogin": "2026-11-12T17:04:28Z",
+   "zadnjiLogin": "2026-11-13T00:59:59Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -31,7 +31,7 @@
      "ime": "Mental Dexterity",
      "rang": 3,
      "stablo": "Enhancement",
-     "opis": "Increases your Attack Power by an amount equal to 150% of your Intellect."
+     "opis": "Increases your Attack Power by an amount equal to 100% of your Intellect."
     },
     {
      "ime": "Elemental Weapons",
@@ -55,7 +55,7 @@
      "ime": "Stormstrike",
      "rang": 1,
      "stablo": "Enhancement",
-     "opis": "Instantly strike for 150% weapon damage and increase the damage you deal to the target with your next Lightning Bolt, Chain Lightning, or Earth Shock spell by 20% for 12 sec."
+     "opis": "Instantly strike for 100% weapon damage and increase the damage you deal to the target with your next Lightning Bolt, Chain Lightning, or Earth Shock spell by 20% for 12 sec."
     },
     {
      "ime": "Improved Ghost Wolf",
@@ -177,11 +177,11 @@
     },
     {
      "slot": "Back",
-     "ime": "Scouting Cloak of Spirit",
+     "ime": "Lambent Scale Cloak",
      "kvaliteta": "uncommon",
-     "wowhead": 6585,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133754.jpg",
-     "ilvl": 20
+     "wowhead": 4706,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133758.jpg",
+     "ilvl": 24
     },
     {
      "slot": "Main Hand",
@@ -189,7 +189,8 @@
      "kvaliteta": "rare",
      "wowhead": 273841,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133046.jpg",
-     "ilvl": 28
+     "ilvl": 28,
+     "enchant": "Windfury 1"
     },
     {
      "slot": "Ranged",
@@ -209,7 +210,7 @@
     },
     {
      "name": "Skinning",
-     "skill": 210,
+     "skill": 213,
      "max": 225,
      "vrsta": "primarna"
     },
@@ -221,7 +222,7 @@
     },
     {
      "name": "Fishing",
-     "skill": 163,
+     "skill": 168,
      "max": 225,
      "vrsta": "sekundarna"
     },
@@ -236,45 +237,45 @@
     "hp": 970,
     "resurs": 1398,
     "resursIme": "Mana",
-    "str": 79,
+    "str": 83,
     "agi": 42,
     "sta": 78,
     "int": 63,
-    "spi": 104,
-    "armor": 565,
-    "ap": 308,
+    "spi": 103,
+    "armor": 567,
+    "ap": 285,
     "spellPower": 21,
-    "crit": 10.01,
+    "crit": 10.13,
     "spellCrit": 9.4,
-    "rangedCrit": 0.49,
-    "dodge": 4.89,
+    "rangedCrit": 0.65,
+    "dodge": 5.13,
     "parry": 0.0,
-    "block": 4.64,
-    "dps": 44.9
+    "block": 4.88,
+    "dps": 43.2
    },
    "reputacije": [
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 6315,
+     "vrijednost": 6496,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Honored",
-     "vrijednost": 2376,
+     "vrijednost": 2557,
      "max": 12000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Honored",
-     "vrijednost": 1022,
+     "vrijednost": 1203,
      "max": 12000
     },
     {
      "ime": "Undercity",
      "status": "Friendly",
-     "vrijednost": 3340,
+     "vrijednost": 4065,
      "max": 6000
     },
     {
@@ -326,7 +327,7 @@
     {
      "kat": "Consumables",
      "ime": "Beverages consumed",
-     "n": 86
+     "n": 94
     },
     {
      "kat": "Consumables",
@@ -361,7 +362,7 @@
     {
      "kat": "Gear",
      "ime": "Need rolls made on loot",
-     "n": 39
+     "n": 40
     },
     {
      "kat": "Player vs. Player",
@@ -411,17 +412,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 4473
+     "n": 4684
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 3343
+     "n": 3474
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 4441
+     "n": 4652
     },
     {
      "kat": "Creatures",
@@ -431,7 +432,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 2138,
+     "n": 2311,
      "opis": "Humanoid"
     },
     {
@@ -458,12 +459,12 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 1857
+     "n": 2027
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 1636
+     "n": 1806
     },
     {
      "kat": "Killing Blows",
@@ -474,7 +475,7 @@
     {
      "kat": "Deaths",
      "ime": "Total deaths",
-     "n": 42
+     "n": 43
     },
     {
      "kat": "Dungeons and Raids",
@@ -504,7 +505,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 287
+     "n": 294
     },
     {
      "kat": "Quests",
@@ -564,12 +565,12 @@
     {
      "kat": "Secondary Skills",
      "ime": "Fish caught",
-     "n": 306
+     "n": 329
     },
     {
      "kat": "Secondary Skills",
      "ime": "Fish and other things caught",
-     "n": 306
+     "n": 329
     },
     {
      "kat": "Professions",
@@ -589,7 +590,7 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 120
+     "n": 121
     },
     {
      "kat": "Travel",
@@ -605,6 +606,7 @@
      "Carved Centaur Totems",
      "The Grave Knight",
      "Craftsman's Writ: Pilferer's Gloves",
+     "Helcular's Revenge",
      "A Vengeful Fate",
      "Ordanus",
      "Changing Tastes",
@@ -612,11 +614,9 @@
      "Prison Break In",
      "Going, Going, Guano!",
      "Rig Wars",
+     "Battle of Hillsbrad",
      "The Sacred Flame",
      "The Hammer May Fall",
-     "Battle of Hillsbrad",
-     "Helcular's Revenge",
-     "Dangerous!",
      "Centaur Bounty",
      "Stealing Supplies",
      "Family Tree",
@@ -630,12 +630,11 @@
      "Thundering Hearts",
      "Clam Bait",
      "Humbert's Sword",
-     "Elixir of Pain",
      "Test of Lore",
      "To Steal From Thieves",
      "Stone Tokens"
     ],
-    "zavrseno": 354
+    "zavrseno": 361
    },
    "mountovi": [
     "Cerulean Prideclaw"
@@ -649,7 +648,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg",
-   "azurirano": "2026-11-12T17:41:33Z"
+   "azurirano": "2026-11-13T01:41:17Z"
   },
   "Melee Kitic": {
    "level": 29,
@@ -1736,11 +1735,11 @@
    "azurirano": "2026-11-08T21:54:18Z"
   },
   "Nikola Roguevic": {
-   "level": 30,
-   "xp": 37554,
+   "level": 31,
+   "xp": 1928,
    "guild": "Kafana na Balkanu",
    "ilvl": 22,
-   "zadnjiLogin": "2026-11-12T16:14:47Z",
+   "zadnjiLogin": "2026-11-13T01:00:17Z",
    "izvor": "Blizzard API",
    "talenti": [
     2,
@@ -1952,7 +1951,7 @@
     },
     {
      "name": "Skinning",
-     "skill": 198,
+     "skill": 203,
      "max": 225,
      "vrsta": "primarna"
     },
@@ -1976,48 +1975,48 @@
     }
    ],
    "statovi": {
-    "hp": 1118,
+    "hp": 1151,
     "resurs": 100,
     "resursIme": "Energy",
-    "str": 57,
-    "agi": 109,
-    "sta": 87,
+    "str": 58,
+    "agi": 110,
+    "sta": 88,
     "int": 34,
     "spi": 44,
-    "armor": 791,
-    "ap": 243,
+    "armor": 793,
+    "ap": 247,
     "spellPower": 0,
-    "crit": 8.3,
+    "crit": 8.09,
     "spellCrit": 0.0,
-    "rangedCrit": 7.98,
-    "dodge": 17.6,
-    "parry": 10.84,
+    "rangedCrit": 7.69,
+    "dodge": 17.18,
+    "parry": 10.76,
     "block": 0.0,
-    "dps": 37.7
+    "dps": 38.0
    },
    "reputacije": [
     {
      "ime": "Undercity",
      "status": "Honored",
-     "vrijednost": 5461,
+     "vrijednost": 5592,
      "max": 12000
     },
     {
      "ime": "Orgrimmar",
      "status": "Friendly",
-     "vrijednost": 5092,
+     "vrijednost": 5148,
      "max": 6000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Friendly",
-     "vrijednost": 3362,
+     "vrijednost": 3400,
      "max": 6000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Friendly",
-     "vrijednost": 3086,
+     "vrijednost": 3123,
      "max": 6000
     },
     {
@@ -2029,7 +2028,7 @@
     {
      "ime": "Durotar Supply and Logistics",
      "status": "Neutral",
-     "vrijednost": 2075,
+     "vrijednost": 2150,
      "max": 3000
     },
     {
@@ -2049,7 +2048,7 @@
     {
      "kat": "Character",
      "ime": "Times camped",
-     "n": 27
+     "n": 28
     },
     {
      "kat": "Consumables",
@@ -2080,7 +2079,7 @@
     {
      "kat": "Consumables",
      "ime": "Food eaten",
-     "n": 17
+     "n": 19
     },
     {
      "kat": "Reputation",
@@ -2095,7 +2094,7 @@
     {
      "kat": "Reputation",
      "ime": "Total factions encountered",
-     "n": 16
+     "n": 15
     },
     {
      "kat": "Gear",
@@ -2155,17 +2154,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 4256
+     "n": 4326
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 3221
+     "n": 3290
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 4211
+     "n": 4281
     },
     {
      "kat": "Creatures",
@@ -2175,7 +2174,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 2003,
+     "n": 2072,
      "opis": "Humanoid"
     },
     {
@@ -2202,17 +2201,17 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 2228
+     "n": 2290
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 1822
+     "n": 1884
     },
     {
      "kat": "Killing Blows",
      "ime": "Continent with the most Killing Blows",
-     "n": 1092,
+     "n": 1152,
      "opis": "Kalimdor"
     },
     {
@@ -2248,12 +2247,12 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 274
+     "n": 278
     },
     {
      "kat": "Quests",
      "ime": "Average quests completed per day",
-     "n": 274
+     "n": 278
     },
     {
      "kat": "Quests",
@@ -2328,22 +2327,22 @@
     {
      "kat": "Professions",
      "ime": "Highest Skinning skill",
-     "n": 198
+     "n": 203
     },
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 79
+     "n": 83
     },
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
-     "n": 19
+     "n": 20
     },
     {
      "kat": "Social",
      "ime": "Total times LOL'd",
-     "n": 39
+     "n": 43
     },
     {
      "kat": "Social",
@@ -2358,9 +2357,12 @@
      "Arikara",
      "Ancient Gurubashi Idol",
      "Frostmaw",
+     "Prison Break In",
      "Stonetalon Standstill",
-     "Craftsman's Writ: Crafted Solid Shot",
+     "The Kolkar of Desolace",
+     "The Hammer May Fall",
      "Battle of Hillsbrad",
+     "Helcular's Revenge",
      "Dangerous!",
      "Warsong Supplies",
      "Troll Charm",
@@ -2372,16 +2374,17 @@
      "WANTED: Syndicate Personnel",
      "Elixir of Agony",
      "Blueleaf Tubers",
+     "Key to the City",
      "Grimtotem Spying",
-     "Elixir of Suffering",
      "Humbert's Sword",
      "Vorsha the Lasher",
      "Elixir of Pain",
      "The Den",
      "Between a Rock and a Thistlefur",
-     "To Steal From Thieves"
+     "To Steal From Thieves",
+     "Stone Tokens"
     ],
-    "zavrseno": 325
+    "zavrseno": 329
    },
    "mountovi": [
     "Cerulean Prideclaw",
@@ -2399,14 +2402,14 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg",
-   "azurirano": "2026-11-12T17:41:33Z"
+   "azurirano": "2026-11-13T01:41:17Z"
   },
   "Arsen Deadic": {
    "level": 27,
-   "xp": 14508,
+   "xp": 21993,
    "guild": "Kafana na Balkanu",
    "ilvl": 19,
-   "zadnjiLogin": "2026-11-12T15:28:32Z",
+   "zadnjiLogin": "2026-11-13T00:59:56Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -2602,13 +2605,13 @@
     "armor": 1514,
     "ap": 255,
     "spellPower": 8,
-    "crit": 8.78,
+    "crit": 9.9,
     "spellCrit": 11.21,
     "rangedCrit": 0.14,
-    "dodge": 4.02,
-    "parry": 9.84,
-    "block": 4.84,
-    "dps": 38.6
+    "dodge": 4.14,
+    "parry": 9.96,
+    "block": 4.96,
+    "dps": 34.1
    },
    "reputacije": [
     {
@@ -2685,7 +2688,7 @@
     {
      "kat": "Consumables",
      "ime": "Mana potions consumed",
-     "n": 2
+     "n": 3
     },
     {
      "kat": "Consumables",
@@ -2780,17 +2783,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 3724
+     "n": 3777
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 2975
+     "n": 3028
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 3700
+     "n": 3753
     },
     {
      "kat": "Creatures",
@@ -2800,7 +2803,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 1604,
+     "n": 1642,
      "opis": "Humanoid"
     },
     {
@@ -2827,12 +2830,12 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 1481
+     "n": 1499
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 1238
+     "n": 1256
     },
     {
      "kat": "Killing Blows",
@@ -2953,7 +2956,7 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 53
+     "n": 55
     },
     {
      "kat": "Travel",
@@ -3009,10 +3012,10 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg",
-   "azurirano": "2026-11-12T15:42:02Z"
+   "azurirano": "2026-11-13T01:41:17Z"
   }
  },
- "provjereno": "2026-11-12T23:41:18Z",
+ "provjereno": "2026-11-13T01:41:17Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 8,
@@ -3027,18 +3030,18 @@
     "rang": 0,
     "slug": "saman-saulic",
     "ilvl": 27,
-    "zadnjiLogin": "2026-11-12T17:04:28Z",
+    "zadnjiLogin": "2026-11-13T00:59:59Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg"
    },
    {
     "ime": "Nikola Roguevic",
-    "level": 30,
+    "level": 31,
     "klasa": "Rogue",
     "rasa": "Undead",
     "rang": 1,
     "slug": "nikola-roguevic",
     "ilvl": 22,
-    "zadnjiLogin": "2026-11-12T16:14:47Z",
+    "zadnjiLogin": "2026-11-13T01:00:17Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg"
    },
    {
@@ -3060,7 +3063,7 @@
     "rang": 3,
     "slug": "arsen-deadic",
     "ilvl": 19,
-    "zadnjiLogin": "2026-11-12T15:28:32Z",
+    "zadnjiLogin": "2026-11-13T00:59:56Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg"
    },
    {
@@ -3081,8 +3084,8 @@
     "rasa": "Tauren",
     "rang": 4,
     "slug": "venos-xx",
-    "ilvl": 20,
-    "zadnjiLogin": "2026-11-12T21:59:53Z",
+    "ilvl": 21,
+    "zadnjiLogin": "2026-11-13T00:05:56Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/253/13774333-avatar.jpg"
    },
    {
@@ -3189,6 +3192,11 @@
     "2026-11-12T17:41:33Z",
     32,
     5519
+   ],
+   [
+    "2026-11-13T01:41:17Z",
+    32,
+    29329
    ]
   ],
   "Melee Kitic": [
@@ -3450,6 +3458,11 @@
     "2026-11-12T17:41:33Z",
     30,
     37554
+   ],
+   [
+    "2026-11-13T01:41:17Z",
+    31,
+    1928
    ]
   ],
   "Arsen Deadic": [
@@ -3537,6 +3550,11 @@
     "2026-11-12T15:42:02Z",
     27,
     14508
+   ],
+   [
+    "2026-11-13T01:41:17Z",
+    27,
+    21993
    ]
   ]
  }
