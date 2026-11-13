@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-13T09:41:05Z",
+ "azurirano": "2026-11-13T11:41:01Z",
  "likovi": {
   "Saman Saulic": {
    "level": 32,
@@ -652,10 +652,10 @@
   },
   "Melee Kitic": {
    "level": 29,
-   "xp": 29667,
+   "xp": 32812,
    "guild": "Kafana na Balkanu",
    "ilvl": 22,
-   "zadnjiLogin": "2026-11-13T07:42:54Z",
+   "zadnjiLogin": "2026-11-13T11:01:01Z",
    "izvor": "Blizzard API",
    "talenti": [
     3,
@@ -809,12 +809,12 @@
     {
      "name": "Mining",
      "skill": 130,
-     "max": 150,
+     "max": 225,
      "vrsta": "primarna"
     },
     {
      "name": "Blacksmithing",
-     "skill": 101,
+     "skill": 110,
      "max": 150,
      "vrsta": "primarna"
     },
@@ -826,13 +826,13 @@
     },
     {
      "name": "Fishing",
-     "skill": 3,
+     "skill": 4,
      "max": 75,
      "vrsta": "sekundarna"
     },
     {
      "name": "First Aid",
-     "skill": 72,
+     "skill": 74,
      "max": 150,
      "vrsta": "sekundarna"
     }
@@ -861,25 +861,25 @@
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 5302,
+     "vrijednost": 5308,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Honored",
-     "vrijednost": 1870,
+     "vrijednost": 1876,
      "max": 12000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Friendly",
-     "vrijednost": 5753,
+     "vrijednost": 5778,
      "max": 6000
     },
     {
      "ime": "Undercity",
      "status": "Friendly",
-     "vrijednost": 3083,
+     "vrijednost": 3090,
      "max": 6000
     },
     {
@@ -1089,7 +1089,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 246
+     "n": 249
     },
     {
      "kat": "Quests",
@@ -1149,12 +1149,12 @@
     {
      "kat": "Secondary Skills",
      "ime": "Fish caught",
-     "n": 2
+     "n": 3
     },
     {
      "kat": "Secondary Skills",
      "ime": "Fish and other things caught",
-     "n": 2
+     "n": 3
     },
     {
      "kat": "Professions",
@@ -1164,22 +1164,22 @@
     {
      "kat": "Professions",
      "ime": "Blacksmithing Plans learned",
-     "n": 46
+     "n": 50
     },
     {
      "kat": "Professions",
      "ime": "Highest Mining skill",
-     "n": 125
+     "n": 130
     },
     {
      "kat": "Professions",
      "ime": "Smelting Recipes learned",
-     "n": 15
+     "n": 19
     },
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 55
+     "n": 58
     },
     {
      "kat": "Travel",
@@ -1201,12 +1201,12 @@
      "A New Ore Sample",
      "Stop the Spread",
      "Ordanus",
+     "Arikara",
      "Rig Wars",
-     "Her Name Is Olgra",
      "The Sacred Flame",
+     "Journey to Tarren Mill",
      "Troll Charm",
      "Test of Endurance",
-     "Sacred Fire",
      "A Recipe For Death",
      "Watching the Roads",
      "Allegiance to the Old Gods",
@@ -1218,7 +1218,7 @@
      "Chief Engineer Scooty",
      "Arugal's Folly"
     ],
-    "zavrseno": 278
+    "zavrseno": 281
    },
    "mountovi": [],
    "petovi": [],
@@ -1228,7 +1228,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg",
-   "azurirano": "2026-11-13T09:41:05Z"
+   "azurirano": "2026-11-13T11:41:01Z"
   },
   "Janica Frostelich": {
    "level": 18,
@@ -3015,7 +3015,7 @@
    "azurirano": "2026-11-13T01:41:17Z"
   }
  },
- "provjereno": "2026-11-13T09:41:05Z",
+ "provjereno": "2026-11-13T11:41:01Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 8,
@@ -3052,7 +3052,7 @@
     "rang": 3,
     "slug": "melee-kitic",
     "ilvl": 22,
-    "zadnjiLogin": "2026-11-13T07:42:54Z",
+    "zadnjiLogin": "2026-11-13T11:01:01Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg"
    },
    {
@@ -3315,6 +3315,11 @@
     "2026-11-13T09:41:05Z",
     29,
     29667
+   ],
+   [
+    "2026-11-13T11:41:01Z",
+    29,
+    32812
    ]
   ],
   "Janica Frostelich": [

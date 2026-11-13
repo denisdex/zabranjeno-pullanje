@@ -38,7 +38,7 @@
         },
         {
           "name": "Blacksmithing",
-          "skill": 101,
+          "skill": 110,
           "phase": "stalno"
         }
       ],
@@ -49,11 +49,11 @@
         },
         {
           "name": "Fishing",
-          "skill": 3
+          "skill": 4
         },
         {
           "name": "First Aid",
-          "skill": 72
+          "skill": 74
         }
       ]
     },
@@ -1006,6 +1006,24 @@
       "character": "warrior",
       "profession": "Mining",
       "skill": 130
+    },
+    {
+      "date": "2026-11-13",
+      "character": "warrior",
+      "profession": "Blacksmithing",
+      "skill": 110
+    },
+    {
+      "date": "2026-11-13",
+      "character": "warrior",
+      "profession": "Fishing",
+      "skill": 4
+    },
+    {
+      "date": "2026-11-13",
+      "character": "warrior",
+      "profession": "First Aid",
+      "skill": 74
     }
   ],
   "flows": [
