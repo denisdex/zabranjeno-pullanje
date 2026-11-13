@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-13T03:42:24Z",
+ "azurirano": "2026-11-13T05:42:17Z",
  "likovi": {
   "Saman Saulic": {
    "level": 32,
@@ -1736,10 +1736,10 @@
   },
   "Nikola Roguevic": {
    "level": 31,
-   "xp": 1928,
+   "xp": 11495,
    "guild": "Kafana na Balkanu",
    "ilvl": 22,
-   "zadnjiLogin": "2026-11-13T01:00:17Z",
+   "zadnjiLogin": "2026-11-13T04:40:56Z",
    "izvor": "Blizzard API",
    "talenti": [
     2,
@@ -1923,7 +1923,8 @@
      "kvaliteta": "rare",
      "wowhead": 16886,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135343.jpg",
-     "ilvl": 32
+     "ilvl": 32,
+     "enchant": "Instant Poison (1 |4Charge:Charges;)"
     },
     {
      "slot": "Off Hand",
@@ -1986,11 +1987,11 @@
     "armor": 793,
     "ap": 247,
     "spellPower": 0,
-    "crit": 8.09,
+    "crit": 8.17,
     "spellCrit": 0.0,
-    "rangedCrit": 7.69,
-    "dodge": 17.18,
-    "parry": 10.76,
+    "rangedCrit": 7.93,
+    "dodge": 17.3,
+    "parry": 10.88,
     "block": 0.0,
     "dps": 38.0
    },
@@ -2022,7 +2023,7 @@
     {
      "ime": "Ratchet",
      "status": "Friendly",
-     "vrijednost": 514,
+     "vrijednost": 614,
      "max": 6000
     },
     {
@@ -2034,13 +2035,13 @@
     {
      "ime": "Everlook",
      "status": "Neutral",
-     "vrijednost": 2007,
+     "vrijednost": 2057,
      "max": 3000
     },
     {
      "ime": "Booty Bay",
      "status": "Neutral",
-     "vrijednost": 2007,
+     "vrijednost": 2057,
      "max": 3000
     }
    ],
@@ -2053,7 +2054,7 @@
     {
      "kat": "Consumables",
      "ime": "Bandages used",
-     "n": 17
+     "n": 20
     },
     {
      "kat": "Consumables",
@@ -2074,7 +2075,7 @@
     {
      "kat": "Consumables",
      "ime": "Beverages consumed",
-     "n": 11
+     "n": 12
     },
     {
      "kat": "Consumables",
@@ -2154,17 +2155,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 4326
+     "n": 4395
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 3290
+     "n": 3359
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 4281
+     "n": 4350
     },
     {
      "kat": "Creatures",
@@ -2201,17 +2202,17 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 2290
+     "n": 2359
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 1884
+     "n": 1953
     },
     {
      "kat": "Killing Blows",
      "ime": "Continent with the most Killing Blows",
-     "n": 1152,
+     "n": 1221,
      "opis": "Kalimdor"
     },
     {
@@ -2247,12 +2248,12 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 278
+     "n": 279
     },
     {
      "kat": "Quests",
      "ime": "Average quests completed per day",
-     "n": 278
+     "n": 279
     },
     {
      "kat": "Quests",
@@ -2366,7 +2367,6 @@
      "Dangerous!",
      "Warsong Supplies",
      "Troll Charm",
-     "Satyr Horns",
      "The Rescue",
      "Source of Power",
      "The Swarm Grows",
@@ -2402,7 +2402,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg",
-   "azurirano": "2026-11-13T01:41:17Z"
+   "azurirano": "2026-11-13T05:42:17Z"
   },
   "Arsen Deadic": {
    "level": 27,
@@ -3015,7 +3015,7 @@
    "azurirano": "2026-11-13T01:41:17Z"
   }
  },
- "provjereno": "2026-11-13T03:42:24Z",
+ "provjereno": "2026-11-13T05:42:17Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 8,
@@ -3041,7 +3041,7 @@
     "rang": 1,
     "slug": "nikola-roguevic",
     "ilvl": 22,
-    "zadnjiLogin": "2026-11-13T01:00:17Z",
+    "zadnjiLogin": "2026-11-13T04:40:56Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg"
    },
    {
@@ -3464,6 +3464,11 @@
     "2026-11-13T01:41:17Z",
     31,
     1928
+   ],
+   [
+    "2026-11-13T05:42:17Z",
+    31,
+    11495
    ]
   ],
   "Arsen Deadic": [
