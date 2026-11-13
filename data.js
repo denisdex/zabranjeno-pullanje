@@ -3,7 +3,7 @@
 window.HORDE = {
   ekipa: "Zaprešić Horde",
   guild: "Kafana na Balkanu",
-  azurirano: "2026-11-12",
+  azurirano: "2026-11-13",
 
   // Vremena u UTC. Studeni je CET (UTC+1).
   // Rezervacija imena: do 3. 11. 2026. u 23:59 po Zagrebu.
@@ -75,7 +75,7 @@ window.HORDE = {
   // portret (foto) je 720×960 izrez iz istog kadra; oci i ociSiroka već uračunavaju 4 % povećanja slike na kartici
   // imena: gdje se govori o ljudima piše igrac (Pero, Niksa, Karken, Žuga, Dex); lik samo kao naslov kartice/profila i u kontekstu igre
   igraci: [
-    { igrac: "Niksa",   lik: "Saman Saulic",    klasa: "Shaman",  rasa: "Orc",    uloga: "Healer",     level: 30, foto: "assets/likovi/saman-saulic.jpg",
+    { igrac: "Niksa",   lik: "Saman Saulic",    klasa: "Shaman",  rasa: "Orc",    uloga: "Healer",     level: 31, foto: "assets/likovi/saman-saulic.jpg",
       siroka: "assets/likovi/saman-saulic-wide.jpg", fokus: [50.3, 18],
       // savjeti po levelu, u profilu u bloku "Što sad"
       trikovi: [
@@ -108,7 +108,7 @@ window.HORDE = {
         ],
         biljeske: "Healer grupe. Kad kaže mana, svi stanu."
       } },
-    { igrac: "Pero",    lik: "Melee Kitic",      klasa: "Warrior", rasa: "Orc",    uloga: "Melee DPS",  level: 26, foto: "assets/likovi/melee-kitic.jpg", boja: "#D9853B",
+    { igrac: "Pero",    lik: "Melee Kitic",      klasa: "Warrior", rasa: "Orc",    uloga: "Melee DPS",  level: 28, foto: "assets/likovi/melee-kitic.jpg", boja: "#D9853B",
       siroka: "assets/likovi/melee-kitic-wide.jpg", fokus: [50.3, 28.8],
       // savjeti po levelu, u profilu u bloku "Što sad"
       trikovi: [
@@ -173,7 +173,7 @@ window.HORDE = {
         ],
         biljeske: "Voda i hrana za ekipu, Polymorph na drugi target."
       } },
-    { igrac: "Žuga",    lik: "Nikola Roguevic",  klasa: "Rogue",   rasa: "Undead", uloga: "Melee DPS",  level: 28, foto: "assets/likovi/nikola-roguevic.jpg", oci: [[48.7, 14.2], [54.2, 14.1]],
+    { igrac: "Žuga",    lik: "Nikola Roguevic",  klasa: "Rogue",   rasa: "Undead", uloga: "Melee DPS",  level: 29, foto: "assets/likovi/nikola-roguevic.jpg", oci: [[48.7, 14.2], [54.2, 14.1]],
       siroka: "assets/likovi/nikola-roguevic-wide.jpg", fokus: [48.8, 16.6], ociSiroka: [[47.7, 14.2], [50.0, 14.1]],
       // savjeti po levelu, u profilu u bloku "Što sad"
       trikovi: [
@@ -205,7 +205,7 @@ window.HORDE = {
         ],
         biljeske: "Sap na drugi target prije pulla, kad Dex kaže."
       } },
-    { igrac: "Dex",     lik: "Arsen Deadic",     klasa: "Paladin", rasa: "Undead", uloga: "Tank",       level: 26, foto: "assets/likovi/arsen-deadic.jpg", oci: [[57.4, 18.5], [61.4, 19.0]],
+    { igrac: "Dex",     lik: "Arsen Deadic",     klasa: "Paladin", rasa: "Undead", uloga: "Tank",       level: 27, foto: "assets/likovi/arsen-deadic.jpg", oci: [[57.4, 18.5], [61.4, 19.0]],
       siroka: "assets/likovi/arsen-deadic-wide.jpg", fokus: [54.2, 20.1], ociSiroka: [[54.4, 18.6], [56.1, 19.0]],
       // savjeti po levelu, u profilu u bloku "Što sad"
       trikovi: [
@@ -618,6 +618,11 @@ window.HORDE = {
   // Stavka: { tekst, za: [klase/rase ili "Svi"], tema: kratka oznaka što se mijenja (Racial, Spell, Rage, XP, Dungeoni, Loot, Zona...) }
   izvorNovosti: "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
   novosti: [
+    { datum: "2026-11-12", naslov: "Enhancement promjene tek sad u igri, AH promjene odgođene", stavke: [
+      { tekst: "Promjene od 10. 11. (Stormstrike 100% weapon damagea uz 8 s cooldown, Mental Dexterity 33/66/100%, Maelstrom Weapon 20% po stacku i 6–10 aktivacija u minuti, imbue i totem zajedno) zbog kašnjenja su u igri tek od 12. 11. u 19:45 po našem vremenu.", za: ["Shaman"], tema: "Nerf" },
+      { tekst: "Tooltip Maelstrom Weapona sad pokazuje šansu za aktivaciju po brzini main hand oružja (npr. s 5 bodova i oružjem brzine 3.6 piše 60%, s 2.0 piše 33%).", za: ["Shaman"], tema: "Talent" },
+      { tekst: "Promjene na Auction Houseu (npr. minimalni deposit 1 copper) privremeno povučene; vraćaju se s tjednim maintenanceom 17. 11.", za: ["Svi"], tema: "Bug fix" }
+    ] },
     { datum: "2026-11-11", naslov: "Hotfixovi: Judgement kao ranged napad, Tailoring torbe i Riverglades", stavke: [
       { tekst: "Judgement se sad računa kao Ranged Attack: više ne aktivira melee procove s itema i efekata i koristi Ranged Hit chance.", za: ["Paladin"], tema: "Spell" },
       { tekst: "Unsealed Fury (Retribution) više ne stvara echo od napada iz Windfury Totema.", za: ["Paladin"], tema: "Bug fix" },
