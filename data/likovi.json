@@ -1,16 +1,16 @@
 {
- "azurirano": "2026-11-13T13:40:44Z",
+ "azurirano": "2026-11-13T15:40:36Z",
  "likovi": {
   "Saman Saulic": {
-   "level": 32,
-   "xp": 54126,
+   "level": 33,
+   "xp": 6518,
    "guild": "Kafana na Balkanu",
    "ilvl": 27,
-   "zadnjiLogin": "2026-11-13T13:23:51Z",
+   "zadnjiLogin": "2026-11-13T14:57:41Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
-    23,
+    24,
     0
    ],
    "specka": "Enhancement",
@@ -47,9 +47,9 @@
     },
     {
      "ime": "Flurry",
-     "rang": 2,
+     "rang": 3,
      "stablo": "Enhancement",
-     "opis": "Increases your attack speed by 12% for your next 3 swings after dealing a melee critical strike."
+     "opis": "Increases your attack speed by 18% for your next 3 swings after dealing a melee critical strike."
     },
     {
      "ime": "Stormstrike",
@@ -189,7 +189,8 @@
      "kvaliteta": "rare",
      "wowhead": 273841,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133046.jpg",
-     "ilvl": 28
+     "ilvl": 28,
+     "enchant": "Windfury 1"
     },
     {
      "slot": "Ranged",
@@ -209,7 +210,7 @@
     },
     {
      "name": "Skinning",
-     "skill": 213,
+     "skill": 217,
      "max": 225,
      "vrsta": "primarna"
     },
@@ -233,48 +234,48 @@
     }
    ],
    "statovi": {
-    "hp": 970,
-    "resurs": 1398,
+    "hp": 1004,
+    "resurs": 1462,
     "resursIme": "Mana",
-    "str": 83,
+    "str": 84,
     "agi": 42,
-    "sta": 78,
-    "int": 63,
-    "spi": 103,
+    "sta": 79,
+    "int": 65,
+    "spi": 104,
     "armor": 567,
-    "ap": 285,
+    "ap": 291,
     "spellPower": 21,
-    "crit": 10.21,
-    "spellCrit": 9.4,
-    "rangedCrit": 0.81,
-    "dodge": 5.13,
+    "crit": 9.96,
+    "spellCrit": 9.39,
+    "rangedCrit": 0.53,
+    "dodge": 4.88,
     "parry": 0.0,
-    "block": 4.88,
-    "dps": 43.2
+    "block": 4.72,
+    "dps": 43.7
    },
    "reputacije": [
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 6671,
+     "vrijednost": 6696,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Honored",
-     "vrijednost": 2788,
+     "vrijednost": 2813,
      "max": 12000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Honored",
-     "vrijednost": 1472,
+     "vrijednost": 1497,
      "max": 12000
     },
     {
      "ime": "Undercity",
      "status": "Friendly",
-     "vrijednost": 4483,
+     "vrijednost": 4583,
      "max": 6000
     },
     {
@@ -306,7 +307,7 @@
     {
      "kat": "Character",
      "ime": "Times camped",
-     "n": 84
+     "n": 91
     },
     {
      "kat": "Consumables",
@@ -326,7 +327,7 @@
     {
      "kat": "Consumables",
      "ime": "Beverages consumed",
-     "n": 98
+     "n": 99
     },
     {
      "kat": "Consumables",
@@ -346,7 +347,7 @@
     {
      "kat": "Reputation",
      "ime": "Total factions encountered",
-     "n": 20
+     "n": 18
     },
     {
      "kat": "Gear",
@@ -411,17 +412,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 4764
+     "n": 4777
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 3543
+     "n": 3556
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 4732
+     "n": 4745
     },
     {
      "kat": "Creatures",
@@ -431,7 +432,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 2380,
+     "n": 2383,
      "opis": "Humanoid"
     },
     {
@@ -458,12 +459,12 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 2090
+     "n": 2103
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 1869
+     "n": 1882
     },
     {
      "kat": "Killing Blows",
@@ -474,7 +475,7 @@
     {
      "kat": "Deaths",
      "ime": "Total deaths",
-     "n": 43
+     "n": 44
     },
     {
      "kat": "Dungeons and Raids",
@@ -489,7 +490,7 @@
     {
      "kat": "World",
      "ime": "Deaths from falling",
-     "n": 3
+     "n": 4
     },
     {
      "kat": "Resurrection",
@@ -504,7 +505,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 301
+     "n": 302
     },
     {
      "kat": "Quests",
@@ -589,7 +590,7 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 122
+     "n": 125
     },
     {
      "kat": "Travel",
@@ -599,6 +600,7 @@
    ],
    "questovi": {
     "uLogu": [
+     "Elixir of Agony",
      "Elemental Aid",
      "Bracers of Binding",
      "Compendium of the Fallen",
@@ -627,7 +629,6 @@
      "Investigate the Camp",
      "Magram Alliance",
      "The Swarm Grows",
-     "Elixir of Agony",
      "Blueleaf Tubers",
      "Anyone Can Cook",
      "Thundering Hearts",
@@ -636,7 +637,7 @@
      "Humbert's Sword",
      "Test of Lore"
     ],
-    "zavrseno": 368
+    "zavrseno": 369
    },
    "mountovi": [
     "Cerulean Prideclaw"
@@ -650,7 +651,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg",
-   "azurirano": "2026-11-13T13:40:44Z"
+   "azurirano": "2026-11-13T15:40:36Z"
   },
   "Melee Kitic": {
    "level": 29,
@@ -3017,7 +3018,7 @@
    "azurirano": "2026-11-13T01:41:17Z"
   }
  },
- "provjereno": "2026-11-13T13:40:44Z",
+ "provjereno": "2026-11-13T15:40:36Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 8,
@@ -3026,13 +3027,13 @@
   "roster": [
    {
     "ime": "Saman Saulic",
-    "level": 32,
+    "level": 33,
     "klasa": "Shaman",
     "rasa": "Orc",
     "rang": 0,
     "slug": "saman-saulic",
     "ilvl": 27,
-    "zadnjiLogin": "2026-11-13T13:23:51Z",
+    "zadnjiLogin": "2026-11-13T14:57:41Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg"
    },
    {
@@ -3087,7 +3088,7 @@
     "rang": 4,
     "slug": "yuserious-son",
     "ilvl": 23,
-    "zadnjiLogin": "2026-11-12T20:52:26Z",
+    "zadnjiLogin": "2026-11-13T14:53:53Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/6/6269702-avatar.jpg"
    },
    {
@@ -3205,6 +3206,11 @@
     "2026-11-13T13:40:44Z",
     32,
     54126
+   ],
+   [
+    "2026-11-13T15:40:36Z",
+    33,
+    6518
    ]
   ],
   "Melee Kitic": [

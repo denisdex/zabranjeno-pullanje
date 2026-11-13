@@ -72,7 +72,7 @@
         },
         {
           "name": "Skinning",
-          "skill": 213,
+          "skill": 217,
           "phase": "stalno"
         }
       ],
@@ -1024,6 +1024,12 @@
       "character": "warrior",
       "profession": "First Aid",
       "skill": 74
+    },
+    {
+      "date": "2026-11-13",
+      "character": "shaman",
+      "profession": "Skinning",
+      "skill": 217
     }
   ],
   "flows": [
