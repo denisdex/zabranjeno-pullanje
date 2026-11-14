@@ -33,7 +33,7 @@
       "professions": [
         {
           "name": "Mining",
-          "skill": 148,
+          "skill": 153,
           "phase": "stalno"
         },
         {
@@ -1078,6 +1078,12 @@
       "character": "shaman",
       "profession": "Fishing",
       "skill": 169
+    },
+    {
+      "date": "2026-11-14",
+      "character": "warrior",
+      "profession": "Mining",
+      "skill": 153
     }
   ],
   "flows": [
