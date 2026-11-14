@@ -1,12 +1,12 @@
 {
- "azurirano": "2026-11-14T19:37:05Z",
+ "azurirano": "2026-11-14T21:37:13Z",
  "likovi": {
   "Saman Saulic": {
-   "level": 34,
-   "xp": 15946,
+   "level": 35,
+   "xp": 21444,
    "guild": "Kafana na Balkanu",
-   "ilvl": 27,
-   "zadnjiLogin": "2026-11-14T14:11:10Z",
+   "ilvl": 29,
+   "zadnjiLogin": "2026-11-14T20:55:13Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -79,19 +79,19 @@
    "oprema": [
     {
      "slot": "Head",
-     "ime": "Spirit Hunter Headdress",
-     "kvaliteta": "uncommon",
-     "wowhead": 6720,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133119.jpg",
-     "ilvl": 37
+     "ime": "Geomancer Headdress",
+     "kvaliteta": "rare",
+     "wowhead": 274155,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133116.jpg",
+     "ilvl": 30
     },
     {
      "slot": "Neck",
-     "ime": "Snake Eye Kaleidoscope",
-     "kvaliteta": "rare",
-     "wowhead": 273088,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133884.jpg",
-     "ilvl": 22
+     "ime": "Kodobone Necklace",
+     "kvaliteta": "uncommon",
+     "wowhead": 15690,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133296.jpg",
+     "ilvl": 41
     },
     {
      "slot": "Shoulder",
@@ -111,35 +111,35 @@
     },
     {
      "slot": "Waist",
-     "ime": "Screecher Belt",
+     "ime": "Greenweave Sash of Healing",
      "kvaliteta": "uncommon",
-     "wowhead": 16987,
+     "wowhead": 9766,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132494.jpg",
-     "ilvl": 27
+     "ilvl": 22
     },
     {
      "slot": "Legs",
-     "ime": "Sea Dog Britches",
-     "kvaliteta": "uncommon",
-     "wowhead": 5310,
+     "ime": "Gaze Dreamer Pants",
+     "kvaliteta": "rare",
+     "wowhead": 6903,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/134582.jpg",
-     "ilvl": 20
+     "ilvl": 28
     },
     {
      "slot": "Feet",
-     "ime": "Draftsman Boots",
+     "ime": "Kodo Rustler Boots",
      "kvaliteta": "uncommon",
-     "wowhead": 6668,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132537.jpg",
-     "ilvl": 27
+     "wowhead": 15697,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132543.jpg",
+     "ilvl": 38
     },
     {
      "slot": "Wrist",
-     "ime": "Bands of Serra'kis",
+     "ime": "Witherbite Bracers",
      "kvaliteta": "rare",
-     "wowhead": 6902,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132607.jpg",
-     "ilvl": 27
+     "wowhead": 271202,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132606.jpg",
+     "ilvl": 20
     },
     {
      "slot": "Hands",
@@ -151,11 +151,11 @@
     },
     {
      "slot": "Finger 1",
-     "ime": "Harpy Claw Ring",
+     "ime": "Tiger Band",
      "kvaliteta": "uncommon",
-     "wowhead": 281252,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133345.jpg",
-     "ilvl": 26
+     "wowhead": 6749,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133355.jpg",
+     "ilvl": 32
     },
     {
      "slot": "Finger 2",
@@ -183,11 +183,11 @@
     },
     {
      "slot": "Back",
-     "ime": "Lambent Scale Cloak",
+     "ime": "Cutthroat's Cape of the Whale",
      "kvaliteta": "uncommon",
-     "wowhead": 4706,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133758.jpg",
-     "ilvl": 24
+     "wowhead": 15135,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133760.jpg",
+     "ilvl": 30
     },
     {
      "slot": "Main Hand",
@@ -195,7 +195,8 @@
      "kvaliteta": "rare",
      "wowhead": 273841,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133046.jpg",
-     "ilvl": 28
+     "ilvl": 28,
+     "enchant": "Windfury 1"
     },
     {
      "slot": "Ranged",
@@ -221,13 +222,13 @@
     },
     {
      "name": "Cooking",
-     "skill": 35,
-     "max": 75,
+     "skill": 68,
+     "max": 150,
      "vrsta": "sekundarna"
     },
     {
      "name": "Fishing",
-     "skill": 169,
+     "skill": 173,
      "max": 225,
      "vrsta": "sekundarna"
     },
@@ -239,72 +240,72 @@
     }
    ],
    "statovi": {
-    "hp": 1039,
-    "resurs": 1496,
+    "hp": 1095,
+    "resurs": 1590,
     "resursIme": "Mana",
-    "str": 85,
-    "agi": 43,
-    "sta": 80,
-    "int": 66,
-    "spi": 105,
-    "armor": 569,
-    "ap": 296,
-    "spellPower": 21,
-    "crit": 10.05,
-    "spellCrit": 9.37,
-    "rangedCrit": 0.41,
-    "dodge": 5.01,
-    "parry": 4.76,
-    "block": 4.76,
-    "dps": 44.0
+    "str": 71,
+    "agi": 36,
+    "sta": 84,
+    "int": 70,
+    "spi": 125,
+    "armor": 505,
+    "ap": 262,
+    "spellPower": 46,
+    "crit": 9.41,
+    "spellCrit": 9.42,
+    "rangedCrit": 0.0,
+    "dodge": 4.25,
+    "parry": 4.72,
+    "block": 4.72,
+    "dps": 41.6
    },
    "reputacije": [
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 7233,
+     "vrijednost": 7540,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Honored",
-     "vrijednost": 3132,
+     "vrijednost": 3476,
      "max": 12000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Honored",
-     "vrijednost": 1666,
+     "vrijednost": 1991,
      "max": 12000
     },
     {
      "ime": "Undercity",
      "status": "Friendly",
-     "vrijednost": 4790,
+     "vrijednost": 5171,
      "max": 6000
     },
     {
      "ime": "Ratchet",
      "status": "Friendly",
-     "vrijednost": 1687,
+     "vrijednost": 1912,
      "max": 6000
     },
     {
      "ime": "Gelkis Clan Centaur",
      "status": "Friendly",
-     "vrijednost": 279,
+     "vrijednost": 1339,
      "max": 6000
     },
     {
      "ime": "Booty Bay",
      "status": "Neutral",
-     "vrijednost": 2650,
+     "vrijednost": 2762,
      "max": 3000
     },
     {
      "ime": "Everlook",
      "status": "Neutral",
-     "vrijednost": 2612,
+     "vrijednost": 2725,
      "max": 3000
     }
    ],
@@ -312,7 +313,7 @@
     {
      "kat": "Character",
      "ime": "Times camped",
-     "n": 93
+     "n": 94
     },
     {
      "kat": "Consumables",
@@ -332,12 +333,12 @@
     {
      "kat": "Consumables",
      "ime": "Beverages consumed",
-     "n": 120
+     "n": 134
     },
     {
      "kat": "Consumables",
      "ime": "Food eaten",
-     "n": 8
+     "n": 12
     },
     {
      "kat": "Reputation",
@@ -362,12 +363,12 @@
     {
      "kat": "Gear",
      "ime": "Greed rolls made on loot",
-     "n": 143
+     "n": 164
     },
     {
      "kat": "Gear",
      "ime": "Need rolls made on loot",
-     "n": 40
+     "n": 46
     },
     {
      "kat": "Player vs. Player",
@@ -382,7 +383,7 @@
     {
      "kat": "Dungeons & Raids",
      "ime": "Total 5-player dungeons entered",
-     "n": 10
+     "n": 11
     },
     {
      "kat": "Boss Kills",
@@ -415,19 +416,24 @@
      "n": 1
     },
     {
+     "kat": "Boss Kills",
+     "ime": "Charlga Razorflank kills (Razorfen Kraul)",
+     "n": 1
+    },
+    {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 4951
+     "n": 5240
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 3728
+     "n": 3915
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 4919
+     "n": 5208
     },
     {
      "kat": "Creatures",
@@ -437,7 +443,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 2433,
+     "n": 2628,
      "opis": "Humanoid"
     },
     {
@@ -464,23 +470,23 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 2273
+     "n": 2414
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 2052
+     "n": 2133
     },
     {
      "kat": "Killing Blows",
      "ime": "Continent with the most Killing Blows",
-     "n": 1371,
+     "n": 1452,
      "opis": "Kalimdor"
     },
     {
      "kat": "Deaths",
      "ime": "Total deaths",
-     "n": 46
+     "n": 48
     },
     {
      "kat": "Dungeons and Raids",
@@ -491,6 +497,11 @@
      "kat": "Dungeons and Raids",
      "ime": "Total deaths in 5-player dungeons",
      "n": 6
+    },
+    {
+     "kat": "World",
+     "ime": "Deaths from drowning",
+     "n": 1
     },
     {
      "kat": "World",
@@ -510,7 +521,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 326
+     "n": 341
     },
     {
      "kat": "Quests",
@@ -520,7 +531,7 @@
     {
      "kat": "Quests",
      "ime": "Quests abandoned",
-     "n": 39
+     "n": 40
     },
     {
      "kat": "Skills",
@@ -545,12 +556,12 @@
     {
      "kat": "Secondary Skills",
      "ime": "Cooking skill",
-     "n": 35
+     "n": 68
     },
     {
      "kat": "Secondary Skills",
      "ime": "Cooking Recipes known",
-     "n": 14
+     "n": 18
     },
     {
      "kat": "Secondary Skills",
@@ -565,17 +576,17 @@
     {
      "kat": "Secondary Skills",
      "ime": "Fishing skill",
-     "n": 168
+     "n": 173
     },
     {
      "kat": "Secondary Skills",
      "ime": "Fish caught",
-     "n": 335
+     "n": 349
     },
     {
      "kat": "Secondary Skills",
      "ime": "Fish and other things caught",
-     "n": 335
+     "n": 349
     },
     {
      "kat": "Professions",
@@ -595,18 +606,23 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 137
+     "n": 140
     },
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
      "n": 20
+    },
+    {
+     "kat": "Social",
+     "ime": "Total times LOL'd",
+     "n": 1
     }
    ],
    "questovi": {
     "uLogu": [
+     "Ongeku",
      "Elemental Aid",
-     "Bracers of Binding",
      "Elixir of Agony",
      "Compendium of the Fallen",
      "Hunting in Stranglethorn",
@@ -624,11 +640,9 @@
      "Dragonmaw Rumors",
      "Hostile Takeover",
      "The Sacred Flame",
-     "Centaur Bounty",
+     "Catch of the Day",
      "Parts of the Swarm",
-     "Stealing Supplies",
      "Hemet Nesingwary",
-     "Family Tree",
      "The Princess Trapped",
      "Bloodscalp Ears",
      "Source of Power",
@@ -636,14 +650,15 @@
      "Blueleaf Tubers",
      "Anyone Can Cook",
      "Thundering Hearts",
-     "Clam Bait",
      "Humbert's Sword",
      "Test of Lore",
      "Goblin Sponsorship",
      "Supply and Demand",
-     "Martek the Exiled"
+     "The Corrupter",
+     "Martek the Exiled",
+     "An Unholy Alliance"
     ],
-    "zavrseno": 393
+    "zavrseno": 409
    },
    "mountovi": [
     "Cerulean Prideclaw"
@@ -657,7 +672,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg",
-   "azurirano": "2026-11-14T15:38:23Z"
+   "azurirano": "2026-11-14T21:37:13Z"
   },
   "Melee Kitic": {
    "level": 30,
@@ -3058,7 +3073,7 @@
    "azurirano": "2026-11-14T01:39:22Z"
   }
  },
- "provjereno": "2026-11-14T19:37:05Z",
+ "provjereno": "2026-11-14T21:37:13Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3067,13 +3082,13 @@
   "roster": [
    {
     "ime": "Saman Saulic",
-    "level": 34,
+    "level": 35,
     "klasa": "Shaman",
     "rasa": "Orc",
     "rang": 0,
     "slug": "saman-saulic",
-    "ilvl": 27,
-    "zadnjiLogin": "2026-11-14T14:11:10Z",
+    "ilvl": 29,
+    "zadnjiLogin": "2026-11-14T20:55:13Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg"
    },
    {
@@ -3128,7 +3143,7 @@
     "rang": 4,
     "slug": "yuserious-son",
     "ilvl": 24,
-    "zadnjiLogin": "2026-11-14T01:46:45Z",
+    "zadnjiLogin": "2026-11-14T20:21:20Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/6/6269702-avatar.jpg"
    },
    {
@@ -3272,6 +3287,11 @@
     "2026-11-13T23:40:04Z",
     34,
     15946
+   ],
+   [
+    "2026-11-14T21:37:13Z",
+    35,
+    21444
    ]
   ],
   "Melee Kitic": [

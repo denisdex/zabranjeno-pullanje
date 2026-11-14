@@ -79,11 +79,11 @@
       "secondary": [
         {
           "name": "Cooking",
-          "skill": 35
+          "skill": 68
         },
         {
           "name": "Fishing",
-          "skill": 169
+          "skill": 173
         },
         {
           "name": "First Aid",
@@ -1084,6 +1084,18 @@
       "character": "warrior",
       "profession": "Mining",
       "skill": 153
+    },
+    {
+      "date": "2026-11-14",
+      "character": "shaman",
+      "profession": "Cooking",
+      "skill": 68
+    },
+    {
+      "date": "2026-11-14",
+      "character": "shaman",
+      "profession": "Fishing",
+      "skill": 173
     }
   ],
   "flows": [
