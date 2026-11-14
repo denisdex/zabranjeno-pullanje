@@ -165,7 +165,7 @@
       "professions": [
         {
           "name": "Mining",
-          "skill": 80,
+          "skill": 82,
           "phase": "stalno"
         },
         {
@@ -185,7 +185,7 @@
         },
         {
           "name": "First Aid",
-          "skill": 67
+          "skill": 73
         }
       ]
     }
@@ -1048,6 +1048,18 @@
       "character": "shaman",
       "profession": "Skinning",
       "skill": 225
+    },
+    {
+      "date": "2026-11-14",
+      "character": "paladin",
+      "profession": "Mining",
+      "skill": 82
+    },
+    {
+      "date": "2026-11-14",
+      "character": "paladin",
+      "profession": "First Aid",
+      "skill": 73
     }
   ],
   "flows": [
