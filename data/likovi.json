@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-14T17:37:42Z",
+ "azurirano": "2026-11-14T19:37:05Z",
  "likovi": {
   "Saman Saulic": {
    "level": 34,
@@ -661,10 +661,10 @@
   },
   "Melee Kitic": {
    "level": 30,
-   "xp": 33478,
+   "xp": 41202,
    "guild": "Kafana na Balkanu",
    "ilvl": 23,
-   "zadnjiLogin": "2026-11-14T17:31:40Z",
+   "zadnjiLogin": "2026-11-14T18:06:13Z",
    "izvor": "Blizzard API",
    "talenti": [
     3,
@@ -876,49 +876,49 @@
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 5383,
+     "vrijednost": 5521,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Honored",
-     "vrijednost": 1951,
+     "vrijednost": 2013,
      "max": 12000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Honored",
-     "vrijednost": 78,
+     "vrijednost": 253,
      "max": 12000
     },
     {
      "ime": "Undercity",
      "status": "Friendly",
-     "vrijednost": 3165,
+     "vrijednost": 3227,
      "max": 6000
     },
     {
      "ime": "Ratchet",
      "status": "Friendly",
-     "vrijednost": 1032,
+     "vrijednost": 1057,
      "max": 6000
     },
     {
      "ime": "Everlook",
      "status": "Neutral",
-     "vrijednost": 2066,
+     "vrijednost": 2078,
      "max": 3000
     },
     {
      "ime": "Booty Bay",
      "status": "Neutral",
-     "vrijednost": 2066,
+     "vrijednost": 2078,
      "max": 3000
     },
     {
      "ime": "Gadgetzan",
      "status": "Neutral",
-     "vrijednost": 2066,
+     "vrijednost": 2078,
      "max": 3000
     }
    ],
@@ -1104,7 +1104,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 257
+     "n": 261
     },
     {
      "kat": "Quests",
@@ -1184,7 +1184,7 @@
     {
      "kat": "Professions",
      "ime": "Highest Mining skill",
-     "n": 148
+     "n": 153
     },
     {
      "kat": "Professions",
@@ -1194,7 +1194,7 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 59
+     "n": 62
     },
     {
      "kat": "Travel",
@@ -1214,7 +1214,6 @@
      "Bloodfury Bloodline",
      "Beren's Peril",
      "Encrusted Tail Fins",
-     "A New Ore Sample",
      "Stop the Spread",
      "Ordanus",
      "Rig Wars",
@@ -1223,20 +1222,19 @@
      "Troll Charm",
      "A Recipe For Death",
      "Watching the Roads",
+     "Parts for Kravel",
      "Allegiance to the Old Gods",
      "Blueleaf Tubers",
-     "Test of Strength",
      "Leaders of the Fang",
-     "Goblin Sponsorship",
      "Ambermill Investigations",
-     "Wharfmaster Dizzywig",
      "Assault on Fenris Isle",
      "Between a Rock and a Thistlefur",
+     "Test of Lore",
      "Martek the Exiled",
      "Chief Engineer Scooty",
      "Arugal's Folly"
     ],
-    "zavrseno": 289
+    "zavrseno": 293
    },
    "mountovi": [],
    "petovi": [],
@@ -1246,7 +1244,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg",
-   "azurirano": "2026-11-14T17:37:42Z"
+   "azurirano": "2026-11-14T19:37:05Z"
   },
   "Janica Frostelich": {
    "level": 18,
@@ -3060,7 +3058,7 @@
    "azurirano": "2026-11-14T01:39:22Z"
   }
  },
- "provjereno": "2026-11-14T17:37:42Z",
+ "provjereno": "2026-11-14T19:37:05Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3097,7 +3095,7 @@
     "rang": 3,
     "slug": "melee-kitic",
     "ilvl": 23,
-    "zadnjiLogin": "2026-11-14T17:31:40Z",
+    "zadnjiLogin": "2026-11-14T18:06:13Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg"
    },
    {
@@ -3406,6 +3404,11 @@
     "2026-11-14T17:37:42Z",
     30,
     33478
+   ],
+   [
+    "2026-11-14T19:37:05Z",
+    30,
+    41202
    ]
   ],
   "Janica Frostelich": [
