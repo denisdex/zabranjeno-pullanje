@@ -136,7 +136,7 @@
         },
         {
           "name": "Skinning",
-          "skill": 203,
+          "skill": 216,
           "phase": "stalno"
         }
       ],
@@ -151,7 +151,7 @@
         },
         {
           "name": "First Aid",
-          "skill": 169
+          "skill": 199
         }
       ]
     },
@@ -1060,6 +1060,18 @@
       "character": "paladin",
       "profession": "First Aid",
       "skill": 73
+    },
+    {
+      "date": "2026-11-14",
+      "character": "rogue",
+      "profession": "Skinning",
+      "skill": 216
+    },
+    {
+      "date": "2026-11-14",
+      "character": "rogue",
+      "profession": "First Aid",
+      "skill": 199
     }
   ],
   "flows": [

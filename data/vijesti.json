@@ -9,8 +9,19 @@
    "url": "https://www.wowhead.com/news/rss/classic"
   }
  ],
- "azurirano": "2026-11-13T19:39:57Z",
+ "azurirano": "2026-11-14T03:39:17Z",
  "stavke": [
+  {
+   "datum": "2026-11-14T01:54:07Z",
+   "naslov": "WoW: Forever Hotfixes - November 13, 2026",
+   "link": "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-13-2026/2403040/10",
+   "izvor": "Blizzard",
+   "sazetak": "November 13, 2026 Classes Fixed a bug causing players to have no diminishing returns against creature stuns. Fixed a bug causing players to have no diminishing returns when using stuns against creatures. Druid Restoration Fixed a bug…",
+   "oznake": [
+    "Hotfix"
+   ],
+   "vrsta": "patch"
+  },
   {
    "datum": "2026-11-13T18:12:25Z",
    "naslov": "The WoW: Forever Podcast, a New Short Story, This Week’s Videos, and More! — WoW Weekly",
@@ -41,17 +52,6 @@
    "sazetak": "Join Demar Brant for a special fireside telling of our newest short story to learn through tales of war, sacrifice, and hard choices, that the true strength of a people lies not in victory alone, but in the courage to protect one another…",
    "oznake": [],
    "vrsta": "vijest"
-  },
-  {
-   "datum": "2026-11-12T19:10:52Z",
-   "naslov": "WoW: Forever Hotfixes - November 11, 2026",
-   "link": "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-11-2026/2403040/9",
-   "izvor": "Blizzard",
-   "sazetak": "Please note: Due to an unexpected delay in deployment, the following changes went live to all regions at 10:45 a.m. PST today. Classes Shaman Weapon imbues and Weapon totems can now be used at the same time. Enhancement Stormstrike damage…",
-   "oznake": [
-    "Hotfix"
-   ],
-   "vrsta": "patch"
   },
   {
    "datum": "2026-11-12T17:46:04Z",
