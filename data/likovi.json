@@ -1,12 +1,12 @@
 {
- "azurirano": "2026-11-14T03:39:17Z",
+ "azurirano": "2026-11-14T13:38:18Z",
  "likovi": {
   "Saman Saulic": {
    "level": 34,
    "xp": 15946,
    "guild": "Kafana na Balkanu",
    "ilvl": 27,
-   "zadnjiLogin": "2026-11-13T23:05:08Z",
+   "zadnjiLogin": "2026-11-14T13:13:08Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -606,44 +606,44 @@
    ],
    "questovi": {
     "uLogu": [
-     "Hostile Takeover",
-     "Singing Blue Shards",
-     "Bloodscalp Ears",
-     "Carved Centaur Totems",
-     "Supply and Demand",
-     "Elixir of Agony",
-     "Humbert's Sword",
-     "Helcular's Revenge",
-     "Bracers of Binding",
-     "The Princess Trapped",
-     "A Vengeful Fate",
-     "Going, Going, Guano!",
-     "Compendium of the Fallen",
-     "Parts of the Swarm",
-     "Magram Alliance",
-     "Dragonmaw Rumors",
-     "The Sacred Flame",
-     "Dalaran Patrols",
-     "Centaur Bounty",
-     "Family Tree",
-     "The Book of Ur",
-     "Martek the Exiled",
-     "Goblin Sponsorship",
-     "Blueleaf Tubers",
-     "Ordanus",
-     "Stealing Supplies",
-     "Test of Lore",
-     "Rig Wars",
-     "Clam Bait",
-     "Hunting in Stranglethorn",
-     "Hemet Nesingwary",
-     "Changing Tastes",
      "Elemental Aid",
-     "Anyone Can Cook",
+     "Bracers of Binding",
+     "Elixir of Agony",
+     "Compendium of the Fallen",
+     "Hunting in Stranglethorn",
+     "Dalaran Patrols",
+     "Carved Centaur Totems",
+     "Singing Blue Shards",
      "The Grave Knight",
+     "Helcular's Revenge",
+     "A Vengeful Fate",
+     "Ordanus",
+     "Changing Tastes",
+     "Ancient Gurubashi Idol",
+     "The Book of Ur",
+     "Going, Going, Guano!",
+     "Rig Wars",
+     "Dragonmaw Rumors",
+     "Hostile Takeover",
+     "The Sacred Flame",
+     "Centaur Bounty",
+     "Parts of the Swarm",
+     "Stealing Supplies",
+     "Hemet Nesingwary",
+     "Family Tree",
+     "The Princess Trapped",
+     "Bloodscalp Ears",
      "Source of Power",
+     "Magram Alliance",
+     "Blueleaf Tubers",
+     "Anyone Can Cook",
      "Thundering Hearts",
-     "Ancient Gurubashi Idol"
+     "Clam Bait",
+     "Humbert's Sword",
+     "Test of Lore",
+     "Goblin Sponsorship",
+     "Supply and Demand",
+     "Martek the Exiled"
     ],
     "zavrseno": 393
    },
@@ -659,7 +659,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg",
-   "azurirano": "2026-11-13T23:40:04Z"
+   "azurirano": "2026-11-14T13:38:18Z"
   },
   "Melee Kitic": {
    "level": 30,
@@ -3064,7 +3064,7 @@
    "azurirano": "2026-11-14T01:39:22Z"
   }
  },
- "provjereno": "2026-11-14T11:38:15Z",
+ "provjereno": "2026-11-14T13:38:18Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3079,7 +3079,7 @@
     "rang": 0,
     "slug": "saman-saulic",
     "ilvl": 27,
-    "zadnjiLogin": "2026-11-13T23:05:08Z",
+    "zadnjiLogin": "2026-11-14T13:13:08Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg"
    },
    {
@@ -3116,6 +3116,17 @@
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg"
    },
    {
+    "ime": "Venos Xx",
+    "level": 32,
+    "klasa": "Druid",
+    "rasa": "Tauren",
+    "rang": 4,
+    "slug": "venos-xx",
+    "ilvl": 24,
+    "zadnjiLogin": "2026-11-14T12:37:48Z",
+    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/253/13774333-avatar.jpg"
+   },
+   {
     "ime": "Yuserious Son",
     "level": 31,
     "klasa": "Paladin",
@@ -3127,25 +3138,14 @@
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/6/6269702-avatar.jpg"
    },
    {
-    "ime": "Venos Xx",
-    "level": 31,
-    "klasa": "Druid",
-    "rasa": "Tauren",
-    "rang": 4,
-    "slug": "venos-xx",
-    "ilvl": 24,
-    "zadnjiLogin": "2026-11-13T23:49:06Z",
-    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/253/13774333-avatar.jpg"
-   },
-   {
     "ime": "Jebothe Dan",
-    "level": 28,
+    "level": 29,
     "klasa": "Hunter",
     "rasa": "Troll",
     "rang": 4,
     "slug": "jebothe-dan",
-    "ilvl": 21,
-    "zadnjiLogin": "2026-11-14T00:16:02Z",
+    "ilvl": 22,
+    "zadnjiLogin": "2026-11-14T12:32:56Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/102/15576678-avatar.jpg"
    },
    {
@@ -3161,13 +3161,13 @@
    },
    {
     "ime": "Mate Bullic",
-    "level": 15,
+    "level": 16,
     "klasa": "Shaman",
     "rasa": "Tauren",
     "rang": 4,
     "slug": "mate-bullic",
     "ilvl": 7,
-    "zadnjiLogin": "2026-11-13T18:07:09Z",
+    "zadnjiLogin": "2026-11-14T12:17:08Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/33/21412897-avatar.jpg"
    }
   ]
