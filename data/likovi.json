@@ -1,12 +1,12 @@
 {
- "azurirano": "2026-11-14T13:38:18Z",
+ "azurirano": "2026-11-14T15:38:23Z",
  "likovi": {
   "Saman Saulic": {
    "level": 34,
    "xp": 15946,
    "guild": "Kafana na Balkanu",
    "ilvl": 27,
-   "zadnjiLogin": "2026-11-14T13:13:08Z",
+   "zadnjiLogin": "2026-11-14T14:11:10Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -195,8 +195,7 @@
      "kvaliteta": "rare",
      "wowhead": 273841,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133046.jpg",
-     "ilvl": 28,
-     "enchant": "Windfury 1"
+     "ilvl": 28
     },
     {
      "slot": "Ranged",
@@ -228,7 +227,7 @@
     },
     {
      "name": "Fishing",
-     "skill": 168,
+     "skill": 169,
      "max": 225,
      "vrsta": "sekundarna"
     },
@@ -521,7 +520,7 @@
     {
      "kat": "Quests",
      "ime": "Quests abandoned",
-     "n": 38
+     "n": 39
     },
     {
      "kat": "Skills",
@@ -571,12 +570,12 @@
     {
      "kat": "Secondary Skills",
      "ime": "Fish caught",
-     "n": 329
+     "n": 335
     },
     {
      "kat": "Secondary Skills",
      "ime": "Fish and other things caught",
-     "n": 329
+     "n": 335
     },
     {
      "kat": "Professions",
@@ -596,7 +595,7 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 134
+     "n": 137
     },
     {
      "kat": "Travel",
@@ -617,7 +616,6 @@
      "The Grave Knight",
      "Helcular's Revenge",
      "A Vengeful Fate",
-     "Ordanus",
      "Changing Tastes",
      "Ancient Gurubashi Idol",
      "The Book of Ur",
@@ -659,7 +657,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg",
-   "azurirano": "2026-11-14T13:38:18Z"
+   "azurirano": "2026-11-14T15:38:23Z"
   },
   "Melee Kitic": {
    "level": 30,
@@ -3064,7 +3062,7 @@
    "azurirano": "2026-11-14T01:39:22Z"
   }
  },
- "provjereno": "2026-11-14T13:38:18Z",
+ "provjereno": "2026-11-14T15:38:23Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3079,7 +3077,7 @@
     "rang": 0,
     "slug": "saman-saulic",
     "ilvl": 27,
-    "zadnjiLogin": "2026-11-14T13:13:08Z",
+    "zadnjiLogin": "2026-11-14T14:11:10Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg"
    },
    {
