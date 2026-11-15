@@ -1,16 +1,16 @@
 {
- "azurirano": "2026-11-15T13:35:38Z",
+ "azurirano": "2026-11-15T15:35:08Z",
  "likovi": {
   "Saman Saulic": {
-   "level": 36,
-   "xp": 66367,
+   "level": 37,
+   "xp": 40988,
    "guild": "Kafana na Balkanu",
    "ilvl": 31,
-   "zadnjiLogin": "2026-11-15T12:27:28Z",
+   "zadnjiLogin": "2026-11-15T15:30:27Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
-    27,
+    28,
     0
    ],
    "specka": "Enhancement",
@@ -77,9 +77,9 @@
     },
     {
      "ime": "Maelstrom Weapon",
-     "rang": 2,
+     "rang": 3,
      "stablo": "Enhancement",
-     "opis": "When you deal damage with a melee attack, you have a 42% chance (based on weapon speed) to reduce the cast time and Mana cost of your next Lightning Bolt spell by 20%. Stacks up to 5 times. Lasts 30 sec."
+     "opis": "When you deal damage with a melee attack, you have a 48% chance (based on weapon speed) to reduce the cast time and Mana cost of your next Lightning Bolt spell by 20%. Stacks up to 5 times. Lasts 30 sec."
     }
    ],
    "oprema": [
@@ -125,11 +125,11 @@
     },
     {
      "slot": "Legs",
-     "ime": "Gaze Dreamer Pants",
-     "kvaliteta": "rare",
-     "wowhead": 6903,
+     "ime": "Scaled Leather Leggings of Strength",
+     "kvaliteta": "uncommon",
+     "wowhead": 9833,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/134582.jpg",
-     "ilvl": 28
+     "ilvl": 33
     },
     {
      "slot": "Feet",
@@ -189,11 +189,11 @@
     },
     {
      "slot": "Back",
-     "ime": "Cutthroat's Cape of the Whale",
-     "kvaliteta": "uncommon",
-     "wowhead": 15135,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133760.jpg",
-     "ilvl": 30
+     "ime": "Furs of the Earthen Ring",
+     "kvaliteta": "rare",
+     "wowhead": 271719,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133756.jpg",
+     "ilvl": 33
     },
     {
      "slot": "Main Hand",
@@ -234,7 +234,7 @@
     },
     {
      "name": "Fishing",
-     "skill": 186,
+     "skill": 191,
      "max": 225,
      "vrsta": "sekundarna"
     },
@@ -246,48 +246,48 @@
     }
    ],
    "statovi": {
-    "hp": 1412,
-    "resurs": 1669,
+    "hp": 1410,
+    "resurs": 1793,
     "resursIme": "Mana",
-    "str": 100,
-    "agi": 33,
-    "sta": 113,
-    "int": 73,
-    "spi": 118,
-    "armor": 569,
-    "ap": 337,
-    "spellPower": 32,
+    "str": 119,
+    "agi": 34,
+    "sta": 110,
+    "int": 79,
+    "spi": 111,
+    "armor": 621,
+    "ap": 383,
+    "spellPower": 20,
     "crit": 9.07,
-    "spellCrit": 9.44,
+    "spellCrit": 9.57,
     "rangedCrit": 0.0,
-    "dodge": 4.15,
-    "parry": 4.92,
-    "block": 4.92,
-    "dps": 59.6
+    "dodge": 4.11,
+    "parry": 4.8,
+    "block": 4.8,
+    "dps": 62.9
    },
    "reputacije": [
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 7727,
+     "vrijednost": 7840,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Honored",
-     "vrijednost": 3776,
+     "vrijednost": 3813,
      "max": 12000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Honored",
-     "vrijednost": 2291,
+     "vrijednost": 2366,
      "max": 12000
     },
     {
      "ime": "Undercity",
      "status": "Friendly",
-     "vrijednost": 5583,
+     "vrijednost": 5621,
      "max": 6000
     },
     {
@@ -299,19 +299,19 @@
     {
      "ime": "Ratchet",
      "status": "Friendly",
-     "vrijednost": 2062,
+     "vrijednost": 2162,
      "max": 6000
     },
     {
      "ime": "Booty Bay",
-     "status": "Neutral",
-     "vrijednost": 2837,
-     "max": 3000
+     "status": "Friendly",
+     "vrijednost": 37,
+     "max": 6000
     },
     {
      "ime": "Everlook",
      "status": "Neutral",
-     "vrijednost": 2800,
+     "vrijednost": 2900,
      "max": 3000
     }
    ],
@@ -319,7 +319,7 @@
     {
      "kat": "Character",
      "ime": "Times camped",
-     "n": 97
+     "n": 100
     },
     {
      "kat": "Consumables",
@@ -339,12 +339,12 @@
     {
      "kat": "Consumables",
      "ime": "Beverages consumed",
-     "n": 178
+     "n": 186
     },
     {
      "kat": "Consumables",
      "ime": "Food eaten",
-     "n": 20
+     "n": 23
     },
     {
      "kat": "Reputation",
@@ -359,7 +359,7 @@
     {
      "kat": "Reputation",
      "ime": "Total factions encountered",
-     "n": 19
+     "n": 20
     },
     {
      "kat": "Gear",
@@ -369,12 +369,12 @@
     {
      "kat": "Gear",
      "ime": "Greed rolls made on loot",
-     "n": 179
+     "n": 184
     },
     {
      "kat": "Gear",
      "ime": "Need rolls made on loot",
-     "n": 49
+     "n": 50
     },
     {
      "kat": "Player vs. Player",
@@ -389,7 +389,7 @@
     {
      "kat": "Dungeons & Raids",
      "ime": "Total 5-player dungeons entered",
-     "n": 12
+     "n": 13
     },
     {
      "kat": "Boss Kills",
@@ -429,17 +429,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 5621
+     "n": 5769
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 4178
+     "n": 4236
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 5589
+     "n": 5735
     },
     {
      "kat": "Creatures",
@@ -449,13 +449,13 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 2854,
+     "n": 2880,
      "opis": "Humanoid"
     },
     {
      "kat": "Creatures",
      "ime": "Critters killed",
-     "n": 29
+     "n": 31
     },
     {
      "kat": "Honorable Kills",
@@ -476,12 +476,12 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 2650
+     "n": 2714
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 2315
+     "n": 2363
     },
     {
      "kat": "Killing Blows",
@@ -492,17 +492,17 @@
     {
      "kat": "Deaths",
      "ime": "Total deaths",
-     "n": 53
+     "n": 54
     },
     {
      "kat": "Dungeons and Raids",
      "ime": "Total raid and dungeon deaths",
-     "n": 6
+     "n": 7
     },
     {
      "kat": "Dungeons and Raids",
      "ime": "Total deaths in 5-player dungeons",
-     "n": 6
+     "n": 7
     },
     {
      "kat": "World",
@@ -525,9 +525,14 @@
      "n": 1
     },
     {
+     "kat": "Resurrection",
+     "ime": "Redeemed by paladins",
+     "n": 1
+    },
+    {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 364
+     "n": 381
     },
     {
      "kat": "Quests",
@@ -582,17 +587,17 @@
     {
      "kat": "Secondary Skills",
      "ime": "Fishing skill",
-     "n": 182
+     "n": 188
     },
     {
      "kat": "Secondary Skills",
      "ime": "Fish caught",
-     "n": 419
+     "n": 443
     },
     {
      "kat": "Secondary Skills",
      "ime": "Fish and other things caught",
-     "n": 419
+     "n": 443
     },
     {
      "kat": "Professions",
@@ -612,12 +617,12 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 158
+     "n": 165
     },
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
-     "n": 22
+     "n": 24
     },
     {
      "kat": "Social",
@@ -627,7 +632,6 @@
    ],
    "questovi": {
     "uLogu": [
-     "Panther Mastery",
      "Mok'thardin's Enchantment",
      "Ongeku",
      "Reclaimed Treasures",
@@ -636,38 +640,32 @@
      "Dalaran Patrols",
      "Singing Blue Shards",
      "The Grave Knight",
-     "With Wind Beneath Your Wings",
      "Helcular's Revenge",
-     "Changing Tastes",
      "Ancient Gurubashi Idol",
      "The Book of Ur",
      "Rig Wars",
-     "Dragonmaw Rumors",
+     "Raptor Mastery",
      "Hostile Takeover",
+     "The Defense of Grom'gol",
      "The Sacred Flame",
      "Into The Scarlet Monastery",
      "Catch of the Day",
-     "Raptor Mastery",
      "Terror of the Desert Skies",
      "An Unholy Alliance",
+     "Zimmix's Great Escape",
      "Hearts of Zeal",
      "The Princess Trapped",
-     "Bloodscalp Ears",
      "Source of Power",
      "Magram Alliance",
      "The Vile Reef",
      "Headhunting",
+     "Anything of Value",
      "Tiger Mastery",
-     "Anyone Can Cook",
-     "Where's the Key?",
-     "Test of Lore",
+     "Panther Mastery",
      "Goblin Sponsorship",
-     "Supply and Demand",
-     "The Corrupter",
-     "Martek the Exiled",
-     "The Defense of Grom'gol"
+     "The Corrupter"
     ],
-    "zavrseno": 439
+    "zavrseno": 456
    },
    "mountovi": [
     "Cerulean Prideclaw"
@@ -681,7 +679,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg",
-   "azurirano": "2026-11-15T13:35:38Z"
+   "azurirano": "2026-11-15T15:35:08Z"
   },
   "Melee Kitic": {
    "level": 31,
@@ -3150,7 +3148,7 @@
    "azurirano": "2026-11-15T01:37:16Z"
   }
  },
- "provjereno": "2026-11-15T13:35:38Z",
+ "provjereno": "2026-11-15T15:35:08Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3159,13 +3157,13 @@
   "roster": [
    {
     "ime": "Saman Saulic",
-    "level": 36,
+    "level": 37,
     "klasa": "Shaman",
     "rasa": "Orc",
     "rang": 0,
     "slug": "saman-saulic",
     "ilvl": 31,
-    "zadnjiLogin": "2026-11-15T12:27:28Z",
+    "zadnjiLogin": "2026-11-15T15:30:27Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg"
    },
    {
@@ -3379,6 +3377,11 @@
     "2026-11-15T13:35:38Z",
     36,
     66367
+   ],
+   [
+    "2026-11-15T15:35:08Z",
+    37,
+    40988
    ]
   ],
   "Melee Kitic": [
