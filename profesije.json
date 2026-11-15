@@ -33,7 +33,7 @@
       "professions": [
         {
           "name": "Mining",
-          "skill": 159,
+          "skill": 165,
           "phase": "stalno"
         },
         {
@@ -53,7 +53,7 @@
         },
         {
           "name": "First Aid",
-          "skill": 74
+          "skill": 77
         }
       ]
     },
@@ -83,7 +83,7 @@
         },
         {
           "name": "Fishing",
-          "skill": 191
+          "skill": 195
         },
         {
           "name": "First Aid",
@@ -1156,6 +1156,24 @@
       "character": "rogue",
       "profession": "Fishing",
       "skill": 121
+    },
+    {
+      "date": "2026-11-15",
+      "character": "warrior",
+      "profession": "Mining",
+      "skill": 165
+    },
+    {
+      "date": "2026-11-15",
+      "character": "warrior",
+      "profession": "First Aid",
+      "skill": 77
+    },
+    {
+      "date": "2026-11-15",
+      "character": "shaman",
+      "profession": "Fishing",
+      "skill": 195
     }
   ],
   "flows": [

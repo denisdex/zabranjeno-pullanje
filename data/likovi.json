@@ -1,12 +1,12 @@
 {
- "azurirano": "2026-11-15T21:34:30Z",
+ "azurirano": "2026-11-15T23:34:28Z",
  "likovi": {
   "Saman Saulic": {
    "level": 37,
-   "xp": 40988,
+   "xp": 46480,
    "guild": "Kafana na Balkanu",
    "ilvl": 31,
-   "zadnjiLogin": "2026-11-15T15:40:14Z",
+   "zadnjiLogin": "2026-11-15T22:42:23Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -234,7 +234,7 @@
     },
     {
      "name": "Fishing",
-     "skill": 191,
+     "skill": 195,
      "max": 225,
      "vrsta": "sekundarna"
     },
@@ -257,7 +257,7 @@
     "armor": 621,
     "ap": 383,
     "spellPower": 20,
-    "crit": 9.07,
+    "crit": 9.15,
     "spellCrit": 9.57,
     "rangedCrit": 0.0,
     "dodge": 4.11,
@@ -319,7 +319,7 @@
     {
      "kat": "Character",
      "ime": "Times camped",
-     "n": 100
+     "n": 105
     },
     {
      "kat": "Consumables",
@@ -339,7 +339,7 @@
     {
      "kat": "Consumables",
      "ime": "Beverages consumed",
-     "n": 186
+     "n": 190
     },
     {
      "kat": "Consumables",
@@ -369,12 +369,12 @@
     {
      "kat": "Gear",
      "ime": "Greed rolls made on loot",
-     "n": 184
+     "n": 195
     },
     {
      "kat": "Gear",
      "ime": "Need rolls made on loot",
-     "n": 50
+     "n": 51
     },
     {
      "kat": "Player vs. Player",
@@ -389,7 +389,7 @@
     {
      "kat": "Dungeons & Raids",
      "ime": "Total 5-player dungeons entered",
-     "n": 13
+     "n": 14
     },
     {
      "kat": "Boss Kills",
@@ -424,22 +424,22 @@
     {
      "kat": "Boss Kills",
      "ime": "Charlga Razorflank kills (Razorfen Kraul)",
-     "n": 2
+     "n": 3
     },
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 5769
+     "n": 5968
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 4236
+     "n": 4297
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 5735
+     "n": 5934
     },
     {
      "kat": "Creatures",
@@ -449,7 +449,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 2880,
+     "n": 3001,
      "opis": "Humanoid"
     },
     {
@@ -476,17 +476,17 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 2714
+     "n": 2781
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 2363
+     "n": 2368
     },
     {
      "kat": "Killing Blows",
      "ime": "Continent with the most Killing Blows",
-     "n": 1484,
+     "n": 1488,
      "opis": "Kalimdor"
     },
     {
@@ -592,12 +592,12 @@
     {
      "kat": "Secondary Skills",
      "ime": "Fish caught",
-     "n": 443
+     "n": 471
     },
     {
      "kat": "Secondary Skills",
      "ime": "Fish and other things caught",
-     "n": 443
+     "n": 471
     },
     {
      "kat": "Professions",
@@ -617,7 +617,7 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 165
+     "n": 166
     },
     {
      "kat": "Travel",
@@ -679,18 +679,18 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg",
-   "azurirano": "2026-11-15T17:35:13Z"
+   "azurirano": "2026-11-15T23:34:28Z"
   },
   "Melee Kitic": {
-   "level": 31,
-   "xp": 9090,
+   "level": 32,
+   "xp": 21300,
    "guild": "Kafana na Balkanu",
    "ilvl": 23,
-   "zadnjiLogin": "2026-11-15T12:13:03Z",
+   "zadnjiLogin": "2026-11-15T22:30:28Z",
    "izvor": "Blizzard API",
    "talenti": [
     3,
-    17,
+    18,
     2
    ],
    "specka": "Fury",
@@ -709,9 +709,9 @@
     },
     {
      "ime": "Lingering Rage",
-     "rang": 1,
+     "rang": 2,
      "stablo": "Fury",
-     "opis": "Increases the time before your Rage begins to decay after leaving combat by 2 sec."
+     "opis": "Increases the time before your Rage begins to decay after leaving combat by 4 sec."
     },
     {
      "ime": "Unbridled Wrath",
@@ -783,12 +783,11 @@
     },
     {
      "slot": "Feet",
-     "ime": "Draftsman Boots",
+     "ime": "Battleforge Boots of the Champion",
      "kvaliteta": "uncommon",
-     "wowhead": 6668,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132537.jpg",
-     "ilvl": 27,
-     "enchant": "Enchanted: Stamina +2 and Armor +16"
+     "wowhead": 6590,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132589.jpg",
+     "ilvl": 29
     },
     {
      "slot": "Wrist",
@@ -817,11 +816,11 @@
     },
     {
      "slot": "Finger 2",
-     "ime": "Inventor's League Ring",
-     "kvaliteta": "uncommon",
-     "wowhead": 15467,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133364.jpg",
-     "ilvl": 31
+     "ime": "Agamaggan's Clutch",
+     "kvaliteta": "rare",
+     "wowhead": 6693,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133722.jpg",
+     "ilvl": 35
     },
     {
      "slot": "Back",
@@ -851,7 +850,7 @@
    "profesije": [
     {
      "name": "Mining",
-     "skill": 159,
+     "skill": 165,
      "max": 225,
      "vrsta": "primarna"
     },
@@ -875,78 +874,78 @@
     },
     {
      "name": "First Aid",
-     "skill": 74,
+     "skill": 77,
      "max": 150,
      "vrsta": "sekundarna"
     }
    ],
    "statovi": {
-    "hp": 1481,
+    "hp": 1519,
     "resurs": 100,
     "resursIme": "Rage",
     "str": 110,
-    "agi": 48,
-    "sta": 126,
+    "agi": 49,
+    "sta": 128,
     "int": 21,
-    "spi": 45,
-    "armor": 1236,
-    "ap": 305,
+    "spi": 48,
+    "armor": 1295,
+    "ap": 308,
     "spellPower": 0,
-    "crit": 9.49,
+    "crit": 9.5,
     "spellCrit": 0.0,
     "rangedCrit": 0.0,
-    "dodge": 4.41,
-    "parry": 4.88,
-    "block": 4.88,
-    "dps": 47.4
+    "dodge": 4.38,
+    "parry": 4.84,
+    "block": 4.84,
+    "dps": 47.6
    },
    "reputacije": [
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 5521,
+     "vrijednost": 6052,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Honored",
-     "vrijednost": 2013,
+     "vrijednost": 2357,
      "max": 12000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Honored",
-     "vrijednost": 253,
+     "vrijednost": 597,
      "max": 12000
     },
     {
      "ime": "Undercity",
      "status": "Friendly",
-     "vrijednost": 3227,
+     "vrijednost": 4415,
      "max": 6000
     },
     {
      "ime": "Ratchet",
      "status": "Friendly",
-     "vrijednost": 1057,
+     "vrijednost": 1207,
      "max": 6000
     },
     {
      "ime": "Everlook",
      "status": "Neutral",
-     "vrijednost": 2078,
+     "vrijednost": 2153,
      "max": 3000
     },
     {
      "ime": "Booty Bay",
      "status": "Neutral",
-     "vrijednost": 2078,
+     "vrijednost": 2153,
      "max": 3000
     },
     {
      "ime": "Gadgetzan",
      "status": "Neutral",
-     "vrijednost": 2078,
+     "vrijednost": 2153,
      "max": 3000
     }
    ],
@@ -954,18 +953,18 @@
     {
      "kat": "Character",
      "ime": "Times camped",
-     "n": 37
+     "n": 41
     },
     {
      "kat": "Consumables",
      "ime": "Bandages used",
-     "n": 43
+     "n": 55
     },
     {
      "kat": "Consumables",
      "ime": "Bandage used most",
-     "n": 24,
-     "opis": "Linen Bandage"
+     "n": 31,
+     "opis": "Heavy Linen Bandage"
     },
     {
      "kat": "Consumables",
@@ -995,12 +994,12 @@
     {
      "kat": "Gear",
      "ime": "Greed rolls made on loot",
-     "n": 101
+     "n": 112
     },
     {
      "kat": "Gear",
      "ime": "Need rolls made on loot",
-     "n": 30
+     "n": 32
     },
     {
      "kat": "Player vs. Player",
@@ -1025,7 +1024,7 @@
     {
      "kat": "Dungeons & Raids",
      "ime": "Total 5-player dungeons entered",
-     "n": 7
+     "n": 8
     },
     {
      "kat": "Boss Kills",
@@ -1058,19 +1057,24 @@
      "n": 1
     },
     {
+     "kat": "Boss Kills",
+     "ime": "Charlga Razorflank kills (Razorfen Kraul)",
+     "n": 1
+    },
+    {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 3656
+     "n": 4025
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 2890
+     "n": 3138
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 3632
+     "n": 4001
     },
     {
      "kat": "Creatures",
@@ -1080,7 +1084,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 2032,
+     "n": 2269,
      "opis": "Humanoid"
     },
     {
@@ -1091,23 +1095,23 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 1895
+     "n": 2117
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 1672
+     "n": 1847
     },
     {
      "kat": "Killing Blows",
      "ime": "Continent with the most Killing Blows",
-     "n": 1320,
+     "n": 1330,
      "opis": "Kalimdor"
     },
     {
      "kat": "Deaths",
      "ime": "Total deaths",
-     "n": 42
+     "n": 46
     },
     {
      "kat": "Dungeons and Raids",
@@ -1132,7 +1136,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 268
+     "n": 284
     },
     {
      "kat": "Quests",
@@ -1177,7 +1181,7 @@
     {
      "kat": "Secondary Skills",
      "ime": "First Aid skill",
-     "n": 74
+     "n": 77
     },
     {
      "kat": "Secondary Skills",
@@ -1207,12 +1211,12 @@
     {
      "kat": "Professions",
      "ime": "Blacksmithing Plans learned",
-     "n": 54
+     "n": 56
     },
     {
      "kat": "Professions",
      "ime": "Highest Mining skill",
-     "n": 155
+     "n": 163
     },
     {
      "kat": "Professions",
@@ -1222,12 +1226,12 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 63
+     "n": 66
     },
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
-     "n": 30
+     "n": 33
     },
     {
      "kat": "Social",
@@ -1240,9 +1244,9 @@
      "Brutal Armor",
      "Bloodfury Bloodline",
      "Encrusted Tail Fins",
-     "Soothing Turtle Bisque",
+     "Elixir of Agony",
+     "The Windwatcher",
      "The Grave Knight",
-     "The Islander",
      "Ordanus",
      "Prison Break In",
      "The Book of Ur",
@@ -1251,32 +1255,28 @@
      "Regthar Deathgate",
      "The Sacred Flame",
      "The Hammer May Fall",
-     "Battle of Hillsbrad",
-     "Helcular's Revenge",
-     "Dangerous!",
      "Hemet Nesingwary",
      "Troll Charm",
-     "The Rescue",
      "Watching the Roads",
+     "Gol'dir",
      "Parts for Kravel",
      "Source of Power",
-     "Blood of Innocents",
-     "Elixir of Agony",
      "Allegiance to the Old Gods",
      "Blueleaf Tubers",
      "Key to the City",
      "Leaders of the Fang",
      "Thundering Hearts",
      "Humbert's Sword",
-     "Elixir of Pain",
      "Between a Rock and a Thistlefur",
      "Test of Lore",
      "Martek the Exiled",
      "Chief Engineer Scooty",
      "To Steal From Thieves",
+     "Battle of Hillsbrad",
+     "An Unholy Alliance",
      "Stone Tokens"
     ],
-    "zavrseno": 300
+    "zavrseno": 317
    },
    "mountovi": [],
    "petovi": [],
@@ -1286,7 +1286,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg",
-   "azurirano": "2026-11-15T13:35:38Z"
+   "azurirano": "2026-11-15T23:34:28Z"
   },
   "Janica Frostelich": {
    "level": 18,
@@ -3146,7 +3146,7 @@
    "azurirano": "2026-11-15T01:37:16Z"
   }
  },
- "provjereno": "2026-11-15T21:34:30Z",
+ "provjereno": "2026-11-15T23:34:28Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3161,7 +3161,7 @@
     "rang": 0,
     "slug": "saman-saulic",
     "ilvl": 31,
-    "zadnjiLogin": "2026-11-15T15:40:14Z",
+    "zadnjiLogin": "2026-11-15T22:42:23Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg"
    },
    {
@@ -3177,13 +3177,13 @@
    },
    {
     "ime": "Melee Kitic",
-    "level": 31,
+    "level": 32,
     "klasa": "Warrior",
     "rasa": "Orc",
     "rang": 3,
     "slug": "melee-kitic",
     "ilvl": 23,
-    "zadnjiLogin": "2026-11-15T12:13:03Z",
+    "zadnjiLogin": "2026-11-15T22:30:28Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg"
    },
    {
@@ -3210,13 +3210,13 @@
    },
    {
     "ime": "Yuserious Son",
-    "level": 32,
+    "level": 33,
     "klasa": "Paladin",
     "rasa": "Undead",
     "rang": 4,
     "slug": "yuserious-son",
     "ilvl": 26,
-    "zadnjiLogin": "2026-11-15T21:06:22Z",
+    "zadnjiLogin": "2026-11-15T23:18:49Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/6/6269702-avatar.jpg"
    },
    {
@@ -3227,8 +3227,19 @@
     "rang": 4,
     "slug": "jebothe-dan",
     "ilvl": 23,
-    "zadnjiLogin": "2026-11-15T20:24:00Z",
+    "zadnjiLogin": "2026-11-15T22:35:30Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/102/15576678-avatar.jpg"
+   },
+   {
+    "ime": "Mate Bullic",
+    "level": 19,
+    "klasa": "Shaman",
+    "rasa": "Tauren",
+    "rang": 4,
+    "slug": "mate-bullic",
+    "ilvl": 8,
+    "zadnjiLogin": "2026-11-15T22:02:49Z",
+    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/33/21412897-avatar.jpg"
    },
    {
     "ime": "Janica Frostelich",
@@ -3240,17 +3251,6 @@
     "ilvl": 12,
     "zadnjiLogin": "2026-11-08T20:24:47Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/249/2574073-avatar.jpg"
-   },
-   {
-    "ime": "Mate Bullic",
-    "level": 18,
-    "klasa": "Shaman",
-    "rasa": "Tauren",
-    "rang": 4,
-    "slug": "mate-bullic",
-    "ilvl": 8,
-    "zadnjiLogin": "2026-11-15T20:38:33Z",
-    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/33/21412897-avatar.jpg"
    }
   ]
  },
@@ -3380,6 +3380,11 @@
     "2026-11-15T15:35:08Z",
     37,
     40988
+   ],
+   [
+    "2026-11-15T23:34:28Z",
+    37,
+    46480
    ]
   ],
   "Melee Kitic": [
@@ -3522,6 +3527,11 @@
     "2026-11-15T13:35:38Z",
     31,
     9090
+   ],
+   [
+    "2026-11-15T23:34:28Z",
+    32,
+    21300
    ]
   ],
   "Janica Frostelich": [
