@@ -1,12 +1,12 @@
 {
- "azurirano": "2026-11-15T15:35:08Z",
+ "azurirano": "2026-11-15T17:35:13Z",
  "likovi": {
   "Saman Saulic": {
    "level": 37,
    "xp": 40988,
    "guild": "Kafana na Balkanu",
    "ilvl": 31,
-   "zadnjiLogin": "2026-11-15T15:30:27Z",
+   "zadnjiLogin": "2026-11-15T15:40:14Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -359,7 +359,7 @@
     {
      "kat": "Reputation",
      "ime": "Total factions encountered",
-     "n": 20
+     "n": 19
     },
     {
      "kat": "Gear",
@@ -587,7 +587,7 @@
     {
      "kat": "Secondary Skills",
      "ime": "Fishing skill",
-     "n": 188
+     "n": 191
     },
     {
      "kat": "Secondary Skills",
@@ -679,7 +679,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg",
-   "azurirano": "2026-11-15T15:35:08Z"
+   "azurirano": "2026-11-15T17:35:13Z"
   },
   "Melee Kitic": {
    "level": 31,
@@ -1793,11 +1793,11 @@
    "azurirano": "2026-11-08T21:54:18Z"
   },
   "Nikola Roguevic": {
-   "level": 34,
-   "xp": 39470,
+   "level": 35,
+   "xp": 11189,
    "guild": "Kafana na Balkanu",
-   "ilvl": 26,
-   "zadnjiLogin": "2026-11-15T12:33:36Z",
+   "ilvl": 24,
+   "zadnjiLogin": "2026-11-15T16:28:49Z",
    "izvor": "Blizzard API",
    "talenti": [
     2,
@@ -1994,19 +1994,11 @@
     },
     {
      "slot": "Main Hand",
-     "ime": "Outlaw Sabre",
-     "kvaliteta": "rare",
-     "wowhead": 16886,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135343.jpg",
-     "ilvl": 32
-    },
-    {
-     "slot": "Off Hand",
-     "ime": "Thornspike",
-     "kvaliteta": "rare",
-     "wowhead": 6681,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135646.jpg",
-     "ilvl": 32
+     "ime": "Fishing Pole",
+     "kvaliteta": "common",
+     "wowhead": 6256,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132932.jpg",
+     "ilvl": 1
     },
     {
      "slot": "Ranged",
@@ -2032,14 +2024,14 @@
     },
     {
      "name": "Cooking",
-     "skill": 65,
+     "skill": 79,
      "max": 150,
      "vrsta": "sekundarna"
     },
     {
      "name": "Fishing",
-     "skill": 25,
-     "max": 75,
+     "skill": 121,
+     "max": 150,
      "vrsta": "sekundarna"
     },
     {
@@ -2050,72 +2042,72 @@
     }
    ],
    "statovi": {
-    "hp": 1196,
+    "hp": 1233,
     "resurs": 100,
     "resursIme": "Energy",
-    "str": 56,
-    "agi": 121,
-    "sta": 85,
+    "str": 57,
+    "agi": 123,
+    "sta": 86,
     "int": 30,
     "spi": 56,
-    "armor": 919,
-    "ap": 282,
+    "armor": 923,
+    "ap": 271,
     "spellPower": 0,
-    "crit": 8.12,
+    "crit": 5.77,
     "spellCrit": 0.0,
-    "rangedCrit": 7.72,
-    "dodge": 17.12,
-    "parry": 10.88,
+    "rangedCrit": 7.49,
+    "dodge": 16.63,
+    "parry": 10.76,
     "block": 0.0,
-    "dps": 40.5
+    "dps": 20.4
    },
    "reputacije": [
     {
      "ime": "Undercity",
      "status": "Honored",
-     "vrijednost": 8355,
+     "vrijednost": 8417,
      "max": 12000
     },
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 655,
+     "vrijednost": 830,
      "max": 12000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Friendly",
-     "vrijednost": 5093,
+     "vrijednost": 5156,
      "max": 6000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Friendly",
-     "vrijednost": 4292,
+     "vrijednost": 4430,
      "max": 6000
     },
     {
      "ime": "Ratchet",
      "status": "Friendly",
-     "vrijednost": 914,
+     "vrijednost": 1076,
      "max": 6000
-    },
-    {
-     "ime": "Everlook",
-     "status": "Neutral",
-     "vrijednost": 2207,
-     "max": 3000
     },
     {
      "ime": "Booty Bay",
      "status": "Neutral",
-     "vrijednost": 2207,
+     "vrijednost": 2307,
+     "max": 3000
+    },
+    {
+     "ime": "Everlook",
+     "status": "Neutral",
+     "vrijednost": 2294,
      "max": 3000
     },
     {
      "ime": "Gadgetzan",
      "status": "Neutral",
-     "vrijednost": 2207,
+     "vrijednost": 2294,
      "max": 3000
     }
    ],
@@ -2128,7 +2120,7 @@
     {
      "kat": "Consumables",
      "ime": "Bandages used",
-     "n": 25
+     "n": 26
     },
     {
      "kat": "Consumables",
@@ -2154,7 +2146,7 @@
     {
      "kat": "Consumables",
      "ime": "Food eaten",
-     "n": 31
+     "n": 32
     },
     {
      "kat": "Reputation",
@@ -2169,7 +2161,7 @@
     {
      "kat": "Reputation",
      "ime": "Total factions encountered",
-     "n": 16
+     "n": 17
     },
     {
      "kat": "Gear",
@@ -2234,17 +2226,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 5428
+     "n": 5505
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 4070
+     "n": 4147
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 5382
+     "n": 5459
     },
     {
      "kat": "Creatures",
@@ -2281,17 +2273,17 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 3047
+     "n": 3121
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 2527
+     "n": 2601
     },
     {
      "kat": "Killing Blows",
      "ime": "Continent with the most Killing Blows",
-     "n": 1307,
+     "n": 1381,
      "opis": "Kalimdor"
     },
     {
@@ -2327,17 +2319,17 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 325
+     "n": 337
     },
     {
      "kat": "Quests",
      "ime": "Average quests completed per day",
-     "n": 81.25
+     "n": 84.25
     },
     {
      "kat": "Quests",
      "ime": "Quests abandoned",
-     "n": 22
+     "n": 23
     },
     {
      "kat": "Skills",
@@ -2362,12 +2354,12 @@
     {
      "kat": "Secondary Skills",
      "ime": "Cooking skill",
-     "n": 65
+     "n": 79
     },
     {
      "kat": "Secondary Skills",
      "ime": "Cooking Recipes known",
-     "n": 24
+     "n": 28
     },
     {
      "kat": "Secondary Skills",
@@ -2382,17 +2374,17 @@
     {
      "kat": "Secondary Skills",
      "ime": "Fishing skill",
-     "n": 25
+     "n": 75
     },
     {
      "kat": "Secondary Skills",
      "ime": "Fish caught",
-     "n": 24
+     "n": 168
     },
     {
      "kat": "Secondary Skills",
      "ime": "Fish and other things caught",
-     "n": 24
+     "n": 168
     },
     {
      "kat": "Professions",
@@ -2412,7 +2404,7 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 99
+     "n": 101
     },
     {
      "kat": "Travel",
@@ -2422,7 +2414,7 @@
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
-     "n": 23
+     "n": 24
     },
     {
      "kat": "Social",
@@ -2438,14 +2430,18 @@
    "questovi": {
     "uLogu": [
      "Reclaimed Treasures",
+     "Encrusted Tail Fins",
      "Bracers of Binding",
      "Elixir of Agony",
-     "Hardened Shells",
+     "Singing Blue Shards",
      "The Grave Knight",
+     "Shady Saltseers",
      "Changing Tastes",
      "Ancient Gurubashi Idol",
      "The Kolkar of Desolace",
-     "A Bump in the Road",
+     "Hostile Takeover",
+     "Zanzil's Secret",
+     "The Captain's Chest",
      "Blood in the Streets",
      "Into The Scarlet Monastery",
      "The Hammer May Fall",
@@ -2453,22 +2449,24 @@
      "Hemet Nesingwary",
      "Family Tree",
      "Hearts of Zeal",
-     "Rocket Car Parts",
+     "Bloodscalp Ears",
      "Gol'dir",
+     "Parts for Kravel",
      "Source of Power",
-     "The Swarm Grows",
+     "Investigate the Camp",
+     "The Saltseer Captain",
      "Thundering Hearts",
      "The Crown of Will",
-     "Parts of the Swarm",
-     "Wharfmaster Dizzywig",
+     "Scaring Shaky",
      "Alliance Relations",
      "The Den",
-     "Salt Flat Venom",
+     "Goblin Sponsorship",
+     "Supply and Demand",
      "Battle of Hillsbrad",
-     "Load Lightening",
+     "Martek the Exiled",
      "To Steal From Thieves"
     ],
-    "zavrseno": 376
+    "zavrseno": 388
    },
    "mountovi": [
     "Cerulean Prideclaw",
@@ -2486,7 +2484,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg",
-   "azurirano": "2026-11-15T13:35:38Z"
+   "azurirano": "2026-11-15T17:35:13Z"
   },
   "Arsen Deadic": {
    "level": 30,
@@ -3148,7 +3146,7 @@
    "azurirano": "2026-11-15T01:37:16Z"
   }
  },
- "provjereno": "2026-11-15T15:35:08Z",
+ "provjereno": "2026-11-15T17:35:13Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3163,18 +3161,18 @@
     "rang": 0,
     "slug": "saman-saulic",
     "ilvl": 31,
-    "zadnjiLogin": "2026-11-15T15:30:27Z",
+    "zadnjiLogin": "2026-11-15T15:40:14Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg"
    },
    {
     "ime": "Nikola Roguevic",
-    "level": 34,
+    "level": 35,
     "klasa": "Rogue",
     "rasa": "Undead",
     "rang": 1,
     "slug": "nikola-roguevic",
-    "ilvl": 26,
-    "zadnjiLogin": "2026-11-15T12:33:36Z",
+    "ilvl": 24,
+    "zadnjiLogin": "2026-11-15T16:28:49Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg"
    },
    {
@@ -3201,13 +3199,13 @@
    },
    {
     "ime": "Venos Xx",
-    "level": 34,
+    "level": 35,
     "klasa": "Druid",
     "rasa": "Tauren",
     "rang": 4,
     "slug": "venos-xx",
     "ilvl": 26,
-    "zadnjiLogin": "2026-11-15T05:05:03Z",
+    "zadnjiLogin": "2026-11-15T15:58:33Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/253/13774333-avatar.jpg"
    },
    {
@@ -3218,7 +3216,7 @@
     "rang": 4,
     "slug": "yuserious-son",
     "ilvl": 25,
-    "zadnjiLogin": "2026-11-15T01:02:27Z",
+    "zadnjiLogin": "2026-11-15T16:58:09Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/6/6269702-avatar.jpg"
    },
    {
@@ -3703,6 +3701,11 @@
     "2026-11-15T13:35:38Z",
     34,
     39470
+   ],
+   [
+    "2026-11-15T17:35:13Z",
+    35,
+    11189
    ]
   ],
   "Arsen Deadic": [
