@@ -33,12 +33,12 @@
       "professions": [
         {
           "name": "Mining",
-          "skill": 153,
+          "skill": 165,
           "phase": "stalno"
         },
         {
           "name": "Blacksmithing",
-          "skill": 110,
+          "skill": 117,
           "phase": "stalno"
         }
       ],
@@ -53,7 +53,7 @@
         },
         {
           "name": "First Aid",
-          "skill": 74
+          "skill": 77
         }
       ]
     },
@@ -83,7 +83,7 @@
         },
         {
           "name": "Fishing",
-          "skill": 182
+          "skill": 195
         },
         {
           "name": "First Aid",
@@ -143,11 +143,11 @@
       "secondary": [
         {
           "name": "Cooking",
-          "skill": 65
+          "skill": 79
         },
         {
           "name": "Fishing",
-          "skill": 25
+          "skill": 154
         },
         {
           "name": "First Aid",
@@ -1120,6 +1120,72 @@
       "character": "rogue",
       "profession": "First Aid",
       "skill": 213
+    },
+    {
+      "date": "2026-11-15",
+      "character": "warrior",
+      "profession": "Mining",
+      "skill": 159
+    },
+    {
+      "date": "2026-11-15",
+      "character": "warrior",
+      "profession": "Blacksmithing",
+      "skill": 117
+    },
+    {
+      "date": "2026-11-15",
+      "character": "shaman",
+      "profession": "Fishing",
+      "skill": 186
+    },
+    {
+      "date": "2026-11-15",
+      "character": "shaman",
+      "profession": "Fishing",
+      "skill": 191
+    },
+    {
+      "date": "2026-11-15",
+      "character": "rogue",
+      "profession": "Cooking",
+      "skill": 79
+    },
+    {
+      "date": "2026-11-15",
+      "character": "rogue",
+      "profession": "Fishing",
+      "skill": 121
+    },
+    {
+      "date": "2026-11-15",
+      "character": "warrior",
+      "profession": "Mining",
+      "skill": 165
+    },
+    {
+      "date": "2026-11-15",
+      "character": "warrior",
+      "profession": "First Aid",
+      "skill": 77
+    },
+    {
+      "date": "2026-11-15",
+      "character": "shaman",
+      "profession": "Fishing",
+      "skill": 195
+    },
+    {
+      "date": "2026-11-16",
+      "character": "rogue",
+      "profession": "Fishing",
+      "skill": 150
+    },
+    {
+      "date": "2026-11-16",
+      "character": "rogue",
+      "profession": "Fishing",
+      "skill": 154
     }
   ],
   "flows": [
