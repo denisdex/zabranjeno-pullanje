@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-16T01:34:24Z",
+ "azurirano": "2026-11-16T03:34:18Z",
  "likovi": {
   "Saman Saulic": {
    "level": 37,
@@ -1794,10 +1794,10 @@
   },
   "Nikola Roguevic": {
    "level": 35,
-   "xp": 44237,
+   "xp": 53045,
    "guild": "Kafana na Balkanu",
    "ilvl": 26,
-   "zadnjiLogin": "2026-11-16T01:15:19Z",
+   "zadnjiLogin": "2026-11-16T02:34:07Z",
    "izvor": "Blizzard API",
    "talenti": [
     2,
@@ -2038,8 +2038,8 @@
     },
     {
      "name": "Fishing",
-     "skill": 150,
-     "max": 150,
+     "skill": 154,
+     "max": 225,
      "vrsta": "sekundarna"
     },
     {
@@ -2097,25 +2097,25 @@
     {
      "ime": "Ratchet",
      "status": "Friendly",
-     "vrijednost": 1076,
+     "vrijednost": 1101,
      "max": 6000
     },
     {
      "ime": "Booty Bay",
      "status": "Neutral",
-     "vrijednost": 2307,
+     "vrijednost": 2357,
      "max": 3000
     },
     {
      "ime": "Everlook",
      "status": "Neutral",
-     "vrijednost": 2294,
+     "vrijednost": 2319,
      "max": 3000
     },
     {
      "ime": "Gadgetzan",
      "status": "Neutral",
-     "vrijednost": 2294,
+     "vrijednost": 2319,
      "max": 3000
     }
    ],
@@ -2234,7 +2234,7 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 5747
+     "n": 5748
     },
     {
      "kat": "Kills",
@@ -2260,7 +2260,7 @@
     {
      "kat": "Creatures",
      "ime": "Critters killed",
-     "n": 41
+     "n": 42
     },
     {
      "kat": "Honorable Kills",
@@ -2281,12 +2281,12 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 3199
+     "n": 3200
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 2630
+     "n": 2631
     },
     {
      "kat": "Killing Blows",
@@ -2327,17 +2327,17 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 348
+     "n": 353
     },
     {
      "kat": "Quests",
      "ime": "Average quests completed per day",
-     "n": 87
+     "n": 88.25
     },
     {
      "kat": "Quests",
      "ime": "Quests abandoned",
-     "n": 24
+     "n": 26
     },
     {
      "kat": "Skills",
@@ -2382,17 +2382,17 @@
     {
      "kat": "Secondary Skills",
      "ime": "Fishing skill",
-     "n": 121
+     "n": 150
     },
     {
      "kat": "Secondary Skills",
      "ime": "Fish caught",
-     "n": 252
+     "n": 269
     },
     {
      "kat": "Secondary Skills",
      "ime": "Fish and other things caught",
-     "n": 252
+     "n": 269
     },
     {
      "kat": "Professions",
@@ -2412,7 +2412,7 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 112
+     "n": 117
     },
     {
      "kat": "Travel",
@@ -2422,12 +2422,12 @@
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
-     "n": 24
+     "n": 25
     },
     {
      "kat": "Social",
      "ime": "Total times LOL'd",
-     "n": 64
+     "n": 66
     },
     {
      "kat": "Social",
@@ -2446,7 +2446,6 @@
      "Shady Saltseers",
      "Changing Tastes",
      "Ancient Gurubashi Idol",
-     "The Rumormonger",
      "The Burning of Spirits",
      "Hostile Takeover",
      "Zanzil's Secret",
@@ -2456,15 +2455,14 @@
      "The Hammer May Fall",
      "Catch of the Day",
      "An Unholy Alliance",
-     "Hemet Nesingwary",
      "Hearts of Zeal",
      "Bloodscalp Ears",
      "Gol'dir",
      "Source of Power",
-     "Investigate the Camp",
      "Magram Alliance",
      "The Saltseer Captain",
      "The Crown of Will",
+     "Dream Dust in the Swamp",
      "Befouled by Satyr",
      "Scaring Shaky",
      "WANTED: Baron Vardus",
@@ -2473,10 +2471,9 @@
      "Goblin Sponsorship",
      "Supply and Demand",
      "Elixir of Agony",
-     "Martek the Exiled",
      "Gelkis Alliance"
     ],
-    "zavrseno": 399
+    "zavrseno": 404
    },
    "mountovi": [
     "Cerulean Prideclaw",
@@ -2494,7 +2491,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg",
-   "azurirano": "2026-11-16T01:34:24Z"
+   "azurirano": "2026-11-16T03:34:18Z"
   },
   "Arsen Deadic": {
    "level": 31,
@@ -3150,7 +3147,7 @@
    "azurirano": "2026-11-16T01:34:24Z"
   }
  },
- "provjereno": "2026-11-16T01:34:24Z",
+ "provjereno": "2026-11-16T03:34:18Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3176,7 +3173,7 @@
     "rang": 1,
     "slug": "nikola-roguevic",
     "ilvl": 26,
-    "zadnjiLogin": "2026-11-16T01:15:19Z",
+    "zadnjiLogin": "2026-11-16T02:34:07Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg"
    },
    {
@@ -3725,6 +3722,11 @@
     "2026-11-16T01:34:24Z",
     35,
     44237
+   ],
+   [
+    "2026-11-16T03:34:18Z",
+    35,
+    53045
    ]
   ],
   "Arsen Deadic": [
