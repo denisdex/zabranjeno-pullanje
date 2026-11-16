@@ -9,7 +9,7 @@
    "url": "https://www.wowhead.com/news/rss/classic"
   }
  ],
- "azurirano": "2026-11-14T03:39:17Z",
+ "azurirano": "2026-11-16T22:15:48Z",
  "stavke": [
   {
    "datum": "2026-11-14T01:54:07Z",
@@ -229,17 +229,6 @@
    "vrsta": "vijest"
   },
   {
-   "datum": "2026-10-28T17:00:10Z",
-   "naslov": "New Player’s Starter Guide: Welcome to World of Warcraft: Forever",
-   "link": "https://us.forums.blizzard.com/en/wow/t/new-player%E2%80%99s-starter-guide-welcome-to-world-of-warcraft-forever/2394974/1",
-   "izvor": "Blizzard",
-   "sazetak": "World of Warcraft: Forever invites players into a reimagined original Azeroth where exploration, community, and the journey itself take center stage. Begin at level one, shape a character of your own, and learn the essentials for finding…",
-   "oznake": [
-    "Vodič"
-   ],
-   "vrsta": "vijest"
-  },
-  {
    "datum": "2026-10-23T17:25:01Z",
    "naslov": "This Week's WoW Recap - WoW: Forever, Hallow's End, Fall Savings",
    "link": "https://www.wowhead.com/news=383561/this-weeks-wow-recap-wow-forever-hallows-end-fall-savings",
@@ -412,6 +401,15 @@
    "link": "https://www.wowhead.com/news=382879/blizzcon-day-2-roundup-forever-forever-and-more-forever",
    "izvor": "Wowhead",
    "sazetak": "BlizzCon has ended, but don't worry - we've wrapped up the big recaps from today's panels. Continue reading »",
+   "oznake": [],
+   "vrsta": "vijest"
+  },
+  {
+   "datum": "2026-09-13T19:42:52Z",
+   "naslov": "WoW: Forever Webhook Now Available",
+   "link": "https://www.wowhead.com/news=382871/wow-forever-webhook-now-available",
+   "izvor": "Wowhead",
+   "sazetak": "We've created a new webhook for World of Warcraft: Forever, so you can keep up with all of the latest news and information regarding the newest flavor of WoW! Continue reading »",
    "oznake": [],
    "vrsta": "vijest"
   }
