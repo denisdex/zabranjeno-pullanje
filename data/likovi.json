@@ -1,16 +1,16 @@
 {
- "azurirano": "2026-11-16T15:32:20Z",
+ "azurirano": "2026-11-16T17:31:49Z",
  "likovi": {
   "Saman Saulic": {
-   "level": 38,
-   "xp": 42051,
+   "level": 39,
+   "xp": 38654,
    "guild": "Kafana na Balkanu",
    "ilvl": 32,
-   "zadnjiLogin": "2026-11-16T13:59:54Z",
+   "zadnjiLogin": "2026-11-16T17:24:41Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
-    29,
+    30,
     0
    ],
    "specka": "Enhancement",
@@ -77,9 +77,9 @@
     },
     {
      "ime": "Maelstrom Weapon",
-     "rang": 4,
+     "rang": 5,
      "stablo": "Enhancement",
-     "opis": "When you deal damage with a melee attack, you have a 54% chance (based on weapon speed) to reduce the cast time and Mana cost of your next Lightning Bolt spell by 20%. Stacks up to 5 times. Lasts 30 sec."
+     "opis": "When you deal damage with a melee attack, you have a 60% chance (based on weapon speed) to reduce the cast time and Mana cost of your next Lightning Bolt spell by 20%. Stacks up to 5 times. Lasts 30 sec."
     }
    ],
    "oprema": [
@@ -125,11 +125,11 @@
     },
     {
      "slot": "Legs",
-     "ime": "Supple Bellyskin Leggings",
-     "kvaliteta": "rare",
-     "wowhead": 273022,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/134591.jpg",
-     "ilvl": 31
+     "ime": "Crocskin Waders",
+     "kvaliteta": "uncommon",
+     "wowhead": 274962,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/134593.jpg",
+     "ilvl": 42
     },
     {
      "slot": "Feet",
@@ -201,8 +201,7 @@
      "kvaliteta": "rare",
      "wowhead": 280604,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133522.jpg",
-     "ilvl": 40,
-     "enchant": "Windfury 1"
+     "ilvl": 40
     },
     {
      "slot": "Ranged",
@@ -234,7 +233,7 @@
     },
     {
      "name": "Fishing",
-     "skill": 198,
+     "skill": 202,
      "max": 225,
      "vrsta": "sekundarna"
     },
@@ -246,48 +245,48 @@
     }
    ],
    "statovi": {
-    "hp": 1569,
-    "resurs": 1632,
+    "hp": 1579,
+    "resurs": 1876,
     "resursIme": "Mana",
-    "str": 120,
-    "agi": 42,
-    "sta": 124,
-    "int": 66,
-    "spi": 102,
-    "armor": 649,
-    "ap": 374,
+    "str": 123,
+    "agi": 43,
+    "sta": 122,
+    "int": 81,
+    "spi": 120,
+    "armor": 707,
+    "ap": 397,
     "spellPower": 11,
-    "crit": 9.61,
-    "spellCrit": 9.13,
-    "rangedCrit": 0.0,
-    "dodge": 4.61,
-    "parry": 4.76,
-    "block": 4.76,
-    "dps": 62.3
+    "crit": 9.72,
+    "spellCrit": 9.51,
+    "rangedCrit": 5.0,
+    "dodge": 4.65,
+    "parry": 4.72,
+    "block": 4.72,
+    "dps": 63.9
    },
    "reputacije": [
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 7990,
+     "vrijednost": 8000,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Honored",
-     "vrijednost": 4038,
+     "vrijednost": 4041,
      "max": 12000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Honored",
-     "vrijednost": 2441,
+     "vrijednost": 2443,
      "max": 12000
     },
     {
      "ime": "Undercity",
      "status": "Friendly",
-     "vrijednost": 5696,
+     "vrijednost": 5698,
      "max": 6000
     },
     {
@@ -299,19 +298,19 @@
     {
      "ime": "Ratchet",
      "status": "Friendly",
-     "vrijednost": 2360,
+     "vrijednost": 2365,
      "max": 6000
     },
     {
      "ime": "Booty Bay",
      "status": "Friendly",
-     "vrijednost": 432,
+     "vrijednost": 437,
      "max": 6000
     },
     {
-     "ime": "Everlook",
+     "ime": "Powderfuse",
      "status": "Friendly",
-     "vrijednost": 97,
+     "vrijednost": 107,
      "max": 6000
     }
    ],
@@ -339,12 +338,12 @@
     {
      "kat": "Consumables",
      "ime": "Beverages consumed",
-     "n": 208
+     "n": 220
     },
     {
      "kat": "Consumables",
      "ime": "Food eaten",
-     "n": 31
+     "n": 37
     },
     {
      "kat": "Reputation",
@@ -429,17 +428,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 6116
+     "n": 6266
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 4439
+     "n": 4587
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 6082
+     "n": 6231
     },
     {
      "kat": "Creatures",
@@ -449,13 +448,13 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 3051,
+     "n": 3140,
      "opis": "Humanoid"
     },
     {
      "kat": "Creatures",
      "ime": "Critters killed",
-     "n": 31
+     "n": 32
     },
     {
      "kat": "Honorable Kills",
@@ -476,12 +475,12 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 2917
+     "n": 3052
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 2504
+     "n": 2639
     },
     {
      "kat": "Killing Blows",
@@ -492,7 +491,7 @@
     {
      "kat": "Deaths",
      "ime": "Total deaths",
-     "n": 56
+     "n": 59
     },
     {
      "kat": "Dungeons and Raids",
@@ -507,7 +506,7 @@
     {
      "kat": "World",
      "ime": "Deaths from drowning",
-     "n": 1
+     "n": 2
     },
     {
      "kat": "World",
@@ -532,7 +531,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 396
+     "n": 412
     },
     {
      "kat": "Quests",
@@ -587,17 +586,17 @@
     {
      "kat": "Secondary Skills",
      "ime": "Fishing skill",
-     "n": 198
+     "n": 202
     },
     {
      "kat": "Secondary Skills",
      "ime": "Fish caught",
-     "n": 489
+     "n": 520
     },
     {
      "kat": "Secondary Skills",
      "ime": "Fish and other things caught",
-     "n": 489
+     "n": 520
     },
     {
      "kat": "Professions",
@@ -632,37 +631,41 @@
    ],
    "questovi": {
     "uLogu": [
-     "WANTED: Ghostmaw",
      "Ongeku",
      "Reclaimed Treasures",
      "Elixir of Agony",
      "Compendium of the Fallen",
-     "Poison Tips",
      "Dalaran Patrols",
      "The Grave Knight",
      "Helcular's Revenge",
      "Ancient Gurubashi Idol",
      "The Book of Ur",
      "Rig Wars",
-     "A Message in Blood",
+     "Not My Circus",
+     "Snargl's Snout",
      "The Sacred Flame",
      "Into The Scarlet Monastery",
      "Catch of the Day",
      "Terror of the Desert Skies",
      "An Unholy Alliance",
-     "Borrowed Blades",
+     "WANTED: Trapclaw",
      "Hearts of Zeal",
-     "Food for the Taking",
      "The Princess Trapped",
-     "Song of the Strider",
+     "A Taste of the Sea",
      "Source of Power",
      "Magram Alliance",
      "WANTED: Scoutmaster Vargas",
-     "Twice Misplaced Trust",
-     "The Corrupter",
-     "Fetch 'n' Fletch"
+     "A Gift From Our Enemies",
+     "Gnoll Infestation",
+     "The Goblin Trader",
+     "It Takes Guts",
+     "Saltwater Savages",
+     "WANTED: Old Rot-Chum",
+     "Unfriendly Competition",
+     "Show Them How It's Done",
+     "The Corrupter"
     ],
-    "zavrseno": 471
+    "zavrseno": 487
    },
    "mountovi": [
     "Cerulean Prideclaw"
@@ -676,7 +679,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg",
-   "azurirano": "2026-11-16T15:32:20Z"
+   "azurirano": "2026-11-16T17:31:49Z"
   },
   "Melee Kitic": {
    "level": 33,
@@ -3140,7 +3143,7 @@
    "azurirano": "2026-11-16T01:34:24Z"
   }
  },
- "provjereno": "2026-11-16T15:32:20Z",
+ "provjereno": "2026-11-16T17:31:49Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3149,13 +3152,13 @@
   "roster": [
    {
     "ime": "Saman Saulic",
-    "level": 38,
+    "level": 39,
     "klasa": "Shaman",
     "rasa": "Orc",
     "rang": 0,
     "slug": "saman-saulic",
     "ilvl": 32,
-    "zadnjiLogin": "2026-11-16T13:59:54Z",
+    "zadnjiLogin": "2026-11-16T17:24:41Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg"
    },
    {
@@ -3193,13 +3196,13 @@
    },
    {
     "ime": "Venos Xx",
-    "level": 35,
+    "level": 36,
     "klasa": "Druid",
     "rasa": "Tauren",
     "rang": 4,
     "slug": "venos-xx",
-    "ilvl": 25,
-    "zadnjiLogin": "2026-11-16T14:53:38Z",
+    "ilvl": 26,
+    "zadnjiLogin": "2026-11-16T15:57:15Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/253/13774333-avatar.jpg"
    },
    {
@@ -3389,6 +3392,11 @@
     "2026-11-16T15:32:20Z",
     38,
     42051
+   ],
+   [
+    "2026-11-16T17:31:49Z",
+    39,
+    38654
    ]
   ],
   "Melee Kitic": [
