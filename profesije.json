@@ -83,7 +83,7 @@
         },
         {
           "name": "Fishing",
-          "skill": 195
+          "skill": 198
         },
         {
           "name": "First Aid",
@@ -1186,6 +1186,12 @@
       "character": "rogue",
       "profession": "Fishing",
       "skill": 154
+    },
+    {
+      "date": "2026-11-16",
+      "character": "shaman",
+      "profession": "Fishing",
+      "skill": 198
     }
   ],
   "flows": [

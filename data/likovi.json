@@ -1,16 +1,16 @@
 {
- "azurirano": "2026-11-16T11:33:05Z",
+ "azurirano": "2026-11-16T13:32:25Z",
  "likovi": {
   "Saman Saulic": {
-   "level": 37,
-   "xp": 46480,
+   "level": 38,
+   "xp": 11062,
    "guild": "Kafana na Balkanu",
-   "ilvl": 31,
-   "zadnjiLogin": "2026-11-15T22:42:23Z",
+   "ilvl": 32,
+   "zadnjiLogin": "2026-11-16T12:30:53Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
-    28,
+    29,
     0
    ],
    "specka": "Enhancement",
@@ -77,9 +77,9 @@
     },
     {
      "ime": "Maelstrom Weapon",
-     "rang": 3,
+     "rang": 4,
      "stablo": "Enhancement",
-     "opis": "When you deal damage with a melee attack, you have a 48% chance (based on weapon speed) to reduce the cast time and Mana cost of your next Lightning Bolt spell by 20%. Stacks up to 5 times. Lasts 30 sec."
+     "opis": "When you deal damage with a melee attack, you have a 54% chance (based on weapon speed) to reduce the cast time and Mana cost of your next Lightning Bolt spell by 20%. Stacks up to 5 times. Lasts 30 sec."
     }
    ],
    "oprema": [
@@ -125,11 +125,11 @@
     },
     {
      "slot": "Legs",
-     "ime": "Scaled Leather Leggings of Strength",
-     "kvaliteta": "uncommon",
-     "wowhead": 9833,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/134582.jpg",
-     "ilvl": 33
+     "ime": "Supple Bellyskin Leggings",
+     "kvaliteta": "rare",
+     "wowhead": 273022,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/134591.jpg",
+     "ilvl": 31
     },
     {
      "slot": "Feet",
@@ -149,11 +149,11 @@
     },
     {
      "slot": "Hands",
-     "ime": "Oilrag Handwraps",
+     "ime": "Tiger Hunter Gloves",
      "kvaliteta": "uncommon",
-     "wowhead": 16741,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132946.jpg",
-     "ilvl": 31
+     "wowhead": 4107,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132938.jpg",
+     "ilvl": 37
     },
     {
      "slot": "Finger 1",
@@ -234,7 +234,7 @@
     },
     {
      "name": "Fishing",
-     "skill": 195,
+     "skill": 198,
      "max": 225,
      "vrsta": "sekundarna"
     },
@@ -246,48 +246,48 @@
     }
    ],
    "statovi": {
-    "hp": 1410,
-    "resurs": 1793,
+    "hp": 1569,
+    "resurs": 1812,
     "resursIme": "Mana",
-    "str": 119,
-    "agi": 34,
-    "sta": 110,
-    "int": 79,
-    "spi": 111,
-    "armor": 621,
-    "ap": 383,
-    "spellPower": 20,
-    "crit": 9.15,
-    "spellCrit": 9.57,
+    "str": 120,
+    "agi": 42,
+    "sta": 124,
+    "int": 78,
+    "spi": 113,
+    "armor": 649,
+    "ap": 386,
+    "spellPower": 11,
+    "crit": 9.57,
+    "spellCrit": 9.47,
     "rangedCrit": 0.0,
-    "dodge": 4.11,
-    "parry": 4.8,
-    "block": 4.8,
-    "dps": 62.9
+    "dodge": 4.57,
+    "parry": 4.72,
+    "block": 4.72,
+    "dps": 63.1
    },
    "reputacije": [
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 7840,
+     "vrijednost": 7990,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Honored",
-     "vrijednost": 3813,
+     "vrijednost": 4038,
      "max": 12000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Honored",
-     "vrijednost": 2366,
+     "vrijednost": 2441,
      "max": 12000
     },
     {
      "ime": "Undercity",
      "status": "Friendly",
-     "vrijednost": 5621,
+     "vrijednost": 5696,
      "max": 6000
     },
     {
@@ -299,19 +299,19 @@
     {
      "ime": "Ratchet",
      "status": "Friendly",
-     "vrijednost": 2162,
+     "vrijednost": 2210,
      "max": 6000
     },
     {
      "ime": "Booty Bay",
      "status": "Friendly",
-     "vrijednost": 37,
+     "vrijednost": 132,
      "max": 6000
     },
     {
      "ime": "Everlook",
      "status": "Neutral",
-     "vrijednost": 2900,
+     "vrijednost": 2947,
      "max": 3000
     }
    ],
@@ -339,12 +339,12 @@
     {
      "kat": "Consumables",
      "ime": "Beverages consumed",
-     "n": 190
+     "n": 205
     },
     {
      "kat": "Consumables",
      "ime": "Food eaten",
-     "n": 23
+     "n": 29
     },
     {
      "kat": "Reputation",
@@ -429,17 +429,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 5968
+     "n": 6085
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 4297
+     "n": 4410
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 5934
+     "n": 6051
     },
     {
      "kat": "Creatures",
@@ -449,7 +449,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 3001,
+     "n": 3048,
      "opis": "Humanoid"
     },
     {
@@ -476,12 +476,12 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 2781
+     "n": 2886
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 2368
+     "n": 2473
     },
     {
      "kat": "Killing Blows",
@@ -492,7 +492,7 @@
     {
      "kat": "Deaths",
      "ime": "Total deaths",
-     "n": 54
+     "n": 56
     },
     {
      "kat": "Dungeons and Raids",
@@ -532,7 +532,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 381
+     "n": 387
     },
     {
      "kat": "Quests",
@@ -542,7 +542,7 @@
     {
      "kat": "Quests",
      "ime": "Quests abandoned",
-     "n": 42
+     "n": 43
     },
     {
      "kat": "Skills",
@@ -587,17 +587,17 @@
     {
      "kat": "Secondary Skills",
      "ime": "Fishing skill",
-     "n": 191
+     "n": 198
     },
     {
      "kat": "Secondary Skills",
      "ime": "Fish caught",
-     "n": 471
+     "n": 489
     },
     {
      "kat": "Secondary Skills",
      "ime": "Fish and other things caught",
-     "n": 471
+     "n": 489
     },
     {
      "kat": "Professions",
@@ -632,7 +632,6 @@
    ],
    "questovi": {
     "uLogu": [
-     "Mok'thardin's Enchantment",
      "Ongeku",
      "Reclaimed Treasures",
      "Elixir of Agony",
@@ -644,9 +643,7 @@
      "Ancient Gurubashi Idol",
      "The Book of Ur",
      "Rig Wars",
-     "Raptor Mastery",
      "Hostile Takeover",
-     "The Defense of Grom'gol",
      "The Sacred Flame",
      "Into The Scarlet Monastery",
      "Catch of the Day",
@@ -657,15 +654,11 @@
      "The Princess Trapped",
      "Source of Power",
      "Magram Alliance",
-     "The Vile Reef",
-     "Headhunting",
      "Anything of Value",
-     "Tiger Mastery",
-     "Panther Mastery",
      "Goblin Sponsorship",
      "The Corrupter"
     ],
-    "zavrseno": 456
+    "zavrseno": 462
    },
    "mountovi": [
     "Cerulean Prideclaw"
@@ -679,7 +672,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg",
-   "azurirano": "2026-11-15T23:34:28Z"
+   "azurirano": "2026-11-16T13:32:25Z"
   },
   "Melee Kitic": {
    "level": 32,
@@ -3146,7 +3139,7 @@
    "azurirano": "2026-11-16T01:34:24Z"
   }
  },
- "provjereno": "2026-11-16T11:33:05Z",
+ "provjereno": "2026-11-16T13:32:25Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3155,13 +3148,13 @@
   "roster": [
    {
     "ime": "Saman Saulic",
-    "level": 37,
+    "level": 38,
     "klasa": "Shaman",
     "rasa": "Orc",
     "rang": 0,
     "slug": "saman-saulic",
-    "ilvl": 31,
-    "zadnjiLogin": "2026-11-15T22:42:23Z",
+    "ilvl": 32,
+    "zadnjiLogin": "2026-11-16T12:30:53Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg"
    },
    {
@@ -3385,6 +3378,11 @@
     "2026-11-15T23:34:28Z",
     37,
     46480
+   ],
+   [
+    "2026-11-16T13:32:25Z",
+    38,
+    11062
    ]
   ],
   "Melee Kitic": [
