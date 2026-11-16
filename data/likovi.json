@@ -1,12 +1,12 @@
 {
- "azurirano": "2026-11-16T13:32:25Z",
+ "azurirano": "2026-11-16T15:32:20Z",
  "likovi": {
   "Saman Saulic": {
    "level": 38,
-   "xp": 11062,
+   "xp": 42051,
    "guild": "Kafana na Balkanu",
    "ilvl": 32,
-   "zadnjiLogin": "2026-11-16T12:30:53Z",
+   "zadnjiLogin": "2026-11-16T13:59:54Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -247,23 +247,23 @@
    ],
    "statovi": {
     "hp": 1569,
-    "resurs": 1812,
+    "resurs": 1632,
     "resursIme": "Mana",
     "str": 120,
     "agi": 42,
     "sta": 124,
-    "int": 78,
-    "spi": 113,
+    "int": 66,
+    "spi": 102,
     "armor": 649,
-    "ap": 386,
+    "ap": 374,
     "spellPower": 11,
-    "crit": 9.57,
-    "spellCrit": 9.47,
+    "crit": 9.61,
+    "spellCrit": 9.13,
     "rangedCrit": 0.0,
-    "dodge": 4.57,
-    "parry": 4.72,
-    "block": 4.72,
-    "dps": 63.1
+    "dodge": 4.61,
+    "parry": 4.76,
+    "block": 4.76,
+    "dps": 62.3
    },
    "reputacije": [
     {
@@ -299,20 +299,20 @@
     {
      "ime": "Ratchet",
      "status": "Friendly",
-     "vrijednost": 2210,
+     "vrijednost": 2360,
      "max": 6000
     },
     {
      "ime": "Booty Bay",
      "status": "Friendly",
-     "vrijednost": 132,
+     "vrijednost": 432,
      "max": 6000
     },
     {
      "ime": "Everlook",
-     "status": "Neutral",
-     "vrijednost": 2947,
-     "max": 3000
+     "status": "Friendly",
+     "vrijednost": 97,
+     "max": 6000
     }
    ],
    "statistika": [
@@ -339,12 +339,12 @@
     {
      "kat": "Consumables",
      "ime": "Beverages consumed",
-     "n": 205
+     "n": 208
     },
     {
      "kat": "Consumables",
      "ime": "Food eaten",
-     "n": 29
+     "n": 31
     },
     {
      "kat": "Reputation",
@@ -429,17 +429,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 6085
+     "n": 6116
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 4410
+     "n": 4439
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 6051
+     "n": 6082
     },
     {
      "kat": "Creatures",
@@ -449,7 +449,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 3048,
+     "n": 3051,
      "opis": "Humanoid"
     },
     {
@@ -476,12 +476,12 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 2886
+     "n": 2917
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 2473
+     "n": 2504
     },
     {
      "kat": "Killing Blows",
@@ -532,7 +532,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 387
+     "n": 396
     },
     {
      "kat": "Quests",
@@ -617,7 +617,7 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 166
+     "n": 168
     },
     {
      "kat": "Travel",
@@ -632,33 +632,37 @@
    ],
    "questovi": {
     "uLogu": [
+     "WANTED: Ghostmaw",
      "Ongeku",
      "Reclaimed Treasures",
      "Elixir of Agony",
      "Compendium of the Fallen",
+     "Poison Tips",
      "Dalaran Patrols",
-     "Singing Blue Shards",
      "The Grave Knight",
      "Helcular's Revenge",
      "Ancient Gurubashi Idol",
      "The Book of Ur",
      "Rig Wars",
-     "Hostile Takeover",
+     "A Message in Blood",
      "The Sacred Flame",
      "Into The Scarlet Monastery",
      "Catch of the Day",
      "Terror of the Desert Skies",
      "An Unholy Alliance",
-     "Zimmix's Great Escape",
+     "Borrowed Blades",
      "Hearts of Zeal",
+     "Food for the Taking",
      "The Princess Trapped",
+     "Song of the Strider",
      "Source of Power",
      "Magram Alliance",
-     "Anything of Value",
-     "Goblin Sponsorship",
-     "The Corrupter"
+     "WANTED: Scoutmaster Vargas",
+     "Twice Misplaced Trust",
+     "The Corrupter",
+     "Fetch 'n' Fletch"
     ],
-    "zavrseno": 462
+    "zavrseno": 471
    },
    "mountovi": [
     "Cerulean Prideclaw"
@@ -672,18 +676,18 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg",
-   "azurirano": "2026-11-16T13:32:25Z"
+   "azurirano": "2026-11-16T15:32:20Z"
   },
   "Melee Kitic": {
-   "level": 32,
-   "xp": 48019,
+   "level": 33,
+   "xp": 23607,
    "guild": "Kafana na Balkanu",
    "ilvl": 23,
-   "zadnjiLogin": "2026-11-16T10:59:02Z",
+   "zadnjiLogin": "2026-11-16T14:56:13Z",
    "izvor": "Blizzard API",
    "talenti": [
     3,
-    18,
+    19,
     2
    ],
    "specka": "Fury",
@@ -702,9 +706,9 @@
     },
     {
      "ime": "Lingering Rage",
-     "rang": 2,
+     "rang": 3,
      "stablo": "Fury",
-     "opis": "Increases the time before your Rage begins to decay after leaving combat by 4 sec."
+     "opis": "Increases the time before your Rage begins to decay after leaving combat by 6 sec."
     },
     {
      "ime": "Unbridled Wrath",
@@ -767,12 +771,11 @@
     },
     {
      "slot": "Legs",
-     "ime": "Plainsguard Leggings",
+     "ime": "Mercenary Leggings",
      "kvaliteta": "uncommon",
-     "wowhead": 15470,
+     "wowhead": 3751,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/134583.jpg",
-     "ilvl": 29,
-     "enchant": "Enchanted: Stamina +3 and Armor +24"
+     "ilvl": 30
     },
     {
      "slot": "Feet",
@@ -843,7 +846,7 @@
    "profesije": [
     {
      "name": "Mining",
-     "skill": 165,
+     "skill": 166,
      "max": 225,
      "vrsta": "primarna"
     },
@@ -873,48 +876,48 @@
     }
    ],
    "statovi": {
-    "hp": 1499,
+    "hp": 1428,
     "resurs": 100,
     "resursIme": "Rage",
-    "str": 115,
-    "agi": 49,
-    "sta": 126,
+    "str": 116,
+    "agi": 57,
+    "sta": 116,
     "int": 21,
     "spi": 47,
-    "armor": 1309,
-    "ap": 318,
+    "armor": 1303,
+    "ap": 323,
     "spellPower": 0,
-    "crit": 9.5,
+    "crit": 10.05,
     "spellCrit": 0.0,
     "rangedCrit": 0.0,
-    "dodge": 4.42,
-    "parry": 4.88,
-    "block": 4.88,
-    "dps": 48.3
+    "dodge": 5.05,
+    "parry": 4.96,
+    "block": 4.96,
+    "dps": 48.7
    },
    "reputacije": [
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 6127,
+     "vrijednost": 6277,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Honored",
-     "vrijednost": 2413,
+     "vrijednost": 2563,
      "max": 12000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Honored",
-     "vrijednost": 691,
+     "vrijednost": 841,
      "max": 12000
     },
     {
      "ime": "Undercity",
      "status": "Friendly",
-     "vrijednost": 4583,
+     "vrijednost": 5183,
      "max": 6000
     },
     {
@@ -951,12 +954,12 @@
     {
      "kat": "Consumables",
      "ime": "Bandages used",
-     "n": 55
+     "n": 60
     },
     {
      "kat": "Consumables",
      "ime": "Bandage used most",
-     "n": 31,
+     "n": 36,
      "opis": "Heavy Linen Bandage"
     },
     {
@@ -987,7 +990,7 @@
     {
      "kat": "Gear",
      "ime": "Greed rolls made on loot",
-     "n": 112
+     "n": 113
     },
     {
      "kat": "Gear",
@@ -1057,17 +1060,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 4030
+     "n": 4164
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 3138
+     "n": 3238
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 4006
+     "n": 4140
     },
     {
      "kat": "Creatures",
@@ -1077,7 +1080,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 2269,
+     "n": 2385,
      "opis": "Humanoid"
     },
     {
@@ -1088,12 +1091,12 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 2122
+     "n": 2225
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 1852
+     "n": 1955
     },
     {
      "kat": "Killing Blows",
@@ -1129,7 +1132,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 292
+     "n": 298
     },
     {
      "kat": "Quests",
@@ -1224,7 +1227,7 @@
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
-     "n": 34
+     "n": 35
     },
     {
      "kat": "Social",
@@ -1236,11 +1239,13 @@
     "uLogu": [
      "Orm Stonehoof and the Brutal Helm",
      "Encrusted Tail Fins",
+     "Bracers of Binding",
      "Elixir of Agony",
+     "Dalaran Patrols",
+     "Battle of Hillsbrad",
      "The Grave Knight",
      "Ordanus",
      "Changing Tastes",
-     "Prison Break In",
      "The Book of Ur",
      "Rig Wars",
      "Velora Nitely and the Brutal Legguards",
@@ -1256,19 +1261,15 @@
      "Source of Power",
      "Ula'elek and the Brutal Gauntlets",
      "Allegiance to the Old Gods",
-     "Key to the City",
      "Leaders of the Fang",
      "Thundering Hearts",
      "Cyclonian",
-     "Humbert's Sword",
      "Between a Rock and a Thistlefur",
      "Martek the Exiled",
      "Chief Engineer Scooty",
-     "To Steal From Thieves",
-     "Battle of Hillsbrad",
-     "Stone Tokens"
+     "To Steal From Thieves"
     ],
-    "zavrseno": 325
+    "zavrseno": 331
    },
    "mountovi": [],
    "petovi": [],
@@ -1278,7 +1279,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg",
-   "azurirano": "2026-11-16T11:33:05Z"
+   "azurirano": "2026-11-16T15:32:20Z"
   },
   "Janica Frostelich": {
    "level": 18,
@@ -3139,7 +3140,7 @@
    "azurirano": "2026-11-16T01:34:24Z"
   }
  },
- "provjereno": "2026-11-16T13:32:25Z",
+ "provjereno": "2026-11-16T15:32:20Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3154,7 +3155,7 @@
     "rang": 0,
     "slug": "saman-saulic",
     "ilvl": 32,
-    "zadnjiLogin": "2026-11-16T12:30:53Z",
+    "zadnjiLogin": "2026-11-16T13:59:54Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg"
    },
    {
@@ -3170,13 +3171,13 @@
    },
    {
     "ime": "Melee Kitic",
-    "level": 32,
+    "level": 33,
     "klasa": "Warrior",
     "rasa": "Orc",
     "rang": 3,
     "slug": "melee-kitic",
     "ilvl": 23,
-    "zadnjiLogin": "2026-11-16T10:59:02Z",
+    "zadnjiLogin": "2026-11-16T14:56:13Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg"
    },
    {
@@ -3198,7 +3199,7 @@
     "rang": 4,
     "slug": "venos-xx",
     "ilvl": 25,
-    "zadnjiLogin": "2026-11-16T00:46:03Z",
+    "zadnjiLogin": "2026-11-16T14:53:38Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/253/13774333-avatar.jpg"
    },
    {
@@ -3383,6 +3384,11 @@
     "2026-11-16T13:32:25Z",
     38,
     11062
+   ],
+   [
+    "2026-11-16T15:32:20Z",
+    38,
+    42051
    ]
   ],
   "Melee Kitic": [
@@ -3535,6 +3541,11 @@
     "2026-11-16T11:33:05Z",
     32,
     48019
+   ],
+   [
+    "2026-11-16T15:32:20Z",
+    33,
+    23607
    ]
   ],
   "Janica Frostelich": [
