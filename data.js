@@ -3,7 +3,7 @@
 window.HORDE = {
   ekipa: "Zaprešić Horde",
   guild: "Kafana na Balkanu",
-  azurirano: "2026-11-16",
+  azurirano: "2026-11-17",
 
   // Vremena u UTC. Studeni je CET (UTC+1).
   // Rezervacija imena: do 3. 11. 2026. u 23:59 po Zagrebu.
@@ -75,7 +75,7 @@ window.HORDE = {
   // portret (foto) je 720×960 izrez iz istog kadra; oci i ociSiroka već uračunavaju 4 % povećanja slike na kartici
   // imena: gdje se govori o ljudima piše igrac (Pero, Niksa, Karken, Žuga, Dex); lik samo kao naslov kartice/profila i u kontekstu igre
   igraci: [
-    { igrac: "Niksa",   lik: "Saman Saulic",    klasa: "Shaman",  rasa: "Orc",    uloga: "Healer",     level: 37, foto: "assets/likovi/saman-saulic.jpg",
+    { igrac: "Niksa",   lik: "Saman Saulic",    klasa: "Shaman",  rasa: "Orc",    uloga: "Healer",     level: 39, foto: "assets/likovi/saman-saulic.jpg",
       siroka: "assets/likovi/saman-saulic-wide.jpg", fokus: [50.3, 18],
       // savjeti po levelu, u profilu u bloku "Što sad"
       trikovi: [
@@ -108,7 +108,7 @@ window.HORDE = {
         ],
         biljeske: "Healer grupe. Kad kaže mana, svi stanu."
       } },
-    { igrac: "Pero",    lik: "Melee Kitic",      klasa: "Warrior", rasa: "Orc",    uloga: "Melee DPS",  level: 32, foto: "assets/likovi/melee-kitic.jpg", boja: "#D9853B",
+    { igrac: "Pero",    lik: "Melee Kitic",      klasa: "Warrior", rasa: "Orc",    uloga: "Melee DPS",  level: 33, foto: "assets/likovi/melee-kitic.jpg", boja: "#D9853B",
       siroka: "assets/likovi/melee-kitic-wide.jpg", fokus: [50.3, 28.8],
       // savjeti po levelu, u profilu u bloku "Što sad"
       trikovi: [
@@ -618,6 +618,16 @@ window.HORDE = {
   // Stavka: { tekst, za: [klase/rase ili "Svi"], tema: kratka oznaka što se mijenja (Racial, Spell, Rage, XP, Dungeoni, Loot, Zona...) }
   izvorNovosti: "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
   novosti: [
+    { datum: "2026-11-16", naslov: "Hotfixovi: Windfury Totem, Fury Warrior, Vampiric Embrace i The Drowned City", stavke: [
+      { tekst: "Windfury Totem popravljen: njegovi napadi više ne ignoriraju armor, imaju internal cooldown i daju Rage; Mutilate, Execute, Shield Slam, Shield Bash i pojačani Holy Strike (Shieldworn) više ga ne pokušavaju aktivirati dodatno.", za: ["Shaman", "Svi"], tema: "Bug fix" },
+      { tekst: "Enhancement: jedan Maelstrom Weapon više ne može pojačati dva casta; Thundering Strikes daje crit chance i bez oružja u ruci.", za: ["Shaman"], tema: "Bug fix" },
+      { tekst: "Fury: Cleave i Heroic Strike sad ispravno aktiviraju Unbridled Wrath i Reckless Swings i više ne troše Flurry stackove. Revered Champion sad nudi Legacy of Valor Warriorima koji ispunjavaju uvjete.", za: ["Warrior"], tema: "Bug fix" },
+      { tekst: "Rankovi poisona ograničeni su na najviši rank; Shank više ne skida combo pointe s drugih meta kad nemaš talent Boot Knife.", za: ["Rogue"], tema: "Bug fix" },
+      { tekst: "Vampiric Embrace heala za 10% Shadow štete (bilo 20%), a sam Priest od njega dobiva 100% više healinga, pa se solo ništa ne mijenja; Dark Inspiration se više ne stacka od više Shadow Priesta u grupi.", za: ["Priest"], tema: "Nerf" },
+      { tekst: "The Drowned City: Captain Dreadrise više nije imun na stun, Braxton reagira na borbu, Abyssal Bubble više ne može block, dodge ni parry. Sunken Temple: Atal'alarion statue u Pit of Refuse više se ne zaglave ako ih aktiviraš krivim redom.", za: ["Svi"], tema: "Dungeoni" },
+      { tekst: "Enchant Boots - Speed s reputacije sad je Bind-on-Pickup; Outrider's Gloves rade kako treba; The Violet Tragan više ne prekida crowd control. Smrt u Gold Mineu u Arathi Basinu više te ne šalje na groblje u Riverglades.", za: ["Svi"], tema: "Loot" },
+      { tekst: "Questovi: veći drop rate za Blood Red Bandanas; popravljeni The Talisman of Kazdor (spawn Witch Doctora Zum'raha) i The Return of the King? u Theramoreu; No Soldier Left Behind daje credit cijeloj grupi; Water Pouch Bounty više ne daje XP. Fishing Rack u kampu daje lure svima.", za: ["Svi"], tema: "Bug fix" }
+    ] },
     { datum: "2026-11-14", naslov: "Ispravak XP-a u dungeonima i povrat zlata za izgubljeni trening", stavke: [
       { tekst: "XP u dungeonima: mobovi više ne daju 0 XP čim je u grupi netko viši; to se sad događa tek kad je najviši igrač više od 12 levela iznad mobova. Ne vrijedi za instance koje su već bile u tijeku.", za: ["Svi"], tema: "XP" },
       { tekst: "Tko je 9. 11. između 22:17 i 23:17 CET izgubio kupljene skillove kod trenera zbog problema sa serverima, dobio je zlato natrag poštom.", za: ["Svi"], tema: "Bug fix" }
