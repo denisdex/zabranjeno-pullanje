@@ -72,7 +72,7 @@
         },
         {
           "name": "Skinning",
-          "skill": 238,
+          "skill": 239,
           "phase": "stalno"
         }
       ],
@@ -83,7 +83,7 @@
         },
         {
           "name": "Fishing",
-          "skill": 211
+          "skill": 216
         },
         {
           "name": "First Aid",
@@ -1246,6 +1246,18 @@
       "character": "rogue",
       "profession": "First Aid",
       "skill": 225
+    },
+    {
+      "date": "2026-11-17",
+      "character": "shaman",
+      "profession": "Skinning",
+      "skill": 239
+    },
+    {
+      "date": "2026-11-17",
+      "character": "shaman",
+      "profession": "Fishing",
+      "skill": 216
     }
   ],
   "flows": [
