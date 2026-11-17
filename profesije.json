@@ -72,7 +72,7 @@
         },
         {
           "name": "Skinning",
-          "skill": 225,
+          "skill": 237,
           "phase": "stalno"
         }
       ],
@@ -1222,6 +1222,12 @@
       "character": "paladin",
       "profession": "Mining",
       "skill": 85
+    },
+    {
+      "date": "2026-11-17",
+      "character": "shaman",
+      "profession": "Skinning",
+      "skill": 237
     }
   ],
   "flows": [

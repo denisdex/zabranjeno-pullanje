@@ -1,12 +1,12 @@
 {
- "azurirano": "2026-11-17T04:20:30Z",
+ "azurirano": "2026-11-17T10:19:47Z",
  "likovi": {
   "Saman Saulic": {
    "level": 40,
-   "xp": 48128,
+   "xp": 86986,
    "guild": "Kafana na Balkanu",
    "ilvl": 32,
-   "zadnjiLogin": "2026-11-17T01:59:13Z",
+   "zadnjiLogin": "2026-11-17T10:04:53Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -228,8 +228,8 @@
     },
     {
      "name": "Skinning",
-     "skill": 225,
-     "max": 225,
+     "skill": 237,
+     "max": 300,
      "vrsta": "primarna"
     },
     {
@@ -263,37 +263,37 @@
     "armor": 846,
     "ap": 399,
     "spellPower": 4,
-    "crit": 9.58,
+    "crit": 9.7,
     "spellCrit": 9.16,
     "rangedCrit": 5.0,
-    "dodge": 4.54,
-    "parry": 4.76,
-    "block": 4.76,
+    "dodge": 4.62,
+    "parry": 4.84,
+    "block": 4.84,
     "dps": 64.1
    },
    "reputacije": [
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 8073,
+     "vrijednost": 8173,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Honored",
-     "vrijednost": 4077,
+     "vrijednost": 4102,
      "max": 12000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Honored",
-     "vrijednost": 2480,
+     "vrijednost": 2505,
      "max": 12000
     },
     {
      "ime": "Undercity",
      "status": "Friendly",
-     "vrijednost": 5806,
+     "vrijednost": 5831,
      "max": 6000
     },
     {
@@ -305,19 +305,19 @@
     {
      "ime": "Ratchet",
      "status": "Friendly",
-     "vrijednost": 2772,
+     "vrijednost": 2810,
      "max": 6000
     },
     {
      "ime": "Powderfuse",
      "status": "Friendly",
-     "vrijednost": 922,
+     "vrijednost": 960,
      "max": 6000
     },
     {
      "ime": "Booty Bay",
      "status": "Friendly",
-     "vrijednost": 845,
+     "vrijednost": 920,
      "max": 6000
     }
    ],
@@ -345,7 +345,7 @@
     {
      "kat": "Consumables",
      "ime": "Beverages consumed",
-     "n": 248
+     "n": 260
     },
     {
      "kat": "Consumables",
@@ -365,7 +365,7 @@
     {
      "kat": "Reputation",
      "ime": "Total factions encountered",
-     "n": 20
+     "n": 19
     },
     {
      "kat": "Gear",
@@ -430,17 +430,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 6577
+     "n": 6674
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 4702
+     "n": 4799
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 6542
+     "n": 6639
     },
     {
      "kat": "Creatures",
@@ -450,7 +450,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 3222,
+     "n": 3238,
      "opis": "Humanoid"
     },
     {
@@ -477,12 +477,12 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 3238
+     "n": 3335
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 2741
+     "n": 2838
     },
     {
      "kat": "Killing Blows",
@@ -533,7 +533,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 435
+     "n": 439
     },
     {
      "kat": "Quests",
@@ -588,7 +588,7 @@
     {
      "kat": "Secondary Skills",
      "ime": "Fishing skill",
-     "n": 206
+     "n": 211
     },
     {
      "kat": "Secondary Skills",
@@ -618,12 +618,12 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 177
+     "n": 178
     },
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
-     "n": 26
+     "n": 27
     },
     {
      "kat": "Social",
@@ -633,19 +633,22 @@
    ],
    "questovi": {
     "uLogu": [
+     "Study of the Elements: Rock",
+     "Coolant Heads Prevail",
      "Ongeku",
      "Reclaimed Treasures",
-     "Coyote Thieves",
      "Badlands Reagent Run",
      "Elixir of Agony",
      "Compendium of the Fallen",
+     "Pearl Diving",
      "Helcular's Revenge",
      "Ancient Gurubashi Idol",
      "The Book of Ur",
      "Rig Wars",
-     "Supplies and Studies",
+     "Tabetha's Task",
      "Jom-jom's Escape",
      "Not My Circus",
+     "Solution to Doom",
      "Snargl's Snout",
      "Broken Alliances",
      "The Sacred Flame",
@@ -653,11 +656,14 @@
      "Into The Scarlet Monastery",
      "Catch of the Day",
      "Terror of the Desert Skies",
+     "Shadowshard Fragments",
      "An Unholy Alliance",
      "Hearts of Zeal",
      "The Princess Trapped",
+     "Power Stones",
      "Magram Alliance",
      "Smuggler's Special",
+     "Indurium",
      "Unchecked Expansion",
      "The Crown of Will",
      "Report to Helgrum",
@@ -668,11 +674,11 @@
      "The Corrupter",
      "On the Other Side"
     ],
-    "zavrseno": 532
+    "zavrseno": 536
    },
    "mountovi": [
-    "Cerulean Prideclaw",
-    "Black Wolf"
+    "Black Wolf",
+    "Cerulean Prideclaw"
    ],
    "petovi": [
     "Green Wing Macaw"
@@ -683,7 +689,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg",
-   "azurirano": "2026-11-17T02:15:21Z"
+   "azurirano": "2026-11-17T10:19:47Z"
   },
   "Melee Kitic": {
    "level": 33,
@@ -3152,7 +3158,7 @@
    "azurirano": "2026-11-17T04:20:30Z"
   }
  },
- "provjereno": "2026-11-17T08:19:48Z",
+ "provjereno": "2026-11-17T10:19:47Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3167,7 +3173,7 @@
     "rang": 0,
     "slug": "saman-saulic",
     "ilvl": 32,
-    "zadnjiLogin": "2026-11-17T01:59:13Z",
+    "zadnjiLogin": "2026-11-17T10:04:53Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg"
    },
    {
@@ -3411,6 +3417,11 @@
     "2026-11-17T02:15:21Z",
     40,
     48128
+   ],
+   [
+    "2026-11-17T10:19:47Z",
+    40,
+    86986
    ]
   ],
   "Melee Kitic": [
