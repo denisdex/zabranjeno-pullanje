@@ -151,7 +151,7 @@
         },
         {
           "name": "First Aid",
-          "skill": 225
+          "skill": 232
         }
       ]
     },
@@ -1282,6 +1282,12 @@
       "character": "warrior",
       "profession": "Mining",
       "skill": 169
+    },
+    {
+      "date": "2026-11-18",
+      "character": "rogue",
+      "profession": "First Aid",
+      "skill": 232
     }
   ],
   "flows": [
