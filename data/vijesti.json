@@ -9,14 +9,14 @@
    "url": "https://www.wowhead.com/news/rss/classic"
   }
  ],
- "azurirano": "2026-11-17T04:20:30Z",
+ "azurirano": "2026-11-18T04:15:39Z",
  "stavke": [
   {
-   "datum": "2026-11-17T02:17:43Z",
-   "naslov": "WoW: Forever Hotfixes - November 16, 2026",
-   "link": "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-16-2026/2403040/11",
+   "datum": "2026-11-18T03:24:08Z",
+   "naslov": "WoW: Forever Hotfixes - November 17, 2026",
+   "link": "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-17-2026/2403040/12",
    "izvor": "Blizzard",
-   "sazetak": "November 16, 2026 Camping The Fishing Rack now provides lures for everyone. Bloated Fish caught from the Fishing Rack effect have had their drop chance increased and their loot tables adjusted accordingly. Classes Druid Fixed an issue…",
+   "sazetak": "November 17, 2026 Camping Mounted Players will no longer be permitted to sleep while saddled up atop the Cozy Sleeping Bag. Cozy Sleeping Bag can now be placed in specific locations, like hunter traps. Cozy Sleeping Bag will now provide a…",
    "oznake": [
     "Hotfix"
    ],
@@ -171,15 +171,6 @@
    "vrsta": "vijest"
   },
   {
-   "datum": "2026-11-03T18:00:10Z",
-   "naslov": "WoW: Forever—What’s New and What Feels Familiar",
-   "link": "https://us.forums.blizzard.com/en/wow/t/wow-forever%E2%80%94what%E2%80%99s-new-and-what-feels-familiar/2400000/1",
-   "izvor": "Blizzard",
-   "sazetak": "World of Warcraft: Forever has something for explorers, dungeon groups, collectors, roleplayers, and PvP fans alike. See how its interface conveniences, class updates, and progression systems complement a distinct take on original WoW—and…",
-   "oznake": [],
-   "vrsta": "vijest"
-  },
-  {
    "datum": "2026-11-03T17:23:13Z",
    "naslov": "Shaman Classic Discord Closed in Protest of Shaman Changes in WoW: Forever",
    "link": "https://www.wowhead.com/news=383710/shaman-classic-discord-closed-in-protest-of-shaman-changes-in-wow-forever",
@@ -196,24 +187,6 @@
    "link": "https://www.wowhead.com/news=383664/wow-weekly-recap-wow-forever-talebound-demo-new-shop-decor-packs",
    "izvor": "Wowhead",
    "sazetak": "Blizzard has posted this week's WoW weekly recap, which includes WoW: Forever launching next week, the Talebound Demo starting today, and new shop decor packs. Continue reading »",
-   "oznake": [],
-   "vrsta": "vijest"
-  },
-  {
-   "datum": "2026-10-29T21:00:50Z",
-   "naslov": "World of Warcraft: Forever Now Live!",
-   "link": "https://us.forums.blizzard.com/en/wow/t/world-of-warcraft-forever-now-live/2396008/1",
-   "izvor": "Blizzard",
-   "sazetak": "Begin your first adventure or return to a new and reimagined Azeroth in World of Warcraft: Forever, now live worldwide. Adventure to level 60 across the original continents, discover new stories, and meet fellow adventurers in a permanent…",
-   "oznake": [],
-   "vrsta": "vijest"
-  },
-  {
-   "datum": "2026-10-29T19:02:50Z",
-   "naslov": "Return to Azeroth in World of Warcraft: Forever",
-   "link": "https://us.forums.blizzard.com/en/wow/t/return-to-azeroth-in-world-of-warcraft-forever/2395922/1",
-   "izvor": "Blizzard",
-   "sazetak": "Welcome back to Azeroth. Whether it has been a few years, or many— familiar roads, old friends, and new adventures are waiting for you in World of Warcraft: Forever. To help you get your feet on the ground and begin your adventures in…",
    "oznake": [],
    "vrsta": "vijest"
   },
