@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-18T00:16:43Z",
+ "azurirano": "2026-11-18T02:16:17Z",
  "likovi": {
   "Saman Saulic": {
    "level": 42,
@@ -684,15 +684,15 @@
    "azurirano": "2026-11-17T22:17:13Z"
   },
   "Melee Kitic": {
-   "level": 34,
-   "xp": 3100,
+   "level": 35,
+   "xp": 7483,
    "guild": "Kafana na Balkanu",
-   "ilvl": 24,
-   "zadnjiLogin": "2026-11-17T21:31:39Z",
+   "ilvl": 25,
+   "zadnjiLogin": "2026-11-18T01:39:47Z",
    "izvor": "Blizzard API",
    "talenti": [
     3,
-    20,
+    21,
     2
    ],
    "specka": "Fury",
@@ -722,6 +722,12 @@
      "opis": "Gives you a 60% chance to generate 1 additional Rage when you deal melee damage with a weapon."
     },
     {
+     "ime": "Furious Precision",
+     "rang": 1,
+     "stablo": "Fury",
+     "opis": "Increases your chance to hit with off-hand attacks by 4%."
+    },
+    {
      "ime": "Blood Craze",
      "rang": 2,
      "stablo": "Fury",
@@ -743,11 +749,11 @@
    "oprema": [
     {
      "slot": "Head",
-     "ime": "Veteran's Silvered Chain Helm",
-     "kvaliteta": "rare",
-     "wowhead": 250528,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133141.jpg",
-     "ilvl": 25
+     "ime": "Renegade Circlet of Strength",
+     "kvaliteta": "uncommon",
+     "wowhead": 9870,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132768.jpg",
+     "ilvl": 36
     },
     {
      "slot": "Shoulder",
@@ -825,19 +831,27 @@
     },
     {
      "slot": "Back",
-     "ime": "Ghostwalker Cloak of the Bandit",
+     "ime": "Conjurer's Cloak of Power",
      "kvaliteta": "uncommon",
-     "wowhead": 15147,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133758.jpg",
+     "wowhead": 9847,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133769.jpg",
      "ilvl": 33
     },
     {
      "slot": "Main Hand",
-     "ime": "Strike of the Hydra",
+     "ime": "Outlaw Sabre",
      "kvaliteta": "rare",
-     "wowhead": 6909,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135352.jpg",
-     "ilvl": 31
+     "wowhead": 16886,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135343.jpg",
+     "ilvl": 32
+    },
+    {
+     "slot": "Off Hand",
+     "ime": "Sword of Omen",
+     "kvaliteta": "rare",
+     "wowhead": 6802,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135317.jpg",
+     "ilvl": 44
     },
     {
      "slot": "Ranged",
@@ -881,49 +895,49 @@
     }
    ],
    "statovi": {
-    "hp": 1428,
+    "hp": 1369,
     "resurs": 100,
     "resursIme": "Rage",
-    "str": 125,
-    "agi": 58,
-    "sta": 114,
+    "str": 140,
+    "agi": 60,
+    "sta": 105,
     "int": 22,
     "spi": 50,
-    "armor": 1325,
-    "ap": 344,
+    "armor": 1342,
+    "ap": 401,
     "spellPower": 0,
-    "crit": 9.93,
+    "crit": 5.96,
     "spellCrit": 0.0,
     "rangedCrit": 0.0,
-    "dodge": 4.97,
-    "parry": 4.88,
-    "block": 4.88,
-    "dps": 50.2
+    "dodge": 4.84,
+    "parry": 4.76,
+    "block": 4.76,
+    "dps": 49.0
    },
    "reputacije": [
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 6327,
+     "vrijednost": 6483,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Honored",
-     "vrijednost": 2613,
+     "vrijednost": 2770,
      "max": 12000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Honored",
-     "vrijednost": 891,
+     "vrijednost": 1047,
      "max": 12000
     },
     {
      "ime": "Undercity",
-     "status": "Friendly",
-     "vrijednost": 5383,
-     "max": 6000
+     "status": "Honored",
+     "vrijednost": 8,
+     "max": 12000
     },
     {
      "ime": "Ratchet",
@@ -954,7 +968,7 @@
     {
      "kat": "Character",
      "ime": "Times camped",
-     "n": 44
+     "n": 46
     },
     {
      "kat": "Consumables",
@@ -975,12 +989,12 @@
     {
      "kat": "Consumables",
      "ime": "Food eaten",
-     "n": 12
+     "n": 13
     },
     {
      "kat": "Reputation",
      "ime": "Most factions at Honored or higher",
-     "n": 3
+     "n": 4
     },
     {
      "kat": "Reputation",
@@ -1015,7 +1029,12 @@
     {
      "kat": "Dungeons & Raids",
      "ime": "Total 5-player dungeons entered",
-     "n": 8
+     "n": 13
+    },
+    {
+     "kat": "Boss Kills",
+     "ime": "Scarlet Commander Mograine kills (Scarlet Monastery)",
+     "n": 1
     },
     {
      "kat": "Boss Kills",
@@ -1053,19 +1072,24 @@
      "n": 1
     },
     {
+     "kat": "Boss Kills",
+     "ime": "High Inquisitor Whitemane kills (Scarlet Monastery)",
+     "n": 1
+    },
+    {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 4417
+     "n": 4743
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 3485
+     "n": 3795
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 4392
+     "n": 4716
     },
     {
      "kat": "Creatures",
@@ -1075,13 +1099,13 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 2542,
+     "n": 2809,
      "opis": "Humanoid"
     },
     {
      "kat": "Creatures",
      "ime": "Critters killed",
-     "n": 24
+     "n": 26
     },
     {
      "kat": "Honorable Kills",
@@ -1102,12 +1126,12 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 2341
+     "n": 2451
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 2071
+     "n": 2116
     },
     {
      "kat": "Killing Blows",
@@ -1118,17 +1142,17 @@
     {
      "kat": "Deaths",
      "ime": "Total deaths",
-     "n": 48
+     "n": 50
     },
     {
      "kat": "Dungeons and Raids",
      "ime": "Total raid and dungeon deaths",
-     "n": 6
+     "n": 7
     },
     {
      "kat": "Dungeons and Raids",
      "ime": "Total deaths in 5-player dungeons",
-     "n": 6
+     "n": 7
     },
     {
      "kat": "World",
@@ -1138,7 +1162,7 @@
     {
      "kat": "Resurrection",
      "ime": "Spirit returned to body by shamans",
-     "n": 3
+     "n": 4
     },
     {
      "kat": "Resurrection",
@@ -1148,7 +1172,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 303
+     "n": 311
     },
     {
      "kat": "Quests",
@@ -1158,7 +1182,7 @@
     {
      "kat": "Quests",
      "ime": "Quests abandoned",
-     "n": 19
+     "n": 21
     },
     {
      "kat": "Skills",
@@ -1238,12 +1262,12 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 69
+     "n": 71
     },
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
-     "n": 36
+     "n": 38
     },
     {
      "kat": "Social",
@@ -1254,22 +1278,20 @@
    "questovi": {
     "uLogu": [
      "Orm Stonehoof and the Brutal Helm",
+     "Reclaimed Treasures",
      "Encrusted Tail Fins",
-     "Bracers of Binding",
      "Elixir of Agony",
-     "Dalaran Patrols",
+     "Compendium of the Fallen",
      "The Grave Knight",
      "Ordanus",
      "Changing Tastes",
-     "The Book of Ur",
      "Rig Wars",
-     "Battle of Hillsbrad",
      "Dragonmaw Shinbones",
+     "Blood in the Streets",
      "The Sacred Flame",
      "The Hammer May Fall",
      "An Unholy Alliance",
      "Troll Charm",
-     "Hearts of Zeal",
      "Test of Lore",
      "Gol'dir",
      "Hunt for Yenniku",
@@ -1278,18 +1300,18 @@
      "Ula'elek and the Brutal Gauntlets",
      "Allegiance to the Old Gods",
      "Anything of Value",
-     "Leaders of the Fang",
+     "Vorrel's Revenge",
      "Thundering Hearts",
      "Panther Mastery",
-     "Cyclonian",
      "Raptor Mastery",
      "Tiger Mastery",
      "Between a Rock and a Thistlefur",
+     "Battle of Hillsbrad",
      "Martek the Exiled",
      "Chief Engineer Scooty",
      "The Defense of Grom'gol"
     ],
-    "zavrseno": 336
+    "zavrseno": 344
    },
    "mountovi": [],
    "petovi": [],
@@ -1299,7 +1321,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg",
-   "azurirano": "2026-11-17T22:17:13Z"
+   "azurirano": "2026-11-18T02:16:17Z"
   },
   "Janica Frostelich": {
    "level": 18,
@@ -1807,10 +1829,10 @@
   },
   "Nikola Roguevic": {
    "level": 37,
-   "xp": 14829,
+   "xp": 29203,
    "guild": "Kafana na Balkanu",
    "ilvl": 26,
-   "zadnjiLogin": "2026-11-17T16:16:48Z",
+   "zadnjiLogin": "2026-11-18T01:25:38Z",
    "izvor": "Blizzard API",
    "talenti": [
     2,
@@ -2070,7 +2092,7 @@
     {
      "name": "First Aid",
      "skill": 225,
-     "max": 225,
+     "max": 300,
      "vrsta": "sekundarna"
     }
    ],
@@ -2086,9 +2108,9 @@
     "armor": 939,
     "ap": 299,
     "spellPower": 0,
-    "crit": 6.61,
+    "crit": 7.65,
     "spellCrit": 0.0,
-    "rangedCrit": 6.13,
+    "rangedCrit": 7.13,
     "dodge": 16.38,
     "parry": 10.76,
     "block": 0.0,
@@ -2098,25 +2120,25 @@
     {
      "ime": "Undercity",
      "status": "Honored",
-     "vrijednost": 9786,
+     "vrijednost": 9817,
      "max": 12000
     },
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 1523,
+     "vrijednost": 1573,
      "max": 12000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Friendly",
-     "vrijednost": 5606,
+     "vrijednost": 5637,
      "max": 6000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Friendly",
-     "vrijednost": 4823,
+     "vrijednost": 4930,
      "max": 6000
     },
     {
@@ -2153,13 +2175,13 @@
     {
      "kat": "Consumables",
      "ime": "Bandages used",
-     "n": 32
+     "n": 50
     },
     {
      "kat": "Consumables",
      "ime": "Bandage used most",
-     "n": 11,
-     "opis": "Heavy Silk Bandage"
+     "n": 18,
+     "opis": "Triage Bandage"
     },
     {
      "kat": "Consumables",
@@ -2179,7 +2201,7 @@
     {
      "kat": "Consumables",
      "ime": "Food eaten",
-     "n": 40
+     "n": 41
     },
     {
      "kat": "Reputation",
@@ -2254,17 +2276,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 6090
+     "n": 6111
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 4499
+     "n": 4520
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 6041
+     "n": 6062
     },
     {
      "kat": "Creatures",
@@ -2274,7 +2296,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 3102,
+     "n": 3121,
      "opis": "Humanoid"
     },
     {
@@ -2301,12 +2323,12 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 3365
+     "n": 3385
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 2731
+     "n": 2751
     },
     {
      "kat": "Killing Blows",
@@ -2317,7 +2339,7 @@
     {
      "kat": "Deaths",
      "ime": "Total deaths",
-     "n": 26
+     "n": 27
     },
     {
      "kat": "Dungeons and Raids",
@@ -2347,12 +2369,12 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 369
+     "n": 373
     },
     {
      "kat": "Quests",
      "ime": "Average quests completed per day",
-     "n": 61.5
+     "n": 62.166666666666664
     },
     {
      "kat": "Quests",
@@ -2382,7 +2404,7 @@
     {
      "kat": "Secondary Skills",
      "ime": "Cooking skill",
-     "n": 126
+     "n": 150
     },
     {
      "kat": "Secondary Skills",
@@ -2392,12 +2414,12 @@
     {
      "kat": "Secondary Skills",
      "ime": "First Aid skill",
-     "n": 213
+     "n": 225
     },
     {
      "kat": "Secondary Skills",
      "ime": "First Aid Manuals learned",
-     "n": 32
+     "n": 34
     },
     {
      "kat": "Secondary Skills",
@@ -2457,19 +2479,24 @@
    ],
    "questovi": {
     "uLogu": [
+     "A Quick Grocery Run",
      "Reclaimed Treasures",
      "Encrusted Tail Fins",
+     "Call to Arms",
      "Carved Centaur Totems",
      "Singing Blue Shards",
+     "Raising Spirits",
      "Shady Saltseers",
+     "Foul Magics",
      "Changing Tastes",
      "Ancient Gurubashi Idol",
+     "Finding Tan'jani",
+     "Dragonmaw Rumors",
      "The Burning of Spirits",
      "Hostile Takeover",
      "Zanzil's Secret",
      "The Captain's Chest",
      "Into The Scarlet Monastery",
-     "The Hammer May Fall",
      "Catch of the Day",
      "Strahnbrad Mystery",
      "An Unholy Alliance",
@@ -2477,6 +2504,7 @@
      "Bloodscalp Ears",
      "Magram Alliance",
      "The Crown of Will",
+     "Sigil of Strom",
      "The Saltseer Captain",
      "Dream Dust in the Swamp",
      "Befouled by Satyr",
@@ -2489,7 +2517,7 @@
      "Shrewd Negotiations",
      "Gelkis Alliance"
     ],
-    "zavrseno": 421
+    "zavrseno": 425
    },
    "mountovi": [
     "Cerulean Prideclaw",
@@ -2507,7 +2535,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg",
-   "azurirano": "2026-11-17T16:19:06Z"
+   "azurirano": "2026-11-18T02:16:17Z"
   },
   "Arsen Deadic": {
    "level": 32,
@@ -3165,7 +3193,7 @@
    "azurirano": "2026-11-17T04:20:30Z"
   }
  },
- "provjereno": "2026-11-18T00:16:43Z",
+ "provjereno": "2026-11-18T02:16:17Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 8,
@@ -3191,18 +3219,18 @@
     "rang": 1,
     "slug": "nikola-roguevic",
     "ilvl": 26,
-    "zadnjiLogin": "2026-11-17T16:16:48Z",
+    "zadnjiLogin": "2026-11-18T01:25:38Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg"
    },
    {
     "ime": "Melee Kitic",
-    "level": 34,
+    "level": 35,
     "klasa": "Warrior",
     "rasa": "Orc",
     "rang": 3,
     "slug": "melee-kitic",
-    "ilvl": 24,
-    "zadnjiLogin": "2026-11-17T21:31:39Z",
+    "ilvl": 25,
+    "zadnjiLogin": "2026-11-18T01:39:47Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg"
    },
    {
@@ -3595,6 +3623,11 @@
     "2026-11-17T22:17:13Z",
     34,
     3100
+   ],
+   [
+    "2026-11-18T02:16:17Z",
+    35,
+    7483
    ]
   ],
   "Janica Frostelich": [
@@ -3799,6 +3832,11 @@
     "2026-11-17T16:19:06Z",
     37,
     14829
+   ],
+   [
+    "2026-11-18T02:16:17Z",
+    37,
+    29203
    ]
   ],
   "Arsen Deadic": [
