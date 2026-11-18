@@ -3,7 +3,7 @@
 window.HORDE = {
   ekipa: "Zaprešić Horde",
   guild: "Kafana na Balkanu",
-  azurirano: "2026-11-17",
+  azurirano: "2026-11-18",
 
   // Vremena u UTC. Studeni je CET (UTC+1).
   // Rezervacija imena: do 3. 11. 2026. u 23:59 po Zagrebu.
@@ -75,7 +75,7 @@ window.HORDE = {
   // portret (foto) je 720×960 izrez iz istog kadra; oci i ociSiroka već uračunavaju 4 % povećanja slike na kartici
   // imena: gdje se govori o ljudima piše igrac (Pero, Niksa, Karken, Žuga, Dex); lik samo kao naslov kartice/profila i u kontekstu igre
   igraci: [
-    { igrac: "Niksa",   lik: "Saman Saulic",    klasa: "Shaman",  rasa: "Orc",    uloga: "Healer",     level: 39, foto: "assets/likovi/saman-saulic.jpg",
+    { igrac: "Niksa",   lik: "Saman Saulic",    klasa: "Shaman",  rasa: "Orc",    uloga: "Healer",     level: 40, foto: "assets/likovi/saman-saulic.jpg",
       siroka: "assets/likovi/saman-saulic-wide.jpg", fokus: [50.3, 18],
       // savjeti po levelu, u profilu u bloku "Što sad"
       trikovi: [
@@ -173,7 +173,7 @@ window.HORDE = {
         ],
         biljeske: "Voda i hrana za ekipu, Polymorph na drugi target."
       } },
-    { igrac: "Žuga",    lik: "Nikola Roguevic",  klasa: "Rogue",   rasa: "Undead", uloga: "Melee DPS",  level: 35, foto: "assets/likovi/nikola-roguevic.jpg", oci: [[48.7, 14.2], [54.2, 14.1]],
+    { igrac: "Žuga",    lik: "Nikola Roguevic",  klasa: "Rogue",   rasa: "Undead", uloga: "Melee DPS",  level: 37, foto: "assets/likovi/nikola-roguevic.jpg", oci: [[48.7, 14.2], [54.2, 14.1]],
       siroka: "assets/likovi/nikola-roguevic-wide.jpg", fokus: [48.8, 16.6], ociSiroka: [[47.7, 14.2], [50.0, 14.1]],
       // savjeti po levelu, u profilu u bloku "Što sad"
       trikovi: [
@@ -205,7 +205,7 @@ window.HORDE = {
         ],
         biljeske: "Sap na drugi target prije pulla, kad Dex kaže."
       } },
-    { igrac: "Dex",     lik: "Arsen Deadic",     klasa: "Paladin", rasa: "Undead", uloga: "Tank",       level: 31, foto: "assets/likovi/arsen-deadic.jpg", oci: [[57.4, 18.5], [61.4, 19.0]],
+    { igrac: "Dex",     lik: "Arsen Deadic",     klasa: "Paladin", rasa: "Undead", uloga: "Tank",       level: 32, foto: "assets/likovi/arsen-deadic.jpg", oci: [[57.4, 18.5], [61.4, 19.0]],
       siroka: "assets/likovi/arsen-deadic-wide.jpg", fokus: [54.2, 20.1], ociSiroka: [[54.4, 18.6], [56.1, 19.0]],
       // savjeti po levelu, u profilu u bloku "Što sad"
       trikovi: [
@@ -618,6 +618,16 @@ window.HORDE = {
   // Stavka: { tekst, za: [klase/rase ili "Svi"], tema: kratka oznaka što se mijenja (Racial, Spell, Rage, XP, Dungeoni, Loot, Zona...) }
   izvorNovosti: "https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-november-2/2360696",
   novosti: [
+    { datum: "2026-11-17", naslov: "Hotfixovi: UBRS opet težak, Flurry, Soulforge Armor i kazne za Blackmaw Hold", stavke: [
+      { tekst: "Upper Blackrock Spire: popravljen bug zbog kojeg su mobovi imali puno manje healtha i štete nego što treba; opet treba puna, ozbiljna grupa.", za: ["Svi"], tema: "Dungeoni" },
+      { tekst: "Flurry više ne gubi stackove kad udare napadi od Windfury Totema.", za: ["Shaman"], tema: "Bug fix" },
+      { tekst: "Might of Stormwind i Warchief's Blessing sad se uvijek skidaju kad umreš i više se ne daju NPC-ovima.", za: ["Svi"], tema: "Bug fix" },
+      { tekst: "Soulforge Armor (nadograđeni dungeon set za tankove) sad ima Spell Power umjesto Strengtha; Blizzard želi da Paladin tankovi štetu rade preko Spell Powera.", za: ["Paladin"], tema: "Loot" },
+      { tekst: "Blackmaw Hold: grupa non-elite mobova bugom je dropala loot kao elite. Popravljeno; nekoliko stotina igrača koji su to namjerno farmali ostaje bez zarađenog zlata, a najgori dobivaju suspenziju. Tko je samo odradio dungeon par puta, nema problema.", za: ["Svi"], tema: "Loot" },
+      { tekst: "Questovi za Battle for Alterac Valley traže level 58; u Warsong Gulchu se više ne možeš mountati u početnoj sobi.", za: ["Svi"], tema: "PvP" },
+      { tekst: "Quest „The Old Ways” daje recept Orcish War Leggings kao item (zamjena kod Sumi ako ga nemaš); Bronze Mace je Bind on Equip; Cultivation radi na Mageroyalu.", za: ["Svi"], tema: "Profesije" },
+      { tekst: "Shen'dralas questovi lakši (zajednički pylon objective, Depleted Crystal Heart dropa svima, više Spectral Iron Orea, „Agamaggan's Blood” više nije dungeon quest); ignore lista ostaje nakon logouta.", za: ["Svi"], tema: "Bug fix" }
+    ] },
     { datum: "2026-11-16", naslov: "Hotfixovi: Windfury Totem, Fury Warrior, Vampiric Embrace i The Drowned City", stavke: [
       { tekst: "Windfury Totem popravljen: njegovi napadi više ne ignoriraju armor, imaju internal cooldown i daju Rage; Mutilate, Execute, Shield Slam, Shield Bash i pojačani Holy Strike (Shieldworn) više ga ne pokušavaju aktivirati dodatno.", za: ["Shaman", "Svi"], tema: "Bug fix" },
       { tekst: "Enhancement: jedan Maelstrom Weapon više ne može pojačati dva casta; Thundering Strikes daje crit chance i bez oružja u ruci.", za: ["Shaman"], tema: "Bug fix" },
