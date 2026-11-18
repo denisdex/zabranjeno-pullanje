@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-18T14:12:25Z",
+ "azurirano": "2026-11-18T16:11:59Z",
  "likovi": {
   "Saman Saulic": {
    "level": 44,
@@ -702,15 +702,15 @@
    "azurirano": "2026-11-18T14:12:25Z"
   },
   "Melee Kitic": {
-   "level": 35,
-   "xp": 34963,
+   "level": 36,
+   "xp": 4056,
    "guild": "Kafana na Balkanu",
    "ilvl": 26,
-   "zadnjiLogin": "2026-11-18T11:30:01Z",
+   "zadnjiLogin": "2026-11-18T15:03:06Z",
    "izvor": "Blizzard API",
    "talenti": [
     3,
-    21,
+    22,
     2
    ],
    "specka": "Fury",
@@ -756,6 +756,12 @@
      "rang": 5,
      "stablo": "Fury",
      "opis": "Gives you a 30% chance to deal 10% increased Physical damage for 12 sec after being the victim of any damaging attack."
+    },
+    {
+     "ime": "Death Wish",
+     "rang": 1,
+     "stablo": "Fury",
+     "opis": "When activated, increases your Physical damage done by 20% and makes you immune to Fear effects, but increases all damage you take by 5%. Lasts 30 sec."
     },
     {
      "ime": "Improved Bloodrage",
@@ -861,8 +867,7 @@
      "kvaliteta": "rare",
      "wowhead": 6975,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132403.jpg",
-     "ilvl": 40,
-     "enchant": "Sharpened +3"
+     "ilvl": 40
     },
     {
      "slot": "Ranged",
@@ -876,7 +881,7 @@
    "profesije": [
     {
      "name": "Mining",
-     "skill": 166,
+     "skill": 169,
      "max": 225,
      "vrsta": "primarna"
     },
@@ -906,48 +911,48 @@
     }
    ],
    "statovi": {
-    "hp": 1479,
+    "hp": 1521,
     "resurs": 100,
     "resursIme": "Rage",
-    "str": 147,
-    "agi": 57,
-    "sta": 116,
+    "str": 149,
+    "agi": 58,
+    "sta": 118,
     "int": 22,
-    "spi": 50,
-    "armor": 1336,
-    "ap": 399,
+    "spi": 51,
+    "armor": 1338,
+    "ap": 406,
     "spellPower": 0,
-    "crit": 9.71,
+    "crit": 9.63,
     "spellCrit": 0.0,
     "rangedCrit": 0.0,
     "dodge": 4.67,
     "parry": 4.84,
     "block": 4.84,
-    "dps": 64.9
+    "dps": 64.6
    },
    "reputacije": [
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 6521,
+     "vrijednost": 6671,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Honored",
-     "vrijednost": 2807,
+     "vrijednost": 3032,
      "max": 12000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Honored",
-     "vrijednost": 1235,
+     "vrijednost": 1310,
      "max": 12000
     },
     {
      "ime": "Undercity",
      "status": "Honored",
-     "vrijednost": 308,
+     "vrijednost": 383,
      "max": 12000
     },
     {
@@ -984,12 +989,12 @@
     {
      "kat": "Consumables",
      "ime": "Bandages used",
-     "n": 62
+     "n": 64
     },
     {
      "kat": "Consumables",
      "ime": "Bandage used most",
-     "n": 38,
+     "n": 40,
      "opis": "Heavy Linen Bandage"
     },
     {
@@ -1090,17 +1095,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 4800
+     "n": 5036
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 3849
+     "n": 4081
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 4773
+     "n": 5009
     },
     {
      "kat": "Creatures",
@@ -1110,7 +1115,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 2849,
+     "n": 3008,
      "opis": "Humanoid"
     },
     {
@@ -1137,12 +1142,12 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 2494
+     "n": 2628
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 2159
+     "n": 2293
     },
     {
      "kat": "Killing Blows",
@@ -1183,7 +1188,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 317
+     "n": 323
     },
     {
      "kat": "Quests",
@@ -1263,7 +1268,7 @@
     {
      "kat": "Professions",
      "ime": "Highest Mining skill",
-     "n": 166
+     "n": 168
     },
     {
      "kat": "Professions",
@@ -1278,7 +1283,7 @@
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
-     "n": 39
+     "n": 40
     },
     {
      "kat": "Social",
@@ -1288,26 +1293,30 @@
    ],
    "questovi": {
     "uLogu": [
+     "Chapter III",
      "Tiger Mastery",
-     "Raptor Mastery",
+     "Chapter IV",
+     "Chapter II",
+     "The Green Hills of Stranglethorn",
      "Elixir of Agony",
      "Battle of Hillsbrad",
+     "Supply and Demand",
      "The Defense of Grom'gol",
-     "Hunt for Yenniku",
      "Mok'thardin's Enchantment",
      "Gol'dir",
+     "Headhunting",
      "A Vengeful Fate",
      "Encrusted Tail Fins",
      "Blood in the Streets",
      "The Rumormonger",
      "Panther Mastery",
-     "Weed Whacked",
+     "Raptor Mastery",
+     "Chapter I",
      "The Hammer May Fall",
      "Vorrel's Revenge",
      "Family Tree",
      "Martek the Exiled",
      "Ordanus",
-     "Bloody Bone Necklaces",
      "Ula'elek and the Brutal Gauntlets",
      "Reclaimed Treasures",
      "Chimaeric Horn",
@@ -1321,7 +1330,7 @@
      "The Grave Knight",
      "Source of Power"
     ],
-    "zavrseno": 350
+    "zavrseno": 356
    },
    "mountovi": [],
    "petovi": [],
@@ -1331,7 +1340,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg",
-   "azurirano": "2026-11-18T12:13:02Z"
+   "azurirano": "2026-11-18T16:11:59Z"
   },
   "Janica Frostelich": {
    "level": 18,
@@ -3203,7 +3212,7 @@
    "azurirano": "2026-11-17T04:20:30Z"
   }
  },
- "provjereno": "2026-11-18T14:12:25Z",
+ "provjereno": "2026-11-18T16:11:59Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 8,
@@ -3234,13 +3243,13 @@
    },
    {
     "ime": "Melee Kitic",
-    "level": 35,
+    "level": 36,
     "klasa": "Warrior",
     "rasa": "Orc",
     "rang": 3,
     "slug": "melee-kitic",
     "ilvl": 26,
-    "zadnjiLogin": "2026-11-18T11:30:01Z",
+    "zadnjiLogin": "2026-11-18T15:03:06Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg"
    },
    {
@@ -3653,6 +3662,11 @@
     "2026-11-18T12:13:02Z",
     35,
     34963
+   ],
+   [
+    "2026-11-18T16:11:59Z",
+    36,
+    4056
    ]
   ],
   "Janica Frostelich": [
