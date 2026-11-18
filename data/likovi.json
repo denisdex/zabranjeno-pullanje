@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-17T22:17:13Z",
+ "azurirano": "2026-11-18T00:16:43Z",
  "likovi": {
   "Saman Saulic": {
    "level": 42,
@@ -3165,7 +3165,7 @@
    "azurirano": "2026-11-17T04:20:30Z"
   }
  },
- "provjereno": "2026-11-17T22:17:13Z",
+ "provjereno": "2026-11-18T00:16:43Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 8,
@@ -3218,35 +3218,35 @@
    },
    {
     "ime": "Venos Xx",
-    "level": 38,
+    "level": 39,
     "klasa": "Druid",
     "rasa": "Tauren",
     "rang": 4,
     "slug": "venos-xx",
-    "ilvl": 27,
-    "zadnjiLogin": "2026-11-17T16:05:48Z",
+    "ilvl": 29,
+    "zadnjiLogin": "2026-11-17T23:13:56Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/253/13774333-avatar.jpg"
    },
    {
     "ime": "Jebothe Dan",
-    "level": 33,
+    "level": 34,
     "klasa": "Hunter",
     "rasa": "Troll",
     "rang": 4,
     "slug": "jebothe-dan",
-    "ilvl": 24,
-    "zadnjiLogin": "2026-11-16T23:29:33Z",
+    "ilvl": 29,
+    "zadnjiLogin": "2026-11-17T23:51:09Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/102/15576678-avatar.jpg"
    },
    {
     "ime": "Mate Bullic",
-    "level": 20,
+    "level": 21,
     "klasa": "Shaman",
     "rasa": "Tauren",
     "rang": 4,
     "slug": "mate-bullic",
     "ilvl": 12,
-    "zadnjiLogin": "2026-11-16T20:31:28Z",
+    "zadnjiLogin": "2026-11-17T22:51:22Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/33/21412897-avatar.jpg"
    },
    {
