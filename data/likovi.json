@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-19T00:11:35Z",
+ "azurirano": "2026-11-19T02:10:58Z",
  "likovi": {
   "Saman Saulic": {
    "level": 44,
@@ -2568,16 +2568,16 @@
    "azurirano": "2026-11-18T18:11:30Z"
   },
   "Arsen Deadic": {
-   "level": 32,
-   "xp": 29886,
+   "level": 33,
+   "xp": 9292,
    "guild": "Kafana na Balkanu",
    "ilvl": 27,
-   "zadnjiLogin": "2026-11-17T02:27:17Z",
+   "zadnjiLogin": "2026-11-19T02:09:42Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
     0,
-    22
+    24
    ],
    "specka": "Retribution",
    "talentiPopis": [
@@ -2630,10 +2630,16 @@
      "opis": "Increases the Physical and Holy damage you deal by 6%, and reduces all threat you generate by 20% while a two-handed melee weapon is equipped."
     },
     {
-     "ime": "Vengeance",
-     "rang": 2,
+     "ime": "Repentance",
+     "rang": 1,
      "stablo": "Retribution",
-     "opis": "Increases your Physical and Holy damage dealt by 2% for 30 sec after landing a non-periodic critical strike.  Stacks up to 5 times."
+     "opis": "Puts the enemy target in a state of meditation, incapacitating them for up to 6 sec. Any damage caused will awaken the target. Only works against Humanoids."
+    },
+    {
+     "ime": "Vengeance",
+     "rang": 3,
+     "stablo": "Retribution",
+     "opis": "Increases your Physical and Holy damage dealt by 3% for 30 sec after landing a non-periodic critical strike.  Stacks up to 5 times."
     }
    ],
    "oprema": [
@@ -2655,11 +2661,11 @@
     },
     {
      "slot": "Shoulder",
-     "ime": "Sparkleshell Mantle",
+     "ime": "Reliquary Mantle",
      "kvaliteta": "rare",
-     "wowhead": 13131,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135049.jpg",
-     "ilvl": 29
+     "wowhead": 273028,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135058.jpg",
+     "ilvl": 33
     },
     {
      "slot": "Chest",
@@ -2783,48 +2789,48 @@
     }
    ],
    "statovi": {
-    "hp": 1197,
-    "resurs": 1196,
+    "hp": 1254,
+    "resurs": 1238,
     "resursIme": "Mana",
-    "str": 114,
-    "agi": 60,
-    "sta": 97,
+    "str": 115,
+    "agi": 57,
+    "sta": 100,
     "int": 48,
-    "spi": 82,
-    "armor": 2043,
-    "ap": 304,
+    "spi": 83,
+    "armor": 2047,
+    "ap": 309,
     "spellPower": 8,
-    "crit": 12.03,
-    "spellCrit": 10.94,
-    "rangedCrit": 2.43,
-    "dodge": 6.03,
-    "parry": 9.84,
-    "block": 4.84,
-    "dps": 44.6
+    "crit": 11.54,
+    "spellCrit": 10.91,
+    "rangedCrit": 1.74,
+    "dodge": 5.5,
+    "parry": 9.8,
+    "block": 4.8,
+    "dps": 45.0
    },
    "reputacije": [
     {
      "ime": "Undercity",
      "status": "Honored",
-     "vrijednost": 7623,
+     "vrijednost": 7855,
      "max": 12000
     },
     {
      "ime": "Orgrimmar",
      "status": "Friendly",
-     "vrijednost": 4506,
+     "vrijednost": 4606,
      "max": 6000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Friendly",
-     "vrijednost": 3062,
+     "vrijednost": 3218,
      "max": 6000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Friendly",
-     "vrijednost": 2148,
+     "vrijednost": 2230,
      "max": 6000
     },
     {
@@ -2872,7 +2878,7 @@
     {
      "kat": "Consumables",
      "ime": "Health potions consumed",
-     "n": 13
+     "n": 14
     },
     {
      "kat": "Consumables",
@@ -2892,7 +2898,7 @@
     {
      "kat": "Consumables",
      "ime": "Food eaten",
-     "n": 48
+     "n": 50
     },
     {
      "kat": "Reputation",
@@ -2927,7 +2933,7 @@
     {
      "kat": "Dungeons & Raids",
      "ime": "Total 5-player dungeons entered",
-     "n": 11
+     "n": 13
     },
     {
      "kat": "Boss Kills",
@@ -2972,17 +2978,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 5055
+     "n": 5273
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 4138
+     "n": 4343
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 5030
+     "n": 5245
     },
     {
      "kat": "Creatures",
@@ -2992,13 +2998,13 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 2419,
+     "n": 2495,
      "opis": "Humanoid"
     },
     {
      "kat": "Creatures",
      "ime": "Critters killed",
-     "n": 20
+     "n": 23
     },
     {
      "kat": "Honorable Kills",
@@ -3019,33 +3025,33 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 2031
+     "n": 2061
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 1689
+     "n": 1705
     },
     {
      "kat": "Killing Blows",
      "ime": "Continent with the most Killing Blows",
-     "n": 1006,
+     "n": 1022,
      "opis": "Eastern Kingdoms"
     },
     {
      "kat": "Deaths",
      "ime": "Total deaths",
-     "n": 46
+     "n": 50
     },
     {
      "kat": "Dungeons and Raids",
      "ime": "Total raid and dungeon deaths",
-     "n": 14
+     "n": 18
     },
     {
      "kat": "Dungeons and Raids",
      "ime": "Total deaths in 5-player dungeons",
-     "n": 14
+     "n": 18
     },
     {
      "kat": "World",
@@ -3065,7 +3071,7 @@
     {
      "kat": "Resurrection",
      "ime": "Spirit returned to body by shamans",
-     "n": 6
+     "n": 8
     },
     {
      "kat": "Resurrection",
@@ -3075,7 +3081,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 267
+     "n": 273
     },
     {
      "kat": "Quests",
@@ -3145,7 +3151,7 @@
     {
      "kat": "Professions",
      "ime": "Highest Mining skill",
-     "n": 84
+     "n": 85
     },
     {
      "kat": "Professions",
@@ -3155,12 +3161,12 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 78
+     "n": 82
     },
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
-     "n": 7
+     "n": 8
     },
     {
      "kat": "Social",
@@ -3175,34 +3181,41 @@
    ],
    "questovi": {
     "uLogu": [
-     "Elixir of Agony",
-     "Soothing Turtle Bisque",
-     "Helcular's Revenge",
-     "Conflict at Darkspear Islands",
-     "The Book of Ur",
-     "Rig Wars",
-     "Blood in the Streets",
-     "The Hammer May Fall",
-     "A Moon-Kissed Blade",
-     "An Unholy Alliance",
-     "Warsong Supplies",
+     "Sigil of Strom",
+     "Call to Arms",
      "Craftsman's Writ: Ornate Spyglass",
-     "Hearts of Zeal",
-     "Calling in the Reserves",
-     "Pacify the Centaur",
-     "Seeking the Kor Gem",
-     "Conquering Arathi Basin",
-     "King of the Foulweald",
-     "Battle of Warsong Gulch",
-     "The Den",
+     "Elixir of Agony",
+     "Foul Magics",
+     "Helcular's Revenge",
      "Infiltration",
-     "Battle of Hillsbrad",
-     "The Swarm Grows",
+     "The Den",
+     "Hearts of Zeal",
+     "Blood in the Streets",
+     "To Steal From Thieves",
      "Gerenzo Wrenchwhistle",
+     "Elder Knowledge",
+     "Raising Spirits",
+     "The Book of Ur",
+     "The Swarm Grows",
+     "Reclaimed Treasures",
+     "Rig Wars",
      "Chief Engineer Scooty",
-     "To Steal From Thieves"
+     "Calling in the Reserves",
+     "Warsong Supplies",
+     "King of the Foulweald",
+     "Soothing Turtle Bisque",
+     "An Unholy Alliance",
+     "Battle of Warsong Gulch",
+     "Conquering Arathi Basin",
+     "Changing Tastes",
+     "A Moon-Kissed Blade",
+     "Pacify the Centaur",
+     "Anyone Can Cook",
+     "Seeking the Kor Gem",
+     "Silky Sutures",
+     "Conflict at Darkspear Islands"
     ],
-    "zavrseno": 308
+    "zavrseno": 314
    },
    "mountovi": [
     "Cerulean Prideclaw",
@@ -3220,10 +3233,10 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg",
-   "azurirano": "2026-11-17T04:20:30Z"
+   "azurirano": "2026-11-19T02:10:58Z"
   }
  },
- "provjereno": "2026-11-19T00:11:35Z",
+ "provjereno": "2026-11-19T02:10:58Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 8,
@@ -3265,13 +3278,13 @@
    },
    {
     "ime": "Arsen Deadic",
-    "level": 32,
+    "level": 33,
     "klasa": "Paladin",
     "rasa": "Undead",
     "rang": 3,
     "slug": "arsen-deadic",
     "ilvl": 27,
-    "zadnjiLogin": "2026-11-17T02:27:17Z",
+    "zadnjiLogin": "2026-11-19T02:09:42Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg"
    },
    {
@@ -4009,6 +4022,11 @@
     "2026-11-17T04:20:30Z",
     32,
     29886
+   ],
+   [
+    "2026-11-19T02:10:58Z",
+    33,
+    9292
    ]
   ]
  }
