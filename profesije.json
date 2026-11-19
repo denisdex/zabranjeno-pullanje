@@ -38,7 +38,7 @@
         },
         {
           "name": "Blacksmithing",
-          "skill": 121,
+          "skill": 129,
           "phase": "stalno"
         }
       ],
@@ -165,7 +165,7 @@
       "professions": [
         {
           "name": "Mining",
-          "skill": 85,
+          "skill": 86,
           "phase": "stalno"
         },
         {
@@ -1324,6 +1324,18 @@
       "character": "warrior",
       "profession": "Blacksmithing",
       "skill": 121
+    },
+    {
+      "date": "2026-11-19",
+      "character": "warrior",
+      "profession": "Blacksmithing",
+      "skill": 129
+    },
+    {
+      "date": "2026-11-19",
+      "character": "paladin",
+      "profession": "Mining",
+      "skill": 86
     }
   ],
   "flows": [
