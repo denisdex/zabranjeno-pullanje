@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-18T22:11:43Z",
+ "azurirano": "2026-11-19T00:11:35Z",
  "likovi": {
   "Saman Saulic": {
    "level": 44,
@@ -3223,7 +3223,7 @@
    "azurirano": "2026-11-17T04:20:30Z"
   }
  },
- "provjereno": "2026-11-18T22:11:43Z",
+ "provjereno": "2026-11-19T00:11:35Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 8,
@@ -3276,24 +3276,24 @@
    },
    {
     "ime": "Venos Xx",
-    "level": 39,
+    "level": 40,
     "klasa": "Druid",
     "rasa": "Tauren",
     "rang": 4,
     "slug": "venos-xx",
     "ilvl": 30,
-    "zadnjiLogin": "2026-11-18T17:51:06Z",
+    "zadnjiLogin": "2026-11-18T23:14:00Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/253/13774333-avatar.jpg"
    },
    {
     "ime": "Jebothe Dan",
-    "level": 34,
+    "level": 35,
     "klasa": "Hunter",
     "rasa": "Troll",
     "rang": 4,
     "slug": "jebothe-dan",
     "ilvl": 29,
-    "zadnjiLogin": "2026-11-17T23:51:09Z",
+    "zadnjiLogin": "2026-11-18T23:05:03Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/102/15576678-avatar.jpg"
    },
    {
