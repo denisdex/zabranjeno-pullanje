@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-19T16:09:54Z",
+ "azurirano": "2026-11-19T18:09:55Z",
  "likovi": {
   "Saman Saulic": {
    "level": 45,
@@ -1844,10 +1844,10 @@
   },
   "Nikola Roguevic": {
    "level": 40,
-   "xp": 55435,
+   "xp": 70932,
    "guild": "Kafana na Balkanu",
    "ilvl": 30,
-   "zadnjiLogin": "2026-11-19T14:41:10Z",
+   "zadnjiLogin": "2026-11-19T17:19:26Z",
    "izvor": "Blizzard API",
    "talenti": [
     2,
@@ -1974,11 +1974,11 @@
     },
     {
      "slot": "Chest",
-     "ime": "Rigid Tunic of the Bandit",
+     "ime": "Panther Armor",
      "kvaliteta": "uncommon",
-     "wowhead": 15118,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132725.jpg",
-     "ilvl": 26
+     "wowhead": 6670,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132716.jpg",
+     "ilvl": 27
     },
     {
      "slot": "Waist",
@@ -2040,18 +2040,18 @@
     },
     {
      "slot": "Trinket 1",
-     "ime": "Transformative Cocoon",
-     "kvaliteta": "uncommon",
-     "wowhead": 276895,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/237431.jpg",
-     "ilvl": 30
-    },
-    {
-     "slot": "Trinket 2",
      "ime": "Dog Whistle",
      "kvaliteta": "rare",
      "wowhead": 3456,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132161.jpg",
+     "ilvl": 30
+    },
+    {
+     "slot": "Trinket 2",
+     "ime": "Transformative Cocoon",
+     "kvaliteta": "uncommon",
+     "wowhead": 276895,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/237431.jpg",
      "ilvl": 30
     },
     {
@@ -2068,8 +2068,7 @@
      "kvaliteta": "rare",
      "wowhead": 6802,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135317.jpg",
-     "ilvl": 44,
-     "enchant": "Instant Poison II (80 |4Charge:Charges;)"
+     "ilvl": 44
     },
     {
      "slot": "Off Hand",
@@ -2077,8 +2076,7 @@
      "kvaliteta": "uncommon",
      "wowhead": 9520,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135654.jpg",
-     "ilvl": 41,
-     "enchant": "Deadly Poison (87 |4Charge:Charges;)"
+     "ilvl": 41
     },
     {
      "slot": "Ranged",
@@ -2104,13 +2102,13 @@
     },
     {
      "name": "Cooking",
-     "skill": 150,
-     "max": 150,
+     "skill": 163,
+     "max": 225,
      "vrsta": "sekundarna"
     },
     {
      "name": "Fishing",
-     "skill": 169,
+     "skill": 172,
      "max": 225,
      "vrsta": "sekundarna"
     },
@@ -2122,24 +2120,24 @@
     }
    ],
    "statovi": {
-    "hp": 1683,
+    "hp": 1613,
     "resurs": 100,
     "resursIme": "Energy",
-    "str": 67,
-    "agi": 147,
-    "sta": 116,
-    "int": 21,
-    "spi": 39,
-    "armor": 1002,
-    "ap": 315,
+    "str": 69,
+    "agi": 153,
+    "sta": 109,
+    "int": 32,
+    "spi": 50,
+    "armor": 1016,
+    "ap": 316,
     "spellPower": 0,
-    "crit": 8.13,
+    "crit": 8.47,
     "spellCrit": 0.0,
-    "rangedCrit": 7.45,
-    "dodge": 17.17,
+    "rangedCrit": 7.79,
+    "dodge": 17.84,
     "parry": 10.84,
     "block": 0.0,
-    "dps": 52.2
+    "dps": 52.3
    },
    "reputacije": [
     {
@@ -2256,7 +2254,7 @@
     {
      "kat": "Dungeons & Raids",
      "ime": "Total 5-player dungeons entered",
-     "n": 21
+     "n": 22
     },
     {
      "kat": "Boss Kills",
@@ -2305,23 +2303,28 @@
     },
     {
      "kat": "Boss Kills",
+     "ime": "Mekgineer Thermaplugg kills (Gnomeregan)",
+     "n": 1
+    },
+    {
+     "kat": "Boss Kills",
      "ime": "High Inquisitor Whitemane kills (Scarlet Monastery)",
      "n": 1
     },
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 6991
+     "n": 7120
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 5223
+     "n": 5247
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 6932
+     "n": 7061
     },
     {
      "kat": "Creatures",
@@ -2331,7 +2334,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 3691,
+     "n": 3775,
      "opis": "Humanoid"
     },
     {
@@ -2358,17 +2361,17 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 3837
+     "n": 3887
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 3092
+     "n": 3117
     },
     {
      "kat": "Killing Blows",
      "ime": "Continent with the most Killing Blows",
-     "n": 1707,
+     "n": 1708,
      "opis": "Eastern Kingdoms"
     },
     {
@@ -2404,12 +2407,12 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 433
+     "n": 438
     },
     {
      "kat": "Quests",
      "ime": "Average quests completed per day",
-     "n": 54.125
+     "n": 54.75
     },
     {
      "kat": "Quests",
@@ -2444,7 +2447,7 @@
     {
      "kat": "Secondary Skills",
      "ime": "Cooking Recipes known",
-     "n": 46
+     "n": 48
     },
     {
      "kat": "Secondary Skills",
@@ -2464,12 +2467,12 @@
     {
      "kat": "Secondary Skills",
      "ime": "Fish caught",
-     "n": 328
+     "n": 338
     },
     {
      "kat": "Secondary Skills",
      "ime": "Fish and other things caught",
-     "n": 328
+     "n": 338
     },
     {
      "kat": "Professions",
@@ -2489,7 +2492,7 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 127
+     "n": 128
     },
     {
      "kat": "Travel",
@@ -2499,7 +2502,7 @@
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
-     "n": 26
+     "n": 28
     },
     {
      "kat": "Social",
@@ -2521,17 +2524,22 @@
      "Scaring Shaky",
      "Supply and Demand",
      "The Lost Fragments",
-     "The Den",
      "Dream Dust in the Swamp",
      "Encrusted Tail Fins",
      "The Crown of Will",
      "Zanzil's Secret",
      "Goblin Sponsorship",
+     "Necklace Recovery",
      "Reclaimed Treasures",
+     "Rig Wars",
+     "A Threat in Feralas",
+     "Nogg's Ring Redo",
+     "Tabetha's Task",
      "An Unholy Alliance",
      "The Captain's Chest",
      "WANTED: Scoutmaster Vargas",
      "The Saltseer Captain",
+     "Shadowshard Fragments",
      "Bring the End",
      "It Takes Guts",
      "Stick 'Em",
@@ -2548,7 +2556,7 @@
      "The Coldbringer's Eye",
      "Ancient Gurubashi Idol"
     ],
-    "zavrseno": 485
+    "zavrseno": 494
    },
    "mountovi": [
     "Cerulean Prideclaw",
@@ -2566,14 +2574,14 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg",
-   "azurirano": "2026-11-19T16:09:54Z"
+   "azurirano": "2026-11-19T18:09:55Z"
   },
   "Arsen Deadic": {
    "level": 34,
-   "xp": 26118,
+   "xp": 26861,
    "guild": "Kafana na Balkanu",
    "ilvl": 29,
-   "zadnjiLogin": "2026-11-19T15:31:27Z",
+   "zadnjiLogin": "2026-11-19T16:20:59Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -2809,7 +2817,7 @@
     "spellPower": 3,
     "crit": 11.65,
     "spellCrit": 10.91,
-    "rangedCrit": 1.53,
+    "rangedCrit": 7.53,
     "dodge": 5.57,
     "parry": 9.88,
     "block": 4.88,
@@ -2819,25 +2827,25 @@
     {
      "ime": "Undercity",
      "status": "Honored",
-     "vrijednost": 8048,
+     "vrijednost": 8061,
      "max": 12000
     },
     {
      "ime": "Orgrimmar",
      "status": "Friendly",
-     "vrijednost": 5006,
+     "vrijednost": 5018,
      "max": 6000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Friendly",
-     "vrijednost": 3487,
+     "vrijednost": 3500,
      "max": 6000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Friendly",
-     "vrijednost": 2723,
+     "vrijednost": 2773,
      "max": 6000
     },
     {
@@ -2869,7 +2877,7 @@
     {
      "kat": "Character",
      "ime": "Times camped",
-     "n": 86
+     "n": 97
     },
     {
      "kat": "Consumables",
@@ -2920,7 +2928,7 @@
     {
      "kat": "Reputation",
      "ime": "Total factions encountered",
-     "n": 17
+     "n": 16
     },
     {
      "kat": "Gear",
@@ -3088,7 +3096,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 289
+     "n": 290
     },
     {
      "kat": "Quests",
@@ -3188,7 +3196,6 @@
    ],
    "questovi": {
     "uLogu": [
-     "Serpent Wild",
      "Sigil of Strom",
      "Call to Arms",
      "Craftsman's Writ: Ornate Spyglass",
@@ -3212,6 +3219,8 @@
      "Rig Wars",
      "Chief Engineer Scooty",
      "WANTED: Arnak Grimtotem",
+     "Sacred Fire",
+     "Hypercapacitor Gizmo",
      "Warsong Supplies",
      "King of the Foulweald",
      "Soothing Turtle Bisque",
@@ -3227,7 +3236,7 @@
      "Conflict at Darkspear Islands",
      "Ancient Gurubashi Idol"
     ],
-    "zavrseno": 330
+    "zavrseno": 331
    },
    "mountovi": [
     "Cerulean Prideclaw",
@@ -3245,10 +3254,10 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg",
-   "azurirano": "2026-11-19T16:09:54Z"
+   "azurirano": "2026-11-19T18:09:55Z"
   }
  },
- "provjereno": "2026-11-19T16:09:54Z",
+ "provjereno": "2026-11-19T18:09:55Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 8,
@@ -3274,7 +3283,7 @@
     "rang": 1,
     "slug": "nikola-roguevic",
     "ilvl": 30,
-    "zadnjiLogin": "2026-11-19T14:41:10Z",
+    "zadnjiLogin": "2026-11-19T17:19:26Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg"
    },
    {
@@ -3296,7 +3305,7 @@
     "rang": 3,
     "slug": "arsen-deadic",
     "ilvl": 29,
-    "zadnjiLogin": "2026-11-19T15:31:27Z",
+    "zadnjiLogin": "2026-11-19T16:20:59Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg"
    },
    {
@@ -3952,6 +3961,11 @@
     "2026-11-19T16:09:54Z",
     40,
     55435
+   ],
+   [
+    "2026-11-19T18:09:55Z",
+    40,
+    70932
    ]
   ],
   "Arsen Deadic": [
@@ -4084,6 +4098,11 @@
     "2026-11-19T16:09:54Z",
     34,
     26118
+   ],
+   [
+    "2026-11-19T18:09:55Z",
+    34,
+    26861
    ]
   ]
  }
