@@ -33,7 +33,7 @@
       "professions": [
         {
           "name": "Mining",
-          "skill": 166,
+          "skill": 176,
           "phase": "stalno"
         },
         {
@@ -72,7 +72,7 @@
         },
         {
           "name": "Skinning",
-          "skill": 239,
+          "skill": 272,
           "phase": "stalno"
         }
       ],
@@ -83,7 +83,7 @@
         },
         {
           "name": "Fishing",
-          "skill": 216
+          "skill": 225
         },
         {
           "name": "First Aid",
@@ -147,11 +147,11 @@
         },
         {
           "name": "Fishing",
-          "skill": 168
+          "skill": 169
         },
         {
           "name": "First Aid",
-          "skill": 225
+          "skill": 235
         }
       ]
     },
@@ -1258,6 +1258,60 @@
       "character": "shaman",
       "profession": "Fishing",
       "skill": 216
+    },
+    {
+      "date": "2026-11-18",
+      "character": "shaman",
+      "profession": "Skinning",
+      "skill": 262
+    },
+    {
+      "date": "2026-11-18",
+      "character": "shaman",
+      "profession": "Fishing",
+      "skill": 223
+    },
+    {
+      "date": "2026-11-18",
+      "character": "shaman",
+      "profession": "Skinning",
+      "skill": 272
+    },
+    {
+      "date": "2026-11-18",
+      "character": "warrior",
+      "profession": "Mining",
+      "skill": 169
+    },
+    {
+      "date": "2026-11-18",
+      "character": "rogue",
+      "profession": "First Aid",
+      "skill": 232
+    },
+    {
+      "date": "2026-11-19",
+      "character": "warrior",
+      "profession": "Mining",
+      "skill": 176
+    },
+    {
+      "date": "2026-11-19",
+      "character": "shaman",
+      "profession": "Fishing",
+      "skill": 225
+    },
+    {
+      "date": "2026-11-19",
+      "character": "rogue",
+      "profession": "Fishing",
+      "skill": 169
+    },
+    {
+      "date": "2026-11-19",
+      "character": "rogue",
+      "profession": "First Aid",
+      "skill": 235
     }
   ],
   "flows": [
