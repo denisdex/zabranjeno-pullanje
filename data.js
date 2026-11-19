@@ -3,7 +3,7 @@
 window.HORDE = {
   ekipa: "Zaprešić Horde",
   guild: "Kafana na Balkanu",
-  azurirano: "2026-11-18",
+  azurirano: "2026-11-19",
 
   // Vremena u UTC. Studeni je CET (UTC+1).
   // Rezervacija imena: do 3. 11. 2026. u 23:59 po Zagrebu.
@@ -75,7 +75,7 @@ window.HORDE = {
   // portret (foto) je 720×960 izrez iz istog kadra; oci i ociSiroka već uračunavaju 4 % povećanja slike na kartici
   // imena: gdje se govori o ljudima piše igrac (Pero, Niksa, Karken, Žuga, Dex); lik samo kao naslov kartice/profila i u kontekstu igre
   igraci: [
-    { igrac: "Niksa",   lik: "Saman Saulic",    klasa: "Shaman",  rasa: "Orc",    uloga: "Healer",     level: 40, foto: "assets/likovi/saman-saulic.jpg",
+    { igrac: "Niksa",   lik: "Saman Saulic",    klasa: "Shaman",  rasa: "Orc",    uloga: "Healer",     level: 42, foto: "assets/likovi/saman-saulic.jpg",
       siroka: "assets/likovi/saman-saulic-wide.jpg", fokus: [50.3, 18],
       // savjeti po levelu, u profilu u bloku "Što sad"
       trikovi: [
@@ -108,7 +108,7 @@ window.HORDE = {
         ],
         biljeske: "Healer grupe. Kad kaže mana, svi stanu."
       } },
-    { igrac: "Pero",    lik: "Melee Kitic",      klasa: "Warrior", rasa: "Orc",    uloga: "Melee DPS",  level: 33, foto: "assets/likovi/melee-kitic.jpg", boja: "#D9853B",
+    { igrac: "Pero",    lik: "Melee Kitic",      klasa: "Warrior", rasa: "Orc",    uloga: "Melee DPS",  level: 35, foto: "assets/likovi/melee-kitic.jpg", boja: "#D9853B",
       siroka: "assets/likovi/melee-kitic-wide.jpg", fokus: [50.3, 28.8],
       // savjeti po levelu, u profilu u bloku "Što sad"
       trikovi: [
