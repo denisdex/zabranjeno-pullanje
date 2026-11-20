@@ -9,8 +9,19 @@
    "url": "https://www.wowhead.com/news/rss/classic"
   }
  ],
- "azurirano": "2026-11-19T18:09:54Z",
+ "azurirano": "2026-11-20T04:09:13Z",
  "stavke": [
+  {
+   "datum": "2026-11-20T04:00:55Z",
+   "naslov": "WoW: Forever Hotfixes - November 19, 2026",
+   "link": "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-19-2026/2403040/13",
+   "izvor": "Blizzard",
+   "sazetak": "November 19, 2026 Camping Seed Hybridizer has been re-enabled. Seed Hybridization now has adjusted values, as well as a chance of failure when combining seeds. Scarce Herb Seeds are no longer able to be used in the Seed Hybridizer. Classes…",
+   "oznake": [
+    "Hotfix"
+   ],
+   "vrsta": "patch"
+  },
   {
    "datum": "2026-11-19T17:35:02Z",
    "naslov": "The WoW Forever Podcast: Episode 8 - Catching Up On Classes",
@@ -22,17 +33,6 @@
     "Klase"
    ],
    "vrsta": "vijest"
-  },
-  {
-   "datum": "2026-11-18T03:24:08Z",
-   "naslov": "WoW: Forever Hotfixes - November 17, 2026",
-   "link": "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-17-2026/2403040/12",
-   "izvor": "Blizzard",
-   "sazetak": "November 17, 2026 Camping Mounted Players will no longer be permitted to sleep while saddled up atop the Cozy Sleeping Bag. Cozy Sleeping Bag can now be placed in specific locations, like hunter traps. Cozy Sleeping Bag will now provide a…",
-   "oznake": [
-    "Hotfix"
-   ],
-   "vrsta": "patch"
   },
   {
    "datum": "2026-11-13T18:12:25Z",
@@ -152,17 +152,6 @@
     "Beta"
    ],
    "vrsta": "patch"
-  },
-  {
-   "datum": "2026-11-04T18:13:53Z",
-   "naslov": "World of Warcraft: Forever Launch Time",
-   "link": "https://us.forums.blizzard.com/en/wow/t/world-of-warcraft-forever-launch-time/2400905/1",
-   "izvor": "Blizzard",
-   "sazetak": "WoW Forever launches simultaneously in all regions today at 3:00 p.m. PST. That’s: Time Zone Location Time Date HST Honolulu 1:00 p.m. Nov. 4 AKST Juneau 2:00 p.m. Nov. 4 PST Los Angeles 3:00 p.m. Nov. 4 PCT Vancouver 4:00 p.m. Nov. 4 MST…",
-   "oznake": [
-    "Launch"
-   ],
-   "vrsta": "vijest"
   },
   {
    "datum": "2026-11-04T17:55:14Z",
