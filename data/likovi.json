@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-20T04:09:13Z",
+ "azurirano": "2026-11-20T10:09:09Z",
  "likovi": {
   "Saman Saulic": {
    "level": 45,
@@ -2603,16 +2603,16 @@
    "azurirano": "2026-11-20T04:09:13Z"
   },
   "Arsen Deadic": {
-   "level": 35,
-   "xp": 61221,
+   "level": 36,
+   "xp": 5140,
    "guild": "Kafana na Balkanu",
    "ilvl": 28,
-   "zadnjiLogin": "2026-11-20T01:28:00Z",
+   "zadnjiLogin": "2026-11-20T09:29:34Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
     0,
-    26
+    27
    ],
    "specka": "Retribution",
    "talentiPopis": [
@@ -2650,7 +2650,7 @@
      "ime": "Seal of Command",
      "rang": 1,
      "stablo": "Retribution",
-     "opis": "Gives the Paladin a chance to deal additional Holy damage equal to 70% of normal weapon damage.  Only one Seal can be active on the Paladin at any one time.  Lasts 30 sec.\r\n\r\nUnleashing this Seal's energy will judge an enemy, instantly causing 74 to 79 Holy damage, 149 to 158 if the target is stunned or incapacitated."
+     "opis": "Gives the Paladin a chance to deal additional Holy damage equal to 70% of normal weapon damage.  Only one Seal can be active on the Paladin at any one time.  Lasts 30 sec.\r\n\r\nUnleashing this Seal's energy will judge an enemy, instantly causing 78 to 84 Holy damage, 157 to 167 if the target is stunned or incapacitated."
     },
     {
      "ime": "Pursuit of Justice",
@@ -2684,9 +2684,9 @@
     },
     {
      "ime": "Champion of the Light",
-     "rang": 1,
+     "rang": 2,
      "stablo": "Retribution",
-     "opis": "Increases your spell damage by up to 12% of your Intellect, and reduces the cast time of your Hammer of Wrath by 0.2 sec."
+     "opis": "Increases your spell damage by up to 24% of your Intellect, and reduces the cast time of your Hammer of Wrath by 0.4 sec."
     }
    ],
    "oprema": [
@@ -2789,19 +2789,11 @@
     },
     {
      "slot": "Main Hand",
-     "ime": "Sword of Omen",
+     "ime": "Corpsemaker",
      "kvaliteta": "rare",
-     "wowhead": 6802,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135317.jpg",
-     "ilvl": 44
-    },
-    {
-     "slot": "Off Hand",
-     "ime": "Infiltrator Buckler of Magic",
-     "kvaliteta": "uncommon",
-     "wowhead": 7330,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/134955.jpg",
-     "ilvl": 33
+     "wowhead": 6687,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135562.jpg",
+     "ilvl": 34
     }
    ],
    "profesije": [
@@ -2837,24 +2829,24 @@
     }
    ],
    "statovi": {
-    "hp": 1401,
-    "resurs": 1322,
+    "hp": 1481,
+    "resurs": 1364,
     "resursIme": "Mana",
-    "str": 122,
-    "agi": 53,
-    "sta": 110,
-    "int": 50,
-    "spi": 71,
-    "armor": 2151,
-    "ap": 329,
-    "spellPower": 27,
-    "crit": 10.24,
+    "str": 130,
+    "agi": 51,
+    "sta": 115,
+    "int": 51,
+    "spi": 72,
+    "armor": 1519,
+    "ap": 348,
+    "spellPower": 25,
+    "crit": 10.64,
     "spellCrit": 10.89,
-    "rangedCrit": 1.4,
-    "dodge": 5.04,
-    "parry": 9.96,
-    "block": 4.96,
-    "dps": 53.2
+    "rangedCrit": 6.96,
+    "dodge": 4.64,
+    "parry": 9.8,
+    "block": 4.8,
+    "dps": 57.0
    },
    "reputacije": [
     {
@@ -2961,7 +2953,7 @@
     {
      "kat": "Reputation",
      "ime": "Total factions encountered",
-     "n": 19
+     "n": 17
     },
     {
      "kat": "Gear",
@@ -3036,17 +3028,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 5864
+     "n": 5890
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 4909
+     "n": 4935
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 5834
+     "n": 5860
     },
     {
      "kat": "Creatures",
@@ -3056,7 +3048,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 2799,
+     "n": 2825,
      "opis": "Humanoid"
     },
     {
@@ -3083,17 +3075,17 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 2351
+     "n": 2376
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 1979
+     "n": 2004
     },
     {
      "kat": "Killing Blows",
      "ime": "Continent with the most Killing Blows",
-     "n": 1099,
+     "n": 1124,
      "opis": "Eastern Kingdoms"
     },
     {
@@ -3144,7 +3136,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 316
+     "n": 317
     },
     {
      "kat": "Quests",
@@ -3255,6 +3247,7 @@
      "Ancient Gurubashi Idol",
      "Conflict at Darkspear Islands",
      "Rig Wars",
+     "Finding Tan'jani",
      "Ward Restocking",
      "Hostile Takeover",
      "Blood in the Streets",
@@ -3264,11 +3257,11 @@
      "Hemet Nesingwary",
      "Family Tree",
      "The Battle for Arathi Basin!",
-     "The Princess Trapped",
      "Bloodscalp Ears",
      "Investigate the Camp",
      "Sigil of Strom",
      "The Saltseer Captain",
+     "Stones of Binding",
      "Pacify the Centaur",
      "Seeking the Kor Gem",
      "Anyone Can Cook",
@@ -3284,7 +3277,7 @@
      "To Steal From Thieves",
      "Guile of the Raptor"
     ],
-    "zavrseno": 357
+    "zavrseno": 358
    },
    "mountovi": [
     "Cerulean Prideclaw",
@@ -3302,10 +3295,10 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg",
-   "azurirano": "2026-11-20T02:09:07Z"
+   "azurirano": "2026-11-20T10:09:09Z"
   }
  },
- "provjereno": "2026-11-20T08:09:06Z",
+ "provjereno": "2026-11-20T10:09:09Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 8,
@@ -3347,13 +3340,13 @@
    },
    {
     "ime": "Arsen Deadic",
-    "level": 35,
+    "level": 36,
     "klasa": "Paladin",
     "rasa": "Undead",
     "rang": 3,
     "slug": "arsen-deadic",
     "ilvl": 28,
-    "zadnjiLogin": "2026-11-20T01:28:00Z",
+    "zadnjiLogin": "2026-11-20T09:29:34Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg"
    },
    {
@@ -4186,6 +4179,11 @@
     "2026-11-20T02:09:07Z",
     35,
     61221
+   ],
+   [
+    "2026-11-20T10:09:09Z",
+    36,
+    5140
    ]
   ]
  }
