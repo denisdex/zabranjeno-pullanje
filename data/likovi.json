@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-20T00:09:01Z",
+ "azurirano": "2026-11-20T02:09:07Z",
  "likovi": {
   "Saman Saulic": {
    "level": 45,
@@ -2598,16 +2598,16 @@
    "azurirano": "2026-11-19T20:09:14Z"
   },
   "Arsen Deadic": {
-   "level": 34,
-   "xp": 57163,
+   "level": 35,
+   "xp": 61221,
    "guild": "Kafana na Balkanu",
-   "ilvl": 29,
-   "zadnjiLogin": "2026-11-19T21:51:18Z",
+   "ilvl": 28,
+   "zadnjiLogin": "2026-11-20T01:28:00Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
     0,
-    25
+    26
    ],
    "specka": "Retribution",
    "talentiPopis": [
@@ -2645,7 +2645,7 @@
      "ime": "Seal of Command",
      "rang": 1,
      "stablo": "Retribution",
-     "opis": "Gives the Paladin a chance to deal additional Holy damage equal to 70% of normal weapon damage.  Only one Seal can be active on the Paladin at any one time.  Lasts 30 sec.\r\n\r\nUnleashing this Seal's energy will judge an enemy, instantly causing 73 to 78 Holy damage, 147 to 156 if the target is stunned or incapacitated."
+     "opis": "Gives the Paladin a chance to deal additional Holy damage equal to 70% of normal weapon damage.  Only one Seal can be active on the Paladin at any one time.  Lasts 30 sec.\r\n\r\nUnleashing this Seal's energy will judge an enemy, instantly causing 74 to 79 Holy damage, 149 to 158 if the target is stunned or incapacitated."
     },
     {
      "ime": "Pursuit of Justice",
@@ -2676,6 +2676,12 @@
      "rang": 3,
      "stablo": "Retribution",
      "opis": "Increases your Physical and Holy damage dealt by 3% for 30 sec after landing a non-periodic critical strike.  Stacks up to 5 times."
+    },
+    {
+     "ime": "Champion of the Light",
+     "rang": 1,
+     "stablo": "Retribution",
+     "opis": "Increases your spell damage by up to 12% of your Intellect, and reduces the cast time of your Hammer of Wrath by 0.2 sec."
     }
    ],
    "oprema": [
@@ -2705,12 +2711,11 @@
     },
     {
      "slot": "Chest",
-     "ime": "Banded Armor of the Wolf",
+     "ime": "Phalanx Breastplate of Healing",
      "kvaliteta": "uncommon",
-     "wowhead": 9836,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132739.jpg",
-     "ilvl": 33,
-     "enchant": "Enchanted: Stamina +3 and Armor +24"
+     "wowhead": 7418,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132736.jpg",
+     "ilvl": 35
     },
     {
      "slot": "Waist",
@@ -2770,14 +2775,6 @@
      "ilvl": 31
     },
     {
-     "slot": "Trinket 1",
-     "ime": "Transformative Cocoon",
-     "kvaliteta": "uncommon",
-     "wowhead": 276895,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/237431.jpg",
-     "ilvl": 30
-    },
-    {
      "slot": "Back",
      "ime": "Furs of the Earthen Ring",
      "kvaliteta": "rare",
@@ -2787,11 +2784,19 @@
     },
     {
      "slot": "Main Hand",
-     "ime": "Corpsemaker",
+     "ime": "Sword of Omen",
      "kvaliteta": "rare",
-     "wowhead": 6687,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135562.jpg",
-     "ilvl": 34
+     "wowhead": 6802,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135317.jpg",
+     "ilvl": 44
+    },
+    {
+     "slot": "Off Hand",
+     "ime": "Infiltrator Buckler of Magic",
+     "kvaliteta": "uncommon",
+     "wowhead": 7330,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/134955.jpg",
+     "ilvl": 33
     }
    ],
    "profesije": [
@@ -2827,48 +2832,48 @@
     }
    ],
    "statovi": {
-    "hp": 1432,
-    "resurs": 1280,
+    "hp": 1401,
+    "resurs": 1322,
     "resursIme": "Mana",
-    "str": 127,
-    "agi": 58,
-    "sta": 115,
-    "int": 49,
-    "spi": 79,
-    "armor": 1551,
-    "ap": 336,
-    "spellPower": 3,
-    "crit": 11.65,
-    "spellCrit": 10.91,
-    "rangedCrit": 1.77,
-    "dodge": 5.61,
-    "parry": 9.92,
-    "block": 4.92,
-    "dps": 56.1
+    "str": 122,
+    "agi": 53,
+    "sta": 110,
+    "int": 50,
+    "spi": 71,
+    "armor": 2151,
+    "ap": 329,
+    "spellPower": 27,
+    "crit": 10.24,
+    "spellCrit": 10.89,
+    "rangedCrit": 1.4,
+    "dodge": 5.04,
+    "parry": 9.96,
+    "block": 4.96,
+    "dps": 53.2
    },
    "reputacije": [
     {
      "ime": "Undercity",
      "status": "Honored",
-     "vrijednost": 8223,
+     "vrijednost": 8748,
      "max": 12000
     },
     {
      "ime": "Orgrimmar",
      "status": "Friendly",
-     "vrijednost": 5218,
+     "vrijednost": 5606,
      "max": 6000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Friendly",
-     "vrijednost": 3737,
+     "vrijednost": 3925,
      "max": 6000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Friendly",
-     "vrijednost": 3311,
+     "vrijednost": 3573,
      "max": 6000
     },
     {
@@ -2900,7 +2905,7 @@
     {
      "kat": "Character",
      "ime": "Times camped",
-     "n": 103
+     "n": 105
     },
     {
      "kat": "Consumables",
@@ -2931,7 +2936,7 @@
     {
      "kat": "Consumables",
      "ime": "Beverages consumed",
-     "n": 47
+     "n": 62
     },
     {
      "kat": "Consumables",
@@ -2951,7 +2956,7 @@
     {
      "kat": "Reputation",
      "ime": "Total factions encountered",
-     "n": 17
+     "n": 19
     },
     {
      "kat": "Gear",
@@ -2971,7 +2976,12 @@
     {
      "kat": "Dungeons & Raids",
      "ime": "Total 5-player dungeons entered",
-     "n": 13
+     "n": 14
+    },
+    {
+     "kat": "Boss Kills",
+     "ime": "Scarlet Commander Mograine kills (Scarlet Monastery)",
+     "n": 1
     },
     {
      "kat": "Boss Kills",
@@ -3014,19 +3024,24 @@
      "n": 2
     },
     {
+     "kat": "Boss Kills",
+     "ime": "High Inquisitor Whitemane kills (Scarlet Monastery)",
+     "n": 1
+    },
+    {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 5544
+     "n": 5864
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 4603
+     "n": 4909
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 5515
+     "n": 5834
     },
     {
      "kat": "Creatures",
@@ -3036,13 +3051,13 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 2552,
+     "n": 2799,
      "opis": "Humanoid"
     },
     {
      "kat": "Creatures",
      "ime": "Critters killed",
-     "n": 24
+     "n": 25
     },
     {
      "kat": "Honorable Kills",
@@ -3063,38 +3078,43 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 2259
+     "n": 2351
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 1903
+     "n": 1979
     },
     {
      "kat": "Killing Blows",
      "ime": "Continent with the most Killing Blows",
-     "n": 1023,
+     "n": 1099,
      "opis": "Eastern Kingdoms"
     },
     {
      "kat": "Deaths",
      "ime": "Total deaths",
-     "n": 51
+     "n": 54
     },
     {
      "kat": "Dungeons and Raids",
      "ime": "Total raid and dungeon deaths",
-     "n": 18
+     "n": 19
     },
     {
      "kat": "Dungeons and Raids",
      "ime": "Total deaths in 5-player dungeons",
-     "n": 18
+     "n": 19
     },
     {
      "kat": "World",
      "ime": "Deaths from falling",
-     "n": 5
+     "n": 6
+    },
+    {
+     "kat": "Resurrection",
+     "ime": "Resurrected by priests",
+     "n": 1
     },
     {
      "kat": "Resurrection",
@@ -3119,7 +3139,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 308
+     "n": 316
     },
     {
      "kat": "Quests",
@@ -3129,7 +3149,7 @@
     {
      "kat": "Quests",
      "ime": "Quests abandoned",
-     "n": 60
+     "n": 64
     },
     {
      "kat": "Skills",
@@ -3199,7 +3219,7 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 91
+     "n": 96
     },
     {
      "kat": "Travel",
@@ -3220,29 +3240,26 @@
    "questovi": {
     "uLogu": [
      "Reclaimed Treasures",
-     "Miner's Fortune",
      "Encrusted Tail Fins",
      "Elixir of Agony",
      "Call to Arms",
      "Soothing Turtle Bisque",
-     "Raising Spirits",
      "Shady Saltseers",
      "Helcular's Revenge",
      "Foul Magics",
      "Ancient Gurubashi Idol",
      "Conflict at Darkspear Islands",
      "Rig Wars",
+     "Ward Restocking",
      "Hostile Takeover",
      "Blood in the Streets",
      "A Moon-Kissed Blade",
-     "Journey to Tarren Mill",
      "An Unholy Alliance",
      "Warsong Supplies",
-     "Craftsman's Writ: Ornate Spyglass",
      "Hemet Nesingwary",
      "Family Tree",
-     "Stolen Booty",
-     "Hearts of Zeal",
+     "The Battle for Arathi Basin!",
+     "The Princess Trapped",
      "Bloodscalp Ears",
      "Investigate the Camp",
      "Sigil of Strom",
@@ -3251,16 +3268,18 @@
      "Seeking the Kor Gem",
      "Anyone Can Cook",
      "Conquering Arathi Basin",
-     "King of the Foulweald",
+     "Vorrel's Revenge",
+     "The Crown of Will",
      "Scaring Shaky",
-     "Silky Sutures",
+     "WANTED: Baron Vardus",
      "Battle of Warsong Gulch",
      "Infiltration",
      "Goblin Sponsorship",
      "Martek the Exiled",
-     "To Steal From Thieves"
+     "To Steal From Thieves",
+     "Guile of the Raptor"
     ],
-    "zavrseno": 349
+    "zavrseno": 357
    },
    "mountovi": [
     "Cerulean Prideclaw",
@@ -3278,10 +3297,10 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg",
-   "azurirano": "2026-11-19T22:09:22Z"
+   "azurirano": "2026-11-20T02:09:07Z"
   }
  },
- "provjereno": "2026-11-20T00:09:01Z",
+ "provjereno": "2026-11-20T02:09:07Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 8,
@@ -3323,13 +3342,13 @@
    },
    {
     "ime": "Arsen Deadic",
-    "level": 34,
+    "level": 35,
     "klasa": "Paladin",
     "rasa": "Undead",
     "rang": 3,
     "slug": "arsen-deadic",
-    "ilvl": 29,
-    "zadnjiLogin": "2026-11-19T21:51:18Z",
+    "ilvl": 28,
+    "zadnjiLogin": "2026-11-20T01:28:00Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg"
    },
    {
@@ -4152,6 +4171,11 @@
     "2026-11-19T22:09:22Z",
     34,
     57163
+   ],
+   [
+    "2026-11-20T02:09:07Z",
+    35,
+    61221
    ]
   ]
  }
