@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-21T04:15:37Z",
+ "azurirano": "2026-11-21T10:17:15Z",
  "likovi": {
   "Saman Saulic": {
    "level": 46,
@@ -719,10 +719,10 @@
   },
   "Melee Kitic": {
    "level": 39,
-   "xp": 2528,
+   "xp": 28701,
    "guild": "Kafana na Balkanu",
    "ilvl": 33,
-   "zadnjiLogin": "2026-11-21T01:02:21Z",
+   "zadnjiLogin": "2026-11-21T10:13:46Z",
    "izvor": "Blizzard API",
    "talenti": [
     3,
@@ -865,7 +865,8 @@
      "kvaliteta": "rare",
      "wowhead": 7724,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132953.jpg",
-     "ilvl": 44
+     "ilvl": 44,
+     "enchant": "Enchanted: Attack Power +4 and Armor +16"
     },
     {
      "slot": "Finger 1",
@@ -927,7 +928,7 @@
    "profesije": [
     {
      "name": "Mining",
-     "skill": 194,
+     "skill": 196,
      "max": 225,
      "vrsta": "primarna"
     },
@@ -965,64 +966,64 @@
     "sta": 134,
     "int": 32,
     "spi": 42,
-    "armor": 1460,
-    "ap": 461,
+    "armor": 1476,
+    "ap": 465,
     "spellPower": 0,
-    "crit": 9.91,
+    "crit": 10.23,
     "spellCrit": 0.0,
     "rangedCrit": 0.0,
-    "dodge": 5.11,
-    "parry": 4.8,
-    "block": 4.8,
-    "dps": 61.6
+    "dodge": 5.27,
+    "parry": 4.96,
+    "block": 4.96,
+    "dps": 61.9
    },
    "reputacije": [
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 7765,
+     "vrijednost": 7790,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Honored",
-     "vrijednost": 4257,
+     "vrijednost": 4357,
      "max": 12000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Honored",
-     "vrijednost": 1841,
+     "vrijednost": 1866,
      "max": 12000
     },
     {
      "ime": "Undercity",
      "status": "Honored",
-     "vrijednost": 858,
+     "vrijednost": 883,
      "max": 12000
     },
     {
      "ime": "Ratchet",
      "status": "Friendly",
-     "vrijednost": 1939,
+     "vrijednost": 1942,
      "max": 6000
     },
     {
      "ime": "Booty Bay",
      "status": "Friendly",
-     "vrijednost": 43,
+     "vrijednost": 48,
      "max": 6000
     },
     {
      "ime": "Everlook",
      "status": "Neutral",
-     "vrijednost": 2736,
+     "vrijednost": 2738,
      "max": 3000
     },
     {
      "ime": "Gadgetzan",
      "status": "Neutral",
-     "vrijednost": 2736,
+     "vrijednost": 2738,
      "max": 3000
     }
    ],
@@ -1030,7 +1031,7 @@
     {
      "kat": "Character",
      "ime": "Times camped",
-     "n": 50
+     "n": 53
     },
     {
      "kat": "Consumables",
@@ -1051,7 +1052,7 @@
     {
      "kat": "Consumables",
      "ime": "Food eaten",
-     "n": 27
+     "n": 31
     },
     {
      "kat": "Reputation",
@@ -1141,17 +1142,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 5842
+     "n": 5979
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 4673
+     "n": 4805
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 5787
+     "n": 5924
     },
     {
      "kat": "Creatures",
@@ -1161,7 +1162,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 3352,
+     "n": 3452,
      "opis": "Humanoid"
     },
     {
@@ -1188,12 +1189,12 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 3073
+     "n": 3136
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 2613
+     "n": 2676
     },
     {
      "kat": "Killing Blows",
@@ -1204,7 +1205,7 @@
     {
      "kat": "Deaths",
      "ime": "Total deaths",
-     "n": 70
+     "n": 72
     },
     {
      "kat": "Dungeons and Raids",
@@ -1244,7 +1245,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 372
+     "n": 374
     },
     {
      "kat": "Quests",
@@ -1324,7 +1325,7 @@
     {
      "kat": "Professions",
      "ime": "Highest Mining skill",
-     "n": 193
+     "n": 194
     },
     {
      "kat": "Professions",
@@ -1334,12 +1335,12 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 84
+     "n": 86
     },
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
-     "n": 45
+     "n": 46
     },
     {
      "kat": "Social",
@@ -1352,7 +1353,6 @@
      "Reclaimed Treasures",
      "Buying Friendship: Gelkis",
      "Encrusted Tail Fins",
-     "On the Lam",
      "The Grave Knight",
      "Shady Saltseers",
      "A Vengeful Fate",
@@ -1361,17 +1361,21 @@
      "Raptor Mastery",
      "Report to Rog'mar",
      "Dragonmaw Shinbones",
+     "Speaking with Gan'zulah",
      "Mok'thardin's Enchantment",
      "Blood in the Streets",
      "The Hammer May Fall",
      "Catch of the Day",
+     "Partial Mystical Notes",
      "Centaur Bounty",
      "An Unholy Alliance",
      "Lost Shipping Crate",
+     "Skullsplitter Tusks",
      "Gol'dir",
      "Source of Power",
      "Magram Alliance",
      "Hand of Iruxos",
+     "Speaking with Nezzliok",
      "Vorrel's Revenge",
      "Khan Hratha",
      "Other Fish to Fry",
@@ -1384,10 +1388,9 @@
      "The Coldbringer's Eye",
      "Split Bone Necklace",
      "Satyr Hooves",
-     "Gelkis Alliance",
-     "Bloodscalp Clan Heads"
+     "Gelkis Alliance"
     ],
-    "zavrseno": 406
+    "zavrseno": 408
    },
    "mountovi": [],
    "petovi": [],
@@ -1397,7 +1400,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg",
-   "azurirano": "2026-11-21T02:15:38Z"
+   "azurirano": "2026-11-21T10:17:15Z"
   },
   "Janica Frostelich": {
    "level": 18,
@@ -3342,7 +3345,7 @@
    "azurirano": "2026-11-20T18:17:56Z"
   }
  },
- "provjereno": "2026-11-21T08:17:10Z",
+ "provjereno": "2026-11-21T10:17:15Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 8,
@@ -3379,7 +3382,7 @@
     "rang": 3,
     "slug": "melee-kitic",
     "ilvl": 33,
-    "zadnjiLogin": "2026-11-21T01:02:21Z",
+    "zadnjiLogin": "2026-11-21T10:13:46Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg"
    },
    {
@@ -3401,7 +3404,7 @@
     "rang": 4,
     "slug": "venos-xx",
     "ilvl": 35,
-    "zadnjiLogin": "2026-11-21T02:01:32Z",
+    "zadnjiLogin": "2026-11-21T08:26:36Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/253/13774333-avatar.jpg"
    },
    {
@@ -3862,6 +3865,11 @@
     "2026-11-21T02:15:38Z",
     39,
     2528
+   ],
+   [
+    "2026-11-21T10:17:15Z",
+    39,
+    28701
    ]
   ],
   "Janica Frostelich": [
