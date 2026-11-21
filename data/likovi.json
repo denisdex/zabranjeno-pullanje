@@ -1,12 +1,12 @@
 {
- "azurirano": "2026-11-20T22:16:50Z",
+ "azurirano": "2026-11-21T00:16:12Z",
  "likovi": {
   "Saman Saulic": {
    "level": 46,
-   "xp": 61126,
+   "xp": 61416,
    "guild": "Kafana na Balkanu",
    "ilvl": 37,
-   "zadnjiLogin": "2026-11-20T17:07:04Z",
+   "zadnjiLogin": "2026-11-20T22:34:07Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -457,17 +457,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 8952
+     "n": 8953
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 6488
+     "n": 6489
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 8867
+     "n": 8868
     },
     {
      "kat": "Creatures",
@@ -504,12 +504,12 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 4322
+     "n": 4323
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 3638
+     "n": 3639
     },
     {
      "kat": "Killing Blows",
@@ -570,7 +570,7 @@
     {
      "kat": "Quests",
      "ime": "Average quests completed per day",
-     "n": 567
+     "n": 283.5
     },
     {
      "kat": "Quests",
@@ -715,7 +715,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg",
-   "azurirano": "2026-11-20T18:17:56Z"
+   "azurirano": "2026-11-21T00:16:12Z"
   },
   "Melee Kitic": {
    "level": 38,
@@ -3332,7 +3332,7 @@
    "azurirano": "2026-11-20T18:17:56Z"
   }
  },
- "provjereno": "2026-11-20T22:16:50Z",
+ "provjereno": "2026-11-21T00:16:12Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 8,
@@ -3347,7 +3347,7 @@
     "rang": 0,
     "slug": "saman-saulic",
     "ilvl": 37,
-    "zadnjiLogin": "2026-11-20T17:07:04Z",
+    "zadnjiLogin": "2026-11-20T22:34:07Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg"
    },
    {
@@ -3385,13 +3385,13 @@
    },
    {
     "ime": "Venos Xx",
-    "level": 42,
+    "level": 44,
     "klasa": "Druid",
     "rasa": "Tauren",
     "rang": 4,
     "slug": "venos-xx",
-    "ilvl": 31,
-    "zadnjiLogin": "2026-11-20T13:20:06Z",
+    "ilvl": 35,
+    "zadnjiLogin": "2026-11-20T22:53:56Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/253/13774333-avatar.jpg"
    },
    {
@@ -3407,13 +3407,13 @@
    },
    {
     "ime": "Mate Bullic",
-    "level": 22,
+    "level": 23,
     "klasa": "Shaman",
     "rasa": "Tauren",
     "rang": 4,
     "slug": "mate-bullic",
     "ilvl": 13,
-    "zadnjiLogin": "2026-11-19T22:07:46Z",
+    "zadnjiLogin": "2026-11-21T00:03:06Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/33/21412897-avatar.jpg"
    },
    {
@@ -3625,6 +3625,11 @@
     "2026-11-20T18:17:56Z",
     46,
     61126
+   ],
+   [
+    "2026-11-21T00:16:12Z",
+    46,
+    61416
    ]
   ],
   "Melee Kitic": [
