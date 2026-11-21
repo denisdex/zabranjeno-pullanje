@@ -1,12 +1,12 @@
 {
- "azurirano": "2026-11-21T02:15:38Z",
+ "azurirano": "2026-11-21T04:15:37Z",
  "likovi": {
   "Saman Saulic": {
    "level": 46,
-   "xp": 61416,
+   "xp": 66760,
    "guild": "Kafana na Balkanu",
    "ilvl": 37,
-   "zadnjiLogin": "2026-11-20T22:34:07Z",
+   "zadnjiLogin": "2026-11-21T03:27:52Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -240,7 +240,7 @@
     },
     {
      "name": "Skinning",
-     "skill": 276,
+     "skill": 277,
      "max": 300,
      "vrsta": "primarna"
     },
@@ -275,12 +275,12 @@
     "armor": 1067,
     "ap": 517,
     "spellPower": 32,
-    "crit": 9.4,
+    "crit": 9.44,
     "spellCrit": 9.77,
     "rangedCrit": 5.0,
-    "dodge": 4.28,
-    "parry": 4.6,
-    "block": 4.6,
+    "dodge": 4.32,
+    "parry": 4.64,
+    "block": 4.64,
     "dps": 74.2
    },
    "reputacije": [
@@ -357,7 +357,7 @@
     {
      "kat": "Consumables",
      "ime": "Beverages consumed",
-     "n": 434
+     "n": 435
     },
     {
      "kat": "Consumables",
@@ -457,17 +457,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 8953
+     "n": 8970
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 6489
+     "n": 6506
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 8868
+     "n": 8885
     },
     {
      "kat": "Creatures",
@@ -504,12 +504,12 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 4323
+     "n": 4340
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 3639
+     "n": 3656
     },
     {
      "kat": "Killing Blows",
@@ -715,7 +715,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg",
-   "azurirano": "2026-11-21T00:16:12Z"
+   "azurirano": "2026-11-21T04:15:37Z"
   },
   "Melee Kitic": {
    "level": 39,
@@ -3342,7 +3342,7 @@
    "azurirano": "2026-11-20T18:17:56Z"
   }
  },
- "provjereno": "2026-11-21T02:15:38Z",
+ "provjereno": "2026-11-21T04:15:37Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 8,
@@ -3357,7 +3357,7 @@
     "rang": 0,
     "slug": "saman-saulic",
     "ilvl": 37,
-    "zadnjiLogin": "2026-11-20T22:34:07Z",
+    "zadnjiLogin": "2026-11-21T03:27:52Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg"
    },
    {
@@ -3640,6 +3640,11 @@
     "2026-11-21T00:16:12Z",
     46,
     61416
+   ],
+   [
+    "2026-11-21T04:15:37Z",
+    46,
+    66760
    ]
   ],
   "Melee Kitic": [
