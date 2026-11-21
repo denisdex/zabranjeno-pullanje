@@ -1,17 +1,17 @@
 {
- "azurirano": "2026-11-21T18:15:49Z",
+ "azurirano": "2026-11-21T20:15:57Z",
  "likovi": {
   "Saman Saulic": {
-   "level": 46,
-   "xp": 66760,
+   "level": 47,
+   "xp": 555,
    "guild": "Kafana na Balkanu",
-   "ilvl": 37,
-   "zadnjiLogin": "2026-11-21T14:44:41Z",
+   "ilvl": 38,
+   "zadnjiLogin": "2026-11-21T19:15:03Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
     35,
-    2
+    3
    ],
    "specka": "Enhancement",
    "talentiPopis": [
@@ -95,9 +95,9 @@
     },
     {
      "ime": "Tidal Focus",
-     "rang": 2,
+     "rang": 3,
      "stablo": "Restoration",
-     "opis": "Reduces the Mana cost of your healing spells by 2% and improves your chance to hit by 2%."
+     "opis": "Reduces the Mana cost of your healing spells by 3% and improves your chance to hit by 3%."
     }
    ],
    "oprema": [
@@ -135,11 +135,11 @@
     },
     {
      "slot": "Waist",
-     "ime": "Saltscale Girdle",
+     "ime": "Boar Champion's Belt",
      "kvaliteta": "rare",
-     "wowhead": 273023,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132510.jpg",
-     "ilvl": 31
+     "wowhead": 10768,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132500.jpg",
+     "ilvl": 42
     },
     {
      "slot": "Legs",
@@ -183,11 +183,11 @@
     },
     {
      "slot": "Finger 2",
-     "ime": "Demon Band",
-     "kvaliteta": "uncommon",
-     "wowhead": 12054,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133346.jpg",
-     "ilvl": 24
+     "ime": "Purified Ring",
+     "kvaliteta": "rare",
+     "wowhead": 270081,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133343.jpg",
+     "ilvl": 44
     },
     {
      "slot": "Trinket 1",
@@ -219,8 +219,7 @@
      "kvaliteta": "rare",
      "wowhead": 279885,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133043.jpg",
-     "ilvl": 42,
-     "enchant": "Windfury 2"
+     "ilvl": 42
     },
     {
      "slot": "Ranged",
@@ -240,7 +239,7 @@
     },
     {
      "name": "Skinning",
-     "skill": 277,
+     "skill": 282,
      "max": 300,
      "vrsta": "primarna"
     },
@@ -264,48 +263,48 @@
     }
    ],
    "statovi": {
-    "hp": 1707,
-    "resurs": 2504,
+    "hp": 1795,
+    "resurs": 2598,
     "resursIme": "Mana",
-    "str": 157,
-    "agi": 46,
-    "sta": 114,
-    "int": 109,
-    "spi": 127,
-    "armor": 1067,
-    "ap": 517,
-    "spellPower": 32,
-    "crit": 9.44,
-    "spellCrit": 9.77,
+    "str": 161,
+    "agi": 47,
+    "sta": 120,
+    "int": 113,
+    "spi": 126,
+    "armor": 1092,
+    "ap": 531,
+    "spellPower": 38,
+    "crit": 9.28,
+    "spellCrit": 9.82,
     "rangedCrit": 5.0,
-    "dodge": 4.32,
-    "parry": 4.64,
-    "block": 4.64,
-    "dps": 74.2
+    "dodge": 4.2,
+    "parry": 4.52,
+    "block": 4.52,
+    "dps": 75.2
    },
    "reputacije": [
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 9761,
+     "vrijednost": 9836,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Honored",
-     "vrijednost": 5971,
+     "vrijednost": 6046,
      "max": 12000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Honored",
-     "vrijednost": 3455,
+     "vrijednost": 3642,
      "max": 12000
     },
     {
      "ime": "Undercity",
      "status": "Honored",
-     "vrijednost": 1175,
+     "vrijednost": 1362,
      "max": 12000
     },
     {
@@ -337,7 +336,7 @@
     {
      "kat": "Character",
      "ime": "Times camped",
-     "n": 148
+     "n": 151
     },
     {
      "kat": "Consumables",
@@ -357,7 +356,7 @@
     {
      "kat": "Consumables",
      "ime": "Beverages consumed",
-     "n": 435
+     "n": 441
     },
     {
      "kat": "Consumables",
@@ -377,7 +376,7 @@
     {
      "kat": "Reputation",
      "ime": "Total factions encountered",
-     "n": 20
+     "n": 21
     },
     {
      "kat": "Gear",
@@ -397,7 +396,7 @@
     {
      "kat": "Dungeons & Raids",
      "ime": "Total 5-player dungeons entered",
-     "n": 28
+     "n": 30
     },
     {
      "kat": "Boss Kills",
@@ -451,23 +450,28 @@
     },
     {
      "kat": "Boss Kills",
+     "ime": "Amnennar the Coldbringer kills (Razorfen Downs)",
+     "n": 2
+    },
+    {
+     "kat": "Boss Kills",
      "ime": "High Inquisitor Whitemane kills (Scarlet Monastery)",
      "n": 1
     },
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 8970
+     "n": 9615
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 6506
+     "n": 6754
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 8885
+     "n": 9512
     },
     {
      "kat": "Creatures",
@@ -477,13 +481,13 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 4551,
+     "n": 4702,
      "opis": "Humanoid"
     },
     {
      "kat": "Creatures",
      "ime": "Critters killed",
-     "n": 80
+     "n": 98
     },
     {
      "kat": "Honorable Kills",
@@ -504,12 +508,12 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 4340
+     "n": 4392
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 3656
+     "n": 3705
     },
     {
      "kat": "Killing Blows",
@@ -520,7 +524,7 @@
     {
      "kat": "Deaths",
      "ime": "Total deaths",
-     "n": 89
+     "n": 90
     },
     {
      "kat": "Dungeons and Raids",
@@ -540,7 +544,7 @@
     {
      "kat": "World",
      "ime": "Deaths from falling",
-     "n": 4
+     "n": 5
     },
     {
      "kat": "Resurrection",
@@ -565,12 +569,12 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 567
+     "n": 572
     },
     {
      "kat": "Quests",
      "ime": "Average quests completed per day",
-     "n": 283.5
+     "n": 286
     },
     {
      "kat": "Quests",
@@ -645,17 +649,17 @@
     {
      "kat": "Professions",
      "ime": "Highest Skinning skill",
-     "n": 277
+     "n": 282
     },
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 239
+     "n": 242
     },
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
-     "n": 35
+     "n": 38
     },
     {
      "kat": "Social",
@@ -667,22 +671,24 @@
     "uLogu": [
      "The Mind's Eye",
      "Reclaimed Treasures",
-     "The Sunken Temple",
      "Screecher Spirits",
      "Troll Temper",
+     "The Stone Circle",
      "Scarab Shells",
      "Akiris by the Bundle",
+     "An'she's Radiance",
      "Tiara of the Deep",
      "Solution to Doom",
-     "A Host of Evil",
      "Pirate Hats Ahoy!",
      "Gahz'rilla",
+     "Gahz'ridian",
      "Shadowshard Fragments",
-     "An Unholy Alliance",
+     "Scourge of the Downs",
      "Southsea Shakedown",
      "The Thirsty Goblin",
      "Power Stones",
      "Grim Message",
+     "Fragment of the Firelands",
      "Noxious Lair Investigation",
      "Whiskey Slim's Lost Grog",
      "Stoley's Shipment",
@@ -695,12 +701,10 @@
      "Lines of Communication",
      "The Dunemaul Compound",
      "Thistleshrub Valley",
-     "Bring the End",
      "Divino-matic Rod",
-     "The Corrupter",
-     "The Coldbringer's Eye"
+     "The Corrupter"
     ],
-    "zavrseno": 672
+    "zavrseno": 677
    },
    "mountovi": [
     "Black Wolf",
@@ -715,89 +719,21 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg",
-   "azurirano": "2026-11-21T16:16:32Z"
+   "azurirano": "2026-11-21T20:15:57Z"
   },
   "Melee Kitic": {
    "level": 40,
    "xp": 35341,
    "guild": "Kafana na Balkanu",
-   "ilvl": 34,
-   "zadnjiLogin": "2026-11-21T17:54:19Z",
+   "ilvl": 35,
+   "zadnjiLogin": "2026-11-21T18:39:27Z",
    "izvor": "Blizzard API",
    "talenti": [
-    3,
-    26,
-    2
+    0,
+    0,
+    0
    ],
-   "specka": "Fury",
-   "talentiPopis": [
-    {
-     "ime": "Improved Rend",
-     "rang": 3,
-     "stablo": "Arms",
-     "opis": "Increases the Bleed damage done by your Rend ability by 35%."
-    },
-    {
-     "ime": "Cruelty",
-     "rang": 5,
-     "stablo": "Fury",
-     "opis": "Improves your chance to get a critical strike with melee attacks by 5%."
-    },
-    {
-     "ime": "Lingering Rage",
-     "rang": 3,
-     "stablo": "Fury",
-     "opis": "Increases the time before your Rage begins to decay after leaving combat by 6 sec."
-    },
-    {
-     "ime": "Unbridled Wrath",
-     "rang": 5,
-     "stablo": "Fury",
-     "opis": "Gives you a 60% chance to generate 1 additional Rage when you deal melee damage with a weapon."
-    },
-    {
-     "ime": "Furious Precision",
-     "rang": 3,
-     "stablo": "Fury",
-     "opis": "Increases your chance to hit with off-hand attacks by 10%."
-    },
-    {
-     "ime": "Blood Craze",
-     "rang": 2,
-     "stablo": "Fury",
-     "opis": "Regenerates 2% of your total Health over 6 sec after being the victim of a critical strike or suffering more than 20% of your maximum Health from a single attack."
-    },
-    {
-     "ime": "Enrage",
-     "rang": 5,
-     "stablo": "Fury",
-     "opis": "Gives you a 30% chance to deal 10% increased Physical damage for 12 sec after being the victim of any damaging attack."
-    },
-    {
-     "ime": "Dual Wield Specialization",
-     "rang": 1,
-     "stablo": "Fury",
-     "opis": "Increases the damage done by your off-hand weapon by 5% and the Rage generated by your off-hand attacks by 10%."
-    },
-    {
-     "ime": "Death Wish",
-     "rang": 1,
-     "stablo": "Fury",
-     "opis": "When activated, increases your Physical damage done by 20% and makes you immune to Fear effects, but increases all damage you take by 5%. Lasts 30 sec."
-    },
-    {
-     "ime": "Improved Whirlwind",
-     "rang": 1,
-     "stablo": "Fury",
-     "opis": "Reduces the cooldown of your Whirlwind ability by 1 sec and increases the damage it deals to the closest enemy by 15%."
-    },
-    {
-     "ime": "Improved Bloodrage",
-     "rang": 2,
-     "stablo": "Protection",
-     "opis": "Increases all the Rage generated by your Bloodrage ability by 50%."
-    }
-   ],
+   "talentiPopis": [],
    "oprema": [
     {
      "slot": "Head",
@@ -825,12 +761,12 @@
     },
     {
      "slot": "Chest",
-     "ime": "Slayer's Surcoat",
-     "kvaliteta": "uncommon",
-     "wowhead": 14751,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132629.jpg",
-     "ilvl": 33,
-     "enchant": "Enchanted: Stamina +3 and Armor +24"
+     "ime": "Carapace of Tuten'kash",
+     "kvaliteta": "rare",
+     "wowhead": 10775,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132743.jpg",
+     "ilvl": 42,
+     "enchant": "Enchanted: Attack Power +4 and Armor +16"
     },
     {
      "slot": "Waist",
@@ -846,15 +782,17 @@
      "kvaliteta": "uncommon",
      "wowhead": 15596,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/134588.jpg",
-     "ilvl": 41
+     "ilvl": 41,
+     "enchant": "Enchanted: Attack Power +4 and Armor +16"
     },
     {
      "slot": "Feet",
-     "ime": "Battleforge Boots of the Champion",
+     "ime": "Jungle Boots",
      "kvaliteta": "uncommon",
-     "wowhead": 6590,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132589.jpg",
-     "ilvl": 29
+     "wowhead": 17688,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132582.jpg",
+     "ilvl": 40,
+     "enchant": "Enchanted: Attack Power +4 and Armor +16"
     },
     {
      "slot": "Wrist",
@@ -963,48 +901,48 @@
     }
    ],
    "statovi": {
-    "hp": 1809,
+    "hp": 1859,
     "resurs": 100,
     "resursIme": "Rage",
-    "str": 152,
-    "agi": 72,
-    "sta": 134,
+    "str": 156,
+    "agi": 77,
+    "sta": 139,
     "int": 32,
     "spi": 47,
-    "armor": 1484,
-    "ap": 482,
+    "armor": 1732,
+    "ap": 502,
     "spellPower": 0,
-    "crit": 10.42,
+    "crit": 5.8,
     "spellCrit": 0.0,
     "rangedCrit": 0.0,
-    "dodge": 5.3,
-    "parry": 4.84,
-    "block": 4.84,
-    "dps": 64.4
+    "dodge": 5.6,
+    "parry": 4.76,
+    "block": 4.76,
+    "dps": 65.9
    },
    "reputacije": [
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 7877,
+     "vrijednost": 7927,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Honored",
-     "vrijednost": 4595,
+     "vrijednost": 4607,
      "max": 12000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Honored",
-     "vrijednost": 1953,
+     "vrijednost": 1966,
      "max": 12000
     },
     {
      "ime": "Undercity",
      "status": "Honored",
-     "vrijednost": 1083,
+     "vrijednost": 1096,
      "max": 12000
     },
     {
@@ -1073,6 +1011,11 @@
      "kat": "Reputation",
      "ime": "Total factions encountered",
      "n": 17
+    },
+    {
+     "kat": "Gear",
+     "ime": "Mounts owned",
+     "n": 1
     },
     {
      "kat": "Player vs. Player",
@@ -1255,7 +1198,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 385
+     "n": 387
     },
     {
      "kat": "Quests",
@@ -1395,9 +1338,11 @@
      "Satyr Hooves",
      "Gelkis Alliance"
     ],
-    "zavrseno": 419
+    "zavrseno": 441
    },
-   "mountovi": [],
+   "mountovi": [
+    "Brown Wolf"
+   ],
    "petovi": [],
    "pvp": {
     "hk": 1,
@@ -1405,7 +1350,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg",
-   "azurirano": "2026-11-21T18:15:49Z"
+   "azurirano": "2026-11-21T20:15:57Z"
   },
   "Janica Frostelich": {
    "level": 18,
@@ -3353,7 +3298,7 @@
    "azurirano": "2026-11-20T18:17:56Z"
   }
  },
- "provjereno": "2026-11-21T18:15:49Z",
+ "provjereno": "2026-11-21T20:15:57Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3362,13 +3307,13 @@
   "roster": [
    {
     "ime": "Saman Saulic",
-    "level": 46,
+    "level": 47,
     "klasa": "Shaman",
     "rasa": "Orc",
     "rang": 0,
     "slug": "saman-saulic",
-    "ilvl": 37,
-    "zadnjiLogin": "2026-11-21T14:44:41Z",
+    "ilvl": 38,
+    "zadnjiLogin": "2026-11-21T19:15:03Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg"
    },
    {
@@ -3389,8 +3334,8 @@
     "rasa": "Orc",
     "rang": 3,
     "slug": "melee-kitic",
-    "ilvl": 34,
-    "zadnjiLogin": "2026-11-21T17:54:19Z",
+    "ilvl": 35,
+    "zadnjiLogin": "2026-11-21T18:39:27Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg"
    },
    {
@@ -3667,6 +3612,11 @@
     "2026-11-21T04:15:37Z",
     46,
     66760
+   ],
+   [
+    "2026-11-21T20:15:57Z",
+    47,
+    555
    ]
   ],
   "Melee Kitic": [
