@@ -9,8 +9,19 @@
    "url": "https://www.wowhead.com/news/rss/classic"
   }
  ],
- "azurirano": "2026-11-20T18:17:56Z",
+ "azurirano": "2026-11-21T02:15:38Z",
  "stavke": [
+  {
+   "datum": "2026-11-21T00:18:29Z",
+   "naslov": "WoW: Forever Hotfixes - November 20, 2026",
+   "link": "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-20-2026/2403040/14",
+   "izvor": "Blizzard",
+   "sazetak": "November 20, 2026 Classes Rogue Combat Blade Flurry will now correctly cause Shank’s damage to hit an additional target. Warlock Demonology Fixed a bug where the effects of the Demonic Aegis talent could be snapshotted into your Demon…",
+   "oznake": [
+    "Hotfix"
+   ],
+   "vrsta": "patch"
+  },
   {
    "datum": "2026-11-20T18:02:14Z",
    "naslov": "WoW: Forever Class Design, Patch 12.1.7, WoW Anniversary - WoW Weekly",
@@ -32,17 +43,6 @@
     "Klase"
    ],
    "vrsta": "vijest"
-  },
-  {
-   "datum": "2026-11-20T04:00:55Z",
-   "naslov": "WoW: Forever Hotfixes - November 19, 2026",
-   "link": "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-19-2026/2403040/13",
-   "izvor": "Blizzard",
-   "sazetak": "November 19, 2026 Camping Seed Hybridizer has been re-enabled. Seed Hybridization now has adjusted values, as well as a chance of failure when combining seeds. Scarce Herb Seeds are no longer able to be used in the Seed Hybridizer. Classes…",
-   "oznake": [
-    "Hotfix"
-   ],
-   "vrsta": "patch"
   },
   {
    "datum": "2026-11-19T17:35:02Z",
