@@ -1,12 +1,12 @@
 {
- "azurirano": "2026-11-21T20:15:57Z",
+ "azurirano": "2026-11-21T22:06:09Z",
  "likovi": {
   "Saman Saulic": {
    "level": 47,
    "xp": 555,
    "guild": "Kafana na Balkanu",
    "ilvl": 38,
-   "zadnjiLogin": "2026-11-21T19:15:03Z",
+   "zadnjiLogin": "2026-11-21T21:13:32Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -376,7 +376,7 @@
     {
      "kat": "Reputation",
      "ime": "Total factions encountered",
-     "n": 21
+     "n": 20
     },
     {
      "kat": "Gear",
@@ -719,7 +719,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg",
-   "azurirano": "2026-11-21T20:15:57Z"
+   "azurirano": "2026-11-21T22:06:09Z"
   },
   "Melee Kitic": {
    "level": 40,
@@ -3298,7 +3298,7 @@
    "azurirano": "2026-11-20T18:17:56Z"
   }
  },
- "provjereno": "2026-11-21T20:15:57Z",
+ "provjereno": "2026-11-21T22:06:09Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3313,7 +3313,7 @@
     "rang": 0,
     "slug": "saman-saulic",
     "ilvl": 38,
-    "zadnjiLogin": "2026-11-21T19:15:03Z",
+    "zadnjiLogin": "2026-11-21T21:13:32Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg"
    },
    {
