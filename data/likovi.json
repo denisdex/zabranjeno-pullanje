@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-21T10:17:15Z",
+ "azurirano": "2026-11-21T12:17:15Z",
  "likovi": {
   "Saman Saulic": {
    "level": 46,
@@ -1908,10 +1908,10 @@
   },
   "Nikola Roguevic": {
    "level": 42,
-   "xp": 71301,
+   "xp": 77482,
    "guild": "Kafana na Balkanu",
-   "ilvl": 33,
-   "zadnjiLogin": "2026-11-20T16:37:07Z",
+   "ilvl": 34,
+   "zadnjiLogin": "2026-11-21T11:46:09Z",
    "izvor": "Blizzard API",
    "talenti": [
     2,
@@ -2069,12 +2069,12 @@
     },
     {
      "slot": "Feet",
-     "ime": "Warsong Boots",
-     "kvaliteta": "rare",
-     "wowhead": 16977,
+     "ime": "Nightscape Boots",
+     "kvaliteta": "uncommon",
+     "wowhead": 8197,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132539.jpg",
-     "ilvl": 27,
-     "enchant": "Enchanted: Stamina +3 and Armor +24"
+     "ilvl": 47,
+     "enchant": "Enchanted: Stamina +4 and Armor +32"
     },
     {
      "slot": "Wrist",
@@ -2190,24 +2190,24 @@
     }
    ],
    "statovi": {
-    "hp": 1780,
+    "hp": 1730,
     "resurs": 100,
     "resursIme": "Energy",
     "str": 67,
-    "agi": 163,
-    "sta": 119,
+    "agi": 167,
+    "sta": 114,
     "int": 32,
     "spi": 48,
-    "armor": 1014,
-    "ap": 330,
+    "armor": 1050,
+    "ap": 334,
     "spellPower": 0,
-    "crit": 8.57,
+    "crit": 8.78,
     "spellCrit": 0.0,
-    "rangedCrit": 7.73,
-    "dodge": 19.08,
+    "rangedCrit": 7.98,
+    "dodge": 19.51,
     "parry": 10.92,
     "block": 0.0,
-    "dps": 53.3
+    "dps": 53.6
    },
    "reputacije": [
     {
@@ -2294,7 +2294,7 @@
     {
      "kat": "Consumables",
      "ime": "Food eaten",
-     "n": 75
+     "n": 76
     },
     {
      "kat": "Reputation",
@@ -2394,17 +2394,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 7945
+     "n": 7962
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 6019
+     "n": 6036
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 7861
+     "n": 7878
     },
     {
      "kat": "Creatures",
@@ -2441,17 +2441,17 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 4317
+     "n": 4334
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 3353
+     "n": 3370
     },
     {
      "kat": "Killing Blows",
      "ime": "Continent with the most Killing Blows",
-     "n": 1942,
+     "n": 1959,
      "opis": "Eastern Kingdoms"
     },
     {
@@ -2487,12 +2487,12 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 469
+     "n": 470
     },
     {
      "kat": "Quests",
      "ime": "Average quests completed per day",
-     "n": 52.111111111111114
+     "n": 47
     },
     {
      "kat": "Quests",
@@ -2532,7 +2532,7 @@
     {
      "kat": "Secondary Skills",
      "ime": "First Aid skill",
-     "n": 235
+     "n": 240
     },
     {
      "kat": "Secondary Skills",
@@ -2567,7 +2567,7 @@
     {
      "kat": "Professions",
      "ime": "Highest Skinning skill",
-     "n": 239
+     "n": 243
     },
     {
      "kat": "Travel",
@@ -2597,6 +2597,7 @@
    ],
    "questovi": {
     "uLogu": [
+     "Mok'thardin's Enchantment",
      "Reclaimed Treasures",
      "Encrusted Tail Fins",
      "Bloody Bone Necklaces",
@@ -2622,6 +2623,7 @@
      "The Crown of Will",
      "The Saltseer Captain",
      "Zum'rah's Head",
+     "Enemies in the Water",
      "Unchecked Expansion",
      "Dream Dust in the Swamp",
      "Where's the Key?",
@@ -2632,9 +2634,10 @@
      "Supply and Demand",
      "The Monster Surfaces",
      "The Coldbringer's Eye",
+     "The Defense of Grom'gol",
      "Necklace Recovery"
     ],
-    "zavrseno": 529
+    "zavrseno": 530
    },
    "mountovi": [
     "Cerulean Prideclaw",
@@ -2652,7 +2655,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg",
-   "azurirano": "2026-11-20T18:17:56Z"
+   "azurirano": "2026-11-21T12:17:15Z"
   },
   "Arsen Deadic": {
    "level": 37,
@@ -3345,7 +3348,7 @@
    "azurirano": "2026-11-20T18:17:56Z"
   }
  },
- "provjereno": "2026-11-21T10:17:15Z",
+ "provjereno": "2026-11-21T12:17:15Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 8,
@@ -3370,8 +3373,8 @@
     "rasa": "Undead",
     "rang": 1,
     "slug": "nikola-roguevic",
-    "ilvl": 33,
-    "zadnjiLogin": "2026-11-20T16:37:07Z",
+    "ilvl": 34,
+    "zadnjiLogin": "2026-11-21T11:46:09Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg"
    },
    {
@@ -3398,13 +3401,13 @@
    },
    {
     "ime": "Venos Xx",
-    "level": 44,
+    "level": 45,
     "klasa": "Druid",
     "rasa": "Tauren",
     "rang": 4,
     "slug": "venos-xx",
     "ilvl": 35,
-    "zadnjiLogin": "2026-11-21T08:26:36Z",
+    "zadnjiLogin": "2026-11-21T10:39:12Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/253/13774333-avatar.jpg"
    },
    {
@@ -4124,6 +4127,11 @@
     "2026-11-20T18:17:56Z",
     42,
     71301
+   ],
+   [
+    "2026-11-21T12:17:15Z",
+    42,
+    77482
    ]
   ],
   "Arsen Deadic": [
