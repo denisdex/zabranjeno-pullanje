@@ -1,12 +1,12 @@
 {
- "azurirano": "2026-11-21T14:17:09Z",
+ "azurirano": "2026-11-21T16:16:32Z",
  "likovi": {
   "Saman Saulic": {
    "level": 46,
    "xp": 66760,
    "guild": "Kafana na Balkanu",
    "ilvl": 37,
-   "zadnjiLogin": "2026-11-21T03:27:52Z",
+   "zadnjiLogin": "2026-11-21T14:44:41Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -645,7 +645,7 @@
     {
      "kat": "Professions",
      "ime": "Highest Skinning skill",
-     "n": 276
+     "n": 277
     },
     {
      "kat": "Travel",
@@ -715,7 +715,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg",
-   "azurirano": "2026-11-21T04:15:37Z"
+   "azurirano": "2026-11-21T16:16:32Z"
   },
   "Melee Kitic": {
    "level": 39,
@@ -3345,7 +3345,7 @@
    "azurirano": "2026-11-20T18:17:56Z"
   }
  },
- "provjereno": "2026-11-21T14:17:09Z",
+ "provjereno": "2026-11-21T16:16:32Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 8,
@@ -3360,7 +3360,7 @@
     "rang": 0,
     "slug": "saman-saulic",
     "ilvl": 37,
-    "zadnjiLogin": "2026-11-21T03:27:52Z",
+    "zadnjiLogin": "2026-11-21T14:44:41Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg"
    },
    {
@@ -3392,6 +3392,8 @@
     "rasa": "Undead",
     "rang": 3,
     "slug": "arsen-deadic",
+    "ilvl": 28,
+    "zadnjiLogin": "2026-11-20T16:24:09Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg"
    },
    {
