@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-22T06:34:25Z",
+ "azurirano": "2026-11-22T10:34:23Z",
  "likovi": {
   "Saman Saulic": {
    "level": 48,
@@ -722,10 +722,10 @@
   },
   "Melee Kitic": {
    "level": 40,
-   "xp": 73150,
+   "xp": 81181,
    "guild": "Kafana na Balkanu",
    "ilvl": 37,
-   "zadnjiLogin": "2026-11-22T02:33:06Z",
+   "zadnjiLogin": "2026-11-22T09:39:30Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -946,7 +946,7 @@
    "profesije": [
     {
      "name": "Mining",
-     "skill": 198,
+     "skill": 199,
      "max": 225,
      "vrsta": "primarna"
     },
@@ -990,9 +990,9 @@
     "crit": 10.84,
     "spellCrit": 0.0,
     "rangedCrit": 0.0,
-    "dodge": 5.68,
-    "parry": 4.84,
-    "block": 4.84,
+    "dodge": 5.72,
+    "parry": 4.88,
+    "block": 4.88,
     "dps": 65.9
    },
    "reputacije": [
@@ -1070,7 +1070,7 @@
     {
      "kat": "Consumables",
      "ime": "Food eaten",
-     "n": 39
+     "n": 40
     },
     {
      "kat": "Reputation",
@@ -1170,17 +1170,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 7078
+     "n": 7107
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 5719
+     "n": 5748
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 7006
+     "n": 7035
     },
     {
      "kat": "Creatures",
@@ -1217,12 +1217,12 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 3451
+     "n": 3481
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 2744
+     "n": 2774
     },
     {
      "kat": "Killing Blows",
@@ -1283,7 +1283,7 @@
     {
      "kat": "Quests",
      "ime": "Quests abandoned",
-     "n": 34
+     "n": 35
     },
     {
      "kat": "Skills",
@@ -1380,7 +1380,6 @@
     "uLogu": [
      "Reclaimed Treasures",
      "Buying Friendship: Gelkis",
-     "Encrusted Tail Fins",
      "Raptor Mastery",
      "The Grave Knight",
      "Shady Saltseers",
@@ -1423,7 +1422,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg",
-   "azurirano": "2026-11-22T02:35:21Z"
+   "azurirano": "2026-11-22T10:34:23Z"
   },
   "Janica Frostelich": {
    "level": 18,
@@ -3381,7 +3380,7 @@
    "azurirano": "2026-11-22T04:34:58Z"
   }
  },
- "provjereno": "2026-11-22T08:34:24Z",
+ "provjereno": "2026-11-22T10:34:23Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3418,7 +3417,7 @@
     "rang": 3,
     "slug": "melee-kitic",
     "ilvl": 37,
-    "zadnjiLogin": "2026-11-22T02:33:06Z",
+    "zadnjiLogin": "2026-11-22T09:39:30Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg"
    },
    {
@@ -3952,6 +3951,11 @@
     "2026-11-22T02:35:21Z",
     40,
     73150
+   ],
+   [
+    "2026-11-22T10:34:23Z",
+    40,
+    81181
    ]
   ],
   "Janica Frostelich": [
