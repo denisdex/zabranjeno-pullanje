@@ -1,17 +1,17 @@
 {
- "azurirano": "2026-11-22T16:32:31Z",
+ "azurirano": "2026-11-22T18:32:33Z",
  "likovi": {
   "Saman Saulic": {
-   "level": 48,
-   "xp": 33823,
+   "level": 49,
+   "xp": 40026,
    "guild": "Kafana na Balkanu",
-   "ilvl": 38,
-   "zadnjiLogin": "2026-11-22T11:47:53Z",
+   "ilvl": 39,
+   "zadnjiLogin": "2026-11-22T16:54:42Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
     35,
-    4
+    5
    ],
    "specka": "Enhancement",
    "talentiPopis": [
@@ -85,7 +85,7 @@
      "ime": "Maelstrom Weapon",
      "rang": 5,
      "stablo": "Enhancement",
-     "opis": "When you deal damage with a melee attack, you have a 60% chance (based on weapon speed) to reduce the cast time and Mana cost of your next Lightning Bolt spell by 20%. Stacks up to 5 times. Lasts 30 sec."
+     "opis": "When you deal damage with a melee attack, you have a 63% chance (based on weapon speed) to reduce the cast time and Mana cost of your next Lightning Bolt spell by 20%. Stacks up to 5 times. Lasts 30 sec."
     },
     {
      "ime": "Rage of the Farseer",
@@ -95,9 +95,9 @@
     },
     {
      "ime": "Tidal Focus",
-     "rang": 4,
+     "rang": 5,
      "stablo": "Restoration",
-     "opis": "Reduces the Mana cost of your healing spells by 4% and improves your chance to hit by 4%."
+     "opis": "Reduces the Mana cost of your healing spells by 5% and improves your chance to hit by 5%."
     }
    ],
    "oprema": [
@@ -215,12 +215,11 @@
     },
     {
      "slot": "Main Hand",
-     "ime": "Ceremonial Mallet",
-     "kvaliteta": "rare",
-     "wowhead": 279885,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133043.jpg",
-     "ilvl": 42,
-     "enchant": "Windfury 2"
+     "ime": "Taran Icebreaker",
+     "kvaliteta": "epic",
+     "wowhead": 2915,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133039.jpg",
+     "ilvl": 52
     },
     {
      "slot": "Ranged",
@@ -240,7 +239,7 @@
     },
     {
      "name": "Skinning",
-     "skill": 298,
+     "skill": 300,
      "max": 300,
      "vrsta": "primarna"
     },
@@ -252,7 +251,7 @@
     },
     {
      "name": "Fishing",
-     "skill": 232,
+     "skill": 233,
      "max": 300,
      "vrsta": "sekundarna"
     },
@@ -264,72 +263,72 @@
     }
    ],
    "statovi": {
-    "hp": 1994,
-    "resurs": 2437,
+    "hp": 2034,
+    "resurs": 2501,
     "resursIme": "Mana",
-    "str": 157,
-    "agi": 47,
-    "sta": 136,
-    "int": 101,
-    "spi": 124,
-    "armor": 1195,
-    "ap": 525,
+    "str": 158,
+    "agi": 48,
+    "sta": 137,
+    "int": 103,
+    "spi": 126,
+    "armor": 1197,
+    "ap": 509,
     "spellPower": 30,
-    "crit": 9.43,
-    "spellCrit": 9.5,
+    "crit": 9.49,
+    "spellCrit": 9.49,
     "rangedCrit": 5.0,
-    "dodge": 4.35,
+    "dodge": 4.41,
     "parry": 4.72,
     "block": 4.72,
-    "dps": 74.7
+    "dps": 86.1
    },
    "reputacije": [
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 10151,
+     "vrijednost": 10626,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Honored",
-     "vrijednost": 6286,
+     "vrijednost": 6648,
      "max": 12000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Honored",
-     "vrijednost": 3890,
+     "vrijednost": 4102,
      "max": 12000
     },
     {
      "ime": "Undercity",
      "status": "Honored",
-     "vrijednost": 1790,
+     "vrijednost": 2227,
      "max": 12000
     },
     {
      "ime": "Ratchet",
      "status": "Honored",
-     "vrijednost": 132,
+     "vrijednost": 282,
      "max": 12000
     },
     {
      "ime": "Gadgetzan",
      "status": "Friendly",
-     "vrijednost": 5260,
+     "vrijednost": 5460,
      "max": 6000
     },
     {
      "ime": "Booty Bay",
      "status": "Friendly",
-     "vrijednost": 5005,
+     "vrijednost": 5255,
      "max": 6000
     },
     {
      "ime": "Powderfuse",
      "status": "Friendly",
-     "vrijednost": 4902,
+     "vrijednost": 5052,
      "max": 6000
     }
    ],
@@ -337,7 +336,7 @@
     {
      "kat": "Character",
      "ime": "Times camped",
-     "n": 152
+     "n": 159
     },
     {
      "kat": "Consumables",
@@ -357,12 +356,12 @@
     {
      "kat": "Consumables",
      "ime": "Beverages consumed",
-     "n": 490
+     "n": 501
     },
     {
      "kat": "Consumables",
      "ime": "Food eaten",
-     "n": 69
+     "n": 77
     },
     {
      "kat": "Reputation",
@@ -378,6 +377,11 @@
      "kat": "Reputation",
      "ime": "Total factions encountered",
      "n": 20
+    },
+    {
+     "kat": "Gear",
+     "ime": "Equipped epic items in item slots",
+     "n": 1
     },
     {
      "kat": "Gear",
@@ -462,17 +466,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 10419
+     "n": 10699
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 7130
+     "n": 7407
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 10316
+     "n": 10596
     },
     {
      "kat": "Creatures",
@@ -482,7 +486,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 5278,
+     "n": 5485,
      "opis": "Humanoid"
     },
     {
@@ -509,23 +513,23 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 4753
+     "n": 4954
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 3954
+     "n": 4155
     },
     {
      "kat": "Killing Blows",
      "ime": "Continent with the most Killing Blows",
-     "n": 1993,
-     "opis": "Kalimdor"
+     "n": 2162,
+     "opis": "Eastern Kingdoms"
     },
     {
      "kat": "Deaths",
      "ime": "Total deaths",
-     "n": 99
+     "n": 102
     },
     {
      "kat": "Dungeons and Raids",
@@ -540,7 +544,7 @@
     {
      "kat": "World",
      "ime": "Deaths from drowning",
-     "n": 3
+     "n": 4
     },
     {
      "kat": "World",
@@ -570,17 +574,17 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 597
+     "n": 624
     },
     {
      "kat": "Quests",
      "ime": "Average quests completed per day",
-     "n": 199
+     "n": 208
     },
     {
      "kat": "Quests",
      "ime": "Quests abandoned",
-     "n": 59
+     "n": 63
     },
     {
      "kat": "Skills",
@@ -630,12 +634,12 @@
     {
      "kat": "Secondary Skills",
      "ime": "Fish caught",
-     "n": 775
+     "n": 786
     },
     {
      "kat": "Secondary Skills",
      "ime": "Fish and other things caught",
-     "n": 775
+     "n": 786
     },
     {
      "kat": "Professions",
@@ -650,17 +654,17 @@
     {
      "kat": "Professions",
      "ime": "Highest Skinning skill",
-     "n": 295
+     "n": 300
     },
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 250
+     "n": 254
     },
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
-     "n": 40
+     "n": 41
     },
     {
      "kat": "Social",
@@ -672,46 +676,35 @@
     "uLogu": [
      "The Mind's Eye",
      "Un'Goro Soil",
+     "Tome of Twilight",
      "Reclaimed Treasures",
      "Screecher Spirits",
      "Troll Temper",
-     "Avenging the Fallen",
-     "Deliver to MacKinley",
      "The Stone Circle",
+     "Rescue OOX-09/HL!",
      "Scarab Shells",
-     "Akiris by the Bundle",
      "An'she's Radiance",
-     "A Sticky Situation",
-     "Hunt the Savages",
      "Tiara of the Deep",
      "Solution to Doom",
+     "Jammal'an the Prophet",
+     "Eye of Mugg",
      "Gahz'rilla",
      "Shadowshard Fragments",
-     "Message to the Wildhammer",
-     "Scourge of the Downs",
      "Bone-Bladed Weapons",
-     "Power Stones",
-     "Grim Message",
+     "A Token of Vengeance",
+     "Volcanic Activity",
      "WANTED: Vile Priestess Hexx and Her Minions",
      "Fragment of the Firelands",
-     "Whiskey Slim's Lost Grog",
+     "Undamaged Venom Sac",
      "Zum'rah's Head",
      "The Bloodsail Buccaneers",
-     "Sprinkle's Secret Ingredient",
-     "Cannibalistic Cousins",
      "Uldaman Reagent Run",
-     "Lines of Communication",
-     "Find OOX-09/HL!",
-     "Remote Contact",
-     "Venom Bottles",
-     "Stalking the Stalkers",
      "Find OOX-17/TN!",
      "Divino-matic Rod",
-     "Vilebranch Hooligans",
      "Job Opening: Guard Captain of Revantusk Village",
      "Necklace Recovery"
     ],
-    "zavrseno": 704
+    "zavrseno": 733
    },
    "mountovi": [
     "Black Wolf",
@@ -726,14 +719,14 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg",
-   "azurirano": "2026-11-22T12:33:48Z"
+   "azurirano": "2026-11-22T18:32:33Z"
   },
   "Melee Kitic": {
    "level": 41,
    "xp": 2401,
    "guild": "Kafana na Balkanu",
    "ilvl": 37,
-   "zadnjiLogin": "2026-11-22T11:33:19Z",
+   "zadnjiLogin": "2026-11-22T17:56:26Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -1297,7 +1290,7 @@
     {
      "kat": "Quests",
      "ime": "Quests abandoned",
-     "n": 36
+     "n": 37
     },
     {
      "kat": "Skills",
@@ -1332,7 +1325,7 @@
     {
      "kat": "Secondary Skills",
      "ime": "First Aid skill",
-     "n": 77
+     "n": 92
     },
     {
      "kat": "Secondary Skills",
@@ -1394,13 +1387,13 @@
     "uLogu": [
      "Reclaimed Treasures",
      "Buying Friendship: Gelkis",
-     "Raptor Mastery",
      "The Grave Knight",
      "Shady Saltseers",
      "A Vengeful Fate",
      "Hate the Hatefury",
      "Rig Wars",
      "Report to Rog'mar",
+     "Craftsman's Writ: Wicked Mithril Blade",
      "Dragonmaw Shinbones",
      "Blood in the Streets",
      "The Hammer May Fall",
@@ -1411,6 +1404,7 @@
      "Source of Power",
      "Magram Alliance",
      "Hand of Iruxos",
+     "Craftsman's Writ: Crimson Silk Robe",
      "Vorrel's Revenge",
      "Khan Hratha",
      "Other Fish to Fry",
@@ -1434,7 +1428,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg",
-   "azurirano": "2026-11-22T12:33:48Z"
+   "azurirano": "2026-11-22T18:32:33Z"
   },
   "Janica Frostelich": {
    "level": 18,
@@ -3384,7 +3378,7 @@
    "azurirano": "2026-11-22T12:33:48Z"
   }
  },
- "provjereno": "2026-11-22T16:32:31Z",
+ "provjereno": "2026-11-22T18:32:33Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3393,13 +3387,13 @@
   "roster": [
    {
     "ime": "Saman Saulic",
-    "level": 48,
+    "level": 49,
     "klasa": "Shaman",
     "rasa": "Orc",
     "rang": 0,
     "slug": "saman-saulic",
-    "ilvl": 38,
-    "zadnjiLogin": "2026-11-22T11:47:53Z",
+    "ilvl": 39,
+    "zadnjiLogin": "2026-11-22T16:54:42Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg"
    },
    {
@@ -3421,7 +3415,7 @@
     "rang": 3,
     "slug": "melee-kitic",
     "ilvl": 37,
-    "zadnjiLogin": "2026-11-22T11:33:19Z",
+    "zadnjiLogin": "2026-11-22T17:56:26Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg"
    },
    {
@@ -3437,13 +3431,13 @@
    },
    {
     "ime": "Venos Xx",
-    "level": 46,
+    "level": 47,
     "klasa": "Druid",
     "rasa": "Tauren",
     "rang": 4,
     "slug": "venos-xx",
     "ilvl": 36,
-    "zadnjiLogin": "2026-11-22T10:47:10Z",
+    "zadnjiLogin": "2026-11-22T16:40:48Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/253/13774333-avatar.jpg"
    },
    {
@@ -3453,8 +3447,8 @@
     "rasa": "Tauren",
     "rang": 4,
     "slug": "divlji-druid",
-    "ilvl": 34,
-    "zadnjiLogin": "2026-11-22T14:08:37Z",
+    "ilvl": 35,
+    "zadnjiLogin": "2026-11-22T17:55:01Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/176/12362928-avatar.jpg"
    },
    {
@@ -3470,13 +3464,13 @@
    },
    {
     "ime": "Mate Bullic",
-    "level": 23,
+    "level": 24,
     "klasa": "Shaman",
     "rasa": "Tauren",
     "rang": 4,
     "slug": "mate-bullic",
     "ilvl": 13,
-    "zadnjiLogin": "2026-11-22T16:33:06Z",
+    "zadnjiLogin": "2026-11-22T18:20:26Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/33/21412897-avatar.jpg"
    },
    {
@@ -3723,6 +3717,11 @@
     "2026-11-22T12:33:48Z",
     48,
     33823
+   ],
+   [
+    "2026-11-22T18:32:33Z",
+    49,
+    40026
    ]
   ],
   "Melee Kitic": [
