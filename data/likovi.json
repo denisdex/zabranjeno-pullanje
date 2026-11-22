@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-22T20:31:56Z",
+ "azurirano": "2026-11-22T22:31:32Z",
  "likovi": {
   "Saman Saulic": {
    "level": 49,
@@ -3378,7 +3378,7 @@
    "azurirano": "2026-11-22T12:33:48Z"
   }
  },
- "provjereno": "2026-11-22T20:31:56Z",
+ "provjereno": "2026-11-22T22:31:32Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3453,24 +3453,24 @@
    },
    {
     "ime": "Jebothe Dan",
-    "level": 38,
+    "level": 39,
     "klasa": "Hunter",
     "rasa": "Troll",
     "rang": 4,
     "slug": "jebothe-dan",
-    "ilvl": 33,
-    "zadnjiLogin": "2026-11-22T11:57:33Z",
+    "ilvl": 34,
+    "zadnjiLogin": "2026-11-22T21:34:49Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/102/15576678-avatar.jpg"
    },
    {
     "ime": "Mate Bullic",
-    "level": 24,
+    "level": 25,
     "klasa": "Shaman",
     "rasa": "Tauren",
     "rang": 4,
     "slug": "mate-bullic",
-    "ilvl": 13,
-    "zadnjiLogin": "2026-11-22T18:20:26Z",
+    "ilvl": 14,
+    "zadnjiLogin": "2026-11-22T22:29:11Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/33/21412897-avatar.jpg"
    },
    {
