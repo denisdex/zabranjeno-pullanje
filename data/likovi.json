@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-22T12:33:48Z",
+ "azurirano": "2026-11-22T14:33:13Z",
  "likovi": {
   "Saman Saulic": {
    "level": 48,
@@ -3384,7 +3384,7 @@
    "azurirano": "2026-11-22T12:33:48Z"
   }
  },
- "provjereno": "2026-11-22T12:33:48Z",
+ "provjereno": "2026-11-22T14:33:13Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3448,13 +3448,13 @@
    },
    {
     "ime": "Divlji Druid",
-    "level": 41,
+    "level": 42,
     "klasa": "Druid",
     "rasa": "Tauren",
     "rang": 4,
     "slug": "divlji-druid",
     "ilvl": 34,
-    "zadnjiLogin": "2026-11-21T16:59:10Z",
+    "zadnjiLogin": "2026-11-22T14:08:37Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/176/12362928-avatar.jpg"
    },
    {
