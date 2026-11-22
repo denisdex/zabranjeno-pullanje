@@ -1,17 +1,17 @@
 {
- "azurirano": "2026-11-22T04:34:58Z",
+ "azurirano": "2026-11-22T06:34:25Z",
  "likovi": {
   "Saman Saulic": {
-   "level": 47,
-   "xp": 114406,
+   "level": 48,
+   "xp": 1653,
    "guild": "Kafana na Balkanu",
    "ilvl": 38,
-   "zadnjiLogin": "2026-11-22T04:02:50Z",
+   "zadnjiLogin": "2026-11-22T04:59:42Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
     35,
-    3
+    4
    ],
    "specka": "Enhancement",
    "talentiPopis": [
@@ -95,9 +95,9 @@
     },
     {
      "ime": "Tidal Focus",
-     "rang": 3,
+     "rang": 4,
      "stablo": "Restoration",
-     "opis": "Reduces the Mana cost of your healing spells by 3% and improves your chance to hit by 3%."
+     "opis": "Reduces the Mana cost of your healing spells by 4% and improves your chance to hit by 4%."
     }
    ],
    "oprema": [
@@ -240,7 +240,7 @@
     },
     {
      "name": "Skinning",
-     "skill": 294,
+     "skill": 295,
      "max": 300,
      "vrsta": "primarna"
     },
@@ -264,72 +264,72 @@
     }
    ],
    "statovi": {
-    "hp": 1945,
-    "resurs": 2403,
+    "hp": 1994,
+    "resurs": 2437,
     "resursIme": "Mana",
-    "str": 156,
+    "str": 157,
     "agi": 47,
-    "sta": 135,
-    "int": 100,
-    "spi": 122,
+    "sta": 136,
+    "int": 101,
+    "spi": 124,
     "armor": 1195,
-    "ap": 520,
+    "ap": 525,
     "spellPower": 30,
-    "crit": 9.6,
-    "spellCrit": 9.53,
+    "crit": 9.35,
+    "spellCrit": 9.5,
     "rangedCrit": 5.0,
-    "dodge": 4.52,
-    "parry": 4.84,
-    "block": 4.84,
-    "dps": 74.4
+    "dodge": 4.27,
+    "parry": 4.64,
+    "block": 4.64,
+    "dps": 74.7
    },
    "reputacije": [
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 9836,
+     "vrijednost": 9988,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Honored",
-     "vrijednost": 6046,
+     "vrijednost": 6198,
      "max": 12000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Honored",
-     "vrijednost": 3642,
+     "vrijednost": 3802,
      "max": 12000
     },
     {
      "ime": "Undercity",
      "status": "Honored",
-     "vrijednost": 1362,
+     "vrijednost": 1515,
      "max": 12000
     },
     {
      "ime": "Ratchet",
      "status": "Honored",
-     "vrijednost": 7,
+     "vrijednost": 132,
      "max": 12000
     },
     {
      "ime": "Gadgetzan",
      "status": "Friendly",
-     "vrijednost": 5010,
+     "vrijednost": 5260,
      "max": 6000
     },
     {
      "ime": "Booty Bay",
      "status": "Friendly",
-     "vrijednost": 4880,
+     "vrijednost": 5005,
      "max": 6000
     },
     {
      "ime": "Powderfuse",
      "status": "Friendly",
-     "vrijednost": 4777,
+     "vrijednost": 4902,
      "max": 6000
     }
    ],
@@ -362,12 +362,12 @@
     {
      "kat": "Consumables",
      "ime": "Food eaten",
-     "n": 63
+     "n": 64
     },
     {
      "kat": "Reputation",
      "ime": "Most factions at Honored or higher",
-     "n": 5
+     "n": 6
     },
     {
      "kat": "Reputation",
@@ -462,17 +462,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 10377
+     "n": 10380
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 7109
+     "n": 7111
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 10274
+     "n": 10277
     },
     {
      "kat": "Creatures",
@@ -509,17 +509,17 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 4710
+     "n": 4713
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 3911
+     "n": 3914
     },
     {
      "kat": "Killing Blows",
      "ime": "Continent with the most Killing Blows",
-     "n": 1990,
+     "n": 1993,
      "opis": "Kalimdor"
     },
     {
@@ -570,12 +570,12 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 586
+     "n": 591
     },
     {
      "kat": "Quests",
      "ime": "Average quests completed per day",
-     "n": 195.33333333333334
+     "n": 197
     },
     {
      "kat": "Quests",
@@ -650,12 +650,12 @@
     {
      "kat": "Professions",
      "ime": "Highest Skinning skill",
-     "n": 286
+     "n": 295
     },
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 245
+     "n": 249
     },
     {
      "kat": "Travel",
@@ -671,6 +671,7 @@
    "questovi": {
     "uLogu": [
      "The Mind's Eye",
+     "Un'Goro Soil",
      "Reclaimed Treasures",
      "Screecher Spirits",
      "Troll Temper",
@@ -679,15 +680,14 @@
      "Scarab Shells",
      "Akiris by the Bundle",
      "An'she's Radiance",
-     "The Brood of Onyxia",
      "Tiara of the Deep",
      "Solution to Doom",
      "Gahz'rilla",
-     "Rise of the Silithid",
      "Shadowshard Fragments",
      "Scourge of the Downs",
      "Power Stones",
      "Grim Message",
+     "Ripple Recovery",
      "Fragment of the Firelands",
      "Whiskey Slim's Lost Grog",
      "Zum'rah's Head",
@@ -697,12 +697,13 @@
      "Sprinkle's Secret Ingredient",
      "Uldaman Reagent Run",
      "Lines of Communication",
-     "Dunemaul Dues",
+     "Remote Contact",
      "Find OOX-17/TN!",
      "Divino-matic Rod",
-     "The Corrupter"
+     "The Corrupter",
+     "Necklace Recovery"
     ],
-    "zavrseno": 691
+    "zavrseno": 698
    },
    "mountovi": [
     "Black Wolf",
@@ -717,7 +718,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg",
-   "azurirano": "2026-11-22T04:34:58Z"
+   "azurirano": "2026-11-22T06:34:25Z"
   },
   "Melee Kitic": {
    "level": 40,
@@ -3380,7 +3381,7 @@
    "azurirano": "2026-11-22T04:34:58Z"
   }
  },
- "provjereno": "2026-11-22T04:34:58Z",
+ "provjereno": "2026-11-22T06:34:25Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3389,13 +3390,13 @@
   "roster": [
    {
     "ime": "Saman Saulic",
-    "level": 47,
+    "level": 48,
     "klasa": "Shaman",
     "rasa": "Orc",
     "rang": 0,
     "slug": "saman-saulic",
     "ilvl": 38,
-    "zadnjiLogin": "2026-11-22T04:02:50Z",
+    "zadnjiLogin": "2026-11-22T04:59:42Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg"
    },
    {
@@ -3709,6 +3710,11 @@
     "2026-11-22T04:34:58Z",
     47,
     114406
+   ],
+   [
+    "2026-11-22T06:34:25Z",
+    48,
+    1653
    ]
   ],
   "Melee Kitic": [

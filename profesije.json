@@ -72,7 +72,7 @@
         },
         {
           "name": "Skinning",
-          "skill": 294,
+          "skill": 295,
           "phase": "stalno"
         }
       ],
@@ -1450,6 +1450,12 @@
       "character": "rogue",
       "profession": "Skinning",
       "skill": 263
+    },
+    {
+      "date": "2026-11-22",
+      "character": "shaman",
+      "profession": "Skinning",
+      "skill": 295
     }
   ],
   "flows": [
