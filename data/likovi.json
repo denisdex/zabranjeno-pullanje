@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-23T02:31:33Z",
+ "azurirano": "2026-11-23T04:31:30Z",
  "likovi": {
   "Saman Saulic": {
    "level": 49,
@@ -1949,15 +1949,15 @@
    "azurirano": "2026-11-08T21:54:18Z"
   },
   "Nikola Roguevic": {
-   "level": 45,
-   "xp": 57682,
+   "level": 46,
+   "xp": 2791,
    "guild": "Kafana na Balkanu",
    "ilvl": 39,
-   "zadnjiLogin": "2026-11-22T04:33:21Z",
+   "zadnjiLogin": "2026-11-23T03:50:21Z",
    "izvor": "Blizzard API",
    "talenti": [
     2,
-    34,
+    35,
     0
    ],
    "specka": "Combat",
@@ -2042,9 +2042,9 @@
     },
     {
      "ime": "Hack and Slash",
-     "rang": 4,
+     "rang": 5,
      "stablo": "Combat",
-     "opis": "Gives your melee weapon attacks a benefit depending on the weapon.\r\n\r\n    Axe/Sword: Your successful\r\n    melee attacks have a 4% chance\r\n    to trigger an extra attack on the \r\n    target.\r\n\r\n    Dagger/Fist: Increases your\r\n    critical strike chance by 4%.\r\n\r\n    Mace: Your attacks ignore 12% of\r\n    your target's armor."
+     "opis": "Gives your melee weapon attacks a benefit depending on the weapon.\r\n\r\n    Axe/Sword: Your successful\r\n    melee attacks have a 5% chance\r\n    to trigger an extra attack on the \r\n    target.\r\n\r\n    Dagger/Fist: Increases your\r\n    critical strike chance by 5%.\r\n\r\n    Mace: Your attacks ignore 15% of\r\n    your target's armor."
     },
     {
      "ime": "Flash of Steel",
@@ -2209,7 +2209,7 @@
     },
     {
      "name": "Skinning",
-     "skill": 263,
+     "skill": 267,
      "max": 300,
      "vrsta": "primarna"
     },
@@ -2227,78 +2227,78 @@
     },
     {
      "name": "First Aid",
-     "skill": 240,
+     "skill": 300,
      "max": 300,
      "vrsta": "sekundarna"
     }
    ],
    "statovi": {
-    "hp": 2088,
+    "hp": 2136,
     "resurs": 100,
     "resursIme": "Energy",
-    "str": 80,
-    "agi": 167,
-    "sta": 139,
+    "str": 81,
+    "agi": 169,
+    "sta": 140,
     "int": 28,
-    "spi": 50,
-    "armor": 1131,
-    "ap": 409,
+    "spi": 51,
+    "armor": 1135,
+    "ap": 414,
     "spellPower": 0,
-    "crit": 8.07,
+    "crit": 7.78,
     "spellCrit": 0.0,
-    "rangedCrit": 7.47,
-    "dodge": 17.13,
-    "parry": 11.0,
+    "rangedCrit": 7.22,
+    "dodge": 16.78,
+    "parry": 10.84,
     "block": 0.0,
-    "dps": 59.2
+    "dps": 59.6
    },
    "reputacije": [
     {
      "ime": "Undercity",
      "status": "Honored",
-     "vrijednost": 11742,
+     "vrijednost": 11842,
      "max": 12000
     },
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 4598,
+     "vrijednost": 4623,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Honored",
-     "vrijednost": 2002,
+     "vrijednost": 2027,
      "max": 12000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Honored",
-     "vrijednost": 1097,
+     "vrijednost": 1122,
      "max": 12000
     },
     {
      "ime": "Ratchet",
      "status": "Friendly",
-     "vrijednost": 2887,
-     "max": 6000
-    },
-    {
-     "ime": "Booty Bay",
-     "status": "Friendly",
-     "vrijednost": 1886,
+     "vrijednost": 3337,
      "max": 6000
     },
     {
      "ime": "Powderfuse",
      "status": "Friendly",
-     "vrijednost": 1723,
+     "vrijednost": 2573,
+     "max": 6000
+    },
+    {
+     "ime": "Booty Bay",
+     "status": "Friendly",
+     "vrijednost": 2386,
      "max": 6000
     },
     {
      "ime": "Gadgetzan",
      "status": "Friendly",
-     "vrijednost": 1068,
+     "vrijednost": 1518,
      "max": 6000
     }
    ],
@@ -2322,7 +2322,7 @@
     {
      "kat": "Consumables",
      "ime": "Health potions consumed",
-     "n": 44
+     "n": 45
     },
     {
      "kat": "Consumables",
@@ -2337,7 +2337,7 @@
     {
      "kat": "Consumables",
      "ime": "Food eaten",
-     "n": 95
+     "n": 98
     },
     {
      "kat": "Reputation",
@@ -2352,7 +2352,7 @@
     {
      "kat": "Reputation",
      "ime": "Total factions encountered",
-     "n": 17
+     "n": 18
     },
     {
      "kat": "Gear",
@@ -2442,17 +2442,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 9676
+     "n": 9900
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 7228
+     "n": 7451
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 9574
+     "n": 9797
     },
     {
      "kat": "Creatures",
@@ -2462,13 +2462,13 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 5264,
+     "n": 5433,
      "opis": "Humanoid"
     },
     {
      "kat": "Creatures",
      "ime": "Critters killed",
-     "n": 92
+     "n": 93
     },
     {
      "kat": "Honorable Kills",
@@ -2489,17 +2489,17 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 5211
+     "n": 5380
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 3945
+     "n": 4114
     },
     {
      "kat": "Killing Blows",
      "ime": "Continent with the most Killing Blows",
-     "n": 2496,
+     "n": 2664,
      "opis": "Eastern Kingdoms"
     },
     {
@@ -2535,17 +2535,17 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 537
+     "n": 549
     },
     {
      "kat": "Quests",
      "ime": "Average quests completed per day",
-     "n": 53.7
+     "n": 49.90909090909091
     },
     {
      "kat": "Quests",
      "ime": "Quests abandoned",
-     "n": 41
+     "n": 43
     },
     {
      "kat": "Skills",
@@ -2575,17 +2575,17 @@
     {
      "kat": "Secondary Skills",
      "ime": "Cooking Recipes known",
-     "n": 48
+     "n": 50
     },
     {
      "kat": "Secondary Skills",
      "ime": "First Aid skill",
-     "n": 240
+     "n": 300
     },
     {
      "kat": "Secondary Skills",
      "ime": "First Aid Manuals learned",
-     "n": 32
+     "n": 38
     },
     {
      "kat": "Secondary Skills",
@@ -2615,12 +2615,12 @@
     {
      "kat": "Professions",
      "ime": "Highest Skinning skill",
-     "n": 258
+     "n": 267
     },
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 155
+     "n": 162
     },
     {
      "kat": "Travel",
@@ -2630,7 +2630,7 @@
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
-     "n": 34
+     "n": 35
     },
     {
      "kat": "Social",
@@ -2648,8 +2648,7 @@
      "The Mind's Eye",
      "Snapjaws, Mon!",
      "Reclaimed Treasures",
-     "Encrusted Tail Fins",
-     "Craftsman's Writ: Catseye Ultra Goggles",
+     "Sickening Lights",
      "Get the Goods",
      "The Pariah's Instructions",
      "Up to Snuff",
@@ -2659,8 +2658,8 @@
      "Akiris by the Bundle",
      "Tiara of the Deep",
      "Not My Circus",
-     "Digging for Answers",
      "Solution to Doom",
+     "Paletusk Harvesting",
      "Zanzil's Secret",
      "Snargl's Snout",
      "The Captain's Chest",
@@ -2668,25 +2667,21 @@
      "Shadowshard Fragments",
      "Voodoo Dues",
      "Gammerita, Mon!",
+     "Armory of Sunnyglade",
      "Grim Message",
      "The Crown of Will",
-     "Whiskey Slim's Lost Grog",
      "Mok'thardin's Enchantment",
-     "Unchecked Expansion",
-     "Dream Dust in the Swamp",
      "The Bloodsail Buccaneers",
-     "Lines of Communication",
+     "The Purple Ones",
      "Keep An Eye Out",
-     "A Blast Ye Scurvy Dogs!",
-     "Stoley's Debt",
      "Necklace Recovery"
     ],
-    "zavrseno": 616
+    "zavrseno": 628
    },
    "mountovi": [
+    "Black Skeletal Horse",
     "Cerulean Prideclaw",
-    "Veteran Adventurer's Loyal Companion",
-    "Black Skeletal Horse"
+    "Veteran Adventurer's Loyal Companion"
    ],
    "petovi": [
     "Mini Diablo",
@@ -2700,7 +2695,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg",
-   "azurirano": "2026-11-22T04:34:58Z"
+   "azurirano": "2026-11-23T04:31:30Z"
   },
   "Arsen Deadic": {
    "level": 39,
@@ -3392,7 +3387,7 @@
    "azurirano": "2026-11-23T02:31:33Z"
   }
  },
- "provjereno": "2026-11-23T02:31:33Z",
+ "provjereno": "2026-11-23T04:31:30Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3412,13 +3407,13 @@
    },
    {
     "ime": "Nikola Roguevic",
-    "level": 45,
+    "level": 46,
     "klasa": "Rogue",
     "rasa": "Undead",
     "rang": 1,
     "slug": "nikola-roguevic",
     "ilvl": 39,
-    "zadnjiLogin": "2026-11-22T04:33:21Z",
+    "zadnjiLogin": "2026-11-23T03:50:21Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg"
    },
    {
@@ -4252,6 +4247,11 @@
     "2026-11-22T04:34:58Z",
     45,
     57682
+   ],
+   [
+    "2026-11-23T04:31:30Z",
+    46,
+    2791
    ]
   ],
   "Arsen Deadic": [
