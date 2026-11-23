@@ -1,12 +1,12 @@
 {
- "azurirano": "2026-11-22T22:31:32Z",
+ "azurirano": "2026-11-23T00:31:31Z",
  "likovi": {
   "Saman Saulic": {
    "level": 49,
-   "xp": 40026,
+   "xp": 82449,
    "guild": "Kafana na Balkanu",
    "ilvl": 39,
-   "zadnjiLogin": "2026-11-22T16:54:42Z",
+   "zadnjiLogin": "2026-11-22T22:38:44Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -219,7 +219,8 @@
      "kvaliteta": "epic",
      "wowhead": 2915,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133039.jpg",
-     "ilvl": 52
+     "ilvl": 52,
+     "enchant": "Windfury 2"
     },
     {
      "slot": "Ranged",
@@ -251,7 +252,7 @@
     },
     {
      "name": "Fishing",
-     "skill": 233,
+     "skill": 239,
      "max": 300,
      "vrsta": "sekundarna"
     },
@@ -263,24 +264,24 @@
     }
    ],
    "statovi": {
-    "hp": 2034,
-    "resurs": 2501,
+    "hp": 1434,
+    "resurs": 1676,
     "resursIme": "Mana",
-    "str": 158,
-    "agi": 48,
-    "sta": 137,
-    "int": 103,
-    "spi": 126,
-    "armor": 1197,
-    "ap": 509,
-    "spellPower": 30,
-    "crit": 9.49,
-    "spellCrit": 9.49,
+    "str": 102,
+    "agi": 17,
+    "sta": 77,
+    "int": 48,
+    "spi": 63,
+    "armor": 283,
+    "ap": 342,
+    "spellPower": 14,
+    "crit": 7.56,
+    "spellCrit": 8.32,
     "rangedCrit": 5.0,
-    "dodge": 4.41,
+    "dodge": 2.48,
     "parry": 4.72,
     "block": 4.72,
-    "dps": 86.1
+    "dps": 18.5
    },
    "reputacije": [
     {
@@ -310,25 +311,25 @@
     {
      "ime": "Ratchet",
      "status": "Honored",
-     "vrijednost": 282,
+     "vrijednost": 340,
      "max": 12000
     },
     {
      "ime": "Gadgetzan",
      "status": "Friendly",
-     "vrijednost": 5460,
+     "vrijednost": 5517,
      "max": 6000
     },
     {
      "ime": "Booty Bay",
      "status": "Friendly",
-     "vrijednost": 5255,
+     "vrijednost": 5362,
      "max": 6000
     },
     {
      "ime": "Powderfuse",
      "status": "Friendly",
-     "vrijednost": 5052,
+     "vrijednost": 5117,
      "max": 6000
     }
    ],
@@ -356,12 +357,12 @@
     {
      "kat": "Consumables",
      "ime": "Beverages consumed",
-     "n": 501
+     "n": 512
     },
     {
      "kat": "Consumables",
      "ime": "Food eaten",
-     "n": 77
+     "n": 83
     },
     {
      "kat": "Reputation",
@@ -385,6 +386,11 @@
     },
     {
      "kat": "Gear",
+     "ime": "Epic items acquired",
+     "n": 1
+    },
+    {
+     "kat": "Gear",
      "ime": "Mounts owned",
      "n": 2
     },
@@ -402,6 +408,11 @@
      "kat": "Dungeons & Raids",
      "ime": "Total 5-player dungeons entered",
      "n": 33
+    },
+    {
+     "kat": "Dungeons & Raids",
+     "ime": "Total 10-player raids entered",
+     "n": 1
     },
     {
      "kat": "Boss Kills",
@@ -466,17 +477,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 10699
+     "n": 10885
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 7407
+     "n": 7559
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 10596
+     "n": 10782
     },
     {
      "kat": "Creatures",
@@ -486,7 +497,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 5485,
+     "n": 5655,
      "opis": "Humanoid"
     },
     {
@@ -513,33 +524,38 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 4954
+     "n": 4978
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 4155
+     "n": 4178
     },
     {
      "kat": "Killing Blows",
      "ime": "Continent with the most Killing Blows",
-     "n": 2162,
+     "n": 2165,
      "opis": "Eastern Kingdoms"
     },
     {
      "kat": "Deaths",
      "ime": "Total deaths",
-     "n": 102
+     "n": 104
     },
     {
      "kat": "Dungeons and Raids",
      "ime": "Total raid and dungeon deaths",
-     "n": 17
+     "n": 18
     },
     {
      "kat": "Dungeons and Raids",
      "ime": "Total deaths in 5-player dungeons",
      "n": 17
+    },
+    {
+     "kat": "Dungeons and Raids",
+     "ime": "Total deaths in 10-player raids",
+     "n": 1
     },
     {
      "kat": "World",
@@ -574,17 +590,17 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 624
+     "n": 629
     },
     {
      "kat": "Quests",
      "ime": "Average quests completed per day",
-     "n": 208
+     "n": 157.25
     },
     {
      "kat": "Quests",
      "ime": "Quests abandoned",
-     "n": 63
+     "n": 64
     },
     {
      "kat": "Skills",
@@ -629,17 +645,17 @@
     {
      "kat": "Secondary Skills",
      "ime": "Fishing skill",
-     "n": 232
+     "n": 233
     },
     {
      "kat": "Secondary Skills",
      "ime": "Fish caught",
-     "n": 786
+     "n": 883
     },
     {
      "kat": "Secondary Skills",
      "ime": "Fish and other things caught",
-     "n": 786
+     "n": 883
     },
     {
      "kat": "Professions",
@@ -674,37 +690,35 @@
    ],
    "questovi": {
     "uLogu": [
+     "Into the Depths",
      "The Mind's Eye",
      "Un'Goro Soil",
      "Tome of Twilight",
      "Reclaimed Treasures",
      "Screecher Spirits",
      "Troll Temper",
-     "The Stone Circle",
      "Rescue OOX-09/HL!",
      "Scarab Shells",
      "An'she's Radiance",
      "Tiara of the Deep",
      "Solution to Doom",
      "Jammal'an the Prophet",
-     "Eye of Mugg",
      "Gahz'rilla",
      "Shadowshard Fragments",
      "Bone-Bladed Weapons",
-     "A Token of Vengeance",
      "Volcanic Activity",
      "WANTED: Vile Priestess Hexx and Her Minions",
      "Fragment of the Firelands",
+     "Secret of the Circle",
      "Undamaged Venom Sac",
      "Zum'rah's Head",
      "The Bloodsail Buccaneers",
      "Uldaman Reagent Run",
-     "Find OOX-17/TN!",
      "Divino-matic Rod",
      "Job Opening: Guard Captain of Revantusk Village",
      "Necklace Recovery"
     ],
-    "zavrseno": 733
+    "zavrseno": 738
    },
    "mountovi": [
     "Black Wolf",
@@ -719,7 +733,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg",
-   "azurirano": "2026-11-22T18:32:33Z"
+   "azurirano": "2026-11-23T00:31:31Z"
   },
   "Melee Kitic": {
    "level": 41,
@@ -3378,7 +3392,7 @@
    "azurirano": "2026-11-22T12:33:48Z"
   }
  },
- "provjereno": "2026-11-22T22:31:32Z",
+ "provjereno": "2026-11-23T00:31:31Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3393,7 +3407,7 @@
     "rang": 0,
     "slug": "saman-saulic",
     "ilvl": 39,
-    "zadnjiLogin": "2026-11-22T16:54:42Z",
+    "zadnjiLogin": "2026-11-22T22:38:44Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg"
    },
    {
@@ -3436,8 +3450,8 @@
     "rasa": "Tauren",
     "rang": 4,
     "slug": "venos-xx",
-    "ilvl": 36,
-    "zadnjiLogin": "2026-11-22T20:29:26Z",
+    "ilvl": 37,
+    "zadnjiLogin": "2026-11-23T00:02:34Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/253/13774333-avatar.jpg"
    },
    {
@@ -3448,7 +3462,7 @@
     "rang": 4,
     "slug": "divlji-druid",
     "ilvl": 35,
-    "zadnjiLogin": "2026-11-22T20:26:23Z",
+    "zadnjiLogin": "2026-11-22T22:49:45Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/176/12362928-avatar.jpg"
    },
    {
@@ -3722,6 +3736,11 @@
     "2026-11-22T18:32:33Z",
     49,
     40026
+   ],
+   [
+    "2026-11-23T00:31:31Z",
+    49,
+    82449
    ]
   ],
   "Melee Kitic": [
