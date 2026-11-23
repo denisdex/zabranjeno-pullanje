@@ -1,12 +1,12 @@
 {
- "azurirano": "2026-11-23T20:29:55Z",
+ "azurirano": "2026-11-23T22:29:30Z",
  "likovi": {
   "Saman Saulic": {
    "level": 50,
-   "xp": 27933,
+   "xp": 28397,
    "guild": "Kafana na Balkanu",
    "ilvl": 43,
-   "zadnjiLogin": "2026-11-23T11:54:11Z",
+   "zadnjiLogin": "2026-11-23T21:01:00Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -279,15 +279,15 @@
     "int": 92,
     "spi": 111,
     "armor": 1183,
-    "ap": 538,
-    "spellPower": 35,
+    "ap": 566,
+    "spellPower": 51,
     "crit": 11.3,
     "spellCrit": 9.71,
     "rangedCrit": 5.5,
     "dodge": 5.64,
     "parry": 4.56,
     "block": 4.56,
-    "dps": 88.2
+    "dps": 90.2
    },
    "reputacije": [
     {
@@ -317,25 +317,25 @@
     {
      "ime": "Ratchet",
      "status": "Honored",
-     "vrijednost": 340,
+     "vrijednost": 352,
      "max": 12000
     },
     {
      "ime": "Gadgetzan",
      "status": "Friendly",
-     "vrijednost": 5517,
+     "vrijednost": 5542,
      "max": 6000
     },
     {
      "ime": "Booty Bay",
      "status": "Friendly",
-     "vrijednost": 5362,
+     "vrijednost": 5375,
      "max": 6000
     },
     {
      "ime": "Powderfuse",
      "status": "Friendly",
-     "vrijednost": 5117,
+     "vrijednost": 5130,
      "max": 6000
     }
    ],
@@ -596,12 +596,12 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 637
+     "n": 639
     },
     {
      "kat": "Quests",
      "ime": "Average quests completed per day",
-     "n": 159.25
+     "n": 159.75
     },
     {
      "kat": "Quests",
@@ -681,7 +681,7 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 257
+     "n": 261
     },
     {
      "kat": "Travel",
@@ -714,6 +714,8 @@
      "Gahz'rilla",
      "Shadowshard Fragments",
      "Bone-Bladed Weapons",
+     "KILL ON SIGHT: Dark Iron Dwarves",
+     "Power Stones",
      "Volcanic Activity",
      "Fragment of the Firelands",
      "Secret of the Circle",
@@ -724,7 +726,7 @@
      "Divino-matic Rod",
      "Necklace Recovery"
     ],
-    "zavrseno": 746
+    "zavrseno": 748
    },
    "mountovi": [
     "Black Wolf",
@@ -739,7 +741,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg",
-   "azurirano": "2026-11-23T12:30:16Z"
+   "azurirano": "2026-11-23T22:29:30Z"
   },
   "Melee Kitic": {
    "level": 41,
@@ -3387,7 +3389,7 @@
    "azurirano": "2026-11-23T16:30:17Z"
   }
  },
- "provjereno": "2026-11-23T20:29:55Z",
+ "provjereno": "2026-11-23T22:29:30Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3402,7 +3404,7 @@
     "rang": 0,
     "slug": "saman-saulic",
     "ilvl": 43,
-    "zadnjiLogin": "2026-11-23T11:54:11Z",
+    "zadnjiLogin": "2026-11-23T21:01:00Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg"
    },
    {
@@ -3457,7 +3459,7 @@
     "rang": 4,
     "slug": "divlji-druid",
     "ilvl": 38,
-    "zadnjiLogin": "2026-11-23T18:29:55Z",
+    "zadnjiLogin": "2026-11-23T22:31:40Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/176/12362928-avatar.jpg"
    },
    {
@@ -3468,7 +3470,7 @@
     "rang": 4,
     "slug": "jebothe-dan",
     "ilvl": 35,
-    "zadnjiLogin": "2026-11-23T20:27:52Z",
+    "zadnjiLogin": "2026-11-23T21:17:33Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/102/15576678-avatar.jpg"
    },
    {
@@ -3741,6 +3743,11 @@
     "2026-11-23T12:30:16Z",
     50,
     27933
+   ],
+   [
+    "2026-11-23T22:29:30Z",
+    50,
+    28397
    ]
   ],
   "Melee Kitic": [
