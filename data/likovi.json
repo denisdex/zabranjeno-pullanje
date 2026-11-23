@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-23T00:31:31Z",
+ "azurirano": "2026-11-23T02:31:33Z",
  "likovi": {
   "Saman Saulic": {
    "level": 49,
@@ -2703,16 +2703,16 @@
    "azurirano": "2026-11-22T04:34:58Z"
   },
   "Arsen Deadic": {
-   "level": 38,
-   "xp": 20951,
+   "level": 39,
+   "xp": 60864,
    "guild": "Kafana na Balkanu",
    "ilvl": 32,
-   "zadnjiLogin": "2026-11-22T11:14:42Z",
+   "zadnjiLogin": "2026-11-23T01:55:24Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
     13,
-    16
+    17
    ],
    "specka": "Retribution",
    "talentiPopis": [
@@ -2745,6 +2745,12 @@
      "rang": 2,
      "stablo": "Protection",
      "opis": "Increases the amount of damage absorbed by your shield by 30%, and gives your blocks a 100% chance to restore 4% of your maximum Mana.  May only occur once every 3 sec."
+    },
+    {
+     "ime": "Deflection",
+     "rang": 1,
+     "stablo": "Retribution",
+     "opis": "Increases your Parry chance by 1%."
     },
     {
      "ime": "Benediction",
@@ -2883,11 +2889,11 @@
     },
     {
      "slot": "Main Hand",
-     "ime": "Ceremonial Mallet",
+     "ime": "Mograine's Might",
      "kvaliteta": "rare",
-     "wowhead": 279885,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133043.jpg",
-     "ilvl": 42
+     "wowhead": 7723,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133488.jpg",
+     "ilvl": 44
     }
    ],
    "profesije": [
@@ -2923,72 +2929,72 @@
     }
    ],
    "statovi": {
-    "hp": 2114,
-    "resurs": 1553,
+    "hp": 2147,
+    "resurs": 1835,
     "resursIme": "Mana",
-    "str": 121,
-    "agi": 45,
+    "str": 130,
+    "agi": 46,
     "sta": 173,
-    "int": 60,
-    "spi": 66,
-    "armor": 1699,
-    "ap": 358,
+    "int": 77,
+    "spi": 67,
+    "armor": 1701,
+    "ap": 357,
     "spellPower": 0,
-    "crit": 9.94,
-    "spellCrit": 11.05,
-    "rangedCrit": 0.14,
-    "dodge": 4.42,
-    "parry": 5.2,
-    "block": 5.2,
-    "dps": 62.8
+    "crit": 9.95,
+    "spellCrit": 11.46,
+    "rangedCrit": 0.0,
+    "dodge": 4.35,
+    "parry": 6.12,
+    "block": 5.12,
+    "dps": 64.3
    },
    "reputacije": [
     {
      "ime": "Undercity",
      "status": "Honored",
-     "vrijednost": 9141,
+     "vrijednost": 9241,
      "max": 12000
     },
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 220,
+     "vrijednost": 245,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Friendly",
-     "vrijednost": 4767,
+     "vrijednost": 4792,
      "max": 6000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Friendly",
-     "vrijednost": 3947,
+     "vrijednost": 3972,
      "max": 6000
     },
     {
      "ime": "Ratchet",
      "status": "Friendly",
-     "vrijednost": 367,
+     "vrijednost": 1127,
+     "max": 6000
+    },
+    {
+     "ime": "Powderfuse",
+     "status": "Friendly",
+     "vrijednost": 510,
      "max": 6000
     },
     {
      "ime": "Booty Bay",
      "status": "Neutral",
-     "vrijednost": 2052,
+     "vrijednost": 2812,
      "max": 3000
     },
     {
      "ime": "Everlook",
      "status": "Neutral",
-     "vrijednost": 2015,
-     "max": 3000
-    },
-    {
-     "ime": "Gadgetzan",
-     "status": "Neutral",
-     "vrijednost": 2015,
+     "vrijednost": 2775,
      "max": 3000
     }
    ],
@@ -2996,7 +3002,7 @@
     {
      "kat": "Character",
      "ime": "Times camped",
-     "n": 108
+     "n": 111
     },
     {
      "kat": "Consumables",
@@ -3012,7 +3018,7 @@
     {
      "kat": "Consumables",
      "ime": "Health potions consumed",
-     "n": 14
+     "n": 16
     },
     {
      "kat": "Consumables",
@@ -3027,12 +3033,12 @@
     {
      "kat": "Consumables",
      "ime": "Beverages consumed",
-     "n": 95
+     "n": 99
     },
     {
      "kat": "Consumables",
      "ime": "Food eaten",
-     "n": 58
+     "n": 62
     },
     {
      "kat": "Reputation",
@@ -3047,7 +3053,7 @@
     {
      "kat": "Reputation",
      "ime": "Total factions encountered",
-     "n": 17
+     "n": 18
     },
     {
      "kat": "Gear",
@@ -3122,17 +3128,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 6803
+     "n": 7047
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 5791
+     "n": 6033
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 6747
+     "n": 6990
     },
     {
      "kat": "Creatures",
@@ -3142,13 +3148,13 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 3502,
+     "n": 3666,
      "opis": "Humanoid"
     },
     {
      "kat": "Creatures",
      "ime": "Critters killed",
-     "n": 51
+     "n": 52
     },
     {
      "kat": "Honorable Kills",
@@ -3169,17 +3175,17 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 2643
+     "n": 2735
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 2146
+     "n": 2238
     },
     {
      "kat": "Killing Blows",
      "ime": "Continent with the most Killing Blows",
-     "n": 1266,
+     "n": 1358,
      "opis": "Eastern Kingdoms"
     },
     {
@@ -3230,7 +3236,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 338
+     "n": 370
     },
     {
      "kat": "Quests",
@@ -3240,7 +3246,7 @@
     {
      "kat": "Quests",
      "ime": "Quests abandoned",
-     "n": 75
+     "n": 79
     },
     {
      "kat": "Skills",
@@ -3270,7 +3276,7 @@
     {
      "kat": "Secondary Skills",
      "ime": "Cooking Recipes known",
-     "n": 10
+     "n": 14
     },
     {
      "kat": "Secondary Skills",
@@ -3310,12 +3316,12 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 106
+     "n": 109
     },
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
-     "n": 11
+     "n": 12
     },
     {
      "kat": "Social",
@@ -3333,45 +3339,39 @@
      "A Quick Grocery Run",
      "Reclaimed Treasures",
      "Elixir of Agony",
+     "Get the Goods",
      "Call to Arms",
-     "Stick 'Em",
+     "Poison Tips",
      "Bloody Bone Necklaces",
-     "A Serving of Strength",
      "Shady Saltseers",
      "Foul Magics",
-     "Conflict at Darkspear Islands",
      "Rig Wars",
      "Not My Circus",
+     "Digging for Answers",
      "Hostile Takeover",
+     "Paletusk Harvesting",
      "Blood in the Streets",
+     "See Ya, Scallywags!",
      "A Moon-Kissed Blade",
      "An Unholy Alliance",
      "Breaking the Keystone",
-     "Hemet Nesingwary",
-     "WANTED: Trapclaw",
+     "Admiral Lamora",
      "Bloodscalp Ears",
-     "A Taste of the Sea",
-     "Armory of Sunnyglade",
+     "Song of the Strider",
      "Investigate the Camp",
-     "Feathers for Fletching",
      "Sigil of Strom",
      "Seeking the Kor Gem",
-     "The Goblin Trader",
      "Enemies in the Water",
-     "Gaseous Gold",
+     "It Takes Guts",
      "Scaring Shaky",
      "WANTED: Baron Vardus",
      "Battle of Warsong Gulch",
-     "Biting the Hand",
      "Infiltration",
-     "WANTED: Old Rot-Chum",
      "Goblin Sponsorship",
-     "Show Them How It's Done",
-     "Martek the Exiled",
-     "The Defense of Grom'gol",
-     "Guile of the Raptor"
+     "Bring the End",
+     "The Defense of Grom'gol"
     ],
-    "zavrseno": 379
+    "zavrseno": 411
    },
    "mountovi": [
     "Cerulean Prideclaw",
@@ -3389,10 +3389,10 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg",
-   "azurirano": "2026-11-22T12:33:48Z"
+   "azurirano": "2026-11-23T02:31:33Z"
   }
  },
- "provjereno": "2026-11-23T00:31:31Z",
+ "provjereno": "2026-11-23T02:31:33Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3434,13 +3434,13 @@
    },
    {
     "ime": "Arsen Deadic",
-    "level": 38,
+    "level": 39,
     "klasa": "Paladin",
     "rasa": "Undead",
     "rang": 3,
     "slug": "arsen-deadic",
     "ilvl": 32,
-    "zadnjiLogin": "2026-11-22T11:14:42Z",
+    "zadnjiLogin": "2026-11-23T01:55:24Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg"
    },
    {
@@ -4429,6 +4429,11 @@
     "2026-11-22T12:33:48Z",
     38,
     20951
+   ],
+   [
+    "2026-11-23T02:31:33Z",
+    39,
+    60864
    ]
   ]
  }
