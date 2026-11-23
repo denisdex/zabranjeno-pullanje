@@ -1,12 +1,12 @@
 {
- "azurirano": "2026-11-23T04:31:30Z",
+ "azurirano": "2026-11-23T08:30:48Z",
  "likovi": {
   "Saman Saulic": {
    "level": 49,
    "xp": 82449,
    "guild": "Kafana na Balkanu",
    "ilvl": 39,
-   "zadnjiLogin": "2026-11-22T22:38:44Z",
+   "zadnjiLogin": "2026-11-23T08:20:31Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -264,24 +264,24 @@
     }
    ],
    "statovi": {
-    "hp": 1434,
-    "resurs": 1676,
+    "hp": 2034,
+    "resurs": 2501,
     "resursIme": "Mana",
-    "str": 102,
-    "agi": 17,
-    "sta": 77,
-    "int": 48,
-    "spi": 63,
-    "armor": 283,
-    "ap": 342,
-    "spellPower": 14,
-    "crit": 7.56,
-    "spellCrit": 8.32,
+    "str": 158,
+    "agi": 48,
+    "sta": 137,
+    "int": 103,
+    "spi": 126,
+    "armor": 1197,
+    "ap": 509,
+    "spellPower": 30,
+    "crit": 9.49,
+    "spellCrit": 9.49,
     "rangedCrit": 5.0,
-    "dodge": 2.48,
+    "dodge": 4.41,
     "parry": 4.72,
     "block": 4.72,
-    "dps": 18.5
+    "dps": 86.1
    },
    "reputacije": [
     {
@@ -645,7 +645,7 @@
     {
      "kat": "Secondary Skills",
      "ime": "Fishing skill",
-     "n": 233
+     "n": 239
     },
     {
      "kat": "Secondary Skills",
@@ -733,14 +733,14 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg",
-   "azurirano": "2026-11-23T00:31:31Z"
+   "azurirano": "2026-11-23T08:30:48Z"
   },
   "Melee Kitic": {
    "level": 41,
-   "xp": 2401,
+   "xp": 5181,
    "guild": "Kafana na Balkanu",
    "ilvl": 37,
-   "zadnjiLogin": "2026-11-22T17:56:26Z",
+   "zadnjiLogin": "2026-11-23T07:52:50Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -967,7 +967,7 @@
    "profesije": [
     {
      "name": "Mining",
-     "skill": 201,
+     "skill": 203,
      "max": 225,
      "vrsta": "primarna"
     },
@@ -1020,49 +1020,49 @@
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 8090,
+     "vrijednost": 8175,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Honored",
-     "vrijednost": 4770,
+     "vrijednost": 4791,
      "max": 12000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Honored",
-     "vrijednost": 2166,
+     "vrijednost": 2187,
      "max": 12000
     },
     {
      "ime": "Undercity",
      "status": "Honored",
-     "vrijednost": 1183,
+     "vrijednost": 1205,
      "max": 12000
     },
     {
      "ime": "Ratchet",
      "status": "Friendly",
-     "vrijednost": 2017,
+     "vrijednost": 2022,
      "max": 6000
     },
     {
      "ime": "Booty Bay",
      "status": "Friendly",
-     "vrijednost": 198,
+     "vrijednost": 203,
      "max": 6000
     },
     {
      "ime": "Everlook",
      "status": "Neutral",
-     "vrijednost": 2813,
+     "vrijednost": 2818,
      "max": 3000
     },
     {
      "ime": "Gadgetzan",
      "status": "Neutral",
-     "vrijednost": 2813,
+     "vrijednost": 2818,
      "max": 3000
     }
    ],
@@ -1294,7 +1294,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 392
+     "n": 395
     },
     {
      "kat": "Quests",
@@ -1304,7 +1304,7 @@
     {
      "kat": "Quests",
      "ime": "Quests abandoned",
-     "n": 37
+     "n": 39
     },
     {
      "kat": "Skills",
@@ -1384,7 +1384,7 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 92
+     "n": 95
     },
     {
      "kat": "Travel",
@@ -1406,19 +1406,15 @@
      "A Vengeful Fate",
      "Hate the Hatefury",
      "Rig Wars",
-     "Report to Rog'mar",
-     "Craftsman's Writ: Wicked Mithril Blade",
      "Dragonmaw Shinbones",
      "Blood in the Streets",
      "The Hammer May Fall",
      "Catch of the Day",
      "Centaur Bounty",
-     "Lost Shipping Crate",
      "Gol'dir",
      "Source of Power",
      "Magram Alliance",
      "Hand of Iruxos",
-     "Craftsman's Writ: Crimson Silk Robe",
      "Vorrel's Revenge",
      "Khan Hratha",
      "Other Fish to Fry",
@@ -1430,7 +1426,7 @@
      "Satyr Hooves",
      "Gelkis Alliance"
     ],
-    "zavrseno": 446
+    "zavrseno": 452
    },
    "mountovi": [
     "Brown Wolf"
@@ -1442,7 +1438,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg",
-   "azurirano": "2026-11-22T18:32:33Z"
+   "azurirano": "2026-11-23T08:30:48Z"
   },
   "Janica Frostelich": {
    "level": 18,
@@ -3387,7 +3383,7 @@
    "azurirano": "2026-11-23T02:31:33Z"
   }
  },
- "provjereno": "2026-11-23T06:31:25Z",
+ "provjereno": "2026-11-23T08:30:48Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3402,7 +3398,7 @@
     "rang": 0,
     "slug": "saman-saulic",
     "ilvl": 39,
-    "zadnjiLogin": "2026-11-22T22:38:44Z",
+    "zadnjiLogin": "2026-11-23T08:20:31Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg"
    },
    {
@@ -3424,7 +3420,7 @@
     "rang": 3,
     "slug": "melee-kitic",
     "ilvl": 37,
-    "zadnjiLogin": "2026-11-22T17:56:26Z",
+    "zadnjiLogin": "2026-11-23T07:52:50Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg"
    },
    {
@@ -3983,6 +3979,11 @@
     "2026-11-22T12:33:48Z",
     41,
     2401
+   ],
+   [
+    "2026-11-23T08:30:48Z",
+    41,
+    5181
    ]
   ],
   "Janica Frostelich": [
