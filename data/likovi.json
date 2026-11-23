@@ -1,17 +1,17 @@
 {
- "azurirano": "2026-11-23T08:30:48Z",
+ "azurirano": "2026-11-23T12:30:16Z",
  "likovi": {
   "Saman Saulic": {
-   "level": 49,
-   "xp": 82449,
+   "level": 50,
+   "xp": 27933,
    "guild": "Kafana na Balkanu",
-   "ilvl": 39,
-   "zadnjiLogin": "2026-11-23T08:20:31Z",
+   "ilvl": 43,
+   "zadnjiLogin": "2026-11-23T11:54:11Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
     35,
-    5
+    6
    ],
    "specka": "Enhancement",
    "talentiPopis": [
@@ -98,24 +98,30 @@
      "rang": 5,
      "stablo": "Restoration",
      "opis": "Reduces the Mana cost of your healing spells by 5% and improves your chance to hit by 5%."
+    },
+    {
+     "ime": "Totemic Focus",
+     "rang": 1,
+     "stablo": "Restoration",
+     "opis": "Reduces the Mana cost of your totems and any spells that summon or move them by 5%."
     }
    ],
    "oprema": [
     {
      "slot": "Head",
-     "ime": "Ranger Helm of the Beast",
+     "ime": "Undercity Reservist's Cap",
      "kvaliteta": "uncommon",
-     "wowhead": 7479,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133111.jpg",
-     "ilvl": 42
+     "wowhead": 20643,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133117.jpg",
+     "ilvl": 47
     },
     {
      "slot": "Neck",
-     "ime": "Whelpscale Necklace",
-     "kvaliteta": "uncommon",
-     "wowhead": 281302,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133280.jpg",
-     "ilvl": 44
+     "ime": "Woven Ivy Necklace",
+     "kvaliteta": "rare",
+     "wowhead": 19159,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/134196.jpg",
+     "ilvl": 51
     },
     {
      "slot": "Shoulder",
@@ -143,19 +149,19 @@
     },
     {
      "slot": "Legs",
-     "ime": "Gnoll Crusher Leggings",
+     "ime": "Forest Troll Leggings",
      "kvaliteta": "uncommon",
-     "wowhead": 274943,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/134583.jpg",
-     "ilvl": 40
+     "wowhead": 270111,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/134706.jpg",
+     "ilvl": 51
     },
     {
      "slot": "Feet",
-     "ime": "Darkspear Boots",
+     "ime": "Champion's Greaves of the Bear",
      "kvaliteta": "uncommon",
-     "wowhead": 4136,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132535.jpg",
-     "ilvl": 42
+     "wowhead": 7542,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132590.jpg",
+     "ilvl": 46
     },
     {
      "slot": "Wrist",
@@ -191,19 +197,19 @@
     },
     {
      "slot": "Trinket 1",
-     "ime": "Heart of the Primeval",
-     "kvaliteta": "rare",
-     "wowhead": 274615,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132852.jpg",
-     "ilvl": 40
+     "ime": "Jewel of the Guard Captain",
+     "kvaliteta": "uncommon",
+     "wowhead": 270225,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/134891.jpg",
+     "ilvl": 51
     },
     {
      "slot": "Trinket 2",
-     "ime": "Lookie's Spyglass",
-     "kvaliteta": "rare",
-     "wowhead": 273298,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/134440.jpg",
-     "ilvl": 23
+     "ime": "Rune of the Guard Captain",
+     "kvaliteta": "uncommon",
+     "wowhead": 19120,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/134420.jpg",
+     "ilvl": 51
     },
     {
      "slot": "Back",
@@ -264,48 +270,48 @@
     }
    ],
    "statovi": {
-    "hp": 2034,
-    "resurs": 2501,
+    "hp": 2255,
+    "resurs": 2355,
     "resursIme": "Mana",
-    "str": 158,
-    "agi": 48,
-    "sta": 137,
-    "int": 103,
-    "spi": 126,
-    "armor": 1197,
-    "ap": 509,
-    "spellPower": 30,
-    "crit": 9.49,
-    "spellCrit": 9.49,
-    "rangedCrit": 5.0,
-    "dodge": 4.41,
-    "parry": 4.72,
-    "block": 4.72,
-    "dps": 86.1
+    "str": 170,
+    "agi": 73,
+    "sta": 155,
+    "int": 92,
+    "spi": 111,
+    "armor": 1183,
+    "ap": 538,
+    "spellPower": 35,
+    "crit": 11.3,
+    "spellCrit": 9.71,
+    "rangedCrit": 5.5,
+    "dodge": 5.64,
+    "parry": 4.56,
+    "block": 4.56,
+    "dps": 88.2
    },
    "reputacije": [
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 10626,
+     "vrijednost": 10651,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Honored",
-     "vrijednost": 6648,
+     "vrijednost": 6673,
      "max": 12000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Honored",
-     "vrijednost": 4102,
+     "vrijednost": 4127,
      "max": 12000
     },
     {
      "ime": "Undercity",
      "status": "Honored",
-     "vrijednost": 2227,
+     "vrijednost": 2327,
      "max": 12000
     },
     {
@@ -357,12 +363,12 @@
     {
      "kat": "Consumables",
      "ime": "Beverages consumed",
-     "n": 512
+     "n": 517
     },
     {
      "kat": "Consumables",
      "ime": "Food eaten",
-     "n": 83
+     "n": 90
     },
     {
      "kat": "Reputation",
@@ -477,17 +483,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 10885
+     "n": 11147
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 7559
+     "n": 7802
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 10782
+     "n": 11044
     },
     {
      "kat": "Creatures",
@@ -497,7 +503,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 5655,
+     "n": 5850,
      "opis": "Humanoid"
     },
     {
@@ -524,23 +530,23 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 4978
+     "n": 5089
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 4178
+     "n": 4289
     },
     {
      "kat": "Killing Blows",
      "ime": "Continent with the most Killing Blows",
-     "n": 2165,
+     "n": 2276,
      "opis": "Eastern Kingdoms"
     },
     {
      "kat": "Deaths",
      "ime": "Total deaths",
-     "n": 104
+     "n": 105
     },
     {
      "kat": "Dungeons and Raids",
@@ -590,12 +596,12 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 629
+     "n": 637
     },
     {
      "kat": "Quests",
      "ime": "Average quests completed per day",
-     "n": 157.25
+     "n": 159.25
     },
     {
      "kat": "Quests",
@@ -650,12 +656,12 @@
     {
      "kat": "Secondary Skills",
      "ime": "Fish caught",
-     "n": 883
+     "n": 884
     },
     {
      "kat": "Secondary Skills",
      "ime": "Fish and other things caught",
-     "n": 883
+     "n": 884
     },
     {
      "kat": "Professions",
@@ -675,7 +681,7 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 254
+     "n": 257
     },
     {
      "kat": "Travel",
@@ -697,28 +703,28 @@
      "Reclaimed Treasures",
      "Screecher Spirits",
      "Troll Temper",
+     "The Crown of Will",
      "Rescue OOX-09/HL!",
      "Scarab Shells",
      "An'she's Radiance",
      "Tiara of the Deep",
      "Solution to Doom",
      "Jammal'an the Prophet",
+     "Seeping Corruption",
      "Gahz'rilla",
      "Shadowshard Fragments",
      "Bone-Bladed Weapons",
      "Volcanic Activity",
-     "WANTED: Vile Priestess Hexx and Her Minions",
      "Fragment of the Firelands",
      "Secret of the Circle",
-     "Undamaged Venom Sac",
      "Zum'rah's Head",
+     "Consult Master Gadrin",
      "The Bloodsail Buccaneers",
      "Uldaman Reagent Run",
      "Divino-matic Rod",
-     "Job Opening: Guard Captain of Revantusk Village",
      "Necklace Recovery"
     ],
-    "zavrseno": 738
+    "zavrseno": 746
    },
    "mountovi": [
     "Black Wolf",
@@ -733,7 +739,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg",
-   "azurirano": "2026-11-23T08:30:48Z"
+   "azurirano": "2026-11-23T12:30:16Z"
   },
   "Melee Kitic": {
    "level": 41,
@@ -3383,7 +3389,7 @@
    "azurirano": "2026-11-23T02:31:33Z"
   }
  },
- "provjereno": "2026-11-23T10:30:48Z",
+ "provjereno": "2026-11-23T12:30:16Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3392,13 +3398,13 @@
   "roster": [
    {
     "ime": "Saman Saulic",
-    "level": 49,
+    "level": 50,
     "klasa": "Shaman",
     "rasa": "Orc",
     "rang": 0,
     "slug": "saman-saulic",
-    "ilvl": 39,
-    "zadnjiLogin": "2026-11-23T08:20:31Z",
+    "ilvl": 43,
+    "zadnjiLogin": "2026-11-23T11:54:11Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg"
    },
    {
@@ -3447,13 +3453,13 @@
    },
    {
     "ime": "Divlji Druid",
-    "level": 43,
+    "level": 44,
     "klasa": "Druid",
     "rasa": "Tauren",
     "rang": 4,
     "slug": "divlji-druid",
-    "ilvl": 35,
-    "zadnjiLogin": "2026-11-22T22:49:45Z",
+    "ilvl": 38,
+    "zadnjiLogin": "2026-11-23T11:49:30Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/176/12362928-avatar.jpg"
    },
    {
@@ -3732,6 +3738,11 @@
     "2026-11-23T00:31:31Z",
     49,
     82449
+   ],
+   [
+    "2026-11-23T12:30:16Z",
+    50,
+    27933
    ]
   ],
   "Melee Kitic": [
