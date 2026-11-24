@@ -1,12 +1,12 @@
 {
- "azurirano": "2026-11-23T22:29:30Z",
+ "azurirano": "2026-11-24T00:32:48Z",
  "likovi": {
   "Saman Saulic": {
    "level": 50,
-   "xp": 28397,
+   "xp": 28841,
    "guild": "Kafana na Balkanu",
    "ilvl": 43,
-   "zadnjiLogin": "2026-11-23T21:01:00Z",
+   "zadnjiLogin": "2026-11-23T22:59:43Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -281,12 +281,12 @@
     "armor": 1183,
     "ap": 566,
     "spellPower": 51,
-    "crit": 11.3,
+    "crit": 11.34,
     "spellCrit": 9.71,
     "rangedCrit": 5.5,
-    "dodge": 5.64,
-    "parry": 4.56,
-    "block": 4.56,
+    "dodge": 5.68,
+    "parry": 4.6,
+    "block": 4.6,
     "dps": 90.2
    },
    "reputacije": [
@@ -343,7 +343,7 @@
     {
      "kat": "Character",
      "ime": "Times camped",
-     "n": 159
+     "n": 160
     },
     {
      "kat": "Consumables",
@@ -363,12 +363,12 @@
     {
      "kat": "Consumables",
      "ime": "Beverages consumed",
-     "n": 517
+     "n": 525
     },
     {
      "kat": "Consumables",
      "ime": "Food eaten",
-     "n": 90
+     "n": 92
     },
     {
      "kat": "Reputation",
@@ -413,7 +413,7 @@
     {
      "kat": "Dungeons & Raids",
      "ime": "Total 5-player dungeons entered",
-     "n": 33
+     "n": 35
     },
     {
      "kat": "Dungeons & Raids",
@@ -483,17 +483,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 11147
+     "n": 11300
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 7802
+     "n": 7805
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 11044
+     "n": 11196
     },
     {
      "kat": "Creatures",
@@ -503,7 +503,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 5850,
+     "n": 6000,
      "opis": "Humanoid"
     },
     {
@@ -514,12 +514,12 @@
     {
      "kat": "Honorable Kills",
      "ime": "Total Honorable Kills",
-     "n": 5
+     "n": 6
     },
     {
      "kat": "Honorable Kills",
      "ime": "World Honorable Kills",
-     "n": 5
+     "n": 6
     },
     {
      "kat": "Honorable Kills",
@@ -530,17 +530,17 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 5089
+     "n": 5125
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 4289
+     "n": 4291
     },
     {
      "kat": "Killing Blows",
      "ime": "Continent with the most Killing Blows",
-     "n": 2276,
+     "n": 2278,
      "opis": "Eastern Kingdoms"
     },
     {
@@ -601,7 +601,7 @@
     {
      "kat": "Quests",
      "ime": "Average quests completed per day",
-     "n": 159.75
+     "n": 127.8
     },
     {
      "kat": "Quests",
@@ -681,7 +681,7 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 261
+     "n": 263
     },
     {
      "kat": "Travel",
@@ -736,12 +736,12 @@
     "Green Wing Macaw"
    ],
    "pvp": {
-    "hk": 5,
+    "hk": 6,
     "rang": 0
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg",
-   "azurirano": "2026-11-23T22:29:30Z"
+   "azurirano": "2026-11-24T00:32:48Z"
   },
   "Melee Kitic": {
    "level": 41,
@@ -1948,10 +1948,10 @@
   },
   "Nikola Roguevic": {
    "level": 46,
-   "xp": 2791,
+   "xp": 6079,
    "guild": "Kafana na Balkanu",
    "ilvl": 39,
-   "zadnjiLogin": "2026-11-23T03:50:21Z",
+   "zadnjiLogin": "2026-11-23T22:48:41Z",
    "izvor": "Blizzard API",
    "talenti": [
     2,
@@ -2135,11 +2135,11 @@
     },
     {
      "slot": "Finger 1",
-     "ime": "Monkey Ring",
+     "ime": "Basalt Ring of the Beast",
      "kvaliteta": "uncommon",
-     "wowhead": 6748,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133356.jpg",
-     "ilvl": 32
+     "wowhead": 11996,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133355.jpg",
+     "ilvl": 34
     },
     {
      "slot": "Finger 2",
@@ -2179,7 +2179,8 @@
      "kvaliteta": "rare",
      "wowhead": 10823,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135345.jpg",
-     "ilvl": 44
+     "ilvl": 44,
+     "enchant": "Instant Poison IV (16 |4Charge:Charges;)"
     },
     {
      "slot": "Off Hand",
@@ -2187,7 +2188,8 @@
      "kvaliteta": "rare",
      "wowhead": 6802,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135317.jpg",
-     "ilvl": 44
+     "ilvl": 44,
+     "enchant": "Instant Poison IV (78 |4Charge:Charges;)"
     },
     {
      "slot": "Ranged",
@@ -2213,7 +2215,7 @@
     },
     {
      "name": "Cooking",
-     "skill": 163,
+     "skill": 225,
      "max": 225,
      "vrsta": "sekundarna"
     },
@@ -2231,22 +2233,22 @@
     }
    ],
    "statovi": {
-    "hp": 2136,
+    "hp": 2186,
     "resurs": 100,
     "resursIme": "Energy",
-    "str": 81,
-    "agi": 169,
-    "sta": 140,
+    "str": 83,
+    "agi": 167,
+    "sta": 145,
     "int": 28,
-    "spi": 51,
-    "armor": 1135,
+    "spi": 46,
+    "armor": 1131,
     "ap": 414,
     "spellPower": 0,
-    "crit": 7.78,
+    "crit": 7.8,
     "spellCrit": 0.0,
-    "rangedCrit": 7.22,
-    "dodge": 16.78,
-    "parry": 10.84,
+    "rangedCrit": 7.12,
+    "dodge": 16.63,
+    "parry": 10.88,
     "block": 0.0,
     "dps": 59.6
    },
@@ -2304,7 +2306,7 @@
     {
      "kat": "Character",
      "ime": "Times camped",
-     "n": 87
+     "n": 88
     },
     {
      "kat": "Consumables",
@@ -2375,7 +2377,7 @@
     {
      "kat": "Dungeons & Raids",
      "ime": "Total 5-player dungeons entered",
-     "n": 32
+     "n": 34
     },
     {
      "kat": "Boss Kills",
@@ -2440,17 +2442,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 9900
+     "n": 10025
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 7451
+     "n": 7512
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 9797
+     "n": 9922
     },
     {
      "kat": "Creatures",
@@ -2460,7 +2462,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 5433,
+     "n": 5557,
      "opis": "Humanoid"
     },
     {
@@ -2487,7 +2489,7 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 5380
+     "n": 5415
     },
     {
      "kat": "Killing Blows",
@@ -2538,7 +2540,7 @@
     {
      "kat": "Quests",
      "ime": "Average quests completed per day",
-     "n": 49.90909090909091
+     "n": 45.75
     },
     {
      "kat": "Quests",
@@ -2568,12 +2570,12 @@
     {
      "kat": "Secondary Skills",
      "ime": "Cooking skill",
-     "n": 163
+     "n": 221
     },
     {
      "kat": "Secondary Skills",
      "ime": "Cooking Recipes known",
-     "n": 50
+     "n": 60
     },
     {
      "kat": "Secondary Skills",
@@ -2618,7 +2620,7 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 162
+     "n": 164
     },
     {
      "kat": "Travel",
@@ -2647,6 +2649,7 @@
      "Snapjaws, Mon!",
      "Reclaimed Treasures",
      "Sickening Lights",
+     "Craftsman's Writ: Catseye Ultra Goggles",
      "Get the Goods",
      "The Pariah's Instructions",
      "Up to Snuff",
@@ -2672,6 +2675,7 @@
      "The Bloodsail Buccaneers",
      "The Purple Ones",
      "Keep An Eye Out",
+     "Craftsman's Writ: Golden Scale Gauntlets",
      "Necklace Recovery"
     ],
     "zavrseno": 628
@@ -2693,7 +2697,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg",
-   "azurirano": "2026-11-23T04:31:30Z"
+   "azurirano": "2026-11-24T00:32:48Z"
   },
   "Arsen Deadic": {
    "level": 41,
@@ -3389,7 +3393,7 @@
    "azurirano": "2026-11-23T16:30:17Z"
   }
  },
- "provjereno": "2026-11-23T22:29:30Z",
+ "provjereno": "2026-11-24T00:32:48Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3404,7 +3408,7 @@
     "rang": 0,
     "slug": "saman-saulic",
     "ilvl": 43,
-    "zadnjiLogin": "2026-11-23T21:01:00Z",
+    "zadnjiLogin": "2026-11-23T22:59:43Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg"
    },
    {
@@ -3415,7 +3419,7 @@
     "rang": 1,
     "slug": "nikola-roguevic",
     "ilvl": 39,
-    "zadnjiLogin": "2026-11-23T03:50:21Z",
+    "zadnjiLogin": "2026-11-23T22:48:41Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg"
    },
    {
@@ -3459,7 +3463,7 @@
     "rang": 4,
     "slug": "divlji-druid",
     "ilvl": 38,
-    "zadnjiLogin": "2026-11-23T22:31:40Z",
+    "zadnjiLogin": "2026-11-23T22:38:17Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/176/12362928-avatar.jpg"
    },
    {
@@ -3748,6 +3752,11 @@
     "2026-11-23T22:29:30Z",
     50,
     28397
+   ],
+   [
+    "2026-11-24T00:32:48Z",
+    50,
+    28841
    ]
   ],
   "Melee Kitic": [
@@ -4274,6 +4283,11 @@
     "2026-11-23T04:31:30Z",
     46,
     2791
+   ],
+   [
+    "2026-11-24T00:32:48Z",
+    46,
+    6079
    ]
   ],
   "Arsen Deadic": [
