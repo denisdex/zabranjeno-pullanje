@@ -9,8 +9,19 @@
    "url": "https://www.wowhead.com/news/rss/classic"
   }
  ],
- "azurirano": "2026-11-22T20:31:56Z",
+ "azurirano": "2026-11-24T02:32:10Z",
  "stavke": [
+  {
+   "datum": "2026-11-24T02:06:52Z",
+   "naslov": "WoW: Forever Hotfixes - November 23, 2026",
+   "link": "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-23-2026/2403040/15",
+   "izvor": "Blizzard",
+   "sazetak": "November 23, 2026 Classes Druid The 4-piece Feralheart set for Druids now correctly grants 4 Energy regeneration every 1 second for 5 seconds. Priest Mind Vision should no longer proc effects. Shadow Fixed an issue where Dark Inspiration…",
+   "oznake": [
+    "Hotfix"
+   ],
+   "vrsta": "patch"
+  },
   {
    "datum": "2026-11-22T19:00:00Z",
    "naslov": "The Weekly Reset with Taliesin and Evitel: Gold in Forever",
@@ -19,17 +30,6 @@
    "sazetak": "Taliesin and Evitel check out the latest news for both Forever and Retail, as well as the gold farm, chores, and exploit controversy in Forever. Continue reading »",
    "oznake": [],
    "vrsta": "vijest"
-  },
-  {
-   "datum": "2026-11-21T00:18:29Z",
-   "naslov": "WoW: Forever Hotfixes - November 20, 2026",
-   "link": "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-20-2026/2403040/14",
-   "izvor": "Blizzard",
-   "sazetak": "November 20, 2026 Classes Rogue Combat Blade Flurry will now correctly cause Shank’s damage to hit an additional target. Warlock Demonology Fixed a bug where the effects of the Demonic Aegis talent could be snapshotted into your Demon…",
-   "oznake": [
-    "Hotfix"
-   ],
-   "vrsta": "patch"
   },
   {
    "datum": "2026-11-20T18:02:14Z",
