@@ -1,12 +1,12 @@
 {
- "azurirano": "2026-11-24T04:31:49Z",
+ "azurirano": "2026-11-24T12:30:14Z",
  "likovi": {
   "Saman Saulic": {
    "level": 50,
-   "xp": 41162,
+   "xp": 44062,
    "guild": "Kafana na Balkanu",
    "ilvl": 39,
-   "zadnjiLogin": "2026-11-24T00:55:13Z",
+   "zadnjiLogin": "2026-11-24T11:14:19Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -280,25 +280,25 @@
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 10651,
+     "vrijednost": 10670,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Honored",
-     "vrijednost": 6673,
+     "vrijednost": 6748,
      "max": 12000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Honored",
-     "vrijednost": 4127,
+     "vrijednost": 4146,
      "max": 12000
     },
     {
      "ime": "Undercity",
      "status": "Honored",
-     "vrijednost": 2327,
+     "vrijednost": 2346,
      "max": 12000
     },
     {
@@ -370,7 +370,7 @@
     {
      "kat": "Reputation",
      "ime": "Total factions encountered",
-     "n": 20
+     "n": 22
     },
     {
      "kat": "Gear",
@@ -588,12 +588,12 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 639
+     "n": 640
     },
     {
      "kat": "Quests",
      "ime": "Average quests completed per day",
-     "n": 127.8
+     "n": 128
     },
     {
      "kat": "Quests",
@@ -696,6 +696,7 @@
      "Screecher Spirits",
      "Troll Temper",
      "The Crown of Will",
+     "The Spider God",
      "Rescue OOX-09/HL!",
      "Scarab Shells",
      "An'she's Radiance",
@@ -707,18 +708,18 @@
      "Shadowshard Fragments",
      "Bone-Bladed Weapons",
      "KILL ON SIGHT: Dark Iron Dwarves",
+     "The Battle for Darkspear Islands!",
      "Power Stones",
      "Volcanic Activity",
      "Fragment of the Firelands",
      "Secret of the Circle",
      "Zum'rah's Head",
-     "Consult Master Gadrin",
      "The Bloodsail Buccaneers",
      "Uldaman Reagent Run",
      "Divino-matic Rod",
      "Necklace Recovery"
     ],
-    "zavrseno": 748
+    "zavrseno": 749
    },
    "mountovi": [
     "Black Wolf",
@@ -733,7 +734,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg",
-   "azurirano": "2026-11-24T02:32:10Z"
+   "azurirano": "2026-11-24T12:30:14Z"
   },
   "Melee Kitic": {
    "level": 42,
@@ -3425,7 +3426,7 @@
    "azurirano": "2026-11-24T02:32:10Z"
   }
  },
- "provjereno": "2026-11-24T10:30:17Z",
+ "provjereno": "2026-11-24T12:30:14Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3440,7 +3441,7 @@
     "rang": 0,
     "slug": "saman-saulic",
     "ilvl": 39,
-    "zadnjiLogin": "2026-11-24T00:55:13Z",
+    "zadnjiLogin": "2026-11-24T11:14:19Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg"
    },
    {
@@ -3794,6 +3795,11 @@
     "2026-11-24T02:32:10Z",
     50,
     41162
+   ],
+   [
+    "2026-11-24T12:30:14Z",
+    50,
+    44062
    ]
   ],
   "Melee Kitic": [
