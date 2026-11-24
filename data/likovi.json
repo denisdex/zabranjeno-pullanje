@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-24T02:32:10Z",
+ "azurirano": "2026-11-24T04:31:49Z",
  "likovi": {
   "Saman Saulic": {
    "level": 50,
@@ -1962,10 +1962,10 @@
   },
   "Nikola Roguevic": {
    "level": 46,
-   "xp": 47937,
+   "xp": 93584,
    "guild": "Kafana na Balkanu",
    "ilvl": 39,
-   "zadnjiLogin": "2026-11-24T02:10:50Z",
+   "zadnjiLogin": "2026-11-24T03:37:02Z",
    "izvor": "Blizzard API",
    "talenti": [
     2,
@@ -2194,7 +2194,8 @@
      "kvaliteta": "rare",
      "wowhead": 275008,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135593.jpg",
-     "ilvl": 47
+     "ilvl": 47,
+     "enchant": "Instant Poison IV (118 |4Charge:Charges;)"
     },
     {
      "slot": "Off Hand",
@@ -2202,7 +2203,8 @@
      "kvaliteta": "rare",
      "wowhead": 6802,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135317.jpg",
-     "ilvl": 44
+     "ilvl": 44,
+     "enchant": "Instant Poison IV (122 |4Charge:Charges;)"
     },
     {
      "slot": "Ranged",
@@ -2257,9 +2259,9 @@
     "armor": 1163,
     "ap": 397,
     "spellPower": 0,
-    "crit": 7.52,
+    "crit": 7.68,
     "spellCrit": 0.0,
-    "rangedCrit": 7.12,
+    "rangedCrit": 7.16,
     "dodge": 16.75,
     "parry": 11.0,
     "block": 0.0,
@@ -2269,49 +2271,49 @@
     {
      "ime": "Undercity",
      "status": "Honored",
-     "vrijednost": 11842,
+     "vrijednost": 11880,
      "max": 12000
     },
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 4623,
+     "vrijednost": 4773,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Honored",
-     "vrijednost": 2027,
+     "vrijednost": 2065,
      "max": 12000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Honored",
-     "vrijednost": 1122,
+     "vrijednost": 1160,
      "max": 12000
     },
     {
      "ime": "Ratchet",
      "status": "Friendly",
-     "vrijednost": 3465,
-     "max": 6000
-    },
-    {
-     "ime": "Powderfuse",
-     "status": "Friendly",
-     "vrijednost": 2750,
+     "vrijednost": 4060,
      "max": 6000
     },
     {
      "ime": "Booty Bay",
      "status": "Friendly",
-     "vrijednost": 2591,
+     "vrijednost": 3706,
+     "max": 6000
+    },
+    {
+     "ime": "Powderfuse",
+     "status": "Friendly",
+     "vrijednost": 3420,
      "max": 6000
     },
     {
      "ime": "Gadgetzan",
      "status": "Friendly",
-     "vrijednost": 1645,
+     "vrijednost": 2240,
      "max": 6000
     }
    ],
@@ -2335,7 +2337,7 @@
     {
      "kat": "Consumables",
      "ime": "Health potions consumed",
-     "n": 55
+     "n": 56
     },
     {
      "kat": "Consumables",
@@ -2350,7 +2352,7 @@
     {
      "kat": "Consumables",
      "ime": "Food eaten",
-     "n": 106
+     "n": 108
     },
     {
      "kat": "Reputation",
@@ -2460,17 +2462,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 10289
+     "n": 10340
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 7774
+     "n": 7825
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 10186
+     "n": 10237
     },
     {
      "kat": "Creatures",
@@ -2480,7 +2482,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 5775,
+     "n": 5826,
      "opis": "Humanoid"
     },
     {
@@ -2507,23 +2509,23 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 5558
+     "n": 5601
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 4194
+     "n": 4237
     },
     {
      "kat": "Killing Blows",
      "ime": "Continent with the most Killing Blows",
-     "n": 2744,
+     "n": 2787,
      "opis": "Eastern Kingdoms"
     },
     {
      "kat": "Deaths",
      "ime": "Total deaths",
-     "n": 42
+     "n": 43
     },
     {
      "kat": "Dungeons and Raids",
@@ -2563,12 +2565,12 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 551
+     "n": 562
     },
     {
      "kat": "Quests",
      "ime": "Average quests completed per day",
-     "n": 45.916666666666664
+     "n": 46.833333333333336
     },
     {
      "kat": "Quests",
@@ -2618,7 +2620,7 @@
     {
      "kat": "Secondary Skills",
      "ime": "Fishing skill",
-     "n": 176
+     "n": 177
     },
     {
      "kat": "Secondary Skills",
@@ -2648,7 +2650,7 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 165
+     "n": 166
     },
     {
      "kat": "Travel",
@@ -2678,34 +2680,27 @@
      "Reclaimed Treasures",
      "Sickening Lights",
      "Craftsman's Writ: Catseye Ultra Goggles",
-     "Get the Goods",
      "The Pariah's Instructions",
-     "Up to Snuff",
      "Shady Saltseers",
      "The Only Good Brinescale...",
      "Scarab Shells",
-     "Akiris by the Bundle",
      "Tiara of the Deep",
      "Solution to Doom",
-     "Zanzil's Secret",
+     "The Big Payback",
      "Snargl's Snout",
-     "The Captain's Chest",
      "Gahz'rilla",
      "Shadowshard Fragments",
      "Krol'dok Moulding",
-     "Voodoo Dues",
      "Gammerita, Mon!",
      "Armory of Sunnyglade",
      "Grim Message",
      "The Crown of Will",
-     "Mok'thardin's Enchantment",
-     "The Bloodsail Buccaneers",
      "The Purple Ones",
-     "Keep An Eye Out",
+     "Cracking Maury's Foot",
      "Craftsman's Writ: Golden Scale Gauntlets",
      "Necklace Recovery"
     ],
-    "zavrseno": 630
+    "zavrseno": 642
    },
    "mountovi": [
     "Black Skeletal Horse",
@@ -2724,7 +2719,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg",
-   "azurirano": "2026-11-24T02:32:10Z"
+   "azurirano": "2026-11-24T04:31:49Z"
   },
   "Arsen Deadic": {
    "level": 41,
@@ -3430,7 +3425,7 @@
    "azurirano": "2026-11-24T02:32:10Z"
   }
  },
- "provjereno": "2026-11-24T02:32:10Z",
+ "provjereno": "2026-11-24T04:31:49Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3456,7 +3451,7 @@
     "rang": 1,
     "slug": "nikola-roguevic",
     "ilvl": 39,
-    "zadnjiLogin": "2026-11-24T02:10:50Z",
+    "zadnjiLogin": "2026-11-24T03:37:02Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg"
    },
    {
@@ -4340,6 +4335,11 @@
     "2026-11-24T02:32:10Z",
     46,
     47937
+   ],
+   [
+    "2026-11-24T04:31:49Z",
+    46,
+    93584
    ]
   ],
   "Arsen Deadic": [
