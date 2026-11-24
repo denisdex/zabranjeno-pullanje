@@ -9,7 +9,7 @@
    "url": "https://www.wowhead.com/news/rss/classic"
   }
  ],
- "azurirano": "2026-11-24T18:29:51Z",
+ "azurirano": "2026-11-24T22:29:21Z",
  "stavke": [
   {
    "datum": "2026-11-24T18:03:28Z",
@@ -169,6 +169,17 @@
    "sazetak": "In this thread, we will discuss issues that the WoW Forever team have determined to be notable, impactful, and already tracked with plans to fix in the future. This is not a comprehensive list of issues, and it will be updated regularly…",
    "oznake": [],
    "vrsta": "patch"
+  },
+  {
+   "datum": "2026-11-05T15:22:45Z",
+   "naslov": "WoW Forever Bug Report Forum Guidelines",
+   "link": "https://us.forums.blizzard.com/en/wow/t/wow-forever-bug-report-forum-guidelines/2402319/1",
+   "izvor": "Blizzard",
+   "sazetak": "Welcome! Please read this before posting in this forum. What follows are guidelines for how this forum should and shouldn’t be used. WoW Forever Bug Report Forum Guidelines: Please do not post off-topic banter or discussions. The purpose…",
+   "oznake": [
+    "Vodič"
+   ],
+   "vrsta": "vijest"
   },
   {
    "datum": "2026-11-04T17:55:14Z",

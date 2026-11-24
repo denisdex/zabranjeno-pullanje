@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-24T20:29:21Z",
+ "azurirano": "2026-11-24T22:29:22Z",
  "likovi": {
   "Saman Saulic": {
    "level": 50,
@@ -738,10 +738,10 @@
   },
   "Melee Kitic": {
    "level": 43,
-   "xp": 54957,
+   "xp": 74803,
    "guild": "Kafana na Balkanu",
    "ilvl": 38,
-   "zadnjiLogin": "2026-11-24T15:35:25Z",
+   "zadnjiLogin": "2026-11-24T21:03:21Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -969,7 +969,7 @@
    "profesije": [
     {
      "name": "Mining",
-     "skill": 215,
+     "skill": 217,
      "max": 300,
      "vrsta": "primarna"
     },
@@ -1013,9 +1013,9 @@
     "crit": 11.44,
     "spellCrit": 0.0,
     "rangedCrit": 0.0,
-    "dodge": 6.32,
-    "parry": 4.84,
-    "block": 4.84,
+    "dodge": 6.36,
+    "parry": 4.88,
+    "block": 4.88,
     "dps": 67.6
    },
    "reputacije": [
@@ -1077,12 +1077,12 @@
     {
      "kat": "Consumables",
      "ime": "Bandages used",
-     "n": 92
+     "n": 95
     },
     {
      "kat": "Consumables",
      "ime": "Bandage used most",
-     "n": 68,
+     "n": 71,
      "opis": "Heavy Linen Bandage"
     },
     {
@@ -1203,17 +1203,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 8098
+     "n": 8118
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 6544
+     "n": 6564
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 8025
+     "n": 8045
     },
     {
      "kat": "Creatures",
@@ -1223,7 +1223,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 4887,
+     "n": 4907,
      "opis": "Humanoid"
     },
     {
@@ -1250,23 +1250,23 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 4099
+     "n": 4107
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 3193
+     "n": 3201
     },
     {
      "kat": "Killing Blows",
      "ime": "Continent with the most Killing Blows",
-     "n": 1636,
+     "n": 1644,
      "opis": "Eastern Kingdoms"
     },
     {
      "kat": "Deaths",
      "ime": "Total deaths",
-     "n": 85
+     "n": 86
     },
     {
      "kat": "Dungeons and Raids",
@@ -1311,7 +1311,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 453
+     "n": 457
     },
     {
      "kat": "Quests",
@@ -1406,7 +1406,7 @@
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
-     "n": 58
+     "n": 59
     },
     {
      "kat": "Social",
@@ -1417,6 +1417,7 @@
    "questovi": {
     "uLogu": [
      "WANTED: Ghostmaw",
+     "Tome of Twilight",
      "Reclaimed Treasures",
      "Poison Tips",
      "The Grave Knight",
@@ -1428,8 +1429,9 @@
      "Dragonmaw Shinbones",
      "Paletusk Harvesting",
      "Blood in the Streets",
+     "Eye of Mugg",
      "The Hammer May Fall",
-     "Death to the Executioner",
+     "A Token of Vengeance",
      "Armory of Sunnyglade",
      "Gol'dir",
      "Source of Power",
@@ -1442,10 +1444,9 @@
      "Martek the Exiled",
      "On the Other Side",
      "Satyr Hooves",
-     "Break Their Chains",
      "Fetch 'n' Fletch"
     ],
-    "zavrseno": 513
+    "zavrseno": 517
    },
    "mountovi": [
     "Brown Wolf"
@@ -1457,7 +1458,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg",
-   "azurirano": "2026-11-24T16:29:38Z"
+   "azurirano": "2026-11-24T22:29:22Z"
   },
   "Janica Frostelich": {
    "level": 18,
@@ -3448,7 +3449,7 @@
    "azurirano": "2026-11-24T16:29:38Z"
   }
  },
- "provjereno": "2026-11-24T20:29:21Z",
+ "provjereno": "2026-11-24T22:29:22Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3485,7 +3486,7 @@
     "rang": 3,
     "slug": "melee-kitic",
     "ilvl": 38,
-    "zadnjiLogin": "2026-11-24T15:35:25Z",
+    "zadnjiLogin": "2026-11-24T21:03:21Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg"
    },
    {
@@ -3506,8 +3507,8 @@
     "rasa": "Tauren",
     "rang": 4,
     "slug": "venos-xx",
-    "ilvl": 45,
-    "zadnjiLogin": "2026-11-24T19:25:30Z",
+    "ilvl": 46,
+    "zadnjiLogin": "2026-11-24T22:06:36Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/253/13774333-avatar.jpg"
    },
    {
@@ -3523,13 +3524,13 @@
    },
    {
     "ime": "Jebothe Dan",
-    "level": 39,
+    "level": 40,
     "klasa": "Hunter",
     "rasa": "Troll",
     "rang": 4,
     "slug": "jebothe-dan",
     "ilvl": 35,
-    "zadnjiLogin": "2026-11-23T21:17:33Z",
+    "zadnjiLogin": "2026-11-24T21:51:18Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/102/15576678-avatar.jpg"
    },
    {
@@ -4089,6 +4090,11 @@
     "2026-11-24T16:29:38Z",
     43,
     54957
+   ],
+   [
+    "2026-11-24T22:29:22Z",
+    43,
+    74803
    ]
   ],
   "Janica Frostelich": [
