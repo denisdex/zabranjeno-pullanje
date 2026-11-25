@@ -9,7 +9,7 @@
    "url": "https://www.wowhead.com/news/rss/classic"
   }
  ],
- "azurirano": "2026-11-25T02:28:58Z",
+ "azurirano": "2026-11-25T18:27:20Z",
  "stavke": [
   {
    "datum": "2026-11-24T18:03:28Z",
@@ -160,15 +160,6 @@
    "sazetak": "Taliesin and Evitel check out WoW: Forever, where it's going, and how it's different from Retail. Also Talebound, decor, and more. Continue reading »",
    "oznake": [],
    "vrsta": "vijest"
-  },
-  {
-   "datum": "2026-11-05T15:42:52Z",
-   "naslov": "Known Issues - WoW Forever - Updated Nov. 5",
-   "link": "https://us.forums.blizzard.com/en/wow/t/known-issues-wow-forever-updated-nov-5/2402363/1",
-   "izvor": "Blizzard",
-   "sazetak": "In this thread, we will discuss issues that the WoW Forever team have determined to be notable, impactful, and already tracked with plans to fix in the future. This is not a comprehensive list of issues, and it will be updated regularly…",
-   "oznake": [],
-   "vrsta": "patch"
   },
   {
    "datum": "2026-11-04T17:55:14Z",
@@ -372,15 +363,6 @@
    "link": "https://www.wowhead.com/news=382879/blizzcon-day-2-roundup-forever-forever-and-more-forever",
    "izvor": "Wowhead",
    "sazetak": "BlizzCon has ended, but don't worry - we've wrapped up the big recaps from today's panels. Continue reading »",
-   "oznake": [],
-   "vrsta": "vijest"
-  },
-  {
-   "datum": "2026-09-13T19:42:52Z",
-   "naslov": "WoW: Forever Webhook Now Available",
-   "link": "https://www.wowhead.com/news=382871/wow-forever-webhook-now-available",
-   "izvor": "Wowhead",
-   "sazetak": "We've created a new webhook for World of Warcraft: Forever, so you can keep up with all of the latest news and information regarding the newest flavor of WoW! Continue reading »",
    "oznake": [],
    "vrsta": "vijest"
   }
