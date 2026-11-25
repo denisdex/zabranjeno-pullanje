@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-25T10:27:46Z",
+ "azurirano": "2026-11-25T12:27:19Z",
  "likovi": {
   "Saman Saulic": {
    "level": 50,
@@ -738,9 +738,9 @@
   },
   "Melee Kitic": {
    "level": 43,
-   "xp": 77953,
+   "xp": 102044,
    "guild": "Kafana na Balkanu",
-   "zadnjiLogin": "2026-11-25T08:57:47Z",
+   "zadnjiLogin": "2026-11-25T10:29:38Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -929,14 +929,16 @@
      "ime": "Vanquisher's Sword",
      "kvaliteta": "rare",
      "wowhead": 10823,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135345.jpg"
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135345.jpg",
+     "enchant": "Sharpened +4"
     },
     {
      "slot": "Off Hand",
      "ime": "Sword of Omen",
      "kvaliteta": "rare",
      "wowhead": 6802,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135317.jpg"
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135317.jpg",
+     "enchant": "Sharpened +4"
     },
     {
      "slot": "Ranged",
@@ -949,7 +951,7 @@
    "profesije": [
     {
      "name": "Mining",
-     "skill": 217,
+     "skill": 219,
      "max": 300,
      "vrsta": "primarna"
     },
@@ -973,7 +975,7 @@
     },
     {
      "name": "First Aid",
-     "skill": 92,
+     "skill": 117,
      "max": 150,
      "vrsta": "sekundarna"
     }
@@ -996,7 +998,7 @@
     "dodge": 6.78,
     "parry": 4.88,
     "block": 4.88,
-    "dps": 65.4
+    "dps": 67.2
    },
    "reputacije": [
     {
@@ -1057,7 +1059,7 @@
     {
      "kat": "Consumables",
      "ime": "Bandages used",
-     "n": 95
+     "n": 96
     },
     {
      "kat": "Consumables",
@@ -1073,7 +1075,7 @@
     {
      "kat": "Consumables",
      "ime": "Food eaten",
-     "n": 55
+     "n": 57
     },
     {
      "kat": "Consumables",
@@ -1183,17 +1185,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 8118
+     "n": 8191
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 6564
+     "n": 6634
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 8045
+     "n": 8117
     },
     {
      "kat": "Creatures",
@@ -1203,13 +1205,13 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 4907,
+     "n": 4938,
      "opis": "Humanoid"
     },
     {
      "kat": "Creatures",
      "ime": "Critters killed",
-     "n": 72
+     "n": 73
     },
     {
      "kat": "Honorable Kills",
@@ -1230,17 +1232,17 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 4107
+     "n": 4177
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 3201
+     "n": 3271
     },
     {
      "kat": "Killing Blows",
      "ime": "Continent with the most Killing Blows",
-     "n": 1644,
+     "n": 1714,
      "opis": "Eastern Kingdoms"
     },
     {
@@ -1291,7 +1293,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 458
+     "n": 462
     },
     {
      "kat": "Quests",
@@ -1321,7 +1323,7 @@
     {
      "kat": "Skills",
      "ime": "Weapon skills at maximum skill",
-     "n": 11
+     "n": 15
     },
     {
      "kat": "Secondary Skills",
@@ -1381,12 +1383,12 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 98
+     "n": 100
     },
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
-     "n": 59
+     "n": 60
     },
     {
      "kat": "Social",
@@ -1413,20 +1415,23 @@
      "Rig Wars",
      "A Threat in Feralas",
      "Satyr Hooves",
+     "Bristle Hills Bandits",
      "WANTED: Scoutmaster Vargas",
      "Paletusk Harvesting",
+     "Gnoll Infestation",
      "Not My Circus",
      "Step Two: More Rock",
      "The Grave Knight",
      "Source of Power",
      "Shady Saltseers",
      "On the Other Side",
-     "Poison Tips",
      "WANTED: Ghostmaw",
+     "Snargl's Snout",
      "Fetch 'n' Fletch",
-     "The Goblin Trader"
+     "The Goblin Trader",
+     "Craftsman's Writ: Fire Goggles"
     ],
-    "zavrseno": 518
+    "zavrseno": 522
    },
    "mountovi": [
     "Brown Wolf"
@@ -1438,7 +1443,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg",
-   "azurirano": "2026-11-25T10:27:46Z"
+   "azurirano": "2026-11-25T12:27:19Z"
   },
   "Janica Frostelich": {
    "level": 18,
@@ -2707,10 +2712,9 @@
   },
   "Arsen Deadic": {
    "level": 42,
-   "xp": 3919,
+   "xp": 55286,
    "guild": "Kafana na Balkanu",
-   "ilvl": 35,
-   "zadnjiLogin": "2026-11-24T15:28:21Z",
+   "zadnjiLogin": "2026-11-25T12:23:03Z",
    "izvor": "Blizzard API",
    "talenti": [
     2,
@@ -2759,7 +2763,7 @@
      "ime": "Seal of Command",
      "rang": 1,
      "stablo": "Retribution",
-     "opis": "Gives the Paladin a chance to deal additional Holy damage equal to 70% of normal weapon damage.  Only one Seal can be active on the Paladin at any one time.  Lasts 30 sec.\r\n\r\nUnleashing this Seal's energy will judge an enemy, instantly causing 79 to 84 Holy damage, 158 to 167 if the target is stunned or incapacitated."
+     "opis": "Gives the Paladin a chance to deal additional Holy damage equal to 70% of normal weapon damage.  Only one Seal can be active on the Paladin at any one time.  Lasts 30 sec.\r\n\r\nUnleashing this Seal's energy will judge an enemy, instantly causing 86 to 91 Holy damage, 173 to 182 if the target is stunned or incapacitated."
     },
     {
      "ime": "Pursuit of Justice",
@@ -2810,112 +2814,91 @@
      "ime": "Slayer's Skullcap",
      "kvaliteta": "uncommon",
      "wowhead": 14753,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133161.jpg",
-     "ilvl": 33
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133161.jpg"
     },
     {
      "slot": "Neck",
      "ime": "Marsh Chain of the Bear",
      "kvaliteta": "uncommon",
      "wowhead": 12042,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133291.jpg",
-     "ilvl": 42
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133291.jpg"
     },
     {
      "slot": "Shoulder",
      "ime": "Resistance Breaker Spaulder",
      "kvaliteta": "rare",
      "wowhead": 274996,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135038.jpg",
-     "ilvl": 44
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135038.jpg"
     },
     {
      "slot": "Chest",
      "ime": "Renegade Chestguard of the Eagle",
      "kvaliteta": "uncommon",
      "wowhead": 9866,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132634.jpg",
-     "ilvl": 38
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132634.jpg"
     },
     {
      "slot": "Waist",
      "ime": "Stonefist Girdle",
      "kvaliteta": "rare",
      "wowhead": 6742,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132524.jpg",
-     "ilvl": 36
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132524.jpg"
     },
     {
      "slot": "Legs",
      "ime": "Krol'dok Warplate Legplates",
      "kvaliteta": "rare",
      "wowhead": 287013,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/134584.jpg",
-     "ilvl": 46
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/134584.jpg"
     },
     {
      "slot": "Feet",
      "ime": "Worgbinder's Treads",
      "kvaliteta": "rare",
      "wowhead": 275003,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132585.jpg",
-     "ilvl": 45
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132585.jpg"
     },
     {
      "slot": "Wrist",
      "ime": "Scarlet Wristguards",
      "kvaliteta": "rare",
      "wowhead": 10333,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132602.jpg",
-     "ilvl": 36
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132602.jpg"
     },
     {
      "slot": "Hands",
      "ime": "Krol'dok Warplate Gauntlets",
      "kvaliteta": "rare",
      "wowhead": 287012,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132956.jpg",
-     "ilvl": 45
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132956.jpg"
     },
     {
      "slot": "Finger 1",
      "ime": "Ring of the Underwood",
      "kvaliteta": "rare",
      "wowhead": 2951,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133354.jpg",
-     "ilvl": 36
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133354.jpg"
     },
     {
      "slot": "Finger 2",
      "ime": "Bonebinder's Signet",
      "kvaliteta": "rare",
      "wowhead": 273032,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133370.jpg",
-     "ilvl": 31
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133370.jpg"
     },
     {
      "slot": "Back",
      "ime": "Cloak of the Cult",
      "kvaliteta": "uncommon",
      "wowhead": 275050,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133774.jpg",
-     "ilvl": 46
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133774.jpg"
     },
     {
      "slot": "Main Hand",
-     "ime": "Sword of Omen",
+     "ime": "Mograine's Might",
      "kvaliteta": "rare",
-     "wowhead": 6802,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135317.jpg",
-     "ilvl": 44
-    },
-    {
-     "slot": "Off Hand",
-     "ime": "Aegis of the Scarlet Commander",
-     "kvaliteta": "rare",
-     "wowhead": 7726,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/134951.jpg",
-     "ilvl": 44
+     "wowhead": 7723,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133488.jpg"
     }
    ],
    "profesije": [
@@ -2951,73 +2934,73 @@
     }
    ],
    "statovi": {
-    "hp": 2282,
-    "resurs": 1871,
+    "hp": 2302,
+    "resurs": 2111,
     "resursIme": "Mana",
-    "str": 140,
-    "agi": 71,
-    "sta": 178,
-    "int": 74,
+    "str": 132,
+    "agi": 68,
+    "sta": 180,
+    "int": 90,
     "spi": 65,
-    "armor": 3850,
-    "ap": 386,
-    "spellPower": 48,
-    "crit": 11.64,
-    "spellCrit": 11.26,
-    "rangedCrit": 2.2,
-    "dodge": 6.0,
-    "parry": 11.05,
-    "block": 5.12,
-    "dps": 57.3
+    "armor": 2296,
+    "ap": 370,
+    "spellPower": 58,
+    "crit": 11.62,
+    "spellCrit": 11.64,
+    "rangedCrit": 1.98,
+    "dodge": 5.94,
+    "parry": 11.21,
+    "block": 5.28,
+    "dps": 69.2
    },
    "reputacije": [
     {
      "ime": "Undercity",
      "status": "Honored",
-     "vrijednost": 10016,
+     "vrijednost": 10066,
      "max": 12000
     },
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 551,
+     "vrijednost": 751,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Friendly",
-     "vrijednost": 4948,
+     "vrijednost": 4998,
      "max": 6000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Friendly",
-     "vrijednost": 4128,
+     "vrijednost": 4178,
      "max": 6000
     },
     {
      "ime": "Ratchet",
      "status": "Friendly",
-     "vrijednost": 1292,
+     "vrijednost": 1625,
      "max": 6000
     },
     {
      "ime": "Powderfuse",
      "status": "Friendly",
-     "vrijednost": 840,
+     "vrijednost": 1260,
      "max": 6000
     },
     {
      "ime": "Booty Bay",
-     "status": "Neutral",
-     "vrijednost": 2977,
-     "max": 3000
+     "status": "Friendly",
+     "vrijednost": 555,
+     "max": 6000
     },
     {
      "ime": "Everlook",
-     "status": "Neutral",
-     "vrijednost": 2940,
-     "max": 3000
+     "status": "Friendly",
+     "vrijednost": 272,
+     "max": 6000
     }
    ],
    "statistika": [
@@ -3040,7 +3023,7 @@
     {
      "kat": "Consumables",
      "ime": "Health potions consumed",
-     "n": 22
+     "n": 23
     },
     {
      "kat": "Consumables",
@@ -3055,12 +3038,12 @@
     {
      "kat": "Consumables",
      "ime": "Beverages consumed",
-     "n": 112
+     "n": 113
     },
     {
      "kat": "Consumables",
      "ime": "Food eaten",
-     "n": 67
+     "n": 69
     },
     {
      "kat": "Reputation",
@@ -3155,17 +3138,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 7867
+     "n": 8056
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 6793
+     "n": 6931
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 7807
+     "n": 7996
     },
     {
      "kat": "Creatures",
@@ -3175,7 +3158,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 4351,
+     "n": 4494,
      "opis": "Humanoid"
     },
     {
@@ -3202,23 +3185,23 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 3093
+     "n": 3265
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 2557
+     "n": 2729
     },
     {
      "kat": "Killing Blows",
      "ime": "Continent with the most Killing Blows",
-     "n": 1675,
+     "n": 1847,
      "opis": "Eastern Kingdoms"
     },
     {
      "kat": "Deaths",
      "ime": "Total deaths",
-     "n": 68
+     "n": 69
     },
     {
      "kat": "Dungeons and Raids",
@@ -3268,7 +3251,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 417
+     "n": 426
     },
     {
      "kat": "Quests",
@@ -3278,7 +3261,7 @@
     {
      "kat": "Quests",
      "ime": "Quests abandoned",
-     "n": 84
+     "n": 85
     },
     {
      "kat": "Skills",
@@ -3348,7 +3331,7 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 120
+     "n": 121
     },
     {
      "kat": "Travel",
@@ -3368,45 +3351,47 @@
    ],
    "questovi": {
     "uLogu": [
-     "Mok'thardin's Enchantment",
-     "Tome of Twilight",
-     "Reclaimed Treasures",
-     "Call to Arms",
-     "We've Been Robbed!",
-     "Bloody Bone Necklaces",
-     "Shady Saltseers",
-     "Foul Magics",
-     "Step Two: More Rock",
-     "Rig Wars",
-     "Bloodmaster's Ring",
-     "Not My Circus",
-     "Hostile Takeover",
-     "Blood in the Streets",
+     "Investigate the Camp",
      "Eye of Mugg",
-     "Strahnbrad Mystery",
-     "See Ya, Scallywags!",
-     "An Unholy Alliance",
-     "Breaking the Keystone",
-     "Craftsman's Writ: Ornate Spyglass",
-     "Admiral Lamora",
+     "Tome of Twilight",
+     "Key Ingredients",
      "A Token of Vengeance",
      "Bloodscalp Ears",
-     "Hunt for Yenniku",
-     "Grim Message",
-     "Investigate the Camp",
+     "Voodoo Dues",
+     "Stranglethorn Fever",
      "Sigil of Strom",
-     "Weed Whacked",
-     "Enemies in the Water",
-     "Deadmire",
-     "Scaring Shaky",
-     "Battle of Warsong Gulch",
-     "The Offense of Grom'gol",
+     "Mok'thardin's Enchantment",
+     "Breaking the Keystone",
+     "Call to Arms",
+     "Craftsman's Writ: Ornate Spyglass",
+     "Whiskey Slim's Lost Grog",
+     "The Bloodsail Buccaneers",
+     "Hunt for Yenniku",
+     "Foul Magics",
+     "Blood in the Streets",
      "Goblin Sponsorship",
+     "Deadmire",
+     "Zanzil's Secret",
+     "Bloody Bone Necklaces",
+     "Reclaimed Treasures",
+     "Rig Wars",
+     "Tran'rek",
+     "Grim Message",
+     "Enemies in the Water",
+     "An Unholy Alliance",
+     "The Captain's Chest",
+     "Battle of Warsong Gulch",
      "Bring the End",
-     "Key Ingredients",
-     "On the Other Side"
+     "See Ya, Scallywags!",
+     "Admiral Lamora",
+     "Not My Circus",
+     "Step Two: More Rock",
+     "Shady Saltseers",
+     "All's Well That Ends Well",
+     "On the Other Side",
+     "Bloodmaster's Ring"
     ],
-    "zavrseno": 480
+    "zavrseno": 489
    },
    "mountovi": [
     "Summon Warhorse",
@@ -3426,10 +3411,10 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg",
-   "azurirano": "2026-11-24T16:29:38Z"
+   "azurirano": "2026-11-25T12:27:19Z"
   }
  },
- "provjereno": "2026-11-25T10:27:46Z",
+ "provjereno": "2026-11-25T12:27:19Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3466,7 +3451,7 @@
     "rang": 3,
     "slug": "melee-kitic",
     "ilvl": null,
-    "zadnjiLogin": "2026-11-25T08:57:47Z",
+    "zadnjiLogin": "2026-11-25T10:29:38Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg"
    },
    {
@@ -3476,8 +3461,8 @@
     "rasa": "Undead",
     "rang": 3,
     "slug": "arsen-deadic",
-    "ilvl": 35,
-    "zadnjiLogin": "2026-11-24T15:28:21Z",
+    "ilvl": null,
+    "zadnjiLogin": "2026-11-25T12:23:03Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg"
    },
    {
@@ -3498,8 +3483,8 @@
     "rasa": "Tauren",
     "rang": 4,
     "slug": "divlji-druid",
-    "ilvl": 40,
-    "zadnjiLogin": "2026-11-24T20:18:13Z",
+    "ilvl": null,
+    "zadnjiLogin": "2026-11-25T11:58:50Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/176/12362928-avatar.jpg"
    },
    {
@@ -4080,6 +4065,11 @@
     "2026-11-25T10:27:46Z",
     43,
     77953
+   ],
+   [
+    "2026-11-25T12:27:19Z",
+    43,
+    102044
    ]
   ],
   "Janica Frostelich": [
@@ -4561,6 +4551,11 @@
     "2026-11-24T16:29:38Z",
     42,
     3919
+   ],
+   [
+    "2026-11-25T12:27:19Z",
+    42,
+    55286
    ]
   ]
  }

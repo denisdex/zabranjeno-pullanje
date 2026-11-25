@@ -33,7 +33,7 @@
       "professions": [
         {
           "name": "Mining",
-          "skill": 217,
+          "skill": 219,
           "phase": "stalno"
         },
         {
@@ -53,7 +53,7 @@
         },
         {
           "name": "First Aid",
-          "skill": 92
+          "skill": 117
         }
       ]
     },
@@ -1558,6 +1558,18 @@
       "character": "warrior",
       "profession": "Mining",
       "skill": 217
+    },
+    {
+      "date": "2026-11-25",
+      "character": "warrior",
+      "profession": "Mining",
+      "skill": 219
+    },
+    {
+      "date": "2026-11-25",
+      "character": "warrior",
+      "profession": "First Aid",
+      "skill": 117
     }
   ],
   "flows": [
