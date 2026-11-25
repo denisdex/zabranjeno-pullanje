@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-25T16:27:19Z",
+ "azurirano": "2026-11-25T22:26:17Z",
  "likovi": {
   "Saman Saulic": {
    "level": 50,
@@ -3429,7 +3429,7 @@
    "azurirano": "2026-11-25T16:27:19Z"
   }
  },
- "provjereno": "2026-11-25T20:26:47Z",
+ "provjereno": "2026-11-25T22:26:17Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3487,8 +3487,8 @@
     "rasa": "Tauren",
     "rang": 4,
     "slug": "venos-xx",
-    "ilvl": 46,
-    "zadnjiLogin": "2026-11-25T00:47:56Z",
+    "ilvl": null,
+    "zadnjiLogin": "2026-11-25T21:53:31Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/253/13774333-avatar.jpg"
    },
    {
@@ -3509,8 +3509,8 @@
     "rasa": "Troll",
     "rang": 4,
     "slug": "jebothe-dan",
-    "ilvl": 35,
-    "zadnjiLogin": "2026-11-24T21:51:18Z",
+    "ilvl": null,
+    "zadnjiLogin": "2026-11-25T20:34:56Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/102/15576678-avatar.jpg"
    },
    {
