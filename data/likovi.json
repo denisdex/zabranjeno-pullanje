@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-25T08:27:51Z",
+ "azurirano": "2026-11-25T10:27:46Z",
  "likovi": {
   "Saman Saulic": {
    "level": 50,
@@ -738,10 +738,9 @@
   },
   "Melee Kitic": {
    "level": 43,
-   "xp": 74803,
+   "xp": 77953,
    "guild": "Kafana na Balkanu",
-   "ilvl": 38,
-   "zadnjiLogin": "2026-11-24T21:03:21Z",
+   "zadnjiLogin": "2026-11-25T08:57:47Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -829,24 +828,21 @@
      "ime": "Renegade Circlet of Strength",
      "kvaliteta": "uncommon",
      "wowhead": 9870,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132768.jpg",
-     "ilvl": 36
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132768.jpg"
     },
     {
      "slot": "Neck",
      "ime": "Chain of the Corruptor",
      "kvaliteta": "rare",
      "wowhead": 275004,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133306.jpg",
-     "ilvl": 46
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133306.jpg"
     },
     {
      "slot": "Shoulder",
      "ime": "Wrangling Spaulders",
      "kvaliteta": "uncommon",
      "wowhead": 15698,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135045.jpg",
-     "ilvl": 38
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135045.jpg"
     },
     {
      "slot": "Chest",
@@ -854,7 +850,6 @@
      "kvaliteta": "rare",
      "wowhead": 10775,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132743.jpg",
-     "ilvl": 42,
      "enchant": "Enchanted: Attack Power +4 and Armor +16"
     },
     {
@@ -862,8 +857,7 @@
      "ime": "Bracesteel Belt",
      "kvaliteta": "uncommon",
      "wowhead": 15588,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132510.jpg",
-     "ilvl": 35
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132510.jpg"
     },
     {
      "slot": "Legs",
@@ -871,7 +865,6 @@
      "kvaliteta": "uncommon",
      "wowhead": 15596,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/134588.jpg",
-     "ilvl": 41,
      "enchant": "Enchanted: Attack Power +4 and Armor +16"
     },
     {
@@ -879,16 +872,14 @@
      "ime": "Chief Brigadier Boots",
      "kvaliteta": "uncommon",
      "wowhead": 6412,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132539.jpg",
-     "ilvl": 39
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132539.jpg"
     },
     {
      "slot": "Wrist",
      "ime": "Darkspear Armsplints",
      "kvaliteta": "uncommon",
      "wowhead": 4132,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132608.jpg",
-     "ilvl": 37
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132608.jpg"
     },
     {
      "slot": "Hands",
@@ -896,74 +887,63 @@
      "kvaliteta": "rare",
      "wowhead": 7724,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132953.jpg",
-     "ilvl": 44,
      "enchant": "Enchanted: Attack Power +4 and Armor +16"
     },
     {
      "slot": "Finger 1",
-     "ime": "Seal of Sylvanas",
-     "kvaliteta": "rare",
-     "wowhead": 6414,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133357.jpg",
-     "ilvl": 29
+     "ime": "Thallium Hoop of the Falcon",
+     "kvaliteta": "uncommon",
+     "wowhead": 11986,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133348.jpg"
     },
     {
      "slot": "Finger 2",
      "ime": "Cerulean Ring of the Tiger",
      "kvaliteta": "uncommon",
      "wowhead": 11985,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133350.jpg",
-     "ilvl": 35
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133350.jpg"
     },
     {
      "slot": "Trinket 1",
      "ime": "Satchel of Potions",
      "kvaliteta": "uncommon",
      "wowhead": 280766,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133633.jpg",
-     "ilvl": 33
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133633.jpg"
     },
     {
      "slot": "Trinket 2",
      "ime": "Dog Whistle",
      "kvaliteta": "rare",
      "wowhead": 3456,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132161.jpg",
-     "ilvl": 30
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132161.jpg"
     },
     {
      "slot": "Back",
      "ime": "Cabalist Cloak of the Beast",
      "kvaliteta": "uncommon",
      "wowhead": 7533,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133770.jpg",
-     "ilvl": 44
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133770.jpg"
     },
     {
      "slot": "Main Hand",
      "ime": "Vanquisher's Sword",
      "kvaliteta": "rare",
      "wowhead": 10823,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135345.jpg",
-     "ilvl": 44,
-     "enchant": "Sharpened +4"
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135345.jpg"
     },
     {
      "slot": "Off Hand",
      "ime": "Sword of Omen",
      "kvaliteta": "rare",
      "wowhead": 6802,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135317.jpg",
-     "ilvl": 44,
-     "enchant": "Sharpened +4"
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135317.jpg"
     },
     {
      "slot": "Ranged",
      "ime": "Precision Bow",
      "kvaliteta": "uncommon",
      "wowhead": 217315,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135492.jpg",
-     "ilvl": 27
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135492.jpg"
     }
    ],
    "profesije": [
@@ -999,48 +979,48 @@
     }
    ],
    "statovi": {
-    "hp": 2251,
+    "hp": 2171,
     "resurs": 100,
     "resursIme": "Rage",
     "str": 160,
-    "agi": 92,
-    "sta": 167,
-    "int": 23,
+    "agi": 98,
+    "sta": 159,
+    "int": 29,
     "spi": 39,
-    "armor": 1722,
-    "ap": 501,
+    "armor": 1734,
+    "ap": 495,
     "spellPower": 5,
-    "crit": 11.44,
+    "crit": 11.86,
     "spellCrit": 0.0,
     "rangedCrit": 0.0,
-    "dodge": 6.36,
+    "dodge": 6.78,
     "parry": 4.88,
     "block": 4.88,
-    "dps": 67.6
+    "dps": 65.4
    },
    "reputacije": [
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 8400,
+     "vrijednost": 8425,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Honored",
-     "vrijednost": 5053,
+     "vrijednost": 5078,
      "max": 12000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Honored",
-     "vrijednost": 2375,
+     "vrijednost": 2400,
      "max": 12000
     },
     {
      "ime": "Undercity",
      "status": "Honored",
-     "vrijednost": 1317,
+     "vrijednost": 1417,
      "max": 12000
     },
     {
@@ -1311,7 +1291,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 457
+     "n": 458
     },
     {
      "kat": "Quests",
@@ -1341,7 +1321,7 @@
     {
      "kat": "Skills",
      "ime": "Weapon skills at maximum skill",
-     "n": 6
+     "n": 11
     },
     {
      "kat": "Secondary Skills",
@@ -1361,7 +1341,7 @@
     {
      "kat": "Secondary Skills",
      "ime": "First Aid Manuals learned",
-     "n": 8
+     "n": 10
     },
     {
      "kat": "Secondary Skills",
@@ -1391,7 +1371,7 @@
     {
      "kat": "Professions",
      "ime": "Highest Mining skill",
-     "n": 215
+     "n": 217
     },
     {
      "kat": "Professions",
@@ -1401,7 +1381,7 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 97
+     "n": 98
     },
     {
      "kat": "Travel",
@@ -1416,37 +1396,37 @@
    ],
    "questovi": {
     "uLogu": [
-     "WANTED: Ghostmaw",
-     "Tome of Twilight",
-     "Reclaimed Treasures",
-     "Poison Tips",
-     "The Grave Knight",
-     "Shady Saltseers",
-     "A Vengeful Fate",
-     "Step Two: More Rock",
-     "Rig Wars",
-     "Not My Circus",
-     "Dragonmaw Shinbones",
-     "Paletusk Harvesting",
-     "Blood in the Streets",
      "Eye of Mugg",
-     "The Hammer May Fall",
-     "A Token of Vengeance",
-     "Armory of Sunnyglade",
-     "Gol'dir",
-     "Source of Power",
-     "WANTED: Scoutmaster Vargas",
-     "The Goblin Trader",
-     "Vorrel's Revenge",
-     "Dream Dust in the Swamp",
-     "The Offense of Grom'gol",
+     "Tome of Twilight",
      "Key Ingredients",
+     "A Token of Vengeance",
+     "Gol'dir",
+     "A Vengeful Fate",
+     "Dream Dust in the Swamp",
+     "Blood in the Streets",
+     "The Offense of Grom'gol",
+     "The Hammer May Fall",
+     "Vorrel's Revenge",
      "Martek the Exiled",
-     "On the Other Side",
+     "Reclaimed Treasures",
+     "Dragonmaw Shinbones",
+     "Rig Wars",
+     "A Threat in Feralas",
      "Satyr Hooves",
-     "Fetch 'n' Fletch"
+     "WANTED: Scoutmaster Vargas",
+     "Paletusk Harvesting",
+     "Not My Circus",
+     "Step Two: More Rock",
+     "The Grave Knight",
+     "Source of Power",
+     "Shady Saltseers",
+     "On the Other Side",
+     "Poison Tips",
+     "WANTED: Ghostmaw",
+     "Fetch 'n' Fletch",
+     "The Goblin Trader"
     ],
-    "zavrseno": 517
+    "zavrseno": 518
    },
    "mountovi": [
     "Brown Wolf"
@@ -1458,7 +1438,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg",
-   "azurirano": "2026-11-24T22:29:22Z"
+   "azurirano": "2026-11-25T10:27:46Z"
   },
   "Janica Frostelich": {
    "level": 18,
@@ -2114,6 +2094,7 @@
      "ime": "Huntsman's Belt of the Bandit",
      "kvaliteta": "uncommon",
      "wowhead": 9891,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132506.jpg",
      "ilvl": 39
     },
     {
@@ -2722,7 +2703,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg",
-   "azurirano": "2026-11-25T08:27:51Z"
+   "azurirano": "2026-11-25T10:27:46Z"
   },
   "Arsen Deadic": {
    "level": 42,
@@ -3448,7 +3429,7 @@
    "azurirano": "2026-11-24T16:29:38Z"
   }
  },
- "provjereno": "2026-11-25T08:27:51Z",
+ "provjereno": "2026-11-25T10:27:46Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3484,8 +3465,8 @@
     "rasa": "Orc",
     "rang": 3,
     "slug": "melee-kitic",
-    "ilvl": 38,
-    "zadnjiLogin": "2026-11-24T21:03:21Z",
+    "ilvl": null,
+    "zadnjiLogin": "2026-11-25T08:57:47Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg"
    },
    {
@@ -4094,6 +4075,11 @@
     "2026-11-24T22:29:22Z",
     43,
     74803
+   ],
+   [
+    "2026-11-25T10:27:46Z",
+    43,
+    77953
    ]
   ],
   "Janica Frostelich": [
