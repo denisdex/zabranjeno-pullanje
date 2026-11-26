@@ -1,11 +1,11 @@
 {
- "azurirano": "2026-11-26T16:23:27Z",
+ "azurirano": "2026-11-26T18:23:31Z",
  "likovi": {
   "Saman Saulic": {
    "level": 50,
    "xp": 110587,
    "guild": "Kafana na Balkanu",
-   "zadnjiLogin": "2026-11-26T15:18:29Z",
+   "zadnjiLogin": "2026-11-26T17:01:31Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -730,7 +730,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg",
-   "azurirano": "2026-11-26T16:23:27Z"
+   "azurirano": "2026-11-26T18:23:31Z"
   },
   "Melee Kitic": {
    "level": 45,
@@ -985,45 +985,45 @@
     "hp": 2129,
     "resurs": 100,
     "resursIme": "Rage",
-    "str": 189,
+    "str": 185,
     "agi": 121,
     "sta": 147,
     "int": 39,
     "spi": 40,
     "armor": 2373,
-    "ap": 545,
+    "ap": 559,
     "spellPower": 5,
-    "crit": 5.0,
+    "crit": 13.14,
     "spellCrit": 0.0,
     "rangedCrit": 0.0,
     "dodge": 7.98,
     "parry": 4.8,
     "block": 4.8,
-    "dps": 70.5
+    "dps": 69.9
    },
    "reputacije": [
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 9081,
+     "vrijednost": 9181,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Honored",
-     "vrijednost": 5297,
+     "vrijednost": 5322,
      "max": 12000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Honored",
-     "vrijednost": 2712,
+     "vrijednost": 2737,
      "max": 12000
     },
     {
      "ime": "Undercity",
      "status": "Honored",
-     "vrijednost": 1598,
+     "vrijednost": 1623,
      "max": 12000
     },
     {
@@ -1060,7 +1060,7 @@
     {
      "kat": "Consumables",
      "ime": "Bandages used",
-     "n": 113
+     "n": 114
     },
     {
      "kat": "Consumables",
@@ -1186,17 +1186,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 8582
+     "n": 8587
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 7023
+     "n": 7027
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 8506
+     "n": 8511
     },
     {
      "kat": "Creatures",
@@ -1206,7 +1206,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 5285,
+     "n": 5288,
      "opis": "Humanoid"
     },
     {
@@ -1233,17 +1233,17 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 4421
+     "n": 4426
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 3465
+     "n": 3470
     },
     {
      "kat": "Killing Blows",
      "ime": "Continent with the most Killing Blows",
-     "n": 1795,
+     "n": 1800,
      "opis": "Eastern Kingdoms"
     },
     {
@@ -1299,7 +1299,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 500
+     "n": 501
     },
     {
      "kat": "Quests",
@@ -1344,7 +1344,7 @@
     {
      "kat": "Secondary Skills",
      "ime": "First Aid skill",
-     "n": 130
+     "n": 148
     },
     {
      "kat": "Secondary Skills",
@@ -1408,7 +1408,6 @@
      "Troll Temper",
      "Solution to Doom",
      "Satyr Hooves",
-     "Ripple Recovery",
      "Martek the Exiled",
      "Necklace Recovery",
      "Lost for Words",
@@ -1420,6 +1419,7 @@
      "A Vengeful Fate",
      "Source of Power",
      "Improved Quality",
+     "Venom Bottles",
      "Return to Witch Doctor Uzer'i",
      "Power Stones",
      "Shady Saltseers",
@@ -1433,7 +1433,7 @@
      "Zum'rah's Head",
      "Shadowshard Fragments"
     ],
-    "zavrseno": 562
+    "zavrseno": 563
    },
    "mountovi": [
     "Brown Wolf"
@@ -1445,7 +1445,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg",
-   "azurirano": "2026-11-26T08:25:15Z"
+   "azurirano": "2026-11-26T18:23:31Z"
   },
   "Janica Frostelich": {
    "level": 18,
@@ -3421,7 +3421,7 @@
    "azurirano": "2026-11-26T16:23:27Z"
   }
  },
- "provjereno": "2026-11-26T16:23:27Z",
+ "provjereno": "2026-11-26T18:23:31Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3436,7 +3436,7 @@
     "rang": 0,
     "slug": "saman-saulic",
     "ilvl": null,
-    "zadnjiLogin": "2026-11-26T15:18:29Z",
+    "zadnjiLogin": "2026-11-26T17:01:31Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg"
    },
    {
@@ -3458,7 +3458,7 @@
     "rang": 3,
     "slug": "melee-kitic",
     "ilvl": null,
-    "zadnjiLogin": "2026-11-26T07:55:53Z",
+    "zadnjiLogin": "2026-11-26T18:23:53Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg"
    },
    {
@@ -3485,13 +3485,13 @@
    },
    {
     "ime": "Divlji Druid",
-    "level": 48,
+    "level": 49,
     "klasa": "Druid",
     "rasa": "Tauren",
     "rang": 4,
     "slug": "divlji-druid",
     "ilvl": null,
-    "zadnjiLogin": "2026-11-26T15:32:57Z",
+    "zadnjiLogin": "2026-11-26T17:43:23Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/176/12362928-avatar.jpg"
    },
    {
