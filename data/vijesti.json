@@ -9,8 +9,19 @@
    "url": "https://www.wowhead.com/news/rss/classic"
   }
  ],
- "azurirano": "2026-11-25T20:26:47Z",
+ "azurirano": "2026-11-26T00:26:16Z",
  "stavke": [
+  {
+   "datum": "2026-11-25T23:25:08Z",
+   "naslov": "WoW: Forever Hotfixes - November 25, 2026",
+   "link": "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-25-2026/2403040/16",
+   "izvor": "Blizzard",
+   "sazetak": "November 25, 2026 Classes Druid Hurricane now correctly lands its final hit. Balance Improved Wrath is now renamed Starlight Wrath. Starlight Wrath also reduces the cast time of Starfire by 0.1/0.2/0.3/0.4/0.5 seconds. Improved Moonfire is…",
+   "oznake": [
+    "Hotfix"
+   ],
+   "vrsta": "patch"
+  },
   {
    "datum": "2026-11-25T18:40:39Z",
    "naslov": "WoW Celebration Pass, WoW Forever's \"Al'Aketh Rising\" Comic, December Trading Post, and More in WoW…",
@@ -28,17 +39,6 @@
    "sazetak": "Join Constable Aonda of the Skyborne as she travels into a remote settlement in the shadow of a growing threat. To find out why, she plays along, but quickly finds herself overwhelmed by hidden agendas and fanatic devotion. And in a land…",
    "oznake": [],
    "vrsta": "vijest"
-  },
-  {
-   "datum": "2026-11-24T02:06:52Z",
-   "naslov": "WoW: Forever Hotfixes - November 23, 2026",
-   "link": "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-23-2026/2403040/15",
-   "izvor": "Blizzard",
-   "sazetak": "November 23, 2026 Classes Druid The 4-piece Feralheart set for Druids now correctly grants 4 Energy regeneration every 1 second for 5 seconds. Priest Mind Vision should no longer proc effects. Shadow Fixed an issue where Dark Inspiration…",
-   "oznake": [
-    "Hotfix"
-   ],
-   "vrsta": "patch"
   },
   {
    "datum": "2026-11-22T19:00:00Z",
@@ -140,15 +140,6 @@
    "link": "https://www.wowhead.com/news=383784/the-adventure-begins-in-wow-forever-stay-connected-with-discord-and-taldramir",
    "izvor": "Wowhead",
    "sazetak": "Blizzard has released a new issue of their WoW Weekly blog post, recapping the Forever launch, Discord integration, and the reveal of a new Forever Legendary weapon. Continue reading »",
-   "oznake": [],
-   "vrsta": "vijest"
-  },
-  {
-   "datum": "2026-11-06T18:10:08Z",
-   "naslov": "The Adventure Begins in WoW: Forever, Stay Connected with Discord, and Taldramir Takes Shape in WoW…",
-   "link": "https://us.forums.blizzard.com/en/wow/t/the-adventure-begins-in-wow-forever-stay-connected-with-discord-and-taldramir-takes-shape-in-wow%E2%80%A6/2403854/1",
-   "izvor": "Blizzard",
-   "sazetak": "Azeroth has a new home, and the adventure is just getting started! This week in WoW Weekly, discover that World of Warcraft: Forever is now live, join ongoing conversations on Discord in and out of the game, explore another way to play…",
    "oznake": [],
    "vrsta": "vijest"
   },

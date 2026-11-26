@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-25T22:26:17Z",
+ "azurirano": "2026-11-26T00:26:16Z",
  "likovi": {
   "Saman Saulic": {
    "level": 50,
@@ -737,14 +737,14 @@
    "azurirano": "2026-11-24T12:30:14Z"
   },
   "Melee Kitic": {
-   "level": 44,
-   "xp": 52487,
+   "level": 45,
+   "xp": 68789,
    "guild": "Kafana na Balkanu",
-   "zadnjiLogin": "2026-11-25T15:20:11Z",
+   "zadnjiLogin": "2026-11-26T00:06:34Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
-    35,
+    36,
     0
    ],
    "specka": "Fury",
@@ -817,9 +817,9 @@
     },
     {
      "ime": "Flurry",
-     "rang": 2,
+     "rang": 3,
      "stablo": "Fury",
-     "opis": "Increases your melee attack speed by 20% for your next 3 swings after dealing a melee critical strike."
+     "opis": "Increases your melee attack speed by 30% for your next 3 swings after dealing a melee critical strike."
     },
     {
      "ime": "Bloodthirst",
@@ -831,10 +831,10 @@
    "oprema": [
     {
      "slot": "Head",
-     "ime": "Renegade Circlet of Strength",
+     "ime": "Chromite Barbute",
      "kvaliteta": "uncommon",
-     "wowhead": 9870,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132768.jpg"
+     "wowhead": 8142,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133124.jpg"
     },
     {
      "slot": "Neck",
@@ -875,10 +875,10 @@
     },
     {
      "slot": "Feet",
-     "ime": "Chief Brigadier Boots",
-     "kvaliteta": "uncommon",
-     "wowhead": 6412,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132539.jpg"
+     "ime": "Worgbinder's Treads",
+     "kvaliteta": "rare",
+     "wowhead": 275003,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132585.jpg"
     },
     {
      "slot": "Wrist",
@@ -932,10 +932,10 @@
     },
     {
      "slot": "Main Hand",
-     "ime": "Vanquisher's Sword",
+     "ime": "Rock on Stick",
      "kvaliteta": "rare",
-     "wowhead": 10823,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135345.jpg"
+     "wowhead": 279852,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133046.jpg"
     },
     {
      "slot": "Off Hand",
@@ -946,16 +946,16 @@
     },
     {
      "slot": "Ranged",
-     "ime": "Precision Bow",
+     "ime": "Orwin's Axe",
      "kvaliteta": "uncommon",
-     "wowhead": 217315,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135492.jpg"
+     "wowhead": 287073,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135419.jpg"
     }
    ],
    "profesije": [
     {
      "name": "Mining",
-     "skill": 219,
+     "skill": 223,
      "max": 300,
      "vrsta": "primarna"
     },
@@ -979,54 +979,54 @@
     },
     {
      "name": "First Aid",
-     "skill": 117,
+     "skill": 130,
      "max": 150,
      "vrsta": "sekundarna"
     }
    ],
    "statovi": {
-    "hp": 2229,
+    "hp": 2249,
     "resurs": 100,
     "resursIme": "Rage",
-    "str": 162,
-    "agi": 99,
-    "sta": 161,
-    "int": 29,
-    "spi": 39,
-    "armor": 1736,
-    "ap": 502,
+    "str": 172,
+    "agi": 112,
+    "sta": 159,
+    "int": 45,
+    "spi": 40,
+    "armor": 2108,
+    "ap": 503,
     "spellPower": 5,
-    "crit": 11.83,
+    "crit": 5.0,
     "spellCrit": 0.0,
     "rangedCrit": 0.0,
-    "dodge": 6.71,
-    "parry": 4.84,
-    "block": 4.84,
-    "dps": 65.9
+    "dodge": 7.37,
+    "parry": 4.8,
+    "block": 4.8,
+    "dps": 67.5
    },
    "reputacije": [
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 8450,
+     "vrijednost": 9081,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Honored",
-     "vrijednost": 5085,
+     "vrijednost": 5297,
      "max": 12000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Honored",
-     "vrijednost": 2406,
+     "vrijednost": 2712,
      "max": 12000
     },
     {
      "ime": "Undercity",
      "status": "Honored",
-     "vrijednost": 1423,
+     "vrijednost": 1598,
      "max": 12000
     },
     {
@@ -1038,19 +1038,19 @@
     {
      "ime": "Ratchet",
      "status": "Friendly",
-     "vrijednost": 2967,
+     "vrijednost": 3017,
      "max": 6000
     },
     {
      "ime": "Powderfuse",
      "status": "Friendly",
-     "vrijednost": 1688,
+     "vrijednost": 1788,
      "max": 6000
     },
     {
      "ime": "Booty Bay",
      "status": "Friendly",
-     "vrijednost": 1148,
+     "vrijednost": 1198,
      "max": 6000
     }
    ],
@@ -1058,12 +1058,12 @@
     {
      "kat": "Character",
      "ime": "Times camped",
-     "n": 57
+     "n": 60
     },
     {
      "kat": "Consumables",
      "ime": "Bandages used",
-     "n": 105
+     "n": 113
     },
     {
      "kat": "Consumables",
@@ -1074,12 +1074,12 @@
     {
      "kat": "Consumables",
      "ime": "Health potions consumed",
-     "n": 16
+     "n": 22
     },
     {
      "kat": "Consumables",
      "ime": "Food eaten",
-     "n": 60
+     "n": 69
     },
     {
      "kat": "Consumables",
@@ -1134,7 +1134,7 @@
     {
      "kat": "Dungeons & Raids",
      "ime": "Total 10-player raids entered",
-     "n": 1
+     "n": 2
     },
     {
      "kat": "Boss Kills",
@@ -1189,17 +1189,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 8273
+     "n": 8582
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 6714
+     "n": 7023
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 8197
+     "n": 8506
     },
     {
      "kat": "Creatures",
@@ -1209,7 +1209,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 5001,
+     "n": 5285,
      "opis": "Humanoid"
     },
     {
@@ -1236,28 +1236,28 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 4256
+     "n": 4421
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 3350
+     "n": 3465
     },
     {
      "kat": "Killing Blows",
      "ime": "Continent with the most Killing Blows",
-     "n": 1793,
+     "n": 1795,
      "opis": "Eastern Kingdoms"
     },
     {
      "kat": "Deaths",
      "ime": "Total deaths",
-     "n": 86
+     "n": 89
     },
     {
      "kat": "Dungeons and Raids",
      "ime": "Total raid and dungeon deaths",
-     "n": 22
+     "n": 24
     },
     {
      "kat": "Dungeons and Raids",
@@ -1267,7 +1267,7 @@
     {
      "kat": "Dungeons and Raids",
      "ime": "Total deaths in 10-player raids",
-     "n": 4
+     "n": 6
     },
     {
      "kat": "World",
@@ -1286,8 +1286,13 @@
     },
     {
      "kat": "Resurrection",
+     "ime": "Revived by druids",
+     "n": 1
+    },
+    {
+     "kat": "Resurrection",
      "ime": "Spirit returned to body by shamans",
-     "n": 11
+     "n": 12
     },
     {
      "kat": "Resurrection",
@@ -1297,7 +1302,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 481
+     "n": 500
     },
     {
      "kat": "Quests",
@@ -1307,7 +1312,7 @@
     {
      "kat": "Quests",
      "ime": "Quests abandoned",
-     "n": 49
+     "n": 51
     },
     {
      "kat": "Skills",
@@ -1377,7 +1382,7 @@
     {
      "kat": "Professions",
      "ime": "Highest Mining skill",
-     "n": 219
+     "n": 222
     },
     {
      "kat": "Professions",
@@ -1387,12 +1392,12 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 103
+     "n": 106
     },
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
-     "n": 61
+     "n": 63
     },
     {
      "kat": "Social",
@@ -1402,39 +1407,36 @@
    ],
    "questovi": {
     "uLogu": [
-     "Eye of Mugg",
-     "Tome of Twilight",
-     "Key Ingredients",
-     "A Token of Vengeance",
+     "Fetch 'n' Fletch",
+     "Troll Temper",
+     "Solution to Doom",
+     "Satyr Hooves",
      "Ripple Recovery",
-     "A Vengeful Fate",
-     "The Offense of Grom'gol",
      "Martek the Exiled",
      "Necklace Recovery",
-     "Reclaimed Treasures",
-     "The Ogres of Feralas",
-     "Dragonmaw Shinbones",
-     "Rig Wars",
-     "Satyr Hooves",
-     "Gordunni Cobalt",
-     "A New Cloak's Sheen",
-     "The Mark of Quality",
-     "War on the Woodpaw",
-     "A Strange Request",
-     "Tabetha's Task",
-     "WANTED: Scoutmaster Vargas",
-     "Shadowshard Fragments",
-     "Not My Circus",
-     "Step Two: More Rock",
-     "The Grave Knight",
-     "Source of Power",
-     "Shady Saltseers",
      "Lost for Words",
+     "Divino-matic Rod",
+     "Reclaimed Treasures",
+     "Rig Wars",
+     "A Grim Discovery",
+     "Dragonmaw Shinbones",
+     "A Vengeful Fate",
+     "Source of Power",
+     "Improved Quality",
+     "Return to Witch Doctor Uzer'i",
+     "Power Stones",
+     "Shady Saltseers",
+     "Scarab Shells",
+     "The Offense of Grom'gol",
+     "Gahz'rilla",
      "I Know a Guy",
-     "WANTED: Ghostmaw",
-     "Fetch 'n' Fletch"
+     "The Grave Knight",
+     "Tiara of the Deep",
+     "Find OOX-22/FE!",
+     "Zum'rah's Head",
+     "Shadowshard Fragments"
     ],
-    "zavrseno": 543
+    "zavrseno": 562
    },
    "mountovi": [
     "Brown Wolf"
@@ -1446,7 +1448,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg",
-   "azurirano": "2026-11-25T16:27:19Z"
+   "azurirano": "2026-11-26T00:26:16Z"
   },
   "Janica Frostelich": {
    "level": 18,
@@ -3429,7 +3431,7 @@
    "azurirano": "2026-11-25T16:27:19Z"
   }
  },
- "provjereno": "2026-11-25T22:26:17Z",
+ "provjereno": "2026-11-26T00:26:16Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3460,13 +3462,13 @@
    },
    {
     "ime": "Melee Kitic",
-    "level": 44,
+    "level": 45,
     "klasa": "Warrior",
     "rasa": "Orc",
     "rang": 3,
     "slug": "melee-kitic",
     "ilvl": null,
-    "zadnjiLogin": "2026-11-25T15:20:11Z",
+    "zadnjiLogin": "2026-11-26T00:06:34Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg"
    },
    {
@@ -4090,6 +4092,11 @@
     "2026-11-25T16:27:19Z",
     44,
     52487
+   ],
+   [
+    "2026-11-26T00:26:16Z",
+    45,
+    68789
    ]
   ],
   "Janica Frostelich": [
