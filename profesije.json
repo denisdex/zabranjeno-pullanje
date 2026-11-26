@@ -83,7 +83,7 @@
         },
         {
           "name": "Fishing",
-          "skill": 239
+          "skill": 240
         },
         {
           "name": "First Aid",
@@ -1582,6 +1582,12 @@
       "character": "warrior",
       "profession": "First Aid",
       "skill": 130
+    },
+    {
+      "date": "2026-11-26",
+      "character": "shaman",
+      "profession": "Fishing",
+      "skill": 240
     }
   ],
   "flows": [
