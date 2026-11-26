@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-26T20:23:00Z",
+ "azurirano": "2026-11-26T22:23:00Z",
  "likovi": {
   "Saman Saulic": {
    "level": 50,
@@ -1953,9 +1953,9 @@
   },
   "Nikola Roguevic": {
    "level": 48,
-   "xp": 67212,
+   "xp": 76554,
    "guild": "Kafana na Balkanu",
-   "zadnjiLogin": "2026-11-26T03:04:17Z",
+   "zadnjiLogin": "2026-11-26T21:15:29Z",
    "izvor": "Blizzard API",
    "talenti": [
     4,
@@ -2208,7 +2208,7 @@
     {
      "name": "Cooking",
      "skill": 225,
-     "max": 225,
+     "max": 300,
      "vrsta": "sekundarna"
     },
     {
@@ -2238,7 +2238,7 @@
     "spellPower": 0,
     "crit": 9.61,
     "spellCrit": 2.0,
-    "rangedCrit": 3.65,
+    "rangedCrit": 8.65,
     "dodge": 16.2,
     "parry": 10.88,
     "block": 0.0,
@@ -2248,25 +2248,25 @@
     {
      "ime": "Undercity",
      "status": "Revered",
-     "vrijednost": 8,
+     "vrijednost": 36,
      "max": 21000
     },
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 4966,
+     "vrijednost": 4993,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Honored",
-     "vrijednost": 2306,
+     "vrijednost": 2333,
      "max": 12000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Honored",
-     "vrijednost": 1498,
+     "vrijednost": 1608,
      "max": 12000
     },
     {
@@ -2552,12 +2552,12 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 616
+     "n": 619
     },
     {
      "kat": "Quests",
      "ime": "Average quests completed per day",
-     "n": 44
+     "n": 41.266666666666666
     },
     {
      "kat": "Quests",
@@ -2592,7 +2592,7 @@
     {
      "kat": "Secondary Skills",
      "ime": "Cooking Recipes known",
-     "n": 62
+     "n": 66
     },
     {
      "kat": "Secondary Skills",
@@ -2632,12 +2632,12 @@
     {
      "kat": "Professions",
      "ime": "Highest Skinning skill",
-     "n": 268
+     "n": 274
     },
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 175
+     "n": 179
     },
     {
      "kat": "Travel",
@@ -2652,7 +2652,7 @@
     {
      "kat": "Social",
      "ime": "Total times LOL'd",
-     "n": 95
+     "n": 96
     },
     {
      "kat": "Social",
@@ -2667,14 +2667,12 @@
      "The Lost Fragments",
      "Ripple Recovery",
      "Craftsman's Writ: Golden Scale Gauntlets",
-     "Return to Thunder Bluff",
      "Armory of Sunnyglade",
      "Divino-matic Rod",
      "Reclaimed Treasures",
      "Un'Goro Soil",
      "Necklace Recovery, Take 2",
      "The Crown of Will",
-     "Clamlette Surprise",
      "The Pariah's Instructions",
      "Gammerita, Mon!",
      "To the Undercity for Yagyin's Digest",
@@ -2687,7 +2685,7 @@
      "Zum'rah's Head",
      "Shadowshard Fragments"
     ],
-    "zavrseno": 701
+    "zavrseno": 702
    },
    "mountovi": [
     "Black Skeletal Horse",
@@ -2706,7 +2704,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg",
-   "azurirano": "2026-11-26T04:25:41Z"
+   "azurirano": "2026-11-26T22:23:00Z"
   },
   "Arsen Deadic": {
    "level": 44,
@@ -3421,7 +3419,7 @@
    "azurirano": "2026-11-26T16:23:27Z"
   }
  },
- "provjereno": "2026-11-26T20:23:00Z",
+ "provjereno": "2026-11-26T22:23:00Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3447,7 +3445,7 @@
     "rang": 1,
     "slug": "nikola-roguevic",
     "ilvl": null,
-    "zadnjiLogin": "2026-11-26T03:04:17Z",
+    "zadnjiLogin": "2026-11-26T21:15:29Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg"
    },
    {
@@ -3491,7 +3489,7 @@
     "rang": 4,
     "slug": "divlji-druid",
     "ilvl": null,
-    "zadnjiLogin": "2026-11-26T17:43:23Z",
+    "zadnjiLogin": "2026-11-26T20:53:59Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/176/12362928-avatar.jpg"
    },
    {
@@ -3502,7 +3500,7 @@
     "rang": 4,
     "slug": "jebothe-dan",
     "ilvl": null,
-    "zadnjiLogin": "2026-11-25T20:34:56Z",
+    "zadnjiLogin": "2026-11-26T21:56:43Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/102/15576678-avatar.jpg"
    },
    {
@@ -4386,6 +4384,11 @@
     "2026-11-26T04:25:41Z",
     48,
     67212
+   ],
+   [
+    "2026-11-26T22:23:00Z",
+    48,
+    76554
    ]
   ],
   "Arsen Deadic": [
