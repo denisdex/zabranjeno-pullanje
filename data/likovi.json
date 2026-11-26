@@ -1,11 +1,11 @@
 {
- "azurirano": "2026-11-26T12:24:27Z",
+ "azurirano": "2026-11-26T14:24:03Z",
  "likovi": {
   "Saman Saulic": {
    "level": 50,
    "xp": 110587,
    "guild": "Kafana na Balkanu",
-   "zadnjiLogin": "2026-11-26T02:01:30Z",
+   "zadnjiLogin": "2026-11-26T13:29:20Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -644,7 +644,7 @@
     {
      "kat": "Secondary Skills",
      "ime": "Fishing skill",
-     "n": 239
+     "n": 240
     },
     {
      "kat": "Secondary Skills",
@@ -731,7 +731,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg",
-   "azurirano": "2026-11-26T02:25:41Z"
+   "azurirano": "2026-11-26T14:24:03Z"
   },
   "Melee Kitic": {
    "level": 45,
@@ -3430,7 +3430,7 @@
    "azurirano": "2026-11-26T12:24:27Z"
   }
  },
- "provjereno": "2026-11-26T12:24:27Z",
+ "provjereno": "2026-11-26T14:24:03Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3445,7 +3445,7 @@
     "rang": 0,
     "slug": "saman-saulic",
     "ilvl": null,
-    "zadnjiLogin": "2026-11-26T02:01:30Z",
+    "zadnjiLogin": "2026-11-26T13:29:20Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg"
    },
    {
@@ -3494,13 +3494,13 @@
    },
    {
     "ime": "Divlji Druid",
-    "level": 47,
+    "level": 48,
     "klasa": "Druid",
     "rasa": "Tauren",
     "rang": 4,
     "slug": "divlji-druid",
     "ilvl": null,
-    "zadnjiLogin": "2026-11-25T11:58:50Z",
+    "zadnjiLogin": "2026-11-26T14:17:17Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/176/12362928-avatar.jpg"
    },
    {
