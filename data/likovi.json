@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-26T08:25:15Z",
+ "azurirano": "2026-11-26T12:24:27Z",
  "likovi": {
   "Saman Saulic": {
    "level": 50,
@@ -2711,9 +2711,9 @@
   },
   "Arsen Deadic": {
    "level": 44,
-   "xp": 111,
+   "xp": 2791,
    "guild": "Kafana na Balkanu",
-   "zadnjiLogin": "2026-11-26T02:04:57Z",
+   "zadnjiLogin": "2026-11-26T10:56:17Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -2963,25 +2963,25 @@
     {
      "ime": "Undercity",
      "status": "Honored",
-     "vrijednost": 10343,
+     "vrijednost": 10368,
      "max": 12000
     },
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 1066,
+     "vrijednost": 1166,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Friendly",
-     "vrijednost": 5501,
+     "vrijednost": 5526,
      "max": 6000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Friendly",
-     "vrijednost": 4501,
+     "vrijednost": 4526,
      "max": 6000
     },
     {
@@ -3267,7 +3267,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 452
+     "n": 454
     },
     {
      "kat": "Quests",
@@ -3347,7 +3347,7 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 131
+     "n": 132
     },
     {
      "kat": "Travel",
@@ -3392,6 +3392,7 @@
      "Up to Snuff",
      "Call to Arms",
      "Bloodscalp Clan Heads",
+     "Mok'thardin's Enchantment",
      "Shady Saltseers",
      "Scarab Shells",
      "Voodoo Dues",
@@ -3403,11 +3404,10 @@
      "The Bloodsail Buccaneers",
      "Breaking the Keystone",
      "Stranglethorn Fever",
-     "Mok'thardin's Enchantment",
      "Not My Circus",
      "An Unholy Alliance"
     ],
-    "zavrseno": 515
+    "zavrseno": 517
    },
    "mountovi": [
     "Summon Warhorse",
@@ -3427,10 +3427,10 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg",
-   "azurirano": "2026-11-26T02:25:41Z"
+   "azurirano": "2026-11-26T12:24:27Z"
   }
  },
- "provjereno": "2026-11-26T10:24:49Z",
+ "provjereno": "2026-11-26T12:24:27Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3478,7 +3478,7 @@
     "rang": 3,
     "slug": "arsen-deadic",
     "ilvl": null,
-    "zadnjiLogin": "2026-11-26T02:04:57Z",
+    "zadnjiLogin": "2026-11-26T10:56:17Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg"
    },
    {
@@ -4602,6 +4602,11 @@
     "2026-11-26T02:25:41Z",
     44,
     111
+   ],
+   [
+    "2026-11-26T12:24:27Z",
+    44,
+    2791
    ]
   ]
  }
