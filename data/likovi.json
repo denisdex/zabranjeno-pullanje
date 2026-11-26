@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-26T02:25:41Z",
+ "azurirano": "2026-11-26T04:25:41Z",
  "likovi": {
   "Saman Saulic": {
    "level": 50,
@@ -1952,14 +1952,13 @@
    "azurirano": "2026-11-08T21:54:18Z"
   },
   "Nikola Roguevic": {
-   "level": 46,
-   "xp": 93584,
+   "level": 48,
+   "xp": 67212,
    "guild": "Kafana na Balkanu",
-   "ilvl": 39,
-   "zadnjiLogin": "2026-11-24T03:37:02Z",
+   "zadnjiLogin": "2026-11-26T03:04:17Z",
    "izvor": "Blizzard API",
    "talenti": [
-    2,
+    4,
     35,
     0
    ],
@@ -1970,6 +1969,12 @@
      "rang": 2,
      "stablo": "Assassination",
      "opis": "After killing a non-trivial enemy, gives you a 40% increased critical strike chance on your next Sinister Strike, Backstab, Ambush, Mutilate, or Ghostly Strike. Lasts 20 sec."
+    },
+    {
+     "ime": "Malice",
+     "rang": 2,
+     "stablo": "Assassination",
+     "opis": "Increases your critical strike chance with all attacks and Poisons by 2%."
     },
     {
      "ime": "Coup de Grace",
@@ -2068,24 +2073,21 @@
      "ime": "Nightscape Headband",
      "kvaliteta": "uncommon",
      "wowhead": 8176,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132513.jpg",
-     "ilvl": 41
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132513.jpg"
     },
     {
      "slot": "Neck",
      "ime": "Abomination Chain",
      "kvaliteta": "rare",
      "wowhead": 274385,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132507.jpg",
-     "ilvl": 42
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132507.jpg"
     },
     {
      "slot": "Shoulder",
      "ime": "Wolf Rider's Shoulder Pads of Power",
      "kvaliteta": "uncommon",
      "wowhead": 15375,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135054.jpg",
-     "ilvl": 43
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135054.jpg"
     },
     {
      "slot": "Chest",
@@ -2093,7 +2095,6 @@
      "kvaliteta": "uncommon",
      "wowhead": 4119,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132722.jpg",
-     "ilvl": 43,
      "enchant": "Enchanted: Stamina +4 and Armor +32"
     },
     {
@@ -2101,8 +2102,7 @@
      "ime": "Huntsman's Belt of the Bandit",
      "kvaliteta": "uncommon",
      "wowhead": 9891,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132506.jpg",
-     "ilvl": 39
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132506.jpg"
     },
     {
      "slot": "Legs",
@@ -2110,7 +2110,6 @@
      "kvaliteta": "uncommon",
      "wowhead": 8193,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/134591.jpg",
-     "ilvl": 46,
      "enchant": "Enchanted: Stamina +4 and Armor +32"
     },
     {
@@ -2119,16 +2118,14 @@
      "kvaliteta": "uncommon",
      "wowhead": 8197,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132539.jpg",
-     "ilvl": 47,
      "enchant": "Enchanted: Stamina +4 and Armor +32"
     },
     {
      "slot": "Wrist",
-     "ime": "Imperial Leather Bracers",
+     "ime": "Seadog's Battered Cuffs",
      "kvaliteta": "uncommon",
-     "wowhead": 4061,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132602.jpg",
-     "ilvl": 42
+     "wowhead": 270091,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132608.jpg"
     },
     {
      "slot": "Hands",
@@ -2136,74 +2133,63 @@
      "kvaliteta": "rare",
      "wowhead": 7756,
      "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132941.jpg",
-     "ilvl": 36,
      "enchant": "Enchanted: Stamina +4 and Armor +32"
     },
     {
      "slot": "Finger 1",
-     "ime": "Basalt Ring of the Beast",
-     "kvaliteta": "uncommon",
-     "wowhead": 11996,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133355.jpg",
-     "ilvl": 34
+     "ime": "Bloodsport Band",
+     "kvaliteta": "rare",
+     "wowhead": 275044,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133346.jpg"
     },
     {
      "slot": "Finger 2",
      "ime": "Pyrewood Signet Ring",
      "kvaliteta": "rare",
      "wowhead": 277210,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133344.jpg",
-     "ilvl": 25
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133344.jpg"
     },
     {
      "slot": "Trinket 1",
      "ime": "Dog Whistle",
      "kvaliteta": "rare",
      "wowhead": 3456,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132161.jpg",
-     "ilvl": 30
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132161.jpg"
     },
     {
      "slot": "Trinket 2",
      "ime": "Transformative Cocoon",
      "kvaliteta": "uncommon",
      "wowhead": 276895,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/237431.jpg",
-     "ilvl": 30
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/237431.jpg"
     },
     {
      "slot": "Back",
      "ime": "Royal Cape of the Tiger",
      "kvaliteta": "uncommon",
      "wowhead": 9908,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133754.jpg",
-     "ilvl": 43
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133754.jpg"
     },
     {
      "slot": "Main Hand",
-     "ime": "Mugg's Crosser",
+     "ime": "Mugg's Jabber",
      "kvaliteta": "rare",
-     "wowhead": 275008,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135593.jpg",
-     "ilvl": 47,
-     "enchant": "Instant Poison IV (118 |4Charge:Charges;)"
+     "wowhead": 275007,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135593.jpg"
     },
     {
      "slot": "Off Hand",
-     "ime": "Sword of Omen",
+     "ime": "Mugg's Crosser",
      "kvaliteta": "rare",
-     "wowhead": 6802,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135317.jpg",
-     "ilvl": 44,
-     "enchant": "Instant Poison IV (122 |4Charge:Charges;)"
+     "wowhead": 275008,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135593.jpg"
     },
     {
      "slot": "Ranged",
      "ime": "Houndmaster Boomerang",
      "kvaliteta": "rare",
      "wowhead": 274292,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135646.jpg",
-     "ilvl": 36
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135646.jpg"
     }
    ],
    "profesije": [
@@ -2215,7 +2201,7 @@
     },
     {
      "name": "Skinning",
-     "skill": 267,
+     "skill": 274,
      "max": 300,
      "vrsta": "primarna"
     },
@@ -2239,72 +2225,72 @@
     }
    ],
    "statovi": {
-    "hp": 2286,
+    "hp": 2425,
     "resurs": 100,
     "resursIme": "Energy",
-    "str": 88,
-    "agi": 167,
-    "sta": 155,
-    "int": 28,
-    "spi": 46,
-    "armor": 1163,
-    "ap": 397,
+    "str": 79,
+    "agi": 170,
+    "sta": 161,
+    "int": 29,
+    "spi": 47,
+    "armor": 1171,
+    "ap": 417,
     "spellPower": 0,
-    "crit": 7.68,
-    "spellCrit": 0.0,
-    "rangedCrit": 7.16,
-    "dodge": 16.75,
-    "parry": 11.0,
+    "crit": 9.61,
+    "spellCrit": 2.0,
+    "rangedCrit": 3.65,
+    "dodge": 16.2,
+    "parry": 10.88,
     "block": 0.0,
-    "dps": 59.9
+    "dps": 61.3
    },
    "reputacije": [
     {
      "ime": "Undercity",
-     "status": "Honored",
-     "vrijednost": 11880,
-     "max": 12000
+     "status": "Revered",
+     "vrijednost": 8,
+     "max": 21000
     },
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 4773,
+     "vrijednost": 4966,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Honored",
-     "vrijednost": 2065,
+     "vrijednost": 2306,
      "max": 12000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Honored",
-     "vrijednost": 1160,
+     "vrijednost": 1498,
      "max": 12000
     },
     {
      "ime": "Ratchet",
      "status": "Friendly",
-     "vrijednost": 4060,
+     "vrijednost": 4235,
      "max": 6000
     },
     {
      "ime": "Booty Bay",
      "status": "Friendly",
-     "vrijednost": 3706,
+     "vrijednost": 3956,
      "max": 6000
     },
     {
      "ime": "Powderfuse",
      "status": "Friendly",
-     "vrijednost": 3420,
+     "vrijednost": 3695,
      "max": 6000
     },
     {
      "ime": "Gadgetzan",
      "status": "Friendly",
-     "vrijednost": 2240,
+     "vrijednost": 2415,
      "max": 6000
     }
    ],
@@ -2312,23 +2298,23 @@
     {
      "kat": "Character",
      "ime": "Times camped",
-     "n": 89
+     "n": 93
     },
     {
      "kat": "Consumables",
      "ime": "Bandages used",
-     "n": 76
+     "n": 77
     },
     {
      "kat": "Consumables",
      "ime": "Bandage used most",
-     "n": 37,
+     "n": 38,
      "opis": "Heavy Silk Bandage"
     },
     {
      "kat": "Consumables",
      "ime": "Health potions consumed",
-     "n": 56
+     "n": 59
     },
     {
      "kat": "Consumables",
@@ -2343,7 +2329,12 @@
     {
      "kat": "Consumables",
      "ime": "Food eaten",
-     "n": 108
+     "n": 115
+    },
+    {
+     "kat": "Reputation",
+     "ime": "Most factions at Revered or higher",
+     "n": 1
     },
     {
      "kat": "Reputation",
@@ -2383,12 +2374,12 @@
     {
      "kat": "Dungeons & Raids",
      "ime": "Total 5-player dungeons entered",
-     "n": 34
+     "n": 35
     },
     {
      "kat": "Dungeons & Raids",
      "ime": "Total 10-player raids entered",
-     "n": 1
+     "n": 2
     },
     {
      "kat": "Boss Kills",
@@ -2451,19 +2442,24 @@
      "n": 3
     },
     {
+     "kat": "Boss Kills",
+     "ime": "Archaedas kills (Uldaman)",
+     "n": 1
+    },
+    {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 10340
+     "n": 10956
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 7825
+     "n": 8335
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 10237
+     "n": 10853
     },
     {
      "kat": "Creatures",
@@ -2473,7 +2469,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 5826,
+     "n": 6320,
      "opis": "Humanoid"
     },
     {
@@ -2500,28 +2496,28 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 5601
+     "n": 5879
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 4237
+     "n": 4374
     },
     {
      "kat": "Killing Blows",
      "ime": "Continent with the most Killing Blows",
-     "n": 2787,
+     "n": 2898,
      "opis": "Eastern Kingdoms"
     },
     {
      "kat": "Deaths",
      "ime": "Total deaths",
-     "n": 43
+     "n": 44
     },
     {
      "kat": "Dungeons and Raids",
      "ime": "Total raid and dungeon deaths",
-     "n": 14
+     "n": 15
     },
     {
      "kat": "Dungeons and Raids",
@@ -2531,7 +2527,7 @@
     {
      "kat": "Dungeons and Raids",
      "ime": "Total deaths in 10-player raids",
-     "n": 3
+     "n": 4
     },
     {
      "kat": "World",
@@ -2541,7 +2537,7 @@
     {
      "kat": "Resurrection",
      "ime": "Revived by druids",
-     "n": 2
+     "n": 3
     },
     {
      "kat": "Resurrection",
@@ -2556,17 +2552,17 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 562
+     "n": 616
     },
     {
      "kat": "Quests",
      "ime": "Average quests completed per day",
-     "n": 46.833333333333336
+     "n": 44
     },
     {
      "kat": "Quests",
      "ime": "Quests abandoned",
-     "n": 43
+     "n": 46
     },
     {
      "kat": "Skills",
@@ -2636,12 +2632,12 @@
     {
      "kat": "Professions",
      "ime": "Highest Skinning skill",
-     "n": 267
+     "n": 268
     },
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 166
+     "n": 175
     },
     {
      "kat": "Travel",
@@ -2651,47 +2647,47 @@
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
-     "n": 36
+     "n": 38
     },
     {
      "kat": "Social",
      "ime": "Total times LOL'd",
-     "n": 90
+     "n": 95
     },
     {
      "kat": "Social",
      "ime": "Total waves",
-     "n": 7
+     "n": 9
     }
    ],
    "questovi": {
     "uLogu": [
-     "The Mind's Eye",
-     "Snapjaws, Mon!",
-     "Reclaimed Treasures",
-     "Sickening Lights",
-     "Craftsman's Writ: Catseye Ultra Goggles",
-     "The Pariah's Instructions",
-     "Shady Saltseers",
      "The Only Good Brinescale...",
-     "Scarab Shells",
-     "Tiara of the Deep",
-     "Solution to Doom",
-     "The Big Payback",
-     "Snargl's Snout",
-     "Gahz'rilla",
-     "Shadowshard Fragments",
-     "Krol'dok Moulding",
-     "Gammerita, Mon!",
-     "Armory of Sunnyglade",
-     "Grim Message",
-     "The Crown of Will",
-     "The Purple Ones",
-     "Cracking Maury's Foot",
+     "Troll Temper",
+     "The Lost Fragments",
+     "Ripple Recovery",
      "Craftsman's Writ: Golden Scale Gauntlets",
-     "Necklace Recovery"
+     "Return to Thunder Bluff",
+     "Armory of Sunnyglade",
+     "Divino-matic Rod",
+     "Reclaimed Treasures",
+     "Un'Goro Soil",
+     "Necklace Recovery, Take 2",
+     "The Crown of Will",
+     "Clamlette Surprise",
+     "The Pariah's Instructions",
+     "Gammerita, Mon!",
+     "To the Undercity for Yagyin's Digest",
+     "Shady Saltseers",
+     "Scarab Shells",
+     "Snapjaws, Mon!",
+     "Gahz'rilla",
+     "Grim Message",
+     "Tiara of the Deep",
+     "Zum'rah's Head",
+     "Shadowshard Fragments"
     ],
-    "zavrseno": 642
+    "zavrseno": 701
    },
    "mountovi": [
     "Black Skeletal Horse",
@@ -2710,7 +2706,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg",
-   "azurirano": "2026-11-25T10:27:46Z"
+   "azurirano": "2026-11-26T04:25:41Z"
   },
   "Arsen Deadic": {
    "level": 44,
@@ -3433,7 +3429,7 @@
    "azurirano": "2026-11-26T02:25:41Z"
   }
  },
- "provjereno": "2026-11-26T02:25:41Z",
+ "provjereno": "2026-11-26T04:25:41Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3453,13 +3449,13 @@
    },
    {
     "ime": "Nikola Roguevic",
-    "level": 46,
+    "level": 48,
     "klasa": "Rogue",
     "rasa": "Undead",
     "rang": 1,
     "slug": "nikola-roguevic",
-    "ilvl": 39,
-    "zadnjiLogin": "2026-11-24T03:37:02Z",
+    "ilvl": null,
+    "zadnjiLogin": "2026-11-26T03:04:17Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg"
    },
    {
@@ -3492,7 +3488,7 @@
     "rang": 4,
     "slug": "venos-xx",
     "ilvl": null,
-    "zadnjiLogin": "2026-11-25T21:53:31Z",
+    "zadnjiLogin": "2026-11-26T02:39:37Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/253/13774333-avatar.jpg"
    },
    {
@@ -4388,6 +4384,11 @@
     "2026-11-24T04:31:49Z",
     46,
     93584
+   ],
+   [
+    "2026-11-26T04:25:41Z",
+    48,
+    67212
    ]
   ],
   "Arsen Deadic": [
