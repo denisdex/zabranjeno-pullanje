@@ -1,11 +1,11 @@
 {
- "azurirano": "2026-11-26T14:24:03Z",
+ "azurirano": "2026-11-26T16:23:27Z",
  "likovi": {
   "Saman Saulic": {
    "level": 50,
    "xp": 110587,
    "guild": "Kafana na Balkanu",
-   "zadnjiLogin": "2026-11-26T13:29:20Z",
+   "zadnjiLogin": "2026-11-26T15:18:29Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -209,8 +209,7 @@
      "ime": "Taran Icebreaker",
      "kvaliteta": "epic",
      "wowhead": 2915,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133039.jpg",
-     "enchant": "Windfury 2"
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133039.jpg"
     },
     {
      "slot": "Ranged",
@@ -731,7 +730,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg",
-   "azurirano": "2026-11-26T14:24:03Z"
+   "azurirano": "2026-11-26T16:23:27Z"
   },
   "Melee Kitic": {
    "level": 45,
@@ -2711,9 +2710,9 @@
   },
   "Arsen Deadic": {
    "level": 44,
-   "xp": 2791,
+   "xp": 24976,
    "guild": "Kafana na Balkanu",
-   "zadnjiLogin": "2026-11-26T10:56:17Z",
+   "zadnjiLogin": "2026-11-26T14:35:14Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -2894,17 +2893,10 @@
     },
     {
      "slot": "Main Hand",
-     "ime": "Sword of Omen",
+     "ime": "Mograine's Might",
      "kvaliteta": "rare",
-     "wowhead": 6802,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135317.jpg"
-    },
-    {
-     "slot": "Off Hand",
-     "ime": "Aegis of the Scarlet Commander",
-     "kvaliteta": "rare",
-     "wowhead": 7726,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/134951.jpg"
+     "wowhead": 7723,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133488.jpg"
     }
    ],
    "profesije": [
@@ -2940,72 +2932,72 @@
     }
    ],
    "statovi": {
-    "hp": 2737,
-    "resurs": 1805,
+    "hp": 2757,
+    "resurs": 2045,
     "resursIme": "Mana",
-    "str": 128,
-    "agi": 80,
-    "sta": 217,
-    "int": 65,
+    "str": 120,
+    "agi": 77,
+    "sta": 219,
+    "int": 81,
     "spi": 61,
-    "armor": 4360,
-    "ap": 368,
+    "armor": 2744,
+    "ap": 352,
     "spellPower": 12,
-    "crit": 6.01,
-    "spellCrit": 5.0,
-    "rangedCrit": 3.01,
-    "dodge": 7.33,
-    "parry": 11.01,
-    "block": 6.08,
-    "dps": 56.0
+    "crit": 5.84,
+    "spellCrit": 5.37,
+    "rangedCrit": 3.04,
+    "dodge": 7.24,
+    "parry": 11.13,
+    "block": 6.2,
+    "dps": 64.0
    },
    "reputacije": [
     {
      "ime": "Undercity",
      "status": "Honored",
-     "vrijednost": 10368,
+     "vrijednost": 10393,
      "max": 12000
     },
     {
      "ime": "Orgrimmar",
      "status": "Honored",
-     "vrijednost": 1166,
+     "vrijednost": 1266,
      "max": 12000
     },
     {
      "ime": "Darkspear Trolls",
      "status": "Friendly",
-     "vrijednost": 5526,
+     "vrijednost": 5551,
      "max": 6000
     },
     {
      "ime": "Thunder Bluff",
      "status": "Friendly",
-     "vrijednost": 4526,
+     "vrijednost": 4551,
      "max": 6000
     },
     {
      "ime": "Ratchet",
      "status": "Friendly",
-     "vrijednost": 2005,
+     "vrijednost": 2165,
      "max": 6000
     },
     {
      "ime": "Powderfuse",
      "status": "Friendly",
-     "vrijednost": 1690,
+     "vrijednost": 1850,
      "max": 6000
     },
     {
      "ime": "Booty Bay",
      "status": "Friendly",
-     "vrijednost": 1252,
+     "vrijednost": 1462,
      "max": 6000
     },
     {
      "ime": "Gadgetzan",
      "status": "Friendly",
-     "vrijednost": 665,
+     "vrijednost": 935,
      "max": 6000
     }
    ],
@@ -3149,17 +3141,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 8642
+     "n": 8669
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 7497
+     "n": 7524
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 8582
+     "n": 8609
     },
     {
      "kat": "Creatures",
@@ -3169,7 +3161,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 4935,
+     "n": 4959,
      "opis": "Humanoid"
     },
     {
@@ -3196,12 +3188,12 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 3435
+     "n": 3463
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 2840
+     "n": 2868
     },
     {
      "kat": "Killing Blows",
@@ -3267,7 +3259,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 454
+     "n": 458
     },
     {
      "kat": "Quests",
@@ -3277,7 +3269,7 @@
     {
      "kat": "Quests",
      "ime": "Quests abandoned",
-     "n": 87
+     "n": 94
     },
     {
      "kat": "Skills",
@@ -3347,17 +3339,17 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 132
+     "n": 136
     },
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
-     "n": 17
+     "n": 18
     },
     {
      "kat": "Social",
      "ime": "Total times LOL'd",
-     "n": 3
+     "n": 4
     },
     {
      "kat": "Social",
@@ -3367,14 +3359,13 @@
    ],
    "questovi": {
     "uLogu": [
-     "Whiskey Slim's Lost Grog",
      "The Only Good Brinescale...",
      "Skullsplitter Tusks",
      "Troll Temper",
-     "Craftsman's Writ: Ornate Spyglass",
-     "Ripple Recovery",
+     "Water Pouch Bounty",
      "Bloodmaster's Ring",
-     "Sigil of Strom",
+     "Wastewander Justice",
+     "Divino-matic Rod",
      "Razzeric's Tweaking",
      "Rig Wars",
      "Necklace Recovery, Take 2",
@@ -3382,32 +3373,32 @@
      "Step Two: More Rock",
      "Deadmire",
      "Key Ingredients",
-     "Foul Magics",
+     "The Dunemaul Compound",
+     "Gadgetzan Water Survey",
      "Bring the End",
+     "The Thirsty Goblin",
+     "WANTED: Caliph Scorpidsting",
      "See Ya, Scallywags!",
      "Admiral Lamora",
      "The Captain's Chest",
      "Power Stones",
+     "WANTED: Andre Firebeard",
      "The Star, the Hand and the Heart",
      "Up to Snuff",
-     "Call to Arms",
      "Bloodscalp Clan Heads",
      "Mok'thardin's Enchantment",
      "Shady Saltseers",
      "Scarab Shells",
      "Voodoo Dues",
      "Grim Message",
-     "Blood in the Streets",
-     "On the Other Side",
      "Zanzil's Secret",
-     "Craftsman's Writ: Guardian Cloak",
      "The Bloodsail Buccaneers",
-     "Breaking the Keystone",
+     "A Sticky Situation",
      "Stranglethorn Fever",
      "Not My Circus",
      "An Unholy Alliance"
     ],
-    "zavrseno": 517
+    "zavrseno": 522
    },
    "mountovi": [
     "Summon Warhorse",
@@ -3427,10 +3418,10 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg",
-   "azurirano": "2026-11-26T12:24:27Z"
+   "azurirano": "2026-11-26T16:23:27Z"
   }
  },
- "provjereno": "2026-11-26T14:24:03Z",
+ "provjereno": "2026-11-26T16:23:27Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3445,7 +3436,7 @@
     "rang": 0,
     "slug": "saman-saulic",
     "ilvl": null,
-    "zadnjiLogin": "2026-11-26T13:29:20Z",
+    "zadnjiLogin": "2026-11-26T15:18:29Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg"
    },
    {
@@ -3478,7 +3469,7 @@
     "rang": 3,
     "slug": "arsen-deadic",
     "ilvl": null,
-    "zadnjiLogin": "2026-11-26T10:56:17Z",
+    "zadnjiLogin": "2026-11-26T14:35:14Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg"
    },
    {
@@ -3500,7 +3491,7 @@
     "rang": 4,
     "slug": "divlji-druid",
     "ilvl": null,
-    "zadnjiLogin": "2026-11-26T14:17:17Z",
+    "zadnjiLogin": "2026-11-26T15:32:57Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/176/12362928-avatar.jpg"
    },
    {
@@ -4607,6 +4598,11 @@
     "2026-11-26T12:24:27Z",
     44,
     2791
+   ],
+   [
+    "2026-11-26T16:23:27Z",
+    44,
+    24976
    ]
   ]
  }
