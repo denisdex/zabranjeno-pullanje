@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-26T18:23:31Z",
+ "azurirano": "2026-11-26T20:23:00Z",
  "likovi": {
   "Saman Saulic": {
    "level": 50,
@@ -734,9 +734,9 @@
   },
   "Melee Kitic": {
    "level": 45,
-   "xp": 68789,
+   "xp": 76063,
    "guild": "Kafana na Balkanu",
-   "zadnjiLogin": "2026-11-26T07:55:53Z",
+   "zadnjiLogin": "2026-11-26T18:23:53Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -929,10 +929,10 @@
     },
     {
      "slot": "Main Hand",
-     "ime": "Rock on Stick",
+     "ime": "Vanquisher's Sword",
      "kvaliteta": "rare",
-     "wowhead": 279852,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133046.jpg"
+     "wowhead": 10823,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135345.jpg"
     },
     {
      "slot": "Off Hand",
@@ -1445,7 +1445,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg",
-   "azurirano": "2026-11-26T18:23:31Z"
+   "azurirano": "2026-11-26T20:23:00Z"
   },
   "Janica Frostelich": {
    "level": 18,
@@ -3421,7 +3421,7 @@
    "azurirano": "2026-11-26T16:23:27Z"
   }
  },
- "provjereno": "2026-11-26T18:23:31Z",
+ "provjereno": "2026-11-26T20:23:00Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3480,7 +3480,7 @@
     "rang": 4,
     "slug": "venos-xx",
     "ilvl": null,
-    "zadnjiLogin": "2026-11-26T02:39:37Z",
+    "zadnjiLogin": "2026-11-26T19:25:04Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/253/13774333-avatar.jpg"
    },
    {
@@ -4092,6 +4092,11 @@
     "2026-11-26T00:26:16Z",
     45,
     68789
+   ],
+   [
+    "2026-11-26T20:23:00Z",
+    45,
+    76063
    ]
   ],
   "Janica Frostelich": [
