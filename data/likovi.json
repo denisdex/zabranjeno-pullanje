@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-26T04:25:41Z",
+ "azurirano": "2026-11-26T08:25:15Z",
  "likovi": {
   "Saman Saulic": {
    "level": 50,
@@ -737,7 +737,7 @@
    "level": 45,
    "xp": 68789,
    "guild": "Kafana na Balkanu",
-   "zadnjiLogin": "2026-11-26T00:06:34Z",
+   "zadnjiLogin": "2026-11-26T07:55:53Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -864,18 +864,19 @@
     },
     {
      "slot": "Legs",
-     "ime": "Steadfast Legplates of the Beast",
+     "ime": "Overlord's Legplates of the Tiger",
      "kvaliteta": "uncommon",
-     "wowhead": 15596,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/134588.jpg",
-     "enchant": "Enchanted: Attack Power +4 and Armor +16"
+     "wowhead": 10208,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/134581.jpg",
+     "enchant": "Enchanted: Attack Power +8 and Armor +32"
     },
     {
      "slot": "Feet",
      "ime": "Worgbinder's Treads",
      "kvaliteta": "rare",
      "wowhead": 275003,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132585.jpg"
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/132585.jpg",
+     "enchant": "Enchanted: Attack Power +4 and Armor +16"
     },
     {
      "slot": "Wrist",
@@ -894,10 +895,10 @@
     },
     {
      "slot": "Finger 1",
-     "ime": "Thallium Hoop of the Falcon",
+     "ime": "Onyx Ring of the Tiger",
      "kvaliteta": "uncommon",
-     "wowhead": 11986,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133348.jpg"
+     "wowhead": 12001,
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/133343.jpg"
     },
     {
      "slot": "Finger 2",
@@ -976,30 +977,30 @@
     },
     {
      "name": "First Aid",
-     "skill": 130,
+     "skill": 148,
      "max": 150,
      "vrsta": "sekundarna"
     }
    ],
    "statovi": {
-    "hp": 2249,
+    "hp": 2129,
     "resurs": 100,
     "resursIme": "Rage",
-    "str": 172,
-    "agi": 112,
-    "sta": 159,
-    "int": 45,
+    "str": 189,
+    "agi": 121,
+    "sta": 147,
+    "int": 39,
     "spi": 40,
-    "armor": 2108,
-    "ap": 503,
+    "armor": 2373,
+    "ap": 545,
     "spellPower": 5,
     "crit": 5.0,
     "spellCrit": 0.0,
     "rangedCrit": 0.0,
-    "dodge": 7.37,
+    "dodge": 7.98,
     "parry": 4.8,
     "block": 4.8,
-    "dps": 67.5
+    "dps": 70.5
    },
    "reputacije": [
     {
@@ -1344,7 +1345,7 @@
     {
      "kat": "Secondary Skills",
      "ime": "First Aid skill",
-     "n": 117
+     "n": 130
     },
     {
      "kat": "Secondary Skills",
@@ -1379,7 +1380,7 @@
     {
      "kat": "Professions",
      "ime": "Highest Mining skill",
-     "n": 222
+     "n": 223
     },
     {
      "kat": "Professions",
@@ -1389,7 +1390,7 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 106
+     "n": 107
     },
     {
      "kat": "Travel",
@@ -1445,7 +1446,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg",
-   "azurirano": "2026-11-26T00:26:16Z"
+   "azurirano": "2026-11-26T08:25:15Z"
   },
   "Janica Frostelich": {
    "level": 18,
@@ -3429,7 +3430,7 @@
    "azurirano": "2026-11-26T02:25:41Z"
   }
  },
- "provjereno": "2026-11-26T06:25:15Z",
+ "provjereno": "2026-11-26T08:25:15Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3466,7 +3467,7 @@
     "rang": 3,
     "slug": "melee-kitic",
     "ilvl": null,
-    "zadnjiLogin": "2026-11-26T00:06:34Z",
+    "zadnjiLogin": "2026-11-26T07:55:53Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg"
    },
    {
