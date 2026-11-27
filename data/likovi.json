@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-27T20:23:39Z",
+ "azurirano": "2026-11-27T22:23:35Z",
  "likovi": {
   "Saman Saulic": {
    "level": 51,
@@ -3457,7 +3457,7 @@
    "azurirano": "2026-11-27T02:22:09Z"
   }
  },
- "provjereno": "2026-11-27T20:23:39Z",
+ "provjereno": "2026-11-27T22:23:35Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3509,6 +3509,17 @@
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/228/3387620-avatar.jpg"
    },
    {
+    "ime": "Divlji Druid",
+    "level": 51,
+    "klasa": "Druid",
+    "rasa": "Tauren",
+    "rang": 4,
+    "slug": "divlji-druid",
+    "ilvl": null,
+    "zadnjiLogin": "2026-11-27T22:10:08Z",
+    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/176/12362928-avatar.jpg"
+   },
+   {
     "ime": "Venos Xx",
     "level": 51,
     "klasa": "Druid",
@@ -3516,19 +3527,8 @@
     "rang": 4,
     "slug": "venos-xx",
     "ilvl": null,
-    "zadnjiLogin": "2026-11-27T19:58:38Z",
+    "zadnjiLogin": "2026-11-27T20:59:31Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/253/13774333-avatar.jpg"
-   },
-   {
-    "ime": "Divlji Druid",
-    "level": 50,
-    "klasa": "Druid",
-    "rasa": "Tauren",
-    "rang": 4,
-    "slug": "divlji-druid",
-    "ilvl": null,
-    "zadnjiLogin": "2026-11-27T13:56:23Z",
-    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/176/12362928-avatar.jpg"
    },
    {
     "ime": "Jebothe Dan",
@@ -3548,8 +3548,8 @@
     "rasa": "Tauren",
     "rang": 4,
     "slug": "mate-bullic",
-    "ilvl": 14,
-    "zadnjiLogin": "2026-11-22T22:29:11Z",
+    "ilvl": null,
+    "zadnjiLogin": "2026-11-27T21:52:22Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/33/21412897-avatar.jpg"
    },
    {
