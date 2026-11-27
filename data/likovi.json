@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-26T22:23:00Z",
+ "azurirano": "2026-11-27T00:22:34Z",
  "likovi": {
   "Saman Saulic": {
    "level": 50,
@@ -3419,7 +3419,7 @@
    "azurirano": "2026-11-26T16:23:27Z"
   }
  },
- "provjereno": "2026-11-26T22:23:00Z",
+ "provjereno": "2026-11-27T00:22:34Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3450,13 +3450,13 @@
    },
    {
     "ime": "Melee Kitic",
-    "level": 45,
+    "level": 46,
     "klasa": "Warrior",
     "rasa": "Orc",
     "rang": 3,
     "slug": "melee-kitic",
     "ilvl": null,
-    "zadnjiLogin": "2026-11-26T18:23:53Z",
+    "zadnjiLogin": "2026-11-27T00:23:11Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg"
    },
    {
@@ -3472,13 +3472,13 @@
    },
    {
     "ime": "Venos Xx",
-    "level": 50,
+    "level": 51,
     "klasa": "Druid",
     "rasa": "Tauren",
     "rang": 4,
     "slug": "venos-xx",
     "ilvl": null,
-    "zadnjiLogin": "2026-11-26T19:25:04Z",
+    "zadnjiLogin": "2026-11-26T23:44:48Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/253/13774333-avatar.jpg"
    },
    {
