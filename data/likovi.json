@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-28T02:23:00Z",
+ "azurirano": "2026-11-28T06:29:13Z",
  "likovi": {
   "Saman Saulic": {
    "level": 52,
@@ -2008,9 +2008,9 @@
   },
   "Nikola Roguevic": {
    "level": 49,
-   "xp": 67796,
+   "xp": 74155,
    "guild": "Kafana na Balkanu",
-   "zadnjiLogin": "2026-11-27T04:18:48Z",
+   "zadnjiLogin": "2026-11-28T05:22:31Z",
    "izvor": "Blizzard API",
    "talenti": [
     5,
@@ -2230,16 +2230,14 @@
      "ime": "Mugg's Jabber",
      "kvaliteta": "rare",
      "wowhead": 275007,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135593.jpg",
-     "enchant": "Instant Poison IV (78 |4Charge:Charges;)"
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135593.jpg"
     },
     {
      "slot": "Off Hand",
      "ime": "Mugg's Crosser",
      "kvaliteta": "rare",
      "wowhead": 275008,
-     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135593.jpg",
-     "enchant": "Instant Poison IV (108 |4Charge:Charges;)"
+     "ikona": "https://render.worldofwarcraft.com/forever-eu/icons/56/135593.jpg"
     },
     {
      "slot": "Ranged",
@@ -2295,7 +2293,7 @@
     "spellPower": 0,
     "crit": 11.25,
     "spellCrit": 3.0,
-    "rangedCrit": 5.13,
+    "rangedCrit": 10.13,
     "dodge": 17.28,
     "parry": 10.72,
     "block": 0.0,
@@ -2406,7 +2404,7 @@
     {
      "kat": "Reputation",
      "ime": "Total factions encountered",
-     "n": 18
+     "n": 19
     },
     {
      "kat": "Gear",
@@ -2511,7 +2509,7 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 11523
+     "n": 11524
     },
     {
      "kat": "Kills",
@@ -2521,7 +2519,7 @@
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 11420
+     "n": 11421
     },
     {
      "kat": "Creatures",
@@ -2558,7 +2556,7 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 6222
+     "n": 6223
     },
     {
      "kat": "Killing Blows",
@@ -2614,17 +2612,17 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 636
+     "n": 639
     },
     {
      "kat": "Quests",
      "ime": "Average quests completed per day",
-     "n": 42.4
+     "n": 39.9375
     },
     {
      "kat": "Quests",
      "ime": "Quests abandoned",
-     "n": 47
+     "n": 48
     },
     {
      "kat": "Skills",
@@ -2699,7 +2697,7 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 192
+     "n": 197
     },
     {
      "kat": "Travel",
@@ -2709,7 +2707,7 @@
     {
      "kat": "Travel",
      "ime": "Number of times hearthed",
-     "n": 40
+     "n": 41
     },
     {
      "kat": "Social",
@@ -2725,10 +2723,13 @@
    "questovi": {
     "uLogu": [
      "... and a Batch of Ooze",
+     "Syndicate Sabotage",
      "The Only Good Brinescale...",
      "Troll Temper",
      "The Lost Fragments",
+     "A Way In",
      "An'she's Radiance",
+     "What's the Big Idea?",
      "The Prophecy of Mosh'aru",
      "Un'Goro Soil",
      "Necklace Recovery, Take 2",
@@ -2739,14 +2740,13 @@
      "Gammerita, Mon!",
      "Shady Saltseers",
      "Snapjaws, Mon!",
-     "The Book of Ur",
      "Gahz'rilla",
      "Grim Message",
      "Fragment of the Firelands",
      "A Sticky Situation",
      "Shadowshard Fragments"
     ],
-    "zavrseno": 718
+    "zavrseno": 721
    },
    "mountovi": [
     "Black Skeletal Horse",
@@ -2765,7 +2765,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg",
-   "azurirano": "2026-11-27T04:21:32Z"
+   "azurirano": "2026-11-28T06:29:13Z"
   },
   "Arsen Deadic": {
    "level": 45,
@@ -3486,7 +3486,7 @@
    "azurirano": "2026-11-27T02:22:09Z"
   }
  },
- "provjereno": "2026-11-28T04:25:22Z",
+ "provjereno": "2026-11-28T06:29:13Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3512,7 +3512,7 @@
     "rang": 1,
     "slug": "nikola-roguevic",
     "ilvl": null,
-    "zadnjiLogin": "2026-11-27T04:18:48Z",
+    "zadnjiLogin": "2026-11-28T05:22:31Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/14/3387662-avatar.jpg"
    },
    {
@@ -4486,6 +4486,11 @@
     "2026-11-27T04:21:32Z",
     49,
     67796
+   ],
+   [
+    "2026-11-28T06:29:13Z",
+    49,
+    74155
    ]
   ],
   "Arsen Deadic": [
