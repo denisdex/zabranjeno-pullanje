@@ -1,5 +1,5 @@
 {
- "azurirano": "2026-11-28T06:29:13Z",
+ "azurirano": "2026-11-28T10:29:16Z",
  "likovi": {
   "Saman Saulic": {
    "level": 52,
@@ -770,9 +770,9 @@
   },
   "Melee Kitic": {
    "level": 47,
-   "xp": 15837,
+   "xp": 56755,
    "guild": "Kafana na Balkanu",
-   "zadnjiLogin": "2026-11-28T00:54:25Z",
+   "zadnjiLogin": "2026-11-28T10:27:26Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -1029,12 +1029,12 @@
     "armor": 2546,
     "ap": 569,
     "spellPower": 0,
-    "crit": 14.19,
+    "crit": 14.31,
     "spellCrit": 0.0,
-    "rangedCrit": 0.63,
-    "dodge": 9.11,
-    "parry": 4.76,
-    "block": 4.76,
+    "rangedCrit": 0.71,
+    "dodge": 9.23,
+    "parry": 4.88,
+    "block": 4.88,
     "dps": 74.0
    },
    "reputacije": [
@@ -1065,7 +1065,7 @@
     {
      "ime": "Ratchet",
      "status": "Friendly",
-     "vrijednost": 3897,
+     "vrijednost": 4164,
      "max": 6000
     },
     {
@@ -1077,13 +1077,13 @@
     {
      "ime": "Powderfuse",
      "status": "Friendly",
-     "vrijednost": 2723,
+     "vrijednost": 2991,
      "max": 6000
     },
     {
      "ime": "Gadgetzan",
      "status": "Friendly",
-     "vrijednost": 2468,
+     "vrijednost": 2928,
      "max": 6000
     }
    ],
@@ -1096,7 +1096,7 @@
     {
      "kat": "Consumables",
      "ime": "Bandages used",
-     "n": 121
+     "n": 130
     },
     {
      "kat": "Consumables",
@@ -1107,12 +1107,12 @@
     {
      "kat": "Consumables",
      "ime": "Health potions consumed",
-     "n": 28
+     "n": 31
     },
     {
      "kat": "Consumables",
      "ime": "Food eaten",
-     "n": 75
+     "n": 79
     },
     {
      "kat": "Consumables",
@@ -1237,17 +1237,17 @@
     {
      "kat": "Kills",
      "ime": "Total kills",
-     "n": 9366
+     "n": 9474
     },
     {
      "kat": "Kills",
      "ime": "Total kills that grant experience or honor",
-     "n": 7535
+     "n": 7643
     },
     {
      "kat": "Creatures",
      "ime": "Creatures killed",
-     "n": 9279
+     "n": 9387
     },
     {
      "kat": "Creatures",
@@ -1257,7 +1257,7 @@
     {
      "kat": "Creatures",
      "ime": "Creature type killed the most",
-     "n": 5683,
+     "n": 5743,
      "opis": "Humanoid"
     },
     {
@@ -1284,18 +1284,18 @@
     {
      "kat": "Killing Blows",
      "ime": "Total Killing Blows",
-     "n": 4785
+     "n": 4883
     },
     {
      "kat": "Killing Blows",
      "ime": "World Killing Blows",
-     "n": 3597
+     "n": 3695
     },
     {
      "kat": "Killing Blows",
      "ime": "Continent with the most Killing Blows",
-     "n": 1800,
-     "opis": "Eastern Kingdoms"
+     "n": 1895,
+     "opis": "Kalimdor"
     },
     {
      "kat": "Deaths",
@@ -1350,7 +1350,7 @@
     {
      "kat": "Quests",
      "ime": "Quests completed",
-     "n": 521
+     "n": 524
     },
     {
      "kat": "Quests",
@@ -1360,7 +1360,7 @@
     {
      "kat": "Quests",
      "ime": "Quests abandoned",
-     "n": 52
+     "n": 56
     },
     {
      "kat": "Skills",
@@ -1395,7 +1395,7 @@
     {
      "kat": "Secondary Skills",
      "ime": "First Aid skill",
-     "n": 148
+     "n": 149
     },
     {
      "kat": "Secondary Skills",
@@ -1440,7 +1440,7 @@
     {
      "kat": "Travel",
      "ime": "Flight paths taken",
-     "n": 117
+     "n": 120
     },
     {
      "kat": "Travel",
@@ -1455,25 +1455,20 @@
    ],
    "questovi": {
     "uLogu": [
-     "Fetch 'n' Fletch",
      "Troll Temper",
-     "Rescue OOX-17/TN!",
      "Solution to Doom",
      "Satyr Hooves",
      "Consolation Prize",
      "Thistleshrub Valley",
-     "Martek the Exiled",
      "Necklace Recovery",
      "The Prophecy of Mosh'aru",
      "Lost for Words",
      "Reclaimed Treasures",
      "Undamaged Venom Sac",
      "Dunemaul Dues",
-     "Rig Wars",
      "A Grim Discovery",
      "Dragonmaw Shinbones",
      "The Dunemaul Compound",
-     "Gahz'ridian",
      "Gadgetzan Water Survey",
      "The Thirsty Goblin",
      "Source of Power",
@@ -1482,13 +1477,12 @@
      "Power Stones",
      "Shady Saltseers",
      "The Offense of Grom'gol",
-     "More Wastewander Justice",
      "The Grave Knight",
      "Find OOX-22/FE!",
      "Cuergo's Gold",
      "Shadowshard Fragments"
     ],
-    "zavrseno": 584
+    "zavrseno": 587
    },
    "mountovi": [
     "Brown Wolf"
@@ -1500,7 +1494,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg",
-   "azurirano": "2026-11-28T02:23:00Z"
+   "azurirano": "2026-11-28T10:29:16Z"
   },
   "Janica Frostelich": {
    "level": 18,
@@ -3486,7 +3480,7 @@
    "azurirano": "2026-11-27T02:22:09Z"
   }
  },
- "provjereno": "2026-11-28T08:29:08Z",
+ "provjereno": "2026-11-28T10:29:16Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3523,7 +3517,7 @@
     "rang": 3,
     "slug": "melee-kitic",
     "ilvl": null,
-    "zadnjiLogin": "2026-11-28T00:54:25Z",
+    "zadnjiLogin": "2026-11-28T10:27:26Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/206/8412878-avatar.jpg"
    },
    {
@@ -3561,13 +3555,13 @@
    },
    {
     "ime": "Jebothe Dan",
-    "level": 41,
+    "level": 42,
     "klasa": "Hunter",
     "rasa": "Troll",
     "rang": 4,
     "slug": "jebothe-dan",
     "ilvl": null,
-    "zadnjiLogin": "2026-11-28T00:37:06Z",
+    "zadnjiLogin": "2026-11-28T10:03:30Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/102/15576678-avatar.jpg"
    },
    {
@@ -3578,7 +3572,7 @@
     "rang": 4,
     "slug": "mate-bullic",
     "ilvl": null,
-    "zadnjiLogin": "2026-11-28T00:49:20Z",
+    "zadnjiLogin": "2026-11-28T09:25:48Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/33/21412897-avatar.jpg"
    },
    {
@@ -4182,6 +4176,11 @@
     "2026-11-28T02:23:00Z",
     47,
     15837
+   ],
+   [
+    "2026-11-28T10:29:16Z",
+    47,
+    56755
    ]
   ],
   "Janica Frostelich": [
