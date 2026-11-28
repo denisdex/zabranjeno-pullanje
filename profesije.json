@@ -53,7 +53,7 @@
         },
         {
           "name": "First Aid",
-          "skill": 148
+          "skill": 149
         }
       ]
     },
@@ -1612,6 +1612,12 @@
       "character": "rogue",
       "profession": "Skinning",
       "skill": 276
+    },
+    {
+      "date": "2026-11-28",
+      "character": "warrior",
+      "profession": "First Aid",
+      "skill": 149
     }
   ],
   "flows": [
