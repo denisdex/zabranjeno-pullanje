@@ -1,11 +1,11 @@
 {
- "azurirano": "2026-11-28T18:32:56Z",
+ "azurirano": "2026-11-28T20:32:32Z",
  "likovi": {
   "Saman Saulic": {
    "level": 53,
    "xp": 146227,
    "guild": "Kafana na Balkanu",
-   "zadnjiLogin": "2026-11-28T18:13:26Z",
+   "zadnjiLogin": "2026-11-28T19:34:32Z",
    "izvor": "Blizzard API",
    "talenti": [
     0,
@@ -390,7 +390,7 @@
     {
      "kat": "Reputation",
      "ime": "Total factions encountered",
-     "n": 23
+     "n": 22
     },
     {
      "kat": "Gear",
@@ -658,12 +658,12 @@
     {
      "kat": "Secondary Skills",
      "ime": "Cooking skill",
-     "n": 299
+     "n": 300
     },
     {
      "kat": "Secondary Skills",
      "ime": "Cooking Recipes known",
-     "n": 44
+     "n": 42
     },
     {
      "kat": "Secondary Skills",
@@ -774,7 +774,7 @@
    },
    "slika": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-main-raw.png",
    "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg",
-   "azurirano": "2026-11-28T18:32:56Z"
+   "azurirano": "2026-11-28T20:32:32Z"
   },
   "Melee Kitic": {
    "level": 47,
@@ -3499,7 +3499,7 @@
    "azurirano": "2026-11-28T16:32:59Z"
   }
  },
- "provjereno": "2026-11-28T18:32:56Z",
+ "provjereno": "2026-11-28T20:32:32Z",
  "guild": {
   "ime": "Kafana na Balkanu",
   "clanova": 9,
@@ -3514,7 +3514,7 @@
     "rang": 0,
     "slug": "saman-saulic",
     "ilvl": null,
-    "zadnjiLogin": "2026-11-28T18:13:26Z",
+    "zadnjiLogin": "2026-11-28T19:34:32Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/219/378075-avatar.jpg"
    },
    {
@@ -3569,7 +3569,7 @@
     "rang": 4,
     "slug": "venos-xx",
     "ilvl": null,
-    "zadnjiLogin": "2026-11-28T16:26:15Z",
+    "zadnjiLogin": "2026-11-28T20:05:51Z",
     "avatar": "https://render.worldofwarcraft.com/forever-eu/character/253/13774333-avatar.jpg"
    },
    {
