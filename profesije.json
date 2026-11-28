@@ -33,7 +33,7 @@
       "professions": [
         {
           "name": "Mining",
-          "skill": 226,
+          "skill": 227,
           "phase": "stalno"
         },
         {
@@ -79,7 +79,7 @@
       "secondary": [
         {
           "name": "Cooking",
-          "skill": 225
+          "skill": 300
         },
         {
           "name": "Fishing",
@@ -1642,6 +1642,18 @@
       "character": "rogue",
       "profession": "Skinning",
       "skill": 288
+    },
+    {
+      "date": "2026-11-28",
+      "character": "warrior",
+      "profession": "Mining",
+      "skill": 227
+    },
+    {
+      "date": "2026-11-28",
+      "character": "shaman",
+      "profession": "Cooking",
+      "skill": 300
     }
   ],
   "flows": [
